@@ -3869,7 +3869,7 @@ div.reminder:before {
     justify-content: center;
     align-items: center;
   }
-  .tabaul#tbfull .tbauimg {
+  .tabaul .tbauimg {
     width: 200px;
   }
   .tabaul#tbfull .tbauname {
@@ -4232,9 +4232,6 @@ div.reminder:before {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-  }
-  .tabaul#tbfull .tbauimg {
-    max-width: 270px;
   }
   .tabaul#tbfull .tbauname {
     text-align: center;
