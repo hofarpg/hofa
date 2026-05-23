@@ -873,10 +873,6 @@ span#dice_to_del {
   margin: 40px 0px;
 }
 #cp-main fieldset dl {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 #cp-main fieldset {
@@ -884,14 +880,32 @@ span#dice_to_del {
   flex-direction: column;
   gap: 12px;
 }
+#cp-main fieldset dt {
+  color: var(--txt1);
+  text-transform: uppercase;
+  font: bold var(--fs-text) var(--font3);
+  line-height: 130%;
+  width: 100%;
+  text-decoration: 2px underline var(--taccent);
+  text-underline-offset: 2px;
+}
+#cp-main fieldset dt label,
+#cp-main fieldset dt span {
+  color: var(--txt1) !important;
+  text-transform: uppercase;
+  font: bold var(--fs-text) var(--font3);
+  line-height: 130% !important;
+  box-sizing: border-box;
+  word-break: break-word;
+  hyphens: auto;
+  text-align: center;
+}
 #cp-main fieldset dd {
-  margin: 0px;
   width: 100%;
   padding: 12px;
   text-transform: uppercase;
   font: 800 var(--fs-body) var(--font2);
   color: var(--txt1);
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -900,7 +914,6 @@ span#dice_to_del {
   gap: 6px;
   flex-wrap: wrap;
   flex-direction: column;
-  box-sizing: border-box;
   background: var(--tback2);
   border: var(--border1);
   border-radius: var(--bradius);
@@ -928,40 +941,6 @@ span#dice_to_del {
 }
 #cp-main fieldset input.inputbox {
   padding: 6px;
-}
-#cp-main fieldset dt {
-  float: none;
-  padding: 12px;
-  align-self: stretch;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  isolation: isolate;
-  color: var(--txt1) !important;
-  text-transform: uppercase;
-  font: bold var(--fs-text) var(--font3);
-  line-height: 130%;
-  width: 100% !important;
-  box-sizing: border-box;
-  text-decoration: underline;
-  text-decoration-color: var(--taccent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
-#cp-main fieldset dt label,
-#cp-main fieldset dt span {
-  color: var(--txt1) !important;
-  text-transform: uppercase;
-  font: bold var(--fs-text) var(--font3);
-  line-height: 130% !important;
-  box-sizing: border-box;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  text-align: center;
 }
 #cp-main span.italic {
   width: 100%;
