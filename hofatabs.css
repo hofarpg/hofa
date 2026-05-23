@@ -4005,11 +4005,17 @@ div.reminder:before {
   .tbrolcont {
     padding: 30px;
   }
-  .tabrol1 .tbroltit {
-    margin-bottom: 0px;
-  }  
-  .tabrol2 .tbroltit > b {
+  :is(.tabrol1, .tabrol2, .tabrol3) .tbroltit > b {
     font-size: var(--fs-h3);
+  }
+  .tabrol1 .tbroltit {
+    margin-bottom: 0;
+  }  
+  .tabrol3 .tbroltit {
+    min-height: 100px;
+  }
+  .tabrol3 .tbroltit > span {
+    position: static;
   }
   .tabusqres {
     padding: 20px;
