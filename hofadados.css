@@ -1,0 +1,48 @@
+/*DADOS*/
+.postdados .postheader {border-bottom:none!important;justify-content:flex-end!important;border-radius:var(--bradius) var(--bradius) 0px 0px!important;}
+.postdados .postbody {border:var(--border1)!important;border-radius:0px 0px var(--bradius) var(--bradius)!important!important;min-height:auto!important;}
+.dicecont .dicequote {text-align:center;margin:0 auto;text-transform:uppercase;font:bold var(--fs-small) var(--font3);color:var(--txt1);line-height:150%;text-decoration:underline;text-decoration-color:var(--tgroup);text-decoration-thickness:2px;text-underline-offset:2px;margin-bottom:20px;}
+.dicethrow {gap:12px;background:var(--tback2);padding:20px;border-radius:var(--bradius);border:var(--border1);}
+.dicethrow .dicetitle {text-transform:uppercase;font:900 var(--fs-h5) var(--font1);line-height:100%;}
+.dicethrow .dicetitle:before {content:"";width:50px;height:2px;display:inline-block;background:var(--tgroup);margin-right:8px;position:relative;top:-6px;}
+.dicethrow .dicetitle>em {color:var(--group);}
+.dicethrow .dicetitle>b {font-weight:900;}
+.dicethrow .diceres {gap:12px;justify-content:flex-start;align-items:stretch;flex-wrap:wrap;}
+.dicethrow .diceres:not(:last-of-type) {margin-bottom:6px;}
+.dicethrow .diceres>strong {display:flex;flex-direction:column;text-align:center;justify-content:center;align-items:center;min-height:70px;padding:12px;flex:1 0 8%;min-width:70px;max-width:100px;border:var(--border1);border-radius:var(--bradius);background:var(--back1);font:900 var(--fs-h3) var(--font2);color:var(--txt2);line-height:100%;text-transform:uppercase;text-shadow:var(--shadow3);}
+.dicethrow .diceres>strong>em {font:bold var(--fs-small) var(--font3);text-shadow:none!important;color:var(--txt3);line-height:100%;}
+.dicethrow .diceres.dracma>strong, .dicethrow .diceres.moiras>strong, .dicethrow .diceres.dado-del-destino>strong {gap:4px;}
+.pastmessages .postdados .postbody {border:var(--border1)!important;border-radius:var(--bradius)!important;}
+.pastmessages .postdados .content {border:none!important;border-radius:var(--bradius)!important;}
+.diceres strong.dcr {flex:1 0 30%;min-width:200px;padding:20px;border:var(--border1);border-radius:var(--bradius);background:var(--back1);justify-content:start;align-items:center;max-width:360px;gap:6px;text-shadow:none;text-transform:none;}
+.diceres strong.dcr>div {gap:6px;}
+.diceres .dcr .dcrimg {justify-content:center;align-items:center;position:relative;width:125px;height:125px;outline:var(--baborder);border-radius:var(--bradius);outline-offset:4px;margin:5px auto;}
+.diceres .dcr .dcrimg:before {content:"";position:absolute;background-image:var(--cridiceimg);z-index:0;width:100%;height:100%;filter:var(--filter2);background-position:center;background-size:cover;background-repeat:no-repeat;border-radius:var(--bradius);overflow:hidden;}
+.diceres .dcr strong.crname {text-transform:uppercase;margin-top:10px;font:900 var(--fs-bigger) var(--font3);line-height:100%;color:var(--txt1);}
+.diceres .dcr .dcrstats {gap:6px;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;}
+.diceres .dcr .dcrstats>em {padding:0px 10px;border-radius:var(--bradius);border-left:var(--border2);border-right:var(--border2);font:800 var(--fs-text) var(--font2);color:var(--txt4);}
+.diceres .dcr .dcrstats>em>b {font-style:normal;font-size:var(--fs-small);font-family:var(--font3);color:var(--accent);}
+.diceres .dcr .dcrdesc {height:140px;overflow:auto;margin-top:10px;font:normal var(--fs-body) var(--font2);line-height:125%;padding-right:10px;color:var(--txt2);text-align: justify;}
+.diceres .dcr .dcrdesc>h4 {text-transform:uppercase;font:800 var(--fs-big) var(--font2);color:var(--txt1);text-decoration:underline;text-decoration-color:var(--taccent);text-decoration-thickness:2px;text-underline-offset:2px;margin-bottom:7px;}
+.diceres .dcr .dcrdesc>span {display:block;margin-bottom:4px;}
+.diceres .dcr .dcrdesc>span>b {text-transform:uppercase;color:var(--accent);font:800 var(--fs-small) var(--font3);}
+.diceres .dcr .dcrdesc>span>b::after {content:".";}
+.diceres .dcr .dcrdesc>h4:not(:first-of-type) {margin-top:6px;}
+.dcr .crarpia {--cridiceimg:url('https://2img.net/i.imgur.com/H7AMtzk.png');}
+.dcr .crautomata {--cridiceimg:url('https://2img.net/i.imgur.com/N1k76ap.png');}
+.dcr .crgorgona {--cridiceimg:url('https://2img.net/i.imgur.com/I6m8dFc.png');}
+.dcr .crkobaloi {--cridiceimg:url('https://2img.net/i.imgur.com/gPCv2M2.png');}
+.dcr .crleucrota {--cridiceimg:url('https://2img.net/i.imgur.com/VxQiJa5.png');}
+.dcr .crmyrmeke {--cridiceimg:url('https://2img.net/i.imgur.com/zw050ef.png');}
+.dcr .croveja {--cridiceimg:url('https://2img.net/i.imgur.com/mURSoqm.png');}
+.dcr .crestirge {--cridiceimg:url('https://2img.net/i.imgur.com/7c5FeZg.png');}
+.dcr .cranfisbena {--cridiceimg:url('https://2img.net/i.imgur.com/6waDvOs.png');}
+.dcr .crciclope {--cridiceimg:url('https://2img.net/i.imgur.com/qo3sCPZ.png');}
+.dcr .crcria {--cridiceimg:url('https://2img.net/i.imgur.com/z5Vg0Ot.png');}
+.dcr .crdracaenae {--cridiceimg:url('https://2img.net/i.imgur.com/SwKA1le.png');}
+.dcr .crempusa {--cridiceimg:url('https://2img.net/i.imgur.com/UC1QbCS.png');}
+.dcr .crhyppalektryon {--cridiceimg:url('https://2img.net/i.imgur.com/Cm6t5AV.png');}
+.dcr .crperros {--cridiceimg:url('https://2img.net/i.imgur.com/xhZRq3O.png');}
+.dcr .crlestrigon {--cridiceimg:url('https://2img.net/i.imgur.com/9Erk1TS.png');}
+.dcr .crguerrero {--cridiceimg:url('https://2img.net/i.imgur.com/VLplCaH.png');}
+.dcr .crsirenas {--cridiceimg:url('https://2img.net/i.imgur.com/kA6zzGL.png');}
