@@ -806,6 +806,7 @@
   #cp-main.ucp-vigi table.table1 thead th:nth-of-type(3) {
     display: none !important;
   }
+  .panel {padding: 20px;}
   .mbsmcont {
     padding: 20px !important;
   }
