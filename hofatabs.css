@@ -4007,6 +4007,9 @@ div.reminder:before {
   }
   .tabrol1 .tbroltit {
     margin-bottom: 0px;
+  }  
+  .tabrol2 .tbroltit > b {
+    font-size: var(--fs-h3);
   }
   .tabusqres {
     padding: 20px;
