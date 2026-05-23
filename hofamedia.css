@@ -1,0 +1,1300 @@
+/*MEDIA*/
+@media (min-width: 1800px) {
+  :root,
+  *,
+  *::before,
+  *::after {
+    --bradius: 8px !important;
+    --fs-bigger: 1.35rem !important;
+    --fs-big: 1.2rem !important;
+    --fs-body: 1.07rem !important;
+    --fs-text: 0.99rem !important;
+    --fs-small: 0.81rem !important;
+    --fs-smaller: 0.78rem !important;
+    --fs-smallest: 0.7rem !important;
+    --fs-title: 6.3rem !important;
+    --fs-display: 4rem !important;
+    --fs-h1: 3.6rem !important;
+    --fs-h2: 3rem !important;
+    --fs-h3: 2.2rem !important;
+    --fs-h4: 2rem !important;
+    --fs-h5: 1.66rem !important;
+  }
+  #page-footer .skincredit > img {
+    height: 40px;
+  }
+  sdnav > a:before {
+    font-size: var(--fs-h5) !important;
+  }
+  sdnav > a:after {
+    margin: 0px 16px !important;
+  }
+  ul#notif_list,
+  .navigationpanel {
+    top: 70px !important;
+    max-width: 380px !important;
+  }
+  .tdesc,
+  .tadm,
+  .tlocupd,
+  .teve,
+  .tlult {
+    max-height: 240px;
+    height: 240px;
+  }
+  .tadm > a,
+  .tlocupd .tloc,
+  .tlocupd .tupd,
+  .teve .teeve {
+    height: 110px;
+  }
+  .forcont .frcinfo .frcdesc {
+    max-height: 110px;
+    overflow: auto;
+  }
+  .forcont .frcinfo .frclinks {
+    margin-top: 20px;
+  }
+  .forum .forcont,
+  #c3 .forum .forava {
+    padding: 30px;
+  }
+  .forum .forava .fraava {
+    position: relative !important;
+    height: 300px;
+  }
+  .forum .forava {
+    padding: 0px;
+    display: block !important;
+  }
+  .forum .forava:before {
+    height: 300px;
+  }
+  .fralastpost {
+    padding: 20px;
+    border-top: var(--border1);
+  }
+  #c3 .forum {
+    min-height: 350px;
+  }
+  #c3 .forum .forava {
+    display: flex !important;
+  }
+  #c3 .fralastpost {
+    padding: 0px !important;
+    border-top: none !important;
+  }
+  .pbinfo,
+  .postprofile {
+    top: 50px !important;
+  }
+  .ppcicweap {
+    font-size: var(--fs-bigg) !important;
+  }
+  .ppcidata .ppcid > em {
+    line-height: 100%;
+    font-size: var(--fs-smaller) !important;
+  }
+  .ppcistats .pccontent > strong {
+    font-size: var(--fs-text) !important;
+    line-height: 90% !important;
+  }
+  .postheader > a {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .postbody ul li:before {
+    top: 12px !important;
+  }
+  #textarea_content .sceditor-group {
+    gap: 20px !important;
+  }
+  .sceditor-container .sceditor-toolbar {
+    gap: 12px 20px !important;
+  }
+  .tnbuttons {
+    gap: 20px !important;
+  }
+  .tnbuttons > a {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .qmadminlinks > a {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .phmquote:before {
+    min-width: 90px !important;
+  }
+  .dicethrow .diceres > strong {
+    flex: 1 0 11% !important;
+    max-width: 115px !important;
+  }
+  .ucp-paneldecontroldelosavatares fieldset {
+    height: 500px !important;
+  }
+}
+@media (min-width: 2100px) {
+  :root,
+  *,
+  *::before,
+  *::after {
+    --bradius: 10px !important;
+    --fs-bigger: 1.37rem !important;
+    --fs-big: 1.22rem !important;
+    --fs-body: 1.07rem !important;
+    --fs-text: 0.99rem !important;
+    --fs-small: 0.82rem !important;
+    --fs-smaller: 0.76rem !important;
+    --fs-smallest: 0.72rem !important;
+    --fs-title: 6.07rem !important;
+    --fs-display: 4.07rem !important;
+    --fs-h1: 3.67rem !important;
+    --fs-h2: 3.07rem !important;
+    --fs-h3: 2.27rem !important;
+    --fs-h4: 2.07rem !important;
+    --fs-h5: 1.73rem !important;
+  }
+  body#phpbb {
+    margin-left: 125px !important;
+  }
+  header {
+    max-height: 800px;
+  }
+  .himg {
+    background-image: var(--pngimg-2);
+  }
+  #page-footer .navbar ul {
+    gap: 12px;
+    justify-content: space-between;
+  }
+  #page-footer ul.linklist li.footer-home {
+    font-size: 0px;
+  }
+  #page-footer ul.linklist li.footer-home:after {
+    content: "";
+    display: none;
+  }
+  #page-footer ul.linklist li.footer-home > a:before {
+    content: "\f80a";
+    font: 300 var(--fs-bigger) var(--font4);
+  }
+  .nvside {
+    width: 125px;
+    padding: 50px 10px;
+  }
+  .nvava {
+    height: 75px;
+    width: 75px;
+  }
+  .nvtop {
+    padding: 20px;
+  }
+  ul#notif_list,
+  .navigationpanel {
+    margin-top: 30px !important;
+    left: 150px !important;
+  }
+  mainbody {
+    max-width: 1800px;
+    padding: 120px;
+  }
+  #tablon {
+    margin-bottom: 120px;
+  }
+  #afiliados,
+  .footerlogin {
+    margin-top: 120px;
+  }
+  .tdesc,
+  .tadm,
+  .tlocupd,
+  .teve,
+  .tlult {
+    max-height: 270px !important;
+    height: 270px !important;
+  }
+  .tadm > a,
+  .tlocupd .tloc,
+  .tlocupd .tupd,
+  .teve .teeve {
+    height: 50% !important;
+  }
+  .forum {
+    max-width: 800px;
+  }
+  .forum .forcont,
+  #c3 .forum .forava {
+    padding: 40px;
+  }
+  .forcont .frcinfo .frclinks {
+    margin-top: 30px;
+  }
+  .statlastu > .stlstuava {
+    width: 160px;
+    height: 160px;
+  }
+  .statgroups > a {
+    height: 73px;
+  }
+  .mbsmava {
+    max-width: 250px !important;
+  }
+  .mbsmclinks a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .postbody ul li:before {
+    top: 13px !important;
+  }
+  .dicethrow .diceres > strong {
+    max-width: 132px !important;
+  }
+  .pbinfo {
+    top: 70px !important;
+  }
+  .ucp-paneldecontroldelosavatares fieldset {
+    height: 505px !important;
+  }
+}
+@media (min-width: 2400px) {
+  :root,
+  *,
+  *::before,
+  *::after {
+    --bradius: 10px !important;
+    --fs-bigger: 1.47rem !important;
+    --fs-big: 1.32rem !important;
+    --fs-body: 1.17rem !important;
+    --fs-text: 1.09rem !important;
+    --fs-small: 0.92rem !important;
+    --fs-smaller: 0.86rem !important;
+    --fs-smallest: 0.82rem !important;
+    --fs-title: 6.17rem !important;
+    --fs-display: 4.17rem !important;
+    --fs-h1: 3.77rem !important;
+    --fs-h2: 3.17rem !important;
+    --fs-h3: 2.37rem !important;
+    --fs-h4: 2.17rem !important;
+    --fs-h5: 1.83rem !important;
+  }
+  .nvnlinks,
+  .nvupanel {
+    gap: 30px;
+  }
+  .nvnlinks > a:before,
+  .nvupanel a:before {
+    font-size: var(--fs-h4) !important;
+  }
+}
+@media (max-width: 1100px) {
+  body#phpbb {
+    margin-left: 70px !important;
+  }
+  .nvside {
+    width: 70px;
+    padding: 20px 10px;
+  }
+  .nvava {
+    height: 40px;
+    width: 40px;
+  }
+  ul#notif_list,
+  .navigationpanel {
+    left: 90px !important;
+  }
+  .nvtree > a > span {
+    max-width: 200px;
+  }
+  #tablon,
+  #afiliados {
+    flex-wrap: wrap;
+  }
+  .tdesc,
+  .tlocupd,
+  .teve,
+  .tlult {
+    flex: 1 0 30%;
+    min-width: 170px;
+  }
+  .statonline,
+  .stattwenty {
+    flex: 1 0 50%;
+  }
+  .afcred {
+    flex: 1 0 100%;
+  }
+  .tab {
+    padding: 40px 60px !important;
+  }
+  .right-tabs {
+    right: 16px !important;
+  }
+  .left-tabs {
+    left: 16px !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 130% !important;
+  }
+  .ucp-paneldecontroldelosavatares fieldset {
+    height: auto !important;
+  }
+  .ucp-paneldecontroldelosavatares dl:not(.ucp-muestraunapequeaimagenentusmen) {
+    width: 100% !important;
+  }
+  .ucp-paneldecontroldelosavatares dl.ucp-muestraunapequeaimagenentusmen {
+    width: 100% !important;
+  }
+}
+@media (max-width: 950px) {
+  header {
+    max-height: 500px;
+    padding: 40px;
+  }
+  .himg {
+    background-image: var(--pngimg-2);
+  }
+  #page-footer .navbar ul {
+    gap: 12px;
+    justify-content: space-between;
+  }
+  #page-footer ul.linklist li.footer-home {
+    font-size: 0px;
+  }
+  #page-footer ul.linklist li.footer-home:after {
+    content: "";
+    display: none;
+  }
+  #page-footer ul.linklist li.footer-home > a:before {
+    content: "\f80a";
+    font: 300 var(--fs-bigger) var(--font4);
+  }
+  .nvtree > a > span {
+    max-width: 100px;
+  }
+  mainbody {
+    padding: 40px;
+  }
+  #tablon {
+    margin-bottom: 40px;
+  }
+  #afiliados,
+  .footerlogin {
+    margin-top: 40px;
+  }
+  .forum {
+    max-width: none;
+  }
+}
+@media (max-width: 900px) {
+  header > a {
+    font-size: var(--fs-display);
+  }
+  header > a > span {
+    font-size: calc(var(--fs-display) - 0.085rem);
+  }
+  .hdesc {
+    max-width: 400px;
+  }
+  #profile {
+    flex-direction: column;
+  }
+  .tab {
+    padding: 60px 80px !important;
+  }
+  .right-tabs {
+    right: 25px !important;
+  }
+  .left-tabs {
+    left: 25px !important;
+  }
+  #profile .profimg .pccontent {
+    position: relative !important;
+    border-left: var(--border1) !important;
+    height: 130px !important;
+    width: 130px !important;
+  }
+  #profile .profimg {
+    background: var(--back1);
+    max-width: none !important;
+    border-left: none !important;
+    border-top: var(--border1);
+    height: 130px !important;
+    min-height: auto !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .profimg .proflinks {
+    justify-content: space-around !important;
+    align-items: center;
+  }
+  .profimg .proflinks a {
+    font-size: var(--fs-h4) !important;
+    background: transparent !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .profimg .proflinks a:hover {
+    color: var(--group) !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  #glenjams-05 {
+    display: none !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 128% !important;
+  }
+  .phmname {
+    font-size: var(--fs-h2) !important;
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h3) !important;
+  }
+  .postprofile {
+    display: none !important;
+  }
+  .phmquote:before {
+    width: 40px !important;
+  }
+}
+@media (max-width: 700px) {
+  .nvtree > a > span {
+    max-width: 80px;
+  }
+  header > a {
+    font-size: var(--fs-h1);
+  }
+  .hdesc {
+    max-width: 340px;
+  }
+  header > a > span {
+    font-size: calc(var(--fs-h1) - 0.055rem);
+  }
+  .afherm {
+    width: 100%;
+    max-height: none !important;
+  }
+  #profile .profcont {
+    min-width: auto !important;
+  }
+  .tab {
+    padding: 40px 60px !important;
+  }
+  .right-tabs {
+    right: -10px !important;
+  }
+  .left-tabs {
+    left: -10px !important;
+  }
+  .left-tabs,
+  .right-tabs {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .profimg .proflinks a {
+    font-size: var(--fs-h5) !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 130% !important;
+  }
+  .pfcstats > .pccontent > div > strong {
+    flex: 1 0 25% !important;
+    font-size: var(--fs-body) !important;
+  }
+  input.inputbox,
+  select.inputbox {
+    width: 100% !important;
+    display: flex !important;
+  }
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(4),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(4),
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(6),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(6) {
+    display: none !important;
+  }
+  .panel.ucp-informacinderegistro dl.ucp- {
+    display: none !important;
+  }
+  .ftopic {
+    flex-direction: column !important;
+    padding: 0px !important;
+    gap: 0px !important;
+  }
+  .ftopic > div {
+    width: 100% !important;
+    padding: 20px;
+  }
+  .ftopicz2 {
+    border-top: var(--border1);
+    background: var(--back2);
+  }
+  .ftoplava {
+    display: none !important;
+  }
+  .mbsmava > img {
+    display: none !important;
+  }
+  .mbsmava {
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    border-right: none !important;
+    border-bottom: var(--border1);
+    height: 250px !important;
+    min-height: auto !important;
+  }
+  .mbsimgpro {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+  }
+  .mbsmember {
+    flex-direction: column !important;
+    max-width: 350px !important;
+    min-width: auto !important;
+    flex: 1 0 100% !important;
+  }
+  .mbsimgpro img {
+    filter: var(--filter2);
+    object-fit: cover;
+    object-position: center 30%;
+    width: 100%;
+    height: 100%;
+  }
+  .mbsimgpro > div {
+    width: 100%;
+    height: 100%;
+  }
+  .mbsmcont {
+    min-width: auto !important;
+  }
+  .mbsimgava {
+    display: none !important;
+  }
+  .mbsmcdata {
+    max-height: none !important;
+  }
+  .phmname {
+    font-size: var(--fs-h3) !important;
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h4) !important;
+  }
+  .phmain {
+    gap: 12px !important;
+  }
+  .phicon img,
+  .phicon:empty:before,
+  .phicon img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .postheader,
+  .messheader {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .phmname,
+  .phsubject {
+    font-size: var(--fs-h4) !important;
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h5) !important;
+  }
+  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(1),
+  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(1),
+  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(3),
+  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(3) {
+    display: none !important;
+  }
+  .forum {
+    flex-direction: column !important;
+    flex: 1 0 100%;
+  }
+  .forum .forcont {
+    border-right: none;
+  }
+  .forum .forava {
+    width: 100%;
+    max-width: none !important;
+    border-top: var(--border1);
+    min-height: auto;
+    min-width: auto;
+    padding: 20px;
+    position: initial !important;
+    gap: 20px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: end;
+  }
+  .forum .forava:before {
+    display: none !important;
+  }
+  .forava .fraava {
+    outline: var(--baborder);
+    filter: none;
+    outline-color: var(--group);
+    outline-offset: 2px;
+  }
+  .forum .forava:empty:before,
+  .forava .fraava img {
+    filter: var(--filter1) !important;
+  }
+  .forava .fraava,
+  .forum .forava:empty:before,
+  .forava .fraava img {
+    position: relative !important;
+    width: 60px;
+    height: 60px;
+    border-radius: var(--bradius);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .fralicon {
+    top: initial !important;
+    right: initial !important;
+    bottom: 72px !important;
+    left: 13px !important;
+  }
+  #c3 .forum .forcont {
+    min-height: 300px;
+    position: relative;
+  }
+  #c3 .forum .forava {
+    background: var(--back1);
+  }
+  body#phpbb {
+    margin-left: 50px !important;
+  }
+  header {
+    padding: 30px;
+  }
+  .himg {
+    background-image: var(--pngimg-3);
+  }
+  header > a {
+    font-size: var(--fs-h2);
+  }
+  header > a > span {
+    font-size: calc(var(--fs-h2) - 0.045rem);
+  }
+  .hdesc {
+    max-width: 260px;
+  }
+  .nvside {
+    width: 50px;
+    padding: 15px 10px;
+  }
+  .nvava {
+    height: 30px;
+    width: 30px;
+    display: none !important;
+  }
+  a#fa_notifications > span#notif_unread {
+    left: 170%;
+    top: 20px;
+  }
+  ul#notif_list,
+  .navigationpanel {
+    top: 50px !important;
+    left: 70px !important;
+  }
+  #page-footer {
+    padding: 30px 20px;
+  }
+  .nvtree > a > span {
+    max-width: 50px;
+  }
+  .nvtop {
+    padding: 6px;
+  }
+  mainbody {
+    padding: 20px;
+  }
+  #tablon {
+    margin-bottom: 45px;
+  }
+  #afiliados,
+  .footerlogin {
+    margin-top: 45px;
+  }
+  .tlult {
+    max-height: initial;
+    height: initial !important;
+    overflow: initial !important;
+    padding: 0px !important;
+  }
+  .tadm {
+    flex-direction: row !important;
+    width: 100%;
+  }
+  .tlupst {
+    display: none !important;
+  }
+  .tlupst:nth-of-type(1),
+  .tlupst:nth-of-type(2),
+  .tlupst:nth-of-type(3),
+  .tlupst:nth-of-type(4),
+  .tlupst:nth-of-type(5),
+  .tlupst:nth-of-type(6) {
+    display: block !important;
+  }
+  .tlupst:nth-of-type(6) {
+    margin-bottom: 0px !important;
+  }
+  .tlocupd,
+  .teve {
+    flex: 1 0 100% !important;
+  }
+  .statlinks,
+  .statsright {
+    flex: 1 0 100%;
+    flex-direction: row !important;
+  }
+  .statlastu > .stlstuava {
+    width: 90px;
+    height: 90px;
+  }
+  .stlstunam > strong {
+    font-size: var(--fs-bigger);
+  }
+  .statsright,
+  .statonline,
+  .stattwenty {
+    min-width: auto;
+  }
+  .statonline,
+  .stattwenty {
+    max-height: auto !important;
+  }
+  .pfcuser {
+    font-size: var(--fs-h3) !important;
+  }
+  #profile .profcont,
+  #car-hold {
+    min-height: 500px !important;
+  }
+  .pfcmain > div {
+    flex: 1 0 30% !important;
+  }
+  .tab {
+    padding: 50px !important;
+  }
+  .pfcmain {
+    padding: 20px !important;
+  }
+  #profile .profimg .pccontent {
+    display: none !important;
+  }
+  .pfcstats > .pccontent > div > strong > i {
+    font-size: var(--fs-bigger) !important;
+  }
+  .pfctrank {
+    font-size: var(--fs-h4) !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 128% !important;
+  }
+  fieldset dd {
+    margin-left: 0px !important;
+  }
+  fieldset dt {
+    width: 100% !important;
+  }
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(3),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(3) {
+    display: none !important;
+  }
+  .mbsmcont {
+    padding: 20px !important;
+  }
+  .pbinfo {
+    top: 28px !important;
+  }
+  .postbody .content {
+    padding: 20px !important;
+  }
+  .postheader > a {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: var(--fs-big) !important;
+  }
+  .phicon img,
+  .phicon:empty:before,
+  .mhava img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .phmquote:before {
+    width: 30px !important;
+  }
+  .signature_div {
+    margin-bottom: 0px !important;
+  }
+  .sigcont .signature_div > br:first-of-type {
+    display: none !important;
+  }
+  .cattitle h2 {
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  mainbody {
+    padding: 15px;
+  }
+  .mhava {
+    display: none !important;
+  }
+  .phmname,
+  .phsubject {
+    font-size: var(--fs-h5) !important;
+  }
+  mainbody {
+    padding: 12px;
+  }
+  .afherm,
+  .afcred,
+  .tdesc,
+  .tupd,
+  .tlult,
+  .afcred,
+  .tlocupd,
+  .teve {
+    min-width: auto !important;
+    flex: 1 0 100%;
+  }
+  .tlocupd .tupd {
+    max-height: 110px;
+  }
+  #profile .profcont,
+  #car-hold {
+    min-height: 560px !important;
+  }
+  .pfctraits {
+    flex-direction: column !important;
+  }
+  .pfctraits > div {
+    width: 100% !important;
+  }
+  a.usgp {
+    flex: 1 0 40% !important;
+    max-width: 100% !important;
+  }
+  blockquote,
+  dl.codebox dd,
+  dl.codebox.spoiler .spoiler_content.hidden {
+    padding: 12px !important;
+  }
+  dl.codebox.spoiler > dd {
+    padding: 0px !important;
+  }
+  dl.codebox dt {
+    padding: 6px !important;
+  }
+}
+
+@media only screen and (max-width: 980px) and (min-height: 1500px) {
+  :root,
+  *,
+  *::before,
+  *::after {
+    --bradius: 12px !important;
+    --fs-bigger: 2.57rem !important;
+    --fs-big: 2.42rem !important;
+    --fs-body: 2.1rem !important;
+    --fs-text: 1.9rem !important;
+    --fs-small: 1.5rem !important;
+    --fs-smaller: 1.1rem !important;
+    --fs-smallest: 0.9rem !important;
+    --fs-title: 4.17rem !important;
+    --fs-display: 4.27rem !important;
+    --fs-h1: 4rem !important;
+    --fs-h2: 3.5rem !important;
+    --fs-h3: 2.7rem !important;
+    --fs-h4: 2.5rem !important;
+    --fs-h5: 2.2rem !important;
+  }
+  body#phpbb {
+    margin-left: 125px !important;
+  }
+  header {
+    max-height: 800px;
+  }
+  .hdesc {
+    width: 100%;
+    max-width: 100%;
+  }
+  .himg {
+    background-image: var(--pngimg-2);
+  }
+  #page-footer .navbar ul {
+    gap: 12px;
+    justify-content: space-between;
+  }
+  #page-footer ul.linklist li.footer-home {
+    font-size: 0px;
+  }
+  #page-footer ul.linklist li.footer-home:after {
+    content: "";
+    display: none;
+  }
+  #page-footer ul.linklist li.footer-home > a:before {
+    content: "\f80a";
+    font: 300 var(--fs-bigger) var(--font4);
+  }
+  .nvside {
+    width: 125px;
+    padding: 50px 10px;
+  }
+  .nvava {
+    height: 75px;
+    width: 75px;
+  }
+  .nvnlinks,
+  .nvupanel {
+    gap: 40px;
+  }
+  .nvnlinks > a:before,
+  .nvupanel a:before {
+    font-size: var(--fs-h2) !important;
+  }
+  #page-footer .skincredit > img {
+    height: 40px;
+  }
+  .nvtree > a:first-of-type {
+    font-size: var(--fs-body);
+  }
+  .nvtree > a {
+    font-size: var(--fs-text);
+  }
+  .nvtree > a > span {
+    max-width: 125px;
+  }
+  sdnav > a:after {
+    margin: 0px 16px !important;
+  }
+  sdnav > a:before {
+    font-size: var(--fs-h5) !important;
+  }
+  .nvtop {
+    padding: 20px;
+  }
+  ul#notif_list,
+  .navigationpanel {
+    top: 90px !important;
+    left: 145px !important;
+    max-width: 480px !important;
+  }
+  .tlocupd .tloc {
+    display: none !important;
+  }
+  .tdesc,
+  .tadm,
+  .tlocupd,
+  .teve,
+  .tlult,
+  .tlocupd .tupd {
+    max-height: 300px !important;
+    height: 300px !important;
+  }
+  .tadm,
+  .teve {
+    flex-direction: row !important;
+    width: 100%;
+  }
+  .tlupst {
+    display: none !important;
+  }
+  .tlupst:nth-of-type(1),
+  .tlupst:nth-of-type(2),
+  .tlupst:nth-of-type(3),
+  .tlupst:nth-of-type(4),
+  .tlupst:nth-of-type(5),
+  .tlupst:nth-of-type(6) {
+    display: block !important;
+  }
+  .tlupst:nth-of-type(6) {
+    margin-bottom: 0px !important;
+  }
+  .tlocupd,
+  .teve {
+    flex: 1 0 100% !important;
+  }
+  .tadm > a,
+  .teve .teeve {
+    height: 100%;
+  }
+  .forum {
+    max-width: none;
+  }
+  .forum .forcont,
+  #c3 .forum .forava {
+    padding: 30px;
+  }
+  .forcont .frcinfo .frcdesc {
+    max-height: 155px;
+    overflow: auto;
+  }
+  .navigationpanel > em {
+    line-height: 100% !important;
+  }
+  .forcont .frcinfo .frclinks {
+    margin-top: 20px;
+  }
+  .forum .forava .fraava {
+    position: relative !important;
+    height: 300px;
+  }
+  .forum .forava {
+    padding: 0px;
+    display: block !important;
+  }
+  .forum .forava:before {
+    height: 300px;
+  }
+  .fralastpost {
+    padding: 20px;
+    border-top: var(--border1);
+  }
+  #c3 .forum {
+    min-height: 450px;
+  }
+  #c3 .forum .forava {
+    display: flex !important;
+  }
+  #c3 .fralastpost {
+    padding: 0px !important;
+    border-top: none !important;
+  }
+  .statlinks,
+  .statsright {
+    flex: 1 0 100%;
+    flex-direction: row !important;
+  }
+  .statonline,
+  .stattwenty {
+    max-height: 230px !important;
+  }
+  #statistics .statgroups > a {
+    flex: 1 0 9%;
+    height: 62px !important;
+  }
+  #profile .profcont,
+  #car-hold {
+    min-height: 600px !important;
+  }
+  .tab {
+    padding: 60px 80px !important;
+  }
+  .right-tabs {
+    right: 25px !important;
+  }
+  .left-tabs {
+    left: 25px !important;
+  }
+  #profile {
+    flex-direction: column;
+  }
+  #profile .profimg .pccontent {
+    position: relative !important;
+    border-left: var(--border1) !important;
+    height: 130px !important;
+    width: 130px !important;
+  }
+  #profile .profimg {
+    background: var(--back1);
+    max-width: none !important;
+    border-left: none !important;
+    border-top: var(--border1);
+    height: 130px !important;
+    min-height: auto !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .profimg .proflinks {
+    justify-content: space-around !important;
+    align-items: center;
+  }
+  #glenjams-05 {
+    display: none !important;
+  }
+  .pfctwo {
+    gap: 30px !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 125% !important;
+  }
+  .ftopic {
+    flex-direction: column !important;
+    padding: 0px !important;
+    gap: 0px !important;
+  }
+  .ftopic > div {
+    width: 100% !important;
+    padding: 20px;
+  }
+  .ftopicz2 {
+    border-top: var(--border1);
+    background: var(--back2);
+  }
+  .ftoplava {
+    display: none !important;
+  }
+  .mbmsl {
+    flex: 1 0 50% !important;
+  }
+  .mbsmava > img {
+    display: none !important;
+  }
+  .mbsmava {
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    border-right: none !important;
+    border-bottom: var(--border1);
+    height: 250px !important;
+    min-height: auto !important;
+  }
+  .mbsimgpro {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+  }
+  .mbsmember {
+    flex-direction: column !important;
+    max-width: 350px !important;
+    min-width: auto !important;
+    flex: 1 0 45% !important;
+  }
+  .mbsmcdata {
+    max-height: none !important;
+  }
+  .mbsimgpro img {
+    filter: var(--filter2);
+    object-fit: cover;
+    object-position: center 30%;
+    width: 100%;
+    height: 100%;
+  }
+  .mbsimgpro > div {
+    width: 100%;
+    height: 100%;
+  }
+  .mbsmcont {
+    min-width: auto !important;
+  }
+  .postprofile {
+    display: none !important;
+  }
+  .phmname,
+  .phsubject {
+    font-size: var(--fs-h4) !important;
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h5) !important;
+  }
+  .mhava {
+    display: none !important;
+  }
+  .phicon img,
+  .phicon:empty:before {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .postbody ul li:before {
+    top: 12px !important;
+  }
+  .pbinfo {
+    top: 72px !important;
+  }
+  .postheader > a {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  #textarea_content .sceditor-group {
+    gap: 20px !important;
+  }
+  .sceditor-container .sceditor-toolbar {
+    gap: 12px 20px !important;
+  }
+  .tnbuttons {
+    gap: 20px !important;
+  }
+  .tnbuttons > a {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .qmadminlinks > a {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .dicethrow .diceres > strong {
+    flex: 1 0 16% !important;
+    max-width: 145px !important;
+  }
+  .phmquote:before {
+    min-width: 50px !important;
+  }
+  .afcred {
+    max-height: 242px !important;
+  }
+  .mbsmclinks {
+    gap: 16px !important;
+  }
+  a.usgp {
+    flex: 1 0 40% !important;
+  }
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(3),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(4),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(6),
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(3),
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(4),
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(6),
+  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(1),
+  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(1),
+  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(3),
+  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(3) {
+    display: none !important;
+  }
+  .forcont .frcinfo .frclinks {
+    line-height: 75% !important;
+  }
+  .forcont .frcinfo .frclinks > a {
+    font-size: var(--fs-smaller) !important;
+  }
+  #c3 .forum .frcdesc {
+    display: none !important;
+  }
+}
+
+@media (max-height: 500px) {
+  .nvnlinks,
+  .nvupanel {
+    gap: 10px;
+  }
+  .nvava {
+    display: none !important;
+  }
+  .tab {
+    padding: 40px !important;
+  }
+}
+
+@media (max-height: 400px) {
+  .tab {
+    padding: 30px !important;
+  }
+  .pfctrank > span {
+    font-size: var(--fs-h5) !important;
+  }
+}
