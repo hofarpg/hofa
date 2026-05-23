@@ -3874,6 +3874,7 @@ div.reminder:before {
   }
   .tabaul#tbfull .tbauname {
     text-align: center;
+    font-size: var(--fs-h3);
   }
   #tabcombatpj,
   #tabcombatmn {
