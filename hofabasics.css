@@ -889,6 +889,7 @@ span#dice_to_del {
   width: 100%;
   text-decoration: 2px underline var(--taccent);
   text-underline-offset: 2px;
+  flex: unset;
 }
 #cp-main fieldset dt label,
 #cp-main fieldset dt span {
