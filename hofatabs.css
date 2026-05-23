@@ -3872,7 +3872,7 @@ div.reminder:before {
   .tabaul .tbauimg {
     width: 200px;
   }
-  .tabaul .tbauname {
+  .tabaul#tbfull .tbauname {
     text-align: center;
   }
   #tabcombatpj,
