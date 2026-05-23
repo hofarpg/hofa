@@ -29,9 +29,9 @@
   sdnav > a:after {
     margin: 0px 16px !important;
   }
-  ul#notif_list,
+  #notif_list,
   .navigationpanel {
-    top: 70px !important;
+    top: 70px;
     max-width: 380px !important;
   }
   .tdesc,
@@ -190,9 +190,9 @@
   .nvtop {
     padding: 20px;
   }
-  ul#notif_list,
+  #notif_list,
   .navigationpanel {
-    margin-top: 30px !important;
+    margin-top: 30px;
     left: 150px !important;
   }
   mainbody {
@@ -298,7 +298,7 @@
     height: 40px;
     width: 40px;
   }
-  ul#notif_list,
+  #notif_list,
   .navigationpanel {
     left: 90px !important;
   }
@@ -681,11 +681,11 @@
     max-width: 260px;
   }
   .nvside {
-    width:100%;
-    padding-block:12px;
+    width: 100%;
+    padding-block: 12px;
     height: auto;
     flex-direction: row;
-    top: 28px;
+    top: 27px;
     line-height: 1em;
   }
   .nvside > div {
@@ -703,9 +703,9 @@
     left: 170%;
     top: 20px;
   }
-  ul#notif_list,
+  #notif_list,
   .navigationpanel {
-    top: 50px;
+    top: 65px;
     left: 20px !important;
   }
   #page-footer {
@@ -964,11 +964,11 @@
   .nvtop {
     padding: 20px;
   }
-  ul#notif_list,
+ #notif_list,
   .navigationpanel {
-    top: 90px !important;
+    top: 90px;
     left: 145px !important;
-    max-width: 480px !important;
+    max-width: 480px;
   }
   .tlocupd .tloc {
     display: none !important;
