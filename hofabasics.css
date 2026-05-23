@@ -874,6 +874,7 @@ span#dice_to_del {
 }
 #cp-main fieldset dl {
   flex-direction: column;
+  margin: 0;
 }
 #cp-main fieldset {
   display: flex;
