@@ -2821,7 +2821,7 @@ div.reminder:before {
   position: relative;
   flex-shrink: 0;
   width: 270px;
-  height: 270px;
+  aspect-ratio: 1;
   overflow: hidden;
   border-radius: var(--bradius);
   justify-content: center;
@@ -2932,8 +2932,7 @@ div.reminder:before {
 .tabaul#tbfull .tbaulinks > a:hover {
   color: var(--txt1);
 }
-.tabaul .tbfside1,
-.tabaul .tbfside2 {
+.tabaul .tbfside1, .tabaul .tbfside2 {
   gap: 40px;
 }
 .tabaul .tbfside1 {
@@ -3752,8 +3751,7 @@ div.reminder:before {
     gap: 30px;
     padding: 30px;
   }
-  .tabaul .tbfside1,
-  .tabaul .tbfside2 {
+  .tabaul .tbfside1, .tabaul .tbfside2 {
     gap: 30px;
   }
   .tabaul#tbsimple {
@@ -3828,6 +3826,9 @@ div.reminder:before {
   #expedtab #expzdata {
     gap: 25px;
   }
+  .tabaul .tbauimg {
+    width: 250px;
+  }
   .tbroltit,
   .tbrolcont {
     padding: 40px;
@@ -3842,13 +3843,6 @@ div.reminder:before {
     border-width: 23px;
     padding-right: 12px;
     border-right-width: 11px;
-  }
-  .tabaul#tbfull .tbauimg {
-    width: 200px;
-  }
-  .tabaul .tbauimg {
-    width: 200px;
-    height: 200px;
   }
   .tabcrono .tabcronocont,
   .tabrelas .tabrelascont,
@@ -3876,14 +3870,10 @@ div.reminder:before {
     align-items: center;
   }
   .tabaul#tbfull .tbauimg {
-    width: 270px;
+    width: 200px;
   }
   .tabaul#tbfull .tbauname {
     text-align: center;
-  }
-  .tabaul .tbauimg {
-    width: 270px;
-    height: 270px;
   }
   #tabcombatpj,
   #tabcombatmn {
@@ -4033,8 +4023,7 @@ div.reminder:before {
     padding: 30px;
     gap: 20px;
   }
-  .tabaul .tbfside1,
-  .tabaul .tbfside2 {
+  .tabaul .tbfside1, .tabaul .tbfside2 {
     justify-content: center;
     align-items: center;
   }
@@ -4247,13 +4236,12 @@ div.reminder:before {
     align-items: center;
   }
   .tabaul#tbfull .tbauimg {
-    width: 270px;
+    max-width: 270px;
   }
   .tabaul#tbfull .tbauname {
     text-align: center;
   }
-  .tabaul .tbfside1,
-  .tabaul .tbfside2 {
+  .tabaul .tbfside1, .tabaul .tbfside2 {
     justify-content: center;
     align-items: center;
   }
