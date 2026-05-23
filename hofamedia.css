@@ -303,7 +303,7 @@
     left: 90px !important;
   }
   .nvtree > a > span {
-    max-width: 200px;
+    max-width: 100px;
   }
   #tablon,
   #afiliados {
@@ -838,6 +838,9 @@
 }
 
 @media (max-width: 500px) {
+  .nvtree > a > span {
+    max-width: 80px;
+  }
   .mhava {
     display: none;
   }
