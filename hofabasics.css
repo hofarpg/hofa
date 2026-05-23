@@ -135,6 +135,50 @@ span[style*="color"] {
   width: 100%;
   display: block !important;
 }
+.panel.poptions label {
+  display: inline-block;
+  margin: 6px;
+}
+.messageoptions .panel fieldset {
+  font: normal var(--fs-body) var(--font2);
+  line-height: 120%;
+}
+div#add_username {
+  background: none !important;
+  display: initial;
+  margin: 3px 6px 3px 3px !important;
+}
+.pbusernames input.inputbox:nth-of-type(2),
+.pbusernames input.inputbox:nth-of-type(3),
+.pbusernames input.inputbox:nth-of-type(4),
+.pbusernames input.inputbox:nth-of-type(5),
+.pbusernames input.inputbox:nth-of-type(6) {
+  margin-left: 6px !important;
+}
+.panel.pdice label {
+  display: initial;
+  margin-left: 6px;
+}
+span#dice_to_del {
+  margin-left: 6px;
+}
+.panel.pdice em {
+  text-transform: uppercase;
+  font: bold var(--fs-text) var(--font3);
+  font-style: normal;
+  color: var(--txt3);
+}
+.postpreview {
+  margin: 20px 0px;
+}
+.postpreview #preview {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.postpreview .postbody {
+  background: var(--tback1);
+  border: var(--border1);
+}
 
 /* SELECTOR DE COLOR AVANZADO */
 .colorpicker {
