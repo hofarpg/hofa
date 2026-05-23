@@ -102,7 +102,7 @@ div[style="height:3px"],
 .grid {
   display: grid;
 }
-.f-col {
+.f-col, .fcolumn {
   flex-direction: column;
 }
 
