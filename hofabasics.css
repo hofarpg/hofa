@@ -102,8 +102,38 @@ div[style="height:3px"],
 .grid {
   display: grid;
 }
-.f-col, .fcolumn {
+.f-col,
+.fcolumn {
   flex-direction: column;
+}
+.registeru p {
+  margin-bottom: 12px !important;
+}
+.registeru p > strong {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 150%;
+}
+.registeru p:first-of-type {
+  margin-top: 30px !important;
+}
+.registeru p a {
+  text-transform: uppercase;
+  font: bold var(--fs-small) var(--font3);
+  color: var(--txt1);
+}
+.registeru p u {
+  text-decoration-color: var(--taccent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+span[style*="color"] {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center !important;
+  width: 100%;
+  display: block !important;
 }
 
 /* SELECTOR DE COLOR AVANZADO */
