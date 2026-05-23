@@ -1,0 +1,242 @@
+.topicnav > form {
+  width: 100%;
+}
+.memberselect {
+  width: 100%;
+  background: var(--tback1);
+  gap: 6px 12px;
+  border: var(--border1);
+  border-radius: var(--bradius);
+  padding: 12px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.memberselect > input.button2,
+.footerlogin #autoenter > input {
+  flex: none;
+}
+.mbmsl {
+  flex: 1 0 30%;
+  align-self: stretch;
+  min-width: 180px;
+}
+.mbmsl > em {
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  font: bold var(--fs-small) var(--font3);
+  text-decoration: underline;
+  text-decoration-color: var(--taccent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  text-transform: uppercase;
+  padding-right: 6px;
+  line-height: 120%;
+  color: var(--txt1);
+}
+.mbmsl > input,
+.mbmsl > select {
+  align-self: stretch;
+  height: 100%;
+  flex: 1;
+}
+.mbmmembers {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  gap: 20px;
+}
+.mbsmember {
+  flex: 1 0 45%;
+  border: var(--border1);
+  width: 100%;
+  position: relative;
+  max-width: 50%;
+  min-width: 400px;
+}
+.mbsmava {
+  position: relative;
+  background: var(--back2);
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 280px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  overflow: hidden;
+  border-right: var(--border1);
+}
+.mbsmava > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: var(--filter2);
+}
+.mbsmava:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: var(--tback1);
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+}
+.mbsmcont {
+  flex: 1;
+  background: var(--tback1);
+  padding: 30px;
+  gap: 20px;
+  min-width: 200px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mbsmnamhid {
+  display: none !important;
+}
+.mbsmcdata {
+  text-transform: uppercase;
+  font: bold var(--fs-small) var(--font3);
+  color: var(--txt3);
+  border-radius: var(--bradius);
+  border-bottom: var(--border2);
+  border-top: var(--border2);
+  padding: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-height: 97px;
+  overflow: auto;
+}
+.mbsmcdata > div {
+  gap: 3px;
+  word-spacing: 0px;
+  flex: 1 0 35%;
+}
+.mbsmcdata > div > b {
+  color: var(--txt1);
+  text-decoration: underline;
+  text-decoration-color: var(--tgroup);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.mbsmvisit {
+  text-align: right;
+  position: absolute;
+  z-index: 2;
+  bottom: 12px;
+  right: 12px;
+}
+.mbsmcdata > div > em {
+  text-transform: lowercase;
+  font: normal var(--fs-text) var(--font1);
+  font-style: italic;
+  line-height: 100%;
+}
+.mbsmname {
+  text-transform: uppercase;
+  font: 900 var(--fs-h4) var(--font1);
+  line-height: 90%;
+}
+.mbsmname strong {
+  font-weight: 900;
+}
+.mbsmname span {
+  color: var(--txt1) !important;
+  text-shadow: var(--shadow3);
+}
+.mbsmimp {
+  gap: 4px;
+}
+.mbsmdes {
+  text-transform: lowercase;
+  font: 300 var(--fs-small) var(--font3);
+  font-style: italic;
+  color: var(--txt4);
+  line-height: 100%;
+  display: block;
+}
+.mbsmdes:before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  display: inline-block;
+  background: var(--tgroup);
+  margin-right: 8px;
+  position: relative;
+  top: -2px;
+}
+.mbsmdes > span {
+  display: inline-block;
+}
+.mbsmclinks:empty:before {
+  content: "Este usuario no tiene links";
+  text-transform: uppercase;
+  font: bold var(--fs-small) var(--font2);
+  color: var(--txt4);
+}
+.mbsmclinks {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  gap: 6px;
+}
+.mbsmclinks a {
+  color: var(--txt1);
+  background: var(--back2);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--border1);
+  border-radius: var(--bradius);
+}
+.mbsmclinks a:hover {
+  background: var(--group);
+  border-color: var(--group);
+  color: var(--back1);
+}
+.mbsmvisit > b {
+  text-transform: uppercase;
+  font: bold var(--fs-text) var(--font2);
+  color: var(--txt2);
+  line-height: 100%;
+  margin-bottom: 4px;
+}
+.mbsmvisit > em {
+  text-transform: uppercase;
+  font: bold var(--fs-smaller) var(--font3);
+  color: var(--txt3);
+  line-height: 100%;
+  border-radius: var(--bradius);
+  border-top: 2px solid var(--group);
+  border-left: var(--tborder);
+  border-right: var(--tborder);
+  padding: 4px 6px;
+}
+.mbsmclinks a[href*="undefined"] {
+  display: none !important;
+}
+.mbsimgpro,
+.mbsmclinks > div:empty {
+  display: none;
+}
+.mbsnomember {
+  flex: 1 0 100%;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font: bold var(--fs-body) var(--font2);
+  border: var(--border1);
+  background: var(--tback2);
+}
