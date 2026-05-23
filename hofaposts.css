@@ -339,6 +339,7 @@
   top: 40px;
   z-index: 55;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
@@ -346,7 +347,6 @@
   background: var(--back2);
   text-transform: uppercase;
   gap: 12px;
-  text-align: center;
 }
 .pbiicons {
   gap: 4px 12px;
@@ -368,9 +368,7 @@
   font: bold var(--fs-small) var(--font3);
   line-height: 100%;
   color: var(--txt3);
-  flex: 1;
   text-align: right;
-  min-width: 60px;
 }
 .pbiicons > em > a:hover {
   color: var(--group);
