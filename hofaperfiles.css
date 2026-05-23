@@ -1,0 +1,622 @@
+#profile {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--tback1);
+  border: var(--border1);
+}
+#profile *::selection {
+  background: var(--tgroup) !important;
+}
+.profava,
+.pfcushid,
+.pfcdathid,
+#field_id12,
+.proflinks > div:empty,
+.pfcfield#field_id:nth-of-type(2),
+.ajax-profil_edit img {
+  display: none !important;
+}
+#profile,
+#profile .profcont,
+#profile .profimg,
+#car-hold {
+  min-height: 450px;
+}
+#profile .profcont {
+  flex: 1;
+  align-self: stretch;
+  min-width: 450px;
+}
+.pfcone {
+  height: inherit;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-right: 12px;
+  margin-right: -12px;
+}
+.pfcuser > span {
+  color: var(--txt1) !important;
+}
+.pfcuser > span > strong {
+  font-weight: 900;
+}
+.pfcuser {
+  text-shadow: var(--shadow3);
+  font: 900 var(--fs-h2) var(--font1);
+  line-height: 90%;
+  text-transform: uppercase;
+}
+.pfcdata {
+  gap: 6px;
+}
+.pfcquote {
+  text-transform: lowercase;
+  font: normal var(--fs-small) var(--font3);
+  font-style: italic;
+  line-height: 100%;
+  color: var(--txt4);
+}
+.pfcquote > .pccontent > div.field_uneditable:before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  display: inline-block;
+  background: var(--tgroup);
+  margin-right: 8px;
+  position: relative;
+  top: -2px;
+}
+.pfcmain {
+  border-radius: var(--bradius);
+  border-top: var(--tborder);
+  border-bottom: var(--tborder);
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.pfcmain > div {
+  flex: 1 0 25%;
+  gap: 6px;
+}
+.pfcmain > div > em {
+  text-transform: lowercase;
+  font: normal var(--fs-text) var(--font1);
+  font-style: italic;
+  color: var(--txt4);
+  line-height: 100%;
+}
+.pfcmain > div > b {
+  text-transform: uppercase;
+  font: 900 var(--fs-body) var(--font2);
+  line-height: 85%;
+  color: var(--txt2);
+}
+.pfcusdata {
+  gap: 12px 20px;
+  flex-wrap: wrap;
+}
+.pfcusdata > div {
+  gap: 6px;
+  text-transform: uppercase;
+}
+.pfcusdata > div > em {
+  color: var(--txt1);
+  font: bold var(--fs-smaller) var(--font3);
+  line-height: 100%;
+  text-decoration: underline;
+  text-decoration-color: var(--tgroup);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+.pfcusdata > div > strong {
+  color: var(--txt4);
+  font: 900 var(--fs-text) var(--font1);
+  line-height: 100%;
+}
+.pfctwo {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.pfcchar {
+  gap: 6px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.pfcchar > div {
+  position: relative;
+  z-index: 1;
+}
+.pfcweap {
+  position: absolute !important;
+  z-index: 0 !important;
+  color: var(--tgroup);
+  font-size: calc(var(--fs-display) + var(--fs-big));
+  opacity: 0.8;
+}
+.pfcticon {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--bradius);
+  overflow: hidden;
+  outline: var(--bborder1);
+  outline-color: var(--group);
+  outline-offset: 4px;
+  margin: 6px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.pfcticon img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+}
+.pfctrank {
+  font: 900 var(--fs-h3) var(--font1);
+  text-transform: uppercase;
+  color: var(--txt1);
+  line-height: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.pfctrank > i {
+  position: absolute;
+  display: none;
+}
+.pfctrank > span {
+  text-shadow: var(--shadow3);
+}
+.pfclvl {
+  font: 900 var(--fs-body) var(--font2);
+  text-transform: uppercase;
+  color: var(--txt3);
+  gap: 4px;
+  line-height: 100%;
+}
+.pfclvl > b {
+  font-weight: 900;
+}
+.pfclvl > em {
+  font-style: normal;
+  color: var(--txt1);
+}
+.pfctraits {
+  text-align: center;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.pfctraits > div {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.pfctraits > div > b {
+  text-transform: uppercase;
+  font: bold var(--fs-small) var(--font3);
+  color: var(--txt1);
+}
+.pfctraits > div > b > u {
+  text-decoration-color: var(--tgroup);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+#pfctbar {
+  width: 100%;
+  height: 8px;
+  background: var(--border2-c);
+  border: 3px solid var(--back2);
+  border-radius: var(--bradius);
+  position: relative;
+}
+#pfctbar .pfctbarr {
+  position: absolute;
+  background: var(--group);
+  height: 100%;
+  inset: 0;
+  z-index: 2;
+}
+.pfcstats {
+  width: 100%;
+}
+.pfcstats > .pccontent > div {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.pfcstats > .pccontent > div.field_editable.invisible {
+  display: none !important;
+}
+.pfcstats > .pccontent > div > strong {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--bradius);
+  border-left: var(--tborder);
+  border-right: var(--tborder);
+  border-bottom: var(--bborder1);
+  border-bottom-color: var(--group);
+  padding: 12px 6px;
+  font: 900 var(--fs-big) var(--font1);
+  color: var(--txt1);
+  line-height: 100%;
+  gap: 2px;
+  max-width: 50%;
+}
+.pfcstats > .pccontent > div > strong > i {
+  font-style: normal;
+  font-size: var(--fs-h5);
+  line-height: 100%;
+  color: var(--txt4);
+  font-weight: 700;
+  line-height: 70%;
+}
+.pfchabs,
+.pfcinve {
+  overflow: auto;
+  height: 100%;
+  padding-right: 12px;
+  text-align: justify;
+  margin-right: -12px;
+  font: normal var(--fs-body) var(--font2);
+  line-height: 132%;
+}
+.tab:nth-of-type(3),
+.tab:nth-of-type(4) {
+  counter-reset: tab;
+}
+.pfchabs h4.post-content,
+.pfcinve h4.post-content {
+  counter-increment: tab;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  margin: 8px 0px !important;
+  line-height: 90% !important;
+}
+.pfchabs h4.post-content:before,
+.pfcinve h4.post-content:before {
+  color: var(--group);
+  font-weight: 900 !important;
+}
+.pfchabs h4.post-content:before,
+.pfcinve h4.post-content:before {
+  content: "0" counter(tab) ". ";
+}
+.pfchabs strike,
+.pfcinve strike,
+.pfchabs u,
+.pfcinve u {
+  text-decoration-color: var(--group);
+  text-decoration-thickness: 2px;
+}
+.pfchabs strong,
+.pfcinve strong {
+  color: var(--group);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.pfchabs u,
+.pfcinve u {
+  text-transform: uppercase;
+  font: 700 var(--fs-small) var(--font3);
+  color: var(--txt2);
+  text-underline-offset: 2px;
+}
+.pfchabs i,
+.pfcinve i {
+  color: var(--txt4);
+  font-style: italic;
+}
+.pfchabs ul,
+.pfcinve ul {
+  display: inline-block;
+  padding-left: 20px;
+  list-style-type: none;
+}
+.pfchabs ul li,
+.pfcinve ul li {
+  position: relative;
+  margin-bottom: 6px;
+}
+.pfchabs ul li:before,
+.pfcinve ul li:before {
+  content: "";
+  height: 2px;
+  width: 12px;
+  background: var(--tgroup);
+  position: absolute !important;
+  left: -20px;
+  top: 7px;
+}
+.pfchabs ol,
+.pfcinve ol {
+  display: inline-block;
+  padding-left: 20px;
+  list-style-type: none;
+  counter-reset: lista;
+}
+.pfchabs ol li,
+.pfcinve ol li {
+  position: relative;
+  margin-bottom: 6px;
+  counter-increment: lista;
+}
+.pfchabs ol li:before,
+.pfcinve ol li:before {
+  content: counters(lista, ".", decimal) ". ";
+  font: 900 var(--fs-text) var(--font2);
+  color: var(--tgroup);
+  position: relative !important;
+  text-align: right;
+}
+.pfchabs ul li:last-of-type,
+.pfcinve ul li:last-of-type,
+.pfchabs ol li:last-of-type,
+.pfcinve ol li:last-of-type {
+  margin-bottom: 0px;
+}
+.pfchabs li ul,
+.pfcinve li ul,
+.pfchabs li ol,
+.pfcinve li ol {
+  margin-top: 6px;
+}
+#profile .profimg {
+  border-left: var(--border1);
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+  max-width: 350px;
+  width: 100%;
+}
+.profimg .proflinks {
+  flex: 1;
+  justify-content: right;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  gap: 6px;
+}
+.profimg .proflinks a {
+  color: var(--txt1);
+  background: var(--back1);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--border1);
+  border-radius: var(--bradius);
+}
+.profimg .proflinks a:hover {
+  color: var(--back1);
+  background: var(--group);
+  border-color: var(--group);
+}
+#profile.u1 .profimg .pccontent,
+#profile.u2 .profimg .pccontent {
+  filter: var(--filter2);
+}
+#profile .profimg .pccontent {
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+#profile.u1 .profimg .pccontent:before,
+#profile.u2 .profimg .pccontent:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  background: var(--tback1);
+  opacity: 0.4;
+}
+#profile .profimg .pccontent img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--trs1);
+}
+#profile .profimg .pccontent .field_uneditable {
+  width: 100%;
+  height: 100%;
+}
+/***html+css carousel base by essi. https://sourced.jcink.net***/
+#car-hold {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+#car-hold input {
+  display: none;
+}
+.left-tabs,
+.right-tabs {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+}
+.left-tabs {
+  left: 25px;
+}
+.right-tabs {
+  right: 25px;
+}
+.left-tabs label,
+.right-tabs label {
+  padding: 0px !important;
+  width: 100%;
+  height: 100%;
+  background: var(--back2);
+  border-radius: var(--bradius);
+  border: var(--border1);
+  color: var(--txt1);
+  font-size: var(--fs-body);
+  position: absolute;
+  inset: 0;
+  cursor: var(--crs2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trs1);
+}
+.left-tabs label:hover,
+.right-tabs label:hover {
+  background: var(--group);
+  border-color: var(--group);
+  color: var(--back1);
+}
+#hold-carousel {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+.carousel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  width: 400%;
+  transition: var(--trs2);
+}
+.tab {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 55px 80px;
+}
+#car1:checked ~ .left-tabs label:nth-child(4),
+#car2:checked ~ .left-tabs label:nth-child(1),
+#car3:checked ~ .left-tabs label:nth-child(2),
+#car4:checked ~ .left-tabs label:nth-child(3) {
+  z-index: 3;
+}
+#car4:checked ~ .right-tabs label:nth-child(1),
+#car1:checked ~ .right-tabs label:nth-child(2),
+#car2:checked ~ .right-tabs label:nth-child(3),
+#car3:checked ~ .right-tabs label:nth-child(4) {
+  z-index: 3;
+}
+#car1:checked ~ #hold-carousel .carousel {
+  margin-left: 0%;
+}
+#car2:checked ~ #hold-carousel .carousel {
+  margin-left: -100%;
+}
+#car3:checked ~ #hold-carousel .carousel {
+  margin-left: calc(-100% * 2);
+}
+#car4:checked ~ #hold-carousel .carousel {
+  margin-left: calc(-100% * 3);
+}
+.profaut {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  gap: 6px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.profaut > a {
+  text-transform: uppercase;
+  background: var(--back1);
+  border: var(--border1) !important;
+  color: var(--txt1);
+  padding: 3px 6px !important;
+  font: bold var(--fs-small) var(--font3);
+  transition: var(--trs1);
+  border-radius: var(--bradius);
+  border-bottom: var(--baborder) !important;
+}
+/*-------MUSIC PLAYER BY GLENTHEMES-------*/
+#glenjams-05 {
+  position: absolute;
+  top: 0;
+  margin-top: 20px;
+  left: 0;
+  margin-left: 0px;
+  z-index: 99;
+  visibility: hidden;
+}
+.nebula {
+  padding: 4px 0;
+  cursor: default;
+}
+.suns {
+  padding: 12px;
+  background: var(--back1);
+  border: var(--border2);
+  border-left: none;
+  border-radius: 0px var(--bradius) var(--bradius) 0px;
+  line-height: 100%;
+}
+.suns,
+.m-txt {
+  display: flex;
+}
+.suns > *,
+.m-txt > * {
+  align-self: center;
+  -webkit-align-self: center;
+}
+.music-controls {
+  margin-left: 0px;
+  margin-right: 12px;
+  width: var(--fs-big);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+.music-controls .material-icons {
+  font-size: var(--fs-big);
+  color: var(--group);
+  cursor: pointer;
+}
+.pausee {
+  display: none;
+}
+.beff {
+  display: none;
+}
+.aff {
+  display: block;
+}
+.headphones {
+  margin-left: -1px;
+  padding: 0xp;
+}
+.headphones svg {
+  width: var(--fs-big);
+  height: var(--fs-big);
+  color: var(--txt1);
+}
