@@ -718,34 +718,25 @@
     padding: 20px;
   }
   #tablon {
-    margin-bottom: 45px;
-  }
-  .footerlogin {
-    margin-top: 45px;
+    margin-bottom:45px;
+    padding: 20px;
+    justify-content: center;
   }
   .tlult {
-    max-height: initial;
-    height: initial !important;
-    overflow: initial !important;
-    padding: 0px !important;
+    max-height:initial; 
+    height:initial; 
+    overflow:hidden; 
+    padding:0px;
+    gap: 10px;
   }
   .tadm {
-    flex-direction: row !important;
-    width: 100%;
+    display: none;
   }
-  .tlupst {
-    display: none !important;
+  .tlupst:nth-of-type(n+6) {
+    display:none;
   }
-  .tlupst:nth-of-type(1),
-  .tlupst:nth-of-type(2),
-  .tlupst:nth-of-type(3),
-  .tlupst:nth-of-type(4),
-  .tlupst:nth-of-type(5),
-  .tlupst:nth-of-type(6) {
-    display: block !important;
-  }
-  .tlupst:nth-of-type(6) {
-    margin-bottom: 0px !important;
+  .tlupst:last-of-type {
+    margin-bottom: 0;
   }
   .tlocupd,
   .teve {
@@ -847,53 +838,45 @@
 
 @media (max-width: 500px) {
   .mhava {
-    display: none !important;
+    display: none;
   }
   .phmname,
   .phsubject {
-    font-size: var(--fs-h5) !important;
+    font-size: var(--fs-h5);
   }
   mainbody {
     padding: 12px;
   }
-  .afherm,
-  .afcred,
-  .tdesc,
-  .tupd,
-  .tlult,
-  .afcred,
-  .tlocupd,
-  .teve {
-    min-width: auto !important;
-    flex: 1 0 100%;
-  }
-  .tlocupd .tupd {
-    max-height: 110px;
+  .tlocupd .tupd, .tdesc, .teve {display: none;}
+  .afherm, .afcred, .tupd, .tlult, .afcred, .tlocupd {
+    min-width:auto;
+    flex:1 0 100%;
+    line-height: 1em;
   }
   #profile .profcont,
   #car-hold {
-    min-height: 560px !important;
+    min-height: 560px;
   }
   .pfctraits {
-    flex-direction: column !important;
+    flex-direction: column;
   }
   .pfctraits > div {
-    width: 100% !important;
+    width: 100%;
   }
   a.usgp {
-    flex: 1 0 40% !important;
-    max-width: 100% !important;
+    flex: 1 0 40%;
+    max-width: 100%;
   }
   blockquote,
   dl.codebox dd,
   dl.codebox.spoiler .spoiler_content.hidden {
-    padding: 12px !important;
+    padding: 12px;
   }
   dl.codebox.spoiler > dd {
-    padding: 0px !important;
+    padding: 0px;
   }
   dl.codebox dt {
-    padding: 6px !important;
+    padding: 6px;
   }
 }
 
