@@ -4029,10 +4029,7 @@ div.reminder:before {
     align-items: center;
   }
   .tabaul .tbauimg {
-    width: 100% !important;
-    max-width: 270px !important;
-    height: 180px !important;
-    flex-shrink: initial;
+    width: 100%;
   }
   .tabaul .tbauinfo > em {
     flex: 1 0 35%;
