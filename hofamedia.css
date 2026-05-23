@@ -1,4 +1,4 @@
-/*MEDIA*/
+.pbinfo/*MEDIA*/
 @media (min-width: 1800px) {
   :root,
   *,
@@ -807,7 +807,7 @@
     padding: 20px !important;
   }
   .pbinfo {
-    top: 28px !important;
+    position: static !important;
   }
   .postbody .content {
     padding: 20px !important;
