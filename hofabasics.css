@@ -234,6 +234,27 @@ span#dice_to_del {
   margin: 0px !important;
 }
 
+/* POP-UPS MSJS */
+.privmess {
+  padding: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.privmess p>a {
+  text-transform: uppercase;
+  font: 900 var(--fs-small) var(--font2);
+  color: var(--txt2);
+  text-decoration: 2px solid underline var(--taccent);
+  text-underline-offset: 2px;
+}
+.privmess p.right-box a {
+  text-transform: uppercase;
+  font: 900 var(--fs-small) var(--font3);
+  color: var(--accent);
+  text-decoration: none;
+}
 
 /* SELECTOR DE COLOR AVANZADO */
 .colorpicker {
