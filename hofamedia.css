@@ -839,7 +839,7 @@
 
 @media (max-width: 500px) {
   .nvtree > a > span {
-    max-width: 80px;
+    max-width: 50px;
   }
   .mhava {
     display: none;
