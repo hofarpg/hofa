@@ -3872,9 +3872,8 @@ div.reminder:before {
   .tabaul .tbauimg {
     width: 200px;
   }
-  .tabaul#tbfull .tbauname {
+  .tabaul .tbauname {
     text-align: center;
-    font-size: var(--fs-h3);
   }
   #tabcombatpj,
   #tabcombatmn {
@@ -3939,6 +3938,9 @@ div.reminder:before {
   .tabhojaexp .tabhojcodata > em {
     height: 1px;
     width: 200px;
+  }  
+  .tabaul .tbauname {
+    font-size: var(--fs-h3);
   }
   #tabcombatpj,
   #tabcombatmn {
