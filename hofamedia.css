@@ -202,7 +202,6 @@
   #tablon {
     margin-bottom: 120px;
   }
-  #afiliados,
   .footerlogin {
     margin-top: 120px;
   }
@@ -379,7 +378,6 @@
   #tablon {
     margin-bottom: 40px;
   }
-  #afiliados,
   .footerlogin {
     margin-top: 40px;
   }
@@ -703,11 +701,12 @@
   }
   ul#notif_list,
   .navigationpanel {
-    top: 50px !important;
-    left: 70px !important;
+    top: 50px;
+    left: 70px;
   }
   #page-footer {
     padding: 30px 20px;
+    margin-top: 20px;
   }
   .nvtree > a > span {
     max-width: 50px;
@@ -721,7 +720,6 @@
   #tablon {
     margin-bottom: 45px;
   }
-  #afiliados,
   .footerlogin {
     margin-top: 45px;
   }
@@ -848,9 +846,6 @@
 }
 
 @media (max-width: 500px) {
-  mainbody {
-    padding: 15px;
-  }
   .mhava {
     display: none !important;
   }
