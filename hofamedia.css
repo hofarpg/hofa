@@ -691,7 +691,7 @@
   .nvside > div {
     flex-direction: row;
   }
-  .nvside a::before {
+  .nvside a:before {
     font-size: var(--fs-text);
   }
   .nvava {
@@ -706,7 +706,7 @@
   ul#notif_list,
   .navigationpanel {
     top: 50px;
-    left: 70px;
+    left: 20px !important;
   }
   #page-footer {
     padding: 30px 20px;
