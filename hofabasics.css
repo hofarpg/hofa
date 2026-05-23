@@ -126,13 +126,6 @@ div[style="height:3px"],
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
-span[style*="color"] {
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center !important;
-  width: 100%;
-  display: block !important;
-}
 
 /* PREVIEWS Y VISTAS */
 .panel.poptions label {
