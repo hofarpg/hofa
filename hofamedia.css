@@ -303,7 +303,7 @@
     left: 90px !important;
   }
   .nvtree > a > span {
-    max-width: 100px;
+    max-width: 200px;
   }
   #tablon,
   #afiliados {
@@ -592,7 +592,10 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {  
+  .nvtree:has(a:nth-child(n+3)) > a > span {
+    max-width: 95px;
+  }
   .phmname,
   .phsubject {
     font-size: var(--fs-h4) !important;
@@ -838,8 +841,11 @@
 }
 
 @media (max-width: 500px) {
-  .nvtree > a > span {
-    max-width: 50px;
+  .nvtree:has(a:nth-child(n+2)) > a > span {
+    max-width: 100px;
+  }
+  .nvtree:has(a:nth-child(n+4)) > a > span {
+    max-width: 55px;
   }
   .mhava {
     display: none;
