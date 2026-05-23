@@ -96,8 +96,6 @@ div[style="height:3px"],
 }
 .flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .grid {
   display: grid;
