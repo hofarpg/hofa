@@ -156,7 +156,7 @@
     --fs-h5: 1.73rem !important;
   }
   body#phpbb {
-    margin-left: 125px !important;
+    margin-left: 125px;
   }
   header {
     max-height: 800px;
@@ -288,7 +288,7 @@
 }
 @media (max-width: 1100px) {
   body#phpbb {
-    margin-left: 70px !important;
+    margin-left: 70px;
   }
   .nvside {
     width: 70px;
@@ -368,9 +368,6 @@
   #page-footer ul.linklist li.footer-home > a:before {
     content: "\f80a";
     font: 300 var(--fs-bigger) var(--font4);
-  }
-  .nvtree > a > span {
-    max-width: 100px;
   }
   mainbody {
     padding: 40px;
@@ -460,9 +457,6 @@
   }
 }
 @media (max-width: 700px) {
-  .nvtree > a > span {
-    max-width: 80px;
-  }
   header > a {
     font-size: var(--fs-h1);
   }
@@ -669,7 +663,7 @@
     background: var(--back1);
   }
   body#phpbb {
-    margin-left: 50px !important;
+    margin-left: 0;
   }
   header {
     padding: 30px;
@@ -687,8 +681,18 @@
     max-width: 260px;
   }
   .nvside {
-    width: 50px;
-    padding: 15px 10px;
+    width:100%;
+    padding-block:12px;
+    height: auto;
+    flex-direction: row;
+    top: 28px;
+    line-height: 1em;
+  }
+  .nvside > div {
+    flex-direction: row;
+  }
+  .nvside a::before {
+    font-size: var(--fs-text);
   }
   .nvava {
     height: 30px;
@@ -707,9 +711,6 @@
   #page-footer {
     padding: 30px 20px;
     margin-top: 20px;
-  }
-  .nvtree > a > span {
-    max-width: 50px;
   }
   .nvtop {
     padding: 6px;
@@ -902,7 +903,7 @@
     --fs-h5: 2.2rem !important;
   }
   body#phpbb {
-    margin-left: 125px !important;
+    margin-left: 125px;
   }
   header {
     max-height: 800px;
@@ -953,9 +954,6 @@
   }
   .nvtree > a {
     font-size: var(--fs-text);
-  }
-  .nvtree > a > span {
-    max-width: 125px;
   }
   sdnav > a:after {
     margin: 0px 16px !important;
