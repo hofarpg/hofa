@@ -25,6 +25,7 @@
 }
 #guidelinks,
 #guidelinked {
+  position: sticky;
   z-index: 10;
   text-align: left;
   padding: 20px;
