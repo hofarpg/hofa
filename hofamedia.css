@@ -118,7 +118,7 @@
     max-width: 800px;
   }
   .forum .forcont,
-  #c2 .forum .forava {
+  .cat-c2 .forum .forava {
     padding: 40px;
   }
   .forcont .frcinfo .frclinks {
@@ -217,7 +217,7 @@
     margin-top: 20px;
   }
   .forum .forcont,
-  #c2 .forum .forava {
+  .cat-c2 .forum .forava {
     padding: 30px;
   }
   .forum .forava .fraava {
@@ -235,13 +235,13 @@
     padding: 20px;
     border-top: var(--border1);
   }
-  #c2 .forum {
+  .cat-c2 .forum {
     min-height: 350px;
   }
-  #c2 .forum .forava {
+  .cat-c2 .forum .forava {
     display: flex !important;
   }
-  #c2 .fralastpost {
+  .cat-c2 .fralastpost {
     padding: 0px !important;
     border-top: none !important;
   }
@@ -616,11 +616,11 @@
     bottom: 72px !important;
     left: 13px !important;
   }
-  #c2 .forum .forcont {
+  .cat-c2 .forum .forcont {
     min-height: 300px;
     position: relative;
   }
-  #c2 .forum .forava {
+  .cat-c2 .forum .forava {
     background: var(--back1);
   }
   body#phpbb {
@@ -1039,7 +1039,7 @@
     max-width: none;
   }
   .forum .forcont,
-  #c2 .forum .forava {
+  .cat-c2 .forum .forava {
     padding: 30px;
   }
   .forcont .frcinfo .frcdesc {
@@ -1067,13 +1067,13 @@
     padding: 20px;
     border-top: var(--border1);
   }
-  #c2 .forum {
+  .cat-c2 .forum {
     min-height: 450px;
   }
-  #c2 .forum .forava {
+  .cat-c2 .forum .forava {
     display: flex !important;
   }
-  #c2 .fralastpost {
+  .cat-c2 .fralastpost {
     padding: 0px !important;
     border-top: none !important;
   }
@@ -1271,7 +1271,7 @@
   .forcont .frcinfo .frclinks > a {
     font-size: var(--fs-smaller) !important;
   }
-  #c2 .forum .frcdesc {
+  .cat-c2 .forum .frcdesc {
     display: none !important;
   }
 }
