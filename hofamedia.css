@@ -413,23 +413,26 @@
     border: none !important;
   }
   #glenjams-05 {
-    display: none !important;
+    display: none;
   }
   .pfchabs,
   .pfcinve {
-    line-height: 128% !important;
+    line-height: 128%;
   }
   .phmname {
-    font-size: var(--fs-h2) !important;
+    font-size: var(--fs-h2);
   }
   .pbsearchpost {
-    font-size: var(--fs-h3) !important;
+    font-size: var(--fs-h3);
   }
   .postprofile {
-    display: none !important;
+    display: none;
+  }
+  .post .postbody {
+    min-height: unset;
   }
   .phmquote:before {
-    width: 40px !important;
+    width: 40px;
   }
 }
 @media (max-width: 700px) {
@@ -565,6 +568,7 @@
 }
 
 @media (max-width: 600px) {  
+  :root {--nav-height: 25px;}
   .nvtree:has(a:nth-child(n+3)) > a > span {
     max-width: 95px;
   }
