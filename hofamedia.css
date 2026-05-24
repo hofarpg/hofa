@@ -1,25 +1,5 @@
 /*MEDIA*/
 @media (min-width: 1800px) {
-  :root,
-  *,
-  *::before,
-  *::after {
-    --bradius: 8px !important;
-    --fs-bigger: 1.35rem !important;
-    --fs-big: 1.2rem !important;
-    --fs-body: 1.07rem !important;
-    --fs-text: 0.99rem !important;
-    --fs-small: 0.81rem !important;
-    --fs-smaller: 0.78rem !important;
-    --fs-smallest: 0.7rem !important;
-    --fs-title: 6.3rem !important;
-    --fs-display: 4rem !important;
-    --fs-h1: 3.6rem !important;
-    --fs-h2: 3rem !important;
-    --fs-h3: 2.2rem !important;
-    --fs-h4: 2rem !important;
-    --fs-h5: 1.66rem !important;
-  }
   #page-footer .skincredit > img {
     height: 40px;
   }
@@ -67,7 +47,7 @@
     padding: 0px;
     display: block !important;
   }
-  .forum .forava:before {
+  .forum:has(.frcbackground) .forava:before {
     height: 300px;
   }
   .fralastpost {
@@ -1036,7 +1016,7 @@
     padding: 0px;
     display: block !important;
   }
-  .forum .forava:before {
+  .forum:has(.frcbackground) .forava:before {
     height: 300px;
   }
   .fralastpost {
