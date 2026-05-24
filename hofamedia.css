@@ -817,7 +817,7 @@
 
 @media (max-width: 500px) {
   .nvtree:has(a:nth-child(n+2)) > a > span {
-    max-width: 100px;
+    max-width: 70px;
   }
   .nvtree:has(a:nth-child(n+4)) > a > span {
     max-width: 55px;
