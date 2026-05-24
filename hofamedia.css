@@ -47,7 +47,7 @@
     padding: 0px;
     display: block !important;
   }
-  .forum:has(.frcbackground) .forava:before {
+  .forum:not(:has(.frcbackground)) .forava:before {
     height: 300px;
   }
   .fralastpost {
@@ -1016,7 +1016,7 @@
     padding: 0px;
     display: block !important;
   }
-  .forum:has(.frcbackground) .forava:before {
+  .forum:not(:has(.frcbackground)) .forava:before {
     height: 300px;
   }
   .fralastpost {
