@@ -36,7 +36,7 @@
     margin-top: 20px;
   }
   .forum .forcont,
-  #c3 .forum .forava {
+  #c2 .forum .forava {
     padding: 30px;
   }
   .forum .forava .fraava {
@@ -54,13 +54,13 @@
     padding: 20px;
     border-top: var(--border1);
   }
-  #c3 .forum {
+  #c2 .forum {
     min-height: 350px;
   }
-  #c3 .forum .forava {
+  #c2 .forum .forava {
     display: flex !important;
   }
-  #c3 .fralastpost {
+  #c2 .fralastpost {
     padding: 0px !important;
     border-top: none !important;
   }
@@ -203,7 +203,7 @@
     max-width: 800px;
   }
   .forum .forcont,
-  #c3 .forum .forava {
+  #c2 .forum .forava {
     padding: 40px;
   }
   .forcont .frcinfo .frclinks {
@@ -630,11 +630,11 @@
     bottom: 72px !important;
     left: 13px !important;
   }
-  #c3 .forum .forcont {
+  #c2 .forum .forcont {
     min-height: 300px;
     position: relative;
   }
-  #c3 .forum .forava {
+  #c2 .forum .forava {
     background: var(--back1);
   }
   body#phpbb {
@@ -995,7 +995,7 @@
     max-width: none;
   }
   .forum .forcont,
-  #c3 .forum .forava {
+  #c2 .forum .forava {
     padding: 30px;
   }
   .forcont .frcinfo .frcdesc {
@@ -1023,13 +1023,13 @@
     padding: 20px;
     border-top: var(--border1);
   }
-  #c3 .forum {
+  #c2 .forum {
     min-height: 450px;
   }
-  #c3 .forum .forava {
+  #c2 .forum .forava {
     display: flex !important;
   }
-  #c3 .fralastpost {
+  #c2 .fralastpost {
     padding: 0px !important;
     border-top: none !important;
   }
@@ -1227,7 +1227,7 @@
   .forcont .frcinfo .frclinks > a {
     font-size: var(--fs-smaller) !important;
   }
-  #c3 .forum .frcdesc {
+  #c2 .forum .frcdesc {
     display: none !important;
   }
 }
