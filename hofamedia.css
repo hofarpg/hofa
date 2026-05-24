@@ -1,117 +1,32 @@
 /*MEDIA*/
-@media (min-width: 1800px) {
-  #page-footer .skincredit > img {
-    height: 40px;
+@media (min-width: 2400px) {
+  :root,
+  *,
+  *::before,
+  *::after {
+    --bradius: 10px !important;
+    --fs-bigger: 1.47rem !important;
+    --fs-big: 1.32rem !important;
+    --fs-body: 1.17rem !important;
+    --fs-text: 1.09rem !important;
+    --fs-small: 0.92rem !important;
+    --fs-smaller: 0.86rem !important;
+    --fs-smallest: 0.82rem !important;
+    --fs-title: 6.17rem !important;
+    --fs-display: 4.17rem !important;
+    --fs-h1: 3.77rem !important;
+    --fs-h2: 3.17rem !important;
+    --fs-h3: 2.37rem !important;
+    --fs-h4: 2.17rem !important;
+    --fs-h5: 1.83rem !important;
   }
-  sdnav > a:before {
-    font-size: var(--fs-h5) !important;
+  .nvnlinks,
+  .nvupanel {
+    gap: 30px;
   }
-  sdnav > a:after {
-    margin: 0px 16px !important;
-  }
-  #notif_list,
-  .navigationpanel {
-    top: 70px;
-    max-width: 380px !important;
-  }
-  .tdesc,
-  .tadm,
-  .tlocupd,
-  .teve,
-  .tlult {
-    max-height: 240px;
-    height: 240px;
-  }
-  .tadm > a,
-  .tlocupd .tloc,
-  .tlocupd .tupd,
-  .teve .teeve {
-    height: 110px;
-  }
-  .forcont .frcinfo .frcdesc {
-    max-height: 110px;
-    overflow: auto;
-  }
-  .forcont .frcinfo .frclinks {
-    margin-top: 20px;
-  }
-  .forum .forcont,
-  #c2 .forum .forava {
-    padding: 30px;
-  }
-  .forum .forava .fraava {
-    position: relative !important;
-    height: 300px;
-  }
-  .forum .forava {
-    padding: 0px;
-    display: block !important;
-  }
-  .forum .forava:before {
-    height: 300px;
-  }
-  .fralastpost {
-    padding: 20px;
-    border-top: var(--border1);
-  }
-  #c2 .forum {
-    min-height: 350px;
-  }
-  #c2 .forum .forava {
-    display: flex !important;
-  }
-  #c2 .fralastpost {
-    padding: 0px !important;
-    border-top: none !important;
-  }
-  .pbinfo,
-  .postprofile {
-    top: 50px !important;
-  }
-  .ppcicweap {
-    font-size: var(--fs-bigg) !important;
-  }
-  .ppcidata .ppcid > em {
-    line-height: 100%;
-    font-size: var(--fs-smaller) !important;
-  }
-  .ppcistats .pccontent > strong {
-    font-size: var(--fs-text) !important;
-    line-height: 90% !important;
-  }
-  .postheader > a {
-    width: 60px !important;
-    height: 60px !important;
-  }
-  .postbody ul li:before {
-    top: 12px !important;
-  }
-  #textarea_content .sceditor-group {
-    gap: 20px !important;
-  }
-  .sceditor-container .sceditor-toolbar {
-    gap: 12px 20px !important;
-  }
-  .tnbuttons {
-    gap: 20px !important;
-  }
-  .tnbuttons > a {
-    width: 60px !important;
-    height: 60px !important;
-  }
-  .qmadminlinks > a {
-    width: 50px !important;
-    height: 50px !important;
-  }
-  .phmquote:before {
-    min-width: 90px !important;
-  }
-  .dicethrow .diceres > strong {
-    flex: 1 0 11% !important;
-    max-width: 115px !important;
-  }
-  .ucp-paneldecontroldelosavatares fieldset {
-    height: 500px !important;
+  .nvnlinks > a:before,
+  .nvupanel a:before {
+    font-size: var(--fs-h4) !important;
   }
 }
 @media (min-width: 2100px) {
@@ -236,90 +151,157 @@
     height: 505px !important;
   }
 }
-@media (min-width: 2400px) {
-  :root,
-  *,
-  *::before,
-  *::after {
-    --bradius: 10px !important;
-    --fs-bigger: 1.47rem !important;
-    --fs-big: 1.32rem !important;
-    --fs-body: 1.17rem !important;
-    --fs-text: 1.09rem !important;
-    --fs-small: 0.92rem !important;
-    --fs-smaller: 0.86rem !important;
-    --fs-smallest: 0.82rem !important;
-    --fs-title: 6.17rem !important;
-    --fs-display: 4.17rem !important;
-    --fs-h1: 3.77rem !important;
-    --fs-h2: 3.17rem !important;
-    --fs-h3: 2.37rem !important;
-    --fs-h4: 2.17rem !important;
-    --fs-h5: 1.83rem !important;
+@media (min-width: 2000px) {
+  .monomer-modal {
+    padding: 60px;
+    max-width: 500px !important;
   }
-  .nvnlinks,
-  .nvupanel {
-    gap: 30px;
+  .switcheroo {
+    left: 125px;
+    width: calc(100% - 125px);
   }
-  .nvnlinks > a:before,
-  .nvupanel a:before {
-    font-size: var(--fs-h4) !important;
+  .switcheroo__avatar img,
+  .switcheroo__squircle {
+    width: 120px;
+    height: 120px;
+  }
+  .switcheroo__squircle:before {
+    width: 124px;
+    height: 124px;
+  }
+  .switcheroo__delete {
+    width: 40px;
+    height: 40px;
+    top: -8px;
+    right: -8px;
+  }
+  .switcheroo__squircle:last-of-type {
+    width: 60px;
+    height: 60px;
   }
 }
-@media (max-width: 1100px) {
-  body#phpbb {
-    margin-left: 70px;
-  }
-  .nvside {
-    width: 70px;
-    padding: 20px 10px;
-  }
-  .nvava {
+@media (min-width: 1800px) {
+  #page-footer .skincredit > img {
     height: 40px;
-    width: 40px;
+  }
+  sdnav > a:before {
+    font-size: var(--fs-h5) !important;
+  }
+  sdnav > a:after {
+    margin: 0px 16px !important;
   }
   #notif_list,
   .navigationpanel {
-    left: 90px !important;
-  }
-  .nvtree > a > span {
-    max-width: 200px;
-  }
-  #tablon {
-    flex-wrap: wrap;
+    top: 70px;
+    max-width: 380px !important;
   }
   .tdesc,
+  .tadm,
   .tlocupd,
   .teve,
   .tlult {
-    flex: 1 0 30%;
-    min-width: 170px;
+    max-height: 240px;
+    height: 240px;
   }
-  .statonline,
-  .stattwenty {
-    flex: 1 0 50%;
+  .tadm > a,
+  .tlocupd .tloc,
+  .tlocupd .tupd,
+  .teve .teeve {
+    height: 110px;
   }
-  .tab {
-    padding: 40px 60px !important;
+  .forcont .frcinfo .frcdesc {
+    max-height: 110px;
+    overflow: auto;
   }
-  .right-tabs {
-    right: 16px !important;
+  .forcont .frcinfo .frclinks {
+    margin-top: 20px;
   }
-  .left-tabs {
-    left: 16px !important;
+  .forum .forcont,
+  #c2 .forum .forava {
+    padding: 30px;
   }
-  .pfchabs,
-  .pfcinve {
-    line-height: 130% !important;
+  .forum .forava .fraava {
+    position: relative !important;
+    height: 300px;
+  }
+  .forum .forava {
+    padding: 0px;
+    display: block !important;
+  }
+  .forum .forava:before {
+    height: 300px;
+  }
+  .fralastpost {
+    padding: 20px;
+    border-top: var(--border1);
+  }
+  #c2 .forum {
+    min-height: 350px;
+  }
+  #c2 .forum .forava {
+    display: flex !important;
+  }
+  #c2 .fralastpost {
+    padding: 0px !important;
+    border-top: none !important;
+  }
+  .pbinfo,
+  .postprofile {
+    top: 50px !important;
+  }
+  .ppcicweap {
+    font-size: var(--fs-bigg) !important;
+  }
+  .ppcidata .ppcid > em {
+    line-height: 100%;
+    font-size: var(--fs-smaller) !important;
+  }
+  .ppcistats .pccontent > strong {
+    font-size: var(--fs-text) !important;
+    line-height: 90% !important;
+  }
+  .postheader > a {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .postbody ul li:before {
+    top: 12px !important;
+  }
+  #textarea_content .sceditor-group {
+    gap: 20px !important;
+  }
+  .sceditor-container .sceditor-toolbar {
+    gap: 12px 20px !important;
+  }
+  .tnbuttons {
+    gap: 20px !important;
+  }
+  .tnbuttons > a {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .qmadminlinks > a {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .phmquote:before {
+    min-width: 90px !important;
+  }
+  .dicethrow .diceres > strong {
+    flex: 1 0 11% !important;
+    max-width: 115px !important;
   }
   .ucp-paneldecontroldelosavatares fieldset {
-    height: auto !important;
+    height: 500px !important;
   }
-  .ucp-paneldecontroldelosavatares dl:not(.ucp-muestraunapequeaimagenentusmen) {
-    width: 100% !important;
+}
+@media (max-width: 1100px) {
+  .switcheroo {
+    left: 70px;
+    width: calc(100% - 70px);
   }
-  .ucp-paneldecontroldelosavatares dl.ucp-muestraunapequeaimagenentusmen {
-    width: 100% !important;
+  .ucp-panel-de-control-de-los-avatares fieldset {
+    flex-direction: column !important;
   }
 }
 @media (max-width: 950px) {
@@ -816,6 +798,25 @@
   }
   .cattitle h2 {
     margin-bottom: 10px !important;
+  }  
+  .switcheroo {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  #cp-main {
+    padding: 20px !important;
+  }
+  #cp-main .panel {
+    padding: 12px !important;
+  }
+  #cp-main h1 {
+    margin-bottom: 20px !important;
+  }
+  #cp-main .panel p {
+    margin-bottom: 12px !important;
   }
 }
 
@@ -872,6 +873,37 @@
   }
   dl.codebox dt {
     padding: 6px;
+  }
+}
+
+
+@media (min-height: 1500px) {
+  .monomer-modal {
+    padding: 60px;
+    max-width: 600px !important;
+  }
+  .switcheroo {
+    left: 125px;
+    width: calc(100% - 125px);
+  }
+  .switcheroo__avatar img,
+  .switcheroo__squircle {
+    width: 120px;
+    height: 120px;
+  }
+  .switcheroo__squircle:before {
+    width: 124px;
+    height: 124px;
+  }
+  .switcheroo__delete {
+    width: 40px;
+    height: 40px;
+    top: -8px;
+    right: -8px;
+  }
+  .switcheroo__squircle:last-of-type {
+    width: 60px;
+    height: 60px;
   }
 }
 
