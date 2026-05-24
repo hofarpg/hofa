@@ -305,8 +305,7 @@
   .nvtree > a > span {
     max-width: 200px;
   }
-  #tablon,
-  #afiliados {
+  #tablon {
     flex-wrap: wrap;
   }
   .tdesc,
@@ -319,9 +318,6 @@
   .statonline,
   .stattwenty {
     flex: 1 0 50%;
-  }
-  .afcred {
-    flex: 1 0 100%;
   }
   .tab {
     padding: 40px 60px !important;
@@ -465,10 +461,6 @@
   }
   header > a > span {
     font-size: calc(var(--fs-h1) - 0.055rem);
-  }
-  .afherm {
-    width: 100%;
-    max-height: none !important;
   }
   #profile .profcont {
     min-width: auto !important;
@@ -859,7 +851,7 @@
     padding: 12px;
   }
   .tlocupd .tupd, .tdesc, .teve {display: none;}
-  .afherm, .afcred, .tupd, .tlult, .afcred, .tlocupd {
+  .tupd, .tlult, .tlocupd {
     min-width:auto;
     flex:1 0 100%;
     line-height: 1em;
@@ -1230,9 +1222,6 @@
   }
   .phmquote:before {
     min-width: 50px !important;
-  }
-  .afcred {
-    max-height: 242px !important;
   }
   .mbsmclinks {
     gap: 16px !important;
