@@ -662,6 +662,8 @@
     flex-direction: row;
     top: 27px;
     line-height: 1em;
+    border-right: none;
+    border-bottom: var(--border1);
   }
   .nvside > div {
     flex-direction: row;
@@ -830,7 +832,13 @@
   mainbody {
     padding: 12px;
   }
-  .tlocupd .tupd, .tdesc, .teve {display: none;}
+  .tlocupd .tupd, .tdesc, .teve>*:not(:nth-of-type(1)) {display: none;}
+  .teve {
+    height: 7.7rem;
+  }
+  .teve .teeve {
+    height: 100%;
+  }
   .tupd, .tlult, .tlocupd {
     min-width:auto;
     flex:1 0 100%;
