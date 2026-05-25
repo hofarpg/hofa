@@ -222,7 +222,7 @@ span#dice_to_del {
   align-items: center;
   outline: var(--baborder);
   margin: 2px;
-  outline-color: var(--tgroup);
+  outline-color: var(--tgroup, var(--taccent));
   border-radius: var(--bradius);
   border: 4px solid transparent;
   flex-shrink: 0;
@@ -248,7 +248,7 @@ span#dice_to_del {
   color: var(--txt3);
   line-height: 140%;
   text-decoration: underline;
-  text-decoration-color: var(--tgroup);
+  text-decoration-color: var(--tgroup, var(--taccent));
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
