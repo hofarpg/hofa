@@ -1568,7 +1568,8 @@ div.reminder:before {
 .tabrol1,
 .tabrol2,
 .tabrol3 {
-  --acento: var(--personalClr, var(--group));
+  --acento: var(--personalclr, var(--group));
+  --tacento: var(--personalclr, var(--tgroup));
 }
 .tabrol1 > br,
 .tabrol2 > br,
