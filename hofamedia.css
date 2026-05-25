@@ -296,9 +296,57 @@
   }
 }
 @media (max-width: 1100px) {
-  .switcheroo {
-    left: 70px;
-    width: calc(100% - 70px);
+  :root,
+  *,
+  *::before,
+  *::after {
+    --sidenav-width: 5rem;
+  }
+  .nvside {
+    padding: 20px 10px;
+  }
+  .nvava {
+    height: 40px;
+    width: 40px;
+  }
+  .nvtree > a > span {
+    max-width: 200px;
+  }
+  #tablon {
+    flex-wrap: wrap;
+  }
+  .tdesc,
+  .tlocupd,
+  .teve,
+  .tlult {
+    flex: 1 0 30%;
+    min-width: 170px;
+  }
+  .statonline,
+  .stattwenty {
+    flex: 1 0 50%;
+  }
+  .tab {
+    padding: 40px 60px !important;
+  }
+  .right-tabs {
+    right: 16px !important;
+  }
+  .left-tabs {
+    left: 16px !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 130% !important;
+  }
+  .ucp-paneldecontroldelosavatares fieldset {
+    height: auto !important;
+  }
+  .ucp-paneldecontroldelosavatares dl:not(.ucp-muestraunapequeaimagenentusmen) {
+    width: 100% !important;
+  }
+  .ucp-paneldecontroldelosavatares dl.ucp-muestraunapequeaimagenentusmen {
+    width: 100% !important;
   }
   .ucp-panel-de-control-de-los-avatares fieldset {
     flex-direction: column !important;
