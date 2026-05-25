@@ -118,7 +118,7 @@
     max-width: 800px;
   }
   .forum .forcont,
-  .cat-c2 .forum .forava {
+  .category:has(.frcbackground) .forum .forava {
     padding: 40px;
   }
   .forcont .frcinfo .frclinks {
@@ -217,10 +217,10 @@
     margin-top: 20px;
   }
   .forum .forcont,
-  .cat-c2 .forum .forava {
+  .category:has(.frcbackground) .forum .forava {
     padding: 30px;
   }
-  .forum .forava .fraava {
+  .forum:not(:has(.frcbackground)) .forava .fraava {
     position: relative !important;
     height: 300px;
   }
@@ -228,20 +228,20 @@
     padding: 0px;
     display: block !important;
   }
-  .forum .forava:before {
+  .forum:not(:has(.frcbackground)) .forava:before {
     height: 300px;
   }
   .fralastpost {
     padding: 20px;
     border-top: var(--border1);
   }
-  .cat-c2 .forum {
+  .category:has(.frcbackground) .forum {
     min-height: 350px;
   }
-  .cat-c2 .forum .forava {
+  .category:has(.frcbackground) .forum .forava {
     display: flex !important;
   }
-  .cat-c2 .fralastpost {
+  .category:has(.frcbackground) .fralastpost {
     padding: 0px !important;
     border-top: none !important;
   }
@@ -341,12 +341,6 @@
   }
 }
 @media (max-width: 900px) {
-  header > a {
-    font-size: var(--fs-display);
-  }
-  header > a > span {
-    font-size: calc(var(--fs-display) - 0.085rem);
-  }
   .hdesc {
     max-width: 400px;
   }
@@ -418,14 +412,8 @@
   }
 }
 @media (max-width: 700px) {
-  header > a {
-    font-size: var(--fs-h1);
-  }
   .hdesc {
     max-width: 340px;
-  }
-  header > a > span {
-    font-size: calc(var(--fs-h1) - 0.055rem);
   }
   #profile .profcont {
     min-width: auto !important;
@@ -616,11 +604,11 @@
     bottom: 72px !important;
     left: 13px !important;
   }
-  .cat-c2 .forum .forcont {
+  .category:has(.frcbackground) .forum .forcont {
     min-height: 300px;
     position: relative;
   }
-  .cat-c2 .forum .forava {
+  .category:has(.frcbackground) .forum .forava {
     background: var(--back1);
   }
   body#phpbb {
@@ -631,12 +619,6 @@
   }
   .himg {
     background-image: var(--pngimg-3);
-  }
-  header > a {
-    font-size: var(--fs-h2);
-  }
-  header > a > span {
-    font-size: calc(var(--fs-h2) - 0.045rem);
   }
   .hdesc {
     max-width: 260px;
@@ -1039,7 +1021,7 @@
     max-width: none;
   }
   .forum .forcont,
-  .cat-c2 .forum .forava {
+  .category:has(.frcbackground) .forum .forava {
     padding: 30px;
   }
   .forcont .frcinfo .frcdesc {
@@ -1052,7 +1034,7 @@
   .forcont .frcinfo .frclinks {
     margin-top: 20px;
   }
-  .forum .forava .fraava {
+  .forum:not(:has(.frcbackground)) .forava .fraava {
     position: relative !important;
     height: 300px;
   }
@@ -1060,20 +1042,20 @@
     padding: 0px;
     display: block !important;
   }
-  .forum .forava:before {
+  .forum:not(:has(.frcbackground)) .forava:before {
     height: 300px;
   }
   .fralastpost {
     padding: 20px;
     border-top: var(--border1);
   }
-  .cat-c2 .forum {
+  .category:has(.frcbackground) .forum {
     min-height: 450px;
   }
-  .cat-c2 .forum .forava {
+  .category:has(.frcbackground) .forum .forava {
     display: flex !important;
   }
-  .cat-c2 .fralastpost {
+  .category:has(.frcbackground) .fralastpost {
     padding: 0px !important;
     border-top: none !important;
   }
@@ -1271,7 +1253,7 @@
   .forcont .frcinfo .frclinks > a {
     font-size: var(--fs-smaller) !important;
   }
-  .cat-c2 .forum .frcdesc {
+  .category:has(.frcbackground) .forum .frcdesc {
     display: none !important;
   }
 }
