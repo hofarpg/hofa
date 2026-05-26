@@ -1,130 +1,135 @@
 body.invibody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  min-height: 630px;
-  gap: 30px;
-  margin: 0px !important;
-  padding: 0px 30px !important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  width:100vw;
+  min-height: 52rem;
+  gap:var(--padd3);
+  margin:0!important;
+  padding:0 var(--padd3)!important;
 }
 
 .cnheader {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-.cnheader > h1 {
-  text-transform: uppercase;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: calc(var(--fs-display) * 2);
+.cnheader>h1 {
+  text-transform:uppercase;
+  position:relative;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  height:calc(var(--fs-display) * 2);
+  margin: 0 !important;
 }
 
-.cnheader > h1 > i {
-  position: absolute;
-  font-size: calc(var(--fs-display) * 2);
-  --fa-primary-color: var(--accent);
-  --fa-secondary-color: var(--taccent);
+.cnheader>h1>i {
+  position:absolute;
+  font-size:calc(var(--fs-display) * 2);
+  --fa-primary-color:var(--accent);
+  --fa-secondary-color:var(--taccent);
 }
 
-.cnheader > h1 > a {
-  color: var(--txt1);
-  text-shadow: var(--shadow2);
-  font: 900 var(--fs-display) var(--font1);
-  position: relative;
-  z-index: 1;
-  line-height: 100%;
+.cnheader>h1>a {
+  color:var(--txt1);
+  text-shadow:var(--shadow2);
+  font:var(--fo-h2);
+  position:relative;
+  z-index:1;
+  line-height: 85%;
+  margin-top: var(--gap1);
 }
 
-.cnheader > h1 > i:after {
-  opacity: 1;
+.cnheader>h1>i:after {
+  opacity:1;
 }
 
 .cndesc {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  gap: 6px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  text-transform:uppercase;
+  gap:var(--gap2);
 }
 
-.cndesc > strong {
-  font: 900 var(--fs-h3) var(--font2);
-  color: var(--txt1);
-  line-height: 80%;
+.cndesc>strong {
+  font:var(--fo-h3);
+  color:var(--txt1);
+  line-height:85%;
 }
 
-.cndesc > em {
-  font: bold var(--fs-small) var(--font3);
-  color: var(--txt3);
-  font-style: normal;
-  border-radius: var(--bradius);
-  border: var(--tborder);
-  line-height: 100%;
-  border-bottom: none;
-  padding: 6px 7px;
+.cndesc>em {
+  font:var(--fo-deco2);
+  font-weight: 600;
+  color:var(--txt3);
+  font-style:normal;
+  border-radius:var(--bradius);
+  border:var(--tborder);
+  line-height:100%;
+  border-bottom:none;
+  padding:var(--gap2) var(--gap3);
 }
 
-.cndesc > strong > span {
-  color: var(--accent);
-  display: block;
+.cndesc>strong>span {
+  color:var(--accent);
+  display:block;
 }
 
-.cndesc > em > b {
-  color: var(--txt1);
-  font-weight: 900;
+.cndesc>em>b {
+  color:var(--txt1);
+  font-weight:900;
 }
 
 .cncont {
-  border: var(--border1);
-  background: var(--tback1);
-  padding: 35px;
-  gap: 25px;
-  width: 100%;
-  max-width: 400px;
+  border:var(--border1);
+  background:var(--tback1);
+  padding:var(--padd4);
+  gap:var(--padd2);
+  width:100%;
+  max-width:28.5rem;
 }
 
 .cnheader2 {
-  text-transform: uppercase;
-  color: var(--txt3);
-  font: 800 var(--fs-text) var(--font2);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--taccent);
-  text-underline-offset: 2px;
+  text-transform:uppercase;
+  color:var(--txt3);
+  font:var(--fo-bod2);
+  font-weight:800;
+  text-decoration:underline;
+  text-decoration-thickness:var(--bthickness);
+  text-decoration-color:var(--taccent);
+  text-underline-offset:var(--bthickness);
 }
 
 .formlogin form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 6px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--gap4) var(--gap2);
 }
 
 .formlogin form label {
-  font: 800 var(--fs-small) var(--font3);
-  background: var(--back2);
-  line-height: 100%;
-  border: var(--border1);
-  margin: 0px !important;
-  padding: 3px 6px;
-  border-radius: var(--bradius);
+  font:var(--fo-deco2);
+  font-weight:700;
+  background:var(--back2);
+  line-height:100%;
+  border:var(--border1);
+  margin:0px!important;
+  padding:var(--gap1) var(--gap2);
+  border-radius:var(--bradius);
 }
 
 .formlogin form .formbotones {
-  flex: 1 0 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 6px 0px;
+  flex:1 0 100%;
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--gap2);
+  margin:var(--gap2) 0px;
 }
 
 .formlogin form .formbotones a.formsendpass {
-  font-weight: 900;
-  font-size: var(--fs-text);
+  font-weight:900;
+  font-size:var(--fs-text);
 }
