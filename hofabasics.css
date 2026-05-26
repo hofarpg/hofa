@@ -9,6 +9,37 @@
     scrollbar-width: thin;
   }
 }
+.password-container {
+  width: 100%;
+  display: flex;
+  border: var(--border1)!important;
+  border-radius: var(--bradius);
+  overflow: hidden;
+  & input {
+    border-top:none!important;
+    border-bottom:none!important;
+    border-left:none!important;
+    border-radius: 0!important;
+    flex: 1;
+  }
+  & .show_hide_pwd {
+    font: var(--fo-bod1);
+    line-height: 100%;
+    background-color: transparent !important;
+    color: var(--txt4);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    scale: 1;
+    padding: var(--gap2) !important;
+    flex-shrink: 0;
+    height: 100%;
+    width: calc(var(--gap5) * 2.2);
+    cursor: var(--crs2)!important;
+    border-left: none !important;
+    filter: invert(1) contrast(0.5) !important;
+  }
+}
 *::selection {
   background: var(--taccent);
   color: var(--txt1);
