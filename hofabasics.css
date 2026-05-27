@@ -1114,18 +1114,22 @@ dl.ucp-avatar img {
   background-color: var(--accent) !important;
   border-radius: var(--bradius);
 }
-#cont_pwd > div:before {
-  font: 700 var(--fs-smaller) var(--font4);
-  margin-right: 4px;
+#cont_pwd > div::after {
+    font: 700 var(--fs-smaller) var(--font4);
+    line-height: 100%;
+    margin-left: var(--gap1);
 }
-#cont_pwd > div#pwd_bad:before {
+div#pwd_bad:after {
   content: "\f146";
 }
-#cont_pwd > div#pwd_middle:before {
-  content: "\f146";
+div#pwd_middle:after {
+  content: "\e26e";
 }
-#cont_pwd > div#pwd_good:before {
+div#pwd_good:after {
   content: "\f0fe";
+}
+div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="display:none;"])) {
+  display: none !important;
 }
 /*TAGS TEMAS*/
 #tagForm {
