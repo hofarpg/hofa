@@ -9,35 +9,27 @@
     scrollbar-width: thin;
   }
 }
-.password-container {
-  width: 100%;
-  display: flex;
-  border: var(--border1)!important;
-  border-radius: var(--bradius);
-  overflow: hidden;
-  & input {
-    border-top:none!important;
-    border-bottom:none!important;
-    border-left:none!important;
-    border-radius: 0!important;
-    flex: 1;
+.panel.registeru {
+  text-align: justify;
+  & span[style*="color:red"] {
+    border-left: var(--tborder);
+    border-right: var(--tborder);
+    border-radius: var(--bradius);
+    display: inline-block !important;
+    padding: var(--gap4) var(--padd0);
+    margin: var(--gap3) var(--gap5);
+    margin-top: 0px;
   }
-  & .show_hide_pwd {
-    font: var(--fo-bod1);
-    line-height: 100%;
-    background-color: transparent !important;
-    color: var(--txt4);
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-    scale: 1;
-    padding: var(--gap2) !important;
-    flex-shrink: 0;
-    height: 100%;
-    width: calc(var(--gap5) * 2.2);
-    cursor: var(--crs2)!important;
-    border-left: none !important;
-    filter: invert(1) contrast(0.5) !important;
+  & .registerbuttons {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: var(--gap4);
+    & .reg-butto {
+      align-items: center;
+      gap: var(--gap2);
+    }
   }
 }
 *::selection {
@@ -1130,6 +1122,37 @@ div#pwd_good:after {
 }
 div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="display:none;"])) {
   display: none !important;
+}
+.password-container {
+  width: 100%;
+  display: flex;
+  border: var(--border1)!important;
+  border-radius: var(--bradius);
+  overflow: hidden;
+  & input {
+    border-top:none!important;
+    border-bottom:none!important;
+    border-left:none!important;
+    border-radius: 0!important;
+    flex: 1;
+  }
+  & .show_hide_pwd {
+    font: var(--fo-bod1);
+    line-height: 100%;
+    background-color: transparent !important;
+    color: var(--txt4);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    scale: 1;
+    padding: var(--gap2) !important;
+    flex-shrink: 0;
+    height: 100%;
+    width: calc(var(--gap5) * 2.2);
+    cursor: var(--crs2)!important;
+    border-left: none !important;
+    filter: invert(1) contrast(0.5) !important;
+  }
 }
 /*TAGS TEMAS*/
 #tagForm {
