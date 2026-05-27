@@ -1748,7 +1748,7 @@ div.reminder:before {
   min-height: 280px;
   justify-content: space-between;
   align-items: center;
-  --acento: var(--group);
+  --acento: var(--personalclr, var(--group));
 }
 #tabcombatpj strong {
   color: var(--acento);
