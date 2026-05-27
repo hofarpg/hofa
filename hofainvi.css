@@ -188,21 +188,7 @@ body.nomires {
   text-underline-offset: var(--bthickness);
 }
 
-body.nomires {
-  & #nomiresSafe {
-    width: var(--bodywidth);
-    max-width: 50rem;
-    & .panel.registeru {
-      text-align: justify;
-      & span[style*="color:red"] {
-        border-left: var(--tborder);
-        border-right: var(--tborder);
-        border-radius: var(--bradius);
-        display: inline-block !important;
-        padding: var(--gap4) var(--padd0);
-        margin: var(--gap3) var(--gap5);
-        margin-top: 0px;
-      }
-    }
-  }
+#nomiresSafe {
+  width: var(--bodywidth);
+  max-width: 70rem;
 }
