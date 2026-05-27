@@ -1087,9 +1087,6 @@ dl.ucp-preestablecer-el-formulario {
   margin-top: 25px;
   margin-bottom: 0px !important;
 }
-#cont_pwd {
-  margin: 0px !important;
-}
 .ucp-editar-la-firma #message-box > br {
   display: none;
 }
@@ -1184,12 +1181,14 @@ dl.ucp-avatar img {
 }
 #cont_pwd {
   height: auto;
+  margin: 0px !important;
 }
 #cont_pwd > div {
   background-image: none !important;
   height: auto !important;
   background-color: var(--accent) !important;
   border-radius: var(--bradius);
+  padding: var(--gap0) var(--gap2);
 }
 #cont_pwd > div::after {
     font: 700 var(--fs-smaller) var(--font4);
