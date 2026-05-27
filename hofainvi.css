@@ -1,23 +1,31 @@
-body.invibody {
+body.nomires {
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  min-height: 100vh;
+  min-height:100vh;
   width:100vw;
-  height: fit-content;
-  gap:var(--padd3);
+  height:fit-content;
+  gap:var(--padd4);
   margin:0!important;
-  padding: clamp(var(--padd1), 7vw, var(--padd6))!important;
+  padding:var(--bodypadd)!important;
 }
 
 .cnheader {
+  height:fit-content;
+  gap:var(--padd2);
   justify-content:center;
   align-items:center;
   text-align:center;
 }
 
-.cnheader>h1 {
+.cnicon {
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.cnicon>h1 {
   text-transform:uppercase;
   position:relative;
   justify-content:center;
@@ -27,14 +35,14 @@ body.invibody {
   margin: 0 !important;
 }
 
-.cnheader>h1>i {
+.cnicon>h1>i {
   position:absolute;
   font-size:calc(var(--fs-display) * 2);
   --fa-primary-color:var(--accent);
   --fa-secondary-color:var(--taccent);
 }
 
-.cnheader>h1>a {
+.cnicon>h1>a {
   color:var(--txt1);
   text-shadow:var(--shadow2);
   font:var(--fo-h2);
@@ -44,7 +52,7 @@ body.invibody {
   margin-top: var(--gap1);
 }
 
-.cnheader>h1>i:after {
+.cnicon>h1>i:after {
   opacity:1;
 }
 
@@ -88,9 +96,28 @@ body.invibody {
   border:var(--border1);
   background:var(--tback1);
   padding:var(--padd4);
-  gap:var(--padd2);
   width:100%;
-  max-width:28.5rem;
+  max-width: 27rem;
+  gap:var(--padd2);
+}
+
+.cnlinks {
+  gap: var(--gap3);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  & a {
+    background: var(--tback1);
+    border: var(--border1);
+    border-radius: var(--bradius);
+    text-transform: uppercase;
+    color: var(--accent);
+    font: var(--fo-deco3);
+    line-height: 100%;
+    font-weight: bold;
+    padding: var(--gap2);
+  }
 }
 
 .cnheader2 {
@@ -107,7 +134,13 @@ body.invibody {
 .formlogin form {
   display:flex;
   flex-wrap:wrap;
-  gap:var(--gap4) var(--gap2);
+  gap: var(--padd0) var(--gap5);
+}
+
+.formlogin form span {
+  display: flex;
+  flex-direction: column;
+  gap:var(--gap3);
 }
 
 .formlogin form label {
@@ -119,6 +152,18 @@ body.invibody {
   margin:0px!important;
   padding:var(--gap1) var(--gap2);
   border-radius:var(--bradius);
+  width: fit-content;
+}
+
+.formlogin form span {
+  display: flex;
+  flex-direction: column;
+  gap:var(--gap3);
+  width: 100%;
+}
+
+.formlogin form span input {
+  width: 100%!important;
 }
 
 .formlogin form .formbotones {
@@ -132,4 +177,32 @@ body.invibody {
 .formlogin form .formbotones a.formsendpass {
   font-weight:900;
   font-size:var(--fs-text);
+}
+
+.formlogin a.sendpassword {
+  text-transform: uppercase;
+  font: var(--fo-bod2);
+  font-weight: bold;
+  color: var(--txt1);
+  text-decoration: underline var(--bthickness) solid var(--taccent);
+  text-underline-offset: var(--bthickness);
+}
+
+body.nomires {
+  & #nomiresSafe {
+    width: var(--bodywidth);
+    max-width: 50rem;
+    & .panel.registeru {
+      text-align: justify;
+      & span[style*="color:red"] {
+        border-left: var(--tborder);
+        border-right: var(--tborder);
+        border-radius: var(--bradius);
+        display: inline-block !important;
+        padding: var(--gap4) var(--padd0);
+        margin: var(--gap3) var(--gap5);
+        margin-top: 0px;
+      }
+    }
+  }
 }
