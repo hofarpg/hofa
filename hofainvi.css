@@ -3,12 +3,12 @@ body.invibody {
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  height:100vh;
+  min-height: 100vh;
   width:100vw;
-  min-height: 52rem;
+  height: fit-content;
   gap:var(--padd3);
   margin:0!important;
-  padding:0 var(--padd3)!important;
+  padding: clamp(var(--padd1), 7vw, var(--padd6))!important;
 }
 
 .cnheader {
