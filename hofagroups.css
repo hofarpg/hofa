@@ -25,112 +25,44 @@ a.usgp {
   max-width: 50%;
   min-width: 120px;
   min-height: 100px;
+  
+> em {
+    justify-content: center;
+    align-items: center;
+    transition: var(--trs1);
+    display: flex;
+    width: 100%;
+    
+    &:before {
+      content: "\f004";
+      color: var(--group);
+      font: 700 var(--fs-h4) var(--font4);
+      transition: var(--trs1);    
+    }    
+    [class*="nemesis"] & { &:before {content: "\f6cb";}}    
+  }
+  
+  > b {
+    font-weight: 900;
+    text-shadow: var(--shadow3);
+    transition: var(--trs1);
+  }
+  
+  &:hover {
+    background: var(--tgroup);
+    border-color: transparent;
+    
+    > b {
+      color: var(--txt2);
+      text-shadow: var(--shadow1);
+    }
+    > em:before {
+      color: var(--back1);
+      transform: scale(1.2);
+    }
+  }
 }
-a.usgp > em {
-  justify-content: center;
-  align-items: center;
-  transition: var(--trs1);
-  display: flex;
-  width: 100%;
-}
-a.usgp > em:before {
-  content: "\f004";
-  color: var(--group);
-  font: 700 var(--fs-h4) var(--font4);
-  transition: var(--trs1);
-}
-a.usgp > b {
-  font-weight: 900;
-  text-shadow: var(--shadow3);
-  transition: var(--trs1);
-}
-a.usgp:hover {
-  background: var(--tgroup);
-  border-color: transparent;
-}
-a.usgp:hover > b {
-  color: var(--txt2);
-  text-shadow: var(--shadow1);
-}
-a.usgp:hover > em:before {
-  color: var(--back1);
-  transform: scale(1.2);
-}
-a.usgp.nemesis {
-  --group: var(--nemesis);
-  --tgroup: var(--tnemesis);
-}
-a.usgp.tyche {
-  --group: var(--tyche);
-  --tgroup: var(--ttyche);
-}
-a.usgp.afrodita {
-  --group: var(--afrodita);
-  --tgroup: var(--tafrodita);
-}
-a.usgp.dioniso {
-  --group: var(--dioniso);
-  --tgroup: var(--tdioniso);
-}
-a.usgp.hades {
-  --group: var(--hades);
-  --tgroup: var(--thades);
-}
-a.usgp.hecate {
-  --group: var(--hecate);
-  --tgroup: var(--thecate);
-}
-a.usgp.poseidon {
-  --group: var(--poseidon);
-  --tgroup: var(--tposeidon);
-}
-a.usgp.hypnos {
-  --group: var(--hypnos);
-  --tgroup: var(--thypnos);
-}
-a.usgp.khione {
-  --group: var(--khione);
-  --tgroup: var(--tkhione);
-}
-a.usgp.hebe {
-  --group: var(--hebe);
-  --tgroup: var(--thebe);
-}
-a.usgp.atenea {
-  --group: var(--atenea);
-  --tgroup: var(--tatenea);
-}
-a.usgp.demeter {
-  --group: var(--demeter);
-  --tgroup: var(--tdemeter);
-}
-a.usgp.iris {
-  --group: var(--iris);
-  --tgroup: var(--tiris);
-}
-a.usgp.hermes {
-  --group: var(--hermes);
-  --tgroup: var(--thermes);
-}
-a.usgp.apolo {
-  --group: var(--apolo);
-  --tgroup: var(--tapolo);
-}
-a.usgp.zeus {
-  --group: var(--zeus);
-  --tgroup: var(--tzeus);
-}
-a.usgp.hefesto {
-  --group: var(--hefesto);
-  --tgroup: var(--thefesto);
-}
-a.usgp.ares {
-  --group: var(--ares);
-  --tgroup: var(--tares);
-}
-a.nemesis > em:before {
-  content: "\f6cb";
-}
+
 a.tyche > em:before {
   content: "\e362";
 }
