@@ -1,24 +1,21 @@
 /*MEDIA*/
 @media (min-width: 2400px) {
-  :root,
-  *,
-  *::before,
-  *::after {
-    --bradius: 10px !important;
-    --fs-bigger: 1.47rem !important;
-    --fs-big: 1.32rem !important;
-    --fs-body: 1.17rem !important;
-    --fs-text: 1.09rem !important;
-    --fs-small: 0.92rem !important;
-    --fs-smaller: 0.86rem !important;
-    --fs-smallest: 0.82rem !important;
-    --fs-title: 6.17rem !important;
-    --fs-display: 4.17rem !important;
-    --fs-h1: 3.77rem !important;
-    --fs-h2: 3.17rem !important;
-    --fs-h3: 2.37rem !important;
-    --fs-h4: 2.17rem !important;
-    --fs-h5: 1.83rem !important;
+  :root {
+    --bradius: 10px;
+    --fs-bigger: 1.47rem;
+    --fs-big: 1.32rem;
+    --fs-body: 1.17rem;
+    --fs-text: 1.09rem;
+    --fs-small: 0.92rem;
+    --fs-smaller: 0.86rem;
+    --fs-smallest: 0.82rem;
+    --fs-title: 6.17rem;
+    --fs-display: 4.17rem;
+    --fs-h1: 3.77rem;
+    --fs-h2: 3.17rem;
+    --fs-h3: 2.37rem;
+    --fs-h4: 2.17rem;
+    --fs-h5: 1.83rem;
   }
   .nvnlinks,
   .nvupanel {
@@ -26,29 +23,26 @@
   }
   .nvnlinks > a:before,
   .nvupanel a:before {
-    font-size: var(--fs-h4) !important;
+    font-size: var(--fs-h4);
   }
 }
 @media (min-width: 2100px) {
-  :root,
-  *,
-  *::before,
-  *::after {
-    --bradius: 10px !important;
-    --fs-bigger: 1.37rem !important;
-    --fs-big: 1.22rem !important;
-    --fs-body: 1.07rem !important;
-    --fs-text: 0.99rem !important;
-    --fs-small: 0.82rem !important;
-    --fs-smaller: 0.76rem !important;
-    --fs-smallest: 0.72rem !important;
-    --fs-title: 6.07rem !important;
-    --fs-display: 4.07rem !important;
-    --fs-h1: 3.67rem !important;
-    --fs-h2: 3.07rem !important;
-    --fs-h3: 2.27rem !important;
-    --fs-h4: 2.07rem !important;
-    --fs-h5: 1.73rem !important;
+  :root {
+    --bradius: 10px;
+    --fs-bigger: 1.37rem;
+    --fs-big: 1.22rem;
+    --fs-body: 1.07rem;
+    --fs-text: 0.99rem;
+    --fs-small: 0.82rem;
+    --fs-smaller: 0.76rem;
+    --fs-smallest: 0.72rem;
+    --fs-title: 6.07rem;
+    --fs-display: 4.07rem;
+    --fs-h1: 3.67rem;
+    --fs-h2: 3.07rem;
+    --fs-h3: 2.27rem;
+    --fs-h4: 2.07rem;
+    --fs-h5: 1.73rem;
   }
   body#phpbb {
     margin-left: 125px;
@@ -296,10 +290,7 @@
   }
 }
 @media (max-width: 1100px) {
-  :root,
-  *,
-  *::before,
-  *::after {
+  :root {
     --sidenav-width: 5rem;
   }
   .nvside {
@@ -580,7 +571,9 @@
 }
 
 @media (max-width: 600px) {  
-  :root {--nav-height: 25px;}
+  :root { 
+    --nav-height: 60px;
+  }
   .nvtree:has(a:nth-child(n+3)) > a > span {
     max-width: 95px;
   }
