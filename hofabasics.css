@@ -358,13 +358,6 @@ span#dice_to_del {
 .pastmessages .postbody {
   width: 100% !important;
 }
-.pastmessages p.author {
-  border: var(--border1);
-  width: 100% !important;
-  padding: 12px !important;
-  background: var(--back1);
-  margin: 0px !important;
-}
 .pastmessages .postbody .content {
   border: var(--border1);
   border-top: none !important;
