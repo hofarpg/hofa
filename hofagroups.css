@@ -38,8 +38,7 @@ a.usgp {
       color: var(--group);
       font: 700 var(--fs-h4) var(--font4);
       transition: var(--trs1);    
-    }    
-    [class*="nemesis"] & { &:before {content: "\f6cb";}}    
+    } 
   }
   
   > b {
@@ -63,54 +62,21 @@ a.usgp {
   }
 }
 
-a.tyche > em:before {
-  content: "\e362";
-}
-a.afrodita > em:before {
-  content: "\f4ba";
-}
-a.dioniso > em:before {
-  content: "\f4e3";
-}
-a.hades > em:before {
-  content: "\f54c";
-}
-a.hecate > em:before {
-  content: "\f6bf";
-}
-a.poseidon > em:before {
-  content: "\f773";
-}
-a.hypnos > em:before {
-  content: "\f34e";
-}
-a.khione > em:before {
-  content: "\f2dc";
-}
-a.hebe > em:before {
-  content: "\e588";
-}
-a.atenea > em:before {
-  content: "\f5dc";
-}
-a.demeter > em:before {
-  content: "\f72d";
-}
-a.iris > em:before {
-  content: "\f75b";
-}
-a.hermes > em:before {
-  content: "\f56b";
-}
-a.apolo > em:before {
-  content: "\f001";
-}
-a.zeus > em:before {
-  content: "\f0e7";
-}
-a.hefesto > em:before {
-  content: "\f7e4";
-}
-a.ares > em:before {
-  content: "\f71d";
-}
+[class*="nemesis"] > em:before {content: "\f6cb";}    
+[class*="tyche"] > em:before {content: "\e362";}
+[class*="afrodita"] > em:before {content: "\f4ba";}
+[class*="dioniso"] > em:before {content: "\f4e3";}
+[class*="hades"] > em:before {content: "\f54c";}
+[class*="hecate"] > em:before {content: "\f6bf";}
+[class*="poseidon"] > em:before {content: "\f773";}
+[class*="hypnos"] > em:before {content: "\f34e";}
+[class*="khione"] > em:before {content: "\f2dc";}
+[class*="hebe"] > em:before {content: "\e588";}
+[class*="atenea"] > em:before {content: "\f5dc";}
+[class*="demeter"] > em:before {content: "\f72d";}
+[class*="iris"] > em:before {content: "\f75b";}
+[class*="hermes"] > em:before {content: "\f56b";}
+[class*="apolo"] > em:before {content: "\f001";}
+[class*="zeus"] > em:before {content: "\f0e7";}
+[class*="hefesto"] > em:before {content: "\f7e4";}
+[class*="ares"] > em:before {content: "\f71d";}
