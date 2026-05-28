@@ -26,7 +26,7 @@
   min-width: 120px;
   min-height: 100px;
   
-> em {
+  > em {
     justify-content: center;
     align-items: center;
     transition: var(--trs1);
