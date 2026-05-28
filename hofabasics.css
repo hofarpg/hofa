@@ -340,28 +340,12 @@ span#dice_to_del {
 .postpreview {
   margin: 20px 0px;
 }
-.postpreview #preview {
-  margin: 0px !important;
-  padding: 0px !important;
-}
 .postpreview .postbody {
   background: var(--tback1);
   border: var(--border1);
 }
 .pastmessages {
   gap: 20px;
-}
-.pastmessages .post {
-  padding: 0px !important;
-  margin: 0px !important;
-}
-.pastmessages .postbody {
-  width: 100% !important;
-}
-.pastmessages .postbody .content {
-  border: var(--border1);
-  border-top: none !important;
-  background: var(--tback1);
 }
 .panel.row1 br {
   display: none !important;
