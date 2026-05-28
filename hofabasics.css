@@ -109,6 +109,21 @@
 [class*="group-nemesis"], .profilegroup-nemesis #profile, [class*="group-nemesis"] + .postdados { --group: var(--nemesis);}
 [class*="group-tyche"], .profilegroup-tyche #profile, [class*="group-tyche"] + .postdados { --group: var(--tyche);}
 [class*="group-afrodita"], .profilegroup-afrodita #profile, [class*="group-afrodita"] + .postdados { --group: var(--afrodita);}
+[class*="group-dioniso"], .profilegroup-dioniso #profile, [class*="group-dioniso"] + .postdados { --group: var(--dioniso);}
+[class*="group-hades"], .profilegroup-hades #profile, [class*="group-hades"] + .postdados { --group: var(--hades);}
+[class*="group-hecate"], .profilegroup-hecate #profile, [class*="group-hecate"] + .postdados { --group: var(--hecate);}
+[class*="group-poseidon"], .profilegroup-poseidon #profile, [class*="group-poseidon"] + .postdados { --group: var(--poseidon);}
+[class*="group-hypnos"], .profilegroup-hypnos #profile, [class*="group-hypnos"] + .postdados { --group: var(--hypnos);}
+[class*="group-khione"], .profilegroup-khione #profile, [class*="group-khione"] + .postdados { --group: var(--khione);}
+[class*="group-hebe"], .profilegroup-hebe #profile, [class*="group-hebe"] + .postdados { --group: var(--hebe);}
+[class*="group-atenea"], .profilegroup-atenea #profile, [class*="group-atenea"] + .postdados { --group: var(--atenea);}
+[class*="group-demeter"], .profilegroup-demeter #profile, [class*="group-demeter"] + .postdados { --group: var(--demeter);}
+[class*="group-iris"], .profilegroup-iris #profile, [class*="group-iris"] + .postdados { --group: var(--iris);}
+[class*="group-hermes"], .profilegroup-hermes #profile, [class*="group-hermes"] + .postdados { --group: var(--hermes);}
+[class*="group-apolo"], .profilegroup-apolo #profile, [class*="group-apolo"] + .postdados { --group: var(--apolo);}
+[class*="group-zeus"], .profilegroup-zeus #profile, [class*="group-zeus"] + .postdados { --group: var(--zeus);}
+[class*="group-hefesto"], .profilegroup-hefesto #profile, [class*="group-hefesto"] + .postdados { --group: var(--hefesto);}
+[class*="group-ares"], .profilegroup-ares #profile, [class*="group-ares"] + .postdados { --group: var(--ares);}
 [class*="group-"], [class*="profilegroup-"] #profile, [class*="group-"] + .postdados {--tgroup: rgb(from var(--group) r g b / .8);}
 
 /* MISC */
