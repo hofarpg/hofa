@@ -1,4 +1,10 @@
 /* ESENCIALES */
+@supports at-rule(@function) {
+  @function --transparent(--color: var(--accent)) {
+    result: rgba(from var(--color) r g b / .5);
+  }
+}
+
 @supports not selector(::-webkit-scrollbar) {
   * {
     scrollbar-color: var(--accent) var(--back1);
@@ -9,6 +15,7 @@
     scrollbar-width: thin;
   }
 }
+
 *::selection {
   background: var(--taccent);
   color: var(--txt1);
@@ -61,47 +68,26 @@
 /* COLORES DE GRUPOS */
 :root {
   --staff: #5c9cb8;
-  --tstaff: #5c9cb899;
   --nemesis: #cb7a7a;
-  --tnemesis: #cb7a7a99;
   --tyche: #c9819f;
-  --ttyche: #c9819f99;
   --afrodita: #cc6bc5;
-  --tafrodita: #cc6bc599;
   --dioniso: #946dbe;
-  --tdioniso: #946dbe99;
   --hades: #675975;
-  --thades: #67597599;
   --hecate: #7b74c5;
-  --thecate: #7b74c599;
   --poseidon: #778cdb;
-  --tposeidon: #778cdb99;
   --hypnos: #5f848a;
-  --thypnos: #5f848a99;
   --khione: #5bb3af;
-  --tkhione: #5bb3af99;
   --hebe: #5dab8e;
-  --thebe: #5dab8e99;
   --atenea: #61a879;
-  --tatenea: #61a87999;
   --demeter: #5eb165;
-  --tdemeter: #5eb16599;
   --iris: #8abe60;
-  --tiris: #8abe6099;
   --hermes: #bac760;
-  --thermes: #bac76099;
   --apolo: #dfb560;
-  --tapolo: #dfb56099;
   --zeus: #d6874f;
-  --tzeus: #d6874f99;
   --hefesto: #d07655;
-  --thefesto: #d0765599;
   --ares: #b34646;
-  --tares: #b3464699;
   --inactivos: #7a7a7a;
-  --tinactivos: #7a7a7a99;
   --usuarios: #b4bec1;
-  --tusuarios: #b4bec199;
 }
 
 [class*="group-staff"], [class*="group-guest"], .profilegroup-narracion #profile, :is([class*="group-staff"],[class*="group-guest"]) + .post-dados { --group: var(--staff);}
@@ -124,7 +110,7 @@
 [class*="group-zeus"], .profilegroup-zeus #profile, [class*="group-zeus"] + .postdados { --group: var(--zeus);}
 [class*="group-hefesto"], .profilegroup-hefesto #profile, [class*="group-hefesto"] + .postdados { --group: var(--hefesto);}
 [class*="group-ares"], .profilegroup-ares #profile, [class*="group-ares"] + .postdados { --group: var(--ares);}
-[class*="group-"], [class*="profilegroup-"] #profile, [class*="group-"] + .postdados {--tgroup: rgb(from var(--group) r g b / .8);}
+[class*="group-"], [class*="profilegroup-"] #profile, [class*="group-"] + .postdados {--tgroup: rgb(from var(--group) r g b / .6);}
 
 /* MISC */
 .panel.registeru {
