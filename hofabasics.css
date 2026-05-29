@@ -1,7 +1,7 @@
 /* ESENCIALES */
 @supports at-rule(@function) {
   @function --transparent(--color: var(--accent)) {
-    result: rgba(from var(--color) r g b / .5);
+    result: rgba(from var(--color) r g b / .6);
   }
 }
 
