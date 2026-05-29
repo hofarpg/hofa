@@ -472,7 +472,6 @@ span#dice_to_del {
   box-sizing: content-box;
   display: grid;
   place-items: center;
-  background-color: var(--back3);
   border: var(--bborder2);
   width: 60px;
   height: 60px;
@@ -489,7 +488,7 @@ span#dice_to_del {
 .switcheroo__squircle:hover {
   border-radius: var(--bradius);
   background: var(--accent);
-  border-color: var(--taccent);
+  border-color: var(--accent);
 }
 .switcheroo__avatar {
   position: relative;
@@ -510,44 +509,12 @@ span#dice_to_del {
 .switcheroo__squircle.active,
 .switcheroo__squircle.active img {
   border-radius: var(--bradius);
-  border-color: var(--groupbody) !important;
+  border-color: var(--group);
   filter: none;
   cursor: default;
+  background: var(--group);
 }
-.switcheroo__squircle:before {
-  content: "";
-  display: block;
-  background-color: var(--accent);
-  border: var(--bborder1);
-  border-color: var(--accent);
-  border-radius: 100%;
-  height: 64px;
-  width: 64px;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: -4px;
-  bottom: 0;
-  right: 0;
-  left: -4px;
-  z-index: -1;
-  transition: var(--trs1);
-}
-.switcheroo__squircle.active:before {
-  opacity: 1;
-  background-color: var(--groupbody) !important;
-  border-color: var(--groupbody) !important;
-  box-sizing: content-box;
-  border-radius: var(--bradius);
-}
-.switcheroo__squircle:last-of-type:before {
-  display: none !important;
-}
-.switcheroo__squircle:hover:before {
-  opacity: 1;
-  transition: var(--trs1);
-  border-radius: var(--bradius);
-}
+
 .switcheroo__delete {
   display: grid;
   place-items: center;
