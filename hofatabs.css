@@ -131,10 +131,9 @@
 }
 #guidebook .admtitleimg > h2,
 .admintab .admtitleimg > h2 {
-  font-weight: 900 !important;
-  margin: 0px !important;
-  text-align: center !important;
-  line-height: 85% !important;
+  margin: 0px;
+  text-align: center;
+  line-height: 85%;
   text-shadow: var(--shadow2);
 }
 #guidebook .admtitleimg > h2 {
@@ -158,7 +157,7 @@
 .admintab .admtitmain {
   justify-content: center;
   align-items: center;
-  text-align: center !important;
+  text-align: center;
   gap: 6px;
   margin: 12px auto 70px;
   width: 100%;
@@ -185,7 +184,7 @@
   position: absolute;
   z-index: 0;
   color: var(--taccent);
-  font-size: var(--fs-display) !important;
+  font-size: var(--fs-display) ;
 }
 #guidebook .admtitmain > u,
 .admintab .admtitmain > u {
@@ -193,20 +192,20 @@
   font-weight: 700;
   font-size: var(--fs-text);
   color: var(--txt1);
-  text-decoration-color: var(--accent) !important;
+  text-decoration-color: var(--accent);
 }
 #guidebook .admtitmain > h2,
 .admintab .admtitmain > h2 {
-  margin: 0px !important;
-  text-align: center !important;
+  margin: 0;
+  text-align: center;
 }
 #guidebook .admtitmain > em,
 .admintab .admtitmain > em {
   text-transform: uppercase;
   text-align: justify;
-  text-align-last: center !important;
+  text-align-last: center;
   font: bold var(--fs-small) var(--font3);
-  line-height: 110% !important;
+  line-height: 110%;
   color: var(--txt4);
 }
 #guidebook .admtitle *,
@@ -251,38 +250,30 @@
 }
 #guidebook .admtitle h2,
 .admintab .admtitle h2 {
-  margin: 0px !important;
-  line-height: 110% !important;
-  text-shadow: var(--shadow2) !important;
+  margin: 0;
+  line-height: 110%;
+  text-shadow: var(--shadow2);
 }
 #guidebook .admtitle h3,
 .admintab .admtitle h3 {
-  color: var(--accent) !important;
+  color: var(--accent);
   text-align: left;
   text-align-last: left;
-  font-family: var(--font2) !important;
-  margin: 0px !important;
+  font-family: var(--font2);
+  margin: 0;
 }
 #guidebook .admtitle h4,
 .admintab .admtitle h4 {
   text-align: left;
-  margin: 0px !important;
-  text-decoration-color: var(--taccent) !important;
-  color: var(--txt1);
-  font: 900 var(--fs-big) var(--font2) !important;
+  margin: 0;
   text-transform: uppercase;
-  line-height: 125% !important;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
 }
 div.blockquote {
-  border-left: var(--tborder);
-  border-right: var(--tborder);
+  border-inline: var(--tborder);
   border-radius: var(--bradius);
-  display: inline-block !important;
+  display: inline-block;
   padding: 12px 20px;
-  margin: 0px 12px;
+  margin-inline: 12px;
 }
 div.blockquote:has(> ul) > br {
   display: none !important;
@@ -294,14 +285,13 @@ div.reminder {
   border-radius: var(--bradius);
   background: var(--taccent);
   padding: 20px;
-  line-height: 100% !important;
-  font: 700 var(--fs-text) var(--font2);
+  font: 700 100% / var(--fs-text) var(--font2);
   text-transform: uppercase;
 }
 div.reminder:before {
   content: "Aviso: ";
   color: var(--back1);
-  font-weight: 900 !important;
+  font-weight: 900;
 }
 .admintab {
   max-width: 570px;
