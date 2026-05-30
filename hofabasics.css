@@ -19,7 +19,7 @@
   }
 }
 
-*::selection {
+::selection, ::target-text, ::search-text  {
   background: var(--taccent);
   color: var(--txt1);
   text-shadow: var(--shadow1);
