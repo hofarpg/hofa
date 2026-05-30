@@ -103,10 +103,10 @@
     height: 270px !important;
   }
   .tadm > a,
-  .tlocupd .tloc,
-  .tlocupd .tupd,
+  .tloc,
+  .tupd,
   .teve .teeve {
-    height: 50% !important;
+    height: 50%;
   }
   .forum {
     max-width: 800px;
@@ -198,8 +198,8 @@
     height: 240px;
   }
   .tadm > a,
-  .tlocupd .tloc,
-  .tlocupd .tupd,
+  .tloc,
+  .tupd,
   .teve .teeve {
     height: 110px;
   }
@@ -718,7 +718,11 @@
   }
   .tlocupd,
   .teve {
-    flex: 1 0 100% !important;
+    flex: 1 0 100% ;
+  }
+  .tupd {
+    max-height: 100px;
+    height: auto;
   }
   .statlinks,
   .statsright,
@@ -853,7 +857,7 @@
   mainbody {
     padding: 12px;
   }
-  .tlocupd .tupd, .tdesc, .teve>*:not(:nth-of-type(1)) {display: none;}
+  .tupd, .tdesc, .teve>*:not(:nth-of-type(1)) {display: none;}
   .teve {
     height: 7.7rem;
   }
@@ -1016,9 +1020,9 @@
   .tlocupd,
   .teve,
   .tlult,
-  .tlocupd .tupd {
-    max-height: 300px !important;
-    height: 300px !important;
+  .tupd {
+    max-height: 300px;
+    height: 300px;
   }
   .tadm,
   .teve {
