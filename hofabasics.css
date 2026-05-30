@@ -2,6 +2,9 @@
 @supports at-rule(@function) {
   @function --transparent(--color: var(--accent)) {
     result: rgba(from var(--color) r g b / .6);
+  }  
+  @function --aborder(--thickness: 1px, --color: var(--accent)) {
+    result: var(--thickness) solid var(--color);
   }
 }
 
