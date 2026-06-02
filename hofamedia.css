@@ -138,9 +138,6 @@
   .dicethrow .diceres > strong {
     max-width: 132px !important;
   }
-  .pbinfo {
-    top: 70px !important;
-  }
   .ucp-paneldecontroldelosavatares fieldset {
     height: 505px !important;
   }
@@ -1227,9 +1224,6 @@
   }
   .postbody ul li:before {
     top: 12px !important;
-  }
-  .pbinfo {
-    top: 72px !important;
   }
   .postheader > a {
     width: 60px !important;
