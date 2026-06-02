@@ -10,10 +10,6 @@
 .ppcistats .pccontent > br {
   display: none !important;
 }
-.post.invipost {
-  --group: #b4bec1;
-  --tgroup: #b4bec199;
-}
 .invipost .phmname {
   color: var(--txt1) !important;
   text-shadow: var(--shadow3);
