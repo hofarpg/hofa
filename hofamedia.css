@@ -239,10 +239,6 @@
     padding: 0px !important;
     border-top: none !important;
   }
-  .pbinfo,
-  .postprofile {
-    top: 50px !important;
-  }
   .ppcicweap {
     font-size: var(--fs-bigg) !important;
   }
