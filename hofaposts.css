@@ -134,7 +134,7 @@
   width: 251px;
   flex-shrink: 0;
   position: sticky;
-  top: 41px;
+  top: var(--nav-height);
   margin-top: 0px;
   background: var(--tback2);
   border-left: var(--border1);
@@ -335,7 +335,7 @@
 }
 .pbinfo {
   position: sticky;
-  top: 40px;
+  top: var(--nav-height);
   z-index: 55;
   width: 100%;
   flex-wrap: wrap;
