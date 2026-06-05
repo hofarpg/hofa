@@ -1882,231 +1882,29 @@ div.reminder:before {
   flex-direction: column;
   gap: 12px;
 }
-#tabcombatpj.nemesis,
-#tabcombatpj.NEMESIS,
-#tabcombatpj.némesis,
-#tabcombatpj.NÉMESIS,
-#tabcombatpj.Nemesis,
-#tabcombatpj.Némesis {
-  --acento: var(--nemesis);
-}
-#tabcombatpj.tyche,
-#tabcombatpj.TYCHE,
-#tabcombatpj.Tyche {
-  --acento: var(--tyche);
-}
-#tabcombatpj.dioniso,
-#tabcombatpj.DIONISO,
-#tabcombatpj.Dioniso {
-  --acento: var(--dioniso);
-}
-#tabcombatpj.afrodita,
-#tabcombatpj.AFRODITA,
-#tabcombatpj.Afrodita {
-  --acento: var(--afrodita);
-}
-#tabcombatpj.hades,
-#tabcombatpj.HADES,
-#tabcombatpj.Hades {
-  --acento: var(--hades);
-}
-#tabcombatpj.hecate,
-#tabcombatpj.HECATE,
-#tabcombatpj.hécate,
-#tabcombatpj.HÉCATE,
-#tabcombatpj.Hecate,
-#tabcombatpj.Hécate {
-  --acento: var(--hecate);
-}
-#tabcombatpj.poseidon,
-#tabcombatpj.POSEIDON,
-#tabcombatpj.poseidón,
-#tabcombatpj.POSEIDÓN,
-#tabcombatpj.Poseidon,
-#tabcombatpj.Poseidón {
-  --acento: var(--poseidon);
-}
-#tabcombatpj.hypnos,
-#tabcombatpj.HYPNOS,
-#tabcombatpj.Hypnos {
-  --acento: var(--hypnos);
-}
-#tabcombatpj.khione,
-#tabcombatpj.KHIONE,
-#tabcombatpj.Khione {
-  --acento: var(--khione);
-}
-#tabcombatpj.hebe,
-#tabcombatpj.HEBE,
-#tabcombatpj.Hebe {
-  --acento: var(--hebe);
-}
-#tabcombatpj.atenea,
-#tabcombatpj.ATENEA,
-#tabcombatpj.Atenea {
-  --acento: var(--atenea);
-}
-#tabcombatpj.demeter,
-#tabcombatpj.DEMETER,
-#tabcombatpj.deméter,
-#tabcombatpj.DEMÉTER,
-#tabcombatpj.Demeter,
-#tabcombatpj.Deméter {
-  --acento: var(--demeter);
-}
-#tabcombatpj.iris,
-#tabcombatpj.IRIS,
-#tabcombatpj.Iris {
-  --acento: var(--iris);
-}
-#tabcombatpj.hermes,
-#tabcombatpj.HERMES,
-#tabcombatpj.Hermes {
-  --acento: var(--hermes);
-}
-#tabcombatpj.apolo,
-#tabcombatpj.APOLO,
-#tabcombatpj.Apolo {
-  --acento: var(--apolo);
-}
-#tabcombatpj.zeus,
-#tabcombatpj.ZEUS,
-#tabcombatpj.Zeus {
-  --acento: var(--zeus);
-}
-#tabcombatpj.hefesto,
-#tabcombatpj.HEFESTO,
-#tabcombatpj.Hefesto {
-  --acento: var(--hefesto);
-}
-#tabcombatpj.ares,
-#tabcombatpj.ARES,
-#tabcombatpj.Ares {
-  --acento: var(--ares);
-}
-#tabcombatpj.nemesis .tabcomdata > i:before,
-#tabcombatpj.NEMESIS .tabcomdata > i:before,
-#tabcombatpj.némesis .tabcomdata > i:before,
-#tabcombatpj.NÉMESIS .tabcomdata > i:before,
-#tabcombatpj.Nemesis .tabcomdata > i:before,
-#tabcombatpj.Némesis .tabcomdata > i:before {
-  content: "\f6cb";
-}
-#tabcombatpj.tyche .tabcomdata > i:before,
-#tabcombatpj.TYCHE .tabcomdata > i:before,
-#tabcombatpj.Tyche .tabcomdata > i:before {
-  content: "\e362";
-}
-#tabcombatpj.dioniso .tabcomdata > i:before,
-#tabcombatpj.DIONISO .tabcomdata > i:before,
-#tabcombatpj.Dioniso .tabcomdata > i:before {
-  content: "\f4e3";
-}
-#tabcombatpj.afrodita .tabcomdata > i:before,
-#tabcombatpj.AFRODITA .tabcomdata > i:before,
-#tabcombatpj.Afrodita .tabcomdata > i:before {
-  content: "\f4ba";
-}
-#tabcombatpj.hades .tabcomdata > i:before,
-#tabcombatpj.HADES .tabcomdata > i:before,
-#tabcombatpj.Hades .tabcomdata > i:before {
-  content: "\f54c";
-}
-#tabcombatpj.hecate .tabcomdata > i:before,
-#tabcombatpj.HECATE .tabcomdata > i:before,
-#tabcombatpj.hécate .tabcomdata > i:before,
-#tabcombatpj.HÉCATE .tabcomdata > i:before,
-#tabcombatpj.Hecate .tabcomdata > i:before,
-#tabcombatpj.Hécate .tabcomdata > i:before {
-  content: "\f6bf";
-}
-#tabcombatpj.poseidon .tabcomdata > i:before,
-#tabcombatpj.POSEIDON .tabcomdata > i:before,
-#tabcombatpj.poseidón .tabcomdata > i:before,
-#tabcombatpj.POSEIDÓN .tabcomdata > i:before,
-#tabcombatpj.Poseidon .tabcomdata > i:before,
-#tabcombatpj.Poseidón .tabcomdata > i:before {
-  content: "\f773";
-}
-#tabcombatpj.hypnos .tabcomdata > i:before,
-#tabcombatpj.HYPNOS .tabcomdata > i:before,
-#tabcombatpj.Hypnos .tabcomdata > i:before {
-  content: "\f34e";
-}
-#tabcombatpj.khione .tabcomdata > i:before,
-#tabcombatpj.KHIONE .tabcomdata > i:before,
-#tabcombatpj.Khione .tabcomdata > i:before {
-  content: "\f2dc";
-}
-#tabcombatpj.hebe .tabcomdata > i:before,
-#tabcombatpj.HEBE .tabcomdata > i:before,
-#tabcombatpj.Hebe .tabcomdata > i:before {
-  content: "\e588";
-}
-#tabcombatpj.atenea .tabcomdata > i:before,
-#tabcombatpj.ATENEA .tabcomdata > i:before,
-#tabcombatpj.Atenea .tabcomdata > i:before {
-  content: "\f5dc";
-}
-#tabcombatpj.demeter .tabcomdata > i:before,
-#tabcombatpj.DEMETER .tabcomdata > i:before,
-#tabcombatpj.deméter .tabcomdata > i:before,
-#tabcombatpj.DEMÉTER .tabcomdata > i:before,
-#tabcombatpj.Demeter .tabcomdata > i:before,
-#tabcombatpj.Deméter .tabcomdata > i:before {
-  content: "\f72d";
-}
-#tabcombatpj.iris .tabcomdata > i:before,
-#tabcombatpj.IRIS .tabcomdata > i:before,
-#tabcombatpj.Iris .tabcomdata > i:before {
-  content: "\f75b";
-}
-#tabcombatpj.hermes .tabcomdata > i:before,
-#tabcombatpj.HERMES .tabcomdata > i:before,
-#tabcombatpj.Hermes .tabcomdata > i:before {
-  content: "\f56b";
-}
-#tabcombatpj.apolo .tabcomdata > i:before,
-#tabcombatpj.APOLO .tabcomdata > i:before,
-#tabcombatpj.Apolo .tabcomdata > i:before {
-  content: "\f001";
-}
-#tabcombatpj.zeus .tabcomdata > i:before,
-#tabcombatpj.ZEUS .tabcomdata > i:before,
-#tabcombatpj.Zeus .tabcomdata > i:before {
-  content: "\f0e7";
-}
-#tabcombatpj.hefesto .tabcomdata > i:before,
-#tabcombatpj.HEFESTO .tabcomdata > i:before,
-#tabcombatpj.Hefesto .tabcomdata > i:before {
-  content: "\f7e4";
-}
-#tabcombatpj.ares .tabcomdata > i:before,
-#tabcombatpj.ARES .tabcomdata > i:before,
-#tabcombatpj.Ares .tabcomdata > i:before {
-  content: "\f71d";
-}
-#tabcombatmn.monstruox .tabcomdata > i:before,
-#tabcombatmn.MONSTRUOX .tabcomdata > i:before,
-#tabcombatmn.Monstruox .tabcomdata > i:before,
-#tabcombatmn.MonstruoX .tabcomdata > i:before {
-  content: "\f56b";
-}
-#tabcombatmn.monstruoxx .tabcomdata > i:before,
-#tabcombatmn.MONSTRUOXX .tabcomdata > i:before,
-#tabcombatmn.Monstruoxx .tabcomdata > i:before,
-#tabcombatmn.MonstruoXx .tabcomdata > i:before,
-#tabcombatmn.MonstruoXX .tabcomdata > i:before {
-  content: "\f702";
-}
-#tabcombatmn.monstruoxxx .tabcomdata > i:before,
-#tabcombatmn.MONSTRUOXXX .tabcomdata > i:before,
-#tabcombatmn.Monstruoxxx .tabcomdata > i:before,
-#tabcombatmn.MonstruoXxx .tabcomdata > i:before,
-#tabcombatmn.MonstruoXXx .tabcomdata > i:before,
-#tabcombatmn.MonstruoXXX .tabcomdata > i:before {
-  content: "\f6d5";
-}
+
+.contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {content: "\f6cb";}
+.contentgroup-tyche #tabcombatpj .tabcomdata > i:before {content: "\e362";}
+.contentgroup-dioniso #tabcombatpj .tabcomdata > i:before {content: "\f4e3";}
+.contentgroup-afrodita #tabcombatpj .tabcomdata > i:before {content: "\f4ba";}
+.contentgroup-hades #tabcombatpj .tabcomdata > i:before {content: "\f54c";}
+.contentgroup-hecate #tabcombatpj .tabcomdata > i:before {content: "\f6bf";}
+.contentgroup-poseidon #tabcombatpj .tabcomdata > i:before {content: "\f773";}
+.contentgroup-hypnos #tabcombatpj .tabcomdata > i:before {content: "\f34e";}
+.contentgroup-khione #tabcombatpj .tabcomdata > i:before {content: "\f2dc";}
+.contentgroup-hebe #tabcombatpj .tabcomdata > i:before {content: "\e588";}
+.contentgroup-atenea #tabcombatpj .tabcomdata > i:before {content: "\f5dc";}
+.contentgroup-demeter #tabcombatpj .tabcomdata > i:before {content: "\f72d";}
+.contentgroup-iris #tabcombatpj .tabcomdata > i:before {content: "\f75b";}
+.contentgroup-hermes #tabcombatpj .tabcomdata > i:before {content: "\f56b";}
+.contentgroup-apolo #tabcombatpj .tabcomdata > i:before {content: "\f001";}
+.contentgroup-zeus #tabcombatpj .tabcomdata > i:before {content: "\f0e7";}
+.contentgroup-hefesto #tabcombatpj .tabcomdata > i:before {content: "\f7e4";}
+.contentgroup-ares #tabcombatpj .tabcomdata > i:before {content: "\f71d";}
+.contentgroup-monstruox #tabcombatmn .tabcomdata > i:before {content: "\f56b";}
+.contentgroup-monstruoxx #tabcombatmn .tabcomdata > i:before {content: "\f702";}
+.contentgroup-monstruoxxx #tabcombatmn .tabcomdata > i:before {content: "\f6d5";}
+
 /* FIRMA(S) */
 .previewfirma {
   background: var(--back1);
