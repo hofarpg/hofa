@@ -113,7 +113,7 @@
 [class*="group-zeus"], [class*="group-zeus"] + .postdados { --group: var(--zeus);}
 [class*="group-hefesto"], [class*="group-hefesto"] + .postdados { --group: var(--hefesto);}
 [class*="group-ares"], [class*="group-ares"] + .postdados { --group: var(--ares);}
-[class*="group-"], [class*="group-"] + .postdados {--tgroup: rgb(from var(--group) r g b / .6);}
+[class*="group-"], [class*="group-"] + .postdados {--tgroup: rgb(from var(--group) r g b / .6); --accent: var(--group); --taccent: var(--tgroup);}
 
 /* MISC */
 .panel.registeru {
