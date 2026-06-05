@@ -423,8 +423,8 @@ div.reminder:before {
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent) !important;
-  --tgroup: var(--taccent) !important;
+  --group: var(--accent);
+  --tgroup: var(--taccent);
 }
 #nonplayercharacters .gbnpc:after {
   z-index: 2;
@@ -552,8 +552,8 @@ div.reminder:before {
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent) !important;
-  --tgroup: var(--taccent) !important;
+  --group: var(--accent);
+  --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
 }
@@ -650,8 +650,8 @@ div.reminder:before {
   position: relative;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent) !important;
-  --tgroup: var(--taccent) !important;
+  --group: var(--accent);
+  --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
   padding: 12px;
@@ -747,8 +747,8 @@ div.reminder:before {
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent) !important;
-  --tgroup: var(--taccent) !important;
+  --group: var(--accent);
+  --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
 }
@@ -932,8 +932,8 @@ div.reminder:before {
   border-top: 2px solid transparent !important;
 }
 #expedtab #extbclabels a.preactive {
-  color: var(--txt1) !important;
-  border-top-color: var(--group) !important;
+  color: var(--txt1);
+  border-top-color: var(--group);
 }
 #expedtab #extbcinfo {
   position: relative;
@@ -1167,8 +1167,8 @@ div.reminder:before {
   font-weight: 800;
 }
 #expedtab .expzhskills h4.post-content {
-  color: var(--group) !important;
-  text-decoration: none !important;
+  color: var(--group);
+  text-decoration: none;
   margin: 0px 0px 12px 0px;
   display: flex !important;
   justify-content: center;
@@ -1329,14 +1329,14 @@ div.reminder:before {
 }
 #expedtab #expzhist::-webkit-scrollbar-thumb,
 #expedtab #expzextr::-webkit-scrollbar-thumb {
-  background: var(--group) !important;
-  border: 4px solid var(--back1) !important;
-  border-radius: var(--bradius) !important;
+  background: var(--group);
+  border: 4px solid var(--back1);
+  border-radius: var(--bradius);
 }
 #expedtab #expzhist::-webkit-scrollbar-track,
 #expedtab #expzextr::-webkit-scrollbar-track {
-  background: var(--border1-c) !important;
-  border: 5px solid var(--back1) !important;
+  background: var(--border1-c);
+  border: 5px solid var(--back1);
 }
 /* TABLILLAS DE ROL */
 .tabrol1,
@@ -1353,8 +1353,8 @@ div.reminder:before {
 .tabrol1,
 .tabrol2,
 .tabrol3 {
-  --acento: var(--personalclr, var(--group));
-  --tacento: var(--personalclr, var(--tgroup));
+  --accent: var(--personalclr, var(--group));
+  --taccent: var(--personalclr, var(--tgroup));
 }
 .tabrol1 > br,
 .tabrol2 > br,
@@ -1376,14 +1376,10 @@ div.reminder:before {
 .tbrolcont {
   padding: 50px;
 }
-.tbrolcont {
-  --group: var(--acento);
-  --tgroup: var(--acento);
-}
 .tbrolcont > b,
 .tbrolcont > strong {
   font-weight: 800;
-  color: var(--acento);
+  color: var(--accent);
 }
 .tbrolinfo {
   text-align: center;
@@ -1402,7 +1398,7 @@ div.reminder:before {
   content: "";
   width: calc(100% + 2px);
   height: 6px;
-  background: var(--acento);
+  background: var(--accent);
   position: relative;
   left: -1px;
   bottom: -1px;
@@ -1414,7 +1410,7 @@ div.reminder:before {
 .tabrol1 .tbroltit > b {
   text-transform: uppercase;
   font: 900 var(--fs-h2) var(--font1);
-  text-shadow: 1px 1px 1px var(--acento);
+  text-shadow: 1px 1px 1px var(--accent);
   color: var(--txt1);
   line-height: 90%;
 }
@@ -1425,7 +1421,7 @@ div.reminder:before {
   line-height: 100%;
 }
 .tabrol1 .tbroltit > em i {
-  color: var(--acento);
+  color: var(--accent);
 }
 .tabrol2 .tbroltit {
   gap: 10px;
@@ -1440,7 +1436,7 @@ div.reminder:before {
 .tabrol2 .tbroltit > i {
   position: absolute;
   z-index: 0;
-  color: var(--acento);
+  color: var(--accent);
   font-size: calc(var(--fs-display) + var(--fs-h3));
   opacity: 0.4;
 }
@@ -1466,7 +1462,7 @@ div.reminder:before {
   color: var(--txt1);
 }
 .tabrol2 .tbrolinfo > em i {
-  color: var(--acento);
+  color: var(--accent);
 }
 .tabrol2 .tbrolinfo > em a {
   color: var(--txt1);
@@ -1478,7 +1474,7 @@ div.reminder:before {
   text-transform: uppercase;
   font: 900 var(--fs-h1) var(--font1);
   line-height: 90%;
-  color: var(--acento);
+  color: var(--accent);
   position: relative;
   width: 100%;
   opacity: 0.6;
@@ -1508,7 +1504,7 @@ div.reminder:before {
   flex-wrap: wrap;
 }
 .tabrol3 .tbrolinfo > em {
-  background: var(--acento);
+  background: var(--accent);
   padding: 6px 8px;
   border-radius: var(--bradius);
   color: var(--back1);
@@ -1533,14 +1529,14 @@ div.reminder:before {
   min-height: 280px;
   justify-content: space-between;
   align-items: center;
-  --acento: var(--personalclr, var(--group));
+  --accent: var(--personalclr, var(--group));
 }
 #tabcombatpj strong {
-  color: var(--acento);
+  color: var(--accent);
 }
 #tabcombatpj u,
 #tabcombatpj strike {
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
 }
 #tabcombatmn {
   display: flex;
@@ -1554,14 +1550,13 @@ div.reminder:before {
   min-height: 280px;
   justify-content: space-between;
   align-items: center;
-  --acento: var(--accent);
 }
 #tabcombatmn strong {
-  color: var(--acento);
+  color: var(--accent);
 }
 #tabcombatmn u,
 #tabcombatmn strike {
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
 }
 #tabcombatpj > br,
 #tabcombatpj > div > br,
@@ -1588,7 +1583,7 @@ div.reminder:before {
   width: 40px;
   height: 40px;
   border-radius: var(--bradius);
-  color: var(--acento);
+  color: var(--accent);
   background: var(--back2);
   border: var(--border1);
   display: flex;
@@ -1611,7 +1606,7 @@ div.reminder:before {
   text-transform: uppercase;
   font: 800 var(--fs-h5) var(--font2);
   color: var(--txt1);
-  text-shadow: 1px 1px 1px var(--acento);
+  text-shadow: 1px 1px 1px var(--accent);
   line-height: 80%;
   margin-top: 2px;
 }
@@ -1628,7 +1623,7 @@ div.reminder:before {
   width: 35px;
   height: 2px;
   display: inline-block;
-  background: var(--acento);
+  background: var(--accent);
   margin-right: 8px;
   position: relative;
   top: -2px;
@@ -1649,7 +1644,7 @@ div.reminder:before {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  border-top: 2px solid var(--acento);
+  border-top: 2px solid var(--accent);
   border-left: var(--border2);
   border-right: var(--border2);
   border-radius: var(--bradius);
@@ -1698,7 +1693,7 @@ div.reminder:before {
 #tbcmblbar > span {
   height: 100%;
   display: block;
-  background: var(--acento);
+  background: var(--accent);
 }
 .tabcotskills {
   height: 100%;
@@ -1722,7 +1717,7 @@ div.reminder:before {
   text-align-last: left;
   text-transform: uppercase;
   font: 800 var(--fs-body) var(--font2) !important;
-  text-decoration-color: var(--acento) !important;
+  text-decoration-color: var(--accent) !important;
   color: var(--txt3);
   margin-top: 0px;
   margin-bottom: 8px;
@@ -1754,7 +1749,7 @@ div.reminder:before {
   float: left;
   font: 700 var(--fs-smaller) var(--font3);
   color: var(--back1);
-  background: var(--acento);
+  background: var(--accent);
   border-radius: var(--bradius);
   padding: 2px 4px;
   margin-right: 6px;
@@ -1858,7 +1853,7 @@ div.reminder:before {
   overflow: hidden;
   height: 100%;
   display: block;
-  background: var(--acento);
+  background: var(--accent);
   position: absolute;
   z-index: 0;
   top: 0px;
@@ -1874,7 +1869,7 @@ div.reminder:before {
   content: attr(actual) "/" attr(total);
   font: 700 var(--fs-small) var(--font2);
   margin-left: 4px;
-  color: var(--acento);
+  color: var(--accent);
   mix-blend-mode: difference;
 }
 .tabcombatfull {
@@ -1921,11 +1916,11 @@ div.reminder:before {
   height: 180px;
   margin: 10px auto;
   box-sizing: border-box !important;
-  outline: 2px solid var(--acento);
+  outline: 2px solid var(--accent);
   outline-offset: 8px;
   background: var(--back2);
   position: relative;
-  --acento: var(--group);
+  --accent: var(--group);
   overflow: hidden;
 }
 .hbcfirma > br {
@@ -1972,7 +1967,7 @@ div.reminder:before {
   width: 280px;
   height: 180px;
   position: absolute;
-  background: var(--acento);
+  background: var(--accent);
   z-index: 0;
   mix-blend-mode: multiply;
 }
@@ -1987,7 +1982,7 @@ div.reminder:before {
 .hbcfirma .hbcfirmaquote > span b,
 .hbcfirma .hbcfirmaquote > span strong {
   font-weight: 900;
-  color: var(--acento);
+  color: var(--accent);
 }
 .hbcfirma .hbcfirmaquote > span i {
   font-weight: 500;
@@ -1997,7 +1992,7 @@ div.reminder:before {
 .hbcfirma .hbcfirmaquote > span strike {
   font-weight: 600;
   color: var(--txt2);
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
 }
 /* BÚSQUEDA */
 .tabusqres {
@@ -2010,7 +2005,7 @@ div.reminder:before {
   gap: 20px;
   display: flex;
   flex-direction: column;
-  --acento: var(--group);
+  --accent: var(--group);
 }
 .tabusqres > br,
 .tabusq > br,
@@ -2027,13 +2022,9 @@ div.reminder:before {
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
   text-underline-offset: 2px;
   line-height: 120%;
-}
-.tabusqres .tbrescont {
-  --group: var(--acento);
-  --tgroup: var(--acento);
 }
 .tabusqres .blockquote.tbrcreq {
   border-color: transparent;
@@ -2050,7 +2041,7 @@ div.reminder:before {
   flex-direction: column;
   padding: 40px;
   gap: 20px;
-  --acento: var(--group);
+  --accent: var(--group);
 }
 .tabutrama,
 .tabupj {
@@ -2081,7 +2072,7 @@ div.reminder:before {
   gap: 2px;
 }
 .tabudatos > div > b {
-  color: var(--acento);
+  color: var(--accent);
   font: 800 var(--fs-body) var(--font2);
   line-height: 100%;
 }
@@ -2092,11 +2083,11 @@ div.reminder:before {
   line-height: 100%;
 }
 .tabudatos > div > em i {
-  color: var(--acento);
+  color: var(--accent);
 }
 .tabudatos:after {
   content: "";
-  background: var(--acento);
+  background: var(--accent);
   color: var(--back1);
   font: 800 var(--fs-small) var(--font3);
   line-height: 100%;
@@ -2106,8 +2097,6 @@ div.reminder:before {
   flex-shrink: 0;
 }
 .tabucont {
-  --group: var(--acento);
-  --tgroup: var(--acento);
   flex: 1;
   height: 300px;
   overflow: auto;
@@ -2373,11 +2362,7 @@ div.reminder:before {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  --acento: var(--group);
-}
-.tabaul * {
-  --group: var(--acento);
-  --tgroup: var(--acento);
+  --accent: var(--personalclr, var(--group));
 }
 .tabaul > br,
 .tabaul .tbauimg > br,
@@ -2411,7 +2396,7 @@ div.reminder:before {
   border-radius: var(--bradius);
   justify-content: center;
   align-items: center;
-  outline: 2px solid var(--acento);
+  outline: 2px solid var(--accent);
   outline-offset: 6px;
   margin: 8px;
 }
@@ -2421,7 +2406,7 @@ div.reminder:before {
   width: 100%;
   height: 100%;
   inset: 0;
-  background: var(--acento);
+  background: var(--accent);
   z-index: 1;
   mix-blend-mode: multiply;
   opacity: 0;
@@ -2465,7 +2450,7 @@ div.reminder:before {
 .tabaul .tbauname > span {
   display: block;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.5px var(--acento);
+  -webkit-text-stroke: 0.5px var(--accent);
   text-shadow: none;
   text-transform: lowercase;
   font-style: italic;
@@ -2485,7 +2470,7 @@ div.reminder:before {
 }
 .tabaul .tbaulinks > a {
   transition: var(--trs1);
-  color: var(--acento);
+  color: var(--accent);
 }
 .tabaul#tbsimple .tbaulinks {
   gap: 12px;
@@ -2503,8 +2488,8 @@ div.reminder:before {
   height: 40px;
 }
 .tabaul#tbsimple .tbaulinks > a:hover {
-  background-color: var(--acento);
-  border-color: var(--acento);
+  background-color: var(--accent);
+  border-color: var(--accent);
   color: var(--back1);
 }
 .tabaul#tbfull .tbaulinks {
@@ -2554,7 +2539,7 @@ div.reminder:before {
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
   text-underline-offset: 2px;
   line-height: 130%;
   text-transform: uppercase;
@@ -2575,11 +2560,7 @@ div.reminder:before {
   margin: 0 auto;
   width: 100%;
   max-width: 570px;
-  --acento: var(--group);
-}
-.tabcrono * {
-  --group: var(--acento);
-  --tgroup: var(--acento);
+  --accent: var(--personalclr, var(--group));
 }
 .tabcrono > br,
 .tabcrono .tabcronocont > br,
@@ -2628,7 +2609,7 @@ div.reminder:before {
   width: 40px;
   height: 2px;
   display: inline-block;
-  background: var(--acento);
+  background: var(--accent);
   margin-right: 8px;
   position: relative;
   top: -2px;
@@ -2652,7 +2633,7 @@ div.reminder:before {
 }
 .tabcrono .tabcrcothread > i:before {
   content: "";
-  color: var(--acento);
+  color: var(--accent);
   font: 400 var(--fs-big) var(--font4);
   transition: var(--trs1);
 }
@@ -2698,7 +2679,7 @@ div.reminder:before {
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
   text-underline-offset: 2px;
   line-height: 120%;
   transition: var(--trs1);
@@ -2711,18 +2692,18 @@ div.reminder:before {
   line-height: 100%;
 }
 .tabcrono .tabcrcothread > div > em i {
-  color: var(--acento);
+  color: var(--accent);
   font-style: normal;
 }
 .tabcrono .tabcrcothread:hover > i {
-  background: var(--acento);
-  border-color: var(--acento);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .tabcrono .tabcrcothread:hover > i:before {
   color: var(--back1);
 }
 .tabcrono .tabcrcothread:hover > div > a {
-  color: var(--acento);
+  color: var(--accent);
 }
 /* RELACIONES DE USUARIOS */
 .tabrelas {
@@ -2732,12 +2713,8 @@ div.reminder:before {
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 570px;
-  --acento: var(--group);
-}
-.tabrelas * {
-  --group: var(--acento);
-  --tgroup: var(--acento);
+  max-width: 570px;  
+  --accent: var(--personalclr, var(--group));
 }
 .tabrelas > br,
 .tabrelas .tabrelascont > br,
@@ -2774,27 +2751,27 @@ div.reminder:before {
 .tabrelas .tabrlcochar#NÉMESIS,
 .tabrelas .tabrlcochar#Nemesis,
 .tabrelas .tabrlcochar#Némesis {
-  --acento: var(--nemesis);
+  --accent: var(--nemesis);
 }
 .tabrelas .tabrlcochar#tyche,
 .tabrelas .tabrlcochar#TYCHE,
 .tabrelas .tabrlcochar#Tyche {
-  --acento: var(--tyche);
+  --accent: var(--tyche);
 }
 .tabrelas .tabrlcochar#afrodita,
 .tabrelas .tabrlcochar#AFRODITA,
 .tabrelas .tabrlcochar#Afrodita {
-  --acento: var(--afrodita);
+  --accent: var(--afrodita);
 }
 .tabrelas .tabrlcochar#dioniso,
 .tabrelas .tabrlcochar#DIONISO,
 .tabrelas .tabrlcochar#Dioniso {
-  --acento: var(--dioniso);
+  --accent: var(--dioniso);
 }
 .tabrelas .tabrlcochar#hades,
 .tabrelas .tabrlcochar#HADES,
 .tabrelas .tabrlcochar#Hades {
-  --acento: var(--hades);
+  --accent: var(--hades);
 }
 .tabrelas .tabrlcochar#hecate,
 .tabrelas .tabrlcochar#HECATE,
@@ -2802,7 +2779,7 @@ div.reminder:before {
 .tabrelas .tabrlcochar#HÉCATE,
 .tabrelas .tabrlcochar#Hecate,
 .tabrelas .tabrlcochar#Hécate {
-  --acento: var(--hecate);
+  --accent: var(--hecate);
 }
 .tabrelas .tabrlcochar#poseidon,
 .tabrelas .tabrlcochar#POSEIDON,
@@ -2810,27 +2787,27 @@ div.reminder:before {
 .tabrelas .tabrlcochar#POSEIDÓN,
 .tabrelas .tabrlcochar#Poseidon,
 .tabrelas .tabrlcochar#Poseidón {
-  --acento: var(--poseidon);
+  --accent: var(--poseidon);
 }
 .tabrelas .tabrlcochar#hypnos,
 .tabrelas .tabrlcochar#HYPNOS,
 .tabrelas .tabrlcochar#Hypnos {
-  --acento: var(--hypnos);
+  --accent: var(--hypnos);
 }
 .tabrelas .tabrlcochar#khione,
 .tabrelas .tabrlcochar#KHIONE,
 .tabrelas .tabrlcochar#Khione {
-  --acento: var(--khione);
+  --accent: var(--khione);
 }
 .tabrelas .tabrlcochar#hebe,
 .tabrelas .tabrlcochar#HEBE,
 .tabrelas .tabrlcochar#Hebe {
-  --acento: var(--hebe);
+  --accent: var(--hebe);
 }
 .tabrelas .tabrlcochar#atenea,
 .tabrelas .tabrlcochar#ATENEA,
 .tabrelas .tabrlcochar#Atenea {
-  --acento: var(--atenea);
+  --accent: var(--atenea);
 }
 .tabrelas .tabrlcochar#demeter,
 .tabrelas .tabrlcochar#DEMETER,
@@ -2838,37 +2815,37 @@ div.reminder:before {
 .tabrelas .tabrlcochar#DEMÉTER,
 .tabrelas .tabrlcochar#Demeter,
 .tabrelas .tabrlcochar#Deméter {
-  --acento: var(--demeter);
+  --accent: var(--demeter);
 }
 .tabrelas .tabrlcochar#iris,
 .tabrelas .tabrlcochar#IRIS,
 .tabrelas .tabrlcochar#Iris {
-  --acento: var(--iris);
+  --accent: var(--iris);
 }
 .tabrelas .tabrlcochar#hermes,
 .tabrelas .tabrlcochar#HERMES,
 .tabrelas .tabrlcochar#Hermes {
-  --acento: var(--hermes);
+  --accent: var(--hermes);
 }
 .tabrelas .tabrlcochar#apolo,
 .tabrelas .tabrlcochar#APOLO,
 .tabrelas .tabrlcochar#Apolo {
-  --acento: var(--apolo);
+  --accent: var(--apolo);
 }
 .tabrelas .tabrlcochar#zeus,
 .tabrelas .tabrlcochar#ZEUS,
 .tabrelas .tabrlcochar#Zeus {
-  --acento: var(--zeus);
+  --accent: var(--zeus);
 }
 .tabrelas .tabrlcochar#hefesto,
 .tabrelas .tabrlcochar#HEFESTO,
 .tabrelas .tabrlcochar#Hefesto {
-  --acento: var(--hefesto);
+  --accent: var(--hefesto);
 }
 .tabrelas .tabrlcochar#ares,
 .tabrelas .tabrlcochar#ARES,
 .tabrelas .tabrlcochar#Ares {
-  --acento: var(--ares);
+  --accent: var(--ares);
 }
 .tabrelas .tabrlcochar > div > span:after {
   content: "Nadie";
@@ -2995,7 +2972,7 @@ div.reminder:before {
   inset: 0;
   height: 100%;
   width: 100%;
-  background: var(--acento);
+  background: var(--accent);
   mix-blend-mode: multiply;
   opacity: 0;
   z-index: 2;
@@ -3015,7 +2992,7 @@ div.reminder:before {
   gap: 4px;
 }
 .tabrelas .tabrlcochar > div > span {
-  background: var(--acento);
+  background: var(--accent);
   font: 800 var(--fs-smaller) var(--font3);
   color: var(--back1);
   line-height: 100%;
@@ -3028,7 +3005,7 @@ div.reminder:before {
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--acento);
+  text-decoration-color: var(--accent);
   text-underline-offset: 2px;
   line-height: 120%;
   transition: var(--trs1);
@@ -3041,14 +3018,14 @@ div.reminder:before {
   line-height: 100%;
 }
 .tabrelas .tabrlcochar > div > em i {
-  color: var(--acento);
+  color: var(--accent);
   font-style: normal;
 }
 .tabrelas .tabrlcochar:hover .tabrlcocharimg:before {
   opacity: 1;
 }
 .tabrelas .tabrlcochar:hover > div > a {
-  color: var(--acento);
+  color: var(--accent);
 }
 /* HOJA DE USUARIOS */
 .tabhojaexp {
@@ -3059,11 +3036,7 @@ div.reminder:before {
   margin: 0 auto;
   width: 100%;
   max-width: 570px;
-  --acento: var(--group);
-}
-.tabhojaexp * {
-  --group: var(--acento);
-  --tgroup: var(--acento);
+  --accent: var(--personalclr, var(--group));
 }
 .tabhojaexp > br,
 .tabhojaexp .tabhojexpcont > br,
@@ -3111,7 +3084,7 @@ div.reminder:before {
   line-height: 100%;
 }
 .tabhojaexp .tabhojcodata > span > b {
-  color: var(--acento);
+  color: var(--accent);
   font-weight: 900;
 }
 .tabhojaexp .tabhojcomejoras {
@@ -3120,7 +3093,7 @@ div.reminder:before {
 .tabhojaexp .tabhojcomejoras > b {
   text-transform: uppercase;
   font: 900 var(--fs-big) var(--font3);
-  background: var(--acento);
+  background: var(--accent);
   width: fit-content;
   color: var(--back1);
   line-height: 100%;
@@ -3141,7 +3114,7 @@ div.reminder:before {
   width: 30px;
   height: 2px;
   display: inline-block;
-  background: var(--acento);
+  background: var(--accent);
   margin-right: 8px;
   position: relative;
   top: -2px;
@@ -3158,7 +3131,7 @@ div.reminder:before {
 }
 .tabhojaexp .tabhojcogoalslvl > b {
   text-shadow: none;
-  color: var(--acento);
+  color: var(--accent);
   font-weight: 900;
 }
 .tabhojaexp .tabhojcogoalslvl:not(:first-of-type) {
@@ -3183,7 +3156,7 @@ div.reminder:before {
 }
 .tabhojaexp .tabhojcogoalitem > i:before {
   content: "";
-  color: var(--acento);
+  color: var(--accent);
   font: 600 var(--fs-big) var(--font4);
   transition: var(--trs1);
 }
@@ -3214,7 +3187,7 @@ div.reminder:before {
   line-height: 100%;
 }
 .tabhojaexp .tabhojcogoalitem > div > em a {
-  color: var(--acento);
+  color: var(--accent);
   font-style: italic;
 }
 /* MEDIA */
