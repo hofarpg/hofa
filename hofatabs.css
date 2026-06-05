@@ -1354,7 +1354,7 @@ div.reminder:before {
 .tabrol2,
 .tabrol3 {
   --accent: var(--personalclr, var(--group));
-  --taccent: var(--personalclr, var(--tgroup));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabrol1 > br,
 .tabrol2 > br,
@@ -1530,6 +1530,7 @@ div.reminder:before {
   justify-content: space-between;
   align-items: center;
   --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 #tabcombatpj strong {
   color: var(--accent);
@@ -2363,6 +2364,7 @@ div.reminder:before {
   width: 100%;
   margin: 0 auto;
   --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabaul > br,
 .tabaul .tbauimg > br,
@@ -2561,6 +2563,7 @@ div.reminder:before {
   width: 100%;
   max-width: 570px;
   --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabcrono > br,
 .tabcrono .tabcronocont > br,
@@ -2715,6 +2718,7 @@ div.reminder:before {
   width: 100%;
   max-width: 570px;  
   --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabrelas > br,
 .tabrelas .tabrelascont > br,
@@ -3037,6 +3041,7 @@ div.reminder:before {
   width: 100%;
   max-width: 570px;
   --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabhojaexp > br,
 .tabhojaexp .tabhojexpcont > br,
