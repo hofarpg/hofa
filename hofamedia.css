@@ -336,589 +336,6 @@
     flex-direction: column !important;
   }
 }
-@media (max-width: 950px) {
-  header {
-    max-height: 500px;
-    padding: 40px;
-  }
-  .himg {
-    background-image: var(--pngimg-2);
-  }
-  #page-footer .navbar ul {
-    gap: 12px;
-    justify-content: space-between;
-  }
-  #page-footer ul.linklist li.footer-home {
-    font-size: 0px;
-  }
-  #page-footer ul.linklist li.footer-home:after {
-    content: "";
-    display: none;
-  }
-  #page-footer ul.linklist li.footer-home > a:before {
-    content: "\f80a";
-    font: 300 var(--fs-bigger) var(--font4);
-  }
-  mainbody {
-    padding: 40px;
-  }
-  #tablon {
-    margin-bottom: 40px;
-  }
-  .footerlogin {
-    margin-top: 40px;
-  }
-  .forum {
-    max-width: none;
-  }
-}
-@media (max-width: 900px) {
-  #profile {
-    flex-direction: column;
-  }
-  .tab {
-    padding: 60px 80px !important;
-  }
-  .right-tabs {
-    right: 25px !important;
-  }
-  .left-tabs {
-    left: 25px !important;
-  }
-  #profile .profimg .pccontent {
-    position: relative !important;
-    border-left: var(--border1) !important;
-    height: 130px !important;
-    width: 130px !important;
-  }
-  #profile .profimg {
-    background: var(--back1);
-    max-width: none !important;
-    border-left: none !important;
-    border-top: var(--border1);
-    height: 130px !important;
-    min-height: auto !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-  }
-  .profimg .proflinks {
-    justify-content: space-around !important;
-    align-items: center;
-  }
-  .profimg .proflinks a {
-    font-size: var(--fs-h4) !important;
-    background: transparent !important;
-    border: none !important;
-    width: auto !important;
-    height: auto !important;
-  }
-  .profimg .proflinks a:hover {
-    color: var(--group) !important;
-    background: transparent !important;
-    border: none !important;
-  }
-  #glenjams-05 {
-    display: none;
-  }
-  .pfchabs,
-  .pfcinve {
-    line-height: 128%;
-  }
-  .phmname {
-    font-size: var(--fs-h2);
-  }
-  .pbsearchpost {
-    font-size: var(--fs-h3);
-  }
-  .postprofile {
-    display: none;
-  }
-  .post .postbody {
-    min-height: unset;
-  }
-  .phmquote:before {
-    width: 40px;
-  }
-}
-@media (max-width: 700px) {
-  #profile .profcont {
-    min-width: auto !important;
-  }
-  .tab {
-    padding: 40px 60px !important;
-  }
-  .right-tabs {
-    right: -10px !important;
-  }
-  .left-tabs {
-    left: -10px !important;
-  }
-  .left-tabs,
-  .right-tabs {
-    width: 25px !important;
-    height: 25px !important;
-  }
-  .profimg .proflinks a {
-    font-size: var(--fs-h5) !important;
-  }
-  .pfchabs,
-  .pfcinve {
-    line-height: 130% !important;
-  }
-  .pfcstats > .pccontent > div > strong {
-    flex: 1 0 25% !important;
-    font-size: var(--fs-body) !important;
-  }
-  input.inputbox,
-  select.inputbox {
-    width: 100% !important;
-    display: flex !important;
-  }
-  #cp-main.ucp-vigi table tbody tr td:nth-of-type(4),
-  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(4),
-  #cp-main.ucp-vigi table tbody tr td:nth-of-type(6),
-  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(6) {
-    display: none !important;
-  }
-  .panel.ucp-informacinderegistro dl.ucp- {
-    display: none !important;
-  }
-  .ftopic {
-    flex-direction: column !important;
-    padding: 0px !important;
-    gap: 0px !important;
-  }
-  .ftopic > div {
-    width: 100% !important;
-    padding: 20px;
-  }
-  .ftopicz2 {
-    border-top: var(--border1);
-    background: var(--back2);
-  }
-  .ftoplava {
-    display: none !important;
-  }
-  .mbsmava > img {
-    display: none !important;
-  }
-  .mbsmava {
-    width: 100%;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    border-right: none !important;
-    border-bottom: var(--border1);
-    height: 250px !important;
-    min-height: auto !important;
-  }
-  .mbsimgpro {
-    display: block !important;
-    width: 100%;
-    height: 100%;
-  }
-  .mbsmember {
-    flex-direction: column !important;
-    max-width: 350px !important;
-    min-width: auto !important;
-    flex: 1 0 100% !important;
-  }
-  .mbsimgpro img {
-    filter: var(--filter2);
-    object-fit: cover;
-    object-position: center 30%;
-    width: 100%;
-    height: 100%;
-  }
-  .mbsimgpro > div {
-    width: 100%;
-    height: 100%;
-  }
-  .mbsmcont {
-    min-width: auto !important;
-  }
-  .mbsimgava {
-    display: none !important;
-  }
-  .mbsmcdata {
-    max-height: none !important;
-  }
-  .phmname {
-    font-size: var(--fs-h3) !important;
-  }
-  .pbsearchpost {
-    font-size: var(--fs-h4) !important;
-  }
-  .phmain {
-    gap: 12px !important;
-  }
-  .phicon img,
-  .phicon:empty:before,
-  .phicon img {
-    width: 70px !important;
-    height: 70px !important;
-  }
-  .postheader,
-  .messheader {
-    padding: 20px !important;
-  }
-}
-
-@media (max-width: 600px) {  
-  :root { 
-    --nav-height: 60px;
-  }
-  .nvtree:has(a:nth-child(n+3)) > a > span {
-    max-width: 95px;
-  }
-  .phmname,
-  .phsubject {
-    font-size: var(--fs-h4) !important;
-  }
-  .pbsearchpost {
-    font-size: var(--fs-h5) !important;
-  }
-  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(1),
-  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(1),
-  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(3),
-  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(3) {
-    display: none !important;
-  }
-  .forum {
-    flex-direction: column !important;
-    flex: 1 0 100%;
-  }
-  .forum .forcont {
-    border-right: none;
-  }
-  .forum .forava {
-    width: 100%;
-    max-width: none !important;
-    border-top: var(--border1);
-    min-height: auto;
-    min-width: auto;
-    padding: 20px;
-    position: initial !important;
-    gap: 20px;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    justify-content: end;
-  }
-  .forum .forava:before {
-    display: none !important;
-  }
-  .forava .fraava {
-    outline: var(--baborder);
-    filter: none;
-    outline-color: var(--group);
-    outline-offset: 2px;
-  }
-  .forum .forava:empty:before,
-  .forava .fraava img {
-    filter: var(--filter1) !important;
-  }
-  .forava .fraava,
-  .forum .forava:empty:before,
-  .forava .fraava img {
-    position: relative !important;
-    width: 60px;
-    height: 60px;
-    border-radius: var(--bradius);
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .fralicon {
-    top: initial !important;
-    right: initial !important;
-    bottom: 72px !important;
-    left: 13px !important;
-  }
-  .category:has(.frcbackground) .forum .forcont {
-    min-height: 300px;
-    position: relative;
-  }
-  .category:has(.frcbackground) .forum .forava {
-    background: var(--back1);
-  }
-  body#phpbb {
-    margin-left: 0;
-  }
-  header {
-    padding: 30px;
-  }
-  .himg {
-    background-image: var(--pngimg-3);
-  }
-  .nvside {
-    width: 100%;
-    padding-block: 12px;
-    height: auto;
-    flex-direction: row;
-    top: 26px;
-    line-height: 1em;
-    border-right: none;
-    border-bottom: var(--border1);
-  }
-  .nvside > div {
-    flex-direction: row;
-  }
-  .nvside a:before {
-    font-size: var(--fs-text);
-  }
-  .nvava {
-    height: 30px;
-    width: 30px;
-    display: none !important;
-  }
-  a#fa_notifications > span#notif_unread {
-    left: 170%;
-    top: 20px;
-  }
-  #notif_list,
-  .navigationpanel {
-    top: 65px;
-    left: 20px !important;
-  }
-  #page-footer {
-    padding: 30px 20px;
-    margin-top: 20px;
-  }
-  .nvtop {
-    padding: 6px;
-  }
-  mainbody {
-    padding: 20px;
-  }
-  #tablon {
-    margin-bottom:45px;
-    padding: 20px;
-    justify-content: center;
-  }
-  .tlult {
-    max-height:initial; 
-    height:initial; 
-    overflow:hidden; 
-    padding:0px;
-    gap: 10px;
-  }
-  .tadm {
-    display: none;
-  }
-  .tlupst:nth-of-type(n+6) {
-    display:none;
-  }
-  .tlupst:last-of-type {
-    margin-bottom: 0;
-  }
-  .tlocupd,
-  .teve {
-    flex: 1 0 100% ;
-  }
-  .tupd {
-    max-height: 100px;
-    height: auto;
-  }
-  .statlinks,
-  .statsright,
-  .statlastu
-  {
-    flex: 1 0 100%;
-    flex-direction: row !important;
-  }
-  .statlastu > .stlstuava {
-    width: 90px;
-    height: 90px;
-  }
-  .stlstunam > strong {
-    font-size: var(--fs-bigger);
-  }
-  .statsright,
-  .statonline,
-  .stattwenty {
-    min-width: auto;
-  }
-  .statonline,
-  .stattwenty {
-    max-height: auto !important;
-  }
-  .pfcuser {
-    font-size: var(--fs-h3) !important;
-  }
-  #profile .profcont,
-  #car-hold {
-    min-height: 500px !important;
-  }
-  .pfcmain > div {
-    flex: 1 0 30% !important;
-  }
-  .tab {
-    padding: 50px !important;
-  }
-  .pfcmain {
-    padding: 20px !important;
-  }
-  #profile .profimg .pccontent {
-    display: none !important;
-  }
-  .pfcstats > .pccontent > div > strong > i {
-    font-size: var(--fs-bigger) !important;
-  }
-  .pfctrank {
-    font-size: var(--fs-h4) !important;
-  }
-  .pfchabs,
-  .pfcinve {
-    line-height: 128% !important;
-  }
-  fieldset dd {
-    margin-left: 0px !important;
-  }
-  fieldset dt {
-    width: 100% !important;
-  }
-  #cp-main.ucp-vigi table tbody tr td:nth-of-type(3),
-  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(3) {
-    display: none !important;
-  }
-  .panel {padding: 20px;}
-  .mbsmcont {
-    padding: 20px !important;
-  }
-  .pbinfo {
-    position: static !important;
-  }
-  .postbody .content {
-    padding: 20px !important;
-  }
-  .postheader > a {
-    width: 35px !important;
-    height: 35px !important;
-    font-size: var(--fs-big) !important;
-  }
-  .phicon img,
-  .phicon:empty:before,
-  .mhava img {
-    width: 50px !important;
-    height: 50px !important;
-  }
-  .phmquote:before {
-    width: 30px !important;
-  }
-  .signature_div {
-    margin-bottom: 0px !important;
-  }
-  .sigcont .signature_div > br:first-of-type {
-    display: none !important;
-  }
-  .cattitle h2 {
-    margin-bottom: 10px !important;
-  }  
-  .switcheroo {
-    left: 0;
-    width: 100%;
-  }
-}
-
-@media (max-width: 550px) {
-  #cp-main {
-    padding: 20px !important;
-  }
-  #cp-main .panel {
-    padding: 12px !important;
-  }
-  #cp-main h1 {
-    margin-bottom: 20px !important;
-  }
-  #cp-main .panel p {
-    margin-bottom: 12px !important;
-  }
-}
-
-@media (max-width: 500px) {
-  .nvtree:has(a:nth-child(n+2)) > a > span {
-    max-width: 70px;
-  }
-  .nvtree:has(a:nth-child(n+4)) > a > span {
-    max-width: 55px;
-  }
-  .mhava {
-    display: none;
-  }
-  .phmname,
-  .phsubject {
-    font-size: var(--fs-h5);
-  }
-  mainbody {
-    padding: 12px;
-  }
-  .tupd, .tdesc, .teve>*:not(:nth-of-type(1)) {display: none;}
-  .teve {
-    height: 7.7rem;
-  }
-  .teve .teeve {
-    height: 100%;
-  }
-  .tupd, .tlult, .tlocupd {
-    min-width:auto;
-    flex:1 0 100%;
-    line-height: 1em;
-  }
-  #profile .profcont,
-  #car-hold {
-    min-height: 560px;
-  }
-  .pfctraits {
-    flex-direction: column;
-  }
-  .pfctraits > div {
-    width: 100%;
-  }
-  a.usgp {
-    flex: 1 0 40%;
-    max-width: 100%;
-  }
-  blockquote,
-  dl.codebox dd,
-  dl.codebox.spoiler .spoiler_content.hidden {
-    padding: 12px;
-  }
-  dl.codebox.spoiler > dd {
-    padding: 0px;
-  }
-  dl.codebox dt {
-    padding: 6px;
-  }
-}
-
-
-@media (min-height: 1500px) {
-  .monomer-modal {
-    padding: 60px;
-    max-width: 600px !important;
-  }
-  .switcheroo {
-    left: 125px;
-    width: calc(100% - 125px);
-  }
-  .switcheroo__avatar img,
-  .switcheroo__squircle {
-    width: 120px;
-    height: 120px;
-  }
-  .switcheroo__squircle:before {
-    width: 124px;
-    height: 124px;
-  }
-  .switcheroo__delete {
-    width: 40px;
-    height: 40px;
-    top: -8px;
-    right: -8px;
-  }
-  .switcheroo__squircle:last-of-type {
-    width: 60px;
-    height: 60px;
-  }
-}
 
 @media only screen and (max-width: 980px) and (min-height: 1500px) {
   :root,
@@ -1282,7 +699,560 @@
   }
 }
 
-@media (max-height: 500px) {
+
+@media (max-width: 950px) {
+  header {
+    max-height: 500px;
+    padding: 40px;
+  }
+  .himg {
+    background-image: var(--pngimg-2);
+  }
+  #page-footer .navbar ul {
+    gap: 12px;
+    justify-content: space-between;
+  }
+  #page-footer ul.linklist li.footer-home {
+    font-size: 0px;
+  }
+  #page-footer ul.linklist li.footer-home:after {
+    content: "";
+    display: none;
+  }
+  #page-footer ul.linklist li.footer-home > a:before {
+    content: "\f80a";
+    font: 300 var(--fs-bigger) var(--font4);
+  }
+  mainbody {
+    padding: 40px;
+  }
+  #tablon {
+    margin-bottom: 40px;
+  }
+  .footerlogin {
+    margin-top: 40px;
+  }
+  .forum {
+    max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
+  #profile {
+    flex-direction: column;
+  }
+  .tab {
+    padding: 60px 80px !important;
+  }
+  .right-tabs {
+    right: 25px !important;
+  }
+  .left-tabs {
+    left: 25px !important;
+  }
+  #profile .profimg .pccontent {
+    position: relative !important;
+    border-left: var(--border1) !important;
+    height: 130px !important;
+    width: 130px !important;
+  }
+  #profile .profimg {
+    background: var(--back1);
+    max-width: none !important;
+    border-left: none !important;
+    border-top: var(--border1);
+    height: 130px !important;
+    min-height: auto !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .profimg .proflinks {
+    justify-content: space-around !important;
+    align-items: center;
+  }
+  .profimg .proflinks a {
+    font-size: var(--fs-h4) !important;
+    background: transparent !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .profimg .proflinks a:hover {
+    color: var(--group) !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  #glenjams-05 {
+    display: none;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 128%;
+  }
+  .phmname {
+    font-size: var(--fs-h2);
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h3);
+  }
+  .postprofile {
+    display: none;
+  }
+  .post .postbody {
+    min-height: unset;
+  }
+  .phmquote:before {
+    width: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  #profile .profcont {
+    min-width: auto !important;
+  }
+  .tab {
+    padding: 40px 60px !important;
+  }
+  .right-tabs {
+    right: -10px !important;
+  }
+  .left-tabs {
+    left: -10px !important;
+  }
+  .left-tabs,
+  .right-tabs {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .profimg .proflinks a {
+    font-size: var(--fs-h5) !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 130% !important;
+  }
+  .pfcstats > .pccontent > div > strong {
+    flex: 1 0 25% !important;
+    font-size: var(--fs-body) !important;
+  }
+  input.inputbox,
+  select.inputbox {
+    width: 100% !important;
+    display: flex !important;
+  }
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(4),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(4),
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(6),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(6) {
+    display: none !important;
+  }
+  .panel.ucp-informacinderegistro dl.ucp- {
+    display: none !important;
+  }
+  .ftopic {
+    flex-direction: column !important;
+    padding: 0px !important;
+    gap: 0px !important;
+  }
+  .ftopic > div {
+    width: 100% !important;
+    padding: 20px;
+  }
+  .ftopicz2 {
+    border-top: var(--border1);
+    background: var(--back2);
+  }
+  .ftoplava {
+    display: none !important;
+  }
+  .mbsmava > img {
+    display: none !important;
+  }
+  .mbsmava {
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    border-right: none !important;
+    border-bottom: var(--border1);
+    height: 250px !important;
+    min-height: auto !important;
+  }
+  .mbsimgpro {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+  }
+  .mbsmember {
+    flex-direction: column !important;
+    max-width: 350px !important;
+    min-width: auto !important;
+    flex: 1 0 100% !important;
+  }
+  .mbsimgpro img {
+    filter: var(--filter2);
+    object-fit: cover;
+    object-position: center 30%;
+    width: 100%;
+    height: 100%;
+  }
+  .mbsimgpro > div {
+    width: 100%;
+    height: 100%;
+  }
+  .mbsmcont {
+    min-width: auto !important;
+  }
+  .mbsimgava {
+    display: none !important;
+  }
+  .mbsmcdata {
+    max-height: none !important;
+  }
+  .phmname {
+    font-size: var(--fs-h3) !important;
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h4) !important;
+  }
+  .phmain {
+    gap: 12px !important;
+  }
+  .phicon img,
+  .phicon:empty:before,
+  .phicon img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .postheader,
+  .messheader {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {  
+  :root { 
+    --nav-height: 60px;
+  }
+  .nvtree:has(a:nth-child(n+3)) > a > span {
+    max-width: 95px;
+  }
+  .phmname,
+  .phsubject {
+    font-size: var(--fs-h4) !important;
+  }
+  .pbsearchpost {
+    font-size: var(--fs-h5) !important;
+  }
+  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(1),
+  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(1),
+  #cp-main.ucp-drafts table.table1 thead th:nth-of-type(3),
+  #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(3) {
+    display: none !important;
+  }
+  .forum {
+    flex-direction: column !important;
+    flex: 1 0 100%;
+  }
+  .forum .forcont {
+    border-right: none;
+  }
+  .forum .forava {
+    width: 100%;
+    max-width: none !important;
+    border-top: var(--border1);
+    min-height: auto;
+    min-width: auto;
+    padding: 20px;
+    position: initial !important;
+    gap: 20px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: end;
+  }
+  .forum .forava:before {
+    display: none !important;
+  }
+  .forava .fraava {
+    outline: var(--baborder);
+    filter: none;
+    outline-color: var(--group);
+    outline-offset: 2px;
+  }
+  .forum .forava:empty:before,
+  .forava .fraava img {
+    filter: var(--filter1) !important;
+  }
+  .forava .fraava,
+  .forum .forava:empty:before,
+  .forava .fraava img {
+    position: relative !important;
+    width: 60px;
+    height: 60px;
+    border-radius: var(--bradius);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .fralicon {
+    top: initial !important;
+    right: initial !important;
+    bottom: 72px !important;
+    left: 13px !important;
+  }
+  .category:has(.frcbackground) .forum .forcont {
+    min-height: 300px;
+    position: relative;
+  }
+  .category:has(.frcbackground) .forum .forava {
+    background: var(--back1);
+  }
+  body#phpbb {
+    margin-left: 0;
+  }
+  header {
+    padding: 30px;
+  }
+  .himg {
+    background-image: var(--pngimg-3);
+  }
+  .nvside {
+    width: 100%;
+    padding-block: 12px;
+    height: auto;
+    flex-direction: row;
+    top: 26px;
+    line-height: 1em;
+    border-right: none;
+    border-bottom: var(--border1);
+  }
+  .nvside > div {
+    flex-direction: row;
+  }
+  .nvside a:before {
+    font-size: var(--fs-text);
+  }
+  .nvava {
+    height: 30px;
+    width: 30px;
+    display: none !important;
+  }
+  a#fa_notifications > span#notif_unread {
+    left: 170%;
+    top: 20px;
+  }
+  #notif_list,
+  .navigationpanel {
+    top: 65px;
+    left: 20px !important;
+  }
+  #page-footer {
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+  .nvtop {
+    padding: 6px;
+  }
+  mainbody {
+    padding: 20px;
+  }
+  #tablon {
+    margin-bottom:45px;
+    padding: var(--padd0);
+    justify-content: center;
+  }
+  .tlult {
+    max-height:initial; 
+    height:initial; 
+    overflow:hidden; 
+    padding:0px;
+    gap: 10px;
+  }
+  .tadm {
+    display: none;
+  }
+  .tlupst:nth-of-type(n+6) {
+    display:none;
+  }
+  .tlupst:last-of-type {
+    margin-bottom: 0;
+  }
+  .tlocupd,
+  .teve {
+    flex: 1 0 100% ;
+  }
+  .tupd {
+    max-height: 100px;
+    height: auto;
+  }
+  .statlinks,
+  .statsright,
+  .statlastu
+  {
+    flex: 1 0 100%;
+    flex-direction: row !important;
+  }
+  .statlastu > .stlstuava {
+    width: 90px;
+    height: 90px;
+  }
+  .stlstunam > strong {
+    font-size: var(--fs-bigger);
+  }
+  .statsright,
+  .statonline,
+  .stattwenty {
+    min-width: auto;
+  }
+  .statonline,
+  .stattwenty {
+    max-height: auto !important;
+  }
+  .pfcuser {
+    font-size: var(--fs-h3) !important;
+  }
+  #profile .profcont,
+  #car-hold {
+    min-height: 500px !important;
+  }
+  .pfcmain > div {
+    flex: 1 0 30% !important;
+  }
+  .tab {
+    padding: 50px !important;
+  }
+  .pfcmain {
+    padding: 20px !important;
+  }
+  #profile .profimg .pccontent {
+    display: none !important;
+  }
+  .pfcstats > .pccontent > div > strong > i {
+    font-size: var(--fs-bigger) !important;
+  }
+  .pfctrank {
+    font-size: var(--fs-h4) !important;
+  }
+  .pfchabs,
+  .pfcinve {
+    line-height: 128% !important;
+  }
+  fieldset dd {
+    margin-left: 0px !important;
+  }
+  fieldset dt {
+    width: 100% !important;
+  }
+  #cp-main.ucp-vigi table tbody tr td:nth-of-type(3),
+  #cp-main.ucp-vigi table.table1 thead th:nth-of-type(3) {
+    display: none !important;
+  }
+  .panel {padding: 20px;}
+  .mbsmcont {
+    padding: 20px !important;
+  }
+  .pbinfo {
+    position: static !important;
+  }
+  .postbody .content {
+    padding: 20px !important;
+  }
+  .postheader > a {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: var(--fs-big) !important;
+  }
+  .phicon img,
+  .phicon:empty:before,
+  .mhava img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .phmquote:before {
+    width: 30px !important;
+  }
+  .signature_div {
+    margin-bottom: 0px !important;
+  }
+  .sigcont .signature_div > br:first-of-type {
+    display: none !important;
+  }
+  .cattitle h2 {
+    margin-bottom: 10px !important;
+  }  
+  .switcheroo {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  #cp-main {
+    padding: 20px !important;
+  }
+  #cp-main .panel {
+    padding: 12px !important;
+  }
+  #cp-main h1 {
+    margin-bottom: 20px !important;
+  }
+  #cp-main .panel p {
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .nvtree:has(a:nth-child(n+2)) > a > span {
+    max-width: 70px;
+  }
+  .nvtree:has(a:nth-child(n+4)) > a > span {
+    max-width: 55px;
+  }
+  .mhava {
+    display: none;
+  }
+  .phmname,
+  .phsubject {
+    font-size: var(--fs-h5);
+  }
+  mainbody {
+    padding: 12px;
+  }
+  .tupd, .tdesc, .teve>*:not(:nth-of-type(1)) {display: none;}
+  .teve {
+    height: 7.7rem;
+  }
+  .teve .teeve {
+    height: 100%;
+  }
+  .tupd, .tlult, .tlocupd {
+    min-width:auto;
+    flex:1 0 100%;
+    line-height: 1em;
+  }
+  #profile .profcont,
+  #car-hold {
+    min-height: 560px;
+  }
+  .pfctraits {
+    flex-direction: column;
+  }
+  .pfctraits > div {
+    width: 100%;
+  }
+  a.usgp {
+    flex: 1 0 40%;
+    max-width: 100%;
+  }
+  blockquote,
+  dl.codebox dd,
+  dl.codebox.spoiler .spoiler_content.hidden {
+    padding: 12px;
+  }
+  dl.codebox.spoiler > dd {
+    padding: 0px;
+  }
+  dl.codebox dt {
+    padding: 6px;
+  }
   .nvnlinks,
   .nvupanel {
     gap: 10px;
@@ -1301,5 +1271,35 @@
   }
   .pfctrank > span {
     font-size: var(--fs-h5) !important;
+  }
+}
+
+@media (min-height: 1500px) {
+  .monomer-modal {
+    padding: 60px;
+    max-width: 600px !important;
+  }
+  .switcheroo {
+    left: 125px;
+    width: calc(100% - 125px);
+  }
+  .switcheroo__avatar img,
+  .switcheroo__squircle {
+    width: 120px;
+    height: 120px;
+  }
+  .switcheroo__squircle:before {
+    width: 124px;
+    height: 124px;
+  }
+  .switcheroo__delete {
+    width: 40px;
+    height: 40px;
+    top: -8px;
+    right: -8px;
+  }
+  .switcheroo__squircle:last-of-type {
+    width: 60px;
+    height: 60px;
   }
 }
