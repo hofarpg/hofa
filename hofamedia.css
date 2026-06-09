@@ -1153,7 +1153,7 @@
     position: static !important;
   }
   .postbody .content {
-    padding: 20px !important;
+    padding: var(--padd0);
   }
   .postheader > a {
     width: 35px !important;
