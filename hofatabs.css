@@ -1550,7 +1550,9 @@ div.reminder:before {
   gap: 12px;
   min-height: 280px;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  
+  --accent: var(--staff);
+  --taccent: rgb(from var(--staff) r g b / .6);
 }
 #tabcombatmn strong {
   color: var(--accent);
