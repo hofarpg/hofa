@@ -1147,36 +1147,36 @@
   }
   .panel {padding: 20px;}
   .mbsmcont {
-    padding: 20px !important;
+    padding: 20px;
   }
   .pbinfo {
-    position: static !important;
+    position: static;
   }
   .postbody .content {
     padding: var(--padd0);
   }
   .postheader > a {
-    width: 35px !important;
-    height: 35px !important;
-    font-size: var(--fs-big) !important;
+    width: 35px;
+    height: 35px;
+    font-size: var(--fs-big);
   }
   .phicon img,
   .phicon:empty:before,
   .mhava img {
-    width: 50px !important;
-    height: 50px !important;
+    width: 50px;
+    height: 50px;
   }
   .phmquote:before {
-    width: 30px !important;
+    width: 30px;
   }
   .signature_div {
-    margin-bottom: 0px !important;
+    margin-bottom: 0;
   }
   .sigcont .signature_div > br:first-of-type {
     display: none !important;
   }
   .cattitle h2 {
-    margin-bottom: 10px !important;
+    margin-bottom: 10px;
   }  
   .switcheroo {
     left: 0;
@@ -1186,20 +1186,24 @@
 
 @media (max-width: 550px) {
   #cp-main {
-    padding: 20px !important;
+    padding: 20px;
   }
   #cp-main .panel {
-    padding: 12px !important;
+    padding: 12px;
   }
   #cp-main h1 {
-    margin-bottom: 20px !important;
+    margin-bottom: 20px;
   }
   #cp-main .panel p {
-    margin-bottom: 12px !important;
+    margin-bottom: 12px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) {  
+  :root {
+    --bodypadd: 0;
+    --bodywidth: unset;
+  }
   .nvtree:has(a:nth-child(n+2)) > a > span {
     max-width: 70px;
   }
