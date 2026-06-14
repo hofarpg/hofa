@@ -1517,7 +1517,7 @@ div.reminder:before {
   min-height: auto;
 }
 /* COMBATE */
-#tabcombatpj {
+#tabcombatpj, #tabcombatmn {
   display: flex;
   margin: 0 auto;
   max-width: 570px;
@@ -1529,50 +1529,28 @@ div.reminder:before {
   min-height: 280px;
   justify-content: space-between;
   align-items: center;
+}
+#tabcombatpj {
   --accent: var(--personalclr, var(--group));
   --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
-#tabcombatpj strong {
-  color: var(--accent);
-}
-#tabcombatpj u,
-#tabcombatpj strike {
-  text-decoration-color: var(--accent);
-}
 #tabcombatmn {
-  display: flex;
-  margin: 0 auto;
-  max-width: 570px;
-  width: 100%;
-  background: var(--back1);
-  border: var(--border1);
-  padding: 20px;
-  gap: 12px;
-  min-height: 280px;
-  justify-content: space-between;
-  align-items: center;  
   --accent: var(--staff);
   --taccent: rgb(from var(--staff) r g b / .6);
 }
-#tabcombatmn strong {
-  color: var(--accent);
-}
-#tabcombatmn u,
-#tabcombatmn strike {
-  text-decoration-color: var(--accent);
-}
-#tabcombatpj > br,
-#tabcombatpj > div > br,
-#tabcombatmn > br,
-#tabcombatmn > div > br,
+
+:is(#tabcombatpj, #tabcombatmn) > br,
+:is(#tabcombatpj, #tabcombatmn) > div > br,
 .tabcomdata > br,
 .tbcmdtname > br,
 .tabcomstats > br,
 .tabcombless br,
 .tabcommlife br,
-.tabcombatfull > br {
+.tabcombatfull > br,
+.tabcotskills > br {
   display: none !important;
 }
+
 .tabcomainblock,
 .tabcotxtblock {
   height: calc(300px - 42px);
@@ -1591,21 +1569,15 @@ div.reminder:before {
   color: var(--accent);
   background: var(--back2);
   border: var(--border1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-shrink: 0;
+  display: grid;
+  place-content: center;
 }
 .tabcomdata > i:before {
   content: "\e4fa";
   font: 600 var(--fs-bigger) var(--font4);
 }
 .tbcmdtname {
-  align-items: flex-start;
   gap: 4px;
-  justify-content: center;
-  text-align: left;
 }
 .tbcmdtname > b {
   text-transform: uppercase;
@@ -1613,7 +1585,7 @@ div.reminder:before {
   color: var(--txt1);
   text-shadow: 1px 1px 1px var(--accent);
   line-height: 80%;
-  margin-top: 2px;
+  text-align: left;
 }
 .tbcmdtinfo {
   text-transform: lowercase;
@@ -1621,11 +1593,10 @@ div.reminder:before {
   font-style: italic;
   color: var(--txt4);
   line-height: 100%;
-  display: block;
 }
 .tbcmdtinfo:before {
   content: "";
-  width: 35px;
+  width: 30px;
   height: 2px;
   display: inline-block;
   background: var(--accent);
@@ -1703,54 +1674,39 @@ div.reminder:before {
 .tabcotskills {
   height: 100%;
   overflow: auto;
-  padding-right: 12px;
-  line-height: 126%;
+  padding: 0 12px;
+  line-height: 125%;
   border-left: var(--border2);
-  padding-left: 12px;
+  gap: 7px;
 }
-.tabcotskills h3.post-content {
+.tabcotskills h3 {
   display: inline-block;
   width: 100%;
   text-align: left;
   text-align-last: left;
-  font: 800 var(--fs-big) var(--font3) !important;
-  color: var(--txt1) !important;
-  margin-bottom: 12px !important;
+  font: 800 var(--fs-big) var(--font3);
+  color: var(--txt1);
+  margin: 0;
 }
-.tabcotskills h4.post-content {
+.tabcotskills h4 {
   text-align: left;
   text-align-last: left;
   text-transform: uppercase;
-  font: 800 var(--fs-body) var(--font2) !important;
-  text-decoration-color: var(--accent) !important;
+  font: 800 var(--fs-body) var(--font2);
   color: var(--txt3);
-  margin-top: 0px;
-  margin-bottom: 8px;
-}
-.tabcotskills h3.post-content:first-of-type {
-  margin-top: 0px !important;
+  margin: 0;
 }
 .tbctbl,
 .tbctesta {
   display: inline-block;
   width: 100%;
-  margin-bottom: 8px;
   font: 400 var(--fs-body) var(--font2);
   line-height: 120%;
 }
-#tabcombatmn .tbctbl:last-of-type {
-  margin-bottom: 0px;
+.tabcotskills h3:not(:first-of-type) {
+  margin-top: 5px;
 }
-.tabcotskills h3.post-content:not(:first-of-type) {
-  margin-top: 8px;
-}
-.tbctbl > strong,
-.tbctesta > strong {
-  text-transform: uppercase;
-  font-weight: 900;
-}
-.tbctbl:before {
-  content: "X";
+:is(.tbctbl,.tbctesta):before {
   float: left;
   font: 700 var(--fs-smaller) var(--font3);
   color: var(--back1);
@@ -1761,6 +1717,11 @@ div.reminder:before {
   margin-top: 1px;
   text-transform: uppercase;
   line-height: 100%;
+}
+.tbctbl > strong,
+.tbctesta > strong {
+  text-transform: uppercase;
+  font-weight: 900;
 }
 .tbctbl > i,
 .tbctesta > i {
