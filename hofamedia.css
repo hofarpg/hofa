@@ -272,7 +272,7 @@
     height: 50px !important;
   }
   .phmquote:before {
-    min-width: 90px !important;
+    min-width: 90px;
   }
   .dicethrow .diceres > strong {
     flex: 1 0 11% !important;
@@ -662,7 +662,7 @@
     max-width: 145px !important;
   }
   .phmquote:before {
-    min-width: 50px !important;
+    min-width: 50px;
   }
   .mbsmclinks {
     gap: 16px !important;
@@ -1205,6 +1205,7 @@
   .phsubject {
     font-size: var(--fs-h5);
   }
+  .phmquote:before {display: none;}
   mainbody {
     padding: 12px;
   }
