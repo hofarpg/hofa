@@ -314,10 +314,10 @@
     padding: 40px 60px !important;
   }
   .right-tabs {
-    right: 16px !important;
+    right: 16px;
   }
   .left-tabs {
-    left: 16px !important;
+    left: 16px;
   }
   .pfchabs,
   .pfcinve {
@@ -518,16 +518,10 @@
   }
   #profile .profcont,
   #car-hold {
-    min-height: 600px !important;
+    min-height: 600px;
   }
   .tab {
-    padding: 60px 80px !important;
-  }
-  .right-tabs {
-    right: 25px !important;
-  }
-  .left-tabs {
-    left: 25px !important;
+    padding: 60px 80px;
   }
   #profile {
     flex-direction: column;
@@ -619,38 +613,38 @@
     height: 100%;
   }
   .mbsmcont {
-    min-width: auto !important;
+    min-width: auto;
   }
   .postprofile {
-    display: none !important;
+    display: none;
   }
   .phmname,
   .phsubject {
-    font-size: var(--fs-h4) !important;
+    font-size: var(--fs-h4);
   }
   .pbsearchpost {
-    font-size: var(--fs-h5) !important;
+    font-size: var(--fs-h5);
   }
   .mhava {
-    display: none !important;
+    display: none;
   }
   .phicon img,
   .phicon:empty:before {
-    width: 50px !important;
-    height: 50px !important;
+    width: 50px;
+    height: 50px;
   }
   .postbody ul li:before {
-    top: 12px !important;
+    top: 12px;
   }
   .postheader > a {
-    width: 60px !important;
-    height: 60px !important;
+    width: 60px;
+    height: 60px;
   }
   #textarea_content .sceditor-group {
-    gap: 20px !important;
+    gap: 20px;
   }
   .sceditor-container .sceditor-toolbar {
-    gap: 12px 20px !important;
+    gap: 12px 20px;
   }
   .tnbuttons {
     gap: 20px !important;
@@ -742,45 +736,43 @@
     flex-direction: column;
   }
   .tab {
-    padding: 60px 80px !important;
+    padding: 60px 80px;
   }
   .right-tabs {
-    right: 25px !important;
+    right: 25px;
   }
   .left-tabs {
-    left: 25px !important;
+    left: 25px;
   }
   #profile .profimg .pccontent {
-    position: relative !important;
-    border-left: var(--border1) !important;
-    height: 130px !important;
-    width: 130px !important;
+    position: relative;
+    border-left: var(--border1);
+    height: 130px;
+    width: 130px;
   }
   #profile .profimg {
     background: var(--back1);
-    max-width: none !important;
-    border-left: none !important;
+    max-width: none;
+    border-left: 0;
     border-top: var(--border1);
-    height: 130px !important;
-    min-height: auto !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+    min-height: auto;
+    justify-content: space-between;
+    align-items: center;
   }
   .profimg .proflinks {
-    justify-content: space-around !important;
+    justify-content: space-around;
     align-items: center;
   }
   .profimg .proflinks a {
-    font-size: var(--fs-h4) !important;
-    background: transparent !important;
-    border: none !important;
-    width: auto !important;
-    height: auto !important;
+    font-size: var(--fs-h4);
+    background: transparent;
+    border: 0;
+    width: auto;
+    height: auto;
   }
   .profimg .proflinks a:hover {
-    color: var(--group) !important;
-    background: transparent !important;
-    border: none !important;
+    color: var(--group);
+    background: transparent;
   }
   #glenjams-05 {
     display: none;
@@ -808,24 +800,24 @@
 
 @media (max-width: 700px) {
   #profile .profcont {
-    min-width: auto !important;
+    min-width: auto;
   }
   .tab {
-    padding: 40px 60px !important;
+    padding: 40px 60px;
   }
   .right-tabs {
-    right: -10px !important;
+    right: -10px;
   }
   .left-tabs {
-    left: -10px !important;
+    left: -10px;
   }
   .left-tabs,
   .right-tabs {
-    width: 25px !important;
-    height: 25px !important;
+    width: 25px;
+    height: 25px;
   }
   .profimg .proflinks a {
-    font-size: var(--fs-h5) !important;
+    font-size: var(--fs-h5);
   }
   .pfchabs,
   .pfcinve {
@@ -900,32 +892,32 @@
     height: 100%;
   }
   .mbsmcont {
-    min-width: auto !important;
+    min-width: auto;
   }
   .mbsimgava {
-    display: none !important;
+    display: none;
   }
   .mbsmcdata {
-    max-height: none !important;
+    max-height: none;
   }
   .phmname {
-    font-size: var(--fs-h3) !important;
+    font-size: var(--fs-h3);
   }
   .pbsearchpost {
-    font-size: var(--fs-h4) !important;
+    font-size: var(--fs-h4);
   }
   .phmain {
-    gap: 12px !important;
+    gap: 12px;
   }
   .phicon img,
   .phicon:empty:before,
   .phicon img {
-    width: 70px !important;
-    height: 70px !important;
+    width: 70px;
+    height: 70px;
   }
   .postheader,
   .messheader {
-    padding: 20px !important;
+    padding: 20px;
   }
 }
 
@@ -938,10 +930,10 @@
   }
   .phmname,
   .phsubject {
-    font-size: var(--fs-h4) !important;
+    font-size: var(--fs-h4);
   }
   .pbsearchpost {
-    font-size: var(--fs-h5) !important;
+    font-size: var(--fs-h5);
   }
   #cp-main.ucp-drafts table.table1 thead th:nth-of-type(1),
   #cp-main.ucp-drafts table.table1 tbody tr td:nth-of-type(1),
@@ -970,7 +962,7 @@
     justify-content: end;
   }
   .forum .forava:before {
-    display: none !important;
+    display: none;
   }
   .forava .fraava {
     outline: var(--baborder);
@@ -1107,11 +1099,7 @@
     max-height: auto !important;
   }
   .pfcuser {
-    font-size: var(--fs-h3) !important;
-  }
-  #profile .profcont,
-  #car-hold {
-    min-height: 500px !important;
+    font-size: var(--fs-h3);
   }
   .pfcmain > div {
     flex: 1 0 30% !important;
@@ -1232,9 +1220,11 @@
     flex:1 0 100%;
     line-height: 1em;
   }
-  #profile .profcont,
-  #car-hold {
-    min-height: 560px;
+  .right-tabs {
+    right: 5px;
+  }
+  .left-tabs {
+    left: 5px;
   }
   .pfctraits {
     flex-direction: column;
@@ -1262,19 +1252,19 @@
     gap: 10px;
   }
   .nvava {
-    display: none !important;
+    display: none;
   }
   .tab {
-    padding: 40px !important;
+    padding: 40px;
   }
 }
 
 @media (max-height: 400px) {
   .tab {
-    padding: 30px !important;
+    padding: 30px;
   }
   .pfctrank > span {
-    font-size: var(--fs-h5) !important;
+    font-size: var(--fs-h5);
   }
 }
 
