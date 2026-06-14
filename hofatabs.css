@@ -1581,6 +1581,8 @@ div.reminder:before {
   align-items: stretch;
   flex: 1;
   max-width: calc(50% - 6px);
+  display: flex;
+  flex-direction: column;
 }
 .tabcomdata > i {
   width: 40px;
@@ -1899,9 +1901,10 @@ div.reminder:before {
 .contentgroup-zeus #tabcombatpj .tabcomdata > i:before {content: "\f0e7";}
 .contentgroup-hefesto #tabcombatpj .tabcomdata > i:before {content: "\f7e4";}
 .contentgroup-ares #tabcombatpj .tabcomdata > i:before {content: "\f71d";}
-.contentgroup-monstruox #tabcombatmn .tabcomdata > i:before {content: "\f56b";}
-.contentgroup-monstruoxx #tabcombatmn .tabcomdata > i:before {content: "\f702";}
-.contentgroup-monstruoxxx #tabcombatmn .tabcomdata > i:before {content: "\f6d5";}
+
+.monstruox .tabcomdata > i:before {content: "\f56b";}
+.monstruoxx .tabcomdata > i:before {content: "\f702";}
+.monstruoxxx .tabcomdata > i:before {content: "\f6d5";}
 
 /* FIRMA(S) */
 .previewfirma {
