@@ -268,17 +268,16 @@
   margin: 0;
   text-transform: uppercase;
 }
-div.blockquote {
+.blockquote {
   border-inline: var(--tborder);
   border-radius: var(--bradius);
   display: inline-block;
   padding: 12px 20px;
   margin-inline: 12px;
+  &.center{text-align: center;}  
+  &:has(> ul) > br {display: none !important;}
 }
-div.blockquote:has(> ul) > br {
-  display: none !important;
-}
-div.reminder {
+.reminder {
   width: 100%;
   display: inline-block;
   border: var(--aborder);
@@ -287,11 +286,11 @@ div.reminder {
   padding: 20px;
   font: 700 100% / var(--fs-text) var(--font2);
   text-transform: uppercase;
-}
-div.reminder:before {
-  content: "Aviso: ";
-  color: var(--back1);
-  font-weight: 900;
+  &:before {
+    content: "Aviso: ";
+    color: var(--back1);
+    font-weight: 900;
+  }
 }
 .admintab {
   max-width: 570px;
