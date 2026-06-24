@@ -1,6 +1,6 @@
 /*MEDIA*/
 @media (min-width: 2400px) {
-  :root {
+  :root, * {
     --bradius: 10px;
     --fs-bigger: 1.47rem;
     --fs-big: 1.32rem;
@@ -27,7 +27,7 @@
   }
 }
 @media (min-width: 2100px) {
-  :root {
+  :root, * {
     --bradius: 10px;
     --fs-bigger: 1.37rem;
     --fs-big: 1.22rem;
@@ -283,7 +283,7 @@
   }
 }
 @media (max-width: 1100px) {
-  :root {
+  :root, * {
     --sidenav-width: 5rem;
   }
   .nvside {
@@ -922,7 +922,7 @@
 }
 
 @media (max-width: 600px) {  
-  :root { 
+  :root, * { 
     --nav-height: 60px;
   }
   .nvtree:has(a:nth-child(n+3)) > a > span {
@@ -1188,7 +1188,7 @@
 }
 
 @media (max-width: 500px) {  
-  :root {
+  :root, * {
     --bodypadd: 0;
     --bodywidth: unset;
   }
