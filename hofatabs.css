@@ -715,13 +715,11 @@
   text-underline-offset: 2px;
   text-decoration-color: var(--taccent);
 }
-.admintab details > summary::marker,
-#guidebook details > summary::marker {
+:is(.admintab, #guidebook) > summary::marker {
   display: none;
   content: "";
 }
-.admintab details > summary > strong,
-#guidebook details > summary > strong {
+:is(.admintab, #guidebook) details > summary > strong {
   border: var(--border1);
   border-radius: var(--bradius);
   padding: 0px 6px;
@@ -729,19 +727,16 @@
   cursor: var(--crs2);
   color: var(--accent);
 }
-.admintab details[open=""] span,
-#guidebook details[open=""] span {
+:is(.admintab, #guidebook) details[open] > span {
   margin-top: 12px !important;
   display: block;
   margin-left: 12px;
 }
-.admintab details.lvl summary,
-#guidebook details.lvl summary {
+:is(.admintab, #guidebook) details.lvl summary{
   cursor: var(--crs2);
 }
-.admintab details.lvl[open=""] span,
-#guidebook details.lvl[open=""] span {
-  margin-top: 0px !important;
+:is(.admintab, #guidebook) details.lvl[open] > span {
+  margin-top: 0;
 }
 .admintab .gdcriat {
   flex: 1 0 40%;
