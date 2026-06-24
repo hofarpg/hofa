@@ -715,7 +715,7 @@
   text-underline-offset: 2px;
   text-decoration-color: var(--taccent);
 }
-:is(.admintab, #guidebook) > summary::marker {
+:is(.admintab, #guidebook) summary::marker {
   display: none;
   content: "";
 }
