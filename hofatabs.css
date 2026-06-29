@@ -2093,123 +2093,72 @@
   object-fit: cover;
   object-position: center;
 }
-.tabutrama#libre .tabudatos:after,
-.tabutrama#Libre .tabudatos:after,
-.tabutrama#LIBRE .tabudatos:after,
-.tabupj#libre .tabudatos:after,
-.tabupj#Libre .tabudatos:after,
-.tabupj#LIBRE .tabudatos:after {
+:is(.tabutrama,.tabupj)#libre .tabudatos:after,
+:is(.tabutrama,.tabupj)#Libre .tabudatos:after,
+:is(.tabutrama,.tabupj)#LIBRE .tabudatos:after {
   content: "Libre";
 }
-.tabutrama#reservada .tabudatos:after,
-.tabutrama#Reservada .tabudatos:after,
-.tabutrama#RESERVADA .tabudatos:after,
-.tabupj#reservada .tabudatos:after,
-.tabupj#Reservada .tabudatos:after,
-.tabupj#RESERVADA .tabudatos:after {
+:is(.tabutrama,.tabupj)#reservada .tabudatos:after,
+:is(.tabutrama,.tabupj)#Reservada .tabudatos:after,
+:is(.tabutrama,.tabupj)#RESERVADA .tabudatos:after {
   content: "Reservada";
 }
-.tabutrama#reservado .tabudatos:after,
-.tabutrama#Reservado .tabudatos:after,
-.tabutrama#RESERVADO .tabudatos:after,
-.tabupj#reservado .tabudatos:after,
-.tabupj#Reservado .tabudatos:after,
-.tabupj#RESERVADO .tabudatos:after {
+:is(.tabutrama,.tabupj)#reservado .tabudatos:after,
+:is(.tabutrama,.tabupj)#Reservado .tabudatos:after,
+:is(.tabutrama,.tabupj)#RESERVADO .tabudatos:after {
   content: "Reservado";
 }
-.tabutrama#ocupada .tabudatos:after,
-.tabutrama#Ocupada .tabudatos:after,
-.tabutrama#OCUPADA .tabudatos:after,
-.tabupj#ocupada .tabudatos:after,
-.tabupj#Ocupada .tabudatos:after,
-.tabupj#OCUPADA .tabudatos:after {
+:is(.tabutrama,.tabupj)#ocupada .tabudatos:after,
+:is(.tabutrama,.tabupj)#Ocupada .tabudatos:after,
+:is(.tabutrama,.tabupj)#OCUPADA .tabudatos:after, {
   content: "Ocupada";
 }
-.tabutrama#ocupado .tabudatos:after,
-.tabutrama#Ocupado .tabudatos:after,
-.tabutrama#OCUPADO .tabudatos:after,
-.tabupj#ocupado .tabudatos:after,
-.tabupj#Ocupado .tabudatos:after,
-.tabupj#OCUPADO .tabudatos:after {
+:is(.tabutrama,.tabupj)#ocupado .tabudatos:after,
+:is(.tabutrama,.tabupj)#Ocupado .tabudatos:after,
+:is(.tabutrama,.tabupj)#OCUPADO .tabudatos:after {
   content: "Ocupado";
 }
-.tabutrama#ocupada,
-.tabutrama#reservada,
-.tabutrama#Ocupada,
-.tabutrama#Reservada,
-.tabutrama#OCUPADA,
-.tabutrama#RESERVADA,
-.tabutrama#ocupado,
-.tabutrama#reservado,
-.tabutrama#Ocupado,
-.tabutrama#Reservado,
-.tabutrama#OCUPADO,
-.tabutrama#RESERVADO,
-.tabupj#ocupada,
-.tabupj#reservada,
-.tabupj#Ocupada,
-.tabupj#Reservada,
-.tabupj#OCUPADA,
-.tabupj#RESERVADA,
-.tabupj#ocupado,
-.tabupj#reservado,
-.tabupj#Ocupado,
-.tabupj#Reservado,
-.tabupj#OCUPADO,
-.tabupj#RESERVADO {
+:is(.tabutrama,.tabupj)#ocupada,
+:is(.tabutrama,.tabupj)#reservada,
+:is(.tabutrama,.tabupj)#Ocupada,
+:is(.tabutrama,.tabupj)#Reservada,
+:is(.tabutrama,.tabupj)#OCUPADA,
+:is(.tabutrama,.tabupj)#RESERVADA,
+:is(.tabutrama,.tabupj)#ocupado,
+:is(.tabutrama,.tabupj)#reservado,
+:is(.tabutrama,.tabupj)#Ocupado,
+:is(.tabutrama,.tabupj)#Reservado,
+:is(.tabutrama,.tabupj)#OCUPADO,
+:is(.tabutrama,.tabupj)#RESERVADO {
   border-radius: var(--bradius);
 }
-.tabutrama#ocupada .tabudatos,
-.tabutrama#reservada .tabudatos,
-.tabutrama#Ocupada .tabudatos,
-.tabutrama#Reservada .tabudatos,
-.tabutrama#OCUPADA .tabudatos,
-.tabutrama#RESERVADA .tabudatos,
-.tabutrama#ocupado .tabudatos,
-.tabutrama#reservado .tabudatos,
-.tabutrama#Ocupado .tabudatos,
-.tabutrama#Reservado .tabudatos,
-.tabutrama#OCUPADO .tabudatos,
-.tabutrama#RESERVADO .tabudatos,
-.tabupj#ocupada .tabudatos,
-.tabupj#reservada .tabudatos,
-.tabupj#Ocupada .tabudatos,
-.tabupj#Reservada .tabudatos,
-.tabupj#OCUPADA .tabudatos,
-.tabupj#RESERVADA .tabudatos,
-.tabupj#ocupado .tabudatos,
-.tabupj#reservado .tabudatos,
-.tabupj#Ocupado .tabudatos,
-.tabupj#Reservado .tabudatos,
-.tabupj#OCUPADO .tabudatos,
-.tabupj#RESERVADO .tabudatos {
+:is(.tabutrama,.tabupj)#ocupada .tabudatos,
+:is(.tabutrama,.tabupj)#reservada .tabudatos,
+:is(.tabutrama,.tabupj)#Ocupada .tabudatos,
+:is(.tabutrama,.tabupj)#Reservada .tabudatos,
+:is(.tabutrama,.tabupj)#OCUPADA .tabudatos,
+:is(.tabutrama,.tabupj)#RESERVADA .tabudatos,
+:is(.tabutrama,.tabupj)#ocupado .tabudatos,
+:is(.tabutrama,.tabupj)#reservado .tabudatos,
+:is(.tabutrama,.tabupj)#Ocupado .tabudatos,
+:is(.tabutrama,.tabupj)#Reservado .tabudatos,
+:is(.tabutrama,.tabupj)#OCUPADO .tabudatos,
+:is(.tabutrama,.tabupj)#RESERVADO .tabudatos {
   border-bottom: none;
   border-radius: var(--bradius);
 }
-.tabutrama#ocupada .tabucont,
-.tabutrama#reservada .tabucont,
-.tabutrama#Ocupada .tabucont,
-.tabutrama#Reservada .tabucont,
-.tabutrama#OCUPADA .tabucont,
-.tabutrama#RESERVADA .tabucont,
-.tabutrama#ocupado .tabucont,
-.tabutrama#reservado .tabucont,
-.tabutrama#Ocupado .tabucont,
-.tabutrama#Reservado .tabucont,
-.tabutrama#OCUPADO .tabucont,
-.tabutrama#RESERVADO .tabucont,
-.tabupj#ocupada .tabucont,
-.tabupj#reservada .tabucont,
-.tabupj#Ocupada .tabucont,
-.tabupj#Reservada .tabucont,
-.tabupj#OCUPADA .tabucont,
-.tabupj#RESERVADA .tabucont,
-.tabupj#ocupado .tabucont,
-.tabupj#reservado .tabucont,
-.tabupj#Ocupado .tabucont,
-.tabupj#Reservado .tabucont,
-.tabupj#OCUPADO .tabucont,
-.tabupj#RESERVADO .tabucont,
+:is(.tabutrama,.tabupj)#ocupada .tabucont,
+:is(.tabutrama,.tabupj)#reservada .tabucont,
+:is(.tabutrama,.tabupj)#Ocupada .tabucont,
+:is(.tabutrama,.tabupj)#Reservada .tabucont,
+:is(.tabutrama,.tabupj)#OCUPADA .tabucont,
+:is(.tabutrama,.tabupj)#RESERVADA .tabucont,
+:is(.tabutrama,.tabupj)#ocupado .tabucont,
+:is(.tabutrama,.tabupj)#reservado .tabucont,
+:is(.tabutrama,.tabupj)#Ocupado .tabucont,
+:is(.tabutrama,.tabupj)#Reservado .tabucont,
+:is(.tabutrama,.tabupj)#OCUPADO .tabucont,
+:is(.tabutrama,.tabupj)#RESERVADO .tabucont,
 .tabupj#ocupada .tabupjimg,
 .tabupj#reservada .tabupjimg,
 .tabupj#Ocupada .tabupjimg,
@@ -2224,83 +2173,47 @@
 .tabupj#RESERVADO .tabupjimg {
   display: none;
 }
-.tabutrama.clicked#ocupada,
-.tabutrama.clicked#reservada,
-.tabutrama.clicked#Ocupada,
-.tabutrama.clicked#Reservada,
-.tabutrama.clicked#OCUPADA,
-.tabutrama.clicked#RESERVADA,
-.tabutrama.clicked#ocupado,
-.tabutrama.clicked#reservado,
-.tabutrama.clicked#Ocupado,
-.tabutrama.clicked#Reservado,
-.tabutrama.clicked#OCUPADO,
-.tabutrama.clicked#RESERVADO,
-.tabupj.clicked#ocupada,
-.tabupj.clicked#reservada,
-.tabupj.clicked#Ocupada,
-.tabupj.clicked#Reservada,
-.tabupj.clicked#OCUPADA,
-.tabupj.clicked#RESERVADA,
-.tabupj.clicked#ocupado,
-.tabupj.clicked#reservado,
-.tabupj.clicked#Ocupado,
-.tabupj.clicked#Reservado,
-.tabupj.clicked#OCUPADO,
-.tabupj.clicked#RESERVADO {
+:is(.tabutrama,.tabupj).clicked#ocupada,
+:is(.tabutrama,.tabupj).clicked#reservada,
+:is(.tabutrama,.tabupj).clicked#Ocupada,
+:is(.tabutrama,.tabupj).clicked#Reservada,
+:is(.tabutrama,.tabupj).clicked#OCUPADA,
+:is(.tabutrama,.tabupj).clicked#RESERVADA,
+:is(.tabutrama,.tabupj).clicked#ocupado,
+:is(.tabutrama,.tabupj).clicked#reservado,
+:is(.tabutrama,.tabupj).clicked#Ocupado,
+:is(.tabutrama,.tabupj).clicked#Reservado,
+:is(.tabutrama,.tabupj).clicked#OCUPADO,
+:is(.tabutrama,.tabupj).clicked#RESERVADO {
   border-radius: 0 !important;
 }
-.tabutrama.clicked#ocupada .tabudatos,
-.tabutrama.clicked#reservada .tabudatos,
-.tabutrama.clicked#Ocupada .tabudatos,
-.tabutrama.clicked#Reservada .tabudatos,
-.tabutrama.clicked#OCUPADA .tabudatos,
-.tabutrama.clicked#RESERVADA .tabudatos,
-.tabutrama.clicked#ocupado .tabudatos,
-.tabutrama.clicked#reservado .tabudatos,
-.tabutrama.clicked#Ocupado .tabudatos,
-.tabutrama.clicked#Reservado .tabudatos,
-.tabutrama.clicked#OCUPADO .tabudatos,
-.tabutrama.clicked#RESERVADO .tabudatos,
-.tabupj.clicked#ocupada .tabudatos,
-.tabupj.clicked#reservada .tabudatos,
-.tabupj.clicked#Ocupada .tabudatos,
-.tabupj.clicked#Reservada .tabudatos,
-.tabupj.clicked#OCUPADA .tabudatos,
-.tabupj.clicked#RESERVADA .tabudatos,
-.tabupj.clicked#ocupado .tabudatos,
-.tabupj.clicked#reservado .tabudatos,
-.tabupj.clicked#Ocupado .tabudatos,
-.tabupj.clicked#Reservado .tabudatos,
-.tabupj.clicked#OCUPADO .tabudatos,
-.tabupj.clicked#RESERVADO .tabudatos {
+:is(.tabutrama,.tabupj).clicked#ocupada .tabudatos,
+:is(.tabutrama,.tabupj).clicked#reservada .tabudatos,
+:is(.tabutrama,.tabupj).clicked#Ocupada .tabudatos,
+:is(.tabutrama,.tabupj).clicked#Reservada .tabudatos,
+:is(.tabutrama,.tabupj).clicked#OCUPADA .tabudatos,
+:is(.tabutrama,.tabupj).clicked#RESERVADA .tabudatos,
+:is(.tabutrama,.tabupj).clicked#ocupado .tabudatos,
+:is(.tabutrama,.tabupj).clicked#reservado .tabudatos,
+:is(.tabutrama,.tabupj).clicked#Ocupado .tabudatos,
+:is(.tabutrama,.tabupj).clicked#Reservado .tabudatos,
+:is(.tabutrama,.tabupj).clicked#OCUPADO .tabudatos,
+:is(.tabutrama,.tabupj).clicked#RESERVADO .tabudatos {
   border-radius: 0 !important;
   border-bottom: var(--border1);
 }
-.tabutrama.clicked#ocupada .tabucont,
-.tabutrama.clicked#reservada .tabucont,
-.tabutrama.clicked#Ocupada .tabucont,
-.tabutrama.clicked#Reservada .tabucont,
-.tabutrama.clicked#OCUPADA .tabucont,
-.tabutrama.clicked#RESERVADA .tabucont,
-.tabutrama.clicked#ocupado .tabucont,
-.tabutrama.clicked#reservado .tabucont,
-.tabutrama.clicked#Ocupado .tabucont,
-.tabutrama.clicked#Reservado .tabucont,
-.tabutrama.clicked#OCUPADO .tabucont,
-.tabutrama.clicked#RESERVADO .tabucont,
-.tabupj.clicked#ocupada .tabucont,
-.tabupj.clicked#reservada .tabucont,
-.tabupj.clicked#Ocupada .tabucont,
-.tabupj.clicked#Reservada .tabucont,
-.tabupj.clicked#OCUPADA .tabucont,
-.tabupj.clicked#RESERVADA .tabucont,
-.tabupj.clicked#ocupado .tabucont,
-.tabupj.clicked#reservado .tabucont,
-.tabupj.clicked#Ocupado .tabucont,
-.tabupj.clicked#Reservado .tabucont,
-.tabupj.clicked#OCUPADO .tabucont,
-.tabupj.clicked#RESERVADO .tabucont {
+:is(.tabutrama,.tabupj).clicked#ocupada .tabucont,
+:is(.tabutrama,.tabupj).clicked#reservada .tabucont,
+:is(.tabutrama,.tabupj).clicked#Ocupada .tabucont,
+:is(.tabutrama,.tabupj).clicked#Reservada .tabucont,
+:is(.tabutrama,.tabupj).clicked#OCUPADA .tabucont,
+:is(.tabutrama,.tabupj).clicked#RESERVADA .tabucont,
+:is(.tabutrama,.tabupj).clicked#ocupado .tabucont,
+:is(.tabutrama,.tabupj).clicked#reservado .tabucont,
+:is(.tabutrama,.tabupj).clicked#Ocupado .tabucont,
+:is(.tabutrama,.tabupj).clicked#Reservado .tabucont,
+:is(.tabutrama,.tabupj)clicked#OCUPADO .tabucont,
+:is(.tabutrama,.tabupj).clicked#RESERVADO .tabucont {
   display: initial;
 }
 .tabupj.clicked#ocupada .tabupjimg,
@@ -2321,6 +2234,16 @@
   background: transparent !important;
   border: none !important;
 }
+/* TABLILLAS DE PERSONAJE */
+.tabaul,
+.tabcrono,
+.tabrelas,
+.tabhojaexp,
+{
+  --group: var(--personalclr, inherit);
+  --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+}
 /* BAÚL */
 .tabaul {
   background: var(--tback1);
@@ -2328,8 +2251,6 @@
   display: flex;
   width: 100%;
   margin: 0 auto;
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabaul > br,
 .tabaul .tbauimg > br,
@@ -2527,8 +2448,6 @@
   margin: 0 auto;
   width: 100%;
   max-width: 570px;
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabcrono > br,
 .tabcrono .tabcronocont > br,
@@ -2682,8 +2601,6 @@
   margin: 0 auto;
   width: 100%;
   max-width: 570px;  
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabrelas > br,
 .tabrelas .tabrelascont > br,
@@ -3005,8 +2922,6 @@
   margin: 0 auto;
   width: 100%;
   max-width: 570px;
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabhojaexp > br,
 .tabhojaexp .tabhojexpcont > br,
