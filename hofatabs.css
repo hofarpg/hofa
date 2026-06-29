@@ -2093,147 +2093,45 @@
   object-fit: cover;
   object-position: center;
 }
-:is(.tabutrama,.tabupj)#libre .tabudatos:after,
-:is(.tabutrama,.tabupj)#Libre .tabudatos:after,
-:is(.tabutrama,.tabupj)#LIBRE .tabudatos:after {
+:is(.tabutrama,.tabupj)[id*="libre" i] .tabudatos:after {
   content: "Libre";
 }
-:is(.tabutrama,.tabupj)#reservada .tabudatos:after,
-:is(.tabutrama,.tabupj)#Reservada .tabudatos:after,
-:is(.tabutrama,.tabupj)#RESERVADA .tabudatos:after {
+:is(.tabutrama,.tabupj)[id*="reservada" i] .tabudatos:after {
   content: "Reservada";
 }
-:is(.tabutrama,.tabupj)#reservado .tabudatos:after,
-:is(.tabutrama,.tabupj)#Reservado .tabudatos:after,
-:is(.tabutrama,.tabupj)#RESERVADO .tabudatos:after {
+:is(.tabutrama,.tabupj)[id*="reservado" i] .tabudatos:after {
   content: "Reservado";
 }
-:is(.tabutrama,.tabupj)#ocupada .tabudatos:after,
-:is(.tabutrama,.tabupj)#Ocupada .tabudatos:after,
-:is(.tabutrama,.tabupj)#OCUPADA .tabudatos:after, {
+:is(.tabutrama,.tabupj)[id*="ocupada" i] .tabudatos:after {
   content: "Ocupada";
 }
-:is(.tabutrama,.tabupj)#ocupado .tabudatos:after,
-:is(.tabutrama,.tabupj)#Ocupado .tabudatos:after,
-:is(.tabutrama,.tabupj)#OCUPADO .tabudatos:after {
+:is(.tabutrama,.tabupj)[id*="ocupado" i] .tabudatos:after {
   content: "Ocupado";
 }
-:is(.tabutrama,.tabupj)#ocupada,
-:is(.tabutrama,.tabupj)#reservada,
-:is(.tabutrama,.tabupj)#Ocupada,
-:is(.tabutrama,.tabupj)#Reservada,
-:is(.tabutrama,.tabupj)#OCUPADA,
-:is(.tabutrama,.tabupj)#RESERVADA,
-:is(.tabutrama,.tabupj)#ocupado,
-:is(.tabutrama,.tabupj)#reservado,
-:is(.tabutrama,.tabupj)#Ocupado,
-:is(.tabutrama,.tabupj)#Reservado,
-:is(.tabutrama,.tabupj)#OCUPADO,
-:is(.tabutrama,.tabupj)#RESERVADO {
+:is(.tabutrama,.tabupj):is([id*="ocupad" i],[id*="reservad" i]) {
   border-radius: var(--bradius);
-}
-:is(.tabutrama,.tabupj)#ocupada .tabudatos,
-:is(.tabutrama,.tabupj)#reservada .tabudatos,
-:is(.tabutrama,.tabupj)#Ocupada .tabudatos,
-:is(.tabutrama,.tabupj)#Reservada .tabudatos,
-:is(.tabutrama,.tabupj)#OCUPADA .tabudatos,
-:is(.tabutrama,.tabupj)#RESERVADA .tabudatos,
-:is(.tabutrama,.tabupj)#ocupado .tabudatos,
-:is(.tabutrama,.tabupj)#reservado .tabudatos,
-:is(.tabutrama,.tabupj)#Ocupado .tabudatos,
-:is(.tabutrama,.tabupj)#Reservado .tabudatos,
-:is(.tabutrama,.tabupj)#OCUPADO .tabudatos,
-:is(.tabutrama,.tabupj)#RESERVADO .tabudatos {
-  border-bottom: none;
-  border-radius: var(--bradius);
-}
-:is(.tabutrama,.tabupj)#ocupada .tabucont,
-:is(.tabutrama,.tabupj)#reservada .tabucont,
-:is(.tabutrama,.tabupj)#Ocupada .tabucont,
-:is(.tabutrama,.tabupj)#Reservada .tabucont,
-:is(.tabutrama,.tabupj)#OCUPADA .tabucont,
-:is(.tabutrama,.tabupj)#RESERVADA .tabucont,
-:is(.tabutrama,.tabupj)#ocupado .tabucont,
-:is(.tabutrama,.tabupj)#reservado .tabucont,
-:is(.tabutrama,.tabupj)#Ocupado .tabucont,
-:is(.tabutrama,.tabupj)#Reservado .tabucont,
-:is(.tabutrama,.tabupj)#OCUPADO .tabucont,
-:is(.tabutrama,.tabupj)#RESERVADO .tabucont,
-.tabupj#ocupada .tabupjimg,
-.tabupj#reservada .tabupjimg,
-.tabupj#Ocupada .tabupjimg,
-.tabupj#Reservada .tabupjimg,
-.tabupj#OCUPADA .tabupjimg,
-.tabupj#RESERVADA .tabupjimg,
-.tabupj#ocupado .tabupjimg,
-.tabupj#reservado .tabupjimg,
-.tabupj#Ocupado .tabupjimg,
-.tabupj#Reservado .tabupjimg,
-.tabupj#OCUPADO .tabupjimg,
-.tabupj#RESERVADO .tabupjimg {
-  display: none;
-}
-:is(.tabutrama,.tabupj).clicked#ocupada,
-:is(.tabutrama,.tabupj).clicked#reservada,
-:is(.tabutrama,.tabupj).clicked#Ocupada,
-:is(.tabutrama,.tabupj).clicked#Reservada,
-:is(.tabutrama,.tabupj).clicked#OCUPADA,
-:is(.tabutrama,.tabupj).clicked#RESERVADA,
-:is(.tabutrama,.tabupj).clicked#ocupado,
-:is(.tabutrama,.tabupj).clicked#reservado,
-:is(.tabutrama,.tabupj).clicked#Ocupado,
-:is(.tabutrama,.tabupj).clicked#Reservado,
-:is(.tabutrama,.tabupj).clicked#OCUPADO,
-:is(.tabutrama,.tabupj).clicked#RESERVADO {
-  border-radius: 0 !important;
-}
-:is(.tabutrama,.tabupj).clicked#ocupada .tabudatos,
-:is(.tabutrama,.tabupj).clicked#reservada .tabudatos,
-:is(.tabutrama,.tabupj).clicked#Ocupada .tabudatos,
-:is(.tabutrama,.tabupj).clicked#Reservada .tabudatos,
-:is(.tabutrama,.tabupj).clicked#OCUPADA .tabudatos,
-:is(.tabutrama,.tabupj).clicked#RESERVADA .tabudatos,
-:is(.tabutrama,.tabupj).clicked#ocupado .tabudatos,
-:is(.tabutrama,.tabupj).clicked#reservado .tabudatos,
-:is(.tabutrama,.tabupj).clicked#Ocupado .tabudatos,
-:is(.tabutrama,.tabupj).clicked#Reservado .tabudatos,
-:is(.tabutrama,.tabupj).clicked#OCUPADO .tabudatos,
-:is(.tabutrama,.tabupj).clicked#RESERVADO .tabudatos {
-  border-radius: 0 !important;
-  border-bottom: var(--border1);
-}
-:is(.tabutrama,.tabupj).clicked#ocupada .tabucont,
-:is(.tabutrama,.tabupj).clicked#reservada .tabucont,
-:is(.tabutrama,.tabupj).clicked#Ocupada .tabucont,
-:is(.tabutrama,.tabupj).clicked#Reservada .tabucont,
-:is(.tabutrama,.tabupj).clicked#OCUPADA .tabucont,
-:is(.tabutrama,.tabupj).clicked#RESERVADA .tabucont,
-:is(.tabutrama,.tabupj).clicked#ocupado .tabucont,
-:is(.tabutrama,.tabupj).clicked#reservado .tabucont,
-:is(.tabutrama,.tabupj).clicked#Ocupado .tabucont,
-:is(.tabutrama,.tabupj).clicked#Reservado .tabucont,
-:is(.tabutrama,.tabupj)clicked#OCUPADO .tabucont,
-:is(.tabutrama,.tabupj).clicked#RESERVADO .tabucont {
-  display: initial;
-}
-.tabupj.clicked#ocupada .tabupjimg,
-.tabupj.clicked#reservada .tabupjimg,
-.tabupj.clicked#Ocupada .tabupjimg,
-.tabupj.clicked#Reservada .tabupjimg,
-.tabupj.clicked#OCUPADA .tabupjimg,
-.tabupj.clicked#RESERVADA .tabupjimg,
-.tabupj.clicked#ocupado .tabupjimg,
-.tabupj.clicked#reservado .tabupjimg,
-.tabupj.clicked#Ocupado .tabupjimg,
-.tabupj.clicked#Reservado .tabupjimg,
-.tabupj.clicked#OCUPADO .tabupjimg,
-.tabupj.clicked#RESERVADO .tabupjimg {
-  display: flex;
+  
+  .tabudatos {
+    border-bottom: none;
+    border-radius: var(--bradius);
+  }
+  :is(.tabucont, .tabupjimg) {display: none;}
+  &.clicked {
+    border-radius: 0 !important;
+    
+    .tabudatos {
+      border-radius: 0 !important;
+      border-bottom: var(--border1);
+    }
+    .tabucont {display: initial;}
+    .tabupjimg {display: flex;}
+  }
 }
 .tabusq .tabusqres {
   background: transparent !important;
   border: none !important;
 }
+
 /* TABLILLAS DE PERSONAJE */
 .tabaul,
 .tabcrono,
