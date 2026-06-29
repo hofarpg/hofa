@@ -1,7 +1,6 @@
 /*GENERAL*/
 .postzone {
   gap: 20px;
-  --nav-height: 80px;
 }
 .ppchid,
 .post:after,
