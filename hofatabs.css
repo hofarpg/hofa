@@ -2238,7 +2238,7 @@
 .tabaul,
 .tabcrono,
 .tabrelas,
-.tabhojaexp,
+.tabhojaexp
 {
   --group: var(--personalclr, inherit);
   --accent: var(--personalclr, var(--group));
