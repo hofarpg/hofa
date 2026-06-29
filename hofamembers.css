@@ -72,7 +72,7 @@ h1#pagetitle:has(~ .mbmmembers) span {
   overflow: hidden;
   border-right: var(--border1);
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
 }
 .mbsmava > img {
   width: 100%;
