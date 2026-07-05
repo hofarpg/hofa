@@ -662,6 +662,67 @@ span#dice_to_del {
   background: var(--accent);
 }
 
+/* BÚSQUEDA DE POSTS */
+.postsearchz {
+  gap: clamp(var(--padd0), 1.7vw, var(--padd2));
+  & .postzone {
+    gap: clamp(var(--padd0), 1.3vw, var(--padd1));
+    width: 100%;
+  }
+  & .post {
+    margin: 0px !important;
+    padding: 0px !important;
+    position: relative;
+  }
+  & .post.invipost {
+    --group: #b4bec1;
+    --tgroup: #b4bec199;
+  }
+  & .postheader {
+    flex: 1 0 100%;
+    width: 100%;
+    border: var(--border1);
+    background: var(--back1);
+    gap: clamp(var(--gap3), 0.6vw, var(--gap4));
+    padding: clamp(var(--padd1), 2.8vw, var(--padd3));
+    justify-content: center;
+    align-items: flex-start;
+  }
+  & .pbsearchpost {
+    text-transform: uppercase;
+    font: var(--fo-h3);
+    line-height: 85%;
+    text-shadow: var(--shadow3);
+  }
+  & .pbsearchpost > a {
+    color: var(--txt1) !important;
+    line-height: inherit;
+  }
+  & .pbsearchinfo {
+    text-transform: lowercase;
+    font: 300 var(--fs-small) var(--font3);
+    font-style: italic;
+    color: var(--txt4);
+    line-height: 100%;
+    display: block;
+  }
+  & .post .postbody {
+    min-height: 28.571rem;
+    flex: 1;
+    border-left: var(--border1);
+    border-right: var(--border1);
+    border-bottom: var(--border1);
+    background: var(--tback1);
+    width: 100%;
+  }
+  & .topicnav {
+    margin: 0;
+  }
+  & .page-title {
+    margin-block: 0 clamp(var(--gap3), 0.6vw, var(--gap4));
+  }
+}
+
 /* EDITAR PERFIL */
 #cp-main {
   float: none;
