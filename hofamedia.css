@@ -470,6 +470,11 @@
   .mbsmcdata {
     max-height: none;
   }
+  /* posts */
+  .phicon img {
+    width: var(--icon1);
+    height: var(--icon1);
+  }
 }
 
 @media (max-width: 600px) {  
@@ -714,6 +719,13 @@
     padding: 0px;
   }
   .nvava, .mhava {
+    display: none;
+  }
+  .phicon img {
+    width: var(--icon0);
+    height: var(--icon0);
+  }
+  .phmquote {
     display: none;
   }
 }
