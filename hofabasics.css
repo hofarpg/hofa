@@ -750,6 +750,8 @@ span#dice_to_del {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
 }
 #tabs {
   margin: 0px 0px var(--paddclamp3) 0px;
