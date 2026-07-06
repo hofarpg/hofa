@@ -244,7 +244,7 @@
   text-transform: uppercase;
   font: var(--fo-bod-alt2);
   font-weight: 900;
-  line-height: 80%;
+  line-height: 85%;
   color: var(--txt1);
 }
 .ppcidata .ppcid > em {
