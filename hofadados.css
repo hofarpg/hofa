@@ -189,8 +189,7 @@
 }
 .diceres .dcr .dcrdesc > h4 {
   text-transform: uppercase;
-  font: var(--fo-bod1);
-  font-size: var(--fs-big);
+  font: var(--fo-bod-alt1);
   font-weight: 800;
   color: var(--txt1);
   text-decoration: underline;
