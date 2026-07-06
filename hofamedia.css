@@ -478,6 +478,10 @@
     width: var(--icon1);
     height: var(--icon1);
   }
+  .mhava {
+    width: var(--icon1);
+    height: var(--icon1);
+  }
 }
 
 @media (max-width: 600px) {  
@@ -665,6 +669,10 @@
   }
   .sigcont .signature_div > br:first-of-type {
     display: none !important;
+  }
+  .mhava {
+    width: var(--icon0);
+    height: var(--icon0);
   }
   /* foros y subforos */
   .cattitle h2 {
