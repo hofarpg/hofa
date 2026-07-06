@@ -1,6 +1,6 @@
 /*GENERAL*/
 .postzone {
-  gap: 20px;
+  gap: var(--paddclamp7);
 }
 .ppchid,
 .post:after,
@@ -12,7 +12,7 @@
 }
 .invipost .phmname {
   color: var(--txt1) !important;
-  text-shadow: var(--shadow3);
+  text-shadow: 1px 1px 0.5px var(--group);
 }
 .invipost .ppparent > div > span:before {
   content: "nadie";
@@ -33,21 +33,21 @@
   width: 100%;
   border: var(--border1);
   background: var(--back1);
-  padding: 30px;
-  gap: 20px;
+  padding: var(--paddclamp5);
+  gap: var(--paddclamp7);
   justify-content: space-between;
   align-items: center;
 }
 .phmain {
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: var(--paddclamp7);
 }
 .phicon {
   justify-content: center;
   align-items: center;
   outline: var(--baborder);
-  margin: 2px;
+  margin: var(--bthickness);
   outline-color: var(--tgroup);
   border-radius: var(--bradius);
   border: 4px solid transparent;
@@ -55,8 +55,8 @@
 }
 .phicon img,
 .phicon:empty:before {
-  width: 90px;
-  height: 90px;
+  width: var(--icon2);
+  height: var(--icon2);
   overflow: hidden;
   border-radius: var(--bradius);
   object-fit: cover;
@@ -71,19 +71,21 @@
 }
 .phmname {
   text-transform: uppercase;
-  font: 900 var(--fs-h1) var(--font1);
+  font: var(--fo-h1);
+  font-size: var(--fo-h1-clamp);
   line-height: 85%;
 }
 .phmname span {
   color: var(--txt1) !important;
-  text-shadow: var(--shadow3);
+  text-shadow: 1px 1px 0.5px var(--group);
 }
 .phmname strong {
   font-weight: 900;
 }
 .phmquote {
   text-transform: lowercase;
-  font: 300 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 300;
   font-style: italic;
   color: var(--txt4);
   line-height: 100%;
@@ -91,11 +93,11 @@
 }
 .phmquote:before {
   content: "";
-  width: 70px;
-  height: 2px;
+  width: var(--paddclamp1);
+  height: var(--bthickness);
   float: left;
   background: var(--tgroup);
-  margin-right: 8px;
+  margin-right: var(--gap2);
   position: relative;
   align-self: center;
 }
@@ -106,11 +108,11 @@
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  gap: 6px;
+  gap: var(--gap2);
 }
 .postheader > a {
-  width: 40px;
-  height: 40px;
+  width: var(--padd5);
+  height: var(--padd5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,38 +187,39 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: var(--paddclamp5);
   transition: var(--trs2);
   top: 100%;
-  gap: 12px;
+  gap: var(--gap4);
 }
 .ppciclass {
   position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 4px;
-  margin-top: 12px;
+  gap: var(--gap0);
+  margin-top: var(--gap4);
 }
 .ppciclass .ppcicicon {
   position: absolute;
-  font-size: calc(var(--fs-h1) + var(--fs-h3));
+  font-size: var(--fs-icons);
   color: var(--tgroup);
   z-index: 0;
 }
 .ppciclass .ppcicweap {
-  font: 900 var(--fs-h5) var(--font1);
+  font: var(--fo-h5);
   position: relative;
   z-index: 1;
   text-transform: uppercase;
-  text-shadow: var(--shadow3);
-  line-height: 80%;
+  text-shadow: 1px 1px 0.5px var(--group);
+  line-height: 85%;
 }
 .ppciclass .ppciclvl {
-  font: 900 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: 900;
   text-transform: uppercase;
   color: var(--txt3);
-  gap: 4px;
+  gap: var(--gap0);
   line-height: 100%;
   position: relative;
   z-index: 1;
@@ -226,26 +229,28 @@
   color: var(--txt1);
 }
 .ppcidata {
-  gap: 12px;
+  gap: var(--gap4);
   flex-wrap: wrap;
-  padding: 12px 0px;
+  padding: var(--gap4) 0px;
   border-top: var(--tborder);
   border-bottom: var(--tborder);
   border-radius: var(--bradius);
 }
 .ppcidata .ppcid {
   flex: 1 0 30%;
-  gap: 4px;
+  gap: var(--gap0);
 }
 .ppcidata .ppcid > b {
   text-transform: uppercase;
-  font: 900 var(--fs-bigger) var(--font1);
+  font: var(--fo-bod-alt2);
+  font-weight: 900;
   line-height: 80%;
   color: var(--txt1);
 }
 .ppcidata .ppcid > em {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: bold;
   color: var(--txt3);
 }
 .ppcistats .pccontent {
@@ -253,7 +258,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 6px;
+  gap: var(--gap2);
 }
 .ppcistats .pccontent > strong {
   flex: 1 0 30%;
@@ -262,9 +267,10 @@
   border-right: var(--tborder);
   border-radius: var(--bradius);
   border-top-color: var(--group);
-  padding: 6px;
+  padding: var(--gap2);
   text-transform: uppercase;
-  font: bold var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: bold;
   line-height: 100%;
   color: var(--txt3);
 }
@@ -277,16 +283,17 @@
   top: 0px;
 }
 .ppparent {
-  padding: 12px 12px 0px 12px;
+  padding: var(--gap4) var(--gap4) 0px var(--gap4);
   text-align: justify;
   text-align-last: right;
   width: 100%;
 }
 .ppparent > div {
-  padding: 12px;
+  padding: var(--gap3);
   background: var(--back1);
   border: var(--border1);
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   text-transform: uppercase;
   line-height: 110%;
   color: var(--txt1);
@@ -297,8 +304,8 @@
   display: inline-block;
 }
 .ppcontacts {
-  padding: 12px;
-  gap: 6px;
+  padding: var(--gap3);
+  gap: var(--gap2);
   width: 100%;
   justify-content: flex-end;
   align-items: center;
@@ -306,8 +313,8 @@
 .ppcontacts a {
   color: var(--group) !important;
   background: var(--back1);
-  height: 30px;
-  width: 30px;
+  height: var(--padd4);
+  width: var(--padd4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,30 +344,32 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  padding: var(--gap4);
   border-bottom: var(--border1);
   background: var(--back2);
   text-transform: uppercase;
-  gap: 12px;
+  gap: var(--gap2) var(--gap4);
 }
 .pbiicons {
-  gap: 4px 12px;
+  gap: var(--gap0) var(--gap4);
   flex-wrap: wrap;
 }
 .pbiicons > em {
   font-style: normal;
 }
 .pbiicons > em > a {
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   line-height: 120%;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--bthickness);
   text-decoration-color: var(--tgroup);
   color: var(--txt2);
-  text-underline-offset: 2px;
+  text-underline-offset: var(--bthickness);
 }
 .pbidate {
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   line-height: 100%;
   color: var(--txt3);
   text-align: right;
