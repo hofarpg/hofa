@@ -338,7 +338,7 @@
 }
 .pbinfo {
   position: sticky;
-  top: var(--nav-height);
+  top: calc(var(--nav-height) - 1px);
   z-index: 55;
   width: 100%;
   flex-wrap: wrap;
