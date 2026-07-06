@@ -733,4 +733,11 @@
   }
 }
 
+@media (max-width: 400px) {  
+  /* posts */
+  .phicon {
+    display: none;
+  }
+}
+
 /* OTRAS COSAS IRÁN ACÁ */
