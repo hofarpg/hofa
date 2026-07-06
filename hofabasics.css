@@ -175,7 +175,8 @@
 }
 .registeru p a {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   color: var(--txt1);
 }
 .registeru p u {
@@ -298,7 +299,7 @@ span.corners-top span {
   margin: var(--gap2);
 }
 .messageoptions .panel fieldset {
-  font: normal var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
   line-height: 120%;
 }
 div#add_username {
@@ -322,7 +323,8 @@ span#dice_to_del {
 }
 .panel.pdice em {
   text-transform: uppercase;
-  font: bold var(--fs-text) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   font-style: normal;
   color: var(--txt3);
 }
@@ -381,7 +383,8 @@ span#dice_to_del {
 }
 .messlinks > a {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   color: var(--txt3);
   line-height: 140%;
   text-decoration: underline;
@@ -417,14 +420,16 @@ span#dice_to_del {
 }
 .privmess p>a {
   text-transform: uppercase;
-  font: 900 var(--fs-small) var(--font2);
+  font: var(--fo-bod3);
+  font-weight: 900;
   color: var(--txt2);
   text-decoration: var(--bthickness) solid underline var(--taccent);
   text-underline-offset: var(--bthickness);
 }
 .privmess p.right-box a {
   text-transform: uppercase;
-  font: 900 var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: 900;
   color: var(--accent);
   text-decoration: none;
 }
@@ -526,7 +531,8 @@ span#dice_to_del {
 .switcheroo__popper {
   padding: var(--gap3);
   text-align: center;
-  font: 700 var(--fs-small) var(--font2);
+  font: var(--fo-bod3);
+  font-weight: bold;
   color: var(--txt1);
   background: var(--back1);
   line-height: 100%;
@@ -556,7 +562,8 @@ span#dice_to_del {
 .switcheroo__squircle--button {
   transition: var(--trs1);
   color: var(--txt4);
-  font: 600 var(--fs-bigger) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: bold;
 }
 .switcheroo__squircle--button:hover {
   color: var(--txt1);
@@ -600,13 +607,14 @@ span#dice_to_del {
 }
 .switcheroo__form-label {
   color: var(--txt1);
-  font: 900 var(--fs-bigger) var(--font1);
+  font: var(--fo-bod1);
+  font-weight: 900;
   text-transform: uppercase;
 }
 .switcheroo__form-input {
   border-radius: var(--bradius);
   padding: var(--gap1);
-  font: normal var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
   line-height: 100%;
   margin-top: var(--gap1);
   width: 100%;
@@ -623,7 +631,8 @@ span#dice_to_del {
   outline: none;
   box-shadow: none;
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   align-self: flex-end;
   background-color: var(--accent);
   cursor: var(--crs2);
@@ -699,7 +708,7 @@ span#dice_to_del {
   }
   & .pbsearchinfo {
     text-transform: lowercase;
-    font: 300 var(--fs-small) var(--font3);
+    font: var(--fo-deco2);
     font-style: italic;
     color: var(--txt4);
     line-height: 100%;
@@ -755,7 +764,8 @@ span#dice_to_del {
   padding: var(--gap0) 0;
   text-transform: uppercase;
   color: var(--accent);
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
 }
 #tabs li a,
 #tabs a span {
@@ -807,7 +817,8 @@ span#dice_to_del {
 #cp-main fieldset dt {
   color: var(--txt1);
   text-transform: uppercase;
-  font: bold var(--fs-text) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   line-height: 130%;
   width: 100%;
   text-decoration: var(--bthickness) underline var(--taccent);
@@ -818,7 +829,8 @@ span#dice_to_del {
 #cp-main fieldset dt span {
   color: var(--txt1) !important;
   text-transform: uppercase;
-  font: bold var(--fs-text) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   line-height: 130% !important;
   box-sizing: border-box;
   word-break: break-word;
@@ -829,7 +841,8 @@ span#dice_to_del {
   width: 100%;
   padding: var(--gap4);
   text-transform: uppercase;
-  font: 800 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: bold;
   color: var(--txt1);
   display: flex;
   justify-content: center;
@@ -883,7 +896,8 @@ span#dice_to_del {
   border-color: var(--accent);
   padding: var(--gap4);
   position: relative;
-  font: 700 var(--fs-text) var(--font2);
+  font: var(--fo-bod2);
+  font-weight: bold;
   background: var(--taccent);
   line-height: 110% !important;
 }
@@ -966,7 +980,8 @@ dl.ucp-avatar img {
 }
 #cp-main table thead th {
   color: var(--txt1) !important;
-  font: 900 var(--fs-text) var(--font2);
+  font: var(--fo-bod2);
+  font-weight: 900;
   border-bottom: var(--border1) !important;
   position: relative;
   padding: var(--gap2) !important;
@@ -975,7 +990,7 @@ dl.ucp-avatar img {
 }
 #cp-main table tbody tr td {
   padding: var(--gap2);
-  font: normal var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
   color: var(--txt2);
   text-align: center;
   line-height: 100%;
@@ -986,7 +1001,7 @@ dl.ucp-avatar img {
 #cp-main p.right-box {
   float: none !important;
   margin: var(--gap4) 0px 0px 0px !important;
-  font: bold var(--fs-small) var(--font3) !important;
+  font: var(--fo-deco2) !important;
   text-transform: uppercase;
   text-align: right;
   line-height: 100% !important;
@@ -1013,7 +1028,8 @@ dl.ucp-avatar img {
   padding: var(--gap0) var(--gap2);
 }
 #cont_pwd > div::after {
-    font: 700 var(--fs-smaller) var(--font4);
+    font: var(--fo-icon4);
+    font-weight: bold;
     line-height: 100%;
     margin-left: var(--gap1);
 }
@@ -1046,7 +1062,8 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   display: none !important;
 }
 #tagForm label {
-  font: 700 var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   color: var(--txt3) !important;
 }
 #tagForm #addTagsBtn {
@@ -1057,7 +1074,8 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   padding: var(--gap3);
   width: fit-content;
   color: var(--txt1);
-  font: 700 var(--fs-text) var(--font2);
+  font: var(--fo-deco1);
+  font-weight: bold;
   line-height: 100%;
   cursor: var(--crs2);
 }
@@ -1067,7 +1085,8 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
 .topictitle .threadtag,
 .post-title .threadtag,
 .title-thread .threadtag {
-  font: 900 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 900;
   color: var(--back1);
   background: var(--accent);
   line-height: 110%;
