@@ -6,7 +6,7 @@
 }
 .postdados .postbody {
   border: var(--border1) !important;
-  border-radius: 0px 0px var(--bradius) var(--bradius) !important !important;
+  border-radius: 0px 0px var(--bradius) var(--bradius) !important;
   min-height: auto !important;
 }
 .dicecont .dicequote {
