@@ -83,6 +83,9 @@
   & i {
     font-weight: normal;
   }
+  & span {
+    line-height: 85%;
+  }
 }
 .dicethrow .diceres > strong > em {
   font: bold var(--fo-deco2);
@@ -94,7 +97,7 @@
 .dicethrow .diceres:is(.dracma, .moiras, .dado-del-destino) > strong,
 .dicethrow .diceres:is(.ataque, .defensa) > strong:is(.res-1, .res-8),
 .dicethrow .diceres:is(.ataque-de-espíritu, .defensa-de-espíritu) > strong:is(.res-1, .res-12) {
-  gap: var(--gap1);
+  gap: var(--gap0);
 }
 .pastmessages .postdados .postbody {
   border: var(--border1) !important;
