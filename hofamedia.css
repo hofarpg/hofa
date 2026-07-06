@@ -719,48 +719,10 @@
     max-width: 100%;
   }
   /* posts */
-  blockquote,
-  dl.codebox dd,
-  dl.codebox.spoiler .spoiler_content.hidden {
-    padding: 12px;
-  }
   dl.codebox.spoiler > dd {
     padding: 0px;
   }
-  dl.codebox dt {
-    padding: 6px;
-  }
   .nvava, .mhava {
     display: none;
-  }
-}
-
-@media (min-height: 1500px) {
-  .monomer-modal {
-    padding: 60px;
-    max-width: 600px !important;
-  }
-  .switcheroo {
-    left: 125px;
-    width: calc(100% - 125px);
-  }
-  .switcheroo__avatar img,
-  .switcheroo__squircle {
-    width: 120px;
-    height: 120px;
-  }
-  .switcheroo__squircle:before {
-    width: 124px;
-    height: 124px;
-  }
-  .switcheroo__delete {
-    width: 40px;
-    height: 40px;
-    top: -8px;
-    right: -8px;
-  }
-  .switcheroo__squircle:last-of-type {
-    width: 60px;
-    height: 60px;
   }
 }
