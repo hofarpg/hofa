@@ -149,9 +149,6 @@
   .forcont .frcinfo .frclinks {
     line-height: 75% !important;
   }
-  .forcont .frcinfo .frclinks > a {
-    font-size: var(--fs-smaller) !important;
-  }
   .category:has(.frcbackground) .forum .frcdesc {
     display: none !important;
   }
@@ -219,13 +216,6 @@
   /* posts */
   .postprofile {
     display: none;
-  }
-  .phmname,
-  .phsubject {
-    font-size: var(--fs-h4);
-  }
-  .pbsearchpost {
-    font-size: var(--fs-h5);
   }
   #textarea_content .sceditor-group {
     gap: var(--gap3);
@@ -325,7 +315,8 @@
   }
   #page-footer ul.linklist li.footer-home > a:before {
     content: "\f80a";
-    font: 300 var(--fs-bigger) var(--font4);
+    font: var(--fo-icon2);
+    font-size: var(--fs-bigger);
   }
   /* cuerpo */
   .forum {
