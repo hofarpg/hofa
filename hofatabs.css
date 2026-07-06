@@ -1372,7 +1372,7 @@
   justify-content: center;
   align-items: center;
   padding: 50px;
-  padding-bottom: 0px !important;
+  padding-bottom: 0;
 }
 .tbrolcont {
   padding: 50px;
