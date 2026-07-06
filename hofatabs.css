@@ -1540,15 +1540,10 @@
   --taccent: rgb(from var(--staff) r g b / .6);
 }
 
-:is(#tabcombatpj, #tabcombatmn) > br,
+:is(#tabcombatpj, #tabcombatmn, .tabcomdata, .tbcmdtname, .tabcomstats, .tabcombatfull, .tabcotskills, .tbctcat) > br,
 :is(#tabcombatpj, #tabcombatmn) > div > br,
-.tabcomdata > br,
-.tbcmdtname > br,
-.tabcomstats > br,
 .tabcombless br,
-.tabcommlife br,
-.tabcombatfull > br,
-.tabcotskills > br {
+.tabcommlife br {
   display: none !important;
 }
 
