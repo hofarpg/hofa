@@ -3190,11 +3190,11 @@
 }
 @media (max-width: 800px) {
   #guidebook .admtitleimg > h2 {
-    font-size: var(--fs-h2) !important;
+    font-size: var(--fs-h2);
   }
   #expedtab .expzhtraits {
     gap: 10px;
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
   }
   #expedtab #expzdata {
     gap: 20px;
@@ -3221,7 +3221,10 @@
   .tabcotxtblock {
     max-width: calc(50% - 6px);
     width: 100%;
-    align-self: stretch;
+    align-self: stretch;    
+    min-height: auto;
+    height: calc(280px - 42px);
+    max-height: none;
   }
   .tabcotskills {
     height: inherit;
@@ -3230,36 +3233,26 @@
     border-top: none;
     padding-top: 0px;
   }
-  .tabcomainblock {
-    min-height: none !important;
-    height: calc(280px - 42px);
-    max-height: none !important;
-  }
-  .tabcotxtblock {
-    min-height: none !important;
-    height: calc(280px - 42px);
-    max-height: none !important;
-  }
   #guidebook .admtitleimg > h2,
   .admintab .admtitleimg > h2 {
-    font-size: var(--fs-h2) !important;
+    font-size: var(--fs-h2) ;
   }
 }
 @media (max-width: 700px) {
   #nonplayercharacters .gbnpc {
-    flex: 1 0 100% !important;
+    flex: 1 0 100%;
   }
   #expedtab .expzhtraits > div {
     flex: 1 0 40%;
   }
   #expedtab .expzhtraits > div.expzhtvirtue {
-    border-left: none !important;
+    border-left: none;
   }
   #expedtab #expzhist,
   #expedtab #expzextr {
     border-width: 20px;
     padding-right: 12px;
-    border-right-width: 10px !important;
+    border-right-width: 10px;
   }
   #expedtab #expzdata {
     padding: 30px;
@@ -3268,7 +3261,7 @@
     padding: 30px;
   }
   #expedtab #expimg {
-    height: 250px !important;
+    height: 250px;
   }
   .tabhojaexp .tabhojcodata {
     flex-direction: column;
@@ -3289,6 +3282,7 @@
     max-width: none;
     width: 100%;
     align-self: stretch;
+    height: auto;
   }
   .tabcotskills {
     height: inherit;
@@ -3298,10 +3292,10 @@
     padding-top: 12px;
   }
   .tabcomainblock {
-    min-height: 240px !important;
+    min-height: 240px;
   }
   .tabcotxtblock {
-    max-height: 230px !important;
+    max-height: 230px;
   }
   #guidebook .admtitleimg > h2,
   .admintab .admtitleimg > h2 {
