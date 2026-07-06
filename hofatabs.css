@@ -846,6 +846,7 @@
 #expedtab #extbcinfo > br,
 #expedtab #extbclabels > br,
 #expedtab #expimg br,
+#expedtab .expzone > :is(br:is(:first-child, :last-child), br:first-child + br, br + br:last-child),
 #expedtab #expzdata > br,
 #expedtab .expzone .exptitle > br,
 #expedtab #expzrhoja > br,
@@ -953,7 +954,9 @@
 #expedtab #extbcinfo .expzone {
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 1;  
+  padding: 12px;
+  background: var(--back1);
 }
 #expedtab #extbcinfo .expzone:not(.preactive) {
   display: none;
@@ -990,13 +993,12 @@
 #expedtab #expzextr {
   height: 490px;
   overflow: auto;
-  padding: 12px;
   padding-right: 22px;
-  background: var(--back1);
   border: 40px solid var(--back1);
   border-right-width: 20px;
   line-height: 132%;
 }
+
 #expedtab .colu {
   width: 100%;
   column-rule: var(--border1);
