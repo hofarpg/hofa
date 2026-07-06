@@ -163,6 +163,7 @@
 }
 .registeru p {
   margin-bottom: var(--gap4) !important;
+  line-height: 130%;
 }
 .registeru p > strong {
   text-transform: uppercase;
@@ -175,7 +176,7 @@
 }
 .registeru p a {
   text-transform: uppercase;
-  font: var(--fo-deco1);
+  font: var(--fo-deco2);
   font-weight: bold;
   color: var(--txt1);
 }
@@ -324,7 +325,7 @@ span#dice_to_del {
 .panel.pdice em {
   text-transform: uppercase;
   font: var(--fo-deco1);
-  font-weight: bold;
+  font-weight: 900;
   font-style: normal;
   color: var(--txt3);
 }
@@ -383,7 +384,7 @@ span#dice_to_del {
 }
 .messlinks > a {
   text-transform: uppercase;
-  font: var(--fo-deco1);
+  font: var(--fo-deco2);
   font-weight: bold;
   color: var(--txt3);
   line-height: 140%;
@@ -428,7 +429,7 @@ span#dice_to_del {
 }
 .privmess p.right-box a {
   text-transform: uppercase;
-  font: var(--fo-deco1);
+  font: var(--fo-deco2);
   font-weight: 900;
   color: var(--accent);
   text-decoration: none;
@@ -625,13 +626,13 @@ span#dice_to_del {
   cursor: text;
 }
 .switcheroo__form-button {
-  padding: var(--gap0) var(--gap2);
+  padding: var(--gap1) var(--gap3);
   border-radius: var(--bradius);
   border: none;
   outline: none;
   box-shadow: none;
   text-transform: uppercase;
-  font: var(--fo-deco1);
+  font: var(--fo-deco2);
   font-weight: bold;
   align-self: flex-end;
   background-color: var(--accent);
@@ -698,18 +699,18 @@ span#dice_to_del {
   }
   & .pbsearchpost {
     text-transform: uppercase;
-    font: var(--fo-h3);
+    font: var(--fo-h2-clamp);
     line-height: 85%;
-    text-shadow: var(--shadow3);
+    text-shadow: 1px 1px 0.5px var(--group);
   }
   & .pbsearchpost > a {
     color: var(--txt1) !important;
     line-height: inherit;
   }
   & .pbsearchinfo {
-    text-transform: lowercase;
+    text-transform: uppercase;
     font: var(--fo-deco2);
-    font-style: italic;
+    font-weight: bold;
     color: var(--txt4);
     line-height: 100%;
     display: block;
@@ -764,8 +765,8 @@ span#dice_to_del {
   padding: var(--gap0) 0;
   text-transform: uppercase;
   color: var(--accent);
-  font: var(--fo-deco1);
-  font-weight: bold;
+  font: var(--fo-deco2);
+  font-weight: 800;
 }
 #tabs li a,
 #tabs a span {
@@ -818,7 +819,7 @@ span#dice_to_del {
   color: var(--txt1);
   text-transform: uppercase;
   font: var(--fo-deco1);
-  font-weight: bold;
+  font-weight: 800;
   line-height: 130%;
   width: 100%;
   text-decoration: var(--bthickness) underline var(--taccent);
@@ -830,7 +831,7 @@ span#dice_to_del {
   color: var(--txt1) !important;
   text-transform: uppercase;
   font: var(--fo-deco1);
-  font-weight: bold;
+  font-weight: 800;
   line-height: 130% !important;
   box-sizing: border-box;
   word-break: break-word;
@@ -885,7 +886,7 @@ span#dice_to_del {
   margin-right: 0px !important;
 }
 #cp-main fieldset input.inputbox {
-  padding: var(--gap2);
+  padding: var(--gap1);
 }
 #cp-main span.italic {
   width: 100%;
@@ -1062,7 +1063,7 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   display: none !important;
 }
 #tagForm label {
-  font: var(--fo-deco1);
+  font: var(--fo-deco2);
   font-weight: bold;
   color: var(--txt3) !important;
 }
@@ -1074,7 +1075,7 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   padding: var(--gap3);
   width: fit-content;
   color: var(--txt1);
-  font: var(--fo-deco1);
+  font: var(--fo-deco2);
   font-weight: bold;
   line-height: 100%;
   cursor: var(--crs2);
@@ -1086,7 +1087,7 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
 .post-title .threadtag,
 .title-thread .threadtag {
   font: var(--fo-deco2);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--back1);
   background: var(--accent);
   line-height: 110%;
