@@ -237,7 +237,7 @@
   a.usgp {
     flex: 1 0 40% !important;
   }
-  .mhava {
+  .mhava, .phicon {
     display: none;
   }
   /* config */
@@ -474,11 +474,7 @@
     max-height: none;
   }
   /* posts */
-  .phicon img {
-    width: var(--icon1);
-    height: var(--icon1);
-  }
-  .mhava {
+  .phicon img, .mhava img {
     width: var(--icon1);
     height: var(--icon1);
   }
@@ -670,7 +666,7 @@
   .sigcont .signature_div > br:first-of-type {
     display: none !important;
   }
-  .mhava {
+  .mhava img, .phicon img {
     width: var(--icon0);
     height: var(--icon0);
   }
@@ -729,21 +725,17 @@
   dl.codebox.spoiler > dd {
     padding: 0px;
   }
-  .nvava, .mhava {
+  .nvava {
     display: none;
-  }
-  .phicon img {
-    width: var(--icon0);
-    height: var(--icon0);
   }
   .phmquote {
     display: none;
   }
 }
 
-@media (max-width: 400px) {  
+@media (max-width: 450px) {  
   /* posts */
-  .phicon {
+  .phicon, .mhava {
     display: none;
   }
 }
