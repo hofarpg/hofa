@@ -8,7 +8,7 @@
   }
 }
 
-/* scrollbars */
+/* scrollbar */
 @supports not selector(::-webkit-scrollbar) {
   * {
     scrollbar-color: var(--accent) var(--back1);
