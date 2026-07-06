@@ -46,6 +46,9 @@
 }
 
 @media only screen and (max-width: 980px) and (min-height: 1500px) {
+  .fontsizepanel .fspanel-big {
+    display: block;
+  }
   /* header */
   header {
     max-height: 800px;
