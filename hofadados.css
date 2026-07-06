@@ -80,12 +80,6 @@
   line-height: 100%;
   text-transform: uppercase;
   text-shadow: 1px 1px 0.5px var(--group);
-  & i {
-    font-weight: normal;
-  }
-  & span {
-    line-height: 85%;
-  }
 }
 .dicethrow .diceres > strong > em {
   font: bold var(--fo-deco2);
@@ -98,6 +92,12 @@
 .dicethrow .diceres:is(.ataque, .defensa) > strong:is(.res-1, .res-8),
 .dicethrow .diceres:is(.ataque-de-espíritu, .defensa-de-espíritu) > strong:is(.res-1, .res-12) {
   gap: var(--gap0);
+  & i {
+    font-weight: normal;
+  }
+  & span {
+    line-height: 85%;
+  }
 }
 .pastmessages .postdados .postbody {
   border: var(--border1) !important;
