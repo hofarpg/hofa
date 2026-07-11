@@ -207,12 +207,13 @@
   z-index: 0;
 }
 .ppciclass .ppcicweap {
-  font: var(--fo-h5);
+  font: var(--fo-h4);
   position: relative;
   z-index: 1;
   text-transform: uppercase;
   text-shadow: 1px 1px 0.5px var(--group);
   line-height: 85%;
+  color: var(--txt1);
 }
 .ppciclass .ppciclvl {
   font: var(--fo-bod1);
