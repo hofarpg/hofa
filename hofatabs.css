@@ -28,7 +28,7 @@
   position: sticky;
   z-index: 10;
   text-align: left;
-  padding: 20px;
+  padding: var(--paddclamp7);
   border: var(--border1);
   border-radius: var(--bradius);
   background: var(--back2);
@@ -78,13 +78,13 @@
 }
 #guidelinks > a.preactive:before,
 #guidelinked > a.preactive:before {
-  width: 20px;
+  width: var(--paddclamp7);
   margin-right: 6px;
 }
 #guideconts {
   flex: 1 0 70%;
   border: var(--border1);
-  padding: 20px;
+  padding: var(--paddclamp7);
   background: var(--back1);
   min-height: 460px;
 }
@@ -101,7 +101,7 @@
   border: var(--border2);
   width: 100%;
   min-height: 250px;
-  padding: 20px;
+  padding: var(--paddclamp7);
   text-align: center;
   gap: 12px;
 }
@@ -163,14 +163,14 @@
   width: 100%;
   max-width: 380px;
   position: relative;
-  padding: 40px 0px;
+  padding: var(--paddclamp3) 0px;
 }
 #guidebook .admtitmain:after,
 .admintab .admtitmain:after {
   content: "\f329";
   font: 700 var(--fs-big) var(--font4);
   position: absolute;
-  bottom: -30px;
+  bottom: calc(var(--paddclamp5) * -1);
   color: var(--accent) !important;
 }
 #guidebook .admtitmain *,
@@ -240,7 +240,7 @@
 #guidebook .admtitle > em:before,
 .admintab .admtitle > em:before {
   content: "";
-  width: 40px;
+  width: var(--paddclamp3);
   height: 2px;
   display: inline-block;
   background: var(--taccent);
@@ -272,7 +272,7 @@
   border-inline: var(--tborder);
   border-radius: var(--bradius);
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px var(--paddclamp7);
   margin-inline: 12px;
   &.center{
     display: block;
@@ -288,7 +288,7 @@
   border: var(--aborder);
   border-radius: var(--bradius);
   background: var(--taccent);
-  padding: 20px;
+  padding: var(--paddclamp7);
   font: 700 100% / var(--fs-text) var(--font2);
   text-transform: uppercase;
   &:before {
@@ -303,14 +303,14 @@
   margin: 0 auto;
   background: var(--back1);
   border: var(--border1);
-  padding: 20px;
+  padding: var(--paddclamp7);
 }
 .admintab .registeredsec {
   column-count: 1;
   column-rule: var(--border2);
-  column-gap: 20px;
+  column-gap: var(--paddclamp7);
   column-width: 160px;
-  margin: 0px 20px;
+  margin: 0px var(--paddclamp7);
 }
 .admintab .registeredsec.regcol {
   column-count: 2;
@@ -356,7 +356,7 @@
   margin: 0 auto;
   max-width: 400px;
   width: 100%;
-  padding: 30px;
+  padding: var(--paddclamp5);
   gap: 6px;
   background: var(--back2);
   border: var(--border1);
@@ -364,8 +364,8 @@
 }
 .admiman > i {
   background: var(--accent);
-  width: 30px;
-  height: 30px;
+  width: var(--paddclamp5);
+  height: var(--paddclamp5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,7 +453,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
-  padding: 20px;
+  padding: var(--paddclamp7);
 }
 #nonplayercharacters .gbnpc .gbnpcimg > img {
   position: absolute !important;
@@ -518,8 +518,8 @@
 #nonplayercharacters .gbnpc #gbnpcreadmore {
   position: absolute;
   z-index: 1;
-  right: 20px;
-  top: 20px;
+  right: var(--paddclamp7);
+  top: var(--paddclamp7);
   font-size: var(--fs-bigger);
   color: var(--group);
   cursor: var(--crs2);
@@ -681,7 +681,7 @@
 }
 #itemcatalogue .gdcitem .gdcititle > em:before {
   content: "";
-  width: 20px;
+  width: var(--paddclamp7);
   height: 2px;
   display: inline-block;
   background: var(--tgroup);
@@ -858,7 +858,7 @@
 #expedtab .extbnam {
   background: var(--back1);
   border-bottom: var(--border1);
-  padding: 40px;
+  padding: var(--paddclamp3);
   justify-content: center;
   align-items: flex-start;
   text-align: left;
@@ -994,15 +994,15 @@
   height: 490px;
   overflow: auto;
   padding-right: 22px;
-  border: 40px solid var(--back1);
-  border-right-width: 20px;
+  border: var(--paddclamp3) solid var(--back1);
+  border-right-width: var(--paddclamp7);
   line-height: 132%;
 }
 
 #expedtab .colu {
   width: 100%;
   column-rule: var(--border1);
-  column-gap: 20px;
+  column-gap: var(--paddclamp7);
   display: inline-block;
 }
 #expedtab .colu.col2 {
@@ -1050,14 +1050,14 @@
 }
 #expedtab #expzrhoja {
   flex-direction: row;
-  gap: 30px;
-  padding: 30px;
+  gap: var(--paddclamp5);
+  padding: var(--paddclamp5);
 }
 #expedtab .expzhstats {
   align-self: stretch;
   justify-content: space-between;
   align-items: stretch;
-  gap: 20px;
+  gap: var(--paddclamp7);
   flex: 1 0 7%;
 }
 #expedtab .expzhstats > b {
@@ -1085,12 +1085,12 @@
   color: var(--txt3);
 }
 #expedtab .expzhd {
-  gap: 30px;
+  gap: var(--paddclamp5);
   align-items: stretch;
   flex: 1 0 80%;
 }
 #expedtab .expzhtraits {
-  gap: 20px;
+  gap: var(--paddclamp7);
 }
 #expedtab .expzhtraits > div {
   text-align: center;
@@ -1182,7 +1182,7 @@
   flex: 1;
   height: 1px;
   background: var(--border2-c);
-  min-width: 40px;
+  min-width: var(--paddclamp3);
 }
 #expedtab .expzhskills > span {
   text-transform: uppercase;
@@ -1387,7 +1387,7 @@
   width: 100%;
   border-top: var(--border1);
   background: var(--back2);
-  padding: 20px;
+  padding: var(--paddclamp7);
 }
 .tbrolinfo > em {
   text-transform: uppercase;
@@ -1501,7 +1501,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px 20px;
+  gap: 12px var(--paddclamp7);
   flex-wrap: wrap;
 }
 .tabrol3 .tbrolinfo > em {
@@ -1525,7 +1525,7 @@
   width: 100%;
   background: var(--back1);
   border: var(--border1);
-  padding: 20px;
+  padding: var(--paddclamp7);
   gap: 12px;
   min-height: 280px;
   justify-content: space-between;
@@ -1559,8 +1559,8 @@
   flex-direction: column;
 }
 .tabcomdata > i {
-  width: 40px;
-  height: 40px;
+  width: var(--paddclamp3);
+  height: var(--paddclamp3);
   border-radius: var(--bradius);
   color: var(--accent);
   background: var(--back2);
@@ -1592,7 +1592,7 @@
 }
 .tbcmdtinfo:before {
   content: "";
-  width: 30px;
+  width: var(--paddclamp5);
   height: 2px;
   display: inline-block;
   background: var(--accent);
@@ -1869,7 +1869,7 @@
   border: var(--border1);
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 20px 0px;
+  padding: var(--paddclamp7) 0px;
 }
 .previewfirma * {
   box-sizing: initial;
@@ -1916,7 +1916,7 @@
   align-items: center;
   text-align: justify;
   text-align-last: center;
-  padding: 30px;
+  padding: var(--paddclamp5);
   bottom: calc(100%);
   transition: var(--trs2);
   transition-delay: 0s;
@@ -1964,8 +1964,8 @@
   max-width: 400px;
   background: var(--tback1);
   border: var(--border1);
-  padding: 30px;
-  gap: 20px;
+  padding: var(--paddclamp5);
+  gap: var(--paddclamp7);
   display: flex;
   flex-direction: column;
   --accent: var(--group);
@@ -2002,8 +2002,8 @@
   border: var(--border1);
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  gap: 20px;
+  padding: var(--paddclamp3);
+  gap: var(--paddclamp7);
   --accent: var(--group);
 }
 .tabutrama,
@@ -2162,11 +2162,11 @@
   border-radius: var(--bradius);
   max-width: 450px;
   padding: 60px;
-  gap: 30px;
+  gap: var(--paddclamp5);
 }
 .tabaul#tbfull {
-  gap: 40px;
-  padding: 40px;
+  gap: var(--paddclamp3);
+  padding: var(--paddclamp3);
   max-width: 850px;
   align-items: center;
 }
@@ -2267,8 +2267,8 @@
   font-size: var(--fs-big);
   border-radius: var(--bradius);
   border: var(--border1);
-  width: 40px;
-  height: 40px;
+  width: var(--paddclamp3);
+  height: var(--paddclamp3);
 }
 .tabaul#tbsimple .tbaulinks > a:hover {
   background-color: var(--accent);
@@ -2276,7 +2276,7 @@
   color: var(--back1);
 }
 .tabaul#tbfull .tbaulinks {
-  gap: 12px 20px;
+  gap: 12px var(--paddclamp7);
   justify-content: space-around;
 }
 .tabaul#tbfull .tbaulinks > a {
@@ -2286,7 +2286,7 @@
   color: var(--txt1);
 }
 .tabaul .tbfside1, .tabaul .tbfside2 {
-  gap: 40px;
+  gap: var(--paddclamp3);
 }
 .tabaul .tbfside1 {
   justify-content: space-between;
@@ -2352,7 +2352,7 @@
   display: none !important;
 }
 .tabcrono .tabcronotitle {
-  padding: 30px;
+  padding: var(--paddclamp5);
   width: 100%;
   border-bottom: var(--border1);
   background: var(--back1);
@@ -2364,7 +2364,7 @@
   line-height: 100%;
 }
 .tabcrono .tabcronocont {
-  padding: 40px;
+  padding: var(--paddclamp3);
   width: 100%;
   gap: 12px;
 }
@@ -2388,7 +2388,7 @@
 }
 .tabcrono .tabcrcomonth:before {
   content: "";
-  width: 40px;
+  width: var(--paddclamp3);
   height: 2px;
   display: inline-block;
   background: var(--accent);
@@ -2402,8 +2402,8 @@
   gap: 12px;
 }
 .tabcrono .tabcrcothread > i {
-  width: 40px;
-  height: 40px;
+  width: var(--paddclamp3);
+  height: var(--paddclamp3);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -2505,7 +2505,7 @@
   display: none !important;
 }
 .tabrelas .tabrelastitle {
-  padding: 30px;
+  padding: var(--paddclamp5);
   width: 100%;
   border-bottom: var(--border1);
   background: var(--back1);
@@ -2517,7 +2517,7 @@
   line-height: 100%;
 }
 .tabrelas .tabrelascont {
-  padding: 40px;
+  padding: var(--paddclamp3);
   width: 100%;
   gap: 12px;
 }
@@ -2828,7 +2828,7 @@
   display: none !important;
 }
 .tabhojaexp .tabhojexptitle {
-  padding: 30px;
+  padding: var(--paddclamp5);
   width: 100%;
   border-bottom: var(--border1);
   background: var(--back1);
@@ -2840,18 +2840,18 @@
   line-height: 100%;
 }
 .tabhojaexp .tabhojexpcont {
-  padding: 40px;
+  padding: var(--paddclamp3);
   width: 100%;
-  gap: 20px;
+  gap: var(--paddclamp7);
 }
 .tabhojaexp .tabhojcodata {
   flex: 1 0 100%;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: var(--paddclamp7);
 }
 .tabhojaexp .tabhojcodata > em {
-  height: 40px;
+  height: var(--paddclamp3);
   background: var(--border1-c);
   width: 1px;
 }
@@ -2891,7 +2891,7 @@
 }
 .tabhojaexp .tabhojcomejoras > em:before {
   content: "";
-  width: 30px;
+  width: var(--paddclamp5);
   height: 2px;
   display: inline-block;
   background: var(--accent);
@@ -2923,8 +2923,8 @@
   align-items: center;
 }
 .tabhojaexp .tabhojcogoalitem > i {
-  width: 40px;
-  height: 40px;
+  width: var(--paddclamp3);
+  height: var(--paddclamp3);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -2998,7 +2998,7 @@
     font-size: var(--fs-small);
   }
   #expedtab #expzdata {
-    gap: 20px;
+    gap: var(--paddclamp7);
   }
   #expedtab .expzhstats {
     flex: 1;
@@ -3086,14 +3086,14 @@
 }
 @media (max-width: 1000px) {
   .tabaul#tbfull {
-    gap: 30px;
-    padding: 30px;
+    gap: var(--paddclamp5);
+    padding: var(--paddclamp5);
   }
   .tabaul .tbfside1, .tabaul .tbfside2 {
-    gap: 30px;
+    gap: var(--paddclamp5);
   }
   .tabaul#tbsimple {
-    padding: 40px;
+    padding: var(--paddclamp3);
   }
   #tabcombatpj,
   #tabcombatmn {
@@ -3169,10 +3169,10 @@
   }
   .tbroltit,
   .tbrolcont {
-    padding: 40px;
+    padding: var(--paddclamp3);
   }
   .tabusq {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   .tabupjimg {
     display: none !important;
@@ -3185,7 +3185,7 @@
   .tabcrono .tabcronocont,
   .tabrelas .tabrelascont,
   .tabhojaexp .tabhojexpcont {
-    padding: 30px;
+    padding: var(--paddclamp5);
   }
 }
 @media (max-width: 800px) {
@@ -3197,7 +3197,7 @@
     flex-wrap: wrap;
   }
   #expedtab #expzdata {
-    gap: 20px;
+    gap: var(--paddclamp7);
   }
   #expedtab .expzhstats > b {
     flex: 1 0 25%;
@@ -3250,15 +3250,15 @@
   }
   #expedtab #expzhist,
   #expedtab #expzextr {
-    border-width: 20px;
+    border-width: var(--paddclamp7);
     padding-right: 12px;
     border-right-width: 10px;
   }
   #expedtab #expzdata {
-    padding: 30px;
+    padding: var(--paddclamp5);
   }
   #expedtab .extbnam {
-    padding: 30px;
+    padding: var(--paddclamp5);
   }
   #expedtab #expimg {
     height: 250px;
@@ -3308,7 +3308,7 @@
     font-size: var(--fs-h3) !important;
   }
   .admtitmain {
-    padding: 20px 0px !important;
+    padding: var(--paddclamp7) 0px !important;
   }
   #expedtab .expzhtraits > div {
     flex: 1 0 100%;
@@ -3317,27 +3317,27 @@
     gap: 0px;
   }
   #expedtab .expzhtraits > div.expzhtclass {
-    padding: 40px;
+    padding: var(--paddclamp3);
   }
   #expedtab .expzhtraits > div.expzhtvirtue {
     border-top: var(--border2);
-    padding-top: 30px;
+    padding-top: var(--paddclamp5);
   }
   #expedtab .expzhtraits > div.expzhtflaw {
     border-bottom: var(--border2);
     border-right: none !important;
-    padding-bottom: 30px;
+    padding-bottom: var(--paddclamp5);
   }
   #expedtab #expzrhoja {
-    gap: 20px;
-    padding: 20px;
+    gap: var(--paddclamp7);
+    padding: var(--paddclamp7);
   }
   #expedtab .extbnam > b {
     font-size: var(--fs-h3);
   }
   .tbroltit,
   .tbrolcont {
-    padding: 30px;
+    padding: var(--paddclamp5);
   }
   :is(.tabrol1, .tabrol2, .tabrol3) .tbroltit > b {
     font-size: var(--fs-h3);
@@ -3352,7 +3352,7 @@
     position: static;
   }
   .tabusqres {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   .tabusq {
     padding: 12px;
@@ -3364,8 +3364,8 @@
     border-right-width: 8px !important;
   }
   .tabaul#tbsimple {
-    padding: 30px;
-    gap: 20px;
+    padding: var(--paddclamp5);
+    gap: var(--paddclamp7);
   }
   .tabaul .tbfside1, .tabaul .tbfside2 {
     justify-content: center;
@@ -3380,13 +3380,13 @@
   .tabcrono .tabcronocont,
   .tabrelas .tabrelascont,
   .tabhojaexp .tabhojexpcont {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   .registeredsec {
     margin: 0px 12px !important;
   }
   .admiman {
-    padding: 20px !important;
+    padding: var(--paddclamp7) !important;
   }
   .admiman h3 {
     font-size: var(--fs-h4) !important;
@@ -3407,7 +3407,7 @@
     height: 210px !important;
   }
   #expedtab .extbnam {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   #expedtab #expzhist,
   #expedtab #expzextr {
@@ -3419,14 +3419,14 @@
     gap: 12px;
   }
   #expedtab #expzdata {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   #expedtab #expimg {
     height: 200px !important;
   }
   .tbroltit,
   .tbrolcont {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   .tbrolinfo {
     padding: 12px;
@@ -3437,12 +3437,12 @@
     font-size: var(--fs-h5);
   }
   .tabaul#tbfull .tbaulinks {
-    gap: 20px;
+    gap: var(--paddclamp7);
   }
   .tabcrono .tabcronotitle,
   .tabrelas .tabrelastitle,
   .tabhojaexp .tabhojexptitle {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   #expedtab .expzhstats > b {
     min-width: 40%;
@@ -3468,7 +3468,7 @@
     margin: 0px 6px !important;
   }
   #expedtab #expzdata {
-    padding: 20px;
+    padding: var(--paddclamp7);
   }
   .tabusqres {
     padding: 12px;
@@ -3552,7 +3552,7 @@
     font-size: var(--fs-small);
   }
   #expedtab #expzdata {
-    gap: 20px;
+    gap: var(--paddclamp7);
   }
   #expedtab .expzhstats {
     flex: 1;
