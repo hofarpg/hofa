@@ -443,8 +443,6 @@
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent);
-  --tgroup: var(--taccent);
 }
 #nonplayercharacters .gbnpc:after {
   z-index: 2;
@@ -492,7 +490,7 @@
   text-underline-offset: var(--bthickness);
   line-height: 120%;
   margin-bottom: var(--gap0);
-  text-decoration-color: var(--tgroup);
+  text-decoration-color: var(--taccent);
 }
 #nonplayercharacters .gbnpc .gbnpcdesc {
   top: unset !important;
@@ -540,7 +538,7 @@
   right: var(--paddclamp7);
   top: var(--paddclamp7);
   font-size: var(--fs-bigger);
-  color: var(--group);
+  color: var(--accent);
   cursor: var(--crs2);
 }
 #nonplayercharacters .gbnpc.clicked .gbnpcimg {
@@ -575,8 +573,6 @@
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent);
-  --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
 }
@@ -621,7 +617,7 @@
   text-underline-offset: var(--bthickness);
   line-height: 120%;
   margin-bottom: var(--gap0);
-  text-decoration-color: var(--tgroup);
+  text-decoration-color: var(--taccent);
 }
 .gdcriaturas .gdcriat .gdcriatimg .gdcriatcat {
   text-transform: uppercase;
@@ -676,8 +672,6 @@
   position: relative;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent);
-  --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
   padding: var(--paddclamp8);
@@ -709,7 +703,7 @@
   width: var(--paddclamp7);
   height: var(--bthickness);
   display: inline-block;
-  background: var(--tgroup);
+  background: var(--taccent);
   margin-right: var(--gap1);
   position: relative;
   top: calc((var(--gap0) / 1.3) * -1);
@@ -777,8 +771,6 @@
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  --group: var(--accent);
-  --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
 }
@@ -831,7 +823,7 @@
   text-underline-offset: var(--bthickness);
   line-height: 120%;
   margin-bottom: var(--gap0);
-  text-decoration-color: var(--tgroup);
+  text-decoration-color: var(--taccent);
 }
 .admintab .gdcriat .gdcriatimg .gdcriatcat {
   text-transform: uppercase;
@@ -905,7 +897,7 @@
   font-size: var(--fo-h2-clamp);
   line-height: 85%;
   color: var(--txt1) !important;
-  text-shadow: 1px 1px 0.5px var(--group);
+  text-shadow: 1px 1px 0.5px var(--accent);
 }
 #expedtab .extbnam > em {
   text-transform: lowercase;
@@ -921,7 +913,7 @@
   width: var(--paddclamp1);
   height: var(--bthickness);
   display: inline-block;
-  background: var(--tgroup);
+  background: var(--taccent);
   margin-right: var(--gap1);
   position: relative;
   top: calc((var(--gap0) / 1.4) * -1);
@@ -970,7 +962,7 @@
 }
 #expedtab #extbclabels a.preactive {
   color: var(--txt1);
-  border-top-color: var(--group)!important;
+  border-top-color: var(--accent)!important;
 }
 #expedtab #extbcinfo {
   position: relative;
@@ -1065,7 +1057,7 @@
 #expedtab .expzone .exptitle > i {
   font-size: var(--fs-display);
   line-height: var(--fs-display);
-  color: var(--group);
+  color: var(--accent);
 }
 #expedtab .expzone .exptitle > b {
   text-transform: uppercase;
@@ -1073,7 +1065,7 @@
   font-weight: 900;
   color: var(--txt1) !important;
   text-decoration: underline;
-  text-decoration-color: var(--tgroup);
+  text-decoration-color: var(--taccent);
   text-decoration-thickness: var(--bthickness);
   text-underline-offset: calc(var(--bthickness) + .05rem);
   line-height: calc(var(--fs-bigger) + 20%);
@@ -1101,7 +1093,7 @@
   flex: 1 0 7%;
 }
 #expedtab .expzhstats > b {
-  border-top: var(--bthickness) solid var(--tgroup);
+  border-top: var(--bthickness) solid var(--taccent);
   border-left: var(--border2);
   border-right: var(--border2);
   flex: 1;
@@ -1176,7 +1168,7 @@
   content: "\e4fa";
   position: absolute;
   font: 300 var(--fs-h1) var(--font4);
-  color: var(--tgroup);
+  color: var(--taccent);
   opacity: 0.2;
   z-index: 0;
 }
@@ -1213,7 +1205,7 @@
   font-weight: 800;
 }
 #expedtab .expzhskills h4.post-content {
-  color: var(--group);
+  color: var(--accent);
   text-decoration: none;
   margin: 0px 0px var(--gap3) 0px;
   display: flex !important;
@@ -1233,7 +1225,7 @@
   text-transform: uppercase;
   display: inline-block;
   padding: var(--gap0) var(--gap1);
-  background: var(--group);
+  background: var(--accent);
   border-radius: var(--bradius);
   font: var(--fo-deco2);
   font-weight: 800;
@@ -1250,130 +1242,130 @@
   color: var(--txt4);
 }
 #expedtab .expzhtraits > div:before {
-  color: var(--group);
+  color: var(--accent);
 }
 #expedtab .expzhtraits > div:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
-  --group: var(--nemesis);
+  --accent: var(--nemesis);
   &:before {
     content: "\f6cb";
   }
 }
 #expedtab .expzhtraits > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché) {
-  --group: var(--tyche);
+  : var(--tyche);
   &:before {
     content: "\e362";
   }
 }
 #expedtab .expzhtraits > div:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone) {
-  --group: var(--persefone);
+  : var(--persefone);
   &:before {
     content: "\e5aa";
   }
 }
 #expedtab .expzhtraits > div:is(#afrodita, #AFRODITA, #Afrodita) {
-  --group: var(--afrodita);
+  : var(--afrodita);
   &:before {
     content: "\f4ba";
   }
 }
 #expedtab .expzhtraits > div:is(#dioniso, #DIONISO, #Dioniso) {
-  --group: var(--dioniso);
+  : var(--dioniso);
   &:before {
     content: "\f4e3";
   }
 }
 #expedtab .expzhtraits > div:is(#hades, #HADES, #Hades) {
-  --group: var(--hades);
+  : var(--hades);
   &:before {
     content: "\f54c";
   }
 }
 #expedtab .expzhtraits > div:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate) {
-  --group: var(--hecate);
+  : var(--hecate);
   &:before {
     content: "\f6bf";
   }
 }
 #expedtab .expzhtraits > div:is(#hypnos, #HYPNOS, #Hypnos) {
-  --group: var(--hypnos);
+  : var(--hypnos);
   &:before {
     content: "\f34e";
   }
 }
 #expedtab .expzhtraits > div:is(#artemisa, #ARTEMISA, #Artemisa) {
-  --group: var(--artemisa);
+  : var(--artemisa);
   &:before {
     content: "\f186";
   }
 }
 #expedtab .expzhtraits > div:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón) {
-  --group: var(--poseidon);
+  : var(--poseidon);
   &:before {
     content: "\f773";
   }
 }
 #expedtab .expzhtraits > div:is(#atenea, #ATENEA, #Atenea) {
-  --group: var(--atenea);
+  : var(--atenea);
   &:before {
     content: "\f5dc";
   }
 }
 #expedtab .expzhtraits > div:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone) {
-  --group: var(--khione);
+  : var(--khione);
   &:before {
     content: "\f2dc";
   }
 }
 #expedtab .expzhtraits > div:is(#hebe, #HEBE, #Hebe) {
-  --group: var(--hebe);
+  : var(--hebe);
   &:before {
     content: "\e588";
   }
 }
 #expedtab .expzhtraits > div:is(#iris, #IRIS, #Iris) {
-  --group: var(--iris);
+  : var(--iris);
   &:before {
     content: "\f75b";
   }
 }
 #expedtab .expzhtraits > div:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter) {
-  --group: var(--demeter);
+  : var(--demeter);
   &:before {
     content: "\f72d";
   }
 }
 #expedtab .expzhtraits > div:is(#hermes, #HERMES, #Hermes) {
-  --group: var(--hermes);
+  : var(--hermes);
   &:before {
     content: "\f56b";
   }
 }
 #expedtab .expzhtraits > div:is(#apolo, #APOLO, #Apolo) {
-  --group: var(--apolo);
+  : var(--apolo);
   &:before {
     content: "\f001";
   }
 }
 #expedtab .expzhtraits > div:is(#zeus, #ZEUS, #Zeus) {
-  --group: var(--zeus);
+  : var(--zeus);
   &:before {
     content: "\f0e7";
   }
 }
 #expedtab .expzhtraits > div:is(#hefesto, #HEFESTO, #Hefesto) {
-  --group: var(--hefesto);
+  : var(--hefesto);
   &:before {
     content: "\f6e3";
   }
 }
 #expedtab .expzhtraits > div:is(#hestia, #HESTIA, #hestia) {
-  --group: var(--hestia);
+  : var(--hestia);
   &:before {
     content: "\f7e4";
   }
 }
 #expedtab .expzhtraits > div:is(#ares, #ARES, #ares) {
-  --group: var(--ares);
+  : var(--ares);
   &:before {
     content: "\f71d";
   }
@@ -1385,7 +1377,7 @@
 }
 #expedtab #expzhist::-webkit-scrollbar-thumb,
 #expedtab #expzextr::-webkit-scrollbar-thumb {
-  background: var(--group);
+  background: var();
   border: 4px solid var(--back1);
   border-radius: var(--bradius);
 }
@@ -1411,8 +1403,8 @@
 .tabrol1,
 .tabrol2,
 .tabrol3 {
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  --accent: var(--personalclr, var());
+  --taccent: rgb(from var(--personalclr, var()) r g b / .6);
 }
 .tabrol1 > br,
 .tabrol2 > br,
@@ -1453,7 +1445,7 @@
   gap: var(--gap0);
 }
 .tabrol1 {
-  border-bottom: var(--gap1) solid var(--group);
+  border-bottom: var(--gap1) solid var();
 }
 .tabrol1 .tbroltit > b {
   text-transform: uppercase;
@@ -1589,8 +1581,8 @@
   align-items: center;
 }
 #tabcombatpj {
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  --accent: var(--personalclr, var());
+  --taccent: rgb(from var(--personalclr, var()) r g b / .6);
 }
 #tabcombatmn {
   --accent: var(--staff);
@@ -1943,7 +1935,7 @@
   outline-offset: var(--gap2);
   background: var(--back2);
   position: relative;
-  --accent: var(--group);
+  --accent: var();
   overflow: hidden;
 }
 .hbcfirma > br {
@@ -2029,7 +2021,7 @@
   gap: var(--paddclamp7);
   display: flex;
   flex-direction: column;
-  --accent: var(--group);
+  --accent: var();
 }
 .tabusqres > br,
 .tabusq > br,
@@ -2069,7 +2061,7 @@
   flex-direction: column;
   padding: var(--paddclamp3);
   gap: var(--paddclamp7);
-  --accent: var(--group);
+  --accent: var();
 }
 .tabutrama,
 .tabupj {
@@ -2201,9 +2193,9 @@
 .tabrelas,
 .tabhojaexp
 {
-  --group: var(--personalclr, inherit);
-  --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  : var(--personalclr, inherit);
+  --accent: var(--personalclr, var());
+  --taccent: rgb(from var(--personalclr, var()) r g b / .6);
 }
 /* BAÚL */
 .tabaul {
@@ -2227,7 +2219,7 @@
   align-items: center;
   border-radius: var(--bradius);
   max-width: 32.143rem;
-  padding: 60px;
+  padding: var(--paddclamp1);
   gap: var(--paddclamp5);
 }
 .tabaul#tbfull {
@@ -2239,15 +2231,15 @@
 .tabaul .tbauimg {
   position: relative;
   flex-shrink: 0;
-  width: 270px;
+  width: clamp(8rem, 20vw, 19.286rem);
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: var(--bradius);
   justify-content: center;
   align-items: center;
-  outline: 2px solid var(--accent);
+  outline: var(--bthickness) solid var(--accent);
   outline-offset: var(--gap1);
-  margin: 8px;
+  margin: var(--gap2);
 }
 .tabaul .tbauimg:before {
   content: "";
@@ -2279,7 +2271,8 @@
   text-align: justify;
   text-align-last: center;
   width: 70%;
-  font: 700 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--txt4);
   line-height: 150%;
@@ -2290,11 +2283,12 @@
   opacity: 1;
 }
 .tabaul .tbauname {
-  font: 900 var(--fs-h2) var(--font1);
+  font: var(--fo-h2);
+  font-size: var(--fo-h2-clamp);
   text-transform: uppercase;
   line-height: 100%;
   color: var(--txt1);
-  text-shadow: 1px 1px 0.5px var(--group);
+  text-shadow: 1px 1px 0.5px var();
 }
 .tabaul .tbauname > span {
   display: block;
@@ -2333,8 +2327,8 @@
   font-size: var(--fs-big);
   border-radius: var(--bradius);
   border: var(--border1);
-  width: var(--paddclamp3);
-  height: var(--paddclamp3);
+  width: var(--padd5);
+  height: var(--padd5);
 }
 .tabaul#tbsimple .tbaulinks > a:hover {
   background-color: var(--accent);
@@ -2342,7 +2336,7 @@
   color: var(--back1);
 }
 .tabaul#tbfull .tbaulinks {
-  gap: 12px var(--paddclamp7);
+  gap: var(--gap3) var(--paddclamp7);
   justify-content: space-around;
 }
 .tabaul#tbfull .tbaulinks > a {
@@ -2360,7 +2354,7 @@
   align-self: stretch;
 }
 .tabaul .tbaucont {
-  height: 180px;
+  height: 12.857rem;
   overflow: auto;
   padding-right: var(--gap3);
   flex-shrink: 0;
@@ -2384,7 +2378,8 @@
   gap: var(--gap1);
 }
 .tabaul .tbauinfo > em > b {
-  font: 900 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: 900;
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: var(--bthickness);
@@ -2395,8 +2390,8 @@
 }
 .tabaul .tbauinfo > em > span {
   display: block;
-  font: 600 var(--fs-smaller) var(--font3);
-  font-style: italic;
+  font: normal var(--fs-small) var(--font1);
+  font-style: normal;
   color: var(--txt4);
   text-transform: lowercase;
 }
@@ -2408,7 +2403,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 570px;
+  max-width: 40.714rem;
 }
 .tabcrono > br,
 .tabcrono .tabcronocont > br,
@@ -2424,7 +2419,8 @@
   background: var(--back1);
   text-transform: uppercase;
   text-align: center;
-  font: 700 var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   color: var(--txt1);
   letter-spacing: 2px;
   line-height: 100%;
@@ -2436,9 +2432,10 @@
 }
 .tabcrono .tabcrcoyear {
   text-transform: lowercase;
-  font: 900 var(--fs-h4) var(--font1);
+  font: var(--fo-h4);
+  font-size: var(--fo-h4-clamp);
   color: var(--txt1);
-  text-shadow: 1px 1px 0.5px var(--group);
+  text-shadow: 1px 1px 0.5px var();
   line-height: 100%;
 }
 .tabcrono .tabcrcoyear:not(:first-of-type) {
@@ -2446,7 +2443,8 @@
 }
 .tabcrono .tabcrcomonth {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   font-style: italic;
   color: var(--txt4);
   display: block;
@@ -2458,9 +2456,9 @@
   height: var(--bthickness);
   display: inline-block;
   background: var(--accent);
-  margin-right: 8px;
+  margin-right: var(--gap2);
   position: relative;
-  top: -2px;
+  top: calc((var(--gap0) / 1.8) * -1);
 }
 .tabcrono .tabcrcothread {
   align-items: center;
@@ -2468,8 +2466,8 @@
   gap: var(--gap3);
 }
 .tabcrono .tabcrcothread > i {
-  width: var(--paddclamp3);
-  height: var(--paddclamp3);
+  width: var(--padd5);
+  height: var(--padd5);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -2482,48 +2480,34 @@
 .tabcrono .tabcrcothread > i:before {
   content: "";
   color: var(--accent);
-  font: 400 var(--fs-big) var(--font4);
+  font: var(--fo-icon2);
   transition: var(--trs1);
 }
-.tabcrono .tabcrcothread#abierto > i:before,
-.tabcrono .tabcrcothread#Abierto > i:before,
-.tabcrono .tabcrcothread#ABIERTO > i:before {
+.tabcrono .tabcrcothread:is(#abierto, #Abierto, #ABIERTO) > i:before {
   content: "\f09c";
 }
-.tabcrono .tabcrcothread#cerrado > i:before,
-.tabcrono .tabcrcothread#Cerrado > i:before,
-.tabcrono .tabcrcothread#CERRADO > i:before {
+.tabcrono .tabcrcothread:is(#cerrado, #Cerrado, #CERRADO) > i:before {
   content: "\f023";
 }
-.tabcrono .tabcrcothread#inconcluso > i:before,
-.tabcrono .tabcrcothread#Inconcluso > i:before,
-.tabcrono .tabcrcothread#INCONCLUSO > i:before {
+.tabcrono .tabcrcothread:is(#inconcluso, #Inconcluso, #INCONCLUSO) > i:before {
   content: "\f254";
 }
-.tabcrono .tabcrcothread#oficio > i:before,
-.tabcrono .tabcrcothread#Oficio > i:before,
-.tabcrono .tabcrcothread#OFICIO > i:before {
+.tabcrono .tabcrcothread:is(#oficio, #Oficio, #OFICIO) > i:before {
   content: "\f807";
 }
-.tabcrono .tabcrcothread#entrenamiento > i:before,
-.tabcrono .tabcrcothread#Entrenamiento > i:before,
-.tabcrono .tabcrcothread#ENTRENAMIENTO > i:before {
+.tabcrono .tabcrcothread:is(#entrenamiento, #Entrenamiento, #ENTRENAMIENTO) > i:before {
   content: "\f44b";
 }
-.tabcrono .tabcrcothread#mision > i:before,
-.tabcrono .tabcrcothread#Mision > i:before,
-.tabcrono .tabcrcothread#MISION > i:before,
-.tabcrono .tabcrcothread#misión > i:before,
-.tabcrono .tabcrcothread#Misión > i:before,
-.tabcrono .tabcrcothread#MISIÓN > i:before {
+.tabcrono .tabcrcothread:is(#mision, #Mision, #MISION, #misión, #Misión, #MISIÓN) > i:before {
   content: "\f70e";
 }
 .tabcrono .tabcrcothread > div {
   text-transform: uppercase;
-  gap: 4px;
+  gap: var(--gap0);
 }
 .tabcrono .tabcrcothread > div > a {
-  font: 800 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: 800;
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: var(--bthickness);
@@ -2534,7 +2518,8 @@
 }
 .tabcrono .tabcrcothread > div > em {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   font-style: normal;
   line-height: 100%;
@@ -2561,7 +2546,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 570px;  
+  max-width: 40.714rem;  
 }
 .tabrelas > br,
 .tabrelas .tabrelascont > br,
@@ -2577,7 +2562,8 @@
   background: var(--back1);
   text-transform: uppercase;
   text-align: center;
-  font: 700 var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   color: var(--txt1);
   letter-spacing: 2px;
   line-height: 100%;
@@ -2592,216 +2578,204 @@
   justify-content: flex-start;
   gap: var(--gap3);
 }
-.tabrelas .tabrlcochar#nemesis,
-.tabrelas .tabrlcochar#NEMESIS,
-.tabrelas .tabrlcochar#némesis,
-.tabrelas .tabrlcochar#NÉMESIS,
-.tabrelas .tabrlcochar#Nemesis,
-.tabrelas .tabrlcochar#Némesis {
+.tabrelas .tabrlcochar:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
   --accent: var(--nemesis);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Némesis";
+  }
 }
-.tabrelas .tabrlcochar#tyche,
-.tabrelas .tabrlcochar#TYCHE,
-.tabrelas .tabrlcochar#Tyche {
+.tabrelas .tabrlcochar:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché) {
   --accent: var(--tyche);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Tyché";
+  }
 }
-.tabrelas .tabrlcochar#afrodita,
-.tabrelas .tabrlcochar#AFRODITA,
-.tabrelas .tabrlcochar#Afrodita {
+.tabrelas .tabrlcochar:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone) {
+  --accent: var(--persefone);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Perséfone";
+  }
+}
+.tabrelas .tabrlcochar:is(#afrodita, #AFRODITA, #Afrodita) {
   --accent: var(--afrodita);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Afrodita";
+  }
 }
-.tabrelas .tabrlcochar#dioniso,
-.tabrelas .tabrlcochar#DIONISO,
-.tabrelas .tabrlcochar#Dioniso {
+.tabrelas .tabrlcochar:is(#dioniso, #DIONISO, #Dioniso) {
   --accent: var(--dioniso);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Dioniso";
+  }
 }
-.tabrelas .tabrlcochar#hades,
-.tabrelas .tabrlcochar#HADES,
-.tabrelas .tabrlcochar#Hades {
+.tabrelas .tabrlcochar:is(#hades, #HADES, #Hades) {
   --accent: var(--hades);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hades";
+  }
 }
-.tabrelas .tabrlcochar#hecate,
-.tabrelas .tabrlcochar#HECATE,
-.tabrelas .tabrlcochar#hécate,
-.tabrelas .tabrlcochar#HÉCATE,
-.tabrelas .tabrlcochar#Hecate,
-.tabrelas .tabrlcochar#Hécate {
+.tabrelas .tabrlcochar:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate) {
   --accent: var(--hecate);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hécate";
+  }
 }
-.tabrelas .tabrlcochar#poseidon,
-.tabrelas .tabrlcochar#POSEIDON,
-.tabrelas .tabrlcochar#poseidón,
-.tabrelas .tabrlcochar#POSEIDÓN,
-.tabrelas .tabrlcochar#Poseidon,
-.tabrelas .tabrlcochar#Poseidón {
-  --accent: var(--poseidon);
-}
-.tabrelas .tabrlcochar#hypnos,
-.tabrelas .tabrlcochar#HYPNOS,
-.tabrelas .tabrlcochar#Hypnos {
+.tabrelas .tabrlcochar:is(#hypnos, #HYPNOS, #Hypnos) {
   --accent: var(--hypnos);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hypnos";
+  }
 }
-.tabrelas .tabrlcochar#khione,
-.tabrelas .tabrlcochar#KHIONE,
-.tabrelas .tabrlcochar#Khione {
-  --accent: var(--khione);
+.tabrelas .tabrlcochar:is(#artemisa, #ARTEMISA, #Artemisa) {
+  --accent: var(--artemisa);
+  & > div > span:before {
+    content: "Caz. de ";
+  }
+  & > div > span:after {
+    content: "Artemisa";
+  }
 }
-.tabrelas .tabrlcochar#hebe,
-.tabrelas .tabrlcochar#HEBE,
-.tabrelas .tabrlcochar#Hebe {
-  --accent: var(--hebe);
+.tabrelas .tabrlcochar:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón) {
+  --accent: var(--poseidon);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Poseidón";
+  }
 }
-.tabrelas .tabrlcochar#atenea,
-.tabrelas .tabrlcochar#ATENEA,
-.tabrelas .tabrlcochar#Atenea {
+.tabrelas .tabrlcochar:is(#atenea, #ATENEA, #Atenea) {
   --accent: var(--atenea);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Atenea";
+  }
 }
-.tabrelas .tabrlcochar#demeter,
-.tabrelas .tabrlcochar#DEMETER,
-.tabrelas .tabrlcochar#deméter,
-.tabrelas .tabrlcochar#DEMÉTER,
-.tabrelas .tabrlcochar#Demeter,
-.tabrelas .tabrlcochar#Deméter {
-  --accent: var(--demeter);
+.tabrelas .tabrlcochar:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone) {
+  --accent: var(--khione);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Khíone";
+  }
 }
-.tabrelas .tabrlcochar#iris,
-.tabrelas .tabrlcochar#IRIS,
-.tabrelas .tabrlcochar#Iris {
+.tabrelas .tabrlcochar:is(#hebe, #HEBE, #Hebe) {
+  --accent: var(--hebe);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hebe";
+  }
+}
+.tabrelas .tabrlcochar:is(#iris, #IRIS, #Iris) {
   --accent: var(--iris);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Iris";
+  }
 }
-.tabrelas .tabrlcochar#hermes,
-.tabrelas .tabrlcochar#HERMES,
-.tabrelas .tabrlcochar#Hermes {
+.tabrelas .tabrlcochar:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter) {
+  --accent: var(--demeter);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Deméter";
+  }
+}
+.tabrelas .tabrlcochar:is(#hermes, #HERMES, #Hermes) {
   --accent: var(--hermes);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hermes";
+  }
 }
-.tabrelas .tabrlcochar#apolo,
-.tabrelas .tabrlcochar#APOLO,
-.tabrelas .tabrlcochar#Apolo {
+.tabrelas .tabrlcochar:is(#apolo, #APOLO, #Apolo) {
   --accent: var(--apolo);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Apolo";
+  }
 }
-.tabrelas .tabrlcochar#zeus,
-.tabrelas .tabrlcochar#ZEUS,
-.tabrelas .tabrlcochar#Zeus {
+.tabrelas .tabrlcochar:is(#zeus, #ZEUS, #Zeus) {
   --accent: var(--zeus);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Zeus";
+  }
 }
-.tabrelas .tabrlcochar#hefesto,
-.tabrelas .tabrlcochar#HEFESTO,
-.tabrelas .tabrlcochar#Hefesto {
+.tabrelas .tabrlcochar:is(#hefesto, #HEFESTO, #Hefesto) {
   --accent: var(--hefesto);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hefesto";
+  }
 }
-.tabrelas .tabrlcochar#ares,
-.tabrelas .tabrlcochar#ARES,
-.tabrelas .tabrlcochar#Ares {
+.tabrelas .tabrlcochar:is(#hestia, #HESTIA, #hestia) {
+  --accent: var(--hestia);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Hestia";
+  }
+}
+.tabrelas .tabrlcochar:is(#ares, #ARES, #ares) {
   --accent: var(--ares);
+  & > div > span:before {
+    content: "Des. de ";
+  }
+  & > div > span:after {
+    content: "Ares";
+  }
+}
+.tabrelas .tabrlcochar > div > span:before {
+  content: "Des. de ";
 }
 .tabrelas .tabrlcochar > div > span:after {
   content: "Nadie";
 }
-.tabrelas .tabrlcochar#nemesis > div > span:after,
-.tabrelas .tabrlcochar#NEMESIS > div > span:after,
-.tabrelas .tabrlcochar#némesis > div > span:after,
-.tabrelas .tabrlcochar#NÉMESIS > div > span:after,
-.tabrelas .tabrlcochar#Nemesis > div > span:after,
-.tabrelas .tabrlcochar#Némesis > div > span:after {
-  content: "Némesis";
-}
-.tabrelas .tabrlcochar#tyche > div > span:after,
-.tabrelas .tabrlcochar#TYCHE > div > span:after,
-.tabrelas .tabrlcochar#Tyche > div > span:after {
-  content: "Tyche";
-}
-.tabrelas .tabrlcochar#afrodita > div > span:after,
-.tabrelas .tabrlcochar#AFRODITA > div > span:after,
-.tabrelas .tabrlcochar#Afrodita > div > span:after {
-  content: "Afrodita";
-}
-.tabrelas .tabrlcochar#dioniso > div > span:after,
-.tabrelas .tabrlcochar#DIONISO > div > span:after,
-.tabrelas .tabrlcochar#Dioniso > div > span:after {
-  content: "Dioniso";
-}
-.tabrelas .tabrlcochar#hades > div > span:after,
-.tabrelas .tabrlcochar#HADES > div > span:after,
-.tabrelas .tabrlcochar#Hades > div > span:after {
-  content: "Hades";
-}
-.tabrelas .tabrlcochar#hecate > div > span:after,
-.tabrelas .tabrlcochar#HECATE > div > span:after,
-.tabrelas .tabrlcochar#hécate > div > span:after,
-.tabrelas .tabrlcochar#HÉCATE > div > span:after,
-.tabrelas .tabrlcochar#Hecate > div > span:after,
-.tabrelas .tabrlcochar#Hécate > div > span:after {
-  content: "Hécate";
-}
-.tabrelas .tabrlcochar#poseidon > div > span:after,
-.tabrelas .tabrlcochar#POSEIDON > div > span:after,
-.tabrelas .tabrlcochar#poseidón > div > span:after,
-.tabrelas .tabrlcochar#POSEIDÓN > div > span:after,
-.tabrelas .tabrlcochar#Poseidon > div > span:after,
-.tabrelas .tabrlcochar#Poseidón > div > span:after {
-  content: "Poseidón";
-}
-.tabrelas .tabrlcochar#hypnos > div > span:after,
-.tabrelas .tabrlcochar#HYPNOS > div > span:after,
-.tabrelas .tabrlcochar#Hypnos > div > span:after {
-  content: "Hypnos";
-}
-.tabrelas .tabrlcochar#khione > div > span:after,
-.tabrelas .tabrlcochar#KHIONE > div > span:after,
-.tabrelas .tabrlcochar#Khione > div > span:after {
-  content: "Khione";
-}
-.tabrelas .tabrlcochar#hebe > div > span:after,
-.tabrelas .tabrlcochar#HEBE > div > span:after,
-.tabrelas .tabrlcochar#Hebe > div > span:after {
-  content: "Hebe";
-}
-.tabrelas .tabrlcochar#atenea > div > span:after,
-.tabrelas .tabrlcochar#ATENEA > div > span:after,
-.tabrelas .tabrlcochar#Atenea > div > span:after {
-  content: "Atenea";
-}
-.tabrelas .tabrlcochar#demeter > div > span:after,
-.tabrelas .tabrlcochar#DEMETER > div > span:after,
-.tabrelas .tabrlcochar#deméter > div > span:after,
-.tabrelas .tabrlcochar#DEMÉTER > div > span:after,
-.tabrelas .tabrlcochar#Demeter > div > span:after,
-.tabrelas .tabrlcochar#Deméter > div > span:after {
-  content: "Deméter";
-}
-.tabrelas .tabrlcochar#iris > div > span:after,
-.tabrelas .tabrlcochar#IRIS > div > span:after,
-.tabrelas .tabrlcochar#Iris > div > span:after {
-  content: "Iris";
-}
-.tabrelas .tabrlcochar#hermes > div > span:after,
-.tabrelas .tabrlcochar#HERMES > div > span:after,
-.tabrelas .tabrlcochar#Hermes > div > span:after {
-  content: "Hermes";
-}
-.tabrelas .tabrlcochar#apolo > div > span:after,
-.tabrelas .tabrlcochar#APOLO > div > span:after,
-.tabrelas .tabrlcochar#Apolo > div > span:after {
-  content: "Apolo";
-}
-.tabrelas .tabrlcochar#zeus > div > span:after,
-.tabrelas .tabrlcochar#ZEUS > div > span:after,
-.tabrelas .tabrlcochar#Zeus > div > span:after {
-  content: "Zeus";
-}
-.tabrelas .tabrlcochar#hefesto > div > span:after,
-.tabrelas .tabrlcochar#HEFESTO > div > span:after,
-.tabrelas .tabrlcochar#Hefesto > div > span:after {
-  content: "Hefesto";
-}
-.tabrelas .tabrlcochar#ares > div > span:after,
-.tabrelas .tabrlcochar#ARES > div > span:after,
-.tabrelas .tabrlcochar#Ares > div > span:after {
-  content: "Ares";
-}
 .tabrelas .tabrlcochar .tabrlcocharimg {
-  width: 70px;
-  height: 70px;
+  width: var(--icon2);
+  height: var(--icon2);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -2836,19 +2810,21 @@
 }
 .tabrelas .tabrlcochar > div {
   text-transform: uppercase;
-  gap: 4px;
+  gap: var(--gap0);
 }
 .tabrelas .tabrlcochar > div > span {
   background: var(--accent);
-  font: 800 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 800;
   color: var(--back1);
   line-height: 100%;
   border-radius: var(--bradius);
-  padding: 4px var(--gap1);
+  padding: var(--gap0) var(--gap1);
   width: fit-content;
 }
 .tabrelas .tabrlcochar > div > a {
-  font: 800 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: 900;
   color: var(--txt1);
   text-decoration: underline;
   text-decoration-thickness: var(--bthickness);
@@ -2859,7 +2835,8 @@
 }
 .tabrelas .tabrlcochar > div > em {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: bold;
   color: var(--txt4);
   font-style: normal;
   line-height: 100%;
@@ -2882,7 +2859,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 570px;
+  max-width: 40.714rem;
 }
 .tabhojaexp > br,
 .tabhojaexp .tabhojexpcont > br,
@@ -2900,7 +2877,8 @@
   background: var(--back1);
   text-transform: uppercase;
   text-align: center;
-  font: 700 var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   color: var(--txt1);
   letter-spacing: 2px;
   line-height: 100%;
@@ -2923,7 +2901,8 @@
 }
 .tabhojaexp .tabhojcodata > span {
   text-transform: uppercase;
-  font: 700 var(--fs-bigger) var(--font2);
+  font: var(--fo-bod-alt1);
+  font-weight: bold;
   flex: 1;
   text-align: center;
   color: var(--txt3);
@@ -2938,18 +2917,21 @@
 }
 .tabhojaexp .tabhojcomejoras > b {
   text-transform: uppercase;
-  font: 900 var(--fs-big) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: 900;
+  font-size: var(--fs-big);
   background: var(--accent);
   width: fit-content;
   color: var(--back1);
   line-height: 100%;
-  padding: 4px 8px;
+  padding: var(--gap1) var(--gap3);
   border-radius: var(--bradius);
   margin-bottom: var(--gap1);
 }
 .tabhojaexp .tabhojcomejoras > em {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   font-style: italic;
   color: var(--txt4);
   display: block;
@@ -2961,18 +2943,19 @@
   height: var(--bthickness);
   display: inline-block;
   background: var(--accent);
-  margin-right: 8px;
+  margin-right: var(--gap1);
   position: relative;
-  top: -2px;
+  top: calc((var(--gap0) / 1.2) * -1);
 }
 .tabhojaexp .tabhojcogoals {
   gap: var(--gap3);
 }
 .tabhojaexp .tabhojcogoalslvl {
   text-transform: uppercase;
-  font: 900 var(--fs-h4) var(--font1);
+  font: var(--fo-h4);
+  font-size: var(--fo-h4-clamp);
   color: var(--txt1);
-  text-shadow: 1px 1px 0.5px var(--group);
+  text-shadow: 1px 1px 0.5px var();
   line-height: 100%;
 }
 .tabhojaexp .tabhojcogoalslvl > b {
@@ -2989,8 +2972,8 @@
   align-items: center;
 }
 .tabhojaexp .tabhojcogoalitem > i {
-  width: var(--paddclamp3);
-  height: var(--paddclamp3);
+  width: var(--padd5);
+  height: var(--padd5);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -3003,31 +2986,29 @@
 .tabhojaexp .tabhojcogoalitem > i:before {
   content: "";
   color: var(--accent);
-  font: 600 var(--fs-big) var(--font4);
+  font: var(--fo-icon2);
   transition: var(--trs1);
 }
-.tabhojaexp .tabhojcogoalitem#completo > i:before,
-.tabhojaexp .tabhojcogoalitem#Completo > i:before,
-.tabhojaexp .tabhojcogoalitem#COMPLETO > i:before {
+.tabhojaexp .tabhojcogoalitem:is(#completo, #Completo, #COMPLETO) > i:before {
   content: "\f00c";
 }
-.tabhojaexp .tabhojcogoalitem#incompleto > i:before,
-.tabhojaexp .tabhojcogoalitem#Incompleto > i:before,
-.tabhojaexp .tabhojcogoalitem#INCOMPLETO > i:before {
+.tabhojaexp .tabhojcogoalitem:is(#incompleto, #Incompleto, #INCOMPLETO) > i:before {
   content: "\f00d";
 }
 .tabhojaexp .tabhojcogoalitem > div {
   text-transform: uppercase;
-  gap: 4px;
+  gap: var(--gap0);
 }
 .tabhojaexp .tabhojcogoalitem > div > b {
-  font: 800 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: 900;
   color: var(--txt1);
   line-height: 100%;
 }
 .tabhojaexp .tabhojcogoalitem > div > em {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   font-style: normal;
   line-height: 100%;
