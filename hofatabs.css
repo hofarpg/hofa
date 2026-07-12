@@ -901,14 +901,16 @@
 }
 #expedtab .extbnam > b {
   text-transform: uppercase;
-  font: 900 var(--fs-h2) var(--font1);
+  font: var(--fo-h2);
+  font-size: var(--fo-h2-clamp);
   line-height: 85%;
   color: var(--txt1) !important;
   text-shadow: 1px 1px 0.5px var(--group);
 }
 #expedtab .extbnam > em {
   text-transform: lowercase;
-  font: 300 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 300;
   font-style: italic;
   color: var(--txt4);
   line-height: 100%;
@@ -916,17 +918,17 @@
 }
 #expedtab .extbnam > em:before {
   content: "";
-  width: 60px;
+  width: var(--paddclamp1);
   height: var(--bthickness);
   display: inline-block;
   background: var(--tgroup);
-  margin-right: 8px;
+  margin-right: var(--gap1);
   position: relative;
-  top: -2px;
+  top: calc((var(--gap0) / 1.4) * -1);
 }
 #expedtab #expimg {
   width: 100%;
-  height: 300px;
+  height: 21.429rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -947,7 +949,7 @@
   border-top: var(--border1);
   border-bottom: var(--border1);
   padding: var(--gap3);
-  gap: 6px var(--gap3);
+  gap: var(--gap1) var(--gap3);
   background: var(--back2);
   flex-wrap: wrap;
 }
@@ -955,19 +957,20 @@
   cursor: var(--crs2);
   text-transform: uppercase;
   border-radius: var(--bradius);
-  font: 800 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 800;
   text-align: center;
   border-left: var(--border2);
   border-right: var(--border2);
-  padding: 4px var(--gap1);
+  padding: var(--gap0) var(--gap2);
   line-height: 100% !important;
   color: var(--txt4) !important;
   transition: var(--trs1);
-  border-top: 2px solid transparent !important;
+  border-top: var(--bthickness) solid transparent !important;
 }
 #expedtab #extbclabels a.preactive {
   color: var(--txt1);
-  border-top-color: var(--group);
+  border-top-color: var(--group)!important;
 }
 #expedtab #extbcinfo {
   position: relative;
@@ -999,8 +1002,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 50px;
-  gap: 35px;
+  padding: var(--paddclamp2);
+  gap: var(--paddclamp4);
   align-self: stretch;
 }
 #expedtab #expzdata > b {
@@ -1009,25 +1012,27 @@
   flex-direction: column;
   text-align: left;
   text-transform: uppercase;
-  font: 700 var(--fs-body) var(--font2);
+  font: var(--fo-bod2);
+  font-weight: bold;
   color: var(--txt3);
   line-height: 100% !important;
   gap: var(--gap1);
 }
 #expedtab #expzdata > b > u {
   color: var(--txt1);
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   line-height: 140%;
 }
 #expedtab #expzdata > dl.hidecode {
   flex: 1 0 100%;
-  margin-top: 12px !important;
+  margin-top: var(--gap3) !important;
 }
 #expedtab #expzhist,
 #expedtab #expzextr {
   height: 490px;
   overflow: auto;
-  padding-right: 22px;
+  padding-right: calc(var(--paddclamp3) + 2px);
   border: var(--paddclamp3) solid var(--back1);
   border-right-width: var(--paddclamp7);
   line-height: 132%;
@@ -1041,11 +1046,11 @@
 }
 #expedtab .colu.col2 {
   column-count: 2;
-  column-width: 220px;
+  column-width: 15.714rem;
 }
 #expedtab .colu.col3 {
   column-count: 3;
-  column-width: 140px;
+  column-width: 10rem;
 }
 #expedtab .expzone .exptitle {
   width: 100%;
@@ -1055,7 +1060,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  gap: 4px;
+  gap: var(--gap0);
 }
 #expedtab .expzone .exptitle > i {
   font-size: var(--fs-display);
@@ -1064,20 +1069,21 @@
 }
 #expedtab .expzone .exptitle > b {
   text-transform: uppercase;
-  font: 900 var(--fs-bigger) var(--font2);
+  font: var(--fo-bod-alt2);
+  font-weight: 900;
   color: var(--txt1) !important;
   text-decoration: underline;
   text-decoration-color: var(--tgroup);
   text-decoration-thickness: var(--bthickness);
-  text-underline-offset: 3px;
+  text-underline-offset: calc(var(--bthickness) + .05rem);
   line-height: calc(var(--fs-bigger) + 20%);
 }
 #expedtab .expzone .exptitle > em {
   text-transform: lowercase;
-  font: 600 var(--fs-smaller) var(--font3);
-  font-style: italic;
+  font: normal var(--fs-text) var(--font1);
+  font-style: normal;
   color: var(--txt4);
-  max-width: 200px;
+  max-width: 14.286rem;
   width: 100%;
   text-align: justify;
   text-align-last: center;
@@ -1095,7 +1101,7 @@
   flex: 1 0 7%;
 }
 #expedtab .expzhstats > b {
-  border-top: 2px solid var(--tgroup);
+  border-top: var(--bthickness) solid var(--tgroup);
   border-left: var(--border2);
   border-right: var(--border2);
   flex: 1;
@@ -1104,19 +1110,22 @@
   align-items: center;
   border-radius: var(--bradius);
   padding: var(--gap3);
-  gap: 4px;
+  gap: var(--gap1);
   text-align: center;
   text-transform: uppercase;
 }
 #expedtab .expzhstats > b > strong {
   color: var(--txt1);
-  font: 900 var(--fs-bigger) var(--font2) !important;
-  line-height: 100% !important;
+  font: var(--fo-bod1);
+  font-weight: 900;
+  line-height: 100%;
 }
 #expedtab .expzhstats > b > em {
-  font: 700 var(--fs-small) var(--font3);
-  font-style: italic;
+  font: var(--fo-deco2);
+  font-weight: bold;
+  font-style: normal;
   color: var(--txt3);
+  line-height: 100%;
 }
 #expedtab .expzhd {
   gap: var(--paddclamp5);
@@ -1137,7 +1146,8 @@
 }
 #expedtab .expzhtraits > div > i {
   text-transform: uppercase;
-  font: bold var(--fs-smaller) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   font-style: normal;
   margin-bottom: var(--gap1);
@@ -1145,26 +1155,27 @@
   border-top: var(--tborder);
   border-left: var(--tborder);
   border-right: var(--tborder);
-  padding: 4px var(--gap1);
+  padding: var(--gap0) var(--gap1);
   line-height: 100%;
 }
 #expedtab .expzhtraits > div > b {
   text-transform: uppercase;
-  font: 900 var(--fs-big) var(--font2);
+  font: var(--fo-deco1);
+  font-weight: 900;
   color: var(--txt1);
   line-height: 100%;
 }
 #expedtab .expzhtraits > div > em {
   text-transform: lowercase;
   font: normal var(--fs-text) var(--font1);
-  font-style: italic;
+  font-style: normal;
   color: var(--txt3);
   line-height: 110%;
 }
 #expedtab .expzhtraits > div:before {
   content: "\e4fa";
   position: absolute;
-  font: 300 var(--fs-title) var(--font4);
+  font: 300 var(--fs-h1) var(--font4);
   color: var(--tgroup);
   opacity: 0.2;
   z-index: 0;
@@ -1181,10 +1192,10 @@
 }
 #expedtab .expzhskills {
   overflow: auto;
-  height: 290px;
+  height: 20.714rem;
   padding-right: var(--gap3);
   width: 100%;
-  line-height: 128%;
+  line-height: 130%;
 }
 #expedtab .expzhtraits > div.expzhtflaw {
   border-right: var(--border2);
@@ -1194,7 +1205,7 @@
 }
 #expedtab .expzhtraits > div.expzhtclass:before {
   opacity: 0.4;
-  font-size: calc(var(--fs-title) + var(--fs-h4));
+  font-size: calc(var(--fs-h1) + 1rem);
 }
 #expedtab .expzhtraits > div.expzhtclass > b {
   font-size: var(--fs-bigger);
@@ -1204,11 +1215,11 @@
 #expedtab .expzhskills h4.post-content {
   color: var(--group);
   text-decoration: none;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px var(--gap3) 0px;
   display: flex !important;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap3);
 }
 #expedtab .expzhskills h4.post-content:before,
 #expedtab .expzhskills h4.post-content:after {
@@ -1221,10 +1232,11 @@
 #expedtab .expzhskills > span {
   text-transform: uppercase;
   display: inline-block;
-  padding: 4px var(--gap1);
+  padding: var(--gap0) var(--gap1);
   background: var(--group);
   border-radius: var(--bradius);
-  font: 800 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 800;
   line-height: 100%;
   color: var(--back2);
   margin-right: var(--gap1);
@@ -1237,125 +1249,134 @@
 #expedtab .expzhskills > i {
   color: var(--txt4);
 }
-#expedtab .expzhtraits > div#nemesis:before,
-#expedtab .expzhtraits > div#NEMESIS:before,
-#expedtab .expzhtraits > div#némesis:before,
-#expedtab .expzhtraits > div#NÉMESIS:before,
-#expedtab .expzhtraits > div#Nemesis:before,
-#expedtab .expzhtraits > div#Némesis:before {
-  content: "\f6cb";
-  color: var(--tnemesis);
+#expedtab .expzhtraits > div:before {
+  color: var(--group);
 }
-#expedtab .expzhtraits > div#tyche:before,
-#expedtab .expzhtraits > div#TYCHE:before,
-#expedtab .expzhtraits > div#Tyche:before {
-  content: "\e362";
-  color: var(--ttyche);
+#expedtab .expzhtraits > div:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
+  --group: var(--nemesis);
+  &:before {
+    content: "\f6cb";
+  }
 }
-#expedtab .expzhtraits > div#afrodita:before,
-#expedtab .expzhtraits > div#AFRODITA:before,
-#expedtab .expzhtraits > div#Afrodita:before {
-  content: "\f4ba";
-  color: var(--tafrodita);
+#expedtab .expzhtraits > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché) {
+  --group: var(--tyche);
+  &:before {
+    content: "\e362";
+  }
 }
-#expedtab .expzhtraits > div#dioniso:before,
-#expedtab .expzhtraits > div#DIONISO:before,
-#expedtab .expzhtraits > div#Dioniso:before {
-  content: "\f4e3";
-  color: var(--tdioniso);
+#expedtab .expzhtraits > div:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone) {
+  --group: var(--persefone);
+  &:before {
+    content: "\e5aa";
+  }
 }
-#expedtab .expzhtraits > div#hades:before,
-#expedtab .expzhtraits > div#HADES:before,
-#expedtab .expzhtraits > div#Hades:before {
-  content: "\f54c";
-  color: var(--thades);
+#expedtab .expzhtraits > div:is(#afrodita, #AFRODITA, #Afrodita) {
+  --group: var(--afrodita);
+  &:before {
+    content: "\f4ba";
+  }
 }
-#expedtab .expzhtraits > div#hecate:before,
-#expedtab .expzhtraits > div#HECATE:before,
-#expedtab .expzhtraits > div#hécate:before,
-#expedtab .expzhtraits > div#HÉCATE:before,
-#expedtab .expzhtraits > div#Hecate:before,
-#expedtab .expzhtraits > div#Hécate:before {
-  content: "\f6bf";
-  color: var(--thecate);
+#expedtab .expzhtraits > div:is(#dioniso, #DIONISO, #Dioniso) {
+  --group: var(--dioniso);
+  &:before {
+    content: "\f4e3";
+  }
 }
-#expedtab .expzhtraits > div#poseidon:before,
-#expedtab .expzhtraits > div#POSEIDON:before,
-#expedtab .expzhtraits > div#poseidón:before,
-#expedtab .expzhtraits > div#POSEIDÓN:before,
-#expedtab .expzhtraits > div#Poseidon:before,
-#expedtab .expzhtraits > div#Poseidón:before {
-  content: "\f773";
-  color: var(--tposeidon);
+#expedtab .expzhtraits > div:is(#hades, #HADES, #Hades) {
+  --group: var(--hades);
+  &:before {
+    content: "\f54c";
+  }
 }
-#expedtab .expzhtraits > div#hypnos:before,
-#expedtab .expzhtraits > div#HYPNOS:before,
-#expedtab .expzhtraits > div#Hypnos:before {
-  content: "\f34e";
-  color: var(--thypnos);
+#expedtab .expzhtraits > div:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate) {
+  --group: var(--hecate);
+  &:before {
+    content: "\f6bf";
+  }
 }
-#expedtab .expzhtraits > div#khione:before,
-#expedtab .expzhtraits > div#KHIONE:before,
-#expedtab .expzhtraits > div#Khione:before {
-  content: "\f2dc";
-  color: var(--tkhione);
+#expedtab .expzhtraits > div:is(#hypnos, #HYPNOS, #Hypnos) {
+  --group: var(--hypnos);
+  &:before {
+    content: "\f34e";
+  }
 }
-#expedtab .expzhtraits > div#hebe:before,
-#expedtab .expzhtraits > div#HEBE:before,
-#expedtab .expzhtraits > div#Hebe:before {
-  content: "\e588";
-  color: var(--thebe);
+#expedtab .expzhtraits > div:is(#artemisa, #ARTEMISA, #Artemisa) {
+  --group: var(--artemisa);
+  &:before {
+    content: "\f186";
+  }
 }
-#expedtab .expzhtraits > div#atenea:before,
-#expedtab .expzhtraits > div#ATENEA:before,
-#expedtab .expzhtraits > div#Atenea:before {
-  content: "\f5dc";
-  color: var(--tatenea);
+#expedtab .expzhtraits > div:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón) {
+  --group: var(--poseidon);
+  &:before {
+    content: "\f773";
+  }
 }
-#expedtab .expzhtraits > div#demeter:before,
-#expedtab .expzhtraits > div#DEMETER:before,
-#expedtab .expzhtraits > div#deméter:before,
-#expedtab .expzhtraits > div#DEMÉTER:before,
-#expedtab .expzhtraits > div#Demeter:before,
-#expedtab .expzhtraits > div#Deméter:before {
-  content: "\f72d";
-  color: var(--tdemeter);
+#expedtab .expzhtraits > div:is(#atenea, #ATENEA, #Atenea) {
+  --group: var(--atenea);
+  &:before {
+    content: "\f5dc";
+  }
 }
-#expedtab .expzhtraits > div#iris:before,
-#expedtab .expzhtraits > div#IRIS:before,
-#expedtab .expzhtraits > div#Iris:before {
-  content: "\f75b";
-  color: var(--tiris);
+#expedtab .expzhtraits > div:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone) {
+  --group: var(--khione);
+  &:before {
+    content: "\f2dc";
+  }
 }
-#expedtab .expzhtraits > div#hermes:before,
-#expedtab .expzhtraits > div#HERMES:before,
-#expedtab .expzhtraits > div#Hermes:before {
-  content: "\f56b";
-  color: var(--thermes);
+#expedtab .expzhtraits > div:is(#hebe, #HEBE, #Hebe) {
+  --group: var(--hebe);
+  &:before {
+    content: "\e588";
+  }
 }
-#expedtab .expzhtraits > div#apolo:before,
-#expedtab .expzhtraits > div#APOLO:before,
-#expedtab .expzhtraits > div#Apolo:before {
-  content: "\f001";
-  color: var(--tapolo);
+#expedtab .expzhtraits > div:is(#iris, #IRIS, #Iris) {
+  --group: var(--iris);
+  &:before {
+    content: "\f75b";
+  }
 }
-#expedtab .expzhtraits > div#zeus:before,
-#expedtab .expzhtraits > div#ZEUS:before,
-#expedtab .expzhtraits > div#Zeus:before {
-  content: "\f0e7";
-  color: var(--tzeus);
+#expedtab .expzhtraits > div:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter) {
+  --group: var(--demeter);
+  &:before {
+    content: "\f72d";
+  }
 }
-#expedtab .expzhtraits > div#hefesto:before,
-#expedtab .expzhtraits > div#HEFESTO:before,
-#expedtab .expzhtraits > div#Hefesto:before {
-  content: "\f7e4";
-  color: var(--thefesto);
+#expedtab .expzhtraits > div:is(#hermes, #HERMES, #Hermes) {
+  --group: var(--hermes);
+  &:before {
+    content: "\f56b";
+  }
 }
-#expedtab .expzhtraits > div#ares:before,
-#expedtab .expzhtraits > div#ARES:before,
-#expedtab .expzhtraits > div#Ares:before {
-  content: "\f71d";
-  color: var(--tares);
+#expedtab .expzhtraits > div:is(#apolo, #APOLO, #Apolo) {
+  --group: var(--apolo);
+  &:before {
+    content: "\f001";
+  }
+}
+#expedtab .expzhtraits > div:is(#zeus, #ZEUS, #Zeus) {
+  --group: var(--zeus);
+  &:before {
+    content: "\f0e7";
+  }
+}
+#expedtab .expzhtraits > div:is(#hefesto, #HEFESTO, #Hefesto) {
+  --group: var(--hefesto);
+  &:before {
+    content: "\f6e3";
+  }
+}
+#expedtab .expzhtraits > div:is(#hestia, #HESTIA, #hestia) {
+  --group: var(--hestia);
+  &:before {
+    content: "\f7e4";
+  }
+}
+#expedtab .expzhtraits > div:is(#ares, #ARES, #ares) {
+  --group: var(--ares);
+  &:before {
+    content: "\f71d";
+  }
 }
 #expedtab #expzhist::-webkit-scrollbar,
 #expedtab #expzextr::-webkit-scrollbar {
@@ -1380,7 +1401,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 570px;
+  max-width: 40.714rem;
   width: 100%;
   background: var(--back1);
   border: var(--border1);
@@ -1405,11 +1426,11 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: var(--paddclamp2);
   padding-bottom: 0;
 }
 .tbrolcont {
-  padding: 50px;
+  padding: var(--paddclamp2);
 }
 .tbrolcont > b,
 .tbrolcont > strong {
