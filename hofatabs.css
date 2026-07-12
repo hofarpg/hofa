@@ -904,7 +904,7 @@
   font: 900 var(--fs-h2) var(--font1);
   line-height: 85%;
   color: var(--txt1) !important;
-  text-shadow: var(--shadow3);
+  text-shadow: 1px 1px 0.5px var(--group);
 }
 #expedtab .extbnam > em {
   text-transform: lowercase;
@@ -2262,7 +2262,7 @@
   text-transform: uppercase;
   line-height: 100%;
   color: var(--txt1);
-  text-shadow: var(--shadow3);
+  text-shadow: 1px 1px 0.5px var(--group);
 }
 .tabaul .tbauname > span {
   display: block;
@@ -2406,7 +2406,7 @@
   text-transform: lowercase;
   font: 900 var(--fs-h4) var(--font1);
   color: var(--txt1);
-  text-shadow: var(--shadow3);
+  text-shadow: 1px 1px 0.5px var(--group);
   line-height: 100%;
 }
 .tabcrono .tabcrcoyear:not(:first-of-type) {
@@ -2940,7 +2940,7 @@
   text-transform: uppercase;
   font: 900 var(--fs-h4) var(--font1);
   color: var(--txt1);
-  text-shadow: var(--shadow3);
+  text-shadow: 1px 1px 0.5px var(--group);
   line-height: 100%;
 }
 .tabhojaexp .tabhojcogoalslvl > b {
