@@ -1,5 +1,6 @@
 /* ADMINISTRATIVAS */
 .postbody .content {
+  --largetab: 62rem;
   --bigtab: 57.286rem;
   --regtab: 40.714rem;
   --smalltab: 28.571rem;
@@ -3022,4 +3023,186 @@
 .tabhojaexp .tabhojcogoalitem > div > em a {
   color: var(--accent);
   font-style: italic;
+}
+
+@container postbodycont (max-width: 600px) {
+  /* guidebook */
+  #guidebook {
+    flex-wrap: wrap !important;
+  }
+  #guidelinks,
+  #guidelinked {
+    position: relative !important;
+    top: unset !important;
+    flex: 1 0 100% !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--gap2) var(--gap5) !important;
+  }
+  #guidelinks > strong,
+  #guidelinked > strong {
+    display: none !important;
+  }
+  #guidelinks > a,
+  #guidelinked > a {
+    margin-left: 0px !important;
+    text-align: center !important;
+  }
+  /* expediente */
+  #expedtab .expzhstats {
+    flex: 1;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  #expedtab #expzrhoja {
+    flex-direction: column-reverse !important;
+  }
+  /* baul */
+  .tabaul#tbfull {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .tbfside2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .tabaul .tbauimg {
+    width: clamp(8rem, 20vw, 19.286rem);
+    & span {
+      display: none;
+    }
+  }
+  .tabaul#tbfull .tbauname {
+    text-align: center;
+  }
+  /* busqueda */
+  .tabupjimg {
+    display: none !important;
+  }
+}
+@container postbodycont (max-width: 560px) {
+  /* expediente */
+  #expedtab .expzhstats > b {
+    flex: 1 0 25%;
+  }
+}
+@container postbodycont (max-width: 500px) {
+  /* combate */
+  #tabcombatpj,
+  #tabcombatmn {
+    flex-direction: column;
+  }
+  .tabcomainblock,
+  .tabcotxtblock {
+    max-width: none;
+    width: 100%;
+    align-self: stretch;
+    flex: 1;
+  }
+  .tabcotskills {
+    height: inherit;
+    padding-left: 0px;
+    border-left: none;
+    border-top: var(--border2);
+    padding-top: var(--gap3);
+  }
+  .tabcomainblock {
+    min-height: 17.2rem;
+  }
+  .tabcotxtblock {
+    max-height: 16.47rem;
+    &:empty {
+      display: none;
+    }
+  }
+  /* npcs */
+  #nonplayercharacters .gbnpc {
+    flex: 1 0 100%;
+  }
+}
+@container postbodycont (max-width: 460px) {
+  /* expediente */
+  #expedtab .expzhtraits {
+    flex-direction: column;
+  }
+  #expedtab .expzhtraits > div:is(.expzhtflaw, .expzhtvirtue) {
+    padding: var(--paddclamp7);
+    & i {
+      margin: 0;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  #expedtab .expzhtraits > div:is(.expzhtclass) {
+    padding: var(--paddclamp8);
+    min-height: var(--fs-h1);
+  }
+  #expedtab .expzhtraits > div.expzhtflaw {
+    border-right: none;
+    border-bottom: var(--tborder);
+    padding-top:0px;
+  }
+  #expedtab .expzhtraits > div.expzhtvirtue {
+    border-left: none;
+    border-top: var(--tborder);
+    padding-bottom: 0px;
+  }
+  #expedtab #expimg {
+    height: 17.857rem;
+  }
+  #expedtab .expzhstats > b {
+    flex: 1 0 40%;
+  }
+  /* hoja pj */
+  .tabhojaexp .tabhojcodata {
+    flex-direction: column;
+  }
+  .tabhojaexp .tabhojcodata > em {
+    height: 1px;
+    max-width: 14.286rem;
+    width: 100%;
+  }
+  /* combate */
+  .tabcomainblock,
+  .tabcotxtblock {
+    max-width: none;
+    width: 100%;
+    align-self: stretch;
+    height: auto;
+  }
+}
+@container postbodycont (max-width: 400px) {
+  /* items y criaturas */
+  .gdcriaturas .gdcriat,
+  #itemcatalogue .gdcitem {
+    min-width: 100% !important;
+  }
+  .gdcriaturas .gdcriat .gdcriatimg,
+  .admintab .gdcriat .gdcriatimg {
+    flex: 1 0 100% !important;
+    height: 10.714rem !important;
+    border-right: none !important;
+    border-bottom: var(--border1);
+  }
+  .gdcriaturas .gdcriat .gdcriatblurb,
+  .admintab .gdcriat .gdcriatblurb {
+    height: 15rem !important;
+  }
+  /* expediente */
+  #expedtab #expimg {
+    height: 14.286rem !important;
+  }
+  #expedtab .expzhstats > b {
+    min-width: 40%;
+  }
+  /* otros */
+  .blockquote,
+  .registeredsec {
+    margin: 0px var(--gap0) !important;
+  }
 }
