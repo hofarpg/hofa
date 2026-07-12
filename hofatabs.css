@@ -2051,6 +2051,9 @@
   text-underline-offset: var(--bthickness);
   line-height: 120%;
 }
+.tabusqres b.tbrcreq {
+  color: var(--accent);
+}
 .tabusqres .blockquote.tbrcreq {
   border-color: transparent;
   margin: 0px !important;
@@ -2080,7 +2083,7 @@
   flex: 1 0 100%;
   border-bottom: var(--border1);
   background: var(--tback2);
-  padding: 16px;
+  padding: var(--paddclamp8);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2098,12 +2101,14 @@
 }
 .tabudatos > div > b {
   color: var(--accent);
-  font: 800 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  font-weight: 800;
   line-height: 100%;
 }
 .tabudatos > div > em {
   color: var(--txt4);
-  font: 600 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: bold;
   font-style: normal;
   line-height: 100%;
 }
@@ -2114,30 +2119,31 @@
   content: "";
   background: var(--accent);
   color: var(--back1);
-  font: 800 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 800;
   line-height: 100%;
-  padding: 6px 8px;
+  padding: var(--gap1) var(--gap2);
   text-transform: uppercase;
   border-radius: var(--bradius);
   flex-shrink: 0;
 }
 .tabucont {
   flex: 1;
-  height: 300px;
+  height: 21.429rem;
   overflow: auto;
-  border: 31px solid transparent;
-  border-right-width: 16px;
-  padding-right: 15px;
-  line-height: 127%;
+  border: var(--paddclamp6) solid transparent;
+  border-right-width: calc(var(--paddclamp6) / 2);
+  padding-right: calc(var(--paddclamp6) / 2);
+  line-height: 135%;
 }
 .tabupj .tabucont {
-  border-width: 23px;
-  padding-right: var(--gap3);
-  border-right-width: 11px;
+  border-width: var(--paddclamp7);
+  padding-right: calc(var(--paddclamp7) / 2);
+  border-right-width: calc(var(--paddclamp7) / 2);
 }
 .tabupjimg {
-  max-width: 180px;
-  height: 300px;
+  max-width: 12.857rem;
+  height: 21.429rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2169,7 +2175,6 @@
 }
 :is(.tabutrama,.tabupj):is([id*="ocupad" i],[id*="reservad" i]) {
   border-radius: var(--bradius);
-  
   .tabudatos {
     border-bottom: none;
     border-radius: var(--bradius);
@@ -2177,7 +2182,6 @@
   :is(.tabucont, .tabupjimg) {display: none;}
   &.clicked {
     border-radius: 0 !important;
-    
     .tabudatos {
       border-radius: 0 !important;
       border-bottom: var(--border1);
@@ -2222,7 +2226,7 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--bradius);
-  max-width: 450px;
+  max-width: 32.143rem;
   padding: 60px;
   gap: var(--paddclamp5);
 }
