@@ -1,4 +1,10 @@
 /* ADMINISTRATIVAS */
+.postbody .content {
+  --bigtab: 57.286rem;
+  --regtab: 40.714rem;
+  --smalltab: 28.571rem;
+  --minitab: 17.857rem;
+}
 .guidecont:not(.preactive) {
   display: none;
 }
@@ -141,7 +147,7 @@
 }
 #guidebook .admtitleimg > h2 {
   font-size: var(--fo-h2-clamp);
-  max-width: 40.714rem;
+  max-width: var(--regtab);
 }
 #guidebook .admtitleimg > em,
 .admintab .admtitleimg > em {
@@ -155,7 +161,7 @@
   text-align-last: center;
 }
 #guidebook .admtitleimg > em {
-  max-width: 40.714rem;
+  max-width: var(--regtab);
 }
 #guidebook .admtitmain,
 .admintab .admtitmain {
@@ -310,7 +316,7 @@
   }
 }
 .admintab {
-  max-width: 40.714rem;
+  max-width: var(--regtab);
   width: 100%;
   margin: 0 auto;
   background: var(--back1);
@@ -368,7 +374,7 @@
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  max-width: 28.571rem;
+  max-width: var(--smalltab);
   width: 100%;
   padding: var(--paddclamp5);
   gap: var(--gap3);
@@ -436,7 +442,7 @@
 #nonplayercharacters .gbnpc {
   flex: 1 0 40%;
   width: 100%;
-  max-width: 28.571rem;
+  max-width: var(--smalltab);
   min-width: 180px;
   position: relative;
   height: 20rem;
@@ -566,7 +572,7 @@
 .gdcriaturas .gdcriat {
   flex: 1 0 40%;
   width: 100%;
-  max-width: 28.571rem;
+  max-width: var(--smalltab);
   min-width: 240px;
   position: relative;
   min-height: 250px;
@@ -579,7 +585,7 @@
 .gdcriaturas .gdcriat .gdcriatimg {
   position: relative;
   flex: 1 0 30%;
-  height: 17.857rem;
+  height: var(--minitab);
   border-right: var(--border1);
   text-align: right;
   justify-content: flex-end;
@@ -589,7 +595,7 @@
 .gdcriaturas .gdcriat .gdcriatblurb {
   flex: 1 0 45%;
   overflow: auto;
-  height: 17.857rem;
+  height: var(--minitab);
   padding: var(--gap3);
 }
 .gdcriaturas .gdcriat .gdcriatimg > img {
@@ -667,7 +673,7 @@
 #itemcatalogue .gdcitem {
   flex: 1 0 30%;
   width: 100%;
-  max-width: 28.571rem;
+  max-width: var(--smalltab);
   min-width: 180px;
   position: relative;
   border-radius: var(--bradius);
@@ -781,7 +787,7 @@
   position: relative;
   flex: 1 0 30%;
   min-width: 150px;
-  height: 17.857rem;
+  height: var(--minitab);
   border-right: var(--border1);
   text-align: right;
   justify-content: flex-end;
@@ -791,7 +797,7 @@
 .admintab .gdcriat .gdcriatblurb {
   flex: 1 0 45%;
   overflow: auto;
-  height: 17.857rem;
+  height: var(--minitab);
   min-width: 150px;
   padding: var(--gap3);
 }
@@ -862,7 +868,7 @@
   border: var(--border1);
   border-radius: var(--bradius);
   width: 100%;
-  max-width: 57.286rem;
+  max-width: var(--bigtab);
   margin: 0 auto !important;
   overflow: hidden;
 }
@@ -1393,7 +1399,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 40.714rem;
+  max-width: var(--regtab);
   width: 100%;
   background: var(--back1);
   border: var(--border1);
@@ -1570,7 +1576,7 @@
 #tabcombatpj, #tabcombatmn {
   display: flex;
   margin: 0 auto;
-  max-width: 40.714rem;
+  max-width: var(--regtab);
   width: 100%;
   background: var(--back1);
   border: var(--border1);
@@ -2014,7 +2020,7 @@
 .tabusqres {
   margin: 0 auto;
   width: 100%;
-  max-width: 28.571rem;
+  max-width: var(--smalltab);
   background: var(--tback1);
   border: var(--border1);
   padding: var(--paddclamp5);
@@ -2052,7 +2058,7 @@
   padding-bottom: 0px !important;
 }
 .tabusq {
-  max-width: 40.714rem;
+  max-width: var(--regtab);
   width: 100%;
   margin: 0 auto;
   background: var(--tback1);
@@ -2403,7 +2409,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 40.714rem;
+  max-width: var(--regtab);
 }
 .tabcrono > br,
 .tabcrono .tabcronocont > br,
@@ -2546,7 +2552,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 40.714rem;  
+  max-width: var(--regtab);  
 }
 .tabrelas > br,
 .tabrelas .tabrelascont > br,
@@ -2859,7 +2865,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: 40.714rem;
+  max-width: var(--regtab);
 }
 .tabhojaexp > br,
 .tabhojaexp .tabhojexpcont > br,
