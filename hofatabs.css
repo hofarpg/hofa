@@ -5,7 +5,7 @@
 #guidebook {
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
+  gap: var(--gap3);
 }
 #guidebook > br,
 #guidelinks > br,
@@ -32,34 +32,36 @@
   border: var(--border1);
   border-radius: var(--bradius);
   background: var(--back2);
-  gap: 6px;
+  gap: var(--gap1);
   flex: 1 0 15%;
-  min-width: 163px;
+  min-width: 180px;
   top: calc(var(--nav-height) - 1px + var(--padd6));
 }
 #guidelinks > strong,
 #guidelinked > strong {
   text-transform: uppercase;
   color: var(--txt1);
-  font: 900 var(--fs-body) var(--font2);
+  font: var(--fo-bod-alt1);
+  font-weight: 900;
   line-height: 120%;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-decoration-thickness: var(--bthickness);
+  text-underline-offset: var(--bthickness);
   text-decoration-color: var(--taccent);
 }
 #guidelinks > strong:not(:first-of-type),
 #guidelinked > strong:not(:first-of-type) {
-  margin-top: 4px;
+  margin-top: var(--gap0);
 }
 #guidelinks > a,
 #guidelinked > a {
   cursor: var(--crs2);
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   line-height: 100%;
   color: var(--txt4);
-  margin-left: 6px;
+  margin-left: var(--gap1);
 }
 #guidelinks > a.preactive,
 #guidelinked > a.preactive {
@@ -69,18 +71,18 @@
 #guidelinked > a:before {
   content: "";
   width: 0px;
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--taccent);
   margin-right: 0px;
   position: relative;
-  top: -3px;
+  top: calc((var(--gap0) / 1.3) * -1);
   transition: var(--trs1);
 }
 #guidelinks > a.preactive:before,
 #guidelinked > a.preactive:before {
   width: var(--paddclamp7);
-  margin-right: 6px;
+  margin-right: var(--gap1);
 }
 #guideconts {
   flex: 1 0 70%;
@@ -104,7 +106,7 @@
   min-height: 250px;
   padding: var(--paddclamp7);
   text-align: center;
-  gap: 12px;
+  gap: var(--gap3);
 }
 #guidebook .admtitleimg > img,
 .admintab .admtitleimg > img {
@@ -138,38 +140,40 @@
   text-shadow: var(--shadow2);
 }
 #guidebook .admtitleimg > h2 {
-  font-size: var(--fs-h1);
-  max-width: 570px;
+  font-size: var(--fo-h2-clamp);
+  max-width: 40.714rem;
 }
 #guidebook .admtitleimg > em,
 .admintab .admtitleimg > em {
   text-transform: uppercase;
   color: var(--txt4);
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   width: 100%;
   line-height: 100%;
   text-align: justify;
   text-align-last: center;
 }
 #guidebook .admtitleimg > em {
-  max-width: 570px;
+  max-width: 40.714rem;
 }
 #guidebook .admtitmain,
 .admintab .admtitmain {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 6px;
-  margin: 12px auto 70px;
+  gap: var(--gap1);
+  margin: var(--gap3) auto var(--paddclamp1);
   width: 100%;
-  max-width: 380px;
+  max-width: 23.75rem;
   position: relative;
   padding: var(--paddclamp3) 0px;
 }
 #guidebook .admtitmain:after,
 .admintab .admtitmain:after {
   content: "\f329";
-  font: 700 var(--fs-big) var(--font4);
+  font: var(--fo-icon2);
+  font-weight: bold;
   position: absolute;
   bottom: calc(var(--paddclamp5) * -1);
   color: var(--accent) !important;
@@ -190,7 +194,7 @@
 #guidebook .admtitmain > u,
 .admintab .admtitmain > u {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: bold;
   font-size: var(--fs-text);
   color: var(--txt1);
   text-decoration-color: var(--accent);
@@ -205,7 +209,8 @@
   text-transform: uppercase;
   text-align: justify;
   text-align-last: center;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: bold;
   line-height: 110%;
   color: var(--txt4);
 }
@@ -216,9 +221,9 @@
 #guidebook .admtitle > i,
 .admintab .admtitle > i {
   float: left;
-  width: 35px;
-  height: 35px;
-  margin-top: 4px;
+  width: var(--padd5);
+  height: var(--padd5);
+  margin-top: var(--gap0);
   background: var(--tback2);
   border-radius: var(--bradius);
   border: var(--border1);
@@ -227,27 +232,27 @@
   align-items: center;
   font-size: var(--fs-bigger);
   color: var(--txt1);
-  margin-right: 12px;
+  margin-right: var(--gap3);
 }
 #guidebook .admtitle > em,
 .admintab .admtitle > em {
   text-transform: lowercase;
-  font: normal var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
   line-height: 110%;
   font-style: italic;
   color: var(--txt4);
-  margin-top: 6px;
+  margin-top: var(--gap1);
 }
 #guidebook .admtitle > em:before,
 .admintab .admtitle > em:before {
   content: "";
   width: var(--paddclamp3);
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--taccent);
-  margin-right: 6px;
+  margin-right: var(--gap1);
   position: relative;
-  top: -2px;
+  top: calc((var(--gap0) / 1.2) * -1);
 }
 #guidebook .admtitle h2,
 .admintab .admtitle h2 {
@@ -260,7 +265,7 @@
   color: var(--accent);
   text-align: left;
   text-align-last: left;
-  font-family: var(--font2);
+  font-family: var(--font3);
   margin: 0;
 }
 #guidebook .admtitle h4,
@@ -268,20 +273,23 @@
   text-align: left;
   margin: 0;
   text-transform: uppercase;
+  font-size: var(--fs-big);
 }
 .blockquote {
   border-inline: var(--tborder);
   border-radius: var(--bradius);
   display: inline-block;
-  padding: 12px var(--paddclamp7);
-  margin-inline: 12px;
+  padding: var(--gap3) var(--paddclamp7);
+  margin-inline: var(--gap3);
   &.center{
     display: block;
     width: fit-content;
     margin: auto;
     text-align: center;
   }  
-  &:has(> ul) > br {display: none !important;}
+  &:has(> ul) > br {
+    display: none !important;
+  }
 }
 .reminder {
   width: 100%;
@@ -290,8 +298,11 @@
   border-radius: var(--bradius);
   background: var(--taccent);
   padding: var(--paddclamp7);
-  font: 700 100% / var(--fs-text) var(--font2);
+  font: var(--fo-bod2);
+  line-height: 110%;
+  font-weight: bold;
   text-transform: uppercase;
+  color: var(--txt1);
   &:before {
     content: "Aviso: ";
     color: var(--back1);
@@ -299,7 +310,7 @@
   }
 }
 .admintab {
-  max-width: 570px;
+  max-width: 40.714rem;
   width: 100%;
   margin: 0 auto;
   background: var(--back1);
@@ -310,7 +321,7 @@
   column-count: 1;
   column-rule: var(--border2);
   column-gap: var(--paddclamp7);
-  column-width: 160px;
+  column-width: 11.429rem;
   margin: 0px var(--paddclamp7);
 }
 .admintab .registeredsec.regcol {
@@ -323,13 +334,13 @@
 }
 .admintab .registeredsec > em:before {
   content: "";
-  width: 12px;
-  height: 2px;
+  width: var(--paddclamp8);
+  height: var(--bthickness);
   display: inline-block;
   background: var(--taccent);
-  margin-right: 6px;
+  margin-right: var(--gap1);
   position: relative;
-  top: -3px;
+  top: calc((var(--gap0) / 1.1) * -1);
 }
 .admintab .registeredsec > em > a,
 .registeredsec > em > b {
@@ -344,21 +355,23 @@
 }
 .admintab .registeredsec > i {
   text-transform: uppercase;
-  font: bold var(--fs-smaller) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   font-style: normal;
   color: var(--txt4);
 }
-.admintab .registeredsec > i > a {color: var(--txt3);}
-
+.admintab .registeredsec > i > a {
+  color: var(--txt3);
+}
 .admiman {
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 28.571rem;
   width: 100%;
   padding: var(--paddclamp5);
-  gap: 6px;
+  gap: var(--gap3);
   background: var(--back2);
   border: var(--border1);
   border-radius: var(--bradius);
@@ -376,7 +389,8 @@
 }
 .admiman h3 {
   text-transform: uppercase;
-  font: 900 var(--fs-h3) var(--font1);
+  font: var(--fo-h3);
+  font-size: var(--fo-h3-clamp);
   color: var(--txt1) !important;
   text-shadow: var(--shadow2);
   margin: 0px !important;
@@ -385,19 +399,20 @@
 }
 .admiman > em {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt3);
   line-height: 110% !important;
-  margin-top: 4px !important;
+  margin-top: var(--gap0) !important;
 }
 .admiman dl.codebox {
   width: 100% !important;
   text-align: justify;
   text-align-last: center;
-  margin-top: 12px !important;
+  margin-top: var(--gap3) !important;
 }
 .admiman dl.codebox.hidecode dd {
-  padding: 12px !important;
+  padding: var(--gap3) !important;
   font-size: var(--fs-text);
   color: var(--txt4);
 }
@@ -414,17 +429,17 @@
 }
 #nonplayercharacters > div.flex {
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--gap3);
   justify-content: center;
   align-items: center;
 }
 #nonplayercharacters .gbnpc {
   flex: 1 0 40%;
   width: 100%;
-  max-width: 400px;
+  max-width: 28.571rem;
   min-width: 180px;
   position: relative;
-  height: 280px;
+  height: 20rem;
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
@@ -469,13 +484,14 @@
 }
 #nonplayercharacters .gbnpc .gbnpcname {
   text-transform: uppercase;
-  font: bold var(--fs-text) var(--font2);
+  font: var(--fo-bod-alt1);
+  font-weight: bold;
   color: var(--txt2);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-decoration-thickness: var(--bthickness);
+  text-underline-offset: var(--bthickness);
   line-height: 120%;
-  margin-bottom: 4px;
+  margin-bottom: var(--gap0);
   text-decoration-color: var(--tgroup);
 }
 #nonplayercharacters .gbnpc .gbnpcdesc {
@@ -485,8 +501,8 @@
   left: 0px;
   background: var(--tback2);
   border: 0px solid transparent;
-  border-right-width: 6px !important;
-  padding-right: 6px;
+  border-right-width: var(--gap2) !important;
+  padding-right: var(--gap2);
   overflow: auto;
   font-size: var(--fs-text);
   height: 0px;
@@ -500,21 +516,23 @@
 }
 #nonplayercharacters .gbnpc .gbnpctraits {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   line-height: 100%;
 }
 #nonplayercharacters .gbnpc .gbnpcrole {
   text-transform: uppercase;
-  font: bold var(--fs-smaller) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: bold;
   color: var(--txt3);
   line-height: 100%;
   border-radius: var(--bradius);
   border-top: var(--tborder);
   border-left: var(--tborder);
   border-right: var(--tborder);
-  margin-top: 7px;
-  padding: 4px 6px;
+  margin-top: var(--gap1);
+  padding: var(--gap1) var(--gap2);
 }
 #nonplayercharacters .gbnpc #gbnpcreadmore {
   position: absolute;
@@ -526,14 +544,14 @@
   cursor: var(--crs2);
 }
 #nonplayercharacters .gbnpc.clicked .gbnpcimg {
-  padding-bottom: 140px;
+  padding-bottom: 10rem;
 }
 #nonplayercharacters .gbnpc.clicked:after {
-  bottom: 129px;
+  bottom: calc(10rem - var(--gap3) - 1px);
 }
 #nonplayercharacters .gbnpc.clicked .gbnpcdesc {
-  height: 130px !important;
-  border-width: 12px;
+  height: calc(10rem - var(--gap3)) !important;
+  border-width: var(--gap3);
 }
 .gdcriaturas > br,
 .gdcriaturas > div.flex > br,
@@ -543,14 +561,14 @@
 }
 .gdcriaturas > div.flex {
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--gap3);
   justify-content: center;
   align-items: center;
 }
 .gdcriaturas .gdcriat {
   flex: 1 0 40%;
   width: 100%;
-  max-width: 400px;
+  max-width: 28.571rem;
   min-width: 240px;
   position: relative;
   min-height: 250px;
@@ -565,18 +583,18 @@
 .gdcriaturas .gdcriat .gdcriatimg {
   position: relative;
   flex: 1 0 30%;
-  height: 250px;
+  height: 17.857rem;
   border-right: var(--border1);
   text-align: right;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 12px;
+  padding: var(--gap3);
 }
 .gdcriaturas .gdcriat .gdcriatblurb {
   flex: 1 0 45%;
   overflow: auto;
-  height: 250px;
-  padding: 12px;
+  height: 17.857rem;
+  padding: var(--gap3);
 }
 .gdcriaturas .gdcriat .gdcriatimg > img {
   position: absolute !important;
@@ -595,18 +613,20 @@
 }
 .gdcriaturas .gdcriat .gdcriatimg .gdcriatname {
   text-transform: uppercase;
-  font: bold var(--fs-text) var(--font2);
+  font: var(--fo-bod-alt1);
+  font-weight: bold;
   color: var(--txt2);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-decoration-thickness: var(--bthickness);
+  text-underline-offset: var(--bthickness);
   line-height: 120%;
-  margin-bottom: 4px;
+  margin-bottom: var(--gap0);
   text-decoration-color: var(--tgroup);
 }
 .gdcriaturas .gdcriat .gdcriatimg .gdcriatcat {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   line-height: 100%;
 }
@@ -616,16 +636,17 @@
   flex-wrap: wrap;
   border-top: var(--border1);
   background: var(--tback1);
-  padding: 12px;
+  padding: var(--gap3);
   align-items: center;
-  gap: 10px;
+  gap: var(--gap1);
 }
 .gdcriaturas .gdcriat .gdcriatstats strong {
-  padding: 0px 12px;
+  padding: var(--gap0) var(--gap3);
   border-radius: var(--bradius);
   border-left: var(--border2);
   border-right: var(--border2);
-  font: 800 var(--fs-text) var(--font2);
+  font:var(--fo-deco2);
+  font-weight: 800;
   color: var(--txt4);
 }
 .gdcriaturas .gdcriat .gdcriatstats strong > i {
@@ -643,14 +664,14 @@
 }
 #itemcatalogue > div.flex {
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--gap3);
   justify-content: center;
   align-items: stretch;
 }
 #itemcatalogue .gdcitem {
   flex: 1 0 30%;
   width: 100%;
-  max-width: 400px;
+  max-width: 28.571rem;
   min-width: 180px;
   position: relative;
   border-radius: var(--bradius);
@@ -659,22 +680,25 @@
   --tgroup: var(--taccent);
   background: var(--tback2);
   flex-wrap: wrap;
-  padding: 12px;
-  gap: 12px;
+  padding: var(--paddclamp8);
+  gap: var(--gap3);
 }
 #itemcatalogue .gdcitem .gdcititle {
-  gap: 4px;
+  gap: var(--gap1);
 }
 #itemcatalogue .gdcitem .gdcititle > b {
   text-transform: uppercase;
-  font: 800 var(--fs-bigger) var(--font3);
+  font: var(--fo-deco1);
+  font-size: var(--fs-bigger);
+  font-weight: 800;
   color: var(--accent);
   line-height: 100%;
   text-align: left;
 }
 #itemcatalogue .gdcitem .gdcititle > em {
   text-transform: lowercase;
-  font: 300 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: 300;
   font-style: italic;
   color: var(--txt4);
   line-height: 100%;
@@ -683,26 +707,27 @@
 #itemcatalogue .gdcitem .gdcititle > em:before {
   content: "";
   width: var(--paddclamp7);
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--tgroup);
-  margin-right: 6px;
+  margin-right: var(--gap1);
   position: relative;
-  top: -2px;
+  top: calc((var(--gap0) / 1.3) * -1);
 }
 #itemcatalogue .gdcitem .gdciextras {
   width: 100%;
-  gap: 0px 12px;
+  gap: 0px var(--gap3);
   text-align: left;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 3px;
+  gap: var(--gap0);
 }
 #itemcatalogue .gdcitem .gdciextras > strong {
   flex: 1 0 100%;
   color: var(--txt4);
-  font: 700 var(--fs-text) var(--font2) !important;
+  font: var(--fo-bod2);
+  font-weight: bold;
   text-transform: uppercase;
   line-height: 120%;
 }
@@ -712,8 +737,8 @@
   font-weight: 900;
   font-style: normal;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-decoration-thickness: var(--bthickness);
+  text-underline-offset: var(--bthickness);
   text-decoration-color: var(--taccent);
 }
 :is(.admintab, #guidebook) summary::marker {
@@ -723,15 +748,15 @@
 :is(.admintab, #guidebook) details > summary > strong {
   border: var(--border1);
   border-radius: var(--bradius);
-  padding: 0px 6px;
+  padding: 0px var(--gap1);
   background: var(--back2);
   cursor: var(--crs2);
   color: var(--accent);
 }
 :is(.admintab, #guidebook) details[open] > span {
-  margin-top: 12px !important;
+  margin-top: var(--gap2) !important;
   display: block;
-  margin-left: 12px;
+  margin-left: var(--gap3);
 }
 :is(.admintab, #guidebook) details.lvl summary{
   cursor: var(--crs2);
@@ -759,19 +784,19 @@
   position: relative;
   flex: 1 0 30%;
   min-width: 150px;
-  height: 250px;
+  height: 17.857rem;
   border-right: var(--border1);
   text-align: right;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 12px;
+  padding: var(--gap3);
 }
 .admintab .gdcriat .gdcriatblurb {
   flex: 1 0 45%;
   overflow: auto;
-  height: 250px;
+  height: 17.857;
   min-width: 150px;
-  padding: 12px;
+  padding: var(--gap3);
 }
 .admintab .gdcriat .gdcriatblurb br {
   display: initial !important;
@@ -793,18 +818,20 @@
 }
 .admintab .gdcriat .gdcriatimg .gdcriatname {
   text-transform: uppercase;
-  font: bold var(--fs-text) var(--font2);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt2);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-decoration-thickness: var(--bthickness);
+  text-underline-offset: var(--bthickness);
   line-height: 120%;
-  margin-bottom: 4px;
+  margin-bottom: var(--gap0);
   text-decoration-color: var(--tgroup);
 }
 .admintab .gdcriat .gdcriatimg .gdcriatcat {
   text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   line-height: 100%;
 }
@@ -814,16 +841,17 @@
   flex-wrap: wrap;
   border-top: var(--border1);
   background: var(--tback1);
-  padding: 12px;
+  padding: var(--gap3);
   align-items: center;
-  gap: 10px;
+  gap: var(--gap2);
 }
 .admintab .gdcriat .gdcriatstats strong {
-  padding: 0px 12px;
+  padding: 0px var(--gap3);
   border-radius: var(--bradius);
   border-left: var(--border2);
   border-right: var(--border2);
-  font: 800 var(--fs-text) var(--font2);
+  font: var(--fo-bod2);
+  font-weight: bold;
   color: var(--txt4);
 }
 .admintab .gdcriat .gdcriatstats strong > i {
@@ -837,7 +865,7 @@
   border: var(--border1);
   border-radius: var(--bradius);
   width: 100%;
-  max-width: 802px;
+  max-width: 57.286rem;
   margin: 0 auto !important;
   overflow: hidden;
 }
@@ -863,7 +891,7 @@
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  gap: 6px;
+  gap: var(--gap1);
   width: 100%;
 }
 #expedtab .extbnam > b {
@@ -884,7 +912,7 @@
 #expedtab .extbnam > em:before {
   content: "";
   width: 60px;
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--tgroup);
   margin-right: 8px;
@@ -913,8 +941,8 @@
   align-items: center;
   border-top: var(--border1);
   border-bottom: var(--border1);
-  padding: 12px;
-  gap: 6px 12px;
+  padding: var(--gap3);
+  gap: 6px var(--gap3);
   background: var(--back2);
   flex-wrap: wrap;
 }
@@ -926,7 +954,7 @@
   text-align: center;
   border-left: var(--border2);
   border-right: var(--border2);
-  padding: 4px 6px;
+  padding: 4px var(--gap1);
   line-height: 100% !important;
   color: var(--txt4) !important;
   transition: var(--trs1);
@@ -956,7 +984,7 @@
   width: 100%;
   position: relative;
   z-index: 1;  
-  padding: 12px;
+  padding: var(--gap3);
   background: var(--back1);
 }
 #expedtab #extbcinfo .expzone:not(.preactive) {
@@ -979,7 +1007,7 @@
   font: 700 var(--fs-body) var(--font2);
   color: var(--txt3);
   line-height: 100% !important;
-  gap: 6px;
+  gap: var(--gap1);
 }
 #expedtab #expzdata > b > u {
   color: var(--txt1);
@@ -1035,7 +1063,7 @@
   color: var(--txt1) !important;
   text-decoration: underline;
   text-decoration-color: var(--tgroup);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--bthickness);
   text-underline-offset: 3px;
   line-height: calc(var(--fs-bigger) + 20%);
 }
@@ -1070,7 +1098,7 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--bradius);
-  padding: 12px;
+  padding: var(--gap3);
   gap: 4px;
   text-align: center;
   text-transform: uppercase;
@@ -1097,8 +1125,8 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  gap: 2px;
+  padding: var(--gap3);
+  gap: var(--bthickness);
   flex: 1;
   position: relative;
 }
@@ -1107,12 +1135,12 @@
   font: bold var(--fs-smaller) var(--font3);
   color: var(--txt4);
   font-style: normal;
-  margin-bottom: 6px;
+  margin-bottom: var(--gap1);
   border-radius: var(--bradius);
   border-top: var(--tborder);
   border-left: var(--tborder);
   border-right: var(--tborder);
-  padding: 4px 6px;
+  padding: 4px var(--gap1);
   line-height: 100%;
 }
 #expedtab .expzhtraits > div > b {
@@ -1149,7 +1177,7 @@
 #expedtab .expzhskills {
   overflow: auto;
   height: 290px;
-  padding-right: 12px;
+  padding-right: var(--gap3);
   width: 100%;
   line-height: 128%;
 }
@@ -1188,13 +1216,13 @@
 #expedtab .expzhskills > span {
   text-transform: uppercase;
   display: inline-block;
-  padding: 4px 6px;
+  padding: 4px var(--gap1);
   background: var(--group);
   border-radius: var(--bradius);
   font: 800 var(--fs-smaller) var(--font3);
   line-height: 100%;
   color: var(--back2);
-  margin-right: 6px;
+  margin-right: var(--gap1);
 }
 #expedtab .expzhskills > u {
   color: var(--txt1);
@@ -1399,7 +1427,7 @@
 .tabrol1:after {
   content: "";
   width: calc(100% + 2px);
-  height: 6px;
+  height: var(--gap1);
   background: var(--accent);
   position: relative;
   left: -1px;
@@ -1496,7 +1524,7 @@
   font: 700 var(--fs-small) var(--font2);
   line-height: 100%;
   color: var(--txt2);
-  padding: 4px 6px;
+  padding: 4px var(--gap1);
 }
 .tabrol3 .tbrolinfo {
   display: flex;
@@ -1527,7 +1555,7 @@
   background: var(--back1);
   border: var(--border1);
   padding: var(--paddclamp7);
-  gap: 12px;
+  gap: var(--gap3);
   min-height: 280px;
   justify-content: space-between;
   align-items: center;
@@ -1552,7 +1580,7 @@
 .tabcotxtblock {
   height: calc(300px - 42px);
   justify-content: space-between;
-  gap: 12px;
+  gap: var(--gap3);
   align-items: stretch;
   flex: 1;
   max-width: calc(50% - 6px);
@@ -1594,7 +1622,7 @@
 .tbcmdtinfo:before {
   content: "";
   width: var(--paddclamp5);
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--accent);
   margin-right: 8px;
@@ -1602,7 +1630,7 @@
   top: -2px;
 }
 .tabcomdata {
-  gap: 12px;
+  gap: var(--gap3);
   justify-content: flex-start;
   align-items: center;
 }
@@ -1621,7 +1649,7 @@
   border-left: var(--border2);
   border-right: var(--border2);
   border-radius: var(--bradius);
-  padding: 6px;
+  padding: var(--gap1);
   flex-wrap: wrap;
   gap: 0px 4px;
 }
@@ -1640,7 +1668,7 @@
   border: 10px solid var(--back2);
   background: var(--back2);
   border-radius: var(--bradius);
-  padding-right: 6px;
+  padding-right: var(--gap1);
   outline: var(--border1);
   outline-offset: -1px;
   font: 400 var(--fs-text) var(--font2);
@@ -1671,7 +1699,7 @@
 .tabcotskills {
   height: 100%;
   overflow: auto;
-  padding: 0 12px;
+  padding: 0 var(--gap3);
   line-height: 125%;
   border-left: var(--border2);
   gap: 7px;
@@ -1710,7 +1738,7 @@
   background: var(--accent);
   border-radius: var(--bradius);
   padding: 2px 4px;
-  margin-right: 6px;
+  margin-right: var(--gap1);
   margin-top: 1px;
   text-transform: uppercase;
   line-height: 100%;
@@ -1838,7 +1866,7 @@
 .tabcombatfull {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--gap3);
 }
 
 .contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {content: "\f6cb";}
@@ -1985,9 +2013,9 @@
   text-transform: uppercase;
   color: var(--txt1);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--bthickness);
   text-decoration-color: var(--accent);
-  text-underline-offset: 2px;
+  text-underline-offset: var(--bthickness);
   line-height: 120%;
 }
 .tabusqres .blockquote.tbrcreq {
@@ -2023,7 +2051,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: var(--gap3);
   cursor: var(--crs1);
 }
 .tabudatos > div {
@@ -2033,7 +2061,7 @@
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  gap: 2px;
+  gap: var(--gap0);
 }
 .tabudatos > div > b {
   color: var(--accent);
@@ -2071,7 +2099,7 @@
 }
 .tabupj .tabucont {
   border-width: 23px;
-  padding-right: 12px;
+  padding-right: var(--gap3);
   border-right-width: 11px;
 }
 .tabupjimg {
@@ -2181,7 +2209,7 @@
   justify-content: center;
   align-items: center;
   outline: 2px solid var(--accent);
-  outline-offset: 6px;
+  outline-offset: var(--gap1);
   margin: 8px;
 }
 .tabaul .tbauimg:before {
@@ -2239,7 +2267,7 @@
   text-transform: lowercase;
   font-style: italic;
   line-height: 100%;
-  margin-bottom: 6px;
+  margin-bottom: var(--gap1);
 }
 .tabaul#tbsimple .tbauname {
   text-align: center;
@@ -2257,7 +2285,7 @@
   color: var(--accent);
 }
 .tabaul#tbsimple .tbaulinks {
-  gap: 12px;
+  gap: var(--gap3);
   justify-content: center;
 }
 .tabaul#tbsimple .tbaulinks > a {
@@ -2297,7 +2325,7 @@
 .tabaul .tbaucont {
   height: 180px;
   overflow: auto;
-  padding-right: 12px;
+  padding-right: var(--gap3);
   flex-shrink: 0;
   line-height: 126%;
 }
@@ -2305,7 +2333,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: var(--gap3);
   flex: 1;
 }
 .tabaul .tbauinfo > em {
@@ -2316,15 +2344,15 @@
   justify-content: center;
   align-items: center;
   font-style: normal;
-  gap: 6px;
+  gap: var(--gap1);
 }
 .tabaul .tbauinfo > em > b {
   font: 900 var(--fs-body) var(--font2);
   color: var(--txt1);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--bthickness);
   text-decoration-color: var(--accent);
-  text-underline-offset: 2px;
+  text-underline-offset: var(--bthickness);
   line-height: 130%;
   text-transform: uppercase;
 }
@@ -2367,7 +2395,7 @@
 .tabcrono .tabcronocont {
   padding: var(--paddclamp3);
   width: 100%;
-  gap: 12px;
+  gap: var(--gap3);
 }
 .tabcrono .tabcrcoyear {
   text-transform: lowercase;
@@ -2377,7 +2405,7 @@
   line-height: 100%;
 }
 .tabcrono .tabcrcoyear:not(:first-of-type) {
-  margin-top: 12px;
+  margin-top: var(--gap3);
 }
 .tabcrono .tabcrcomonth {
   text-transform: uppercase;
@@ -2390,7 +2418,7 @@
 .tabcrono .tabcrcomonth:before {
   content: "";
   width: var(--paddclamp3);
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--accent);
   margin-right: 8px;
@@ -2400,7 +2428,7 @@
 .tabcrono .tabcrcothread {
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
+  gap: var(--gap3);
 }
 .tabcrono .tabcrcothread > i {
   width: var(--paddclamp3);
@@ -2461,9 +2489,9 @@
   font: 800 var(--fs-body) var(--font2);
   color: var(--txt1);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--bthickness);
   text-decoration-color: var(--accent);
-  text-underline-offset: 2px;
+  text-underline-offset: var(--bthickness);
   line-height: 120%;
   transition: var(--trs1);
 }
@@ -2520,12 +2548,12 @@
 .tabrelas .tabrelascont {
   padding: var(--paddclamp3);
   width: 100%;
-  gap: 12px;
+  gap: var(--gap3);
 }
 .tabrelas .tabrlcochar {
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
+  gap: var(--gap3);
 }
 .tabrelas .tabrlcochar#nemesis,
 .tabrelas .tabrlcochar#NEMESIS,
@@ -2779,16 +2807,16 @@
   color: var(--back1);
   line-height: 100%;
   border-radius: var(--bradius);
-  padding: 4px 6px;
+  padding: 4px var(--gap1);
   width: fit-content;
 }
 .tabrelas .tabrlcochar > div > a {
   font: 800 var(--fs-body) var(--font2);
   color: var(--txt1);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--bthickness);
   text-decoration-color: var(--accent);
-  text-underline-offset: 2px;
+  text-underline-offset: var(--bthickness);
   line-height: 120%;
   transition: var(--trs1);
 }
@@ -2869,7 +2897,7 @@
   font-weight: 900;
 }
 .tabhojaexp .tabhojcomejoras {
-  gap: 6px;
+  gap: var(--gap1);
 }
 .tabhojaexp .tabhojcomejoras > b {
   text-transform: uppercase;
@@ -2880,7 +2908,7 @@
   line-height: 100%;
   padding: 4px 8px;
   border-radius: var(--bradius);
-  margin-bottom: 6px;
+  margin-bottom: var(--gap1);
 }
 .tabhojaexp .tabhojcomejoras > em {
   text-transform: uppercase;
@@ -2893,7 +2921,7 @@
 .tabhojaexp .tabhojcomejoras > em:before {
   content: "";
   width: var(--paddclamp5);
-  height: 2px;
+  height: var(--bthickness);
   display: inline-block;
   background: var(--accent);
   margin-right: 8px;
@@ -2901,7 +2929,7 @@
   top: -2px;
 }
 .tabhojaexp .tabhojcogoals {
-  gap: 12px;
+  gap: var(--gap3);
 }
 .tabhojaexp .tabhojcogoalslvl {
   text-transform: uppercase;
@@ -2916,10 +2944,10 @@
   font-weight: 900;
 }
 .tabhojaexp .tabhojcogoalslvl:not(:first-of-type) {
-  margin-top: 6px;
+  margin-top: var(--gap1);
 }
 .tabhojaexp .tabhojcogoalitem {
-  gap: 12px;
+  gap: var(--gap3);
   justify-content: flex-start;
   align-items: center;
 }
@@ -3112,7 +3140,7 @@
     padding-left: 0px;
     border-left: none;
     border-top: var(--border2);
-    padding-top: 12px;
+    padding-top: var(--gap3);
   }
   .tabcomainblock {
     min-height: 240px;
@@ -3180,7 +3208,7 @@
   }
   .tabutrama .tabucont {
     border-width: 23px;
-    padding-right: 12px;
+    padding-right: var(--gap3);
     border-right-width: 11px;
   }
   .tabcrono .tabcronocont,
@@ -3229,7 +3257,7 @@
   }
   .tabcotskills {
     height: inherit;
-    padding-left: 12px;
+    padding-left: var(--gap3);
     border-left: var(--border2);
     border-top: none;
     padding-top: 0px;
@@ -3252,7 +3280,7 @@
   #expedtab #expzhist,
   #expedtab #expzextr {
     border-width: var(--paddclamp7);
-    padding-right: 12px;
+    padding-right: var(--gap3);
     border-right-width: 10px;
   }
   #expedtab #expzdata {
@@ -3290,7 +3318,7 @@
     padding-left: 0px;
     border-left: none;
     border-top: var(--border2);
-    padding-top: 12px;
+    padding-top: var(--gap3);
   }
   .tabcomainblock {
     min-height: 240px;
@@ -3356,8 +3384,8 @@
     padding: var(--paddclamp7);
   }
   .tabusq {
-    padding: 12px;
-    gap: 12px;
+    padding: var(--gap3);
+    gap: var(--gap3);
   }
   .tabucont {
     border-width: 15px !important;
@@ -3417,7 +3445,7 @@
     border-right-width: 7px !important;
   }
   #expedtab #expzrhoja {
-    gap: 12px;
+    gap: var(--gap3);
   }
   #expedtab #expzdata {
     padding: var(--paddclamp7);
@@ -3430,7 +3458,7 @@
     padding: var(--paddclamp7);
   }
   .tbrolinfo {
-    padding: 12px;
+    padding: var(--gap3);
   }
   .tabaul#tbfull .tbaulinks > a {
     flex: 1 0 15%;
@@ -3472,11 +3500,11 @@
     padding: var(--paddclamp7);
   }
   .tabusqres {
-    padding: 12px;
+    padding: var(--gap3);
   }
   #tabcombatpj,
   #tabcombatmn {
-    padding: 12px;
+    padding: var(--gap3);
   }
 }
 /* media:height */
