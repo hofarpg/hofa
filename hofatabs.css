@@ -321,7 +321,7 @@
   margin: 0 auto;
   background: var(--back1);
   border: var(--border1);
-  padding: var(--paddclamp7);
+  padding: var(--paddclamp6);
 }
 .admintab .registeredsec {
   column-count: 1;
