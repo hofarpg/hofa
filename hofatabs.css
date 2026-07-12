@@ -758,6 +758,11 @@
   display: block;
   margin-left: var(--gap3);
 }
+:is(.admintab, #guidebook) details {
+  &>br {
+    display: none!important;
+  }
+}
 :is(.admintab, #guidebook) details.lvl summary{
   cursor: var(--crs2);
 }
@@ -794,7 +799,7 @@
 .admintab .gdcriat .gdcriatblurb {
   flex: 1 0 45%;
   overflow: auto;
-  height: 17.857;
+  height: 17.857rem;
   min-width: 150px;
   padding: var(--gap3);
 }
