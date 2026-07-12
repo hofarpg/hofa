@@ -1405,6 +1405,8 @@
   width: 100%;
   background: var(--back1);
   border: var(--border1);
+  padding: var(--paddclamp1);
+  gap: var(--paddclamp1);
 }
 .tabrol1,
 .tabrol2,
@@ -1419,18 +1421,17 @@
   display: none !important;
 }
 .tbroltit {
-  min-height: 160px;
   width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: var(--paddclamp2);
   padding-bottom: 0;
+  position: relative;
 }
 .tbrolcont {
-  padding: var(--paddclamp2);
+  width: 100%;
 }
 .tbrolcont > b,
 .tbrolcont > strong {
@@ -1439,40 +1440,33 @@
 }
 .tbrolinfo {
   text-align: center;
-  width: 100%;
-  border-top: var(--border1);
-  background: var(--back2);
-  padding: var(--paddclamp7);
+  position: relative;
 }
 .tbrolinfo > em {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   line-height: 100%;
   font-style: normal;
 }
-.tabrol1:after {
-  content: "";
-  width: calc(100% + 2px);
-  height: var(--gap1);
-  background: var(--accent);
-  position: relative;
-  left: -1px;
-  bottom: -1px;
-}
 .tabrol1 .tbroltit {
-  gap: 10px;
-  margin-bottom: -12px;
+  gap: var(--gap0);
+}
+.tabrol1 {
+  border-bottom: var(--gap1) solid var(--group);
 }
 .tabrol1 .tbroltit > b {
   text-transform: uppercase;
-  font: 900 var(--fs-h2) var(--font1);
+  font: var(--fo-h2);
+  font-size: var(--fo-h2-clamp);
   text-shadow: 1px 1px 1px var(--accent);
   color: var(--txt1);
   line-height: 90%;
 }
 .tabrol1 .tbroltit > em {
   text-transform: uppercase;
-  font: 600 var(--fs-small) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
   line-height: 100%;
 }
@@ -1480,7 +1474,7 @@
   color: var(--accent);
 }
 .tabrol2 .tbroltit {
-  gap: 10px;
+  gap: var(--gap0);
   position: relative;
 }
 .tabrol1 .tbroltit *,
@@ -1493,15 +1487,16 @@
   position: absolute;
   z-index: 0;
   color: var(--accent);
-  font-size: calc(var(--fs-display) + var(--fs-h3));
+  font-size: clamp(4rem, 11vw, var(--fs-icons));
   opacity: 0.4;
 }
 .tabrol2 .tbroltit > b {
   text-transform: lowercase;
   color: var(--txt1);
-  font: 900 var(--fs-h2) var(--font1);
+  font: var(--fo-h2);
   line-height: 100%;
-  font-style: italic;
+  font-style: normal;
+  font-size: var(--fo-h2-clamp);
 }
 .tabrol2 .tbroltit > span {
   text-transform: uppercase;
@@ -1510,12 +1505,15 @@
   border-top: var(--tborder);
   border-left: var(--tborder);
   border-right: var(--tborder);
-  font: 600 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco2);
+  font-weight: bold;
   color: var(--txt4);
-  padding: 4px 8px;
+  padding: var(--gap0) var(--gap2);
 }
 .tabrol2 .tbrolinfo {
   color: var(--txt1);
+  border-top: var(--border1);
+  padding-top: var(--paddclamp6);
 }
 .tabrol2 .tbrolinfo > em i {
   color: var(--accent);
@@ -1528,7 +1526,8 @@
 }
 .tabrol3 .tbroltit > b {
   text-transform: uppercase;
-  font: 900 var(--fs-h1) var(--font1);
+  font: var(--fo-h1);
+  font-size: var(--fo-h1-clamp);
   line-height: 90%;
   color: var(--accent);
   position: relative;
@@ -1539,6 +1538,7 @@
 .tabrol2 .tbroltit > b > i {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.5px var(--txt1);
+  font-style: normal;
 }
 .tabrol3 .tbroltit > span {
   text-transform: uppercase;
@@ -1547,21 +1547,23 @@
   background: var(--back2);
   border: var(--border1);
   border-radius: var(--bradius);
-  font: 700 var(--fs-small) var(--font2);
+  font: var(--fo-bod3);
+  font-weight: bold;
   line-height: 100%;
   color: var(--txt2);
-  padding: 4px var(--gap1);
+  padding: var(--gap1) var(--gap2);
 }
 .tabrol3 .tbrolinfo {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px var(--paddclamp7);
+  gap: var(--gap3) var(--paddclamp7);
   flex-wrap: wrap;
+  position: relative;
 }
 .tabrol3 .tbrolinfo > em {
   background: var(--accent);
-  padding: 6px 8px;
+  padding: var(--gap1) var(--gap2);
   border-radius: var(--bradius);
   color: var(--back1);
   font-weight: 800;
@@ -1576,13 +1578,13 @@
 #tabcombatpj, #tabcombatmn {
   display: flex;
   margin: 0 auto;
-  max-width: 570px;
+  max-width: 40.714rem;
   width: 100%;
   background: var(--back1);
   border: var(--border1);
   padding: var(--paddclamp7);
   gap: var(--gap3);
-  min-height: 280px;
+  min-height: 20rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -1604,18 +1606,18 @@
 
 .tabcomainblock,
 .tabcotxtblock {
-  height: calc(300px - 42px);
+  height: calc(21.429rem - var(--padd5));
   justify-content: space-between;
   gap: var(--gap3);
   align-items: stretch;
   flex: 1;
-  max-width: calc(50% - 6px);
+  max-width: calc(50% - var(--gap1));
   display: flex;
   flex-direction: column;
 }
 .tabcomdata > i {
-  width: var(--paddclamp3);
-  height: var(--paddclamp3);
+  width: var(--padd5);
+  height: var(--padd5);
   border-radius: var(--bradius);
   color: var(--accent);
   background: var(--back2);
@@ -1625,14 +1627,16 @@
 }
 .tabcomdata > i:before {
   content: "\e4fa";
-  font: 600 var(--fs-bigger) var(--font4);
+  font: var(--fo-icon1);
+  font-weight: bold;
 }
 .tbcmdtname {
-  gap: 4px;
+  gap: var(--gap0);
 }
 .tbcmdtname > b {
   text-transform: uppercase;
-  font: 800 var(--fs-h5) var(--font2);
+  font: var(--fo-h5);
+  font-size: var(--fo-h5-clamp);
   color: var(--txt1);
   text-shadow: 1px 1px 1px var(--accent);
   line-height: 80%;
@@ -1640,7 +1644,8 @@
 }
 .tbcmdtinfo {
   text-transform: lowercase;
-  font: 300 var(--fs-small) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: 300;
   font-style: italic;
   color: var(--txt4);
   line-height: 100%;
@@ -1651,9 +1656,9 @@
   height: var(--bthickness);
   display: inline-block;
   background: var(--accent);
-  margin-right: 8px;
+  margin-right: var(--gap2);
   position: relative;
-  top: -2px;
+  top: calc((var(--gap0) / 1.8) * -1);
 }
 .tabcomdata {
   gap: var(--gap3);
@@ -1663,7 +1668,7 @@
 .tabcomstats {
   flex: 1;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--gap1);
 }
 .tabcomstats > div {
   flex: 1 0 30%;
@@ -1671,27 +1676,29 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  border-top: 2px solid var(--accent);
+  border-top: var(--bthickness) solid var(--accent);
   border-left: var(--border2);
   border-right: var(--border2);
   border-radius: var(--bradius);
   padding: var(--gap1);
   flex-wrap: wrap;
-  gap: 0px 4px;
+  gap: 0px var(--gap0);
 }
 .tabcomstats > div > b {
   color: var(--txt1);
-  font: 800 var(--fs-text) var(--font3);
+  font: var(--fo-deco1);
+  font-weight: 800;
   line-height: 100%;
 }
 .tabcomstats > div > i {
   color: var(--txt4);
-  font: 700 var(--fs-text) var(--font2);
-  font-style: italic;
+  font: var(--fo-bod3);
+  font-weight: bold;
+  font-style: normal;
   line-height: 100%;
 }
 .tabcomcalcs {
-  border: 10px solid var(--back2);
+  border: var(--gap3) solid var(--back2);
   background: var(--back2);
   border-radius: var(--bradius);
   padding-right: var(--gap1);
@@ -1699,14 +1706,14 @@
   outline-offset: -1px;
   font: 400 var(--fs-text) var(--font2);
   line-height: 106%;
-  max-height: 75px;
+  max-height: 5.357rem;
   overflow: auto;
 }
 .tabcombless {
   width: 100%;
-  height: 13px;
+  height: 0.929rem;
   background: var(--border2-c);
-  border: 4px solid var(--back2);
+  border: var(--gap0) solid var(--back2);
   border-radius: var(--bradius);
   position: relative;
 }
@@ -1728,42 +1735,48 @@
   padding: 0 var(--gap3);
   line-height: 125%;
   border-left: var(--border2);
-  gap: 7px;
+  gap: var(--gap2);
 }
 .tabcotskills h3 {
   display: inline-block;
   width: 100%;
   text-align: left;
   text-align-last: left;
-  font: 800 var(--fs-big) var(--font3);
+  font: var(--fo-deco1);
+  font-size: var(--fs-big);
+  font-weight: 800;
   color: var(--txt1);
   margin: 0;
+  margin-bottom: var(--gap0);
+  line-height: 100%;
 }
 .tabcotskills h4 {
   text-align: left;
   text-align-last: left;
   text-transform: uppercase;
-  font: 800 var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
+  line-height: 100%;
+  font-weight: 800;
   color: var(--txt3);
   margin: 0;
+  margin-bottom: var(--gap0);
+  line-height: 100%;
 }
 .tbctbl,
 .tbctesta {
   display: inline-block;
   width: 100%;
-  font: 400 var(--fs-body) var(--font2);
-  line-height: 120%;
-}
-.tabcotskills h3:not(:first-of-type) {
-  margin-top: 5px;
+  font: var(--fo-bod1);
+  line-height: 130%;
 }
 :is(.tbctbl,.tbctesta):before {
   float: left;
-  font: 700 var(--fs-smaller) var(--font3);
+  font: var(--fo-deco3);
+  font-weight: 800;
   color: var(--back1);
   background: var(--accent);
   border-radius: var(--bradius);
-  padding: 2px 4px;
+  padding: calc(var(--gap0) / 1.5) var(--gap1);
   margin-right: var(--gap1);
   margin-top: 1px;
   text-transform: uppercase;
@@ -1778,67 +1791,57 @@
 .tbctesta > i {
   color: var(--txt4);
 }
-.tbctbl#nousada:before,
-.tbctbl#Nousada:before,
-.tbctbl#NoUsada:before,
-.tbctbl#NOUSADA:before {
+.tbctcat {
+  gap: var(--gap0);
+}
+.tbctcat:not(:has([data-status*="uso" i],
+[data-status^="activ" i],
+[data-status*="equip" i],
+[data-status*="vida" i])) {
+  display: none;
+}
+.tbctcat [data-status]:before {
+  content: attr(data-status);
+}
+.tbctcat [data-status*="inactiv" i],
+.tbctcat [data-status*="usad" i],
+.tbctcat :is([data-status*="inactiv" i],
+.tbctcat [data-status*="usad" i]) + br {
+  opacity: 0.5;
+  filter: grayscale(0.5);
+  display: none;
+}
+.tbctbl:is(#nousada, #Nousada, #NoUsada, #NOUSADA):before {
   content: "No Usada";
 }
-.tbctbl#usada:before,
-.tbctbl#Usada:before,
-.tbctbl#USADA:before {
+.tbctbl:is(#usada, #USADA, #Usada):before {
   content: "Usada";
 }
-.tbctbl#enuso:before,
-.tbctbl#Enuso:before,
-.tbctbl#EnUso:before,
-.tbctbl#ENUSO:before {
+.tbctbl:is(#enuso, #Enuso, #EnUso, #ENUSO):before {
   content: "En Uso";
 }
-.tbctbl#nousado:before,
-.tbctbl#Nousado:before,
-.tbctbl#NoUsado:before,
-.tbctbl#NOUSADO:before {
+.tbctbl:is(#nousado, #Nousado, #NoUsado, #NOUSADO):before {
   content: "No Usado";
 }
-.tbctbl#usado:before,
-.tbctbl#Usado:before,
-.tbctbl#USADO:before {
+.tbctbl:is(#usado, #USADO, #Usado):before {
   content: "Usado";
 }
-.tbctbl#equipam:before,
-.tbctbl#Equipan:before,
-.tbctbl#EQUIPAM:before {
-  content: "Equipamiento";
+.tbctbl:is(#equipam, #EQUIPAM, #Equipam, #equipo, #EQUIPO, #Equipo):before {
+  content: "Equipo";
 }
-.tbctbl#objactivo:before,
-.tbctbl#Objactivo:before,
-.tbctbl#ObjActivo:before,
-.tbctbl#OBJACTIVO:before {
-  content: "Obj. Activo";
+.tbctbl:is(#objactivo, #Objactivo, #ObjActivo, #OBJACTIVO, #activo, #Activo, #ACTIVO):before {
+  content: "Activo";
 }
-.tbctbl#objinactivo:before,
-.tbctbl#Objinactivo:before,
-.tbctbl#ObjInactivo:before,
-.tbctbl#OBJINACTIVO:before {
-  content: "Obj. Inactivo";
+.tbctbl:is(#objinactivo, #Objinactivo, #ObjInactivo, #OBJINACTIVO, #inactivo, #Inactivo, #INACTIVO):before {
+  content: "Inactivo";
 }
-.tbctbl#inactiva:before,
-.tbctbl#Inactiva:before,
-.tbctbl#INACTIVA:before {
+.tbctbl:is(#inactiva, #Inactiva, #INACTIVA):before {
   content: "Inactiva";
 }
-.tbctbl#activa:before,
-.tbctbl#Activa:before,
-.tbctbl#ACTIVA:before {
+.tbctbl:is(#activa, #ACTIVA, #Activa):before {
   content: "Activa";
 }
-.tbctbl#nousada,
-.tbctbl#usada,
-.tbctbl#nousado,
-.tbctbl#usado,
-.tbctbl#objinactivo,
-.tbctbl#inactiva {
+.tbctbl:is(#nousada, #usada, #nousado, #usado, #objinactivo, #inactiva, #Nousada, #Usada, #Nousado, #Usado, #Objinactivo, #Inactiva, #NoUsada, #NoUsado, #ObjInactivo, #NOUSADA, #USADA, #NOUSADO, #USADO, #OBJINACTIVO, #INACTIVA) {
   opacity: 0.5;
   filter: grayscale(0.5);
 }
@@ -1847,9 +1850,9 @@
 }
 .tabcommlife {
   width: 100%;
-  height: 25px;
+  height: var(--padd3);
   background: var(--border2-c);
-  border: 4px solid var(--back2);
+  border: var(--gap0) solid var(--back2);
   border-radius: var(--bradius);
   overflow: hidden;
   position: relative;
@@ -1884,8 +1887,8 @@
 }
 #tbcmmlbar:after {
   content: attr(actual) "/" attr(total);
-  font: 700 var(--fs-small) var(--font2);
-  margin-left: 4px;
+  font: var(--fo-bod3);
+  font-weight: bold;
   color: var(--accent);
   mix-blend-mode: difference;
 }
@@ -1894,24 +1897,26 @@
   flex-direction: column;
   gap: var(--gap3);
 }
-
 .contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {content: "\f6cb";}
 .contentgroup-tyche #tabcombatpj .tabcomdata > i:before {content: "\e362";}
-.contentgroup-dioniso #tabcombatpj .tabcomdata > i:before {content: "\f4e3";}
+.contentgroup-persefone #tabcombatpj .tabcomdata > i:before {content: "\e5aa";}
 .contentgroup-afrodita #tabcombatpj .tabcomdata > i:before {content: "\f4ba";}
+.contentgroup-dioniso #tabcombatpj .tabcomdata > i:before {content: "\f4e3";}
 .contentgroup-hades #tabcombatpj .tabcomdata > i:before {content: "\f54c";}
 .contentgroup-hecate #tabcombatpj .tabcomdata > i:before {content: "\f6bf";}
-.contentgroup-poseidon #tabcombatpj .tabcomdata > i:before {content: "\f773";}
 .contentgroup-hypnos #tabcombatpj .tabcomdata > i:before {content: "\f34e";}
+.contentgroup-artemisa #tabcombatpj .tabcomdata > i:before {content: "\f186";}
+.contentgroup-poseidon #tabcombatpj .tabcomdata > i:before {content: "\f773";}
+.contentgroup-atenea #tabcombatpj .tabcomdata > i:before {content: "\f5dc";}
 .contentgroup-khione #tabcombatpj .tabcomdata > i:before {content: "\f2dc";}
 .contentgroup-hebe #tabcombatpj .tabcomdata > i:before {content: "\e588";}
-.contentgroup-atenea #tabcombatpj .tabcomdata > i:before {content: "\f5dc";}
-.contentgroup-demeter #tabcombatpj .tabcomdata > i:before {content: "\f72d";}
 .contentgroup-iris #tabcombatpj .tabcomdata > i:before {content: "\f75b";}
+.contentgroup-demeter #tabcombatpj .tabcomdata > i:before {content: "\f72d";}
 .contentgroup-hermes #tabcombatpj .tabcomdata > i:before {content: "\f56b";}
 .contentgroup-apolo #tabcombatpj .tabcomdata > i:before {content: "\f001";}
 .contentgroup-zeus #tabcombatpj .tabcomdata > i:before {content: "\f0e7";}
-.contentgroup-hefesto #tabcombatpj .tabcomdata > i:before {content: "\f7e4";}
+.contentgroup-hefesto #tabcombatpj .tabcomdata > i:before {content: "\f6e3";}
+.contentgroup-hestia #tabcombatpj .tabcomdata > i:before {content: "\f7e4";}
 .contentgroup-ares #tabcombatpj .tabcomdata > i:before {content: "\f71d";}
 
 .monstruox .tabcomdata > i:before {content: "\f56b";}
@@ -1930,12 +1935,12 @@
   box-sizing: initial;
 }
 .hbcfirma {
-  width: 280px;
-  height: 180px;
-  margin: 10px auto;
+  width: 20rem;
+  height: 12.857rem;
+  margin: var(--gap2) auto;
   box-sizing: border-box !important;
-  outline: 2px solid var(--accent);
-  outline-offset: 8px;
+  outline: var(--bthickness) solid var(--accent);
+  outline-offset: var(--gap2);
   background: var(--back2);
   position: relative;
   --accent: var(--group);
@@ -1948,8 +1953,8 @@
   box-sizing: border-box !important;
 }
 .hbcfirma .hbcfirmaback {
-  width: 280px;
-  height: 180px;
+  width: 20rem;
+  height: 12.857rem;
   position: absolute;
   z-index: 0;
   filter: none;
@@ -1963,8 +1968,8 @@
   transition-delay: 0s;
 }
 .hbcfirma .hbcfirmaquote {
-  width: 280px;
-  height: 180px;
+  width: 20rem;
+  height: 12.857rem;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -1982,8 +1987,8 @@
 }
 .hbcfirma .hbcfirmaquote:before {
   content: "";
-  width: 280px;
-  height: 180px;
+  width: 20rem;
+  height: 12.857rem;
   position: absolute;
   background: var(--accent);
   z-index: 0;
@@ -1994,7 +1999,8 @@
   position: relative;
   z-index: 1;
   text-transform: uppercase;
-  font: 600 11px var(--font2);
+  font: var(--fo-bod3);
+  font-weight: 600;
   color: var(--txt3);
 }
 .hbcfirma .hbcfirmaquote > span b,
@@ -2016,7 +2022,7 @@
 .tabusqres {
   margin: 0 auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 28.571rem;
   background: var(--tback1);
   border: var(--border1);
   padding: var(--paddclamp5);
@@ -2035,7 +2041,8 @@
 }
 .tabusqres .tbrestitle {
   text-align: center;
-  font: 800 var(--fs-bigger) var(--font2);
+  font: var(--fo-bod-alt2);
+  font-weight: 900;
   text-transform: uppercase;
   color: var(--txt1);
   text-decoration: underline;
@@ -2050,7 +2057,7 @@
   padding-bottom: 0px !important;
 }
 .tabusq {
-  max-width: 570px;
+  max-width: 40.714rem;
   width: 100%;
   margin: 0 auto;
   background: var(--tback1);
@@ -3024,649 +3031,4 @@
 .tabhojaexp .tabhojcogoalitem > div > em a {
   color: var(--accent);
   font-style: italic;
-}
-/* MEDIA */
-/* media:width */
-@media (min-width: 1700px) {
-  #guidebook .admtitleimg > h2,
-  #guidebook .admtitleimg > em {
-    max-width: 570px;
-  }
-  #guidelinks,
-  #guidelinked {
-    top: 109px !important;
-  }
-  .admiman > i {
-    width: 50px !important;
-    height: 50px !important;
-  }
-  #nonplayercharacters .gbnpc {
-    height: 350px !important;
-  }
-  #expedtab .expzhtraits > div > b {
-    font-size: var(--fs-text);
-  }
-  #expedtab .expzhtraits > div.expzhtclass > b {
-    font-size: var(--fs-text);
-  }
-  #expedtab .expzhtraits > div > em {
-    font-size: var(--fs-small);
-  }
-  #expedtab #expzdata {
-    gap: var(--paddclamp7);
-  }
-  #expedtab .expzhstats {
-    flex: 1;
-    flex-direction: row !important;
-  }
-  #expedtab #expzrhoja {
-    flex-direction: column-reverse !important;
-  }
-  .tabcrono .tabcrcothread > i,
-  .tabhojaexp .tabhojcogoalitem > i {
-    width: 50px;
-    height: 50px;
-  }
-  .tabrelas .tabrlcochar .tabrlcocharimg {
-    width: 90px;
-    height: 90px;
-  }
-}
-@media (min-width: 2000px) {
-  #guidebook .admtitleimg > h2,
-  #guidebook .admtitleimg > em {
-    max-width: 700px !important;
-  }
-  #guidelinks {
-    top: 112px !important;
-  }
-  .admintab,
-  .tabrol1,
-  .tabrol2,
-  .tabrol3,
-  .tabusq,
-  .tabcrono,
-  .tabrelas,
-  .tabhojaexp {
-    max-width: 770px !important;
-  }
-  .admiman {
-    max-width: 500px !important;
-  }
-  .gdcriaturas .gdcriat,
-  #itemcatalogue .gdcitem {
-    max-width: 570px !important;
-  }
-  .gdcriaturas .gdcriat .gdcriatimg,
-  .gdcriaturas .gdcriat .gdcriatblurb {
-    height: 300px !important;
-  }
-  #expedtab .expzhtraits {
-    gap: 10px;
-  }
-  .tabrol2 .tbroltit > b > i {
-    -webkit-text-stroke-width: 1px;
-  }
-  .tabusqres {
-    max-width: 570px;
-  }
-  .tabaul#tbfull {
-    max-width: 1100px;
-  }
-  .tabcrono .tabcrcothread > i,
-  .tabhojaexp .tabhojcogoalitem > i {
-    width: 60px !important;
-    height: 60px !important;
-  }
-  .tabrelas .tabrlcochar .tabrlcocharimg {
-    width: 100px !important;
-    height: 100px !important;
-  }
-  #tabcombatpj,
-  #tabcombatmn {
-    max-width: 770px !important;
-    min-height: 320px;
-  }
-  .tabcomainblock,
-  .tabcotxtblock {
-    height: calc(320px - 42px);
-  }
-  .tabcomcalcs {
-    max-height: 71px;
-  }
-  .tabcomdata > i {
-    width: 50px;
-    height: 50px;
-  }
-}
-@media (max-width: 1000px) {
-  .tabaul#tbfull {
-    gap: var(--paddclamp5);
-    padding: var(--paddclamp5);
-  }
-  .tabaul .tbfside1, .tabaul .tbfside2 {
-    gap: var(--paddclamp5);
-  }
-  .tabaul#tbsimple {
-    padding: var(--paddclamp3);
-  }
-  #tabcombatpj,
-  #tabcombatmn {
-    flex-direction: column;
-  }
-  .tabcomainblock,
-  .tabcotxtblock {
-    max-width: none;
-    width: 100%;
-    align-self: stretch;
-    flex: 1;
-  }
-  .tabcotskills {
-    height: inherit;
-    padding-left: 0px;
-    border-left: none;
-    border-top: var(--border2);
-    padding-top: var(--gap3);
-  }
-  .tabcomainblock {
-    min-height: 240px;
-  }
-  .tabcotxtblock {
-    max-height: 230px;
-  }
-  #guidebook .admtitleimg > h2,
-  .admintab .admtitleimg > h2 {
-    font-size: var(--fs-h3) !important;
-  }
-}
-@media (max-width: 900px) {
-  #guidebook {
-    flex-wrap: wrap !important;
-  }
-  #guidelinks,
-  #guidelinked {
-    position: relative !important;
-    top: unset !important;
-    flex: 1 0 100% !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 6px 12px !important;
-  }
-  #guidelinks > strong,
-  #guidelinked > strong {
-    display: none !important;
-  }
-  #guidelinks > a,
-  #guidelinked > a {
-    margin-left: 0px !important;
-    text-align: center !important;
-  }
-  #guidelinks > a.preactive:before,
-  #guidelinked > a.preactive:before {
-    width: 15px;
-    margin-right: 4px;
-  }
-  #expedtab .expzhstats {
-    flex: 1;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-  }
-  #expedtab #expzrhoja {
-    flex-direction: column-reverse !important;
-  }
-  #expedtab #expzdata {
-    gap: 25px;
-  }
-  .tabaul .tbauimg {
-    width: 250px;
-  }
-  .tbroltit,
-  .tbrolcont {
-    padding: var(--paddclamp3);
-  }
-  .tabusq {
-    padding: var(--paddclamp7);
-  }
-  .tabupjimg {
-    display: none !important;
-  }
-  .tabutrama .tabucont {
-    border-width: 23px;
-    padding-right: var(--gap3);
-    border-right-width: 11px;
-  }
-  .tabcrono .tabcronocont,
-  .tabrelas .tabrelascont,
-  .tabhojaexp .tabhojexpcont {
-    padding: var(--paddclamp5);
-  }
-}
-@media (max-width: 800px) {
-  #guidebook .admtitleimg > h2 {
-    font-size: var(--fs-h2);
-  }
-  #expedtab .expzhtraits {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  #expedtab #expzdata {
-    gap: var(--paddclamp7);
-  }
-  #expedtab .expzhstats > b {
-    flex: 1 0 25%;
-  }
-  .tabaul#tbfull {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .tabaul .tbauimg {
-    width: 200px;
-  }
-  .tabaul#tbfull .tbauname {
-    text-align: center;
-  }
-  #tabcombatpj,
-  #tabcombatmn {
-    flex-direction: row;
-  }
-  .tabcomainblock,
-  .tabcotxtblock {
-    max-width: calc(50% - 6px);
-    width: 100%;
-    align-self: stretch;    
-    min-height: auto;
-    height: calc(280px - 42px);
-    max-height: none;
-  }
-  .tabcotskills {
-    height: inherit;
-    padding-left: var(--gap3);
-    border-left: var(--border2);
-    border-top: none;
-    padding-top: 0px;
-  }
-  #guidebook .admtitleimg > h2,
-  .admintab .admtitleimg > h2 {
-    font-size: var(--fs-h2) ;
-  }
-}
-@media (max-width: 700px) {
-  #nonplayercharacters .gbnpc {
-    flex: 1 0 100%;
-  }
-  #expedtab .expzhtraits > div {
-    flex: 1 0 40%;
-  }
-  #expedtab .expzhtraits > div.expzhtvirtue {
-    border-left: none;
-  }
-  #expedtab #expzhist,
-  #expedtab #expzextr {
-    border-width: var(--paddclamp7);
-    padding-right: var(--gap3);
-    border-right-width: 10px;
-  }
-  #expedtab #expzdata {
-    padding: var(--paddclamp5);
-  }
-  #expedtab .extbnam {
-    padding: var(--paddclamp5);
-  }
-  #expedtab #expimg {
-    height: 250px;
-  }
-  .tabhojaexp .tabhojcodata {
-    flex-direction: column;
-  }
-  .tabhojaexp .tabhojcodata > em {
-    height: 1px;
-    width: 200px;
-  }  
-  .tabaul .tbauname {
-    font-size: var(--fs-h3);
-  }
-  #tabcombatpj,
-  #tabcombatmn {
-    flex-direction: column;
-  }
-  .tabcomainblock,
-  .tabcotxtblock {
-    max-width: none;
-    width: 100%;
-    align-self: stretch;
-    height: auto;
-  }
-  .tabcotskills {
-    height: inherit;
-    padding-left: 0px;
-    border-left: none;
-    border-top: var(--border2);
-    padding-top: var(--gap3);
-  }
-  .tabcomainblock {
-    min-height: 240px;
-  }
-  .tabcotxtblock {
-    max-height: 230px;
-  }
-  #guidebook .admtitleimg > h2,
-  .admintab .admtitleimg > h2 {
-    font-size: var(--fs-h3) !important;
-    word-break: break-word;
-  }
-}
-@media (max-width: 570px) {
-  #guidebook .admtitleimg > h2 {
-    font-size: var(--fs-h3) !important;
-  }
-  .admtitmain {
-    padding: var(--paddclamp7) 0px !important;
-  }
-  #expedtab .expzhtraits > div {
-    flex: 1 0 100%;
-  }
-  #expedtab .expzhtraits {
-    gap: 0px;
-  }
-  #expedtab .expzhtraits > div.expzhtclass {
-    padding: var(--paddclamp3);
-  }
-  #expedtab .expzhtraits > div.expzhtvirtue {
-    border-top: var(--border2);
-    padding-top: var(--paddclamp5);
-  }
-  #expedtab .expzhtraits > div.expzhtflaw {
-    border-bottom: var(--border2);
-    border-right: none !important;
-    padding-bottom: var(--paddclamp5);
-  }
-  #expedtab #expzrhoja {
-    gap: var(--paddclamp7);
-    padding: var(--paddclamp7);
-  }
-  #expedtab .extbnam > b {
-    font-size: var(--fs-h3);
-  }
-  .tbroltit,
-  .tbrolcont {
-    padding: var(--paddclamp5);
-  }
-  :is(.tabrol1, .tabrol2, .tabrol3) .tbroltit > b {
-    font-size: var(--fs-h3);
-  }
-  .tabrol1 .tbroltit {
-    margin-bottom: 0;
-  }  
-  .tabrol3 .tbroltit {
-    min-height: 100px;
-  }
-  .tabrol3 .tbroltit > span {
-    position: static;
-  }
-  .tabusqres {
-    padding: var(--paddclamp7);
-  }
-  .tabusq {
-    padding: var(--gap3);
-    gap: var(--gap3);
-  }
-  .tabucont {
-    border-width: 15px !important;
-    padding-right: 7px !important;
-    border-right-width: 8px !important;
-  }
-  .tabaul#tbsimple {
-    padding: var(--paddclamp5);
-    gap: var(--paddclamp7);
-  }
-  .tabaul .tbfside1, .tabaul .tbfside2 {
-    justify-content: center;
-    align-items: center;
-  }
-  .tabaul .tbauimg {
-    width: 100%;
-  }
-  .tabaul .tbauinfo > em {
-    flex: 1 0 35%;
-  }
-  .tabcrono .tabcronocont,
-  .tabrelas .tabrelascont,
-  .tabhojaexp .tabhojexpcont {
-    padding: var(--paddclamp7);
-  }
-  .registeredsec {
-    margin: 0px 12px !important;
-  }
-  .admiman {
-    padding: var(--paddclamp7) !important;
-  }
-  .admiman h3 {
-    font-size: var(--fs-h4) !important;
-  }
-  .gdcriaturas .gdcriat,
-  #itemcatalogue .gdcitem {
-    min-width: 100% !important;
-  }
-  .gdcriaturas .gdcriat .gdcriatimg,
-  .admintab .gdcriat .gdcriatimg {
-    flex: 1 0 100% !important;
-    height: 150px !important;
-    border-right: none !important;
-    border-bottom: var(--border1);
-  }
-  .gdcriaturas .gdcriat .gdcriatblurb,
-  .admintab .gdcriat .gdcriatblurb {
-    height: 210px !important;
-  }
-  #expedtab .extbnam {
-    padding: var(--paddclamp7);
-  }
-  #expedtab #expzhist,
-  #expedtab #expzextr {
-    border-width: 15px;
-    padding-right: 7px;
-    border-right-width: 7px !important;
-  }
-  #expedtab #expzrhoja {
-    gap: var(--gap3);
-  }
-  #expedtab #expzdata {
-    padding: var(--paddclamp7);
-  }
-  #expedtab #expimg {
-    height: 200px !important;
-  }
-  .tbroltit,
-  .tbrolcont {
-    padding: var(--paddclamp7);
-  }
-  .tbrolinfo {
-    padding: var(--gap3);
-  }
-  .tabaul#tbfull .tbaulinks > a {
-    flex: 1 0 15%;
-    text-align: center;
-    font-size: var(--fs-h5);
-  }
-  .tabaul#tbfull .tbaulinks {
-    gap: var(--paddclamp7);
-  }
-  .tabcrono .tabcronotitle,
-  .tabrelas .tabrelastitle,
-  .tabhojaexp .tabhojexptitle {
-    padding: var(--paddclamp7);
-  }
-  #expedtab .expzhstats > b {
-    min-width: 40%;
-  }
-  #guidebook .admtitleimg > h2,
-  .admintab .admtitleimg > h2 {
-    font-size: var(--fs-h4) !important;
-  }
-}
-@media (max-width: 450px) {
-  #guidelinks,
-  #guidelinked,
-  #guideconts,
-  .blockquote,
-  .reminder,
-  .admtitleimg,
-  .admintab,
-  .admiman {
-    padding: 12px !important;
-  }
-  .blockquote,
-  .registeredsec {
-    margin: 0px 6px !important;
-  }
-  #expedtab #expzdata {
-    padding: var(--paddclamp7);
-  }
-  .tabusqres {
-    padding: var(--gap3);
-  }
-  #tabcombatpj,
-  #tabcombatmn {
-    padding: var(--gap3);
-  }
-}
-/* media:height */
-@media (min-height: 1500px) {
-  #guidebook {
-    flex-wrap: wrap !important;
-  }
-  #guidelinks,
-  #guidelinked {
-    position: relative !important;
-    top: unset !important;
-    flex: 1 0 100% !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 6px 12px !important;
-  }
-  #guidelinks > strong,
-  #guidelinked > strong {
-    display: none !important;
-  }
-  #guidelinks > a,
-  #guidelinked > a {
-    margin-left: 0px !important;
-    text-align: center !important;
-  }
-  #guidelinks > a.preactive:before,
-  #guidelinked > a.preactive:before {
-    width: 15px;
-    margin-right: 4px;
-  }
-  #guidebook .admtitle > i,
-  .admintab .admtitle > i {
-    height: 45px !important;
-    width: 45px !important;
-  }
-  .admintab,
-  .tabrol1,
-  .tabrol2,
-  .tabrol3,
-  .tabusq,
-  .tabcrono,
-  .tabrelas,
-  .tabhojaexp {
-    max-width: 770px !important;
-  }
-  .admiman > i {
-    width: 50px !important;
-    height: 50px !important;
-  }
-  #nonplayercharacters .gbnpc {
-    height: 400px !important;
-  }
-  .gdcriaturas .gdcriat .gdcriatimg {
-    flex: 1 0 100% !important;
-    height: 160px !important;
-    border-right: none !important;
-    border-bottom: var(--border1);
-  }
-  .gdcriaturas .gdcriat .gdcriatblurb {
-    height: 245px !important;
-  }
-  #itemcatalogue .gdcitem {
-    flex: 1 0 40% !important;
-  }
-  #expedtab .expzhtraits > div > b {
-    font-size: var(--fs-text);
-  }
-  #expedtab .expzhtraits > div.expzhtclass > b {
-    font-size: var(--fs-text);
-  }
-  #expedtab .expzhtraits > div > em {
-    font-size: var(--fs-small);
-  }
-  #expedtab #expzdata {
-    gap: var(--paddclamp7);
-  }
-  #expedtab .expzhstats {
-    flex: 1;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-  }
-  #expedtab .expzhstats > b {
-    flex: 1 0 30% !important;
-  }
-  #expedtab #expzrhoja {
-    flex-direction: column-reverse !important;
-  }
-  #expedtab .expzhtraits {
-    gap: 10px;
-  }
-  .tabrol2 .tbroltit > b > i {
-    -webkit-text-stroke-width: 1px;
-  }
-  .tabaul#tbfull {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .tabaul#tbfull .tbauname {
-    text-align: center;
-  }
-  .tabaul .tbfside1, .tabaul .tbfside2 {
-    justify-content: center;
-    align-items: center;
-  }
-  .tabcrono .tabcrcothread > i,
-  .tabhojaexp .tabhojcogoalitem > i {
-    width: 60px;
-    height: 60px;
-  }
-  .tabrelas .tabrlcochar .tabrlcocharimg {
-    width: 100px;
-    height: 100px;
-  }
-  #tabcombatpj,
-  #tabcombatmn {
-    max-width: 770px !important;
-    min-height: 420px;
-  }
-  .tabcomainblock,
-  .tabcotxtblock {
-    height: calc(420px - 42px);
-  }
-  .tabcomcalcs {
-    max-height: 106px;
-  }
-  .tabcomdata > i {
-    width: 70px;
-    height: 70px;
-  }
-  .tabcommlife {
-    height: 45px;
-  }
-  .tbcmdtinfo:before {
-    top: -8px;
-  }
 }
