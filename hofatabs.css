@@ -1260,7 +1260,7 @@
 #expedtab .expzhtraits > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché) {
   : var(--tyche);
   &:before {
-    content: "\e362";
+    content: "\f655";
   }
 }
 #expedtab .expzhtraits > div:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone) {
@@ -1897,7 +1897,7 @@
   gap: var(--gap3);
 }
 .contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {content: "\f6cb";}
-.contentgroup-tyche #tabcombatpj .tabcomdata > i:before {content: "\e362";}
+.contentgroup-tyche #tabcombatpj .tabcomdata > i:before {content: "\f655";}
 .contentgroup-persefone #tabcombatpj .tabcomdata > i:before {content: "\e5aa";}
 .contentgroup-afrodita #tabcombatpj .tabcomdata > i:before {content: "\f4ba";}
 .contentgroup-dioniso #tabcombatpj .tabcomdata > i:before {content: "\f4e3";}
