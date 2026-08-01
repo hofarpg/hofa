@@ -1599,7 +1599,7 @@
 :is(#tabcombatpj, #tabcombatmn, .tabcomdata, .tbcmdtname, .tabcomstats, .tabcombatfull, .tabcotskills, .tbctcat) > br,
 :is(#tabcombatpj, #tabcombatmn) > div > br,
 .tabcombless br,
-.tabcommlife br {
+.tabcommlife br, .tbctcat > i {
   display: none !important;
 }
 
