@@ -14,7 +14,7 @@
     scrollbar-color: var(--accent) var(--back1);
     scrollbar-width: auto;
   }
-  mainbody * {
+  main * {
     scrollbar-color: var(--tborder-c) transparent;
     scrollbar-width: thin;
   }
