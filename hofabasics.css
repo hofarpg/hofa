@@ -9,7 +9,7 @@
 }
 
 /* scrollbar */
-@supports not selector(::-webkit-scrollbar) {
+@supports not style(::-webkit-scrollbar) {
   * {
     scrollbar-color: var(--accent) var(--back1);
     scrollbar-width: auto;
@@ -35,21 +35,21 @@
 ::-webkit-scrollbar-corner {
   background: var(--back1);
 }
-*:not(body)::-webkit-scrollbar {
+:not(body) {
+  &::-webkit-scrollbar {
   width: 3px;
   height: 3px;
   border-left: none;
-}
-*:not(body)::-webkit-scrollbar-track {
+  }
+  &::-webkit-scrollbar-track {
   background: transparent;
   border: none;
-}
-*:not(body)::-webkit-scrollbar-thumb {
+  }
+  &::-webkit-scrollbar-thumb {
   background: var(--tborder-c);
   border: none;
-}
-*:not(body)::-webkit-scrollbar-corner {
-  background: transparent;
+  }
+  &::-webkit-scrollbar-corner {background: transparent;}
 }
 
 /* selection */
@@ -302,8 +302,8 @@ span.corners-top span {
 
 /* PREVIEWS Y VISTAS */
 .panel.poptions label {
-  display: inline-block;
-  margin: var(--gap2);
+  display: initial;
+  line-height: initial;
 }
 .messageoptions .panel fieldset {
   font: var(--fo-bod1);
@@ -1165,18 +1165,10 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
 #tagForm .threadtag[data-filter="ENCARGO"],
 #tagForm .threadtag[data-filter="MINI-ENCARGO"] {
   font-size: inherit;
+  
+  &:before {display: none !important;}
 }
-#tagForm .threadtag[data-filter="ENTRENAMIENTO"]:before,
-#tagForm .threadtag[data-filter="OFICIO"]:before,
-#tagForm .threadtag[data-filter="VIGILANCIA"]:before,
-#tagForm .threadtag[data-filter="FORJA"]:before,
-#tagForm .threadtag[data-filter="ALQUIMIA"]:before,
-#tagForm .threadtag[data-filter="ARTESANÍA"]:before,
-#tagForm .threadtag[data-filter="PRIMEROS AUXILIOS"]:before,
-#tagForm .threadtag[data-filter="ENCARGO"]:before,
-#tagForm .threadtag[data-filter="MINI-ENCARGO"]:before {
-  display: none !important;
-}
+
 .threadtag[data-filter="ENTRENAMIENTO"]:before {
   content: "ENT";
 }
