@@ -1793,7 +1793,7 @@
 .tbctcat {
   gap: var(--gap0);
 }
-.tbctcat:not(:has([data-status*="uso" i],
+.tbctcat:has([data-status]):not(:has([data-status*="uso" i],
 [data-status^="activ" i],
 [data-status*="equip" i],
 [data-status*="vida" i])) {
@@ -1806,44 +1806,9 @@
 .tbctcat [data-status*="usad" i],
 .tbctcat :is([data-status*="inactiv" i],
 .tbctcat [data-status*="usad" i]) + br {
-  opacity: 0.5;
-  filter: grayscale(0.5);
   display: none;
 }
-.tbctbl:is(#nousada, #Nousada, #NoUsada, #NOUSADA):before {
-  content: "No Usada";
-}
-.tbctbl:is(#usada, #USADA, #Usada):before {
-  content: "Usada";
-}
-.tbctbl:is(#enuso, #Enuso, #EnUso, #ENUSO):before {
-  content: "En Uso";
-}
-.tbctbl:is(#nousado, #Nousado, #NoUsado, #NOUSADO):before {
-  content: "No Usado";
-}
-.tbctbl:is(#usado, #USADO, #Usado):before {
-  content: "Usado";
-}
-.tbctbl:is(#equipam, #EQUIPAM, #Equipam, #equipo, #EQUIPO, #Equipo):before {
-  content: "Equipo";
-}
-.tbctbl:is(#objactivo, #Objactivo, #ObjActivo, #OBJACTIVO, #activo, #Activo, #ACTIVO):before {
-  content: "Activo";
-}
-.tbctbl:is(#objinactivo, #Objinactivo, #ObjInactivo, #OBJINACTIVO, #inactivo, #Inactivo, #INACTIVO):before {
-  content: "Inactivo";
-}
-.tbctbl:is(#inactiva, #Inactiva, #INACTIVA):before {
-  content: "Inactiva";
-}
-.tbctbl:is(#activa, #ACTIVA, #Activa):before {
-  content: "Activa";
-}
-.tbctbl:is(#nousada, #usada, #nousado, #usado, #objinactivo, #inactiva, #Nousada, #Usada, #Nousado, #Usado, #Objinactivo, #Inactiva, #NoUsada, #NoUsado, #ObjInactivo, #NOUSADA, #USADA, #NOUSADO, #USADO, #OBJINACTIVO, #INACTIVA) {
-  opacity: 0.5;
-  filter: grayscale(0.5);
-}
+
 #tabcombatmn .tabcomstats > div {
   flex: 1 0 40%;
 }
