@@ -1704,8 +1704,8 @@
   outline: var(--border1);
   outline-offset: -1px;
   font: 400 var(--fs-text) var(--font2);
-  line-height: 112%;
-  max-height: 4.5rem;
+  line-height: 110%;
+  max-height: 4.65rem;
   height: 100%;
   overflow: auto;
 }
