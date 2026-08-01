@@ -1705,7 +1705,8 @@
   outline-offset: -1px;
   font: 400 var(--fs-text) var(--font2);
   line-height: 106%;
-  max-height: 5.357rem;
+  max-height: 4.5rem;
+  height: 100%;
   overflow: auto;
 }
 .tabcombless {
