@@ -144,7 +144,7 @@
   margin: 0px;
   text-align: center;
   line-height: 85%;
-  text-shadow: var(--shadow2);
+  text-shadow: 1px 1px 0.5px var(--accent);
 }
 #guidebook .admtitleimg > h2 {
   font-size: var(--fo-h2-clamp);
@@ -265,7 +265,7 @@
 .admintab .admtitle h2 {
   margin: 0;
   line-height: 110%;
-  text-shadow: var(--shadow2);
+  text-shadow: 1px 1px 0.5px var(--accent);
 }
 #guidebook .admtitle h3,
 .admintab .admtitle h3 {
@@ -399,7 +399,7 @@
   font: var(--fo-h3);
   font-size: var(--fo-h3-clamp);
   color: var(--txt1) !important;
-  text-shadow: var(--shadow2);
+  text-shadow: 1px 1px 0.5px var(--accent);
   margin: 0px !important;
   line-height: 90% !important;
   padding: 0px !important;
