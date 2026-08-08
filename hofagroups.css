@@ -43,7 +43,7 @@
   
   > b {
     font-weight: 900;
-    text-shadow: var(--shadow3);
+    text-shadow: 2px 1px 0.5px var(--accent);
     transition: var(--trs1);
   }
   
