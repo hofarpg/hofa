@@ -44,7 +44,7 @@ body.nomires {
 
 .cnicon>h1>a {
   color:var(--txt1);
-  text-shadow:var(--shadow2);
+  text-shadow:1px 1px 0.5px var(--accent);
   font:var(--fo-h2);
   position:relative;
   z-index:1;
