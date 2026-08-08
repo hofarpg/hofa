@@ -478,6 +478,10 @@
     width: var(--icon1);
     height: var(--icon1);
   }
+  /* footer */
+  footer .skincredit > span {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {  
