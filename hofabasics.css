@@ -9,7 +9,7 @@
 }
 
 /* scrollbar */
-@supports not style(::-webkit-scrollbar) {
+@-moz-document url-prefix() {
   * {
     scrollbar-color: var(--accent) var(--back1);
     scrollbar-width: auto;
