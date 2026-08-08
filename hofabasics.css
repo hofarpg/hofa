@@ -366,7 +366,7 @@ span#dice_to_del {
 .mhava {
   justify-content: center;
   align-items: center;
-  outline: var(--baborder);
+  outline: var(--bthickness) solid var(--accent);
   margin: 2px;
   outline-color: var(--tgroup, var(--taccent));
   border-radius: var(--bradius);
