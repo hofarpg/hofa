@@ -151,7 +151,7 @@ h1#pagetitle:has(~ .mbmmembers) span {
 }
 .mbsmname span {
   color: var(--txt1) !important;
-  text-shadow: var(--shadow3);
+  text-shadow: 2px 1px 0.5px var(--accent);
 }
 .mbsmimp {
   gap: 4px;
