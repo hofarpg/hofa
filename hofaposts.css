@@ -46,7 +46,7 @@
 .phicon {
   justify-content: center;
   align-items: center;
-  outline: var(--baborder);
+  outline: var(--bthickness) solid var(--accent);
   margin: var(--bthickness);
   outline-color: var(--tgroup);
   border-radius: var(--bradius);
@@ -263,7 +263,7 @@
 }
 .ppcistats .pccontent > strong {
   flex: 1 0 30%;
-  border-top: var(--baborder);
+  border-top: var(--bthickness) solid var(--accent);
   border-left: var(--tborder);
   border-right: var(--tborder);
   border-radius: var(--bradius);
