@@ -43,7 +43,7 @@
   font-weight: 900;
 }
 .pfcuser {
-  text-shadow: var(--shadow3);
+  text-shadow: 2px 1px 0.5px var(--accent);
   font: 900 var(--fs-h2) var(--font1);
   line-height: 90%;
   text-transform: uppercase;
@@ -173,7 +173,7 @@
   display: none;
 }
 .pfctrank > span {
-  text-shadow: var(--shadow3);
+  text-shadow: 2px 1px 0.5px var(--accent);
 }
 .pfclvl {
   font: 900 var(--fs-body) var(--font2);
