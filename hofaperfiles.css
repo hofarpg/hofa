@@ -554,7 +554,7 @@
   font: bold var(--fs-small) var(--font3);
   transition: var(--trs1);
   border-radius: var(--bradius);
-  border-bottom: var(--baborder) !important;
+  border-bottom: var(--bthickness) solid var(--accent) !important;
 }
 /*-------MUSIC PLAYER BY GLENTHEMES-------*/
 #glenjams-05 {
