@@ -552,7 +552,7 @@
     display: none;
   }
   .forava .fraava {
-    outline: var(--baborder);
+    outline: var(--bthickness) solid var(--accent);
     filter: none;
     outline-color: var(--group);
     outline-offset: 2px;
