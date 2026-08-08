@@ -130,7 +130,7 @@
   position: relative;
   width: var(--icon5);
   height: var(--icon5);
-  outline: var(--baborder);
+  outline: var(--bthickness) solid var(--accent);
   border-radius: var(--bradius);
   outline-offset: var(--gap0);
   margin: var(--gap0) auto;
