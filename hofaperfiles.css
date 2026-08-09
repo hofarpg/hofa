@@ -1,3 +1,24 @@
+body:has(#profile) {
+  height: 100%;
+  min-height: 100vh;
+  header {
+    display: none;
+  }
+  #tablon {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    align-self: stretch;
+    display: grid;
+    align-items: center;
+    flex: 1;
+    height: fit-content;
+    min-height: calc(100vh - var(--nav-height));
+  }
+}
 #profile {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -544,6 +565,12 @@
   gap: 6px;
   flex-wrap: wrap;
   text-align: center;
+  &:empty {
+    display: none;
+  }
+}
+.profaut:not(:has(a)) {
+  display: none;
 }
 .profaut > a {
   text-transform: uppercase;
