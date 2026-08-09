@@ -61,7 +61,7 @@
 .dicethrow .diceres:not(:last-of-type) {
   margin-bottom: var(--gap1);
 }
-.dicethrow .diceres > strong {
+.dicethrow .diceres > div {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -81,16 +81,16 @@
   text-transform: uppercase;
   text-shadow: 1px 1px 0.5px var(--group);
 }
-.dicethrow .diceres > strong > em {
+.dicethrow .diceres > div > em {
   font: bold var(--fo-deco2);
   font-weight: bold;
   text-shadow: none !important;
   color: var(--txt3);
   line-height: 100%;
 }
-.dicethrow .diceres:is(.dracma, .moiras, .dado-del-destino) > strong,
-.dicethrow .diceres:is(.ataque, .defensa) > strong:is(.res-1, .res-8),
-.dicethrow .diceres:is(.ataque-de-espíritu, .defensa-de-espíritu) > strong:is(.res-1, .res-12) {
+.dicethrow .diceres:is(.dracma, .moiras, .dado-del-destino) > div,
+.dicethrow .diceres:is(.ataque, .defensa) > div:is(.res-1, .res-8),
+.dicethrow .diceres:is(.ataque-de-espíritu, .defensa-de-espíritu) > div:is(.res-1, .res-12) {
   gap: var(--gap0);
   & i {
     font-weight: normal;
@@ -107,7 +107,7 @@
   border: none !important;
   border-radius: var(--bradius) !important;
 }
-.diceres strong.dcr {
+.diceres .dcr {
   flex: 1 0 30%;
   min-width: 200px;
   padding: var(--paddclamp7);
@@ -121,7 +121,7 @@
   text-shadow: none;
   text-transform: none;
 }
-.diceres strong.dcr > div {
+.diceres .dcr > div {
   gap: var(--gap2);
 }
 .diceres .dcr .dcrimg {
@@ -149,7 +149,7 @@
   border-radius: var(--bradius);
   overflow: hidden;
 }
-.diceres .dcr strong.crname {
+.diceres .dcr .crname {
   text-transform: uppercase;
   margin-top: var(--gap3);
   font: var(--fo-deco1);
@@ -217,57 +217,57 @@
 .diceres .dcr .dcrdesc > h4:not(:first-of-type) {
   margin-top: var(--gap2);
 }
-.dcr .crarpia {
+.dcr.crarpia {
   --cridiceimg: url("https://d.l3n.co/XzKzyF.png");
 }
-.dcr .crautomata {
+.dcr.crautomata {
   --cridiceimg: url("https://b.l3n.co/XzKlnr.png");
 }
-.dcr .crgorgona {
+.dcr.crgorgona {
   --cridiceimg: url("https://d.l3n.co/XzKHQ7.png");
 }
-.dcr .crkobaloi {
+.dcr.crkobaloi {
   --cridiceimg: url("https://b.l3n.co/XzKO8b.png");
 }
-.dcr .crleucrota {
+.dcr.crleucrota {
   --cridiceimg: url("https://c.l3n.co/XzKpuT.png");
 }
-.dcr .crmyrmeke {
+.dcr.crmyrmeke {
   --cridiceimg: url("https://d.l3n.co/XzKKmz.png");
 }
-.dcr .croveja {
+.dcr.croveja {
   --cridiceimg: url("https://c.l3n.co/XzK4I5.png");
 }
-.dcr .crestirge {
+.dcr.crestirge {
   --cridiceimg: url("https://b.l3n.co/XzKsUC.png");
 }
-.dcr .cranfisbena {
+.dcr.cranfisbena {
   --cridiceimg: url("https://a.l3n.co/XzKm7v.png");
 }
-.dcr .crciclope {
+.dcr.crciclope {
   --cridiceimg: url("https://b.l3n.co/XzKBT2.png");
 }
-.dcr .crcria {
+.dcr.crcria {
   --cridiceimg: url("https://c.l3n.co/XzKdy9.png");
 }
-.dcr .crdracaenae {
+.dcr.crdracaenae {
   --cridiceimg: url("https://b.l3n.co/XzK9eo.png");
 }
-.dcr .crempusa {
+.dcr.crempusa {
   --cridiceimg: url("https://a.l3n.co/XzKVQi.png");
 }
-.dcr .crhyppalektryon {
+.dcr.crhyppalektryon {
   --cridiceimg: url("https://b.l3n.co/XzKQ8m.png");
 }
-.dcr .crperros {
+.dcr.crperros {
   --cridiceimg: url("https://c.l3n.co/XzKCoP.png");
 }
-.dcr .crlestrigon {
+.dcr.crlestrigon {
   --cridiceimg: url("https://d.l3n.co/XzK6mZ.png");
 }
-.dcr .crguerrero {
+.dcr.crguerrero {
   --cridiceimg: url("https://c.l3n.co/XzKkIK.png");
 }
-.dcr .crsirenas {
+.dcr.crsirenas {
   --cridiceimg: url("https://d.l3n.co/XzKTFc.png");
 }
