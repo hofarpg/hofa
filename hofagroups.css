@@ -9,7 +9,7 @@
 .usgp {
   display: flex;
   flex-direction: column;
-  flex: 1 0 15%;
+  flex: 1 0 12%;
   text-align: center;
   background: var(--tback1);
   border: var(--border1);
@@ -61,22 +61,3 @@
     }
   }
 }
-
-[class*="nemesis"] > em:before {content: "\f6cb";}    
-[class*="tyche"] > em:before {content: "\e362";}
-[class*="afrodita"] > em:before {content: "\f4ba";}
-[class*="dioniso"] > em:before {content: "\f4e3";}
-[class*="hades"] > em:before {content: "\f54c";}
-[class*="hecate"] > em:before {content: "\f6bf";}
-[class*="poseidon"] > em:before {content: "\f773";}
-[class*="hypnos"] > em:before {content: "\f34e";}
-[class*="khione"] > em:before {content: "\f2dc";}
-[class*="hebe"] > em:before {content: "\e588";}
-[class*="atenea"] > em:before {content: "\f5dc";}
-[class*="demeter"] > em:before {content: "\f72d";}
-[class*="iris"] > em:before {content: "\f75b";}
-[class*="hermes"] > em:before {content: "\f56b";}
-[class*="apolo"] > em:before {content: "\f001";}
-[class*="zeus"] > em:before {content: "\f0e7";}
-[class*="hefesto"] > em:before {content: "\f7e4";}
-[class*="ares"] > em:before {content: "\f71d";}
