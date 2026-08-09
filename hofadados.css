@@ -205,7 +205,7 @@
   display: block;
   margin-bottom: var(--gap0);
 }
-.diceres .dcr .dcrdesc > span > b, .monstruo-drops > span {
+.diceres .dcr .dcrdesc > span > b, .monstruo-drops > li {
   text-transform: uppercase;
   color: var(--accent);
   font: var(--fo-deco2);
