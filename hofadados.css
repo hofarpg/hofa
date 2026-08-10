@@ -135,19 +135,13 @@
   outline-offset: var(--gap0);
   margin: var(--gap0) auto;
 }
-.diceres .dcr .dcrimg:before {
-  content: "";
-  position: absolute;
-  background-image: var(--cridiceimg);
-  z-index: 0;
+.diceres .dcr .dcrimg img {
   width: 100%;
-  height: 100%;
-  filter: var(--filter2);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: var(--bradius);
-  overflow: hidden;
+  filter: var(--filter2);
+  opacity: .5;  
 }
 .diceres .dcr .crname {
   text-transform: uppercase;
