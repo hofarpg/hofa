@@ -199,7 +199,7 @@
   display: block;
   margin-bottom: var(--gap0);
 }
-.diceres .dcr .dcrdesc > :is(span > strong, li) {
+.diceres .dcr .dcrdesc :is(span > strong, li) {
   text-transform: uppercase;
   color: var(--accent);
   font: var(--fo-deco2);
