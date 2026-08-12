@@ -1006,7 +1006,7 @@
   align-self: stretch;
 }
 #expedtab #expzdata > b {
-  flex: 1 0 30%;
+  flex: 1 0 calc(30% - var(--paddclamp4));
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -1014,7 +1014,7 @@
   font: var(--fo-bod2);
   font-weight: bold;
   color: var(--txt3);
-  line-height: 100% !important;
+  line-height: 100%;
   gap: var(--gap1);
 }
 #expedtab #expzdata > b > u {
