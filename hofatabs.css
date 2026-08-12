@@ -1900,7 +1900,7 @@
   box-sizing: initial;
 }
 .hbcfirma {
-  width: 20rem;
+  max-width: 20rem;
   height: 12.857rem;
   margin: var(--gap2) auto;
   box-sizing: border-box !important;
@@ -1908,7 +1908,6 @@
   outline-offset: var(--gap2);
   background: var(--back2);
   position: relative;
-  --accent: var();
   overflow: hidden;
 }
 .hbcfirma > br {
