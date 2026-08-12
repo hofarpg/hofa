@@ -1917,8 +1917,8 @@
   box-sizing: border-box !important;
 }
 .hbcfirma .hbcfirmaback {
-  width: 20rem;
-  height: 12.857rem;
+  width: 100%;
+  height: 100%;
   position: absolute;
   z-index: 0;
   filter: none;
@@ -1932,8 +1932,8 @@
   transition-delay: 0s;
 }
 .hbcfirma .hbcfirmaquote {
-  width: 20rem;
-  height: 12.857rem;
+  width: 100%;
+  height: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -1941,12 +1941,12 @@
   text-align: justify;
   text-align-last: center;
   padding: var(--paddclamp5);
-  bottom: calc(100%);
+  bottom: 100%;
   transition: var(--trs2);
   transition-delay: 0s;
 }
 .hbcfirma:hover .hbcfirmaquote {
-  bottom: 0px;
+  bottom: 0;
   transition-delay: 1s;
 }
 .hbcfirma .hbcfirmaquote:before {
