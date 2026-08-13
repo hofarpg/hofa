@@ -619,7 +619,7 @@ body:has(#profile) {
       gap: var(--gap4);
       flex-wrap: wrap;
       & > strong {
-        flex: 1;
+        flex: 1 0 25%;
         text-align: center;
         display: flex;
         flex-direction: row;
@@ -630,7 +630,7 @@ body:has(#profile) {
         border-right: var(--tborder);
         border-bottom: var(--bborder1);
         border-bottom-color: var(--group);
-        padding: var(--padd0) var(--gap3);
+        padding: var(--padd1) var(--gap3);
         font: var(--fo-deco2);
         font-weight: 800;
         color: var(--txt1);
