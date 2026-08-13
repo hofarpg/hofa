@@ -3,15 +3,15 @@
 #profile:is([class*="profilegroup-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-nemesis"]) {--profgrimg: url('https://a.l3n.co/bVUWo3.png');}
 #profile:is([class*="profilegroup-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
-#profile:is([class*="profilegroup-persefone"]) {--profgrimg: url('https://d.l3n.co/bVUZyA.png');}
-#profile:is([class*="profilegroup-afrodita"]) {--profgrimg: url('https://a.l3n.co/bVUrRM.png');}
-#profile:is([class*="profilegroup-dioniso"]) {--profgrimg: url('https://b.l3n.co/bVUt7Q.png');}
+#profile:is([class*="profilegroup-persefone"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-afrodita"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-dioniso"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-hades"]) {--profgrimg: url('https://a.l3n.co/bVU1Fa.png');}
 #profile:is([class*="profilegroup-hecate"]) {--profgrimg: url('https://a.l3n.co/bVcFav.png');}
-#profile:is([class*="profilegroup-hypnos"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hypnos"]) {--profgrimg: url('https://d.l3n.co/bVyN5x.png');}
 #profile:is([class*="profilegroup-artemisa"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-poseidon"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-atenea"]) {--profgrimg: url('https://b.l3n.co/bVUIeq.png');}
+#profile:is([class*="profilegroup-atenea"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-khione"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-hebe"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-iris"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
@@ -22,7 +22,6 @@
 #profile:is([class*="profilegroup-zeus"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-hefesto"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
-#profile:is([class*="profilegroup-"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 /*QUITAR HEADER, TABLÓN Y FOOTER*/
 body:has(#profile) {
   height: 100%;
@@ -264,7 +263,6 @@ body:has(#profile) {
       background-image: var(--profgrimg);
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
     }
     &:after {
       background: var(--accent);
@@ -468,7 +466,7 @@ body:has(#profile) {
   border-bottom: var(--tborder);
   width: 100%;
   justify-content: space-between;
-  padding: var(--paddclamp3);
+  padding: var(--paddclamp4);
   gap: var(--paddclamp4) var(--paddclamp5);
   flex-wrap: wrap;
   & > div {
@@ -857,13 +855,14 @@ body:has(#profile) {
   border-bottom: var(--tborder);
   width: 100%;
   justify-content: space-between;
-  padding: var(--paddclamp3);
+  padding: var(--paddclamp4);
   gap: var(--paddclamp4) var(--paddclamp5);
   flex-wrap: wrap;
    & > div {
     flex: 1 0 25%;
     gap: var(--gap1);
-    & > em {
+    justify-content: center;
+      & > em {
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
@@ -877,7 +876,7 @@ body:has(#profile) {
       line-height: 85%;
       color: var(--txt2);
     }
-  }
+}
 }
 .pfcutriggers {
   width: 100%;
