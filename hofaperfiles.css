@@ -1,5 +1,5 @@
 /*IMAGENES DE GRUPOS*/
-#profile:is([class*="profilegroup-staff"], [class*="profilegroup-guest"], [class*="profilegroup-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-staff"], [class*="profilegroup-guest"], [class*="profilegroup-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
 #profile:is([class*="profilegroup-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
 #profile:is([class*="profilegroup-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
@@ -13,14 +13,14 @@
 #profile:is([class*="profilegroup-poseidon"]) {--profgrimg: url('https://c.l3n.co/bV5o45.png');}
 #profile:is([class*="profilegroup-atenea"]) {--profgrimg: url('https://b.l3n.co/bVUIeq.png');}
 #profile:is([class*="profilegroup-khione"]) {--profgrimg: url('https://b.l3n.co/bVGQ1v.png');}
-#profile:is([class*="profilegroup-hebe"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-iris"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-demeter"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-hermes"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-hestia"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-apolo"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-zeus"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-hefesto"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hebe"]) {--profgrimg: url('https://a.l3n.co/bVGHpD.png');}
+#profile:is([class*="profilegroup-iris"]) {--profgrimg: url('https://d.l3n.co/bVGlFq.png');}
+#profile:is([class*="profilegroup-demeter"]) {--profgrimg: url('https://c.l3n.co/bVGSIA.png');}
+#profile:is([class*="profilegroup-hermes"]) {--profgrimg: url('https://d.l3n.co/bVGeBM.png');}
+#profile:is([class*="profilegroup-hestia"]) {--profgrimg: url('https://c.l3n.co/bVGnoQ.png');}
+#profile:is([class*="profilegroup-apolo"]) {--profgrimg: url('https://d.l3n.co/bVGFIK.png');}
+#profile:is([class*="profilegroup-zeus"]) {--profgrimg: url('https://a.l3n.co/bVGUmZ.png');}
+#profile:is([class*="profilegroup-hefesto"]) {--profgrimg: url('https://a.l3n.co/bVGYek.png');}
 #profile:is([class*="profilegroup-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
 /*QUITAR HEADER, TABLÓN Y FOOTER*/
 body:has(#profile) {
