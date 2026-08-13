@@ -139,6 +139,7 @@ body:has(#profile) {
   width: 100%;
   height: 100%;
   inset: 0;
+  container: profilecont / inline-size;
 }
 .carousel {
   position: absolute;
@@ -271,7 +272,7 @@ body:has(#profile) {
   align-items: center;
   justify-content: space-between;
   padding: var(--gap4);
-  border-bottom: var(--tborder);
+  border-bottom: var(--border1);
   background: var(--back2);
   gap: var(--gap3);
   & .prextlinks {
@@ -460,7 +461,8 @@ body:has(#profile) {
   & > div {
     flex: 1 0 25%;
     gap: var(--gap1);
-    & > em {
+    justify-content: center;
+      & > em {
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
@@ -474,7 +476,7 @@ body:has(#profile) {
       line-height: 85%;
       color: var(--txt2);
     }
-  }
+}
 }
 .pfclinks {
   gap: var(--gap3);
