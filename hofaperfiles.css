@@ -469,6 +469,7 @@ body:has(#profile) {
   gap: var(--paddclamp4) var(--paddclamp5);
   flex-wrap: wrap;
   overflow: auto;
+  align-items: center;
   & > div {
     flex: 1 0 25%;
     gap: var(--gap1);
@@ -611,14 +612,19 @@ body:has(#profile) {
 }
 .pfcstats {
   width: 100%;
+  flex: 1;
   & > .pccontent {
     width: 100%;
-    & > div {
+    height: 100%;
+    display: flex;
+      & > div {
       display: flex;
       justify-content: space-around;
       gap: var(--gap4);
       flex-wrap: wrap;
-      & > strong {
+      align-self: stretch;
+      flex: 1;
+          & > strong {
         flex: 1 0 25%;
         text-align: center;
         display: flex;
@@ -631,26 +637,27 @@ body:has(#profile) {
         border-bottom: var(--bborder1);
         border-bottom-color: var(--group);
         padding: var(--padd1) var(--gap3);
-        font: var(--fo-deco2);
+        font: var(--fo-deco1);
         font-weight: 800;
         color: var(--txt1);
         line-height: 100%;
         gap: var(--gap2);
         max-width: 50%;
-        & > i {
+        line-height: 100%;
+              & > i {
           font-style: normal;
           font-family: var(--font2);
-          font-size: var(--fs-big);
+          font-size: var(--fs-bigger);
           font-weight: 900;
           color: var(--txt4);
           line-height: 70%;
         }
-      }
-    }
+}
+}
     & > div.field_editable.invisible {
       display: none !important;
     }
-  }
+}
 }
 .pfcdetails {
   gap: var(--paddclamp8);
@@ -696,6 +703,7 @@ body:has(#profile) {
   font: normal var(--fs-body) var(--font2);
   line-height: 132%;
 
+  overflow: auto !important;
   h4.post-content {
     counter-increment: tab;
     font-weight: 700 !important;
@@ -838,7 +846,7 @@ body:has(#profile) {
   gap: var(--paddclamp4) var(--paddclamp5);
   flex-wrap: wrap;
   overflow-x: auto;
-  /*! overflow-y: hidden; */
+  align-items: center;
    > div {
     flex: 1 0 25%;
     gap: var(--gap1);
