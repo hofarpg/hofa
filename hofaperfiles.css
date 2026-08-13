@@ -1,3 +1,28 @@
+/*IMAGENES DE GRUPOS*/
+#profile:is([class*="profilegroup-staff"], [class*="profilegroup-guest"], [class*="profilegroup-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-nemesis"]) {--profgrimg: url('https://a.l3n.co/bVUWo3.png');}
+#profile:is([class*="profilegroup-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
+#profile:is([class*="profilegroup-persefone"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-afrodita"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-dioniso"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hades"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hecate"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hypnos"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-artemisa"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-poseidon"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-atenea"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-khione"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hebe"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-iris"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-demeter"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hermes"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hestia"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-apolo"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-zeus"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-hefesto"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+#profile:is([class*="profilegroup-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
+#profile:is([class*="profilegroup-"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 /*QUITAR HEADER, TABLÓN Y FOOTER*/
 body:has(#profile) {
   height: 100%;
@@ -139,7 +164,6 @@ body:has(#profile) {
   width: 100%;
   height: 100%;
   inset: 0;
-  container: profilecont / inline-size;
 }
 .carousel {
   position: absolute;
@@ -221,44 +245,33 @@ body:has(#profile) {
   width: 100%;
   gap: var(--paddclamp8);
   padding: var(--padd3);
-  & > .pccontent {
+  & .primgback {
     height: 100%;
     width: 100%;
     position: absolute;
-    & img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-      transition: var(--trs1);
-      position: relative;
-      z-index: 0;
-      filter: var(--filter2);
-    }
-    & > div {
-      height: 100%;
-      width: 100%;
-      position: relative;
-      z-index: 0;
+    z-index: 0;
       &:before, &:after {
-        content: '';
-        position: absolute !important;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        inset: 0;
-      }
-      &:before {
-        background: var(--tback1);
-        opacity: 0.4;
-      }
-      &:after {
-        background: var(--accent);
-        opacity: 1;
-        mix-blend-mode: multiply;
-      }
+      content: '';
+      position: absolute;
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+      inset: 0;
     }
-  }
+    &:before {
+      background: var(--tback1);
+      filter: var(--filter2);
+      background-image: var(--profgrimg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    &:after {
+      background: var(--accent);
+      opacity: 1;
+      mix-blend-mode: multiply;
+    }
+}
   & .pccontent .field_uneditable {
     width: 100%;
     height: 100%;
@@ -461,8 +474,7 @@ body:has(#profile) {
   & > div {
     flex: 1 0 25%;
     gap: var(--gap1);
-    justify-content: center;
-      & > em {
+    & > em {
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
@@ -476,7 +488,7 @@ body:has(#profile) {
       line-height: 85%;
       color: var(--txt2);
     }
-}
+  }
 }
 .pfclinks {
   gap: var(--gap3);
