@@ -157,6 +157,7 @@ body:has(#profile) {
   padding-right: calc(var(--paddclamp1) / 2);
   overflow-y: auto;
   overflow-x: hidden;
+  border-right-width: calc(var(--paddclamp1) / 2);
 }
 /* EFECTO TRANSICION */
 #profile:has(#car1:checked) .pfct-pg-name span:nth-child(1),
@@ -288,7 +289,7 @@ body:has(#profile) {
   & > span {
     text-transform: uppercase;
     font: var(--fo-deco3);
-    font-weight: bold;
+    font-weight: 800;
     line-height: 100%;
     color: var(--txt3);
     text-align: right;
@@ -781,6 +782,105 @@ body:has(#profile) {
 .pfchabs li ol,
 .pfcinve li ol {
   margin-top: 6px;
+}
+/* ZONA DE USUARIO */
+.pfcuser {
+  height: fit-content;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--paddclamp3);
+}
+.pfcudata {
+  text-align: left;
+  gap: var(--gap0);
+  & > strong {
+    text-transform: uppercase;
+    font: var(--fo-deco2);
+    font-weight: 800;
+    line-height: 100%;
+    color: var(--back1);
+    background: var(--group);
+    width: fit-content;
+    border-radius: var(--bradius);
+    padding: var(--gap1) var(--gap2);
+    margin-bottom: var(--gap1);
+  }
+  & .pfcuname {
+    text-shadow: 1.5px 1px 0.5px var(--group);
+    font: var(--fo-h1);
+    font-size: var(--fo-h1-clamp);
+    line-height: 85%;
+    text-transform: uppercase;
+    color: var(--txt1);
+  }
+  & .pfcupron {
+    text-transform: lowercase;
+    font: var(--fo-deco2);
+    font-style: italic;
+    line-height: 100%;
+    color: var(--txt4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &:before {
+      content: "";
+      width: var(--paddclamp1);
+      height: var(--bthickness);
+      float: left;
+      background: var(--tgroup);
+      margin-right: var(--gap2);
+      position: relative;
+      align-self: center;
+    }
+  }
+}
+.pfcuinfo {
+  border-radius: var(--bradius);
+  border-top: var(--tborder);
+  border-bottom: var(--tborder);
+  width: 100%;
+  justify-content: space-between;
+  padding: var(--paddclamp3);
+  gap: var(--paddclamp4) var(--paddclamp5);
+  flex-wrap: wrap;
+   & > div {
+    flex: 1 0 25%;
+    gap: var(--gap1);
+    & > em {
+      text-transform: uppercase;
+      font: var(--fo-deco2);
+      font-weight: 800;
+      color: var(--txt4);
+      line-height: 100%;
+    }
+    & > strong {
+      text-transform: uppercase;
+      font: var(--fo-bod2);
+      font-weight: 900;
+      line-height: 85%;
+      color: var(--txt2);
+    }
+  }
+}
+.pfcutriggers {
+  width: 100%;
+  gap: var(--gap2);
+  & u {
+    text-transform: uppercase;
+    color: var(--txt1);
+    font: var(--fo-deco1);
+    font-weight: 900;
+    line-height: 100%;
+    text-decoration: var(--bthickness) solid underline var(--group);
+    text-underline-offset: var(--bthickness);
+  }
+  & > div {
+    text-transform: uppercase;
+    color: var(--txt4);
+    font: var(--fo-bod3);
+    font-weight: bold;
+    line-height: 100%;
+  }
 }
 /* BOTONES ADMIN */
 .profaut {
