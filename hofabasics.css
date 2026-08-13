@@ -747,6 +747,34 @@ span#dice_to_del {
   border: var(--border1) !important;
   padding: var(--paddclamp3) !important;
   margin-bottom: var(--gap4) !important;
+  & .ucp-perfil-personalizado {
+    & h4 {
+      text-transform: uppercase;
+      color: var(--accent);
+      font: var(--fo-deco1);
+      font-weight: 900;
+      font-size: var(--fs-big);
+      text-align: center;
+      line-height: 100%;
+      margin: 0 auto var(--paddclamp8);
+      width: 100%;
+      text-align: center;
+      &:before {
+        content:'';
+        width: 100%;
+        height: 1px;
+        background: var(--border1-c);
+        display: block;
+        margin-bottom: var(--paddclamp3);
+        margin-top: var(--paddclamp3);
+      }
+      &:first-of-type {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 #tabs ul,
 #tabs li,
