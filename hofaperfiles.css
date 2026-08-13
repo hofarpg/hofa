@@ -697,107 +697,89 @@ body:has(#profile) {
   text-align: justify;
   font: normal var(--fs-body) var(--font2);
   line-height: 132%;
+
+  h4.post-content {
+    counter-increment: tab;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    margin: 8px 0px !important;
+    line-height: 90% !important;
+  }
+  h4.post-content:before {
+    color: var(--group);
+    font-weight: 900 !important;
+    content: "0" counter(tab) ". ";
+  }
+  strike,
+  u {
+    text-decoration-color: var(--group);
+    text-decoration-thickness: 2px;
+  }
+  strong {
+    color: var(--group);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  u {
+    text-transform: uppercase;
+    font: 700 var(--fs-small) var(--font3);
+    color: var(--txt2);
+    text-underline-offset: 2px;
+  }
+  i {
+    color: var(--txt4);
+    font-style: italic;
+  }
+  ul {
+    display: inline-block;
+    padding-left: 20px;
+    list-style-type: none;
+    
+    > br {display: none;}
+  }
+  ul li {
+    position: relative;
+    margin-bottom: 6px;
+  }
+  ul li:before {
+    content: "";
+    height: 2px;
+    width: 12px;
+    background: var(--tgroup);
+    position: absolute !important;
+    left: -20px;
+    top: 7px;
+  }
+  ol {
+    display: inline-block;
+    padding-left: 20px;
+    list-style-type: none;
+    counter-reset: lista;
+  }
+  ol li {
+    position: relative;
+    margin-bottom: 6px;
+    counter-increment: lista;
+  }
+  ol li:before {
+    content: counters(lista, ".", decimal) ". ";
+    font: 900 var(--fs-text) var(--font2);
+    color: var(--tgroup);
+    position: relative !important;
+    text-align: right;
+  }
+  :is(ul, ol) li:last-of-type {
+    margin-bottom: 0px;
+  }
+  li ul, li ol {
+    margin-top: 6px;
+  }
 }
 .tab:nth-of-type(3),
 .tab:nth-of-type(4) {
   counter-reset: tab;
 }
-.pfchabs h4.post-content,
-.pfcinve h4.post-content {
-  counter-increment: tab;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  margin: 8px 0px !important;
-  line-height: 90% !important;
-}
-.pfchabs h4.post-content:before,
-.pfcinve h4.post-content:before {
-  color: var(--group);
-  font-weight: 900 !important;
-}
-.pfchabs h4.post-content:before,
-.pfcinve h4.post-content:before {
-  content: "0" counter(tab) ". ";
-}
-.pfchabs strike,
-.pfcinve strike,
-.pfchabs u,
-.pfcinve u {
-  text-decoration-color: var(--group);
-  text-decoration-thickness: 2px;
-}
-.pfchabs strong,
-.pfcinve strong {
-  color: var(--group);
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.pfchabs u,
-.pfcinve u {
-  text-transform: uppercase;
-  font: 700 var(--fs-small) var(--font3);
-  color: var(--txt2);
-  text-underline-offset: 2px;
-}
-.pfchabs i,
-.pfcinve i {
-  color: var(--txt4);
-  font-style: italic;
-}
-.pfchabs ul,
-.pfcinve ul {
-  display: inline-block;
-  padding-left: 20px;
-  list-style-type: none;
-}
-.pfchabs ul li,
-.pfcinve ul li {
-  position: relative;
-  margin-bottom: 6px;
-}
-.pfchabs ul li:before,
-.pfcinve ul li:before {
-  content: "";
-  height: 2px;
-  width: 12px;
-  background: var(--tgroup);
-  position: absolute !important;
-  left: -20px;
-  top: 7px;
-}
-.pfchabs ol,
-.pfcinve ol {
-  display: inline-block;
-  padding-left: 20px;
-  list-style-type: none;
-  counter-reset: lista;
-}
-.pfchabs ol li,
-.pfcinve ol li {
-  position: relative;
-  margin-bottom: 6px;
-  counter-increment: lista;
-}
-.pfchabs ol li:before,
-.pfcinve ol li:before {
-  content: counters(lista, ".", decimal) ". ";
-  font: 900 var(--fs-text) var(--font2);
-  color: var(--tgroup);
-  position: relative !important;
-  text-align: right;
-}
-.pfchabs ul li:last-of-type,
-.pfcinve ul li:last-of-type,
-.pfchabs ol li:last-of-type,
-.pfcinve ol li:last-of-type {
-  margin-bottom: 0px;
-}
-.pfchabs li ul,
-.pfcinve li ul,
-.pfchabs li ol,
-.pfcinve li ol {
-  margin-top: 6px;
-}
+
 /* ZONA DE USUARIO */
 .pfcuser {
   height: fit-content;
@@ -808,7 +790,7 @@ body:has(#profile) {
 .pfcudata {
   text-align: left;
   gap: var(--gap0);
-  & > strong {
+  > strong {
     text-transform: uppercase;
     font: var(--fo-deco2);
     font-weight: 800;
@@ -820,15 +802,15 @@ body:has(#profile) {
     padding: var(--gap1) var(--gap2);
     margin-bottom: var(--gap1);
   }
-  & .pfcuname {
+  .pfcuname {
     text-shadow: 1.5px 1px 0.5px var(--group);
     font: var(--fo-h1);
-    font-size: var(--fo-h1-clamp);
+    font-size: var(--fo-h2-clamp);
     line-height: 85%;
     text-transform: uppercase;
     color: var(--txt1);
   }
-  & .pfcupron {
+  .pfcupron {
     text-transform: lowercase;
     font: var(--fo-deco2);
     font-style: italic;
@@ -858,7 +840,7 @@ body:has(#profile) {
   padding: var(--paddclamp4);
   gap: var(--paddclamp4) var(--paddclamp5);
   flex-wrap: wrap;
-   & > div {
+   > div {
     flex: 1 0 25%;
     gap: var(--gap1);
     justify-content: center;
@@ -869,7 +851,7 @@ body:has(#profile) {
       color: var(--txt4);
       line-height: 100%;
     }
-    & > strong {
+    > strong {
       text-transform: uppercase;
       font: var(--fo-bod2);
       font-weight: 900;
@@ -881,7 +863,7 @@ body:has(#profile) {
 .pfcutriggers {
   width: 100%;
   gap: var(--gap2);
-  & u {
+  u {
     text-transform: uppercase;
     color: var(--txt1);
     font: var(--fo-deco1);
@@ -890,7 +872,7 @@ body:has(#profile) {
     text-decoration: var(--bthickness) solid underline var(--group);
     text-underline-offset: var(--bthickness);
   }
-  & > div {
+  > div {
     text-transform: uppercase;
     color: var(--txt4);
     font: var(--fo-bod3);
