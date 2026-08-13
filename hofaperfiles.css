@@ -154,10 +154,13 @@ body:has(#profile) {
   height: fit-content;
   max-height: 100%;
   border: var(--paddclamp1) solid transparent;
-  padding-right: calc(var(--paddclamp1) / 2);
   overflow-y: auto;
   overflow-x: hidden;
   border-right-width: calc(var(--paddclamp1) / 2);
+  &>div {
+    padding-right: calc(var(--paddclamp1) / 2);
+    overflow: hidden;
+  }
 }
 /* EFECTO TRANSICION */
 #profile:has(#car1:checked) .pfct-pg-name span:nth-child(1),
