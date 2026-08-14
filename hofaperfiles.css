@@ -805,6 +805,7 @@ body:has(#profile) {
 
 /* ZONA DE USUARIO */
 .pfcuser {
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--paddclamp3);
@@ -882,10 +883,10 @@ body:has(#profile) {
       line-height: 85%;
       color: var(--txt2);
     }
+  }
 }
-}
-.pfcutriggers {
-  width: 100%;
+.pfcutriggers, .pfcupjs {
+  flex: calc((100% / 2) - var(--paddclamp3));
   gap: var(--gap2);
   & > u {
     text-transform: uppercase;
