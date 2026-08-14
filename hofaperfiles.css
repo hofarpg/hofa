@@ -55,6 +55,7 @@ body:has(#profile) {
   background: var(--tback1);
   border: var(--border1);
   height: 100%;
+  container: profcont / inline-size;
 }
 #profile *::selection {
   background: var(--tgroup) !important;
@@ -86,8 +87,11 @@ body:has(#profile) {
   width: 100%;
   margin: auto;
   position: relative;
-  flex: 1 0 65%;
-  padding-bottom: calc(var(--padd2) + (var(--gap2) * 2) + 1px); 
+  /*! flex: 1 0 65%; */
+  container: profinfocont / size;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 #car-hold input {
   display: none;
@@ -97,7 +101,6 @@ body:has(#profile) {
   border-top: var(--border1);
   background: var(--tback1);
   position: relative;
-  bottom: 0;
   height: calc(var(--padd2) + (var(--gap2) * 2) + 1px);
 }
 .pfct-pg-butt {
@@ -242,8 +245,17 @@ body:has(#profile) {
   max-width: 30rem;
   min-width: 20rem;
   width: 100%;
-  gap: var(--paddclamp8);
-  padding: var(--padd3);
+  & .prfimgcont {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--paddclamp8);
+    padding: var(--padd3);
+    width: 100%;
+    flex: 1;
+    position: relative;
+    z-index: 5;
+  }
   & .primgback {
     height: 100%;
     width: 100%;
@@ -276,7 +288,7 @@ body:has(#profile) {
   }
 }
 .profextra {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 3;
@@ -299,6 +311,9 @@ body:has(#profile) {
       text-decoration-color: var(--tgroup);
       color: var(--txt2);
       text-underline-offset: var(--bthickness);
+      &:hover {
+        color: var(--group);
+      }
     }
   }
   & > span {
@@ -424,7 +439,7 @@ body:has(#profile) {
 }
 .pfcname {
   text-shadow: 1.5px 1px 0.5px var(--group);
-  font: var(--fo-h1);
+  font: var(--fo-h2);
   font-size: var(--fo-h2-clamp);
   line-height: 85%;
   text-transform: uppercase;
@@ -809,7 +824,7 @@ body:has(#profile) {
   }
   .pfcuname {
     text-shadow: 1.5px 1px 0.5px var(--group);
-    font: var(--fo-h1);
+    font: var(--fo-h2);
     font-size: var(--fo-h2-clamp);
     line-height: 85%;
     text-transform: uppercase;
