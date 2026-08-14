@@ -42,6 +42,8 @@ body:has(#profile) {
     flex: 1;
     height: fit-content;
     min-height: calc(100vh - var(--nav-height));
+    width: 100%;
+    max-width: none;
   }
   #nomiresSafe {
     height: 100%;
