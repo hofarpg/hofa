@@ -885,7 +885,7 @@ body:has(#profile) {
 .pfcutriggers {
   width: 100%;
   gap: var(--gap2);
-  u {
+  & > u {
     text-transform: uppercase;
     color: var(--txt1);
     font: var(--fo-deco1);
@@ -895,11 +895,62 @@ body:has(#profile) {
     text-underline-offset: var(--bthickness);
   }
   > div {
+    text-align: justify;
     text-transform: uppercase;
     color: var(--txt4);
     font: var(--fo-bod3);
     font-weight: bold;
-    line-height: 100%;
+    line-height: 120%;
+    & i {
+      color: var(--txt2);
+    }
+    & b, & strong {
+      font-weight: 900;
+      color: var(--group);
+    }
+    & u, & strike {
+      text-decoration-color: var(--tgroup);
+      text-decoration-thickness: var(--bthickness);
+    }
+    & u {
+      text-underline-offset: var(--bthickness);
+      color: var(--txt1);
+      font-weight: 900;
+    }
+    & *:is(ul, ol) {
+      margin-block: var(--gap0);
+      padding-left: var(--paddclamp6);
+      & br {
+        display: inherit;
+      }
+      & li {
+        margin-bottom: var(--gap0);
+        &:last-of-type {
+          margin-bottom:0;
+        }
+        & *:is(ul, ol) {
+          margin-top:var(--gap2);
+        }
+      }
+      &:is(ul) li {
+        padding-left: var(--gap3);
+        &::marker {
+          content: '\f054';
+          font: var(--fo-icon4);
+          color: var(--tgroup);
+          font-weight: 900;
+        }
+      }
+      &:is(ol) li {
+        padding-left: var(--gap0);
+        &::marker {
+          font: var(--fo-bod2);
+          font-weight: 900;
+          color: var(--group);
+          line-height: 1em;
+        }
+      }
+    }
   }
 }
 /* BOTONES ADMIN */
