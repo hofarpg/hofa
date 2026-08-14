@@ -625,7 +625,7 @@
 }
 
 /* CONTAINERS - PERFIL */
-@container profinfocont (min-height:550px) {
+@container profinfocont (min-height:610px) {
   .pfcname, .pfcuname {
     font-size: var(--fo-h1-clamp)!important;
   }
