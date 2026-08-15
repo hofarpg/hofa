@@ -888,7 +888,7 @@ body:has(#profile) {
 .pfcutriggers, .pfcupjs {
   flex: calc((100% / 2) - var(--paddclamp3));
   gap: var(--gap2);
-  & > u {
+  > u {
     text-transform: uppercase;
     color: var(--txt1);
     font: var(--fo-deco1);
@@ -903,54 +903,46 @@ body:has(#profile) {
     color: var(--txt4);
     font: var(--fo-bod3);
     font-weight: bold;
-    line-height: 120%;
-    & i {
+    line-height: 90%;
+    max-height: 35px;
+    overflow: auto;
+    &:has(ul,ol) {
+      font-size: var(--fs-smallest);
+      line-height: 100%;
+    }
+    i {
       color: var(--txt2);
     }
-    & b, & strong {
+    b, strong {
       font-weight: 900;
       color: var(--group);
     }
-    & u, & strike {
-      text-decoration-color: var(--tgroup);
-      text-decoration-thickness: var(--bthickness);
-    }
-    & u {
-      text-underline-offset: var(--bthickness);
+    u, strike {
+      text-decoration: var(--bthickness) underline var(--tgroup);
       color: var(--txt1);
       font-weight: 900;
+      line-height: 130%;
     }
-    & *:is(ul, ol) {
-      margin-block: var(--gap0);
-      padding-left: var(--paddclamp6);
-      & br {
-        display: inherit;
-      }
-      & li {
+    u {
+      text-underline-offset: var(--bthickness);
+    }
+    ul, ol {
+      margin-block: 0;
+      padding-left: var(--paddclamp8);
+      li {
         margin-bottom: var(--gap0);
+        padding-left: var(--gap3);
         &:last-of-type {
           margin-bottom:0;
         }
-        & *:is(ul, ol) {
-          margin-top:var(--gap2);
-        }
-      }
-      &:is(ul) li {
-        padding-left: var(--gap3);
         &::marker {
           content: '\f054';
           font: var(--fo-icon4);
           color: var(--tgroup);
           font-weight: 900;
         }
-      }
-      &:is(ol) li {
-        padding-left: var(--gap0);
-        &::marker {
-          font: var(--fo-bod2);
-          font-weight: 900;
-          color: var(--group);
-          line-height: 1em;
+        ul, ol {
+          margin-top:var(--gap2);
         }
       }
     }
