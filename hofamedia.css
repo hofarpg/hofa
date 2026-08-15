@@ -646,14 +646,15 @@
       min-width: auto!important;
       border-left: none!important;
       border-bottom: var(--border1);
-      min-height: fit-content!important;
-      height: 30rem !important;
-      flex: unset !important;
+      min-height: 22rem !important;
+      flex: 1 0 20% !important;
+      max-height: 22rem !important;
     }
   }
   #car-hold {
-    min-height: fit-content;
-    flex: unset !important;
+    height: 100% !important;
+    min-height: 40rem !important;
+    flex: 1 !important;
   }
 }
 @container profcont (max-width: 560px) {
@@ -665,9 +666,7 @@
 }
 @container profcont (max-width: 450px) {
   #car-hold {
-    height: 35rem !important;
-    min-height: fit-content;
-    flex: unset;
+    flex: 1 !important;
   }
   .pfcmain, .pfcuinfo {
     & > div {
