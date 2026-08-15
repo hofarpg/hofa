@@ -956,6 +956,10 @@ body:has(#profile) {
     }
   }
 }
+.pfcupjs > div {
+  flex-wrap: wrap; 
+  gap: var(--gap0);
+}
 /* BOTONES ADMIN */
 .profaut {
   margin-top: var(--paddclamp4);
