@@ -573,6 +573,7 @@
     main {
       min-height: calc(100vh - var(--nav-height));
       margin-top: var(--sidenav-height);
+      padding: 0;
     }
   }
 }
@@ -625,6 +626,7 @@
 }
 
 /* CONTAINERS - PERFIL */
+/* CONTAINERS - PERFIL */
 @container profinfocont (min-height:590px) {
   .pfcname, .pfcuname {
     font-size: var(--fo-h1-clamp)!important;
@@ -653,7 +655,7 @@
   }
   #car-hold {
     height: 100% !important;
-    min-height: 40rem !important;
+    min-height: 31rem !important;
     flex: 1 !important;
   }
 }
@@ -670,7 +672,10 @@
   }
   .pfcmain, .pfcuinfo {
     & > div {
-      flex: 1 0 100%;
+      flex-basis: calc((100% / 2) - var(--paddclamp5));
     }
+  }
+  .pfcutriggers, .pfcupjs {
+    flex-basis: 100%;
   }
 }
