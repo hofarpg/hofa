@@ -808,7 +808,7 @@ body:has(#profile) {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--paddclamp3);
+  gap: var(--paddclamp4);
 }
 .pfcudata {
   text-align: left;
@@ -819,14 +819,14 @@ body:has(#profile) {
     font-weight: 800;
     line-height: 100%;
     color: var(--back1);
-    background: var(--accent);
+    background: var(--group);
     width: fit-content;
     border-radius: var(--bradius);
     padding: var(--gap1) var(--gap2);
     margin-bottom: var(--gap1);
   }
   .pfcuname {
-    text-shadow: 1.5px 1px 0.5px var(--accent);
+    text-shadow: 1.5px 1px 0.5px var(--group);
     font: var(--fo-h2);
     font-size: var(--fo-h2-clamp);
     line-height: 85%;
@@ -847,7 +847,7 @@ body:has(#profile) {
       width: var(--paddclamp1);
       height: var(--bthickness);
       float: left;
-      background: var(--taccent);
+      background: var(--tgroup);
       margin-right: var(--gap2);
       position: relative;
       align-self: center;
@@ -894,7 +894,7 @@ body:has(#profile) {
     font: var(--fo-deco1);
     font-weight: 900;
     line-height: 100%;
-    text-decoration: var(--bthickness) solid underline var(--accent);
+    text-decoration: var(--bthickness) solid underline var(--group);
     text-underline-offset: var(--bthickness);
   }
   > div {
