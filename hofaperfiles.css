@@ -819,14 +819,14 @@ body:has(#profile) {
     font-weight: 800;
     line-height: 100%;
     color: var(--back1);
-    background: var(--group);
+    background: var(--accent);
     width: fit-content;
     border-radius: var(--bradius);
     padding: var(--gap1) var(--gap2);
     margin-bottom: var(--gap1);
   }
   .pfcuname {
-    text-shadow: 1.5px 1px 0.5px var(--group);
+    text-shadow: 1.5px 1px 0.5px var(--accent);
     font: var(--fo-h2);
     font-size: var(--fo-h2-clamp);
     line-height: 85%;
@@ -847,7 +847,7 @@ body:has(#profile) {
       width: var(--paddclamp1);
       height: var(--bthickness);
       float: left;
-      background: var(--tgroup);
+      background: var(--taccent);
       margin-right: var(--gap2);
       position: relative;
       align-self: center;
@@ -894,7 +894,7 @@ body:has(#profile) {
     font: var(--fo-deco1);
     font-weight: 900;
     line-height: 100%;
-    text-decoration: var(--bthickness) solid underline var(--group);
+    text-decoration: var(--bthickness) solid underline var(--accent);
     text-underline-offset: var(--bthickness);
   }
   > div {
@@ -915,7 +915,7 @@ body:has(#profile) {
     }
     b, strong {
       font-weight: 900;
-      color: var(--group);
+      .pfcutriggers & {color: var(--group);}
     }
     u, strike {
       text-decoration: var(--bthickness) underline var(--tgroup);
