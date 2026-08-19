@@ -1,5 +1,5 @@
 /*IMAGENES DE GRUPOS*/
-#profile:is([class*="profilegroup-staff"], [class*="profilegroup-guest"], [class*="profilegroup-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
+#profile:is([class*="profilegroup-staff"], [class*="profilegroup-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
 #profile:is([class*="profilegroup-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 #profile:is([class*="profilegroup-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
 #profile:is([class*="profilegroup-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
