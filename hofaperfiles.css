@@ -22,16 +22,13 @@
 #profile:is([class*="profilegroup-zeus"]) {--profgrimg: url('https://a.l3n.co/bVGUmZ.png');}
 #profile:is([class*="profilegroup-hefesto"]) {--profgrimg: url('https://a.l3n.co/bVGYek.png');}
 #profile:is([class*="profilegroup-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
+
 /*QUITAR HEADER, TABLÓN Y FOOTER*/
 body:has(#profile) {
   height: 100%;
   min-height: 100vh;
-  header {
-    display: none;
-  }
-  #tablon {
-    display: none;
-  }
+  header, 
+  #tablon, 
   footer {
     display: none;
   }
@@ -49,6 +46,7 @@ body:has(#profile) {
     height: 100%;
   }
 }
+
 /*CSS BÁSICO DEL PERFIL*/
 #profile {
   flex-wrap: wrap;
@@ -713,7 +711,6 @@ body:has(#profile) {
 }
 /* PAG - HABILIDADES */
 /* PAG - INVENTARIO */
-/* PAG - LOGROS */
 .pfchabs,
 .pfcinve {
   text-align: justify;
@@ -803,7 +800,24 @@ body:has(#profile) {
   counter-reset: tab;
 }
 
-/* ZONA DE USUARIO */
+/* PAG - LOGROS */
+.awards_block_simple {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--paddclamp8);
+}
+.award {
+  background: var(--back1);
+  border: var(--border1);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  color: var(--group);
+  font-size: var(--fo-h4-clamp);
+}
+
+/* PAG - USUARIO */
 .pfcuser {
   flex-wrap: wrap;
   justify-content: space-between;
