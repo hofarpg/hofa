@@ -817,31 +817,13 @@ body:has(#profile) {
   font-size: var(--fo-h4-clamp);
 }
 
-#truesight div:has(em) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  align-content: flex-start;
-  
-  .ts-image em {
-    color: var(--group);
-  }
-  .ts-head {
-    font-family: var(--font1);
-  }
-  .ts-text {
-    text-align: justify; 
-    font: var(--fo-deco3);
-    line-height: 1em;
-  }
-}
-
 /* PAG - USUARIO */
 .pfcuser {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--paddclamp4);
+  overflow: auto !important;
 }
 .pfcudata {
   text-align: left;
@@ -893,8 +875,8 @@ body:has(#profile) {
   border-bottom: var(--tborder);
   width: 100%;
   justify-content: space-between;
-  padding: var(--paddclamp4);
-  gap: var(--paddclamp4) var(--paddclamp5);
+  padding: var(--paddclamp5);
+  gap: var(--paddclamp5) var(--paddclamp6);
   flex-wrap: wrap;
   overflow-x: auto;
   align-items: center;
