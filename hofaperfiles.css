@@ -817,6 +817,25 @@ body:has(#profile) {
   font-size: var(--fo-h4-clamp);
 }
 
+#truesight div:has(em) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-content: flex-start;
+  
+  .ts-image em {
+    color: var(--group);
+  }
+  .ts-head {
+    font-family: var(--font1);
+  }
+  .ts-text {
+    text-align: justify; 
+    font: var(--fo-deco3);
+    line-height: 1em;
+  }
+}
+
 /* PAG - USUARIO */
 .pfcuser {
   flex-wrap: wrap;
