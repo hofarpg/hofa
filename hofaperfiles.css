@@ -982,6 +982,16 @@ body:has(#profile) {
     font-weight: bold;
     line-height: 90%;
     max-height: 3.2rem;
+    height: fit-content;
+    overflow: hidden;
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1013,6 +1023,7 @@ body:has(#profile) {
       overflow: auto;
       padding-right: var(--gap4);
       margin-right: calc(var(--gap4) * -1);
+      min-height: 100%;
     }
     i {
       color: var(--txt2);
