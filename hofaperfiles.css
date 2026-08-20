@@ -981,8 +981,39 @@ body:has(#profile) {
     font: var(--fo-bod3);
     font-weight: bold;
     line-height: 90%;
-    max-height: 4.8rem;
-    overflow: auto;
+    max-height: 3.2rem;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    & > div {
+      height: 100%;
+      overflow: auto;
+      padding-right: var(--gap4);
+      margin-right: calc(var(--gap4) * -1);
+    }
     i {
       color: var(--txt2);
     }
