@@ -886,18 +886,18 @@ body:has(#profile) {
   overflow-x: auto;
   align-items: center;
   grid-area: userinfotext;
-   > div {
+  div {
     flex: 1 0 25%;
     gap: var(--gap1);
     justify-content: center;
-      & > em {
+    > em {
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
       color: var(--txt4);
       line-height: 100%;
     }
-    > strong {
+    strong {
       text-transform: uppercase;
       font: var(--fo-bod2);
       font-weight: 900;
@@ -908,45 +908,43 @@ body:has(#profile) {
 }
 .pfcupjs {
   grid-area: userpjs;
-  & > div {
+  > div {
     gap: var(--paddclamp8);
     height: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
-    align-items: start;
-    align-content: space-between;
-        & > a {
+    > a {
       width: var(--icon1);
       height: var(--icon1);
       overflow: hidden;
       border-radius: var(--bradius);
-      position: relative;
+      position: relative;      
+      &:before, &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          inset: 0;
+          transition: var(--trs1);
+      }
+      &:before {
+          z-index: 1;
+          background: var(--tback1);
+          opacity: .7;
+          mix-blend-mode: multiply;
+      }
+      &:after {
+          z-index: 1;
+          background: var(--group);
+          mix-blend-mode: overlay;
+          opacity: 0
+      }
       &:hover {
         &:after {
           opacity: 1
         }
       }
-      &:before, &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        inset: 0;
-        transition: var(--trs1);
-      }
-      &:before {
-        z-index: 1;
-        background: var(--tback1);
-        opacity: .7;
-        mix-blend-mode: multiply;
-      }
-      &:after {
-        z-index: 1;
-        background: var(--group);
-        mix-blend-mode: overlay;
-        opacity: 0;
-      }
-      & img {
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -956,7 +954,7 @@ body:has(#profile) {
         filter: var(--filter1);
       }
     }
-}
+  }
 }
 .pfcutriggers {
   grid-area: usertriggers;
@@ -980,41 +978,7 @@ body:has(#profile) {
     max-height: 3.2rem;
     height: fit-content;
     overflow: hidden;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    & > div {
+    > div {
       height: 100%;
       overflow: auto;
       padding-right: var(--gap4);
