@@ -665,6 +665,13 @@
       flex: 1 0 30%;
     }
   }
+  .pfcupjs {
+    width: 100%;
+  }
+  .pfcuser {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 @container profcont (max-width: 450px) {
   #car-hold {
