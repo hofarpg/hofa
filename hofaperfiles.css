@@ -913,42 +913,38 @@ body:has(#profile) {
     height: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
-      & > a {
+    align-items: start;
+    align-content: space-between;
+        & > a {
       width: var(--icon1);
       height: var(--icon1);
       overflow: hidden;
       border-radius: var(--bradius);
+      position: relative;
       &:hover {
-        & > div {
-          &:after {
-            opacity: 1
-          }
+        &:after {
+          opacity: 1
         }
       }
-      & > div {
-        position: relative;
+      &:before, &:after {
+        content: "";
+        position: absolute;
         width: 100%;
         height: 100%;
-        &:before, &:after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          inset: 0;
-          transition: var(--trs1);
-        }
-        &:before {
-          z-index: 1;
-          background: var(--tback1);
-          opacity: .7;
-          mix-blend-mode: multiply;
-        }
-        &:after {
-          z-index: 1;
-          background: var(--group);
-          mix-blend-mode: overlay;
-          opacity: 0
-        }
+        inset: 0;
+        transition: var(--trs1);
+      }
+      &:before {
+        z-index: 1;
+        background: var(--tback1);
+        opacity: .7;
+        mix-blend-mode: multiply;
+      }
+      &:after {
+        z-index: 1;
+        background: var(--group);
+        mix-blend-mode: overlay;
+        opacity: 0;
       }
       & img {
         width: 100%;
@@ -960,7 +956,7 @@ body:has(#profile) {
         filter: var(--filter1);
       }
     }
-  }
+}
 }
 .pfcutriggers {
   grid-area: usertriggers;
