@@ -573,7 +573,6 @@
     main {
       min-height: calc(100vh - var(--nav-height));
       margin-top: var(--sidenav-height);
-      padding: 0;
     }
   }
 }
