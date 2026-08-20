@@ -981,12 +981,8 @@ body:has(#profile) {
     font: var(--fo-bod3);
     font-weight: bold;
     line-height: 90%;
-    max-height: 35px;
+    max-height: 4.8rem;
     overflow: auto;
-    &:has(ul,ol) {
-      font-size: var(--fs-smallest);
-      line-height: 100%;
-    }
     i {
       color: var(--txt2);
     }
@@ -1006,6 +1002,8 @@ body:has(#profile) {
     ul, ol {
       margin-block: 0;
       padding-left: var(--paddclamp8);
+      font-size: var(--fs-smallest);
+      line-height: 120%;
       li {
         margin-bottom: var(--gap0);
         padding-left: var(--gap3);
