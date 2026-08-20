@@ -819,15 +819,20 @@ body:has(#profile) {
 
 /* PAG - USUARIO */
 .pfcuser {
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
   gap: var(--paddclamp4);
   overflow: auto !important;
+  grid-template-columns: calc(100% - var(--icon1) - var(--paddclamp4)) var(--icon1);
+  grid-template-rows: max-content;
+  grid-template-areas:
+    'username userpjs'
+    'userinfotext userpjs'
+    'usertriggers userpjs';
 }
 .pfcudata {
   text-align: left;
   gap: var(--gap0);
+  grid-area: username;
   > strong {
     text-transform: uppercase;
     font: var(--fo-deco3);
@@ -880,6 +885,7 @@ body:has(#profile) {
   flex-wrap: wrap;
   overflow-x: auto;
   align-items: center;
+  grid-area: userinfotext;
    > div {
     flex: 1 0 25%;
     gap: var(--gap1);
@@ -900,8 +906,64 @@ body:has(#profile) {
     }
   }
 }
-.pfcutriggers, .pfcupjs {
-  flex: calc((100% / 2) - var(--paddclamp3));
+.pfcupjs {
+  grid-area: userpjs;
+  & > div {
+    gap: var(--paddclamp8);
+    height: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+      & > a {
+      width: var(--icon1);
+      height: var(--icon1);
+      overflow: hidden;
+      border-radius: var(--bradius);
+      &:hover {
+        & > div {
+          &:after {
+            opacity: 1
+          }
+        }
+      }
+      & > div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          inset: 0;
+          transition: var(--trs1);
+        }
+        &:before {
+          z-index: 1;
+          background: var(--tback1);
+          opacity: .7;
+          mix-blend-mode: multiply;
+        }
+        &:after {
+          z-index: 1;
+          background: var(--group);
+          mix-blend-mode: overlay;
+          opacity: 0
+        }
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        position: relative;
+        z-index: 0;
+        filter: var(--filter1);
+      }
+    }
+  }
+}
+.pfcutriggers {
+  grid-area: usertriggers;
   gap: var(--gap2);
   > u {
     text-transform: uppercase;
@@ -962,10 +1024,6 @@ body:has(#profile) {
       }
     }
   }
-}
-.pfcupjs > div {
-  flex-wrap: wrap; 
-  gap: var(--gap0);
 }
 /* BOTONES ADMIN */
 .profaut {
