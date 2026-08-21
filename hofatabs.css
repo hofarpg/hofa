@@ -1251,131 +1251,69 @@
 #expedtab .expzhtraits > div:before {
   color: var(--accent);
 }
-#expedtab .expzhtraits > div:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
-  --accent: var(--nemesis);
-  &:before {
+#expedtab .expzhtraits > div:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis):before {
     content: "\f6cb";
-  }
 }
-#expedtab .expzhtraits > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché) {
-  : var(--tyche);
-  &:before {
+#expedtab .expzhtraits > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché):before {
     content: "\f655";
-  }
 }
-#expedtab .expzhtraits > div:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone) {
-  : var(--persefone);
-  &:before {
+#expedtab .expzhtraits > div:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone):before {
     content: "\e5aa";
-  }
 }
-#expedtab .expzhtraits > div:is(#afrodita, #AFRODITA, #Afrodita) {
-  : var(--afrodita);
-  &:before {
+#expedtab .expzhtraits > div:is(#afrodita, #AFRODITA, #Afrodita):before {
     content: "\f4ba";
-  }
 }
-#expedtab .expzhtraits > div:is(#dioniso, #DIONISO, #Dioniso) {
-  : var(--dioniso);
-  &:before {
+#expedtab .expzhtraits > div:is(#dioniso, #DIONISO, #Dioniso):before {
     content: "\f4e3";
   }
 }
-#expedtab .expzhtraits > div:is(#hades, #HADES, #Hades) {
-  : var(--hades);
-  &:before {
+#expedtab .expzhtraits > div:is(#hades, #HADES, #Hades):before {
     content: "\f54c";
-  }
 }
-#expedtab .expzhtraits > div:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate) {
-  : var(--hecate);
-  &:before {
+#expedtab .expzhtraits > div:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate):before {
     content: "\f6bf";
-  }
 }
-#expedtab .expzhtraits > div:is(#hypnos, #HYPNOS, #Hypnos) {
-  : var(--hypnos);
-  &:before {
+#expedtab .expzhtraits > div:is(#hypnos, #HYPNOS, #Hypnos):before {
     content: "\f34e";
-  }
 }
-#expedtab .expzhtraits > div:is(#artemisa, #ARTEMISA, #Artemisa) {
-  : var(--artemisa);
-  &:before {
-    content: "\f186";
-  }
+#expedtab .expzhtraits > div:is(#artemisa, #ARTEMISA, #Artemisa):before {
+    content: "\f186
 }
-#expedtab .expzhtraits > div:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón) {
-  : var(--poseidon);
-  &:before {
+#expedtab .expzhtraits > div:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón):before {
     content: "\f773";
-  }
 }
-#expedtab .expzhtraits > div:is(#atenea, #ATENEA, #Atenea) {
-  : var(--atenea);
-  &:before {
+#expedtab .expzhtraits > div:is(#atenea, #ATENEA, #Atenea):before {
     content: "\f5dc";
-  }
 }
-#expedtab .expzhtraits > div:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone) {
-  : var(--khione);
-  &:before {
+#expedtab .expzhtraits > div:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone):before {
     content: "\f2dc";
-  }
 }
-#expedtab .expzhtraits > div:is(#hebe, #HEBE, #Hebe) {
-  : var(--hebe);
-  &:before {
+#expedtab .expzhtraits > div:is(#hebe, #HEBE, #Hebe):before {
     content: "\e588";
-  }
 }
-#expedtab .expzhtraits > div:is(#iris, #IRIS, #Iris) {
-  : var(--iris);
-  &:before {
+#expedtab .expzhtraits > div:is(#iris, #IRIS, #Iris):before {
     content: "\f75b";
-  }
 }
-#expedtab .expzhtraits > div:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter) {
-  : var(--demeter);
-  &:before {
+#expedtab .expzhtraits > div:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter):before {
     content: "\f72d";
-  }
 }
-#expedtab .expzhtraits > div:is(#hermes, #HERMES, #Hermes) {
-  : var(--hermes);
-  &:before {
+#expedtab .expzhtraits > div:is(#hermes, #HERMES, #Hermes):before {
     content: "\f56b";
-  }
 }
-#expedtab .expzhtraits > div:is(#apolo, #APOLO, #Apolo) {
-  : var(--apolo);
-  &:before {
+#expedtab .expzhtraits > div:is(#apolo, #APOLO, #Apolo):before {
     content: "\f001";
-  }
 }
-#expedtab .expzhtraits > div:is(#zeus, #ZEUS, #Zeus) {
-  : var(--zeus);
-  &:before {
+#expedtab .expzhtraits > div:is(#zeus, #ZEUS, #Zeus):before {
     content: "\f0e7";
-  }
 }
-#expedtab .expzhtraits > div:is(#hefesto, #HEFESTO, #Hefesto) {
-  : var(--hefesto);
-  &:before {
+#expedtab .expzhtraits > div:is(#hefesto, #HEFESTO, #Hefesto):before {
     content: "\f6e3";
-  }
 }
-#expedtab .expzhtraits > div:is(#hestia, #HESTIA, #hestia) {
-  : var(--hestia);
-  &:before {
+#expedtab .expzhtraits > div:is(#hestia, #HESTIA, #hestia):before {
     content: "\f7e4";
-  }
 }
-#expedtab .expzhtraits > div:is(#ares, #ARES, #ares) {
-  : var(--ares);
-  &:before {
+#expedtab .expzhtraits > div:is(#ares, #ARES, #ares) {:before {
     content: "\f71d";
-  }
 }
 #expedtab #expzhist::-webkit-scrollbar,
 #expedtab #expzextr::-webkit-scrollbar {
@@ -1384,7 +1322,6 @@
 }
 #expedtab #expzhist::-webkit-scrollbar-thumb,
 #expedtab #expzextr::-webkit-scrollbar-thumb {
-  background: var();
   border: 4px solid var(--back1);
   border-radius: var(--bradius);
 }
@@ -1410,8 +1347,8 @@
 .tabrol1,
 .tabrol2,
 .tabrol3 {
-  --accent: var(--personalclr, var());
-  --taccent: rgb(from var(--personalclr, var()) r g b / .6);
+  --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 .tabrol1 > br,
 .tabrol2 > br,
@@ -1452,7 +1389,8 @@
   gap: var(--gap0);
 }
 .tabrol1 {
-  border-bottom: var(--gap1) solid var();
+  border-bottom: var(--bborder1);
+  border-bottom-color: var(--accent);
 }
 .tabrol1 .tbroltit > b {
   text-transform: uppercase;
@@ -1588,8 +1526,8 @@
   align-items: center;
 }
 #tabcombatpj {
-  --accent: var(--personalclr, var());
-  --taccent: rgb(from var(--personalclr, var()) r g b / .6);
+  --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 #tabcombatmn {
   --accent: var(--staff);
@@ -1993,7 +1931,6 @@
   gap: var(--paddclamp7);
   display: flex;
   flex-direction: column;
-  --accent: var();
 }
 .tabusqres > br,
 .tabusq > br,
@@ -2033,7 +1970,6 @@
   flex-direction: column;
   padding: var(--paddclamp3);
   gap: var(--paddclamp7);
-  --accent: var();
 }
 .tabutrama,
 .tabupj {
@@ -2165,9 +2101,8 @@
 .tabrelas,
 .tabhojaexp
 {
-  : var(--personalclr, inherit);
-  --accent: var(--personalclr, var());
-  --taccent: rgb(from var(--personalclr, var()) r g b / .6);
+  --accent: var(--personalclr, var(--accent));
+  --taccent: rgb(from var(--personalclr, var(--accent)) r g b / .6);
 }
 /* BAÚL */
 .tabaul {
@@ -2260,7 +2195,7 @@
   text-transform: uppercase;
   line-height: 100%;
   color: var(--txt1);
-  text-shadow: 1px 1px 0.5px var();
+  text-shadow: 1px 1px 0.5px var(--accent);
 }
 .tabaul .tbauname > span {
   display: block;
@@ -2407,7 +2342,7 @@
   font: var(--fo-h4);
   font-size: var(--fo-h4-clamp);
   color: var(--txt1);
-  text-shadow: 1px 1px 0.5px var();
+  text-shadow: 1px 1px 0.5px var(--accent);
   line-height: 100%;
 }
 .tabcrono .tabcrcoyear:not(:first-of-type) {
@@ -2927,7 +2862,7 @@
   font: var(--fo-h4);
   font-size: var(--fo-h4-clamp);
   color: var(--txt1);
-  text-shadow: 1px 1px 0.5px var();
+  text-shadow: 1px 1px 0.5px var(--accent);
   line-height: 100%;
 }
 .tabhojaexp .tabhojcogoalslvl > b {
