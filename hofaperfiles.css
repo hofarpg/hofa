@@ -913,7 +913,22 @@ body:has(#profile) {
     height: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
-    > a {
+    align-items: start;
+    align-content: space-around;
+    & > em {
+      width: var(--icon1);
+      height: var(--icon1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: var(--bradius);
+      position: relative;      
+      background: var(--tback2);
+      font-size: var(--fs-h5);
+      color: var(--txt1);
+      border: var(--border1)
+    }
+    & > a {
       width: var(--icon1);
       height: var(--icon1);
       overflow: hidden;
@@ -954,7 +969,7 @@ body:has(#profile) {
         filter: var(--filter1);
       }
     }
-  }
+}
 }
 .pfcutriggers {
   grid-area: usertriggers;
