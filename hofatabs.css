@@ -1042,6 +1042,11 @@
   column-rule: var(--border1);
   column-gap: var(--paddclamp7);
   display: inline-block;
+  
+  > li:not(:last-of-type) {margin-bottom: 5px;}
+  &:is(ol, ul):has(li) > br {display: none;}
+  &:is(ol) li {list-style: upper-roman inside; padding: 0;}
+  &:is(ol) li::marker {font-size: inherit;}
 }
 #expedtab .colu.col2 {
   column-count: 2;
