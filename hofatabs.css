@@ -2099,10 +2099,9 @@
 .tabaul,
 .tabcrono,
 .tabrelas,
-.tabhojaexp
-{
-  --accent: var(--personalclr, var(--accent));
-  --taccent: rgb(from var(--personalclr, var(--accent)) r g b / .6);
+.tabhojaexp {
+  --accent: var(--personalclr, var(--group));
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 /* BAÚL */
 .tabaul {
