@@ -441,7 +441,7 @@ body:has(#profile) {
   text-shadow: 1.5px 1px 0.5px var(--group);
   font: var(--fo-h2);
   font-size: var(--fo-h2-clamp);
-  line-height: 85%;
+  text-box: trim-end cap alphabetic;
   text-transform: uppercase;
   & > span {
     color: var(--txt1) !important;
@@ -862,7 +862,7 @@ body:has(#profile) {
     text-shadow: 1.5px 1px 0.5px var(--group);
     font: var(--fo-h2);
     font-size: var(--fo-h2-clamp);
-    line-height: 85%;
+    text-box: trim-end cap alphabetic;
     text-transform: uppercase;
     color: var(--txt1);
   }
