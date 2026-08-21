@@ -451,7 +451,7 @@ body:has(#profile) {
   }
 }
 .pfcdata {
-  gap: var(--gap2);
+  gap: var(--gap4);
 }
 .pfcquote {
   text-transform: lowercase;
@@ -844,8 +844,20 @@ body:has(#profile) {
 }
 .pfcudata {
   text-align: left;
-  gap: var(--gap0);
+  gap: var(--gap4);
   grid-area: username;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   > strong {
     text-transform: uppercase;
     font: var(--fo-deco3);
@@ -856,7 +868,7 @@ body:has(#profile) {
     width: fit-content;
     border-radius: var(--bradius);
     padding: var(--gap1) var(--gap2);
-    margin-bottom: var(--gap1);
+    margin-bottom: calc(var(--gap1) * -1);
   }
   .pfcuname {
     text-shadow: 1.5px 1px 0.5px var(--group);
