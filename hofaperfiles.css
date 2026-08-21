@@ -801,20 +801,33 @@ body:has(#profile) {
 }
 
 /* PAG - LOGROS */
+.pfclogr {
+  overflow: auto!important;
+}
 .awards_block_simple {
   display: flex;
   flex-wrap: wrap;
   gap: var(--paddclamp8);
+  align-items: start;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
 }
 .award {
   background: var(--back1);
   border: var(--border1);
-  width: 40px;
-  height: 40px;
+  border-radius: var(--bradius);
+  width: var(--icon0);
+  height: var(--icon0);
   display: grid;
   place-content: center;
   color: var(--group);
-  font-size: var(--fo-h4-clamp);
+  font-size: var(--fs-h4);
+  transition: var(--trs1);
+  &:hover {
+    background: var(--back2);
+    color: var(--txt2);
+  }
 }
 
 /* PAG - USUARIO */
@@ -915,6 +928,9 @@ body:has(#profile) {
     flex-wrap: wrap;
     align-items: start;
     align-content: space-around;
+    &:not(:has(a:nth-of-type(2))) {
+      align-content: start;
+    }
     & > em {
       width: var(--icon1);
       height: var(--icon1);
