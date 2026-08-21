@@ -1044,9 +1044,14 @@
   display: inline-block;
   
   > li:not(:last-of-type) {margin-bottom: 5px;}
-  &:is(ol, ul):has(li) > br {display: none;}
-  &:is(ol) li {list-style: upper-roman inside; padding: 0;}
-  &:is(ol) li::marker {font-size: inherit;}
+  &:is(ol, ul) {
+    margin: 0;
+    padding: 0;
+    
+    &:has(li) > br {display: none;}
+    li {list-style: upper-roman inside; padding: 0;}
+    li::marker {font-size: inherit;}
+  }
 }
 #expedtab .colu.col2 {
   column-count: 2;
