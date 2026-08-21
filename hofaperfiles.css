@@ -531,7 +531,7 @@ body:has(#profile) {
 .pfctwo {
   align-items: center;
   justify-content: space-around;
-  gap: var(--paddclamp5);
+  gap: var(--paddclamp6);
   overflow: auto !important;
 }
 .pfcchar {
@@ -641,14 +641,11 @@ body:has(#profile) {
       flex: 1;
           & > strong {
         flex: 1 0 25%;
-        text-align: center;
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
         border-radius: var(--bradius);
-        border-left: var(--tborder);
-        border-right: var(--tborder);
+        border-inline: var(--tborder);
         border-bottom: var(--bborder1);
         border-bottom-color: var(--group);
         padding: var(--padd1) var(--gap3);
@@ -658,7 +655,6 @@ body:has(#profile) {
         line-height: 100%;
         gap: var(--gap2);
         max-width: 50%;
-        line-height: 100%;
               & > i {
           font-style: normal;
           font-family: var(--font2);
