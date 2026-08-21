@@ -451,7 +451,7 @@ body:has(#profile) {
   }
 }
 .pfcdata {
-  gap: var(--gap4);
+  gap: var(--gap5);
 }
 .pfcquote {
   text-transform: lowercase;
