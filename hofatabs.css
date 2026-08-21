@@ -1265,7 +1265,6 @@
 }
 #expedtab .expzhtraits > div:is(#dioniso, #DIONISO, #Dioniso):before {
     content: "\f4e3";
-  }
 }
 #expedtab .expzhtraits > div:is(#hades, #HADES, #Hades):before {
     content: "\f54c";
@@ -1277,7 +1276,7 @@
     content: "\f34e";
 }
 #expedtab .expzhtraits > div:is(#artemisa, #ARTEMISA, #Artemisa):before {
-    content: "\f186
+    content: "\f186";
 }
 #expedtab .expzhtraits > div:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón):before {
     content: "\f773";
@@ -1312,7 +1311,7 @@
 #expedtab .expzhtraits > div:is(#hestia, #HESTIA, #hestia):before {
     content: "\f7e4";
 }
-#expedtab .expzhtraits > div:is(#ares, #ARES, #ares) {:before {
+#expedtab .expzhtraits > div:is(#ares, #ARES, #ares):before {
     content: "\f71d";
 }
 #expedtab #expzhist::-webkit-scrollbar,
