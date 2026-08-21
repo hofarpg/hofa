@@ -949,6 +949,13 @@ span#dice_to_del {
 .panel dd > br {
   display: none;
 }
+fieldset dl.ucp-fecha-de-nacimiento {
+  & dd {
+    flex-direction: row !important;
+    & select {flex: 1;}
+    & input, & .inputbox {width:  auto !important;flex: 1;}
+  }
+}
 .ucp-exportacion-de-datos dd a.button1 {
   padding: var(--gap0) var(--gap4) !important;
 }
