@@ -949,7 +949,7 @@ span#dice_to_del {
 .panel dd > br {
   display: none;
 }
-fieldset dl.ucp-fecha-de-nacimiento {
+fieldset dl:is(.ucp-fecha-de-nacimiento, .ucp-nacimiento-del-usuario) {
   & dd {
     flex-direction: row !important;
     & select {flex: 1;}
