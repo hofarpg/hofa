@@ -805,8 +805,6 @@ body:has(#profile) {
   flex-wrap: wrap;
   gap: var(--paddclamp8);
   align-items: start;
-  justify-content: space-around;
-  align-content: center;
   width: 100%;
 }
 .award {
