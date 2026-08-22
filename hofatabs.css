@@ -24,12 +24,6 @@
 .admiman > br {
   display: none !important;
 }
-.postpreview #guidelinks,
-.postpreview #guidelinked,
-.pastmessages #guidelinks,
-.pastmessages #guidelinked {
-  top: calc(var(--nav-height) - 1px + var(--gap4));
-}
 #guidelinks,
 #guidelinked {
   position: sticky;
@@ -42,7 +36,10 @@
   gap: var(--gap1);
   flex: 1 0 15%;
   min-width: 180px;
-  top: calc(var(--nav-height) - 1px + var(--padd6));
+  top: var(--nav-top);
+}
+:is(.postpreview, .postpreview, .pastmessages) .content * {
+  --nav-top: calc(var(--nav-height) - 1px + var(--gap4));
 }
 #guidelinks > strong,
 #guidelinked > strong {
