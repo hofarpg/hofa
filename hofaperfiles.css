@@ -710,85 +710,156 @@ body:has(#profile) {
 .pfchabs,
 .pfcinve {
   text-align: justify;
-  font: normal var(--fs-body) var(--font2);
+  font: var(--fo-bod1);
   line-height: 132%;
-
   overflow: auto !important;
-  h4.post-content {
+  & > div {
+    width: 100%;
+  }
+  & h4.post-content {
     counter-increment: tab;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    margin: 8px 0px !important;
-    line-height: 90% !important;
-  }
-  h4.post-content:before {
-    color: var(--group);
-    font-weight: 900 !important;
-    content: "0" counter(tab) ". ";
-  }
-  strike,
-  u {
-    text-decoration-color: var(--group);
-    text-decoration-thickness: 2px;
-  }
-  strong {
-    color: var(--group);
+    text-decoration: none;
+    margin: var(--gap2) 0px;
+    font: var(--fo-h5);
+    line-height: 90%;
     font-weight: 800;
-    text-transform: uppercase;
+      &:before {
+      color: var(--group);
+      font-weight: 900 !important;
+      content: "0" counter(tab) ". ";
+    }
   }
-  u {
-    text-transform: uppercase;
-    font: 700 var(--fs-small) var(--font3);
-    color: var(--txt2);
-    text-underline-offset: 2px;
-  }
-  i {
-    color: var(--txt4);
-    font-style: italic;
-  }
-  ul {
-    display: inline-block;
-    padding-left: 20px;
+  & :is(ul, ol) {
+    padding-left: 0px;
     list-style-type: none;
-    
-    > br {display: none;}
-  }
-  ul li {
-    position: relative;
-    margin-bottom: 6px;
-  }
-  ul li:before {
-    content: "";
-    height: 2px;
-    width: 12px;
-    background: var(--tgroup);
-    position: absolute !important;
-    left: -20px;
-    top: 7px;
-  }
-  ol {
+    column-count: 2;
+    column-width: 15.714rem;
+    width: 100%;
+    column-rule: var(--border1);
+    column-gap: var(--paddclamp4);
     display: inline-block;
-    padding-left: 20px;
+    &:not(:last-of-type) {
+      margin-bottom: var(--padd4);
+    }
+    & > br {
+      display: none;
+    }
+    & li {
+      position: relative;
+      margin-bottom: var(--padd1);
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      & details {
+        display: list-item;
+        border: none;
+        background: transparent;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        margin-top: var(--gap2);
+        font-style: italic;
+        & summary {
+          color: var(--txt1);
+          font: var(--fo-deco2);
+          text-transform: uppercase;
+          font-weight: 900;
+          cursor: var(--crs2);
+          margin-left: var(--gap3);
+          list-style-position: inside;
+          width: fit-content;
+          &::marker {
+            content:'';
+            display: none;
+          }
+          &:before {
+            content: '\2b';
+            font: var(--fo-icon4);
+            color: var(--group);
+            font-weight: 900;
+            margin-right: var(--gap2);
+          }
+          &:after {
+            content:'.';
+          }
+        }
+        & > i {
+          color: hsl(from var(--txt4) h s 55%);
+        }
+        &[open] {
+          & summary {
+            margin-bottom: var(--gap0);
+            &:before {
+              content: '\f068';
+            }
+            &:after {
+              content:':';
+            }
+          }
+        }
+      }
+      & :is(.ability-level, .item-use) {
+        text-transform: uppercase;
+        display: inline-block;
+        padding: var(--gap0) var(--gap1);
+        background: var(--accent);
+        border-radius: var(--bradius);
+        font: var(--fo-deco3);
+        font-weight: 800;
+        line-height: 100%;
+        color: var(--back2);
+        margin-right: var(--gap0);
+      }
+      & :is(.ability-name, .item-name) {
+        color: var(--group);
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+    }
+  }
+  & :is(ul) {
+    & li {
+      &:before {
+        display: none;
+      }
+      &::marker {
+        display: none;
+      }
+    }
+  }
+  & :is(ol) {
     list-style-type: none;
     counter-reset: lista;
+    & li {
+      counter-increment: lista;
+      list-style-position: inside;
+      &:before {
+        display: none;
+      }
+      &::marker {
+        content: counters(lista, ".", decimal) ". ";
+        font: var(--fo-deco1);
+        font-weight: 900;
+        color: var(--group);
+      }
+    }
   }
-  ol li {
-    position: relative;
-    margin-bottom: 6px;
-    counter-increment: lista;
+  & :is(strike, u) {
+    text-decoration-color: var(--group);
+    text-decoration-thickness: var(--bthickness);
   }
-  ol li:before {
-    content: counters(lista, ".", decimal) ". ";
-    font: 900 var(--fs-text) var(--font2);
-    color: var(--tgroup);
-    position: relative !important;
-    text-align: right;
+  &:is(strong) {
+    color: var(--group);
+    font-weight: bold;
   }
-  :is(ul, ol) li:last-of-type {
-    margin-bottom: 0px;
+  & :is(u) {
+    font-weight: bold;
+    color: var(--txt2);
+    text-underline-offset: var(--bthickness);
   }
-  li ul, li ol {
-    margin-top: 6px;
+  & :is(i) {
+    color: var(--txt4);
+    font-style: italic;
   }
 }
 .tab:nth-of-type(3),
