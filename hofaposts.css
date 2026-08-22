@@ -336,6 +336,11 @@
   border-right: var(--border1);
   border-bottom: var(--border1);
   background: var(--tback1);
+  
+  .content * {
+    --nav-top: calc(var(--nav-height) - 1px + var(--padd6));
+    scroll-margin-top: var(--nav-top);
+  }
 }
 .pbinfo {
   position: sticky;
