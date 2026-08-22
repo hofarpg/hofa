@@ -747,7 +747,7 @@ body:has(#profile) {
       &:not(:last-of-type) {        
         margin-bottom: var(--padd1);
       }
-      .ability-effect, .item-effect {
+      .element-effect {
         margin-top: var(--gap2);
         font-style: italic;
         b {
@@ -773,7 +773,7 @@ body:has(#profile) {
           display: none;
         }
       }
-      .ability-type, .ability-level, .item-use, i:first-child {
+      .element-type, .ability-level, .item-use, i:first-child {
         text-transform: uppercase;
         padding: var(--gap1);
         background: var(--accent);
@@ -789,7 +789,7 @@ body:has(#profile) {
         font-weight: 800;
       }
       &.showeffect {
-        .ability-effect, .item-effect {
+        .element-effect {
           b {
             &:before {
               content: '\f068';
@@ -808,7 +808,6 @@ body:has(#profile) {
   ol {
     list-style-type: none;
     counter-reset: lista;
-    counter-reset: item-list 1;
     li {
       counter-increment: lista;
       list-style-position: inside;
