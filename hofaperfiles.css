@@ -753,7 +753,7 @@ body:has(#profile) {
       &:last-of-type {
         margin-bottom: 0px;
       }
-      & details {
+      & :is(.ability-effect, .item-effect) {
         display: list-item;
         border: none;
         background: transparent;
@@ -762,7 +762,7 @@ body:has(#profile) {
         margin: 0px;
         margin-top: var(--gap2);
         font-style: italic;
-        & summary {
+        & b {
           color: var(--txt1);
           font: var(--fo-deco2);
           text-transform: uppercase;
@@ -771,6 +771,7 @@ body:has(#profile) {
           margin-left: var(--gap3);
           list-style-position: inside;
           width: fit-content;
+          line-height: inherit;
           &::marker {
             content:'';
             display: none;
@@ -788,16 +789,19 @@ body:has(#profile) {
         }
         & > i {
           color: hsl(from var(--txt4) h s 55%);
+          display: none;
         }
-        &[open] {
-          & summary {
-            margin-bottom: var(--gap0);
+        &.active {
+          & b {
             &:before {
               content: '\f068';
             }
             &:after {
               content:':';
             }
+          }
+          & > i {
+            display: initial;
           }
         }
       }
