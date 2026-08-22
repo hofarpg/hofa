@@ -118,7 +118,7 @@ body:has(#profile) {
   flex: 1;
   justify-content: flex-end;
   position: relative;
-  & span {
+  span {
     position: absolute;
     text-transform: uppercase;
     font: var(--fo-deco1);
@@ -137,7 +137,7 @@ body:has(#profile) {
   bottom: 0;
   margin: auto;
   z-index: 2;
-  & label {
+  label {
     padding: 0px !important;
     width: 100%;
     height: 100%;
@@ -183,7 +183,7 @@ body:has(#profile) {
   overflow-y: auto;
   overflow-x: hidden;
   border-right-width: calc(var(--paddclamp1) / 2);
-  &>div {
+  >div {
     padding-right: calc(var(--paddclamp1) / 2);
     overflow: hidden;
     height: 100%;
@@ -245,7 +245,7 @@ body:has(#profile) {
   max-width: 29.0rem;
   min-width: 20rem;
   width: 100%;
-  & .prfimgcont {
+  .prfimgcont {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -256,12 +256,12 @@ body:has(#profile) {
     position: relative;
     z-index: 5;
   }
-  & .primgback {
+  .primgback {
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: 0;
-      &:before, &:after {
+    &:before, &:after {
       content: '';
       position: absolute;
       z-index: 0;
@@ -281,8 +281,8 @@ body:has(#profile) {
       opacity: 1;
       mix-blend-mode: multiply;
     }
-}
-  & .pccontent .field_uneditable {
+  }
+  .pccontent .field_uneditable {
     width: 100%;
     height: 100%;
   }
@@ -298,11 +298,11 @@ body:has(#profile) {
   border-bottom: var(--border1);
   background: var(--back2);
   gap: var(--gap3);
-  & .prextlinks {
+  .prextlinks {
     text-align: left;
     text-transform: uppercase;
     gap: var(--gap2);
-    & a {
+    a {
       font: var(--fo-deco2);
       font-weight: bold;
       line-height: 120%;
@@ -316,7 +316,7 @@ body:has(#profile) {
       }
     }
   }
-  & > span {
+  > span {
     text-transform: uppercase;
     font: var(--fo-deco3);
     font-weight: 800;
@@ -340,7 +340,7 @@ body:has(#profile) {
   z-index: 1;
   flex-shrink: 0;
   display: flex;
-  & img {
+  img {
     width: var(--icon2);
     height: var(--icon2);
     overflow: hidden;
@@ -361,7 +361,7 @@ body:has(#profile) {
   z-index: 3;
   gap: var(--gap1);
   margin-top: var(--gap4);
-  & .pfcntitle {
+  .pfcntitle {
     text-transform: uppercase;
     font: var(--fo-h4);
     color: var(--txt1);
@@ -369,18 +369,18 @@ body:has(#profile) {
     font-size: var(--fo-h4-clamp);
     line-height: 80%;
   }
-  & .pfcnauthor {
+  .pfcnauthor {
     text-transform: uppercase;
     display: block ruby;
     font: var(--fo-deco2);
     font-weight: 800;
     color: var(--txt3);
     margin-bottom: var(--gap4);
-    & span {
+    span {
       color: var(--group);
     }
   }
-  & [glenplayer02].done {
+  [glenplayer02].done {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,9 +398,9 @@ body:has(#profile) {
     &:after {
       content:'\f04e';
     }
-    & .player-inner {
-      & .buttons {
-        & button {
+    .player-inner {
+      .buttons {
+        button {
           &:before {
             font: var(--fo-icon1);
             font-weight: bold;
@@ -443,10 +443,10 @@ body:has(#profile) {
   font-size: var(--fo-h2-clamp);
   text-box: trim-end cap alphabetic;
   text-transform: uppercase;
-  & > span {
+  > span {
     color: var(--txt1) !important;
   }
-  & > span > strong {
+  > span > strong {
     font-weight: 900;
   }
 }
@@ -459,7 +459,7 @@ body:has(#profile) {
   font-style: italic;
   line-height: 100%;
   color: var(--txt4);
-  & .pccontent {
+  .pccontent {
   display: flex;
   align-items: center;
     &:before {
@@ -485,17 +485,17 @@ body:has(#profile) {
   flex-wrap: wrap;
   overflow: auto;
   align-items: center;
-  & > div {
+  > div {
     flex: 1 0 25%;
     gap: var(--gap1);
-    & > em {
+    > em {
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
       color: var(--txt4);
       line-height: 100%;
     }
-    & > b {
+    > b {
       text-transform: uppercase;
       font: var(--fo-bod2);
       font-weight: 900;
@@ -509,7 +509,7 @@ body:has(#profile) {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  & a {
+  a {
     color: var(--group) !important;
     background: var(--back1);
     height: var(--padd4);
@@ -561,11 +561,11 @@ body:has(#profile) {
   line-height: 85%;
   justify-content: center;
   align-items: center;
-  & > i {
+  > i {
     position: absolute;
     display: none;
   }
-  & > span {
+  > span {
     text-shadow: 1.5px 1px 0.5px var(--group);
   }
 }
@@ -576,10 +576,10 @@ body:has(#profile) {
   color: var(--txt3);
   gap: var(--gap0);
   line-height: 100%;
-  & > b {
+  > b {
     font-weight: 900;
   }
-  & > em {
+  > em {
     font-style: normal;
     color: var(--txt1);
   }
@@ -591,17 +591,17 @@ body:has(#profile) {
   align-items: center;
   gap: var(--gap4);
   flex-wrap: wrap;
-  & > div {
+  > div {
     flex: 1;
     justify-content: center;
     align-items: center;
     gap: var(--gap2);
-    & > b {
+    > b {
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
       color: var(--txt1);
-      & > u {
+      > u {
         text-decoration-color: var(--tgroup);
         text-decoration-thickness: var(--bthickness);
         text-underline-offset: var(--bthickness);
@@ -616,7 +616,7 @@ body:has(#profile) {
   border: var(--gap0) solid var(--back2);
   border-radius: var(--bradius);
   position: relative;
-  & .pfctbarr {
+  .pfctbarr {
     position: absolute;
     background: var(--group);
     border-radius: var(--bradius);
@@ -628,18 +628,18 @@ body:has(#profile) {
 .pfcstats {
   width: 100%;
   flex: 1;
-  & > .pccontent {
+  > .pccontent {
     width: 100%;
     height: 100%;
     display: flex;
-      & > div {
+      > div {
       display: flex;
       justify-content: space-around;
       gap: var(--gap4);
       flex-wrap: wrap;
       align-self: stretch;
       flex: 1;
-          & > strong {
+        > strong {
         flex: 1 0 25%;
         display: flex;
         align-items: center;
@@ -655,7 +655,7 @@ body:has(#profile) {
         line-height: 100%;
         gap: var(--gap2);
         max-width: 50%;
-              & > i {
+        > i {
           font-style: normal;
           font-family: var(--font2);
           font-size: var(--fs-bigger);
@@ -663,19 +663,19 @@ body:has(#profile) {
           color: var(--txt4);
           line-height: 70%;
         }
-}
-}
-    & > div.field_editable.invisible {
+    }
+  }
+    > div.field_editable.invisible {
       display: none !important;
     }
-}
+  }
 }
 .pfcdetails {
   gap: var(--paddclamp8);
   text-align: center;
   width: 100%;
   justify-content: center;
-  & > div {
+  > div {
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
@@ -688,13 +688,13 @@ body:has(#profile) {
     &:last-of-type {
       border-left: var(--tborder);
     }
-    & > b {
+    > b {
       font: var(--fo-h5);
       font-weight: 900;
       color: var(--txt1);
       line-height: 100%;
     }
-    & > em {
+    > em {
       text-transform: uppercase;
       font: var(--fo-bod3);
       font-weight: bold;
@@ -719,47 +719,35 @@ body:has(#profile) {
   h4.post-content {
     counter-increment: tab;
     text-decoration: none;
-    margin: var(--gap2) 0px;
+    margin: var(--gap2) 0;
     font: var(--fo-h5);
     line-height: 90%;
     font-weight: 800;
-      &:before {
+    &:before {
       color: var(--group);
       font-weight: 900 !important;
       content: "0" counter(tab) ". ";
     }
   }
-  :is(ul, ol) {
-    padding-left: 0px;
-    list-style-type: none;
-    column-count: 2;
-    column-width: 15.714rem;
-    width: 100%;
-    column-rule: var(--border1);
-    column-gap: var(--paddclamp4);
-    display: inline-block;
-    &:not(:has(li:nth-of-type(3))) {
-      column-count: 1;
+  ul, ol {
+    padding-left: 0;
+    &:has(li:nth-of-type(3)) {
+      column-rule: var(--border1);
+      column-gap: var(--paddclamp4);
+      column-count: 2;
+      column-width: 15.714rem;
     }
     &:not(:last-of-type) {
-      margin-bottom: var(--padd4);
+      margin-bottom: var(--padd3);
     }
     > br {
       display: none;
     }
     li {
-      position: relative;
-      margin-bottom: var(--padd1);
-      &:last-of-type {
-        margin-bottom: 0px;
+      &:not(:last-of-type) {        
+        margin-bottom: var(--padd1);
       }
-      :is(.ability-effect, .item-effect) {
-        display: list-item;
-        border: none;
-        background: transparent;
-        position: relative;
-        padding: 0px;
-        margin: 0px;
+      .ability-effect, .item-effect {
         margin-top: var(--gap2);
         font-style: italic;
         b {
@@ -768,13 +756,7 @@ body:has(#profile) {
           text-transform: uppercase;
           font-weight: 900;
           cursor: var(--crs2);
-          list-style-position: inside;
-          width: fit-content;
           line-height: inherit;
-          &::marker {
-            content:'';
-            display: none;
-          }
           &:before {
             content: '\2b';
             font: var(--fo-icon4);
@@ -791,26 +773,24 @@ body:has(#profile) {
           display: none;
         }
       }
-      :is(.ability-type, .ability-level, .item-use) {
+      .ability-type, .ability-level, .item-use, i:first-child {
         text-transform: uppercase;
-        display: inline-block;
-        padding: var(--gap0) var(--gap1);
+        padding: var(--gap1);
         background: var(--accent);
         border-radius: var(--bradius);
         font: var(--fo-deco3);
         font-weight: 800;
-        line-height: 100%;
         color: var(--back2);
-        margin-right: var(--gap0);
+        text-box: trim-both text text;
       }
-      :is(.ability-name, .item-name) {
+      strong {
         color: var(--group);
         text-transform: uppercase;
         font-weight: 800;
       }
       &.showeffect {
-        & :is(.ability-effect, .item-effect) {
-          & b {
+        .ability-effect, .item-effect {
+          b {
             &:before {
               content: '\f068';
             }
@@ -818,26 +798,17 @@ body:has(#profile) {
               content:':';
             }
           }
-          & > i {
+          > i {
             display: initial;
           }
         }
       }
     }
   }
-  :is(ul) {
-    li {
-      &:before {
-        display: none;
-      }
-      &::marker {
-        display: none;
-      }
-    }
-  }
-  :is(ol) {
+  ol {
     list-style-type: none;
     counter-reset: lista;
+    counter-reset: item-list 1;
     li {
       counter-increment: lista;
       list-style-position: inside;
@@ -852,20 +823,20 @@ body:has(#profile) {
       }
     }
   }
-  :is(strike, u) {
+  strike, u {
     text-decoration-color: var(--group);
     text-decoration-thickness: var(--bthickness);
   }
-  &:is(strong) {
+  strong {
     color: var(--group);
     font-weight: bold;
   }
-  :is(u) {
+  u {
     font-weight: bold;
     color: var(--txt2);
     text-underline-offset: var(--bthickness);
   }
-  :is(i) {
+  i {
     color: var(--txt4);
     font-style: italic;
   }
@@ -885,7 +856,7 @@ body:has(#profile) {
   gap: var(--paddclamp4);
   text-align: center;
   position: relative;
-      &:before {
+    &:before {
       content:'\3f';
       font: var(--fo-icon4);
       color: var(--group);
@@ -1035,7 +1006,7 @@ body:has(#profile) {
     &:not(:has(a:nth-of-type(2))) {
       align-content: start;
     }
-    & > em {
+    > em {
       width: var(--icon1);
       height: var(--icon1);
       display: flex;
@@ -1048,7 +1019,7 @@ body:has(#profile) {
       color: var(--txt1);
       border: var(--border1)
     }
-    & > a {
+    > a {
       width: var(--icon1);
       height: var(--icon1);
       overflow: hidden;
