@@ -764,11 +764,10 @@ body:has(#profile) {
         font-style: italic;
         & b {
           color: var(--txt1);
-          font: var(--fo-deco2);
+          font: var(--fo-deco1);
           text-transform: uppercase;
           font-weight: 900;
           cursor: var(--crs2);
-          margin-left: var(--gap3);
           list-style-position: inside;
           width: fit-content;
           line-height: inherit;
@@ -879,6 +878,37 @@ body:has(#profile) {
 /* PAG - LOGROS */
 .pfclogr {
   overflow: auto!important;
+  &:empty {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--paddclamp4);
+  text-align: center;
+  position: relative;
+      &:before {
+      content:'\3f';
+      font: var(--fo-icon4);
+      color: var(--group);
+      font-weight: 900;
+      background: var(--back2);
+      border: var(--border1);
+      border-radius: var(--bradius);
+      width: var(--icon2);
+      height: var(--icon2);
+      display: grid;
+      place-content: center;
+      font-size: var(--fs-h3);
+      transition: var(--trs1);
+    }
+    &:after {
+      content:'Este personaje no ha desbloqueado logros todavía.';
+      text-transform: uppercase;
+      font: var(--fo-deco2);
+      font-weight: 800;
+      color: var(--txt2);
+      line-height: 120%;
+    }
+  }
 }
 .awards_block_simple {
   display: flex;
