@@ -788,21 +788,8 @@ body:has(#profile) {
           }
         }
         & > i {
-          color: hsl(from var(--txt4) h s 55%);
+          color: hsl(from var(--txt4) h s 60%);
           display: none;
-        }
-        &.active {
-          & b {
-            &:before {
-              content: '\f068';
-            }
-            &:after {
-              content:':';
-            }
-          }
-          & > i {
-            display: initial;
-          }
         }
       }
       & :is(.ability-level, .item-use) {
@@ -821,6 +808,21 @@ body:has(#profile) {
         color: var(--group);
         text-transform: uppercase;
         font-weight: 800;
+      }
+      &.showeffect {
+        & :is(.ability-effect, .item-effect) {
+          & b {
+            &:before {
+              content: '\f068';
+            }
+            &:after {
+              content:':';
+            }
+          }
+          & > i {
+            display: initial;
+          }
+        }
       }
     }
   }
@@ -918,18 +920,6 @@ body:has(#profile) {
   text-align: left;
   gap: var(--gap4);
   grid-area: username;
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   > strong {
     text-transform: uppercase;
     font: var(--fo-deco3);
