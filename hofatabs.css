@@ -40,6 +40,7 @@
 }
 :is(.postpreview, .postpreview, .pastmessages) .content * {
   --nav-top: calc(var(--nav-height) - 1px + var(--gap4));
+  scroll-margin-top: var(--nav-top);
 }
 #guidelinks > strong,
 #guidelinked > strong {
