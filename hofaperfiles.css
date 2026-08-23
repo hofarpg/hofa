@@ -326,8 +326,7 @@ body:has(#profile) {
   }
 }
 .pfcticon {
-  outline: var(--bthickness) solid var(--accent);
-  margin: var(--bthickness);
+  border: var(--bthickness) solid var(--tgroup);
   border-radius: var(--bradius);
   padding: 4px;
   img, &:empty:before {
