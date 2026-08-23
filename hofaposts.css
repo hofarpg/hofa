@@ -44,43 +44,38 @@
   gap: var(--paddclamp7);
 }
 .phicon {
-  justify-content: center;
-  align-items: center;
   outline: var(--bthickness) solid var(--accent);
   margin: var(--bthickness);
   outline-color: var(--tgroup);
   border-radius: var(--bradius);
-  border: 4px solid transparent;
-  flex-shrink: 0;
-}
-.phicon img,
-.phicon:empty:before {
-  width: var(--icon2);
-  height: var(--icon2);
-  overflow: hidden;
-  border-radius: var(--bradius);
-  object-fit: cover;
-  object-position: center;
-}
-.phicon:empty:before {
-  content: "";
-  display: block;
-  background-image: url(https://2img.net/i.imgur.com/xr5u4bH.png);
-  background-position: center;
-  background-size: contain;
+  padding: 4px;
+  img, &:empty:before {
+    width: var(--icon2);
+    height: var(--icon2);
+    border-radius: var(--bradius);
+    object-fit: cover;
+    object-position: center;
+  }
+  &:empty:before {
+    content: "";
+    display: block;
+    background-image: url(https://2img.net/i.imgur.com/xr5u4bH.png);
+    background-position: center;
+    background-size: contain;
+  }
 }
 .phmname {
   text-transform: uppercase;
   font: var(--fo-h1);
   font-size: var(--fo-h1-clamp);
-  line-height: 85%;
-}
-.phmname span {
-  color: var(--txt1) !important;
-  text-shadow: 1px 1px 0.5px var(--group);
-}
-.phmname strong {
-  font-weight: 900;
+  line-height: 85%;  
+  span {
+    color: var(--txt1) !important;
+    text-shadow: 1px 1px 0.5px var(--group);
+  }
+  strong {
+    font-weight: 900;
+  }
 }
 .phmquote {
   text-transform: lowercase;
@@ -90,20 +85,21 @@
   color: var(--txt4);
   line-height: 100%;
   display: inline-flex;
+  &:before {
+    content: "";
+    width: var(--paddclamp1);
+    height: var(--bthickness);
+    float: left;
+    background: var(--tgroup);
+    margin-right: var(--gap2);
+    position: relative;
+    align-self: center;
+  }
+  .pccontent {
+    position: relative;
+  }
 }
-.phmquote:before {
-  content: "";
-  width: var(--paddclamp1);
-  height: var(--bthickness);
-  float: left;
-  background: var(--tgroup);
-  margin-right: var(--gap2);
-  position: relative;
-  align-self: center;
-}
-.phmquote .pccontent {
-  position: relative;
-}
+
 .phmcont {
   justify-content: center;
   align-items: flex-start;
