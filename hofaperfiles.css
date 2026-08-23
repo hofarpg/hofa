@@ -183,7 +183,7 @@ body:has(#profile) {
   overflow-y: auto;
   overflow-x: hidden;
   border-right-width: calc(var(--paddclamp1) / 2);
-  >div {
+  > div {
     padding-right: calc(var(--paddclamp1) / 2);
     overflow: hidden;
     height: 100%;
@@ -413,7 +413,7 @@ body:has(#profile) {
               font-weight: normal;
             }
           }
-          & i {
+          i {
             display: none;
           }
           &[play-button] {
@@ -462,7 +462,7 @@ body:has(#profile) {
   .pccontent {
   display: flex;
   align-items: center;
-    &:before {
+  &:before {
       content: "";
       width: var(--paddclamp1);
       height: var(--bthickness);
@@ -663,8 +663,8 @@ body:has(#profile) {
           color: var(--txt4);
           line-height: 70%;
         }
+      }
     }
-  }
     > div.field_editable.invisible {
       display: none !important;
     }
@@ -731,6 +731,9 @@ body:has(#profile) {
   }
   ul, ol {
     padding-left: 0;
+    &.drops {
+      padding-left: var(--gap1);
+    }
     &:has(li:nth-of-type(3)) {
       column-rule: var(--border1);
       column-gap: var(--paddclamp4);
@@ -744,8 +747,19 @@ body:has(#profile) {
       display: none;
     }
     li {
-      &:not(:last-of-type) {        
+      &:not(:last-of-type) {
         margin-bottom: var(--padd1);
+        .drops & {
+          margin-bottom: var(--gap1);
+        }
+      }
+      .drops & {
+        padding-left: var(--gap1);
+        &::marker {
+          content: '\f054';
+          font: var(--fo-icon4);
+          font-weight: 900;
+        }
       }
       .element-effect {
         margin-top: var(--gap2);
@@ -773,7 +787,7 @@ body:has(#profile) {
           display: none;
         }
       }
-      .element-type, .ability-level, .item-use, i:first-child {
+      .element-type, .ability-level, .item-use {
         text-transform: uppercase;
         padding: var(--gap1);
         background: var(--accent);
@@ -855,7 +869,7 @@ body:has(#profile) {
   gap: var(--paddclamp4);
   text-align: center;
   position: relative;
-    &:before {
+  &:before {
       content:'\3f';
       font: var(--fo-icon4);
       color: var(--group);
@@ -1059,7 +1073,7 @@ body:has(#profile) {
         filter: var(--filter1);
       }
     }
-}
+  }
 }
 .pfcutriggers {
   grid-area: usertriggers;
@@ -1149,12 +1163,12 @@ body:has(#profile) {
 .profaut > a {
   text-transform: uppercase;
   background: var(--back1);
-  border: var(--border1) !important;
+  border: var(--border1);
+  border-bottom: var(--bthickness) solid var(--group);
+  border-radius: var(--bradius);
   color: var(--txt1);
-  padding: var(--gap2) var(--gap4) !important;
+  padding: var(--gap2) var(--gap4);
   font: var(--fo-deco2);
   font-weight: 800;
   transition: var(--trs1);
-  border-radius: var(--bradius);
-  border-bottom: var(--bthickness) solid var(--group) !important;
 }
