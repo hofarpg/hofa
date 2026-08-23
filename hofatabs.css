@@ -1237,16 +1237,15 @@
   min-width: var(--paddclamp3);
 }
 #expedtab .expzhskills > span {
-  text-transform: uppercase;
   display: inline-block;
+  text-box: trim-both cap alphabetic;
   padding: var(--gap0) var(--gap1);
+  text-transform: uppercase;
   background: var(--accent);
   border-radius: var(--bradius);
   font: var(--fo-deco2);
   font-weight: 800;
-  line-height: 100%;
   color: var(--back2);
-  margin-right: var(--gap1);
 }
 #expedtab .expzhskills > u {
   color: var(--txt1);
