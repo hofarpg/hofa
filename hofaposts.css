@@ -44,9 +44,7 @@
   gap: var(--paddclamp7);
 }
 .phicon {
-  outline: var(--bthickness) solid var(--accent);
-  margin: var(--bthickness);
-  outline-color: var(--tgroup);
+  border: var(--bthickness) solid var(--tgroup);
   border-radius: var(--bradius);
   padding: 4px;
   img, &:empty:before {
