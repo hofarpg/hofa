@@ -3,14 +3,16 @@ $(function () {
   var members = [];
   var membersNS = [];
   $(".mbmember").each(function () {
-    var $memberElement = $(this).find(".mbm-user div.field_uneditable").first();
+    var $memberElement = $(this)
+      .find(".mbm-user div.field_uneditable")
+      .first();
     // Skip this member if the expected name element does not exist
     if (!$memberElement.length) {
       console.warn("Member name element not found:", this);
       return;
     }
-    // .text() is safer here because you only need the visible name
-    var member = $memberElement.text()
+    var member = $memberElement
+      .text()
       .replace(/\s+/g, " ")
       .trim()
       .toLowerCase();
@@ -20,12 +22,9 @@ $(function () {
     }
     // Remove spaces from the name
     var memberNS = member.replace(/\s/g, "");
-    // Add the spaced version only once
+    // Add the name only once
     if (members.indexOf(member) === -1) {
       members.push(member);
-    }
-    // Add the no-space version only once
-    if (membersNS.indexOf(memberNS) === -1) {
       membersNS.push(memberNS);
     }
     // Add the generated class to the member element
@@ -33,13 +32,15 @@ $(function () {
   });
   // Add each member to the filter list
   for (var i = 0; i < members.length; i++) {
-    $(".mfilt-user").append(
-      $("<li>", {
-        class: "abc",
-        "data-filter": ".u-" + membersNS[i],
-        text: members[i]
-      })
-    );
+    var $link = $("<a>", {
+      href: "#",
+      "data-filter": ".u-" + membersNS[i],
+      text: members[i]
+    });
+    var $listItem = $("<li>", {
+      class: "abc"
+    }).append($link);
+    $(".mfilt-user").append($listItem);
   }
   // Sort the generated filters alphabetically
   $(".mfilt-user li.abc")
