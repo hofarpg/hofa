@@ -1,39 +1,50 @@
-/* automatic alias additions by LUX */
-var members = []; //this is the array of names
-var membersNS = []; //this is the array of names without spaces
-$(".mbmember").each(function () {
-  var member = $(this).find(".mbm-user div.field_uneditable").html().toLowerCase().trim();
-  var memberArray = member.split(" ");
-  var memberNS = ""; //set an empty variable for now
-  if (member != "") {
-    //if the member alias isn't empty, run the loop
-    for (var i = 0; i < memberArray.length; i++) {
-      //for each word in the member's alias, add the word to the empty variable so that it's a version without spaces
-      memberNS = memberNS + memberArray[i];
+/* Automatic alias additions by LUX */
+$(function () {
+  var members = [];
+  var membersNS = [];
+  $(".mbmember").each(function () {
+    var $memberElement = $(this).find(".mbm-user div.field_uneditable").first();
+    // Skip this member if the expected name element does not exist
+    if (!$memberElement.length) {
+      console.warn("Member name element not found:", this);
+      return;
     }
-    if (jQuery.inArray(member, members) == -1) {
-      //if it's not a duplicate, add the version WITH spaces to the members array for the label text
+    // .text() is safer here because you only need the visible name
+    var member = $memberElement.text()
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+    // Skip empty names
+    if (!member) {
+      return;
+    }
+    // Remove spaces from the name
+    var memberNS = member.replace(/\s/g, "");
+    // Add the spaced version only once
+    if (members.indexOf(member) === -1) {
       members.push(member);
     }
-    if (jQuery.inArray(memberNS, membersNS) == -1) {
-      //same as above, but the no space version to the array to be used for data filter calls
+    // Add the no-space version only once
+    if (membersNS.indexOf(memberNS) === -1) {
       membersNS.push(memberNS);
     }
+    // Add the generated class to the member element
+    $(this).addClass(memberNS);
+  });
+  // Add each member to the filter list
+  for (var i = 0; i < members.length; i++) {
+    $(".mfilt-user").append(
+      $("<li>", {
+        class: "abc",
+        "data-filter": ".u-" + membersNS[i],
+        text: members[i]
+      })
+    );
   }
-  $(this).addClass(memberNS);
+  // Sort the generated filters alphabetically
+  $(".mfilt-user li.abc")
+    .sort(function (a, b) {
+      return $(a).text().localeCompare($(b).text());
+    })
+    .appendTo(".mfilt-user");
 });
-//for each member in the array, add them to the html inside the filtergroup with a class of mfilt-user
-for (var i = 0; i < members.length; i++) {
-    if (members[i] != undefined) {
-
-         $('.mfilt-user').append('<li class="abc" data-filter=".u-' + membersNS[i] + '">' + members[i] + '</li>');
-    }
-}
-
-/* ordenar usuarios por orden alfabético */
-$(".mfilt-user li.abc").sort(asc_sort).appendTo(".mfilt-user");
-//$("#debug").text("Output:");
-// accending sort
-function asc_sort(a, b) {
-  return $(b).text() < $(a).text() ? 1 : -1;
-}
