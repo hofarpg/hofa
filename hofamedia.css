@@ -169,53 +169,6 @@
     flex: 1 0 9%;
     height: var(--padd6) !important;
   }
-  /* memberlist */
-  .mbmsl {
-    flex: 1 0 50% !important;
-  }
-  .mbsmava > img {
-    display: none !important;
-  }
-  .mbsmava {
-    width: 100%;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    border-right: none !important;
-    border-bottom: var(--border1);
-    height: 17rem!important;
-    min-height: auto !important;
-  }
-  .mbsimgpro {
-    display: block !important;
-    width: 100%;
-    height: 100%;
-  }
-  .mbsmember {
-    flex-direction: column !important;
-    max-width: 23rem !important;
-    min-width: auto !important;
-    flex: 1 0 45% !important;
-  }
-  .mbsmcdata {
-    max-height: none !important;
-  }
-  .mbsimgpro img {
-    filter: var(--filter2);
-    object-fit: cover;
-    object-position: center 30%;
-    width: 100%;
-    height: 100%;
-  }
-  .mbsimgpro > div {
-    width: 100%;
-    height: 100%;
-  }
-  .mbsmcont {
-    min-width: auto;
-  }
-  .mbsmclinks {
-    gap: var(--gap3) !important;
-  }
   /* posts */
   .postprofile {
     display: none;
@@ -328,50 +281,6 @@
   }
   .ftoplava {
     display: none !important;
-  }
-  /* memberlist */
-  .mbsmava > img {
-    display: none !important;
-  }
-  .mbsmava {
-    width: 100%;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    border-right: none !important;
-    border-bottom: var(--border1);
-    height: 17rem !important;
-    min-height: auto !important;
-  }
-  .mbsimgpro {
-    display: block !important;
-    width: 100%;
-    height: 100%;
-  }
-  .mbsmember {
-    flex-direction: column !important;
-    max-width: 23rem !important;
-    min-width: auto !important;
-    flex: 1 0 45% !important;
-  }
-  .mbsimgpro img {
-    filter: var(--filter2);
-    object-fit: cover;
-    object-position: center 30%;
-    width: 100%;
-    height: 100%;
-  }
-  .mbsimgpro > div {
-    width: 100%;
-    height: 100%;
-  }
-  .mbsmcont {
-    min-width: auto;
-  }
-  .mbsimgava {
-    display: none;
-  }
-  .mbsmcdata {
-    max-height: none;
   }
   /* posts */
   .phicon img, .mhava img {
@@ -625,7 +534,6 @@
 }
 
 /* CONTAINERS - PERFIL */
-/* CONTAINERS - PERFIL */
 @container profinfocont (min-height:590px) {
   .pfcname, .pfcuname {
     font-size: var(--fo-h1-clamp)!important;
@@ -683,5 +591,19 @@
   }
   .pfcutriggers, .pfcupjs {
     flex-basis: 100%;
+  }
+}
+
+/* CONTAINERS - MEMBERLIST */
+@container memberlist-members (min-width: 520px) {
+  & .mbmember {
+    max-width: 65%;
+  }
+}
+@container memberlist-membercont (max-width: 350px) {
+  & .mbmc-data {
+    & div {
+      flex: 1 0 40% !important;
+    }
   }
 }
