@@ -491,6 +491,11 @@ body:has(#profile) {
       font-weight: 900;
       line-height: 85%;
       color: var(--txt2);
+      &:empty {
+        &:before {
+          content: 'Desconocida';
+        }
+      }
     }
   }
 }
