@@ -784,7 +784,7 @@ body:has(#profile) {
       }
       .element-type, .ability-level, .item-use {
         text-transform: uppercase;
-        padding: var(--gap1);
+        padding: calc(var(--gap0) / 1.7) var(--gap2);
         background: var(--accent);
         border-radius: var(--bradius);
         font: var(--fo-deco3);
