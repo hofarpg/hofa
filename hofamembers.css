@@ -1,21 +1,66 @@
+/*IMAGENES DE GRUPOS*/
+.mbmember:is([class*="d-staff"], [class*="d-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
+.mbmember:is([class*="d-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+.mbmember:is([class*="d-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
+.mbmember:is([class*="d-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
+.mbmember:is([class*="d-persefone"]) {--profgrimg: url('https://b.l3n.co/bVGkCo.png');}
+.mbmember:is([class*="d-afrodita"]) {--profgrimg: url('https://a.l3n.co/bVUrRM.png');}
+.mbmember:is([class*="d-dioniso"]) {--profgrimg: url('https://d.l3n.co/bVG6S9.png');}
+.mbmember:is([class*="d-hades"]) {--profgrimg: url('https://a.l3n.co/bVU1Fa.png');}
+.mbmember:is([class*="d-hecate"]) {--profgrimg: url('https://a.l3n.co/bVcFav.png');}
+.mbmember:is([class*="d-hypnos"]) {--profgrimg: url('https://d.l3n.co/bVyN5x.png');}
+.mbmember:is([class*="d-artemisa"]) {--profgrimg: url('https://c.l3n.co/bVGCx2.png');}
+.mbmember:is([class*="d-poseidon"]) {--profgrimg: url('https://c.l3n.co/bV5o45.png');}
+.mbmember:is([class*="d-atenea"]) {--profgrimg: url('https://b.l3n.co/bVUIeq.png');}
+.mbmember:is([class*="d-khione"]) {--profgrimg: url('https://b.l3n.co/bVGQ1v.png');}
+.mbmember:is([class*="d-hebe"]) {--profgrimg: url('https://a.l3n.co/bVGHpD.png');}
+.mbmember:is([class*="d-iris"]) {--profgrimg: url('https://d.l3n.co/bVGlFq.png');}
+.mbmember:is([class*="d-demeter"]) {--profgrimg: url('https://c.l3n.co/bVGSIA.png');}
+.mbmember:is([class*="d-hermes"]) {--profgrimg: url('https://d.l3n.co/bVGeBM.png');}
+.mbmember:is([class*="d-hestia"]) {--profgrimg: url('https://c.l3n.co/bVGnoQ.png');}
+.mbmember:is([class*="d-apolo"]) {--profgrimg: url('https://d.l3n.co/bVGFIK.png');}
+.mbmember:is([class*="d-zeus"]) {--profgrimg: url('https://a.l3n.co/bVGUmZ.png');}
+.mbmember:is([class*="d-hefesto"]) {--profgrimg: url('https://a.l3n.co/bVGYek.png');}
+.mbmember:is([class*="d-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
+
 #memberlist {
   gap: var(--paddclamp5);
+  flex-wrap: wrap;
   & .mbm-nav {
-    flex: 1;
+    flex: 1 0 25%;
     background: var(--tback1);
     gap: var(--padd0);
     border: var(--border1);
     border-radius: var(--bradius);
-    padding: var(--padd0);
+    padding: var(--paddclamp6);
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     height: fit-content;
     margin: 0px!important;
+    min-width: 200px;
+    & > strong {
+      text-transform: uppercase;
+      width: 100%;
+      font: var(--fo-h4);
+      color: var(--txt1);
+      text-shadow: 1px 1px .5px var(--accent);
+      line-height: 85%;
+      font-size: var(--fo-h4-clamp);
+    }
     & form {
       width: 100%;
       & > div {
         gap: var(--gap3);
+        flex-wrap: wrap;
+        & > div {
+          flex: 1;
+          & :is(input) {
+            min-width: auto!important;
+            width: 100%!important;
+            flex: 1;
+          }
+        }
         & :is(input) {
           flex: none;
         }
@@ -63,85 +108,84 @@
     }
   }
   & .mbmembers {
-    flex: 1 0 60%;
+    flex: 1 0 65%;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    gap: var(--paddclamp5);
+    & .mbmember {
+      flex: 1 0 45%;
+      border: var(--border1);
+      width: calc(50% - var(--paddclamp5));
+      min-width: calc(50% - var(--paddclamp5));
+      & .mbm-top {
+        position: relative;
+        border-bottom: var(--border1);
+        justify-content: center;
+        align-items: center;
+        min-height: 15rem;
+        background: var(--back2);
+        text-align: center;
+        overflow: hidden;
+        padding: var(--paddclamp5);
+        gap: var(--gap5);
+        & .mbmt-img {
+          position: relative !important;
+          width: var(--icon2);
+          height: var(--icon2);
+          border-radius: var(--bradius);
+          overflow: hidden;
+          flex-shrink: 0;
+          outline: var(--bthickness) solid var(--accent);
+          filter: none;
+          outline-color: var(--group);
+          outline-offset: var(--bthickness);
+          margin: var(--bthickness);
+          &:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            background: var(--tback1);
+            opacity: 0.5;
+            mix-blend-mode: multiply;
+          }
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            filter: var(--filter2);
+          }
+        }
+        & .mbm-visit {
+          gap: var(--gap2);
+          & b {
+            text-transform: uppercase;
+            font: var(--fo-deco2);
+            font-weight: 700;
+            color: var(--txt4);
+            line-height: 100%;
+          }
+          & em {
+            text-transform: uppercase;
+            font: var(--fo-deco3);
+            font-weight: 700;
+            color: var(--txt3);
+            line-height: 100%;
+            border-radius: var(--bradius);
+            border-top: var(--tborder);
+            border-left: var(--tborder);
+            border-right: var(--tborder);
+            padding: var(--gap0) var(--gap2);
+          }
+        }
+      }
+      & .mbm-cont {}
+    }
   }
-}
-
-h1#pagetitle:has(~ #memberlist) span {
-  color: inherit !important;
-}
-
-.mbmsl {
-  flex: 1 0 30%;
-  align-self: stretch;
-  min-width: 180px;
-}
-.mbmsl > em {
-  display: flex;
-  align-self: stretch;
-  justify-content: center;
-  align-items: center;
-  font: bold var(--fs-small) var(--font3);
-  text-decoration: underline;
-  text-decoration-color: var(--taccent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-  text-transform: uppercase;
-  padding-right: 6px;
-  line-height: 120%;
-  color: var(--txt1);
-}
-.mbmsl > input,
-.mbmsl > select {
-  align-self: stretch;
-  height: 100%;
-  flex: 1;
-}
-.mbmmembers {
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-  width: 100%;
-  gap: 20px;
-  margin: 20px 0px;
-}
-.mbsmember {
-  flex: 1 0 45%;
-  border: var(--border1);
-  width: 100%;
-  position: relative;
-  max-width: 50%;
-  min-width: 400px;
-}
-.mbsmava {
-  position: relative;
-  background: var(--back2);
-  max-width: 200px;
-  max-height: 280px;
-  height: 100%;
-  text-align: right;
-  overflow: hidden;
-  border-right: var(--border1);
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.mbsmava > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  filter: var(--filter2);
-}
-.mbsmava:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background: var(--tback1);
-  opacity: 0.5;
-  mix-blend-mode: multiply;
 }
 .mbsmcont {
   flex: 1;
@@ -256,23 +300,6 @@ h1#pagetitle:has(~ #memberlist) span {
   background: var(--group);
   border-color: var(--group);
   color: var(--back1);
-}
-.mbsmvisit > b {
-  text-transform: uppercase;
-  font: bold var(--fs-text) var(--font2);
-  color: var(--txt2);
-  line-height: 100%;
-}
-.mbsmvisit > em {
-  text-transform: uppercase;
-  font: bold var(--fs-smaller) var(--font3);
-  color: var(--txt3);
-  line-height: 100%;
-  border-radius: var(--bradius);
-  border-top: 2px solid var(--group);
-  border-left: var(--tborder);
-  border-right: var(--tborder);
-  padding: 4px 6px;
 }
 .mbsmclinks a[href*="undefined"] {
   display: none;
