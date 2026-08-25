@@ -1,25 +1,75 @@
-.topicnav > form {
-  width: 100%;
+#memberlist {
+  gap: var(--paddclamp5);
+  & .mbm-nav {
+    flex: 1;
+    background: var(--tback1);
+    gap: var(--gap4);
+    border: var(--border1);
+    border-radius: var(--bradius);
+    padding: var(--padd0);
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    & form {
+      width: 100%;
+      & > div {
+        gap: var(--gap3);
+        & :is(input) {
+          flex: none;
+        }
+      }
+    }
+    & .memberfilters {
+      width: 100%;
+      gap: var(--padd0);
+      & .mbm-filtgroup {
+        gap: var(--gap4);
+        width: 100%;
+        & strong {
+          font: var(--fo-bod1);
+          text-transform: uppercase;
+          color: var(--accent);
+          font-weight: 900;
+          line-height: 100%;
+        }
+        & ul {
+          flex-wrap: wrap;
+          gap: var(--gap2) var(--gap3);
+          margin: 0px;
+          padding: 0px;
+          & li {
+            font: var(--fo-deco3);
+            line-height: 100%;
+            & a {
+              color: var(--txt4);
+              text-transform: lowercase;
+              font-style: italic;
+              font-weight: 300;
+              text-decoration-color: var(--taccent);
+              &.selected {
+                text-transform: uppercase;
+                font-weight: 800;
+                color: var(--txt2);
+                font-style: normal;
+                text-decoration: var(--bthickness) underline var(--taccent);
+                text-underline-offset: var(--bthickness);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  & .mbmembers {
+    display: grid;
+  }
 }
 
-h1#pagetitle:has(~ .mbmmembers) span {
+h1#pagetitle:has(~ #memberlist) span {
   color: inherit !important;
 }
-.memberselect {
-  width: 100%;
-  background: var(--tback1);
-  gap: 6px 12px;
-  border: var(--border1);
-  border-radius: var(--bradius);
-  padding: 12px;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.memberselect > input.button2,
-.footerlogin #autoenter > input {
-  flex: none;
-}
+
 .mbmsl {
   flex: 1 0 30%;
   align-self: stretch;
