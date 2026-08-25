@@ -38,7 +38,7 @@
     flex-wrap: wrap;
     height: fit-content;
     margin: 0px!important;
-    min-width: 200px;
+    min-width: 17.2rem;
     & > strong {
       text-transform: uppercase;
       width: 100%;
@@ -113,13 +113,21 @@
     align-items: stretch;
     width: 100%;
     gap: var(--paddclamp5);
+    flex-wrap: wrap;
+    height: fit-content!important;
     & .mbmember {
       flex: 1 0 45%;
       border: var(--border1);
       width: calc(50% - var(--paddclamp5));
-      min-width: calc(50% - var(--paddclamp5));
+      min-width: 19rem;
       height: fit-content;
       container: membercont / inline-size;
+      position: relative !important;
+      top: unset !important;
+      left: unset !important;
+      flex-grow: 1;
+      overflow: hidden;
+      align-self: center;
       & .mbm-top {
         position: relative;
         border-bottom: var(--border1);
@@ -300,9 +308,7 @@
               color: var(--txt2);
             }
             &:has(.mbm-naci) {
-              & em:empty:before {
-                content: 'Desconocida';
-              }
+              display: none;
             }
           }
         }
@@ -346,15 +352,27 @@
       }
     }
   }
-}
-.mbsnomember {
-  flex: 1 0 100%;
-  text-align: center;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font: bold var(--fs-body) var(--font2);
-  border: var(--border1);
-  background: var(--tback2);
+  & .mbm-nomember {
+    flex: 1 0 65%;
+    align-self: stretch;
+    height: unset!important;
+    text-align: center;
+    padding: var(--paddclamp1);
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: var(--border1);
+    background: var(--tback2);
+    position: relative!important;
+    top: unset!important;
+    left: unset!important;
+    & strong {
+      font: var(--fo-bod2);
+      font-weight: bold;
+      position: relative!important;
+      color: var(--txt4)!important;
+      top: unset!important;
+      left: unset!important;
+    }
+  }
 }
