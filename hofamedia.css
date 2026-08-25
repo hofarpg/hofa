@@ -620,19 +620,19 @@
 }
 
 /* CONTAINERS - MEMBERLIST */
-@container memberlist-members (min-width: 950px) {
+@container memberlist-members (min-width: 520px) {
   & .mbmember {
-    max-width: 45%!important;
+    max-width: 65%;
   }
 }
 @container memberlist-members (min-width: 800px) {
   & .mbmember {
-    max-width: 50%!important;
+    max-width: 50%;
   }
 }
-@container memberlist-members (min-width: 520px) {
+@container memberlist-members (min-width: 950px) {
   & .mbmember {
-    max-width: 65%;
+    max-width: 45%;
   }
 }
 @container memberlist-membercont (max-width: 350px) {
