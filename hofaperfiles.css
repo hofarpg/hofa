@@ -917,8 +917,16 @@ body:has(#profile) {
     'username userpjs'
     'userinfotext userpjs'
     'usertriggers userpjs';
-  &:has(.pfcupjs-cont a:nth-of-type(4)) {
+  &:has(.pfcupjs-cont a:nth-of-type(6)) {
     grid-template-columns: calc(100% - ((var(--icon1) * 2) + var(--paddclamp8)) - var(--paddclamp4)) calc((var(--icon1) * 2) + var(--paddclamp8));
+    .pfcupjs {
+      > div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, var(--icon1));
+        grid-template-rows: auto;
+        align-content: flex-start;
+      }
+    }
   }
 }
 .pfcudata {
@@ -1007,6 +1015,8 @@ body:has(#profile) {
     flex-wrap: wrap;
     align-items: start;
     align-content: space-around;
+    
+    
     &:not(:has(a:nth-of-type(2))) {
       align-content: start;
     }
