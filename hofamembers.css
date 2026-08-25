@@ -74,7 +74,7 @@
         gap: var(--gap4);
         width: 100%;
         & strong {
-          font: var(--fo-bod1);
+          font: var(--fo-bod-alt2);
           text-transform: uppercase;
           color: var(--accent);
           font-weight: 900;
@@ -86,7 +86,7 @@
           margin: 0px;
           padding: 0px;
           & li {
-            font: var(--fo-deco3);
+            font: var(--fo-deco2);
             line-height: 100%;
             & a {
               color: var(--txt4);
