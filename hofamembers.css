@@ -118,7 +118,7 @@
     height: fit-content!important;
     container: memberlist-members / inline-size;
     & .mbmember {
-      flex: 1 0 45%;
+      flex: 1 0 30%;
       border: var(--border1);
       width: calc(50% - var(--paddclamp5));
       min-width: 19rem;
