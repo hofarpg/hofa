@@ -130,6 +130,9 @@
       flex-grow: 1;
       overflow: hidden;
       align-self: center;
+      &[class*="-administrador"] {
+        display: none !important;
+      }
       & .mbm-top {
         position: relative;
         border-bottom: var(--border1);
