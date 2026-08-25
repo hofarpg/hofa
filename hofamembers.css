@@ -116,6 +116,7 @@
     gap: var(--paddclamp5);
     flex-wrap: wrap;
     height: fit-content!important;
+    container: members / inline-size;
     & .mbmember {
       flex: 1 0 45%;
       border: var(--border1);
