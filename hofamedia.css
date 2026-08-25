@@ -620,6 +620,11 @@
 }
 
 /* CONTAINERS - MEMBERLIST */
+@container memberlist-members (min-width: 850px) {
+  & .mbmember {
+    max-width: 45%!important;
+  }
+}
 @container memberlist-members (min-width: 520px) {
   & .mbmember {
     max-width: 65%;
