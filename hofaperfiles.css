@@ -924,7 +924,6 @@ body:has(#profile) {
         display: grid;
         grid-template-columns: repeat(auto-fit, var(--icon1));
         grid-template-rows: auto;
-        align-content: flex-start;
       }
     }
   }
