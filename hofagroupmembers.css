@@ -64,7 +64,6 @@
   }
   & .mbmembers {
     & .mbmember {
-      flex: 1 0 30%;
       width: calc(30% - var(--paddclamp5));
     }
   }
