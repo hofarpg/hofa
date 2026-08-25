@@ -911,12 +911,15 @@ body:has(#profile) {
   justify-content: space-between;
   gap: var(--paddclamp4);
   overflow: auto !important;
-  grid-template-columns: calc(100% - var(--icon0) - var(--paddclamp4)) var(--icon0);
+  grid-template-columns: calc(100% - var(--icon1) - var(--paddclamp4)) var(--icon1);
   grid-template-rows: max-content;
   grid-template-areas:
     'username userpjs'
     'userinfotext userpjs'
     'usertriggers userpjs';
+  &:has(.pfcupjs-cont a:nth-of-type(4)) {
+    grid-template-columns: calc(100% - ((var(--icon1) * 2) + var(--paddclamp8)) - var(--paddclamp4)) calc((var(--icon1) * 2) + var(--paddclamp8));
+  }
 }
 .pfcudata {
   text-align: left;
@@ -1008,8 +1011,8 @@ body:has(#profile) {
       align-content: start;
     }
     > em {
-      width: var(--icon0);
-      height: var(--icon0);
+      width: var(--icon1);
+      height: var(--icon1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1021,8 +1024,8 @@ body:has(#profile) {
       border: var(--border1)
     }
     > a {
-      width: var(--icon0);
-      height: var(--icon0);
+      width: var(--icon1);
+      height: var(--icon1);
       overflow: hidden;
       border-radius: var(--bradius);
       position: relative;      
