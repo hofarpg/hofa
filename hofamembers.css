@@ -1,5 +1,5 @@
 /*IMAGENES DE GRUPOS*/
-.mbmember:is([class*="group-staff"], [class*="group-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
+.mbmember:is([class*="group-staff"], [class*="group-nadie"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');--group: var(--staff);}
 .mbmember:is([class*="group-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 .mbmember:is([class*="group-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
 .mbmember:is([class*="group-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
@@ -118,17 +118,20 @@
       border: var(--border1);
       width: calc(50% - var(--paddclamp5));
       min-width: calc(50% - var(--paddclamp5));
+      height: fit-content;
+      container: membercont / inline-size;
       & .mbm-top {
         position: relative;
         border-bottom: var(--border1);
         justify-content: center;
         align-items: center;
-        min-height: 15rem;
+        min-height: 17rem;
         background: var(--back2);
         text-align: center;
         overflow: hidden;
         padding: var(--paddclamp5);
         gap: var(--gap5);
+        width: 100%;
         & .mbmt-img {
           height: 100%;
           width: 100%;
@@ -168,12 +171,6 @@
           outline-offset: var(--bthickness);
           margin: var(--bthickness);
           z-index: 2;
-          
-          
-          
-          
-          
-          
           &:before {
             content: "";
             position: absolute;
@@ -197,9 +194,6 @@
           gap: var(--gap2);
           position: relative;
           z-index: 2;
-          
-          
-          
           & b {
             text-transform: uppercase;
             font: var(--fo-deco2);
@@ -221,147 +215,137 @@
           }
         }
       }
-      & .mbm-cont {}
+      & .mbm-cont {
+        flex: 1;
+        background: var(--tback1);
+        padding: var(--paddclamp6);
+        gap: var(--paddclamp6);
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 20rem;
+        & .mbmc-imp {
+          position: relative;
+          z-index: 1;
+          gap: var(--gap2);
+          width: 100%;
+          & .mbmci-name {
+            text-transform: uppercase;
+            font: var(--fo-h4);
+            font-size: var(--fo-h4-clamp);
+            line-height: 90%;
+            & span {
+              color: var(--txt1)!important;
+              text-shadow: 1.5px 1px .5px var(--group);
+            }
+          }
+          & .mbmci-desc {
+            &:before {
+              content: "";
+              width: var(--paddclamp2);
+              min-width: var(--gap3);
+              height: var(--bthickness);
+              display: inline-block;
+              background: var(--taccent);
+              margin-right: var(--gap2);
+              position: relative;
+              align-self: center;
+            }
+            & > div {
+              text-transform: lowercase;
+              font: var(--fo-deco2);
+              font-weight: 300;
+              font-style: italic;
+              color: var(--txt4);
+              line-height: 100%;
+              width: 100%;
+              & span {
+                & div {
+                  display: inline;
+                }
+              }
+            }
+          }
+        }
+        & .mbmc-data {
+          text-transform: uppercase;
+          border-radius: var(--bradius);
+          border-bottom: var(--border2);
+          border-top: var(--border2);
+          padding: var(--paddclamp6);
+          width: 100%;
+          flex-wrap: wrap;
+          gap: var(--paddclamp6);
+          & div {
+            flex: 1 0 26%;
+            gap: var(--gap1);
+            justify-content: center;
+            & em {
+              text-transform: uppercase;
+              font: var(--fo-deco2);
+              font-weight: 800;
+              color: var(--txt4);
+              line-height: 100%;
+              &:empty {
+                &:before {
+                  content: 'Desconocido';
+                }
+              }
+            }
+            & b {
+              text-transform: uppercase;
+              font: var(--fo-bod2);
+              font-weight: 900;
+              line-height: 85%;
+              color: var(--txt2);
+            }
+            &:has(.mbm-naci) {
+              & em:empty:before {
+                content: 'Desconocida';
+              }
+            }
+          }
+        }
+        & .mbmc-links {
+          flex-wrap: wrap;
+          gap: var(--gap3);
+          width: 100%;
+          justify-content: flex-start;
+          align-items: center;
+          &:empty {
+            &:before {
+              content: "Este usuario no tiene links";
+              text-transform: uppercase;
+              font: bold var(--fs-small) var(--font2);
+              color: var(--txt4);
+            }
+          }
+          & div {
+            &:is(:empty, :has(a[href*="undefined"]), :has(a:empty)) {
+              display: none;
+            }
+            & a {
+              color: var(--group) !important;
+              background: var(--back1);
+              height: var(--padd4);
+              width: var(--padd4);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: var(--border1);
+              border-radius: var(--bradius);
+              font-size: var(--fs-body);
+              &:hover {
+                color: var(--back1) !important;
+                background: var(--group);
+                border-color: var(--group);
+              }
+            }
+          }
+        }
+      }
     }
   }
-}
-.mbsmcont {
-  flex: 1;
-  background: var(--tback1);
-  padding: 20px;
-  gap: 20px;
-  min-width: 200px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.mbsmnamhid {
-  display: none !important;
-}
-.mbsmcdata {
-  text-transform: uppercase;
-  font: bold var(--fs-small) var(--font3);
-  color: var(--txt3);
-  border-radius: var(--bradius);
-  border-bottom: var(--border2);
-  border-top: var(--border2);
-  padding: 12px;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 12px;
-  max-height: 97px;
-}
-.mbsmcdata > div {
-  gap: 3px;
-  word-spacing: 0px;
-  flex: 1 0 35%;
-}
-.mbsmcdata > div > b {
-  color: var(--txt1);
-  text-decoration: underline;
-  text-decoration-color: var(--tgroup);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-.mbsmvisit {
-  position: absolute;
-  z-index: 2;
-  gap: 4px;
-  padding: 10px;
-}
-.mbsmcdata > div > em {
-  text-transform: lowercase;
-  font: normal var(--fs-text) var(--font1);
-  font-style: italic;
-  line-height: 100%;
-}
-.mbsmname {
-  text-transform: uppercase;
-  font: 900 var(--fs-h4) var(--font1);
-  line-height: 90%;
-}
-.mbsmname strong {
-  font-weight: 900;
-}
-.mbsmname span {
-  color: var(--txt1) !important;
-  text-shadow: 2px 1px 0.5px var(--accent);
-}
-.mbsmimp {
-  gap: 4px;
-}
-.mbsmdes {
-  text-transform: lowercase;
-  font: 300 var(--fs-small) var(--font3);
-  font-style: italic;
-  color: var(--txt4);
-  line-height: 100%;
-  display: block;
-}
-.mbsmdes:before {
-  content: "";
-  width: 40px;
-  height: 2px;
-  display: inline-block;
-  background: var(--tgroup);
-  margin-right: 8px;
-  position: relative;
-  top: -2px;
-}
-.mbsmdes > span {
-  display: inline-block;
-}
-.mbsmclinks:empty:before {
-  content: "Este usuario no tiene links";
-  text-transform: uppercase;
-  font: bold var(--fs-small) var(--font2);
-  color: var(--txt4);
-}
-.mbsmclinks {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%;
-  align-items: center;
-  gap: 6px;
-}
-.mbsmclinks a {
-  color: var(--txt1);
-  background: var(--back2);
-  height: 30px;
-  width: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: var(--border1);
-  border-radius: var(--bradius);
-}
-.mbsmclinks a:hover {
-  background: var(--group);
-  border-color: var(--group);
-  color: var(--back1);
-}
-.mbsmvisit > b {
-  text-transform: uppercase;
-  font: bold var(--fs-text) var(--font2);
-  color: var(--txt2);
-  line-height: 100%;
-}
-.mbsmvisit > em {
-  text-transform: uppercase;
-  font: bold var(--fs-smaller) var(--font3);
-  color: var(--txt3);
-  line-height: 100%;
-  border-radius: var(--bradius);
-  border-top: 2px solid var(--group);
-  border-left: var(--tborder);
-  border-right: var(--tborder);
-  padding: 4px 6px;
-}
-.mbsmclinks a[href*="undefined"] {
-  display: none;
-}
-.mbsimgpro,
-.mbsmclinks > div:empty {
-  display: none;
 }
 .mbsnomember {
   flex: 1 0 100%;
