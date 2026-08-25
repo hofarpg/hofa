@@ -26,6 +26,7 @@
 #memberlist {
   gap: var(--paddclamp5);
   flex-wrap: wrap;
+  container: memberlist / inline-size;
   & .mbm-nav {
     flex: 1 0 25%;
     background: var(--tback1);
