@@ -1,27 +1,27 @@
 /*IMAGENES DE GRUPOS*/
-.mbmember:is([class*="d-staff"], [class*="d-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
-.mbmember:is([class*="d-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-.mbmember:is([class*="d-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
-.mbmember:is([class*="d-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
-.mbmember:is([class*="d-persefone"]) {--profgrimg: url('https://b.l3n.co/bVGkCo.png');}
-.mbmember:is([class*="d-afrodita"]) {--profgrimg: url('https://a.l3n.co/bVUrRM.png');}
-.mbmember:is([class*="d-dioniso"]) {--profgrimg: url('https://d.l3n.co/bVG6S9.png');}
-.mbmember:is([class*="d-hades"]) {--profgrimg: url('https://a.l3n.co/bVU1Fa.png');}
-.mbmember:is([class*="d-hecate"]) {--profgrimg: url('https://a.l3n.co/bVcFav.png');}
-.mbmember:is([class*="d-hypnos"]) {--profgrimg: url('https://d.l3n.co/bVyN5x.png');}
-.mbmember:is([class*="d-artemisa"]) {--profgrimg: url('https://c.l3n.co/bVGCx2.png');}
-.mbmember:is([class*="d-poseidon"]) {--profgrimg: url('https://c.l3n.co/bV5o45.png');}
-.mbmember:is([class*="d-atenea"]) {--profgrimg: url('https://b.l3n.co/bVUIeq.png');}
-.mbmember:is([class*="d-khione"]) {--profgrimg: url('https://b.l3n.co/bVGQ1v.png');}
-.mbmember:is([class*="d-hebe"]) {--profgrimg: url('https://a.l3n.co/bVGHpD.png');}
-.mbmember:is([class*="d-iris"]) {--profgrimg: url('https://d.l3n.co/bVGlFq.png');}
-.mbmember:is([class*="d-demeter"]) {--profgrimg: url('https://c.l3n.co/bVGSIA.png');}
-.mbmember:is([class*="d-hermes"]) {--profgrimg: url('https://d.l3n.co/bVGeBM.png');}
-.mbmember:is([class*="d-hestia"]) {--profgrimg: url('https://c.l3n.co/bVGnoQ.png');}
-.mbmember:is([class*="d-apolo"]) {--profgrimg: url('https://d.l3n.co/bVGFIK.png');}
-.mbmember:is([class*="d-zeus"]) {--profgrimg: url('https://a.l3n.co/bVGUmZ.png');}
-.mbmember:is([class*="d-hefesto"]) {--profgrimg: url('https://a.l3n.co/bVGYek.png');}
-.mbmember:is([class*="d-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
+.mbmember:is([class*="group-staff"], [class*="group-nogroup"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
+.mbmember:is([class*="group-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
+.mbmember:is([class*="group-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
+.mbmember:is([class*="group-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
+.mbmember:is([class*="group-persefone"]) {--profgrimg: url('https://b.l3n.co/bVGkCo.png');}
+.mbmember:is([class*="group-afrodita"]) {--profgrimg: url('https://a.l3n.co/bVUrRM.png');}
+.mbmember:is([class*="group-dioniso"]) {--profgrimg: url('https://d.l3n.co/bVG6S9.png');}
+.mbmember:is([class*="group-hades"]) {--profgrimg: url('https://a.l3n.co/bVU1Fa.png');}
+.mbmember:is([class*="group-hecate"]) {--profgrimg: url('https://a.l3n.co/bVcFav.png');}
+.mbmember:is([class*="group-hypnos"]) {--profgrimg: url('https://d.l3n.co/bVyN5x.png');}
+.mbmember:is([class*="group-artemisa"]) {--profgrimg: url('https://c.l3n.co/bVGCx2.png');}
+.mbmember:is([class*="group-poseidon"]) {--profgrimg: url('https://c.l3n.co/bV5o45.png');}
+.mbmember:is([class*="group-atenea"]) {--profgrimg: url('https://b.l3n.co/bVUIeq.png');}
+.mbmember:is([class*="group-khione"]) {--profgrimg: url('https://b.l3n.co/bVGQ1v.png');}
+.mbmember:is([class*="group-hebe"]) {--profgrimg: url('https://a.l3n.co/bVGHpD.png');}
+.mbmember:is([class*="group-iris"]) {--profgrimg: url('https://d.l3n.co/bVGlFq.png');}
+.mbmember:is([class*="group-demeter"]) {--profgrimg: url('https://c.l3n.co/bVGSIA.png');}
+.mbmember:is([class*="group-hermes"]) {--profgrimg: url('https://d.l3n.co/bVGeBM.png');}
+.mbmember:is([class*="group-hestia"]) {--profgrimg: url('https://c.l3n.co/bVGnoQ.png');}
+.mbmember:is([class*="group-apolo"]) {--profgrimg: url('https://d.l3n.co/bVGFIK.png');}
+.mbmember:is([class*="group-zeus"]) {--profgrimg: url('https://a.l3n.co/bVGUmZ.png');}
+.mbmember:is([class*="group-hefesto"]) {--profgrimg: url('https://a.l3n.co/bVGYek.png');}
+.mbmember:is([class*="group-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
 
 #memberlist {
   gap: var(--paddclamp5);
@@ -130,6 +130,32 @@
         padding: var(--paddclamp5);
         gap: var(--gap5);
         & .mbmt-img {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: 0;
+          &:before, &:after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            inset: 0;
+          }
+          &:before {
+            background: var(--tback1);
+            filter: var(--filter2);
+            background-image: var(--profgrimg);
+            background-size: cover;
+            background-position: center;
+          }
+          &:after {
+            background: var(--accent);
+            opacity: 1;
+            mix-blend-mode: multiply;
+          }
+        }
+        & .mbmt-ava {
           position: relative !important;
           width: var(--icon2);
           height: var(--icon2);
@@ -141,6 +167,13 @@
           outline-color: var(--group);
           outline-offset: var(--bthickness);
           margin: var(--bthickness);
+          z-index: 2;
+          
+          
+          
+          
+          
+          
           &:before {
             content: "";
             position: absolute;
@@ -162,6 +195,11 @@
         }
         & .mbm-visit {
           gap: var(--gap2);
+          position: relative;
+          z-index: 2;
+          
+          
+          
           & b {
             text-transform: uppercase;
             font: var(--fo-deco2);
@@ -300,6 +338,23 @@
   background: var(--group);
   border-color: var(--group);
   color: var(--back1);
+}
+.mbsmvisit > b {
+  text-transform: uppercase;
+  font: bold var(--fs-text) var(--font2);
+  color: var(--txt2);
+  line-height: 100%;
+}
+.mbsmvisit > em {
+  text-transform: uppercase;
+  font: bold var(--fs-smaller) var(--font3);
+  color: var(--txt3);
+  line-height: 100%;
+  border-radius: var(--bradius);
+  border-top: 2px solid var(--group);
+  border-left: var(--tborder);
+  border-right: var(--tborder);
+  padding: 4px 6px;
 }
 .mbsmclinks a[href*="undefined"] {
   display: none;
