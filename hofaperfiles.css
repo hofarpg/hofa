@@ -431,6 +431,8 @@ body:has(#profile) {
   font-size: var(--fo-h2-clamp);
   text-box: trim-end cap alphabetic;
   text-transform: uppercase;
+  line-height: 90%;
+  margin-top: var(--gap5);
   > span {
     color: var(--txt1) !important;
   }
