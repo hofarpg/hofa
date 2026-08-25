@@ -3,7 +3,7 @@
   & .mbm-nav {
     flex: 1;
     background: var(--tback1);
-    gap: var(--gap4);
+    gap: var(--padd0);
     border: var(--border1);
     border-radius: var(--bradius);
     padding: var(--padd0);
@@ -11,6 +11,7 @@
     align-items: center;
     flex-wrap: wrap;
     height: fit-content;
+    margin: 0px!important;
     & form {
       width: 100%;
       & > div {
@@ -62,7 +63,7 @@
     }
   }
   & .mbmembers {
-    display: grid;
+    flex: 1 0 60%;
   }
 }
 
