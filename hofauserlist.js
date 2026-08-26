@@ -3,7 +3,7 @@ setTimeout(function(){
   var members = []; //this is the array of names
   var membersNS = []; //this is the array of names without spaces
   $(".mbmember").each(function () {
-    var member = $(this).find(".mbm-user div.field_uneditable").text().trim().toLowerCase();
+    var member = $(this).find(".mbm-user div.field_uneditable").html().trim().toLowerCase();
     var memberArray = member.split(" ");
     var memberNS = ""; //set an empty variable for now
     if (member != "" && member != "administrador") {
@@ -27,7 +27,7 @@ setTimeout(function(){
   for (var i = 0; i < members.length; i++) {
       if (members[i] != undefined) {
   
-           $('.mfilt-user').append('<li><a data-filter-value=".u-' + membersNS[i] + '">' + members[i] + '</a></li>');
+           $('.mfilt-user').append('<li><a href="a" data-filter-value=".u-' + membersNS[i] + '">' + members[i] + '</a></li>');
       }
   }
   
