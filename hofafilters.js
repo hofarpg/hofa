@@ -1,3 +1,4 @@
+setTimeout(function(){
 /* sistema de filtrado */
 $(() => {
 	 var $container = $(".mbmembers"); // the container with all the elements to filter inside
@@ -141,3 +142,4 @@ $(() => {
     }
 	setTimeout(function(){$grid.isotope('layout')}, 1000);
 });
+}, 600);
