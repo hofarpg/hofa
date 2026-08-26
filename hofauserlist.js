@@ -4,7 +4,7 @@ setTimeout(function(){
   var membersNS = []; //this is the array of names without spaces
   $(".mbmember").each(function () {
     var member = $(this).find(".mbm-user div.field_uneditable").text().trim().toLowerCase();
-    var memberArray = member.split(" ");
+    var memberArray = member.replace(/\s+/g, "-").normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     var memberNS = ""; //set an empty variable for now
     if (member != "" && member != "administrador") {
       //if the member alias isn't empty nor an admin, run the loop
