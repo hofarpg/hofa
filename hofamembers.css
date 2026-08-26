@@ -27,7 +27,7 @@
   gap: var(--paddclamp5);
   flex-wrap: wrap;
   container: memberlist / inline-size;
-  & .mbm-nav {
+  .mbm-nav {
     flex: 1 0 25%;
     background: var(--tback1);
     gap: var(--padd0);
@@ -40,7 +40,7 @@
     height: fit-content;
     margin: 0px!important;
     min-width: 17.2rem;
-    & > strong {
+    > strong {
       text-transform: uppercase;
       width: 100%;
       font: var(--fo-h4);
@@ -49,46 +49,46 @@
       line-height: 85%;
       font-size: var(--fo-h4-clamp);
     }
-    & form {
+    form {
       width: 100%;
-      & > div {
+      > div {
         gap: var(--gap3);
         flex-wrap: wrap;
-        & > div {
+        > div {
           flex: 1;
-          & :is(input) {
+          :is(input) {
             min-width: auto!important;
             width: 100%!important;
             flex: 1;
           }
         }
-        & :is(input) {
+        :is(input) {
           flex: none;
         }
       }
     }
-    & .memberfilters {
+    .memberfilters {
       width: 100%;
       gap: var(--padd0);
-      & .mbm-filtgroup {
+      .mbm-filtgroup {
         gap: var(--gap4);
         width: 100%;
-        & strong {
+        strong {
           font: var(--fo-bod-alt2);
           text-transform: uppercase;
           color: var(--accent);
           font-weight: 900;
           line-height: 100%;
         }
-        & ul {
+        ul {
           flex-wrap: wrap;
           gap: var(--gap2) var(--gap3);
           margin: 0px;
           padding: 0px;
-          & li {
+          li {
             font: var(--fo-deco2);
             line-height: 100%;
-            & a {
+            a {
               color: var(--txt4);
               text-transform: lowercase;
               font-style: italic;
@@ -108,16 +108,16 @@
       }
     }
   }
-  & .mbmembers {
+  .mbmembers {
     flex: 1 0 65%;
     justify-content: space-around;
     align-items: stretch;
     width: 100%;
     gap: var(--paddclamp5);
     flex-wrap: wrap;
-    height: fit-content!important;
+    height: fit-content;
     container: memberlist-members / inline-size;
-    & .mbmember {
+    .mbmember {
       flex: 1 0 30%;
       border: var(--border1);
       width: calc(50% - var(--paddclamp5));
@@ -130,10 +130,11 @@
       flex-grow: 1;
       overflow: hidden;
       align-self: center;
+      
       &[class*="-administrador"] {
-        display: none !important;
+        display: none;
       }
-      & .mbm-top {
+      .mbm-top {
         position: relative;
         border-bottom: var(--border1);
         justify-content: center;
@@ -145,7 +146,7 @@
         padding: var(--paddclamp5);
         gap: var(--gap5);
         width: 100%;
-        & .mbmt-img {
+        .mbmt-img {
           height: 100%;
           width: 100%;
           position: absolute;
@@ -171,7 +172,7 @@
             mix-blend-mode: multiply;
           }
         }
-        & .mbmt-ava {
+        .mbmt-ava {
           position: relative !important;
           width: var(--icon2);
           height: var(--icon2);
@@ -195,7 +196,7 @@
             opacity: 0.5;
             mix-blend-mode: multiply;
           }
-          & img {
+          img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -203,18 +204,18 @@
             filter: var(--filter2);
           }
         }
-        & .mbm-visit {
+        .mbm-visit {
           gap: var(--gap2);
           position: relative;
           z-index: 2;
-          & b {
+          b {
             text-transform: uppercase;
             font: var(--fo-deco2);
             font-weight: 700;
             color: var(--txt4);
             line-height: 100%;
           }
-          & em {
+          em {
             text-transform: uppercase;
             font: var(--fo-deco3);
             font-weight: 700;
@@ -228,7 +229,7 @@
           }
         }
       }
-      & .mbm-cont {
+      .mbm-cont {
         flex: 1;
         background: var(--tback1);
         padding: var(--paddclamp6);
@@ -237,22 +238,22 @@
         justify-content: space-between;
         align-items: flex-start;
         min-height: 20rem;
-        & .mbmc-imp {
+        .mbmc-imp {
           position: relative;
           z-index: 1;
           gap: var(--gap2);
           width: 100%;
-          & .mbmci-name {
+          .mbmci-name {
             text-transform: uppercase;
             font: var(--fo-h4);
             font-size: var(--fo-h4-clamp);
             line-height: 90%;
-            & span {
+            span {
               color: var(--txt1)!important;
               text-shadow: 1.5px 1px .5px var(--group);
             }
           }
-          & .mbmci-desc {
+          .mbmci-desc {
             &:before {
               content: "";
               width: var(--paddclamp2);
@@ -264,7 +265,7 @@
               position: relative;
               align-self: center;
             }
-            & > div {
+            > div {
               text-transform: lowercase;
               font: var(--fo-deco2);
               font-weight: 300;
@@ -272,15 +273,13 @@
               color: var(--txt4);
               line-height: 100%;
               width: 100%;
-              & span {
-                & div {
-                  display: inline;
-                }
+              span div {
+                display: inline;
               }
             }
           }
         }
-        & .mbmc-data {
+        .mbmc-data {
           text-transform: uppercase;
           border-radius: var(--bradius);
           border-bottom: var(--border2);
@@ -289,11 +288,14 @@
           width: 100%;
           flex-wrap: wrap;
           gap: var(--paddclamp6);
-          & div {
-            flex: 1 0 26%;
+          overflow: auto;
+          max-height: calc((29px * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
+          div {
+            flex: 1 0 calc((100% /2) - var(--paddclamp6));
             gap: var(--gap1);
             justify-content: center;
-            & em {
+            line-height: 80%;
+            em {
               text-transform: uppercase;
               font: var(--fo-deco2);
               font-weight: 800;
@@ -305,7 +307,7 @@
                 }
               }
             }
-            & b {
+            b {
               text-transform: uppercase;
               font: var(--fo-bod2);
               font-weight: 900;
@@ -317,7 +319,7 @@
             }
           }
         }
-        & .mbmc-links {
+        .mbmc-links {
           flex-wrap: wrap;
           gap: var(--gap3);
           width: 100%;
@@ -331,11 +333,11 @@
               color: var(--txt4);
             }
           }
-          & div {
+          div {
             &:is(:empty, :has(a[href*="undefined"]), :has(a:empty)) {
               display: none;
             }
-            & a {
+            a {
               color: var(--group) !important;
               background: var(--back1);
               height: var(--padd4);
@@ -357,7 +359,7 @@
       }
     }
   }
-  & .mbm-nomember {
+  .mbm-nomember {
     flex: 1 0 65%;
     align-self: stretch;
     height: unset!important;
@@ -371,7 +373,7 @@
     position: relative!important;
     top: unset!important;
     left: unset!important;
-    & strong {
+    strong {
       font: var(--fo-bod2);
       font-weight: bold;
       position: relative!important;
