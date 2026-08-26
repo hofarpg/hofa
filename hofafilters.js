@@ -1,5 +1,4 @@
 /* sistema de filtrado */
-setTimeout(function(){
 $(() => {
 	 var $container = $(".mbmembers"); // the container with all the elements to filter inside
 	 var filters = {}; //should be outside the scope of the filtering function
@@ -140,4 +139,3 @@ $(() => {
         return comboFilter;
     }
 });
-}, 600);
