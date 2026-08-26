@@ -1,5 +1,5 @@
 /*IMAGENES DE GRUPOS*/
-.mbmember:is([class*="group-staff"], [class*="group-nadie"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');--group: var(--staff);}
+.mbmember:is([class*="group-staff"], [class*="group-nadie"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
 .mbmember:is([class*="group-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
 .mbmember:is([class*="group-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
 .mbmember:is([class*="group-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
@@ -90,6 +90,9 @@
           li {
             font: var(--fo-deco2);
             line-height: 100%;
+            display: flex;
+            gap: var(--gap0);
+            align-items: center;
             a {
               color: var(--txt4);
               text-transform: lowercase;
@@ -105,6 +108,15 @@
                 text-underline-offset: var(--bthickness);
               }
             }
+            .filter-count {
+              font-weight: 600;
+              font-size: var(--fs-smallest);
+              color: var(--back1);
+              background: var(--group);
+              border-radius: var(--bradius);
+              padding: var(--gap0);
+              text-box: trim-both cap alphabetic;
+            }          
           }
         }
       }
@@ -119,7 +131,8 @@
     flex-wrap: wrap;
     height: fit-content;
     container: memberlist-members / inline-size;
-    .mbmember {
+    margin: calc((var(--paddclamp5) / 2) * -1);
+      .mbmember {
       flex: 1 0 30%;
       border: var(--border1);
       width: calc(50% - var(--paddclamp5));
@@ -131,11 +144,12 @@
       left: unset !important;*/
       flex-grow: 1;
       overflow: hidden;
-      align-self: center;
-      
+      align-self: center;      
+      margin: calc(var(--paddclamp5) / 2);
+        
       &[class*="-administrador"] {
         display: none;
-      }
+      } 
       .mbm-top {
         position: relative;
         border-bottom: var(--border1);
@@ -291,7 +305,7 @@
           flex-wrap: wrap;
           gap: var(--paddclamp6);
           overflow: auto;
-          max-height: calc((29px * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
+          max-height: calc((27.5px * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
           div {
             flex: 1 0 calc((100% /2) - var(--paddclamp6));
             gap: var(--gap1);
