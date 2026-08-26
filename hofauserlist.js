@@ -1,3 +1,4 @@
+setTimeout(function(){
 /* automatic alias additions by LUX */
 var members = []; //this is the array of names
 var membersNS = []; //this is the array of names without spaces
@@ -36,4 +37,5 @@ $(".mfilt-user li.abc").sort(asc_sort).appendTo(".mfilt-user");
 // accending sort
 function asc_sort(a, b) {
   return $(b).text() < $(a).text() ? 1 : -1;
-}
+}  
+}, 600);
