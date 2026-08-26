@@ -238,19 +238,20 @@
     max-width: none;
   }
   /* memberlist */
-  & .memberfilters {
-    & .mbm-filtgroup {
+  #memberlist .mbm-nav {position: static;}
+  .memberfilters {
+    .mbm-filtgroup {
       &:not(.showfilters) {
-        & strong {
+        strong {
           &:before {
             content: '\2b';
           }
         }
-        & ul {
+        ul {
           display: none;
         }
       }
-      & strong {
+      strong {
         cursor: var(--crs2);
         &:before {
           content: '\f068';
