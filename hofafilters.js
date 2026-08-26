@@ -1,5 +1,5 @@
 /* sistema de filtrado */
-$(document).ready(function() {
+$(() => {
  var $container = $(".mbmembers"); // the container with all the elements to filter inside
  var filters = {}; //should be outside the scope of the filtering function
  /* --- read the documentation on isotope.metafizzy.co for more options --- */
