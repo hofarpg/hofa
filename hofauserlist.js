@@ -32,7 +32,7 @@ setTimeout(function(){
   }
   
   /* ordenar usuarios por orden alfabético */
-  $(".mfilt-user li.abc").sort(asc_sort).appendTo(".mfilt-user");
+  $(".mfilt-user li").sort(asc_sort).appendTo(".mfilt-user");
   //$("#debug").text("Output:");
   // accending sort
   function asc_sort(a, b) {
