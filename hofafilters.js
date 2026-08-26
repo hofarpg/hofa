@@ -139,5 +139,5 @@ $(() => {
         return comboFilter;
     }
 	
-  	setTimeout(function(){$grid.isotope('layout')}, 600);
+  	setTimeout(function(){$grid.isotope('layout')}, 1000);
 });
