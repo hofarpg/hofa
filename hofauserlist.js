@@ -3,7 +3,7 @@ setTimeout(function(){
   var members = []; //this is the array of names
   var membersNS = []; //this is the array of names without spaces
   $(".mbmember").each(function () {
-    var member = $(this).find(".mbm-user div.field_uneditable").html().trim().toLowerCase();
+    var member = $(this).find(".mbm-user div.field_uneditable").text().trim().toLowerCase();
     var memberArray = member.split(" ");
     var memberNS = ""; //set an empty variable for now
     if (member != "" && member != "administrador") {
