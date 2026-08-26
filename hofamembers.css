@@ -43,6 +43,8 @@
     margin: 0;
     min-width: 17.2rem;
     z-index: 3;
+    max-height: calc(100vh - (var(--nav-height) + (var(--padd1) * 2)));
+    overflow: auto;
       > strong {
       text-transform: uppercase;
       width: 100%;
