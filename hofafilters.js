@@ -138,6 +138,5 @@ $(() => {
         var comboFilter = comboFilters.join(", ");
         return comboFilter;
     }
-	
-  	setTimeout(function(){$grid.isotope('layout')}, 1000);
 });
+setTimeout(function(){$grid.isotope('layout')}, 1000);
