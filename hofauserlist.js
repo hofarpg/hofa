@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+setTimeout(function(){
       /* automatic alias additions by LUX */
       var members = []; //this is the array of names
       var membersNS = []; //this is the array of names without spaces
@@ -37,4 +37,4 @@ document.addEventListener('DOMContentLoaded', function() {
       function asc_sort(a, b) {
         return $(b).text() < $(a).text() ? 1 : -1;
       }
-});
+}, 300);
