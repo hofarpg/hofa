@@ -1,9 +1,9 @@
-setTimeout(function(){
       /* automatic alias additions by LUX */
       var members = []; //this is the array of names
       var membersNS = []; //this is the array of names without spaces
       $(".mbmember").each(function () {
-        var member = $(this).find(".mbm-user div.field_uneditable").text().toLowerCase().trim();
+        var member = $(this).find(".mbm-user div.field_uneditable").text().toLowerCase().trim();    
+        console.log(member);    
         var memberArray = member.split(" ");
         var memberNS = ""; //set an empty variable for now
         if (member != "") {
@@ -37,4 +37,3 @@ setTimeout(function(){
       function asc_sort(a, b) {
         return $(b).text() < $(a).text() ? 1 : -1;
       }
-}, 300);
