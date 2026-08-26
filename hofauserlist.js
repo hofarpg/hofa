@@ -2,7 +2,7 @@
 var members = []; //this is the array of names
 var membersNS = []; //this is the array of names without spaces
 $(".mbmember").each(function () {
-  var member = $(this).find(".mbm-user div.field_uneditable").html().toLowerCase().trim();
+  var member = $(this).find(".mbm-user div.field_uneditable").text().toLowerCase().trim();
   var memberArray = member.split(" ");
   var memberNS = ""; //set an empty variable for now
   if (member != "") {
@@ -25,7 +25,6 @@ $(".mbmember").each(function () {
 //for each member in the array, add them to the html inside the filtergroup with a class of mfilt-user
 for (var i = 0; i < members.length; i++) {
     if (members[i] != undefined) {
-
          $('.mfilt-user').append('<li class="abc"><a data-filter-value=".u-' + membersNS[i] + '">' + members[i] + '</a></li>');
     }
 }
