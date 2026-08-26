@@ -986,13 +986,12 @@ body:has(#profile) {
     width: fit-content;
     border-radius: var(--bradius);
     padding: var(--gap1) var(--gap2);
-    margin-bottom: calc(var(--gap1) * -1);
   }
   .pfcuname {
     text-shadow: 1.5px 1px 0.5px var(--group);
     font: var(--fo-h2);
     font-size: var(--fo-h2-clamp);
-    text-box: trim-end cap alphabetic;
+    text-box: trim-both cap alphabetic;
     text-transform: uppercase;
     color: var(--txt1);
   }
