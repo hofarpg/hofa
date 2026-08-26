@@ -126,9 +126,9 @@
       min-width: 19rem;
       height: fit-content;
       container: memberlist-membercont / inline-size;
-      position: relative !important;
+      /*position: relative !important;
       top: unset !important;
-      left: unset !important;
+      left: unset !important;*/
       flex-grow: 1;
       overflow: hidden;
       align-self: center;
