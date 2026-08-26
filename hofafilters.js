@@ -9,6 +9,7 @@ $(() => {
 	 var $grid = $container.isotope({
 	   itemSelector: ".mbmember", // the elements to filter
 	   layoutMode: 'fitRows',
+	   filter: ':not(.u-administrador)',
 	   percentPosition: false, // put true if you use percentage widths, otherwise put false
 	   getSortData: {
     		  nombre: function(itemElem) {
