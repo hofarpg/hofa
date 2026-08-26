@@ -1,3 +1,17 @@
+@media (max-width: 700px) {
+  :root, * {
+    --bodypadd: var(--padd0);
+    --bodywidth: unset;
+  }
+  body.nomires {
+    padding: var(--padd0)!important;
+  }
+}
+
+:has(body.nomires) #onlyloadingscreen {
+  display: none;
+}
+
 body.nomires {
   display:flex;
   flex-direction:column;
