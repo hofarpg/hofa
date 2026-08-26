@@ -325,6 +325,10 @@
     --sidenav-height: 2.5rem;
     --sidenav-width: 0px;
   }
+  /* loading screen */
+  #onlyloadingscreen {
+    display: none;
+  }
   /* header */
   .himg {
     background-image: var(--pngimg-3);
