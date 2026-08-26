@@ -1,0 +1,436 @@
+ 
+/* GUIDEBOOK STORE PAGE */
+#guidebook.storepage {
+  strong,
+  b {
+    font-weight: 800;
+    color: var(--accent);
+  }
+  a {
+    color: var(--accent);
+  }
+  u,
+  strike {
+    text-decoration-color: var(--taccent);
+    text-decoration-thickness: var(--bthickness);
+  }
+  u {
+    text-underline-offset: var(--bthickness);
+  }
+  *:is(ul, ol) {
+    margin-block: var(--gap0);
+    padding-left: var(--paddclamp6);
+    & br {
+      display: inherit;
+    }
+    & li {
+      margin-bottom: var(--gap0);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      & :is(ul, ol) {
+        margin-top: var(--gap2);
+      }
+    }
+    &:is(ul) li {
+      padding-left: var(--gap3);
+      &::marker {
+        content: "\f054";
+        font: var(--fo-icon4);
+        color: var(--tgroup);
+        font-weight: 900;
+      }
+    }
+    &:is(ol) li {
+      padding-left: var(--gap0);
+      &::marker {
+        font: var(--fo-bod2);
+        font-weight: 900;
+        color: var(--group);
+        line-height: 1em;
+      }
+    }
+  }
+  & #guideconts {
+    padding: var(--paddclamp3);
+    & .admtitleimg {
+      margin-bottom: var(--paddclamp3);
+      & h2 {
+        font: var(--fo-h1);
+        font-size: var(--fo-h1-clamp);
+        line-height: 85%;
+        color: var(--txt2);
+      }
+    }
+  }
+  & .guidebook-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--paddclamp3);
+    &:not(:has(.ofer)) {
+      & [data-filter=".ofer"] {
+        display: none; /* Oculta botón "Ofertas" cuando no hay ofertas */
+      }
+    }
+    & .guidebook-desc {
+      font: var(--fo-bod1);
+      text-align: justify;
+      line-height: 140%;
+    }
+    /* filtros base */
+    & :is(.filtro-botones, .filtro-contenido) {
+      display: flex;
+      gap: var(--content-gap);
+      --content-gap: var(--gap1);
+    }
+    & .filtros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--paddclamp3);
+      & .filtro-botones {
+        flex: 1;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        &[data-filter-group="tipo"] {
+          flex-basis: 20%;
+        }
+        h3 {
+          width: 100%;
+          color: var(--accent);
+          font: var(--fo-bod-alt2);
+          font-weight: 900;
+          line-height: 100%;
+        }
+        button.checked {
+          background: var(--accent);
+          border-color: var(--accent);
+          color: var(--back1);
+        }
+      }
+    }
+    /* objetos */
+    & .objeto {
+      margin-bottom: var(--content-gap);
+      width: calc((100% - (var(--content-gap) * 3)) / 3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      border-radius: var(--bradius);
+      border: var(--border1);
+      background: var(--tback2);
+      flex-wrap: wrap;
+      padding: var(--paddclamp6);
+      gap: var(--gap5) var(--gap3);
+      & .item-icon {
+        font-size: var(--fs-h2);
+        color: var(--accent);
+      }
+      & .article_name {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+        font: var(--fo-h5);
+        font-weight: 900;
+        color: var(--txt1);
+        line-height: 85%;
+      }
+      & .item-datos {
+        text-align: center;
+        gap: var(--gap1) var(--gap5);
+        color: var(--txt2);
+        font: var(--fo-deco3);
+        font-weight: bold;
+        text-transform: uppercase;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        & .dato {
+          display: flex;
+          align-items: center;
+          gap: var(--gap1);
+          & i {
+            color: var(--accent);
+          }
+        }
+      }
+      & p {
+        width: 100%;
+        margin: 0;
+        line-height: 120%;
+        color: var(--txt3);
+        text-align: justify;
+        &:not(.desc) {
+          text-transform: uppercase;
+          color: var(--txt4);
+          font: var(--fo-bod2);
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 120%;
+          &:before {
+            text-transform: uppercase;
+            color: var(--txt1);
+            font-weight: 900;
+            text-decoration: var(--bthickness) underline var(--taccent);
+            text-underline-offset: var(--bthickness);
+            margin-right: var(--gap0);
+          }
+        }
+        &.effect {
+          &:before {
+            content: "Efecto:";
+          }
+        }
+        &.repair {
+          &:before {
+            content: "Reparable:";
+          }
+        }
+        &.improve {
+          &:before {
+            content: "Mejorable:";
+          }
+        }
+        &.discount {
+          &:before {
+            content: "Descuento:";
+          }
+        }
+      }
+      & em {
+        color: var(--accent);
+      }
+      & .number-input {
+        display: inline-flex;
+        background: var(--back2);
+        border: var(--border1);
+        border-radius: var(--bradius);
+        position: relative;
+        overflow: hidden;
+        & input[type="number"] {
+          border: none;
+          border-radius: 0;
+          max-width: 4rem;
+          text-align: center;
+          min-height: 2.5rem;
+          font: var(--fo-bod1);
+          font-weight: bold;
+          -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+          appearance: textfield;
+          min-width: 3.5rem !important;
+          width: 3.5rem !important;
+        }
+        & input[type="number"]::-webkit-inner-spin-button,
+        & input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+        }
+        & button {
+          outline: none;
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 2.5rem;
+          width: 2.2rem;
+          cursor: pointer;
+          margin: 0;
+          position: relative;
+          padding: 0;
+          color: var(--accent);
+          background: var(--tback1);
+          &:first-of-type {
+            border-right: var(--border1);
+          }
+          &:last-of-type {
+            border-left: var(--border1);
+          }
+          &:after {
+            content: "X";
+            font: var(--fo-icon4);
+            font-weight: 900;
+          }
+          &:is(.minus) {
+            &:after {
+              content: "\f078";
+            }
+          }
+          &:is(.plus) {
+            &:after {
+              content: "\f077";
+            }
+          }
+        }
+      }
+      & .ajoutprix {
+        color: var(--txt1);
+        font-size: var(--fs-small);
+        height: 2.5rem;
+        width: 2.5rem !important;
+        min-width: 2.5rem !important;
+        border: var(--border1);
+        &:hover {
+          color: var(--back1);
+          background: var(--accent);
+          border-color: var(--accent);
+        }
+      }
+    }
+    /* cesta de compra */
+    & .boutique_cart {
+      display: flex;
+      flex-direction: column;
+      gap: var(--paddclamp3);
+      margin-top: var(--paddclamp3);
+      & h2 {
+        font: var(--fo-deco1);
+        font-weight: 900;
+        font-size: var(--fo-h5-clamp);
+        color: var(--txt2);
+        text-align: center;
+        line-height: 100%;
+        margin: 0px;
+        & i {
+          color: var(--accent);
+        }
+      }
+    }
+    /* lista de compras */
+    & #vuepanier {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap4);
+      &:not(:has(.article_input)) {
+        text-align: center;
+        text-transform: uppercase;
+        font: var(--fo-bod2);
+        font-weight: bold;
+        position: relative !important;
+        color: var(--txt4) !important;
+      }
+      /* objeto en la cesta */
+      & .article_input {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--gap1) 0;
+      }
+      & .article_input button {
+        outline: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: var(--border1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0;
+        position: relative;
+        padding: 0;
+        color: var(--accent);
+        font: var(--fo-icon1);
+        font-weight: 900;
+        &:is(.bminus, .bplus) {
+          font: var(--fo-icon3);
+          height: 2.5rem;
+          width: 2.2rem;
+          min-width: 2.2rem !important;
+          background: var(--tback2);
+        }
+        &.bminus {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &.bplus {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+      & button.button_delete {
+        color: var(--accent);
+        background: none;
+        border: 0;
+        padding: 0;
+        margin-right: var(--gap3);
+      }
+      /* unidad del objeto en la cesta */
+      & .input_nb_object {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        max-width: 4rem;
+        text-align: center;
+        min-height: 2.5rem;
+        font: var(--fo-bod1);
+        font-weight: bold;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+        min-width: 3.5rem !important;
+        width: 3.5rem !important;
+        background: var(--back1);
+      }
+      /* nombre del objeto en la cesta */
+      & .articleinsidepanier {
+        margin-left: var(--gap3);
+        font: var(--fo-bod1);
+        font-weight: 600;
+        line-height: 100%;
+        color: var(--txt4);
+        & .thename {
+          font: var(--fo-deco1);
+          font-weight: 900;
+          text-transform: uppercase;
+          color: var(--txt1);
+        }
+      }
+    }
+    /* formulario de realizar compra */
+    & .bottom-buttons {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--gap2);
+    }
+    & #soumettrepanier,
+    & #effacerpanier {
+    }
+    /* area de post */
+    & #message {
+      width: 100% !important;
+      background: var(--back2);
+      outline: var(--border1);
+      margin: 0 !important;
+      margin-top: var(--paddclamp7) !important;
+      border: var(--gap4) solid #fff0;
+      min-height: 14.286rem;
+      color: var(--txt3) !important;
+      font: var(--fo-bod1);
+      line-height: 130% !important;
+      padding-right: var(--gap2);
+      border-right-width: var(--gap2);
+      border-radius: var(--bradius);
+      text-align: justify;
+      word-break: break-word;
+      scroll-behavior: initial !important;
+      overflow-x: hidden;
+    }
+  }
+}
+
+/* CATALOGUE RESPONSIVE DESIGN*/
+@media screen and (max-width: 1000px) {
+  .catalogo .objeto {
+    width: calc((100% - var(--content-gap)) / 2) !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .catalogo .objeto {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+}
