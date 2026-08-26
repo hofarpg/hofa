@@ -29,7 +29,7 @@
   container: memberlist / inline-size;
   .mbm-nav {
     position: sticky;
-    top: var(--nav-height);
+    top: calc(var(--nav-height) + var(--padd1));
     flex: 1 0 25%;
     background: var(--tback1);
     gap: var(--padd0);
@@ -42,7 +42,8 @@
     height: fit-content;
     margin: 0;
     min-width: 17.2rem;
-    > strong {
+    z-index: 3;
+      > strong {
       text-transform: uppercase;
       width: 100%;
       font: var(--fo-h4);
@@ -121,13 +122,13 @@
         }
       }
     }
-  }
+}
   .mbmembers {
     flex: 1 0 65%;
     justify-content: space-around;
     align-items: stretch;
     width: 100%;
-    gap: var(--paddclamp5);
+    gap: 0;
     flex-wrap: wrap;
     height: fit-content;
     container: memberlist-members / inline-size;
@@ -305,7 +306,7 @@
           flex-wrap: wrap;
           gap: var(--paddclamp6);
           overflow: auto;
-          max-height: calc((27.5px * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
+          max-height: calc((2.1rem * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
           div {
             flex: 1 0 calc((100% /2) - var(--paddclamp6));
             gap: var(--gap1);
