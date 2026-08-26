@@ -27,7 +27,7 @@ setTimeout(function(){
   for (var i = 0; i < members.length; i++) {
       if (members[i] != undefined) {
   
-           $('.mfilt-user').append('<li><a href="" data-filter-value=".u-' + membersNS[i] + '">' + members[i] + '</a></li>');
+           $('.mfilt-user').append('<li><a href="#" data-filter-value=".u-' + membersNS[i] + '">' + members[i] + '</a></li>');
       }
   }
   
