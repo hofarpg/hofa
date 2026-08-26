@@ -6,8 +6,8 @@ setTimeout(function(){
     var member = $(this).find(".mbm-user div.field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-").normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     var memberArray = member.split(" ");
     var memberNS = ""; //set an empty variable for now
-    if (member != "") {
-      //if the member alias isn't empty, run the loop
+    if (member != "" || member != "administrador") {
+      //if the member alias isn't empty nor an admin, run the loop
       for (var i = 0; i < memberArray.length; i++) {
         //for each word in the member's alias, add the word to the empty variable so that it's a version without spaces
         memberNS = memberNS + memberArray[i];
