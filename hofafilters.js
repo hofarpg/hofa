@@ -76,7 +76,8 @@ $(() => {
         });
     }    
 	   updateFilterCounts();
- 
+	setTimeout(function() {updateFilterCounts();}, 700);
+	
     // create combo filter fuction
     function comboFiltering($this, filters, filterAttr, filterValue, $optionSet, group, $selectAll, activeClass, exclClass) {
         if (!$optionSet.hasClass(exclClass)) {
