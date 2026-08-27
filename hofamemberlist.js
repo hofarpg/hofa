@@ -99,7 +99,7 @@ $(() => {
 	        // get filtered item elements
 	        var itemElems = $container.isotope('getFilteredItemElements');
 	        var $itemElems = $(itemElems);
-	        $filterButtons.each( function(i, a) {
+	        $('.filter.option-set a').each( function(i, a) {
 	            var $label = $(a);
 	            var filterValue = $label.attr('data-filter-value');
 	            if (!filterValue) {
