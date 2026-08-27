@@ -21,7 +21,7 @@ setTimeout(function(){
         membersNS.push(memberNS);
       }
     }
-    $(this).addClass(memberNS);
+    $(this).addClass('u-' + memberNS);
   });
   //for each member in the array, add them to the html inside the filtergroup with a class of mfilt-user
   for (var i = 0; i < members.length; i++) {
@@ -38,4 +38,4 @@ setTimeout(function(){
   function asc_sort(a, b) {
     return $(b).text() < $(a).text() ? 1 : -1;
   }  
-}, 1500);
+}, 1200);
