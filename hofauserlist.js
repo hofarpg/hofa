@@ -38,4 +38,4 @@ setTimeout(function(){
   function asc_sort(a, b) {
     return $(b).text() < $(a).text() ? 1 : -1;
   }  
-}, 650);
+}, 500);
