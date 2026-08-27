@@ -627,7 +627,7 @@
 /* CONTAINERS - MEMBERLIST */
 @container memberlist-members (max-width: 600px) {
   .mbmember {
-    width: 100% !important;
+    width: calc(100% - var(--paddclamp5)) !important;
   }
 }
 @container memberlist-members (min-width: 800px) {
