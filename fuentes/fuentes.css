@@ -1,117 +1,117 @@
 /* ARCILLA */
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Thin.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-thin.woff2');
     font-weight: 100;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-ThinItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-thinitalic.woff2');
     font-weight: 100;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-ExtraLight.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-extralight.woff2');
     font-weight: 200;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-ExtraLightItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-extralightitalic.woff2');
     font-weight: 200;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Light.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-light.woff2');
     font-weight: 300;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-LightItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-lightitalic.woff2');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Regular.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-regular.woff2');
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Italic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-italic.woff2');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Medium.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-medium.woff2');
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-MediumItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-mediumitalic.woff2');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-SemiBold.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-semibold.woff2');
     font-weight: 600;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-SemiBoldItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-semibolditalic.woff2');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Bold.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-bold.woff2');
     font-weight: 700;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-BoldItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-bolditalic.woff2');
     font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-ExtraBold.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-extrabold.woff2');
     font-weight: 800;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-ExtraBoldItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-extrabolditalic.woff2');
     font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-Black.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-black.woff2');
     font-weight: 900;
     font-display: swap;
 }
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/Arcilla-BlackItalic.otf');
+    src: url('https://hofarpg.github.io/hofa/fuentes/arcilla/arcilla-blackitalic.woff2');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
