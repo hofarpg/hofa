@@ -67,6 +67,12 @@ $(() => {
 		   },
 		 });
 		
+		// layout after full initialization
+		$grid.isotope('layout');
+			
+		// generate filter count
+		updateFilterCounts();
+		
 		 $(".filter.option-set a").click(function(e) {
 		   var $this = $(this); // cache the clicked link
 		   var filterAttr = "data-filter-value";
@@ -82,9 +88,9 @@ $(() => {
 		   var comboFilter = getComboFilter(filters);
 		   $grid.isotope({
 			 filter: comboFilter
-		   });
-		   $this.toggleClass(activeClass);		 
+		   }); 
 		   updateFilterCounts();
+		   $this.toggleClass(activeClass);		
 		   e.preventDefault();
 		 });
 			
@@ -177,12 +183,6 @@ $(() => {
 			$(this).addClass(activeClass);
 			e.preventDefault();
 		});
-	
-		// layout after full initialization
-		$grid.isotope('layout');
-			
-		// generate filter count
-		updateFilterCounts();
 		
 	}, 1000);
 });
