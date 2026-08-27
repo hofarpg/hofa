@@ -308,7 +308,7 @@
           flex-wrap: wrap;
           gap: var(--paddclamp6);
           overflow: auto;
-          max-height: calc((2.1rem * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
+          max-height: calc((2rem * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
           div {
             flex: 1 0 calc((100% /2) - var(--paddclamp6));
             gap: var(--gap1);
