@@ -95,21 +95,21 @@ $(() => {
 		 });
 			
 	    // add filter count 
-		function updateFilterCounts()  {
-		    // get ALL item elements (except excluded ones)
-		    var $allItems = $container.find('.mbmember').not('.u-administrador');
-		
-		    $('.filter.option-set a').each( function(i, a) {
-		        var $label = $(a);
-		        var filterValue = $label.attr('data-filter-value');
-		        if (!filterValue) {
-		            // do not update 'any' buttons
-		            return;
-		        }
-		        var count = $allItems.filter(filterValue).length;
-		        $label.parent().find('.filter-count').text(count);
-		    });
-		}
+	    function updateFilterCounts()  {
+	        // get filtered item elements
+	        var itemElems = $container.isotope('getFilteredItemElements');
+	        var $itemElems = $(itemElems);
+	        $filterButtons.each( function(i, a) {
+	            var $label = $(a);
+	            var filterValue = $label.attr('data-filter-value');
+	            if (!filterValue) {
+	                // do not update 'any' buttons
+	                return;
+	            }
+	            var count = $itemElems.filter(filterValue).length;
+	            $label.parent().find('.filter-count').text(count);
+	        });
+	    }
 		
 	    // create combo filter fuction
 	    function comboFiltering($this, filters, filterAttr, filterValue, $optionSet, group, $selectAll, activeClass, exclClass) {
