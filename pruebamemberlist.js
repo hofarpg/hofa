@@ -1,4 +1,8 @@
 jQuery(function ($) {
+  if (!$('.mbmembers').length) {
+    return;
+  }
+
   /* remover admins + otros usuarios */
   $('.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")').remove();
 
@@ -28,7 +32,7 @@ jQuery(function ($) {
     var memberlistuser = $link.attr("href");
 
     $.get(memberlistuser, function (data) {
-      /* obtener y llenar información de campos */
+	  /* obtener y llenar información de campos */
       var $member = $link.parents(".mbmember");
 
       var memberank = $(data).find(".pfctrank>span").html();
@@ -39,6 +43,11 @@ jQuery(function ($) {
         .parents(".pcfield")
         .find(".pccontent .field_uneditable");
       $member.find(".mbmci-desc>div>span").append(memberparent);
+
+      var memberlvl = $(data)
+        .find('.pcfield .pclabel span:contains("Nivel")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
 
       var memberfc = $(data)
         .find('.pcfield .pclabel span:contains("Face claim")')
@@ -70,7 +79,7 @@ jQuery(function ($) {
         .find(".pccontent .field_uneditable");
       $member.find(".mbm-naci").append(memberbday);
 
-      /* agregar links */
+	  /* agregar links */
       var memberbaul = $(data)
         .find("#field_id13 .field_uneditable a")
         .attr("href");
@@ -104,7 +113,17 @@ jQuery(function ($) {
             '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>'
         );
 
-      /* agregar clases */
+      var levl = $member
+        .find(".mbm-lvl .field_uneditable")
+        .text()
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      if (levl) $member.addClass("n-" + levl);
+
+	  /* agregar clases */
       var weap = $member
         .find(".mbm-weap")
         .text()
@@ -135,10 +154,11 @@ jQuery(function ($) {
         .replace(/[\u0300-\u036f]/g, "");
       if (user) $member.addClass("u-" + user);
 
+	  /* filtrar y añadir texto */
       $member.filter(".u-nombre").removeClass("u-nombre");
       $member.find(".field_uneditable:contains(-)").text("Desconocido");
 
-      /* calcular edad después de insertar la fecha de nacimiento */
+	  /* calcular edad después de insertar la fecha de nacimiento */
       getAge(month, year);
       function getAge(month, year) {
         var string = $member.find(".mbm-naci").find(".field_uneditable").text();
@@ -154,11 +174,10 @@ jQuery(function ($) {
       }
 
       pending--;
-
       if (pending === 0) {
         initIsotopeAndCounts();
       }
-    }).fail(function (xhr, status, err) {
+    }).fail(function () {
       pending--;
       if (pending === 0) {
         initIsotopeAndCounts();
@@ -166,19 +185,19 @@ jQuery(function ($) {
     });
   });
 
-  /* sistema de filtrado */
+/* sistema de filtrado */
   function initIsotopeAndCounts() {
     var $container = $(".mbmembers"); // the container with all the elements to filter inside
-		var filters = {}; //should be outside the scope of the filtering function
-		var activeClass = "selected", // the class for active links
-		var exclClass = "exclusive"; // the class for exclusive groups
+	var filters = {}; //should be outside the scope of the filtering function
+	var activeClass = "selected", // the class for active links
+	var exclClass = "exclusive"; // the class for exclusive groups
 
-    /* --- read the documentation on isotope.metafizzy.co for more options --- */
+	/* --- read the documentation on isotope.metafizzy.co for more options --- */
     var $grid = $container.isotope({
       itemSelector: ".mbmember", // the elements to filter
-		  layoutMode: 'fitRows',
-		  filter: '.mbmember:not(.contentgroup-staff)',
-		  percentPosition: false, // put true if you use percentage widths, otherwise put false
+	  layoutMode: "fitRows",
+	  filter: ".mbmember:not(.contentgroup-staff)",
+	  percentPosition: false, // put true if you use percentage widths, otherwise put false
       getSortData: {
         nombre: function (itemElem) {
           return $(itemElem)
@@ -210,13 +229,13 @@ jQuery(function ($) {
       },
     });
 
-    // layout after full initialization
+	// layout after full initialization
     $grid.isotope("layout");
-
-    // generate filter count
+	
+	// generate filter count
     updateFilterCounts();
 
-    // eventos de filtros
+	// eventos de filtros
     $(".filter.option-set a").click(function (e) {
       var $this = $(this); // cache the clicked link
       var filterAttr = "data-filter-value";
@@ -228,6 +247,7 @@ jQuery(function ($) {
         filterGroup = filters[group] = [];
       }
       var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
+
       comboFiltering(
         $this,
         filters,
@@ -239,18 +259,20 @@ jQuery(function ($) {
         activeClass,
         exclClass
       );
+
       var comboFilter = getComboFilter(filters);
       $grid.isotope({
         filter: comboFilter,
       });
+
       updateFilterCounts();
       $this.toggleClass(activeClass);
       e.preventDefault();
     });
 
-    // add filter count 
+	// add filter count 
     function updateFilterCounts() {
-      // get filtered item elements
+	  // get filtered item elements
       var itemElems = $container.isotope("getFilteredItemElements");
       var $itemElems = $(itemElems);
 
@@ -258,7 +280,7 @@ jQuery(function ($) {
         var $label = $(a);
         var filterValue = $label.attr("data-filter-value");
         if (!filterValue) {
-          // do not update 'any' buttons
+		  // do not update 'any' buttons
           return;
         }
         var count = $itemElems.filter(filterValue).length;
@@ -266,7 +288,7 @@ jQuery(function ($) {
       });
     }
 
-    // create combo filter fuction
+	// create combo filter fuction
     function comboFiltering(
       $this,
       filters,
@@ -311,6 +333,7 @@ jQuery(function ($) {
         }
       }
     }
+
     function getComboFilter(filters) {
       var i = 0;
       var comboFilters = [];
@@ -337,7 +360,7 @@ jQuery(function ($) {
       return comboFilter;
     }
 
-    // bind sort label click
+	// bind sort label click
     $(".sort.option-set a").click(function (e) {
       var sortByValue = $(this).attr("data-sort-value");
       $grid.isotope({ sortBy: sortByValue });
