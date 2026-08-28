@@ -1,14 +1,7 @@
-console.log('MEMBERLIST: inicio del archivo');
-
 jQuery(function ($) {
-  console.log('MEMBERLIST: dentro del ready');
-
   if (!$('.mbmembers').length) {
-    console.log('MEMBERLIST: no hay .mbmembers en esta página');
     return;
   }
-
-  console.log('MEMBERLIST: hay .mbmembers, empezando lógica');
 
   // 1) Remover miembros y cosas que no dependen de $.get
   $('.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")').remove();
@@ -25,7 +18,6 @@ jQuery(function ($) {
   // 2) Preparar procesamiento de miembros con $.get
   var $links = $(".mbmci-name a");
   var pending = $links.length;
-  console.log('MEMBERLIST: miembros a procesar con $.get:', pending);
 
   if (pending === 0) {
     // Si no hay miembros, inicializa Isotope directo
@@ -183,17 +175,13 @@ jQuery(function ($) {
 
       // 3) Cuando termina un $.get, decrementamos pending
       pending--;
-      console.log('MEMBERLIST: $.get terminado, pendientes:', pending);
 
       if (pending === 0) {
-        console.log('MEMBERLIST: todos los $.get terminados, inicializando Isotope');
         initIsotopeAndCounts();
       }
     }).fail(function (xhr, status, err) {
-      console.error('MEMBERLIST: falló $.get para', memberlistuser, status, err);
       pending--;
       if (pending === 0) {
-        console.log('MEMBERLIST: todos los $.get terminados (con errores), inicializando Isotope');
         initIsotopeAndCounts();
       }
     });
@@ -201,8 +189,6 @@ jQuery(function ($) {
 
   // 4) Función que inicializa Isotope y filter counts
   function initIsotopeAndCounts() {
-    console.log('ISO: inicializando Isotope y filter counts');
-
     var $container = $(".mbmembers");
     var filters = {};
     var activeClass = "selected";
@@ -379,9 +365,5 @@ jQuery(function ($) {
       $(this).addClass(activeClass);
       e.preventDefault();
     });
-
-    console.log('ISO: Isotope y filter counts inicializados');
   }
 });
-
-console.log('MEMBERLIST: después de definir el ready');
