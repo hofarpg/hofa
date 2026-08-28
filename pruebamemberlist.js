@@ -160,18 +160,18 @@ jQuery(function ($) {
 
 	  /* calcular edad después de insertar la fecha de nacimiento */
       getAge(month, year);
-      function getAge(month, year) {
-        var string = $member.find(".mbm-naci").find(".field_uneditable").text();
-        var fecha = string.split("/");
-        var age = year - fecha[2];
-        if (fecha[1] > month) {
-          age--;
-        }
-        if (isNaN(age)) {
-          var age = "Desconocida";
-        }
-        $member.find(".mbm-age").html(age);
-      }
+	  function getAge(month, year) {
+  		var string = $member.find(".mbm-naci").find(".field_uneditable").text();
+  		var fecha = string.split("/");
+  		var age = year - fecha[2];
+  		if (fecha[1] > month) {
+		  age--;
+  		}
+		if (isNaN(age)) {
+    	  age = "Desconocida";
+  		}
+  		$member.find(".mbm-age").html(age);
+	  }
 
       pending--;
       if (pending === 0) {
