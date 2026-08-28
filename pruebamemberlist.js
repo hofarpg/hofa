@@ -97,8 +97,8 @@ $(() => {
       var memberArray = member.split(" ");
       var memberNS = ""; // set an empty variable for now
 
-      if (member != "" && member != "administrador" && member != "nombre") {
-        // if the member alias isn't empty nor an admin, run the loop
+      if (member != "" && member != "nombre") {
+        // if the member alias isn't empty nor the default, run the loop
         for (var i = 0; i < memberArray.length; i++) {
           // for each word in the member's alias, add the word to the empty variable so that it's a version without spaces
           memberNS = memberNS + memberArray[i];
@@ -207,8 +207,10 @@ $(() => {
       }
       var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
       comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,);
+      
       var comboFilter = getComboFilter(filters);
       $grid.isotope({filter: comboFilter,});
+      
       updateFilterCounts();
       $this.toggleClass(activeClass);
       e.preventDefault();
@@ -220,15 +222,15 @@ $(() => {
       var itemElems = $container.isotope("getFilteredItemElements");
       var $itemElems = $(itemElems);
 
-      $(".filter.option-set a").each(function (i, a) {
+      $('.filter.option-set a').each(function (i, a) {
         var $label = $(a);
-        var filterValue = $label.attr("data-filter-value");
+        var filterValue = $label.attr('data-filter-value');
         if (!filterValue) {
           // do not update 'any' buttons
           return;
         }
         var count = $itemElems.filter(filterValue).length;
-        $label.parent().find(".filter-count").text(count);
+        $label.parent().find('.filter-count').append('<span class="filter-count">' + count + '</span>');
       });
     }
 
