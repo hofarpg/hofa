@@ -159,18 +159,18 @@ jQuery(function ($) {
       $member.find(".field_uneditable:contains(-)").text("Desconocido");
 
 	  /* calcular edad después de insertar la fecha de nacimiento */
-      getAge(month, year);
-	  function getAge(month, year) {
-  		var string = $member.find(".mbm-naci").find(".field_uneditable").text();
-  		var fecha = string.split("/");
-  		var age = year - fecha[2];
-  		if (fecha[1] > month) {
-		  age--;
-  		}
-		if (isNaN(age)) {
-    	  age = "Desconocida";
-  		}
-  		$member.find(".mbm-age").html(age);
+      getAge();
+	  function getAge() {
+	    var string = $member.find(".mbm-naci").find(".field_uneditable").text();
+	    var fecha = string.split("/");
+	    var age = year - fecha[2]; // usa la variable global 'year' de tu otro script
+	    if (fecha[1] > month) {    // usa la variable global 'month' de tu otro script
+	      age--;
+	    }
+	    if (isNaN(age)) {
+	      age = "Desconocida";
+	    }
+	    $member.find(".mbm-age").html(age);
 	  }
 
       pending--;
