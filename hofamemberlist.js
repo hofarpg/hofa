@@ -230,7 +230,12 @@ $(() => {
           return;
         }
         var count = $itemElems.filter(filterValue).length;
-        $label.parent().append('<span class="filter-count">' + count + '</span>');
+        var $countSpan = $label.parent().find('.filter-count');
+        if ($countSpan.length) {
+          $countSpan.text(count);
+        } else {
+          $label.parent().append('<span class="filter-count">' + count + '</span>');
+        }
       });
     }
 
