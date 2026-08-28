@@ -207,6 +207,31 @@ jQuery(function ($) {
     }
     // === END AUTOMATIC ALIAS ADDITIONS ===
 
+    // === EDAD DE PERSONAJE CUSTOMIZADA ===
+    var perfil = ".mbmember";
+    var psfield = ".flex.fcolumn";
+    var pscontent = ".field_uneditable";
+    var psnacimiento = ".mbm-naci";
+    var psfieldEnganche = ".mbm-age";
+
+    $(psnacimiento).each(function () {
+      getAge(this, pscontent, month, year);
+    });
+
+    function getAge(psfield, pscontent, month, year) {
+      var string = $(psfield).find(pscontent).text();
+      var fecha = string.split("/");
+      var age = year - fecha[2];
+      if (fecha[1] > month) {
+        age--;
+      }
+      if (isNaN(age)) {
+        age = "Desconocida";
+      }
+      $(psfield).parents(perfil).find(psfieldEnganche).html(age);
+    }
+    // === FIN EDAD DE PERSONAJE CUSTOMIZADA ===
+
     var $container = $(".mbmembers");
     var filters = {};
     var activeClass = "selected";
