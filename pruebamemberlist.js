@@ -3,21 +3,6 @@ $(() => {
     return;
   }
 
-  /* eliminar miembros específicos */
-  $('.mbmembers .mbmember[class*="staff"]').remove();
-
-  /* cambiar título a directorio */
-  var directorytitle = $(document).prop("title").replace("Miembros", "Directorio").trim();
-  $(document).prop("title", directorytitle);
-
-  /* añadir clase de censo */
-  $(".mfilt-censo").find("li:not(:first-child)").append('<span class="filter-count"></span>');
-
-  /* añadir toggle de class: showfilters */
-  $(".mbm-filtgroup strong").click(function () {
-    $(this).parents(".mbm-filtgroup").toggleClass("showfilters");
-  });
-
   /* obtener miembros por nombre */
   var $memberlistpjname = $(".mbmci-name a");
   var pending = $memberlistpjname.length;
