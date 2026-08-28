@@ -1,43 +1,34 @@
-console.log('MEMBERLIST: inicio del archivo');
-
 jQuery(function ($) {
-  console.log('MEMBERLIST: dentro del ready');
-
-  if (!$('.mbmembers').length) {
-    console.log('MEMBERLIST: no hay .mbmembers en esta página');
-    return;
-  }
-
-  console.log('MEMBERLIST: hay .mbmembers, empezando lógica');
-
-  // 1) Remover miembros y cosas que no dependen de $.get
+  /* remover admins + otros usuarios */
   $('.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")').remove();
 
+  /* cambiar título a directorio */
   var directorytitle = $(document).prop('title').replace('Miembros', 'Directorio').trim();
   $(document).prop('title', directorytitle);
 
+  /* añadir clase de censo */
   $('.mfilt-censo').find('li:not(:first-child)').append('<span class="filter-count"></span>');
 
+  /* añadir toggle de class: showfilters */
   $('.mbm-filtgroup strong').click(function () {
     $(this).parents('.mbm-filtgroup').toggleClass('showfilters');
   });
 
-  // 2) Preparar procesamiento de miembros con $.get
-  var $links = $(".mbmci-name a");
-  var pending = $links.length;
-  console.log('MEMBERLIST: miembros a procesar con $.get:', pending);
+  /* obtener miembros por nombre */
+  var $membername = $(".mbmci-name a");
+  var pending = $membername.length;
 
   if (pending === 0) {
-    // Si no hay miembros, inicializa Isotope directo
     initIsotopeAndCounts();
     return;
   }
 
-  $links.each(function () {
+  $membername.each(function () {
     var $link = $(this);
     var memberlistuser = $link.attr("href");
 
     $.get(memberlistuser, function (data) {
+      /* obtener y llenar información de campos */
       var $member = $link.parents(".mbmember");
 
       var memberank = $(data).find(".pfctrank>span").html();
@@ -48,11 +39,6 @@ jQuery(function ($) {
         .parents(".pcfield")
         .find(".pccontent .field_uneditable");
       $member.find(".mbmci-desc>div>span").append(memberparent);
-
-      var memberlvl = $(data)
-        .find('.pcfield .pclabel span:contains("Nivel")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
 
       var memberfc = $(data)
         .find('.pcfield .pclabel span:contains("Face claim")')
@@ -84,6 +70,7 @@ jQuery(function ($) {
         .find(".pccontent .field_uneditable");
       $member.find(".mbm-naci").append(memberbday);
 
+      /* agregar links */
       var memberbaul = $(data)
         .find("#field_id13 .field_uneditable a")
         .attr("href");
@@ -117,16 +104,7 @@ jQuery(function ($) {
             '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>'
         );
 
-      var levl = $member
-        .find(".mbm-lvl .field_uneditable")
-        .text()
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-      if (levl) $member.addClass("n-" + levl);
-
+      /* agregar clases */
       var weap = $member
         .find(".mbm-weap")
         .text()
@@ -160,59 +138,47 @@ jQuery(function ($) {
       $member.filter(".u-nombre").removeClass("u-nombre");
       $member.find(".field_uneditable:contains(-)").text("Desconocido");
 
-      // edad
-      getAge();
-      function getAge() {
+      /* calcular edad después de insertar la fecha de nacimiento */
+      getAge(month, year);
+      function getAge(month, year) {
         var string = $member.find(".mbm-naci").find(".field_uneditable").text();
         var fecha = string.split("/");
-        if (fecha.length < 3) {
-          $member.find(".mbm-age").html("Desconocida");
-          return;
-        }
-        var month = new Date().getMonth() + 1;
-        var year = new Date().getFullYear();
-        var age = year - parseInt(fecha[2], 10);
-        if (parseInt(fecha[1], 10) > month) {
+        var age = year - fecha[2];
+        if (fecha[1] > month) {
           age--;
         }
         if (isNaN(age)) {
-          age = "Desconocida";
+          var age = "Desconocida";
         }
         $member.find(".mbm-age").html(age);
       }
 
-      // 3) Cuando termina un $.get, decrementamos pending
       pending--;
-      console.log('MEMBERLIST: $.get terminado, pendientes:', pending);
 
       if (pending === 0) {
-        console.log('MEMBERLIST: todos los $.get terminados, inicializando Isotope');
         initIsotopeAndCounts();
       }
     }).fail(function (xhr, status, err) {
-      console.error('MEMBERLIST: falló $.get para', memberlistuser, status, err);
       pending--;
       if (pending === 0) {
-        console.log('MEMBERLIST: todos los $.get terminados (con errores), inicializando Isotope');
         initIsotopeAndCounts();
       }
     });
   });
 
-  // 4) Función que inicializa Isotope y filter counts
+  /* sistema de filtrado */
   function initIsotopeAndCounts() {
-    console.log('ISO: inicializando Isotope y filter counts');
+    var $container = $(".mbmembers"); // the container with all the elements to filter inside
+		var filters = {}; //should be outside the scope of the filtering function
+		var activeClass = "selected", // the class for active links
+		var exclClass = "exclusive"; // the class for exclusive groups
 
-    var $container = $(".mbmembers");
-    var filters = {};
-    var activeClass = "selected";
-    var exclClass = "exclusive";
-
+    /* --- read the documentation on isotope.metafizzy.co for more options --- */
     var $grid = $container.isotope({
-      itemSelector: ".mbmember",
-      layoutMode: "fitRows",
-      filter: ".mbmember:not(.c-staff)",
-      percentPosition: false,
+      itemSelector: ".mbmember", // the elements to filter
+		  layoutMode: 'fitRows',
+		  filter: '.mbmember:not(.contentgroup-staff)',
+		  percentPosition: false, // put true if you use percentage widths, otherwise put false
       getSortData: {
         nombre: function (itemElem) {
           return $(itemElem)
@@ -244,22 +210,24 @@ jQuery(function ($) {
       },
     });
 
+    // layout after full initialization
     $grid.isotope("layout");
+
+    // generate filter count
     updateFilterCounts();
 
     // eventos de filtros
     $(".filter.option-set a").click(function (e) {
-      var $this = $(this);
+      var $this = $(this); // cache the clicked link
       var filterAttr = "data-filter-value";
-      var filterValue = $this.attr(filterAttr);
-      var $optionSet = $this.parents(".option-set");
-      var group = $optionSet.attr("data-filter-group");
+      var filterValue = $this.attr(filterAttr); // cache the filter
+      var $optionSet = $this.parents(".option-set"); // cache the parent element
+      var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
       var filterGroup = filters[group];
       if (!filterGroup) {
         filterGroup = filters[group] = [];
       }
-      var $selectAll = $optionSet.find("a[" + filterAttr + '=""]');
-
+      var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
       comboFiltering(
         $this,
         filters,
@@ -271,18 +239,18 @@ jQuery(function ($) {
         activeClass,
         exclClass
       );
-
       var comboFilter = getComboFilter(filters);
       $grid.isotope({
         filter: comboFilter,
       });
-
       updateFilterCounts();
       $this.toggleClass(activeClass);
       e.preventDefault();
     });
 
+    // add filter count 
     function updateFilterCounts() {
+      // get filtered item elements
       var itemElems = $container.isotope("getFilteredItemElements");
       var $itemElems = $(itemElems);
 
@@ -290,6 +258,7 @@ jQuery(function ($) {
         var $label = $(a);
         var filterValue = $label.attr("data-filter-value");
         if (!filterValue) {
+          // do not update 'any' buttons
           return;
         }
         var count = $itemElems.filter(filterValue).length;
@@ -297,6 +266,7 @@ jQuery(function ($) {
       });
     }
 
+    // create combo filter fuction
     function comboFiltering(
       $this,
       filters,
@@ -341,7 +311,6 @@ jQuery(function ($) {
         }
       }
     }
-
     function getComboFilter(filters) {
       var i = 0;
       var comboFilters = [];
@@ -379,7 +348,5 @@ jQuery(function ($) {
       $(this).addClass(activeClass);
       e.preventDefault();
     });
-
-    console.log('ISO: Isotope y filter counts inicializados');
   }
 });
