@@ -1,36 +1,14 @@
-jQuery(function ($) {
+$(() => {
   if (!$(".mbmembers").length) {
     return;
   }
-
-  /* eliminar miembros específicos */
-  $(
-    '.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")',
-  ).remove();
-
-  /* cambiar título a directorio */
-  var directorytitle = $(document)
-    .prop("title")
-    .replace("Miembros", "Directorio")
-    .trim();
-  $(document).prop("title", directorytitle);
-
-  /* añadir clase de censo */
-  $(".mfilt-censo")
-    .find("li:not(:first-child)")
-    .append('<span class="filter-count"></span>');
-
-  /* añadir toggle de class: showfilters */
-  $(".mbm-filtgroup strong").click(function () {
-    $(this).parents(".mbm-filtgroup").toggleClass("showfilters");
-  });
 
   /* obtener miembros por nombre */
   var $memberlistpjname = $(".mbmci-name a");
   var pending = $memberlistpjname.length;
 
   if (pending === 0) {
-    initIsotopeAndCounts();
+    initIsotopeAndUserList();
     return;
   }
 
@@ -45,120 +23,47 @@ jQuery(function ($) {
       var memberank = $(data).find(".pfctrank>span").html();
       $member.find(".mbm-weap").append(memberank);
 
-      var memberparent = $(data)
-        .find('.pcfield .pclabel span:contains("Ascendencia")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberparent = $(data).find('.pcfield .pclabel span:contains("Ascendencia")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbmci-desc>div>span").append(memberparent);
 
-      var memberlvl = $(data)
-        .find('.pcfield .pclabel span:contains("Nivel")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberlvl = $(data).find('.pcfield .pclabel span:contains("Nivel")').parents(".pcfield").find(".pccontent .field_uneditable");
 
-      var memberfc = $(data)
-        .find('.pcfield .pclabel span:contains("Face claim")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberfc = $(data).find('.pcfield .pclabel span:contains("Face claim")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-fc").append(memberfc);
 
-      var memberserv = $(data)
-        .find('.pcfield .pclabel span:contains("Servicio")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberserv = $(data).find('.pcfield .pclabel span:contains("Servicio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-serv").append(memberserv);
 
-      var memberofic = $(data)
-        .find('.pcfield .pclabel span:contains("Oficio")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberofic = $(data).find('.pcfield .pclabel span:contains("Oficio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-ofic").append(memberofic);
 
-      var memberuser = $(data)
-        .find('.pcfield .pclabel span:contains("Alias del usuario")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberuser = $(data).find('.pcfield .pclabel span:contains("Alias del usuario")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-user").append(memberuser);
 
-      var memberbday = $(data)
-        .find('.pcfield .pclabel span:contains("Fecha de nacimiento")')
-        .parents(".pcfield")
-        .find(".pccontent .field_uneditable");
+      var memberbday = $(data).find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-naci").append(memberbday);
 
       /* obtener y llenar links */
-      var memberbaul = $(data)
-        .find("#field_id13 .field_uneditable a")
-        .attr("href");
-      $member
-        .find(".membau")
-        .html(
-          '<a href="' +
-            memberbaul +
-            '" target="_blank"><i class="fa-regular fa-suitcase" title="Baúl"></i></a>',
-        );
+      var memberbaul = $(data).find("#field_id13 .field_uneditable a").attr("href");
+      $member.find(".membau").html('<a href="' + memberbaul +'" target="_blank"><i class="fa-regular fa-suitcase" title="Baúl"></i></a>');
 
-      var memberbusper = $(data)
-        .find("#field_id14 .field_uneditable a")
-        .attr("href");
-      $member
-        .find(".membpj")
-        .html(
-          '<a href="' +
-            memberbusper +
-            '" target="_blank"><i class="fa-regular fa-fingerprint" title="Búsqueda de Personajes"></i></a>',
-        );
+      var memberbusper = $(data).find("#field_id14 .field_uneditable a").attr("href");
+      $member.find(".membpj").html('<a href="' + memberbusper + '" target="_blank"><i class="fa-regular fa-fingerprint" title="Búsqueda de Personajes"></i></a>');
 
-      var memberbustra = $(data)
-        .find("#field_id15 .field_uneditable a")
-        .attr("href");
-      $member
-        .find(".membtr")
-        .html(
-          '<a href="' +
-            memberbustra +
-            '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>',
-        );
+      var memberbustra = $(data).find("#field_id15 .field_uneditable a").attr("href");
+      $member.find(".membtr").html('<a href="' + memberbustra + '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>');
 
       /* obtener y llenar clases */
-      var levl = $member
-        .find(".mbm-lvl .field_uneditable")
-        .text()
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+      var levl = $member.find(".mbm-lvl .field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (levl) $member.addClass("n-" + levl);
 
-      var weap = $member
-        .find(".mbm-weap")
-        .text()
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+      var weap = $member.find(".mbm-weap").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (weap) $member.addClass("c-" + weap);
 
-      var ofic = $member
-        .find(".mbm-ofic .field_uneditable")
-        .text()
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+      var ofic = $member.find(".mbm-ofic .field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (ofic) $member.addClass("o-" + ofic);
 
-      var user = $member
-        .find(".mbm-user .field_uneditable")
-        .text()
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+      var user = $member.find(".mbm-user .field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (user) $member.addClass("u-" + user);
 
       /* remover clase de .u-nombre */
@@ -170,33 +75,30 @@ jQuery(function ($) {
       pending--;
 
       if (pending === 0) {
-        initIsotopeAndCounts();
+        initIsotopeAndUserList();
       }
     }).fail(function (xhr, status, err) {
       pending--;
       if (pending === 0) {
-        initIsotopeAndCounts();
+        initIsotopeAndUserList();
       }
     });
   });
 
-  /* inicializar isotope y filter counts */
-  function initIsotopeAndCounts() {
+  /* inicializar isotope y user list */
+  function initIsotopeAndUserList() {
+    
     /* automatic alias additions by LUX */
     var members = []; // this is the array of names
     var membersNS = []; // this is the array of names without spaces
 
     $(".mbmember").each(function () {
-      var member = $(this)
-        .find(".mbm-user div.field_uneditable")
-        .text()
-        .trim()
-        .toLowerCase();
+      var member = $(this).find(".mbm-user div.field_uneditable").text().trim().toLowerCase();
       var memberArray = member.split(" ");
       var memberNS = ""; // set an empty variable for now
 
-      if (member != "" && member != "administrador" && member != "nombre") {
-        // if the member alias isn't empty nor an admin, run the loop
+      if (member != "" && member != "nombre") {
+        // if the member alias isn't empty nor the default, run the loop
         for (var i = 0; i < memberArray.length; i++) {
           // for each word in the member's alias, add the word to the empty variable so that it's a version without spaces
           memberNS = memberNS + memberArray[i];
@@ -230,7 +132,7 @@ jQuery(function ($) {
     function asc_sort(a, b) {
       return $(b).text() < $(a).text() ? 1 : -1;
     }
-
+    
     /* calcular edad de personaje */
     var perfil = ".mbmember";
     var psfield = ".flex.fcolumn";
@@ -269,35 +171,19 @@ jQuery(function ($) {
       percentPosition: false, // put true if you use percentage widths, otherwise put 
       getSortData: {
         nombre: function (itemElem) {
-          return $(itemElem)
-            .find(".mbmci-name strong")
-            .text()
-            .trim()
-            .toLowerCase();
+          return $(itemElem).find(".mbmci-name strong").text().trim().toLowerCase();
         },
         fc: function (itemElem) {
-          return $(itemElem)
-            .find(".mbm-fc .field_uneditable")
-            .text()
-            .trim()
-            .toLowerCase();
+          return $(itemElem).find(".mbm-fc .field_uneditable").text().trim().toLowerCase();
         },
         ascendencia: function (itemElem) {
-          return $(itemElem)
-            .find(".mbmci-desc .field_uneditable")
-            .text()
-            .trim()
-            .toLowerCase();
+          return $(itemElem).find(".mbmci-desc .field_uneditable").text().trim().toLowerCase();
         },
         clase: function (itemElem) {
           return $(itemElem).find(".mbm-weap").text().trim().toLowerCase();
         },
         oficio: function (itemElem) {
-          return $(itemElem)
-            .find(".mbm-ofic .field_uneditable")
-            .text()
-            .trim()
-            .toLowerCase();
+          return $(itemElem).find(".mbm-ofic .field_uneditable").text().trim().toLowerCase();
         },
       },
     });
@@ -308,6 +194,7 @@ jQuery(function ($) {
     // generate filter count
     updateFilterCounts();
 
+    // bind filter a click
     $(".filter.option-set a").click(function (e) {
       var $this = $(this); // cache the clicked link
       var filterAttr = "data-filter-value";
@@ -319,24 +206,11 @@ jQuery(function ($) {
         filterGroup = filters[group] = [];
       }
       var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
-
-      comboFiltering(
-        $this,
-        filters,
-        filterAttr,
-        filterValue,
-        $optionSet,
-        group,
-        $selectAll,
-        activeClass,
-        exclClass,
-      );
-
+      comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,);
+      
       var comboFilter = getComboFilter(filters);
-      $grid.isotope({
-        filter: comboFilter,
-      });
-
+      $grid.isotope({filter: comboFilter,});
+      
       updateFilterCounts();
       $this.toggleClass(activeClass);
       e.preventDefault();
@@ -348,30 +222,20 @@ jQuery(function ($) {
       var itemElems = $container.isotope("getFilteredItemElements");
       var $itemElems = $(itemElems);
 
-      $(".filter.option-set a").each(function (i, a) {
+      $('.filter.option-set a').each(function (i, a) {
         var $label = $(a);
-        var filterValue = $label.attr("data-filter-value");
+        var filterValue = $label.attr('data-filter-value');
         if (!filterValue) {
           // do not update 'any' buttons
           return;
         }
         var count = $itemElems.filter(filterValue).length;
-        $label.parent().find(".filter-count").text(count);
+        $label.parent().append('<span class="filter-count">' + count + '</span>');
       });
     }
 
     // create combo filter fuction
-    function comboFiltering(
-      $this,
-      filters,
-      filterAttr,
-      filterValue,
-      $optionSet,
-      group,
-      $selectAll,
-      activeClass,
-      exclClass,
-    ) {
+    function comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,) {
       if (!$optionSet.hasClass(exclClass)) {
         if (!$this.hasClass(activeClass) && filterValue.length) {
           filters[group].push(filterValue);
@@ -405,7 +269,6 @@ jQuery(function ($) {
         }
       }
     }
-
     function getComboFilter(filters) {
       var i = 0;
       var comboFilters = [];
@@ -432,16 +295,15 @@ jQuery(function ($) {
       return comboFilter;
     }
 
-    // bind sort label click
+    // bind sort a click
     $(".sort.option-set a").click(function (e) {
       var sortByValue = $(this).attr("data-sort-value");
       $grid.isotope({ sortBy: sortByValue });
-      $(this)
-        .parents(".sort")
-        .find("." + activeClass)
-        .removeClass(activeClass);
+      $(this).parents(".sort").find("." + activeClass).removeClass(activeClass);
       $(this).addClass(activeClass);
       e.preventDefault();
     });
+    
   }
+  
 });
