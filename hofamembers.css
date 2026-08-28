@@ -119,6 +119,9 @@
               border-radius: var(--bradius);
               padding: var(--gap0);
               text-box: trim-both cap alphabetic;
+              &:not(:last-of-type) {
+                display: none;
+              }
             }          
           }
         }
