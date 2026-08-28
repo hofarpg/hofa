@@ -67,10 +67,10 @@
 
 @font-face {
     font-family: 'Arcilla';
-    src: url('https://hofarpg.github.io/hofa/fuentes/ARCILLA/Arcilla Regular/Arcilla-Regular.woff2');
-    src: url('https://hofarpg.github.io/hofa/fuentes/ARCILLA/Arcilla Regular/Arcilla-Regular.otf') format('opentype'),
-        url('https://hofarpg.github.io/hofa/fuentes/ARCILLA/Arcilla Regular/Arcilla-Regular.woff') format('woff'),
-        url('https://hofarpg.github.io/hofa/fuentes/ARCILLA/Arcilla Regular/Arcilla-Regular.woff2') format('woff2');
+    src: url('./ARCILLA/Arcilla Regular/Arcilla-Regular.woff2');
+    src: url('./ARCILLA/Arcilla Regular/Arcilla-Regular.otf') format('opentype'),
+        url('./ARCILLA/Arcilla Regular/Arcilla-Regular.woff') format('woff'),
+        url('./ARCILLA/Arcilla Regular/Arcilla-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
