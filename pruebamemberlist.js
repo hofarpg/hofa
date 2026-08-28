@@ -1,179 +1,218 @@
-console.log("MEMBERLIST: inicio del archivo");
+console.log('MEMBERLIST: inicio del archivo');
 
-$(() => {
-  if (!$(".mbmembers").length) {
-    console.log("MEMBERLIST: no hay .mbmembers en esta página");
+jQuery(function ($) {
+  console.log('MEMBERLIST: dentro del ready');
+
+  if (!$('.mbmembers').length) {
+    console.log('MEMBERLIST: no hay .mbmembers en esta página');
     return;
   }
 
-  console.log("MEMBERLIST: hay .mbmembers, empezando lógica");
+  console.log('MEMBERLIST: hay .mbmembers, empezando lógica');
 
-  try {
-    $(
-      '.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")',
-    ).remove();
+  // 1) Remover miembros y cosas que no dependen de $.get
+  $('.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")').remove();
 
-    /* Title de la página */
-    var directorytitle = $(document)
-      .prop("title")
-      .replace("Miembros", "Directorio")
-      .trim();
-    $(document).prop("title", directorytitle);
+  var directorytitle = $(document).prop('title').replace('Miembros', 'Directorio').trim();
+  $(document).prop('title', directorytitle);
 
-    /* Añade filter count a los filtros */
-    $(".mfilt-censo")
-      .find("li:not(:first-child)")
-      .append('<span class="filter-count"></span>');
+  $('.mfilt-censo').find('li:not(:first-child)').append('<span class="filter-count"></span>');
 
-    /* Toggle de categorias */
-    $(".mbm-filtgroup strong").click(function () {
-      $(this).parents(".mbm-filtgroup").toggleClass("showfilters");
-    });
-    /* llenar campos y asignar clases */
-    $(".mbmci-name a").each(function () {
-      var memberlistuser = $(this).attr("href");
-      var self = $(this);
-      $.get(memberlistuser, function (data) {
-        var $member = $(self).parents(".mbmember");
-        var memberank = $(data).find(".pfctrank>span").html();
-        $member.find(".mbm-weap").append(memberank);
-        var memberparent = $(data)
-          .find('.pcfield .pclabel span:contains("Ascendencia")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        $member.find(".mbmci-desc>div>span").append(memberparent);
-        var memberlvl = $(data)
-          .find('.pcfield .pclabel span:contains("Nivel")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        /*$member.find('.mbm-lvl').append(memberlvl);*/
-        var memberfc = $(data)
-          .find('.pcfield .pclabel span:contains("Face claim")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        $member.find(".mbm-fc").append(memberfc);
-        var memberserv = $(data)
-          .find('.pcfield .pclabel span:contains("Servicio")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        $member.find(".mbm-serv").append(memberserv);
-        var memberofic = $(data)
-          .find('.pcfield .pclabel span:contains("Oficio")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        $member.find(".mbm-ofic").append(memberofic);
-        var memberuser = $(data)
-          .find('.pcfield .pclabel span:contains("Alias del usuario")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        $member.find(".mbm-user").append(memberuser);
-        var memberbday = $(data)
-          .find('.pcfield .pclabel span:contains("Fecha de nacimiento")')
-          .parents(".pcfield")
-          .find(".pccontent .field_uneditable");
-        $member.find(".mbm-naci").append(memberbday);
-        var memberbaul = $(data)
-          .find("#field_id13 .field_uneditable a")
-          .attr("href");
-        $member
-          .find(".membau")
-          .html(
-            '<a href="' +
-              memberbaul +
-              '" target="_blank"><i class="fa-regular fa-suitcase" title="Baúl"></i></a>',
-          );
-        var memberbusper = $(data)
-          .find("#field_id14 .field_uneditable a")
-          .attr("href");
-        $member
-          .find(".membpj")
-          .html(
-            '<a href="' +
-              memberbusper +
-              '" target="_blank"><i class="fa-regular fa-fingerprint" title="Búsqueda de Personajes"></i></a>',
-          );
-        var memberbustra = $(data)
-          .find("#field_id15 .field_uneditable a")
-          .attr("href");
-        $member
-          .find(".membtr")
-          .html(
-            '<a href="' +
-              memberbustra +
-              '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>',
-          );
-        var levl = $member
-          .find(".mbm-lvl .field_uneditable")
-          .text()
-          .trim()
-          .toLowerCase()
-          .replace(/\s+/g, "-")
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-        if (levl) $member.addClass("n-" + levl);
-        var weap = $member
-          .find(".mbm-weap")
-          .text()
-          .trim()
-          .toLowerCase()
-          .replace(/\s+/g, "-")
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-        if (weap) $member.addClass("c-" + weap);
-        var ofic = $member
-          .find(".mbm-ofic .field_uneditable")
-          .text()
-          .trim()
-          .toLowerCase()
-          .replace(/\s+/g, "-")
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-        if (ofic) $member.addClass("o-" + ofic);
-        var user = $member
-          .find(".mbm-user .field_uneditable")
-          .text()
-          .trim()
-          .toLowerCase()
-          .replace(/\s+/g, "-")
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-        if (user) $member.addClass("u-" + user);
-        /*$member.filter(".u-administrador").remove();*/
-        $member.filter(".u-nombre").removeClass("u-nombre");
-        $member.find(".field_uneditable:contains(-)").text("Desconocido");
+  $('.mbm-filtgroup strong').click(function () {
+    $(this).parents('.mbm-filtgroup').toggleClass('showfilters');
+  });
 
-        /* calcular edad después de insertar la fecha de nacimiento */
-        getAge(month, year);
-        function getAge(month, year) {
-          var string = $member
-            .find(".mbm-naci")
-            .find(".field_uneditable")
-            .text();
-          var fecha = string.split("/");
-          var age = year - fecha[2];
-          if (fecha[1] > month) {
-            age--;
-          }
-          if (isNaN(age)) {
-            var age = "Desconocida";
-          }
-          $member.find(".mbm-age").html(age);
+  // 2) Preparar procesamiento de miembros con $.get
+  var $links = $(".mbmci-name a");
+  var pending = $links.length;
+  console.log('MEMBERLIST: miembros a procesar con $.get:', pending);
+
+  if (pending === 0) {
+    // Si no hay miembros, inicializa Isotope directo
+    initIsotopeAndCounts();
+    return;
+  }
+
+  $links.each(function () {
+    var $link = $(this);
+    var memberlistuser = $link.attr("href");
+
+    $.get(memberlistuser, function (data) {
+      var $member = $link.parents(".mbmember");
+
+      var memberank = $(data).find(".pfctrank>span").html();
+      $member.find(".mbm-weap").append(memberank);
+
+      var memberparent = $(data)
+        .find('.pcfield .pclabel span:contains("Ascendencia")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+      $member.find(".mbmci-desc>div>span").append(memberparent);
+
+      var memberlvl = $(data)
+        .find('.pcfield .pclabel span:contains("Nivel")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+
+      var memberfc = $(data)
+        .find('.pcfield .pclabel span:contains("Face claim")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+      $member.find(".mbm-fc").append(memberfc);
+
+      var memberserv = $(data)
+        .find('.pcfield .pclabel span:contains("Servicio")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+      $member.find(".mbm-serv").append(memberserv);
+
+      var memberofic = $(data)
+        .find('.pcfield .pclabel span:contains("Oficio")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+      $member.find(".mbm-ofic").append(memberofic);
+
+      var memberuser = $(data)
+        .find('.pcfield .pclabel span:contains("Alias del usuario")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+      $member.find(".mbm-user").append(memberuser);
+
+      var memberbday = $(data)
+        .find('.pcfield .pclabel span:contains("Fecha de nacimiento")')
+        .parents(".pcfield")
+        .find(".pccontent .field_uneditable");
+      $member.find(".mbm-naci").append(memberbday);
+
+      var memberbaul = $(data)
+        .find("#field_id13 .field_uneditable a")
+        .attr("href");
+      $member
+        .find(".membau")
+        .html(
+          '<a href="' +
+            memberbaul +
+            '" target="_blank"><i class="fa-regular fa-suitcase" title="Baúl"></i></a>'
+        );
+
+      var memberbusper = $(data)
+        .find("#field_id14 .field_uneditable a")
+        .attr("href");
+      $member
+        .find(".membpj")
+        .html(
+          '<a href="' +
+            memberbusper +
+            '" target="_blank"><i class="fa-regular fa-fingerprint" title="Búsqueda de Personajes"></i></a>'
+        );
+
+      var memberbustra = $(data)
+        .find("#field_id15 .field_uneditable a")
+        .attr("href");
+      $member
+        .find(".membtr")
+        .html(
+          '<a href="' +
+            memberbustra +
+            '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>'
+        );
+
+      var levl = $member
+        .find(".mbm-lvl .field_uneditable")
+        .text()
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      if (levl) $member.addClass("n-" + levl);
+
+      var weap = $member
+        .find(".mbm-weap")
+        .text()
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      if (weap) $member.addClass("c-" + weap);
+
+      var ofic = $member
+        .find(".mbm-ofic .field_uneditable")
+        .text()
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      if (ofic) $member.addClass("o-" + ofic);
+
+      var user = $member
+        .find(".mbm-user .field_uneditable")
+        .text()
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      if (user) $member.addClass("u-" + user);
+
+      $member.filter(".u-nombre").removeClass("u-nombre");
+      $member.find(".field_uneditable:contains(-)").text("Desconocido");
+
+      // edad
+      getAge();
+      function getAge() {
+        var string = $member.find(".mbm-naci").find(".field_uneditable").text();
+        var fecha = string.split("/");
+        if (fecha.length < 3) {
+          $member.find(".mbm-age").html("Desconocida");
+          return;
         }
-      });
+        var month = new Date().getMonth() + 1;
+        var year = new Date().getFullYear();
+        var age = year - parseInt(fecha[2], 10);
+        if (parseInt(fecha[1], 10) > month) {
+          age--;
+        }
+        if (isNaN(age)) {
+          age = "Desconocida";
+        }
+        $member.find(".mbm-age").html(age);
+      }
+
+      // 3) Cuando termina un $.get, decrementamos pending
+      pending--;
+      console.log('MEMBERLIST: $.get terminado, pendientes:', pending);
+
+      if (pending === 0) {
+        console.log('MEMBERLIST: todos los $.get terminados, inicializando Isotope');
+        initIsotopeAndCounts();
+      }
+    }).fail(function (xhr, status, err) {
+      console.error('MEMBERLIST: falló $.get para', memberlistuser, status, err);
+      pending--;
+      if (pending === 0) {
+        console.log('MEMBERLIST: todos los $.get terminados (con errores), inicializando Isotope');
+        initIsotopeAndCounts();
+      }
     });
+  });
 
-    /* sistema de filtrado */
-    var $container = $(".mbmembers"); // the container with all the elements to filter inside
-    var filters = {}; //should be outside the scope of the filtering function
-    var activeClass = "selected", // the class for active links
-      exclClass = "exclusive"; // the class for exclusive groups
+  // 4) Función que inicializa Isotope y filter counts
+  function initIsotopeAndCounts() {
+    console.log('ISO: inicializando Isotope y filter counts');
 
-    /* --- read the documentation on isotope.metafizzy.co for more options --- */
+    var $container = $(".mbmembers");
+    var filters = {};
+    var activeClass = "selected";
+    var exclClass = "exclusive";
+
     var $grid = $container.isotope({
-      itemSelector: ".mbmember", // the elements to filter
+      itemSelector: ".mbmember",
       layoutMode: "fitRows",
       filter: ".mbmember:not(.c-staff)",
-      percentPosition: false, // put true if you use percentage widths, otherwise put false
+      percentPosition: false,
       getSortData: {
         nombre: function (itemElem) {
           return $(itemElem)
@@ -199,26 +238,28 @@ $(() => {
         clase: function (itemElem) {
           return $(itemElem).find(".mbm-weap").text().trim().toLowerCase();
         },
+        oficio: function (itemElem) {
+          return $(itemElem).find(".mbm-ofic .field_uneditable").text().trim().toLowerCase();
+        }
       },
     });
 
-    // layout after full initialization
     $grid.isotope("layout");
-
-    // generate filter count
     updateFilterCounts();
 
+    // eventos de filtros
     $(".filter.option-set a").click(function (e) {
-      var $this = $(this); // cache the clicked link
+      var $this = $(this);
       var filterAttr = "data-filter-value";
-      var filterValue = $this.attr(filterAttr); // cache the filter
-      var $optionSet = $this.parents(".option-set"); // cache the parent element
-      var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+      var filterValue = $this.attr(filterAttr);
+      var $optionSet = $this.parents(".option-set");
+      var group = $optionSet.attr("data-filter-group");
       var filterGroup = filters[group];
       if (!filterGroup) {
         filterGroup = filters[group] = [];
       }
-      var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
+      var $selectAll = $optionSet.find("a[" + filterAttr + '=""]');
+
       comboFiltering(
         $this,
         filters,
@@ -228,27 +269,27 @@ $(() => {
         group,
         $selectAll,
         activeClass,
-        exclClass,
+        exclClass
       );
+
       var comboFilter = getComboFilter(filters);
       $grid.isotope({
         filter: comboFilter,
       });
+
       updateFilterCounts();
       $this.toggleClass(activeClass);
       e.preventDefault();
     });
 
-    // add filter count
     function updateFilterCounts() {
-      // get filtered item elements
       var itemElems = $container.isotope("getFilteredItemElements");
       var $itemElems = $(itemElems);
+
       $(".filter.option-set a").each(function (i, a) {
         var $label = $(a);
         var filterValue = $label.attr("data-filter-value");
         if (!filterValue) {
-          // do not update 'any' buttons
           return;
         }
         var count = $itemElems.filter(filterValue).length;
@@ -256,7 +297,6 @@ $(() => {
       });
     }
 
-    // create combo filter fuction
     function comboFiltering(
       $this,
       filters,
@@ -266,7 +306,7 @@ $(() => {
       group,
       $selectAll,
       activeClass,
-      exclClass,
+      exclClass
     ) {
       if (!$optionSet.hasClass(exclClass)) {
         if (!$this.hasClass(activeClass) && filterValue.length) {
@@ -301,6 +341,7 @@ $(() => {
         }
       }
     }
+
     function getComboFilter(filters) {
       var i = 0;
       var comboFilters = [];
@@ -338,10 +379,7 @@ $(() => {
       $(this).addClass(activeClass);
       e.preventDefault();
     });
-    console.log("MEMBERLIST: fin del bloque principal");
-  } catch (e) {
-    console.error("MEMBERLIST: ERROR GENERAL:", e);
+
+    console.log('ISO: Isotope y filter counts inicializados');
   }
 });
-
-console.log("MEMBERLIST: después de definir el ready");
