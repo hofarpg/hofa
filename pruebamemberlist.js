@@ -151,28 +151,7 @@ jQuery(function ($) {
 
       $member.filter(".u-nombre").removeClass("u-nombre");
       $member.find(".field_uneditable:contains(-)").text("Desconocido");
-
-      // edad
-      getAge();
-      function getAge() {
-        var string = $member.find(".mbm-naci").find(".field_uneditable").text();
-        var fecha = string.split("/");
-        if (fecha.length < 3) {
-          $member.find(".mbm-age").html("Desconocida");
-          return;
-        }
-        var month = new Date().getMonth() + 1;
-        var year = new Date().getFullYear();
-        var age = year - parseInt(fecha[2], 10);
-        if (parseInt(fecha[1], 10) > month) {
-          age--;
-        }
-        if (isNaN(age)) {
-          age = "Desconocida";
-        }
-        $member.find(".mbm-age").html(age);
-      }
-
+      
       // 3) Cuando termina un $.get, decrementamos pending
       pending--;
 
