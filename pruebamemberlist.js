@@ -1,10 +1,10 @@
-jQuery(function ($) {
+$(() => {
   if (!$(".mbmembers").length) {
     return;
   }
 
   /* eliminar miembros específicos */
-  $('.mbmembers .mbmember:has(".mbmci-name a[href="/u1"], .mbmci-name a[href="/u2"], .mbmci-name a[href="/u3"]")').remove();
+  $('.mbmembers .mbmember[class*="staff"]').remove();
 
   /* cambiar título a directorio */
   var directorytitle = $(document).prop("title").replace("Miembros", "Directorio").trim();
