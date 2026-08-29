@@ -1,4 +1,5 @@
-:root, * {
+:root,
+* {
   --largetab: 62rem;
   --bigtab: 58rem;
   --regtab: 41rem;
@@ -9,6 +10,19 @@
   --nav-top: calc(var(--nav-height) - 1px + var(--gap4));
   scroll-margin-top: var(--nav-top);
 }
+:is(
+    #guidelinks,
+    #guidelinked,
+    #guideconts,
+    .admtitleimg,
+    .admtitle,
+    .admtitmain,
+    .admiman,
+    .registeredsec
+  )
+  > br {
+  display: none !important;
+}
 
 /* GUIDEBOOK */
 #guidebook {
@@ -16,9 +30,6 @@
   align-items: flex-start;
   gap: var(--gap3);
   & > br {
-    display: none !important;
-  }
-  & :is(#guidelinks, #guidelinked, #guideconts, .admtitleimg, .admtitle, .admtitmain, .admiman) > br {
     display: none !important;
   }
   & :is(#guidelinks, #guidelinked) {
@@ -132,9 +143,6 @@
     &.regcol {
       column-count: 2;
     }
-    & > br {
-      display: none!important;
-    }
     & > em {
       font-style: normal;
       font-size: var(--fs-text);
@@ -149,6 +157,9 @@
         background: var(--taccent);
         margin-right: var(--gap1);
         position: relative;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: calc(var(--gap0) / 2);
       }
       & > span {
         & > :is(a, b) {
@@ -339,12 +350,12 @@
     display: inline-block;
     padding: var(--paddclamp7);
     margin-inline: var(--gap3);
-    &.center{
+    &.center {
       display: block;
       width: fit-content;
       margin: auto;
       text-align: center;
-    }  
+    }
     &:has(> ul) > br {
       display: none !important;
     }
@@ -647,7 +658,7 @@
   border-radius: var(--bradius);
   border-left: var(--border2);
   border-right: var(--border2);
-  font:var(--fo-deco2);
+  font: var(--fo-deco2);
   font-weight: 800;
   color: var(--txt4);
 }
@@ -759,11 +770,11 @@
   margin-left: var(--gap3);
 }
 :is(.admintab, #guidebook) details {
-  &>br {
-    display: none!important;
+  & > br {
+    display: none !important;
   }
 }
-:is(.admintab, #guidebook) details.lvl summary{
+:is(.admintab, #guidebook) details.lvl summary {
   cursor: var(--crs2);
 }
 :is(.admintab, #guidebook) details.lvl[open] > span {
@@ -878,7 +889,13 @@
 #expedtab #extbcinfo > br,
 #expedtab #extbclabels > br,
 #expedtab #expimg br,
-#expedtab .expzone > :is(br:is(:first-child, :last-child), br:first-child + br, br + br:last-child),
+#expedtab
+  .expzone
+  > :is(
+    br:is(:first-child, :last-child),
+    br:first-child + br,
+    br + br:last-child
+  ),
 #expedtab #expzdata > br,
 #expedtab .expzone .exptitle > br,
 #expedtab #expzrhoja > br,
@@ -968,7 +985,7 @@
 }
 #expedtab #extbclabels a.preactive {
   color: var(--txt1);
-  border-top-color: var(--accent)!important;
+  border-top-color: var(--accent) !important;
 }
 #expedtab #extbcinfo {
   position: relative;
@@ -989,7 +1006,7 @@
 #expedtab #extbcinfo .expzone {
   width: 100%;
   position: relative;
-  z-index: 1;  
+  z-index: 1;
   padding: var(--gap3);
   background: var(--back1);
 }
@@ -1041,15 +1058,24 @@
   column-rule: var(--border1);
   column-gap: var(--paddclamp7);
   display: inline-block;
-  
-  > li:not(:last-of-type) {margin-bottom: 5px;}
+
+  > li:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
   &:is(ol, ul) {
     margin: 0;
     padding: 0;
-    
-    &:has(li) > br {display: none;}
-    li {list-style: upper-roman inside; padding: 0;}
-    li::marker {font-size: inherit;}
+
+    &:has(li) > br {
+      display: none;
+    }
+    li {
+      list-style: upper-roman inside;
+      padding: 0;
+    }
+    li::marker {
+      font-size: inherit;
+    }
   }
 }
 #expedtab .colu.col2 {
@@ -1083,7 +1109,7 @@
   text-decoration: underline;
   text-decoration-color: var(--taccent);
   text-decoration-thickness: var(--bthickness);
-  text-underline-offset: calc(var(--bthickness) + .05rem);
+  text-underline-offset: calc(var(--bthickness) + 0.05rem);
   line-height: calc(var(--fs-bigger) + 20%);
 }
 #expedtab .expzone .exptitle > em {
@@ -1259,68 +1285,96 @@
 #expedtab .expzhtraits > div:before {
   color: var(--accent);
 }
-#expedtab .expzhtraits > div:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis):before {
-    content: "\f6cb";
+#expedtab
+  .expzhtraits
+  > div:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis):before {
+  content: "\f6cb";
 }
-#expedtab .expzhtraits > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché):before {
-    content: "\f655";
+#expedtab
+  .expzhtraits
+  > div:is(#tyche, #TYCHE, #tyché, #TYCHÉ, #Tyche, #Tyché):before {
+  content: "\f655";
 }
-#expedtab .expzhtraits > div:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone):before {
-    content: "\e5aa";
+#expedtab
+  .expzhtraits
+  > div:is(
+    #persefone,
+    #PERSEFONE,
+    #perséfone,
+    #PERSÉFONE,
+    #Persefone,
+    #Perséfone
+  ):before {
+  content: "\e5aa";
 }
 #expedtab .expzhtraits > div:is(#afrodita, #AFRODITA, #Afrodita):before {
-    content: "\f4ba";
+  content: "\f4ba";
 }
 #expedtab .expzhtraits > div:is(#dioniso, #DIONISO, #Dioniso):before {
-    content: "\f4e3";
+  content: "\f4e3";
 }
 #expedtab .expzhtraits > div:is(#hades, #HADES, #Hades):before {
-    content: "\f54c";
+  content: "\f54c";
 }
-#expedtab .expzhtraits > div:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate):before {
-    content: "\f6bf";
+#expedtab
+  .expzhtraits
+  > div:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate):before {
+  content: "\f6bf";
 }
 #expedtab .expzhtraits > div:is(#hypnos, #HYPNOS, #Hypnos):before {
-    content: "\f34e";
+  content: "\f34e";
 }
 #expedtab .expzhtraits > div:is(#artemisa, #ARTEMISA, #Artemisa):before {
-    content: "\f186";
+  content: "\f186";
 }
-#expedtab .expzhtraits > div:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón):before {
-    content: "\f773";
+#expedtab
+  .expzhtraits
+  > div:is(
+    #poseidon,
+    #POSEIDON,
+    #poseidón,
+    #POSEIDÓN,
+    #Poseidon,
+    #Poseidón
+  ):before {
+  content: "\f773";
 }
 #expedtab .expzhtraits > div:is(#atenea, #ATENEA, #Atenea):before {
-    content: "\f5dc";
+  content: "\f5dc";
 }
-#expedtab .expzhtraits > div:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone):before {
-    content: "\f2dc";
+#expedtab
+  .expzhtraits
+  > div:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone):before {
+  content: "\f2dc";
 }
 #expedtab .expzhtraits > div:is(#hebe, #HEBE, #Hebe):before {
-    content: "\e588";
+  content: "\e588";
 }
 #expedtab .expzhtraits > div:is(#iris, #IRIS, #Iris):before {
-    content: "\f75b";
+  content: "\f75b";
 }
-#expedtab .expzhtraits > div:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter):before {
-    content: "\f72d";
+#expedtab
+  .expzhtraits
+  > div:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter):before {
+  content: "\f72d";
 }
 #expedtab .expzhtraits > div:is(#hermes, #HERMES, #Hermes):before {
-    content: "\f56b";
+  content: "\f56b";
 }
 #expedtab .expzhtraits > div:is(#apolo, #APOLO, #Apolo):before {
-    content: "\f001";
+  content: "\f001";
 }
 #expedtab .expzhtraits > div:is(#zeus, #ZEUS, #Zeus):before {
-    content: "\f0e7";
+  content: "\f0e7";
 }
 #expedtab .expzhtraits > div:is(#hefesto, #HEFESTO, #Hefesto):before {
-    content: "\f6e3";
+  content: "\f6e3";
 }
 #expedtab .expzhtraits > div:is(#hestia, #HESTIA, #hestia):before {
-    content: "\f7e4";
+  content: "\f7e4";
 }
 #expedtab .expzhtraits > div:is(#ares, #ARES, #ares):before {
-    content: "\f71d";
+  content: "\f71d";
 }
 #expedtab #expzhist::-webkit-scrollbar,
 #expedtab #expzextr::-webkit-scrollbar {
@@ -1355,7 +1409,7 @@
 .tabrol2,
 .tabrol3 {
   --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / 0.6);
 }
 .tabrol1 > br,
 .tabrol2 > br,
@@ -1519,7 +1573,8 @@
   min-height: auto;
 }
 /* COMBATE */
-#tabcombatpj, #tabcombatmn {
+#tabcombatpj,
+#tabcombatmn {
   display: flex;
   margin: 0 auto;
   max-width: var(--regtab);
@@ -1534,17 +1589,28 @@
 }
 #tabcombatpj {
   --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / 0.6);
 }
 #tabcombatmn {
   --accent: var(--staff);
-  --taccent: rgb(from var(--staff) r g b / .6);
+  --taccent: rgb(from var(--staff) r g b / 0.6);
 }
 
-:is(#tabcombatpj, #tabcombatmn, .tabcomdata, .tbcmdtname, .tabcomstats, .tabcombatfull, .tabcotskills, .tbctcat) > br,
+:is(
+    #tabcombatpj,
+    #tabcombatmn,
+    .tabcomdata,
+    .tbcmdtname,
+    .tabcomstats,
+    .tabcombatfull,
+    .tabcotskills,
+    .tbctcat
+  )
+  > br,
 :is(#tabcombatpj, #tabcombatmn) > div > br,
 .tabcombless br,
-.tabcommlife br, .tbctcat > i {
+.tabcommlife br,
+.tbctcat > i {
   display: none !important;
 }
 
@@ -1714,7 +1780,7 @@
   font: var(--fo-bod1);
   line-height: 130%;
 }
-:is(.tbctbl,.tbctesta):before {
+:is(.tbctbl, .tbctesta):before {
   float: left;
   font: var(--fo-deco3);
   font-weight: 800;
@@ -1739,10 +1805,14 @@
 .tbctcat {
   gap: var(--gap0);
 }
-.tbctcat:has([data-status]):not(:has([data-status*="uso" i],
-[data-status^="activ" i],
-[data-status*="equip" i],
-[data-status*="vida" i])) {
+.tbctcat:has([data-status]):not(
+    :has(
+      [data-status*="uso" i],
+      [data-status^="activ" i],
+      [data-status*="equip" i],
+      [data-status*="vida" i]
+    )
+  ) {
   display: none;
 }
 .tbctcat [data-status]:before {
@@ -1750,8 +1820,9 @@
 }
 .tbctcat [data-status*="inactiv" i],
 .tbctcat [data-status*="usad" i],
-.tbctcat :is([data-status*="inactiv" i],
-.tbctcat [data-status*="usad" i]) + br {
+.tbctcat
+  :is([data-status*="inactiv" i], .tbctcat [data-status*="usad" i])
+  + br {
   display: none;
 }
 
@@ -1807,31 +1878,79 @@
   flex-direction: column;
   gap: var(--gap3);
 }
-.contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {content: "\f6cb";}
-.contentgroup-tyche #tabcombatpj .tabcomdata > i:before {content: "\f655";}
-.contentgroup-persefone #tabcombatpj .tabcomdata > i:before {content: "\e5aa";}
-.contentgroup-afrodita #tabcombatpj .tabcomdata > i:before {content: "\f4ba";}
-.contentgroup-dioniso #tabcombatpj .tabcomdata > i:before {content: "\f4e3";}
-.contentgroup-hades #tabcombatpj .tabcomdata > i:before {content: "\f54c";}
-.contentgroup-hecate #tabcombatpj .tabcomdata > i:before {content: "\f6bf";}
-.contentgroup-hypnos #tabcombatpj .tabcomdata > i:before {content: "\f34e";}
-.contentgroup-artemisa #tabcombatpj .tabcomdata > i:before {content: "\f186";}
-.contentgroup-poseidon #tabcombatpj .tabcomdata > i:before {content: "\f773";}
-.contentgroup-atenea #tabcombatpj .tabcomdata > i:before {content: "\f5dc";}
-.contentgroup-khione #tabcombatpj .tabcomdata > i:before {content: "\f2dc";}
-.contentgroup-hebe #tabcombatpj .tabcomdata > i:before {content: "\e588";}
-.contentgroup-iris #tabcombatpj .tabcomdata > i:before {content: "\f75b";}
-.contentgroup-demeter #tabcombatpj .tabcomdata > i:before {content: "\f72d";}
-.contentgroup-hermes #tabcombatpj .tabcomdata > i:before {content: "\f56b";}
-.contentgroup-apolo #tabcombatpj .tabcomdata > i:before {content: "\f001";}
-.contentgroup-zeus #tabcombatpj .tabcomdata > i:before {content: "\f0e7";}
-.contentgroup-hefesto #tabcombatpj .tabcomdata > i:before {content: "\f6e3";}
-.contentgroup-hestia #tabcombatpj .tabcomdata > i:before {content: "\f7e4";}
-.contentgroup-ares #tabcombatpj .tabcomdata > i:before {content: "\f71d";}
+.contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {
+  content: "\f6cb";
+}
+.contentgroup-tyche #tabcombatpj .tabcomdata > i:before {
+  content: "\f655";
+}
+.contentgroup-persefone #tabcombatpj .tabcomdata > i:before {
+  content: "\e5aa";
+}
+.contentgroup-afrodita #tabcombatpj .tabcomdata > i:before {
+  content: "\f4ba";
+}
+.contentgroup-dioniso #tabcombatpj .tabcomdata > i:before {
+  content: "\f4e3";
+}
+.contentgroup-hades #tabcombatpj .tabcomdata > i:before {
+  content: "\f54c";
+}
+.contentgroup-hecate #tabcombatpj .tabcomdata > i:before {
+  content: "\f6bf";
+}
+.contentgroup-hypnos #tabcombatpj .tabcomdata > i:before {
+  content: "\f34e";
+}
+.contentgroup-artemisa #tabcombatpj .tabcomdata > i:before {
+  content: "\f186";
+}
+.contentgroup-poseidon #tabcombatpj .tabcomdata > i:before {
+  content: "\f773";
+}
+.contentgroup-atenea #tabcombatpj .tabcomdata > i:before {
+  content: "\f5dc";
+}
+.contentgroup-khione #tabcombatpj .tabcomdata > i:before {
+  content: "\f2dc";
+}
+.contentgroup-hebe #tabcombatpj .tabcomdata > i:before {
+  content: "\e588";
+}
+.contentgroup-iris #tabcombatpj .tabcomdata > i:before {
+  content: "\f75b";
+}
+.contentgroup-demeter #tabcombatpj .tabcomdata > i:before {
+  content: "\f72d";
+}
+.contentgroup-hermes #tabcombatpj .tabcomdata > i:before {
+  content: "\f56b";
+}
+.contentgroup-apolo #tabcombatpj .tabcomdata > i:before {
+  content: "\f001";
+}
+.contentgroup-zeus #tabcombatpj .tabcomdata > i:before {
+  content: "\f0e7";
+}
+.contentgroup-hefesto #tabcombatpj .tabcomdata > i:before {
+  content: "\f6e3";
+}
+.contentgroup-hestia #tabcombatpj .tabcomdata > i:before {
+  content: "\f7e4";
+}
+.contentgroup-ares #tabcombatpj .tabcomdata > i:before {
+  content: "\f71d";
+}
 
-.monstruox .tabcomdata > i:before {content: "\f56b";}
-.monstruoxx .tabcomdata > i:before {content: "\f702";}
-.monstruoxxx .tabcomdata > i:before {content: "\f6d5";}
+.monstruox .tabcomdata > i:before {
+  content: "\f56b";
+}
+.monstruoxx .tabcomdata > i:before {
+  content: "\f702";
+}
+.monstruoxxx .tabcomdata > i:before {
+  content: "\f6d5";
+}
 
 /* FIRMA(S) */
 .previewfirma {
@@ -2065,36 +2184,42 @@
   object-fit: cover;
   object-position: center;
 }
-:is(.tabutrama,.tabupj)[id*="libre" i] .tabudatos:after {
+:is(.tabutrama, .tabupj)[id*="libre" i] .tabudatos:after {
   content: "Libre";
 }
-:is(.tabutrama,.tabupj)[id*="reservada" i] .tabudatos:after {
+:is(.tabutrama, .tabupj)[id*="reservada" i] .tabudatos:after {
   content: "Reservada";
 }
-:is(.tabutrama,.tabupj)[id*="reservado" i] .tabudatos:after {
+:is(.tabutrama, .tabupj)[id*="reservado" i] .tabudatos:after {
   content: "Reservado";
 }
-:is(.tabutrama,.tabupj)[id*="ocupada" i] .tabudatos:after {
+:is(.tabutrama, .tabupj)[id*="ocupada" i] .tabudatos:after {
   content: "Ocupada";
 }
-:is(.tabutrama,.tabupj)[id*="ocupado" i] .tabudatos:after {
+:is(.tabutrama, .tabupj)[id*="ocupado" i] .tabudatos:after {
   content: "Ocupado";
 }
-:is(.tabutrama,.tabupj):is([id*="ocupad" i],[id*="reservad" i]) {
+:is(.tabutrama, .tabupj):is([id*="ocupad" i], [id*="reservad" i]) {
   border-radius: var(--bradius);
   .tabudatos {
     border-bottom: none;
     border-radius: var(--bradius);
   }
-  :is(.tabucont, .tabupjimg) {display: none;}
+  :is(.tabucont, .tabupjimg) {
+    display: none;
+  }
   &.clicked {
     border-radius: 0 !important;
     .tabudatos {
       border-radius: 0 !important;
       border-bottom: var(--border1);
     }
-    .tabucont {display: initial;}
-    .tabupjimg {display: flex;}
+    .tabucont {
+      display: initial;
+    }
+    .tabupjimg {
+      display: flex;
+    }
   }
 }
 .tabusq .tabusqres {
@@ -2108,7 +2233,7 @@
 .tabrelas,
 .tabhojaexp {
   --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / 0.6);
 }
 /* BAÚL */
 .tabaul {
@@ -2258,7 +2383,8 @@
 .tabaul#tbfull .tbaulinks > a:hover {
   color: var(--txt1);
 }
-.tabaul .tbfside1, .tabaul .tbfside2 {
+.tabaul .tbfside1,
+.tabaul .tbfside2 {
   gap: var(--paddclamp3);
 }
 .tabaul .tbfside1 {
@@ -2408,10 +2534,14 @@
 .tabcrono .tabcrcothread:is(#oficio, #Oficio, #OFICIO) > i:before {
   content: "\f807";
 }
-.tabcrono .tabcrcothread:is(#entrenamiento, #Entrenamiento, #ENTRENAMIENTO) > i:before {
+.tabcrono
+  .tabcrcothread:is(#entrenamiento, #Entrenamiento, #ENTRENAMIENTO)
+  > i:before {
   content: "\f44b";
 }
-.tabcrono .tabcrcothread:is(#mision, #Mision, #MISION, #misión, #Misión, #MISIÓN) > i:before {
+.tabcrono
+  .tabcrcothread:is(#mision, #Mision, #MISION, #misión, #Misión, #MISIÓN)
+  > i:before {
   content: "\f70e";
 }
 .tabcrono .tabcrcothread > div {
@@ -2459,7 +2589,7 @@
   background: var(--tback1);
   margin: 0 auto;
   width: 100%;
-  max-width: var(--regtab);  
+  max-width: var(--regtab);
 }
 .tabrelas > br,
 .tabrelas .tabrelascont > br,
@@ -2494,10 +2624,11 @@
     content: "Des. de ";
   }
   > div > span:after {
-  content: "Nadie";
+    content: "Nadie";
   }
 }
-.tabrelas .tabrlcochar:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
+.tabrelas
+  .tabrlcochar:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
   --accent: var(--nemesis);
   & > div > span:after {
     content: "Némesis";
@@ -2509,7 +2640,15 @@
     content: "Tyché";
   }
 }
-.tabrelas .tabrlcochar:is(#persefone, #PERSEFONE, #perséfone, #PERSÉFONE, #Persefone, #Perséfone) {
+.tabrelas
+  .tabrlcochar:is(
+    #persefone,
+    #PERSEFONE,
+    #perséfone,
+    #PERSÉFONE,
+    #Persefone,
+    #Perséfone
+  ) {
   --accent: var(--persefone);
   > div > span:after {
     content: "Perséfone";
@@ -2533,7 +2672,8 @@
     content: "Hades";
   }
 }
-.tabrelas .tabrlcochar:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate) {
+.tabrelas
+  .tabrlcochar:is(#hecate, #HECATE, #hécate, #HÉCATE, #Hecate, #Hécate) {
   --accent: var(--hecate);
   > div > span:after {
     content: "Hécate";
@@ -2551,7 +2691,15 @@
     content: "Artemisa";
   }
 }
-.tabrelas .tabrlcochar:is(#poseidon, #POSEIDON, #poseidón, #POSEIDÓN, #Poseidon, #Poseidón) {
+.tabrelas
+  .tabrlcochar:is(
+    #poseidon,
+    #POSEIDON,
+    #poseidón,
+    #POSEIDÓN,
+    #Poseidon,
+    #Poseidón
+  ) {
   --accent: var(--poseidon);
   > div > span:after {
     content: "Poseidón";
@@ -2563,7 +2711,8 @@
     content: "Atenea";
   }
 }
-.tabrelas .tabrlcochar:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone) {
+.tabrelas
+  .tabrlcochar:is(#khione, #KHIONE, #khíone, #KHÍONE, #Khione, #Khíone) {
   --accent: var(--khione);
   > div > span:after {
     content: "Khíone";
@@ -2581,7 +2730,8 @@
     content: "Iris";
   }
 }
-.tabrelas .tabrlcochar:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter) {
+.tabrelas
+  .tabrlcochar:is(#demeter, #DEMETER, #deméter, #DEMÉTER, #Demeter, #Deméter) {
   --accent: var(--demeter);
   > div > span:after {
     content: "Deméter";
@@ -2837,7 +2987,9 @@
 .tabhojaexp .tabhojcogoalitem:is(#completo, #Completo, #COMPLETO) > i:before {
   content: "\f00c";
 }
-.tabhojaexp .tabhojcogoalitem:is(#incompleto, #Incompleto, #INCOMPLETO) > i:before {
+.tabhojaexp
+  .tabhojcogoalitem:is(#incompleto, #Incompleto, #INCOMPLETO)
+  > i:before {
   content: "\f00d";
 }
 .tabhojaexp .tabhojcogoalitem > div {
@@ -2983,7 +3135,7 @@
   #expedtab .expzhtraits > div.expzhtflaw {
     border-right: none;
     border-bottom: var(--tborder);
-    padding-top:0px;
+    padding-top: 0px;
   }
   #expedtab .expzhtraits > div.expzhtvirtue {
     border-left: none;
