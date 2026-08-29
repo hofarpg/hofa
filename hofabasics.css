@@ -242,7 +242,7 @@ details {
   &::details-content {
     margin-top: var(--gap2);
     block-size: 0;
-    transition: 1s allow-discrete;
+    transition: var(--trs2);
   }
   &[open]::details-content {
     block-size: auto;
