@@ -79,6 +79,9 @@
         position: relative;
         transition: var(--trs1);
       }
+      &:after {
+        display: none;
+      }
       &.preactive {
         color: var(--txt2);
         &:before {
@@ -190,6 +193,51 @@
 
 /* guidebook y generales */
 :is(#guidebook, .admintab) {
+  & :is(strong) {
+    color: var(--accent);
+    font-weight: 800;
+  }
+  & :is(b) {
+    color: var(--txt1);
+    font-weight: 800;
+  }
+  & :is(i) {
+    font-style: italic;
+    color: hsl(from var(--txt4) h s 60%);
+    &:is(
+      [class*="fa-"],
+      [class*="icofont-"],
+      [class*="ph-"],
+      [class*="ra-"],
+      [class*="game-icon-"]
+    ) {
+      font-style: normal;
+      color: unset;
+    }
+  }
+  & :is(a) {
+    font-weight: bold;
+    color: var(--accent);
+    &:after {
+      content: " \f35d";
+      font: var(--fo-icon1);
+      font-size: var(--fs-small);
+      font-weight: 900;
+    }
+  }
+  & :is(u, strike) {
+    text-decoration-color: var(--group);
+    text-decoration-thickness: var(--bthickness);
+  }
+  & :is(u) {
+    font-weight: bold;
+    color: var(--txt2);
+    text-underline-offset: var(--bthickness);
+  }
+  & :is(strike) {
+    font-weight: bold;
+    color: var(--txt4);
+  }
   & .admtitleimg {
     justify-content: center;
     align-items: center;
@@ -219,6 +267,7 @@
     & > i {
       position: absolute;
       font-size: calc(var(--fs-title) + var(--fs-h1));
+      font-style: normal;
       color: var(--taccent);
       opacity: 0.6;
       z-index: 1;
@@ -234,6 +283,7 @@
       color: var(--txt4);
       font: var(--fo-deco2);
       font-weight: bold;
+      font-style: normal;
       width: 100%;
       line-height: 100%;
       text-align: justify;
@@ -270,6 +320,7 @@
       z-index: 0;
       color: var(--taccent);
       font-size: calc((var(--fs-title) + var(--fs-h1)) - 0.5rem);
+      font-style: normal;
     }
     & > u {
       text-transform: uppercase;
@@ -287,6 +338,7 @@
       text-align: justify;
       text-align-last: center;
       font: var(--fo-deco2);
+      font-style: normal;
       font-weight: bold;
       line-height: 110%;
       color: var(--txt4);
@@ -308,6 +360,7 @@
       justify-content: center;
       align-items: center;
       font-size: var(--fs-bigger);
+      font-style: normal;
       color: var(--txt1);
       margin-right: var(--gap3);
     }
