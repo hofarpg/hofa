@@ -244,21 +244,21 @@
       &:not(.showfilters) {
         strong {
           &:before {
-            content: '\2b';
+            content: '\2b'!important;
           }
         }
         ul {
-          display: none;
+          display: none!important;
         }
       }
       &.showfilters {
         strong {
           &:before {
-            content:'\f068';
+            content:'\f068'!important;
           }
         }
         ul {
-          display: flex;
+          display: flex!important;
         }
       }
       strong {
