@@ -251,6 +251,16 @@
           display: none;
         }
       }
+      &.showfilters {
+        strong {
+          &:before {
+            content:'\f068';
+          }
+        }
+        ul {
+          display: flex;
+        }
+      }
       strong {
         cursor: var(--crs2);
         &:before {
