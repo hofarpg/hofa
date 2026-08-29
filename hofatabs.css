@@ -163,9 +163,15 @@
         position: relative;
       }
       &:not(:last-of-type) {
-        margin-bottom: calc(var(--gap0) / 2);
+        margin-bottom: var(--gap1);
+      }
+      &:has(i) {
+        & > span {
+          margin-right: var(--gap1);
+        }
       }
       & > span {
+        line-height: 100%;
         & > :is(a, b) {
           text-transform: uppercase;
           font-weight: 900;
@@ -181,7 +187,7 @@
         text-transform: uppercase;
         font: var(--fo-deco2);
         font-weight: bold;
-        font-style: normal;
+        font-style: normal !important;
         color: var(--txt4);
         & > a {
           color: var(--txt3);
@@ -267,7 +273,7 @@
     & > i {
       position: absolute;
       font-size: calc(var(--fs-title) + var(--fs-h1));
-      font-style: normal;
+      font-style: normal !important;
       color: var(--taccent);
       opacity: 0.6;
       z-index: 1;
@@ -283,7 +289,7 @@
       color: var(--txt4);
       font: var(--fo-deco2);
       font-weight: bold;
-      font-style: normal;
+      font-style: normal !important;
       width: 100%;
       line-height: 100%;
       text-align: justify;
@@ -320,7 +326,7 @@
       z-index: 0;
       color: var(--taccent);
       font-size: calc((var(--fs-title) + var(--fs-h1)) - 0.5rem);
-      font-style: normal;
+      font-style: normal !important;
     }
     & > u {
       text-transform: uppercase;
@@ -338,7 +344,7 @@
       text-align: justify;
       text-align-last: center;
       font: var(--fo-deco2);
-      font-style: normal;
+      font-style: normal !important;
       font-weight: bold;
       line-height: 110%;
       color: var(--txt4);
@@ -360,7 +366,7 @@
       justify-content: center;
       align-items: center;
       font-size: var(--fs-bigger);
-      font-style: normal;
+      font-style: normal !important;
       color: var(--txt1);
       margin-right: var(--gap3);
     }
