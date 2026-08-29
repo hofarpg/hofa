@@ -235,12 +235,12 @@
 /* details */
 
 details {
-  margin: 15px 0;
   overflow: hidden;
   summary {
-    cursor: var(--csr2);
+    cursor: var(--crs2);
   }
   &::details-content {
+    margin-top: var(--gap2);
     block-size: 0;
     transition: 1s allow-discrete;
   }
