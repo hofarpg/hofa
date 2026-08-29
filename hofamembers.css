@@ -78,6 +78,36 @@
       .mbm-filtgroup {
         gap: var(--gap4);
         width: 100%;
+        &:not(.showfilters) {
+          strong {
+            &:before {
+              content:'\f068';
+            }
+          }
+          ul {
+            display: flex;
+          }
+        }
+        &.showfilters {
+          strong {
+            &:before {
+              content: '\2b';
+            }
+          }
+          ul {
+            display: none;
+          }
+        }
+        strong {
+          cursor: var(--crs2);
+          &:before {
+            content: '\f068';
+            font: var(--fo-icon4);
+            color: var(--txt1);
+            font-weight: 900;
+            margin-right: var(--gap2);
+          }
+        }
         strong {
           font: var(--fo-bod-alt2);
           text-transform: uppercase;
@@ -127,7 +157,7 @@
         }
       }
     }
-}
+  }
   .mbmembers {
     flex: 1 0 65%;
     justify-content: space-around;
@@ -138,7 +168,7 @@
     height: fit-content;
     container: memberlist-members / inline-size;
     margin: calc((var(--paddclamp5) / 2) * -1);
-      .mbmember {
+    .mbmember {
       flex: 1 0 30%;
       border: var(--border1);
       width: calc(50% - var(--paddclamp5));
@@ -152,7 +182,6 @@
       overflow: hidden;
       align-self: center;      
       margin: calc(var(--paddclamp5) / 2);
-        
       &[class*="-administrador"] {
         display: none;
       } 
