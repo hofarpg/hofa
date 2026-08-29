@@ -248,7 +248,10 @@
           }
         }
         ul {
-          display: none!important;
+          max-height: 0 !important;
+          overflow: hidden !important;
+          transition: var(--trs2) !important;
+          margin-top: 0 !important;
         }
       }
       &.showfilters {
@@ -258,7 +261,9 @@
           }
         }
         ul {
-          display: flex!important;
+          max-height: 36.8rem !important;
+          transition: var(--trs2) !important;
+          margin-top: var(--gap4) !important;
         }
       }
       strong {
