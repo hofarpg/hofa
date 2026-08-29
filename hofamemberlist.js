@@ -70,7 +70,7 @@ $(() => {
       $member.filter(".u-nombre").removeClass("u-nombre");
 
       /* rellenar campos sin información */
-      $member.find(".field_uneditable:contains(-)").text("Desconocido");
+      $member.find(".field_uneditable:contains(  -)").text("Desconocido");
 
       pending--;
 
