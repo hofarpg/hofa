@@ -51,6 +51,126 @@
   }
   &::-webkit-scrollbar-corner {background: transparent;}
 }
+/* tooltip */
+#s-m-t-tooltip, #truesight {
+  max-width:15rem;
+  top:0px;
+  z-index:999!important;
+  margin:var(--gap5) var(--gap5) var(--gap2) var(--gap4);
+  padding:var(--gap2);
+  text-align:center;
+  font:var(--fo-bod3);
+  color:var(--txt1);
+  background:var(--back1);
+  line-height:100%;
+  text-transform:uppercase;
+  border:var(--border1);
+}
+#truesight {
+    --truesight-color: inherit;
+    --truesight-head-color: var(--txt2);
+    --truesight-icon-color: var(--accent);
+    --truesight-important: color-mix(in srgb, var(--accent), var(--back1));
+    --truesight-important-border: 1px solid rgba(255,255,255,0.1);
+    --truesight-important-color: var(--truesight-head-color);
+    >div {
+        display: grid;
+        grid-template-columns: 100%;
+        place-content: flex-start;
+        gap: .1rem var(--gap2);
+        width: stretch;
+        &[style^="--group:"] {
+            --truesight-icon-color: var(--group);
+            --truesight-head-color: var(--group);
+            --truesight-color: var(--group)
+        }
+        &[style^="--accent:"] {
+            --truesight-icon-color: var(--accent);
+            --truesight-head-color: var(--accent);
+            --truesight-color: var(--accent)
+        }
+    }
+    &:has(.ts-image):has(.ts-head):has(.ts-text) {
+        padding: var(--gap5);      
+        >div {
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: max-content max-content;
+            grid-template-areas: 'image head' 'image text';
+            .ts-head {
+                align-self: flex-end;
+                justify-self: flex-start;
+                text-align: left
+            }
+            .ts-text {
+                align-self: flex-start;
+                justify-self: flex-start
+            }
+        }
+    }
+    &:has(.ts-head):has(.ts-text):not(:has(.ts-image)) {
+        padding: var(--gap4);      
+        >div {
+            grid-template-columns: 100%;
+            grid-template-rows: max-content max-content;
+            grid-template-areas: 'head' 'text'
+        }
+    }
+    &:has(.ts-image):has(.ts-head):not(:has(.ts-text))>div {
+        grid-template-columns: max-content 100%;
+        grid-template-rows: max-content;
+        grid-template-areas: 'image head';
+        .ts-head {
+            align-self: center
+        }
+    }
+    &:has(.ts-image):has(.ts-text):not(:has(.ts-head))>div {
+        grid-template-columns: max-content 100%;
+        grid-template-rows: max-content;
+        grid-template-areas: 'image text';
+        .ts-text {
+            align-self: center
+        }
+    }
+    &:has(.ts-head):not(:has(.ts-text)):not(:has(.ts-image))>div {
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        grid-template-areas: 'head'
+    }
+    &:has(.ts-text):not(:has(.ts-head)):not(:has(.ts-image))>div {
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        grid-template-areas: 'text';
+        .ts-text {
+            text-align: center;
+            text-align-last: center;
+            font: var(--fo-bod3);
+            font-weight: 700;
+            color: var(--txt1);
+            text-transform: uppercase;
+            line-height: 100%
+        }
+    }
+    &:has(.ts-image):not(:has(.ts-head)):not(:has(.ts-text))>div {
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+        grid-template-areas: 'image'
+    }
+    &.important {
+        background: var(--truesight-important);
+        outline: var(--truesight-important-border);
+        outline-offset: -1px;
+        border: 0;
+        color: var(--truesight-important-color)
+    }
+}
+.ts-head {font:var(--fo-bod-alt1);font-weight:900;color:var(--truesight-head-color);text-transform:uppercase;line-height:100%;grid-area:head;}
+.ts-text {grid-area:text;text-align:justify;text-align-last:left;font:var(--fo-bod2);font-weight:400;color:var(--txt4);text-transform:none;line-height:100%;}
+.ts-image {
+  grid-area:image;
+  img {max-width:var(--icon1);display:block;}
+  em {font-size:calc(var(--fs-h3) + .85rem);color:var(--truesight-icon-color);line-height:1;}
+  &:has(em) {display:flex;justify-content:center;align-items:center;gap:.1rem var(--gap2);}
+}
 
 /* selection */
 ::selection, ::target-text {
