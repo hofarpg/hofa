@@ -79,27 +79,27 @@
         gap: var(--gap4);
         width: 100%;
         &:not(.showfilters) {
-          strong {
-            &:before {
-              content:'\f068';
-            }
-          }
-          ul {
-            display: flex;
-          }
+          strong:before {
+             content:'\f068';
+           }
         }
         &.showfilters {
-          strong {
-            &:before {
-              content: '\2b';
-            }
+          strong:before {
+             content: '\2b';
           }
-          ul {
-            display: none;
+          ul {         
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--trs2);
           }
         }
         strong {
           cursor: var(--crs2);
+          font: var(--fo-bod-alt2);
+          text-transform: uppercase;
+          color: var(--accent);
+          font-weight: 900;
+          line-height: 100%;   
           &:before {
             content: '\f068';
             font: var(--fo-icon4);
@@ -108,18 +108,15 @@
             margin-right: var(--gap2);
           }
         }
-        strong {
-          font: var(--fo-bod-alt2);
-          text-transform: uppercase;
-          color: var(--accent);
-          font-weight: 900;
-          line-height: 100%;
-        }
         ul {
+          display: flex;
           flex-wrap: wrap;
           gap: var(--gap2) var(--gap3);
-          margin: 0px;
-          padding: 0px;
+          margin: 0;
+          padding: 0;   
+          max-height: 500px;
+          transition: var(--trs2);
+          
           li {
             font: var(--fo-deco2);
             line-height: 100%;
@@ -149,9 +146,6 @@
               border-radius: var(--bradius);
               padding: var(--gap0);
               text-box: trim-both cap alphabetic;
-              &:not(:last-of-type) {
-                display: none;
-              }
             }          
           }
         }
@@ -175,9 +169,6 @@
       min-width: 19rem;
       height: fit-content;
       container: memberlist-membercont / inline-size;
-      /*position: relative !important;
-      top: unset !important;
-      left: unset !important;*/
       flex-grow: 1;
       overflow: hidden;
       align-self: center;      
@@ -421,9 +412,6 @@
     text-transform: uppercase;
     border: var(--border1);
     background: var(--tback2);
-    position: relative!important;
-    top: unset!important;
-    left: unset!important;
     strong {
       font: var(--fo-bod2);
       font-weight: bold;
