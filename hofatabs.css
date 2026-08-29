@@ -247,8 +247,11 @@
     width: 100%;
     position: relative;
     gap: var(--gap1);
-    margin: var(--gap3) auto var(--paddclamp1);
+    margin: var(--gap3) auto var(--paddclamp3);
     padding: var(--paddclamp3) 0px;
+    &:first-of-type {
+      margin-top: 0px;
+    }
     &:after {
       content: "\f329";
       font: var(--fo-icon2);
@@ -266,7 +269,7 @@
       position: absolute;
       z-index: 0;
       color: var(--taccent);
-      font-size: var(--fs-display);
+      font-size: calc((var(--fs-title) + var(--fs-h1)) - 0.5rem);
     }
     & > u {
       text-transform: uppercase;
