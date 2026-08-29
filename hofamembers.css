@@ -45,7 +45,7 @@
     z-index: 3;
     max-height: calc(100vh - (var(--nav-height) + (var(--padd1) * 2)));
     overflow: auto;
-      > strong {
+    > strong {
       text-transform: uppercase;
       width: 100%;
       font: var(--fo-h4);
@@ -76,7 +76,6 @@
       width: 100%;
       gap: var(--padd0);
       .mbm-filtgroup {
-        gap: var(--gap4);
         width: 100%;
         &:not(.showfilters) {
           strong:before {
@@ -85,12 +84,13 @@
         }
         &.showfilters {
           strong:before {
-             content: '\2b';
+            content: '\2b';
           }
           ul {         
             max-height: 0;
             overflow: hidden;
             transition: var(--trs2);
+            margin-top: 0;
           }
         }
         strong {
@@ -114,10 +114,11 @@
           gap: var(--gap2) var(--gap3);
           margin: 0;
           padding: 0;   
-          max-height: 500px;
+          max-height: 35.8rem;
           transition: var(--trs2);
           
-          li {
+          margin-top: var(--gap4);
+                  li {
             font: var(--fo-deco2);
             line-height: 100%;
             display: flex;
