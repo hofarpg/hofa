@@ -380,6 +380,7 @@
   }
 }
 
+/* MENSAJES ADMINISTRATIVOS */
 .admiman {
   justify-content: center;
   align-items: center;
@@ -392,55 +393,60 @@
   background: var(--back2);
   border: var(--border1);
   border-radius: var(--bradius);
+  & > i {
+    background: var(--accent);
+    width: var(--padd5);
+    height: var(--padd5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--back1);
+    font-size: var(--fs-big);
+    border-radius: var(--bradius);
+    margin-bottom: var(--gap2);
+  }
+  & h3 {
+    text-transform: uppercase;
+    font: var(--fo-h3);
+    font-size: var(--fo-h3-clamp);
+    color: var(--txt1) !important;
+    text-shadow: 1px 1px 0.5px var(--accent);
+    margin: 0px !important;
+    line-height: 90% !important;
+    padding: 0px !important;
+  }
+  & >em {
+    text-transform: uppercase;
+    font: var(--fo-deco2);
+    font-weight: bold;
+    color: var(--txt4);
+    line-height: 110% !important;
+  }
+  & dl.codebox {
+    width: 100% !important;
+    text-align: justify;
+    text-align-last: center;
+    margin-top: var(--gap3) !important;
+    &.hidecode {
+      & dd {
+        padding: var(--gap3) !important;
+        font-size: var(--fs-text);
+        color: var(--txt4);
+      }
+    }
+    &.spoiler {
+      & dd {
+        background: var(--tback1) !important;
+        font-size: var(--fs-text);
+        color: var(--txt4);
+      }
+      & dt {
+        background: var(--back1) !important;
+      }
+    }
+  }
 }
-.admiman > i {
-  background: var(--accent);
-  width: var(--paddclamp5);
-  height: var(--paddclamp5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--back1);
-  font-size: var(--fs-big);
-  border-radius: var(--bradius);
-}
-.admiman h3 {
-  text-transform: uppercase;
-  font: var(--fo-h3);
-  font-size: var(--fo-h3-clamp);
-  color: var(--txt1) !important;
-  text-shadow: 1px 1px 0.5px var(--accent);
-  margin: 0px !important;
-  line-height: 90% !important;
-  padding: 0px !important;
-}
-.admiman > em {
-  text-transform: uppercase;
-  font: var(--fo-deco2);
-  font-weight: bold;
-  color: var(--txt3);
-  line-height: 110% !important;
-  margin-top: var(--gap0) !important;
-}
-.admiman dl.codebox {
-  width: 100% !important;
-  text-align: justify;
-  text-align-last: center;
-  margin-top: var(--gap3) !important;
-}
-.admiman dl.codebox.hidecode dd {
-  padding: var(--gap3) !important;
-  font-size: var(--fs-text);
-  color: var(--txt4);
-}
-.admiman dl.codebox.spoiler dd {
-  background: var(--tback1) !important;
-  font-size: var(--fs-text);
-  color: var(--txt4);
-}
-.admiman dl.codebox.spoiler dt {
-  background: var(--back1) !important;
-}
+
 #nonplayercharacters div.flex > br {
   display: none !important;
 }
