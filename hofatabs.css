@@ -819,6 +819,9 @@
     overflow: auto;
     height: var(--minitab);
     padding: var(--gap3);
+    h4 {
+      text-align: left;
+    }    
   }
   .gdcriatstats {
     flex: 1 0 100%;
