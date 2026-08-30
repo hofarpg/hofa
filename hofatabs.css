@@ -459,6 +459,12 @@
         color: var(--accent);
       }
     }
+    &.lvl {
+      strong {text-transform: uppercase;}
+      &:not(:has(.element-desc:empty)) .element-effect {
+        margin-left: 5px;
+      }
+    }
   }
   ol {
     list-style-type: none;
