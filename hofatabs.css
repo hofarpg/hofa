@@ -571,6 +571,9 @@
     }
   }
 }
+.elem-list + br:last-child {
+  display: none;
+}
 
 /* npcs */
 #nonplayercharacters div.flex > br {
