@@ -121,7 +121,7 @@
       flex-wrap: wrap;
       padding: var(--paddclamp8);
       gap: var(--gap4) var(--gap3);
-      .item-icon {
+          .item-icon {
         font-size: var(--fs-h2);
         color: var(--accent);
       }
@@ -274,7 +274,7 @@
           border-color: var(--accent);
         }
       }
-    }
+}
     /* cesta de compra */
     .boutique_cart {
       gap: var(--paddclamp3);
@@ -412,6 +412,11 @@
 }
 
 /* CATALOGUE RESPONSIVE DESIGN*/
+@media screen and (max-width: 1220px) {
+  .catalogo .objeto {
+    width: calc((100% - (var(--content-gap) * 3)) / 3) !important;
+  }
+}
 @media screen and (max-width: 1000px) {
   .catalogo .objeto {
     width: calc((100% - var(--content-gap)) / 2) !important;
