@@ -900,6 +900,38 @@
   color: var(--accent);
 }
 
+.monstruo {
+  p {
+    margin-top: 0;
+  }
+  &.narr {
+    p {margin-block: 0;}
+    .admtitle {display: none;}
+  }
+  .monster-abilities, .monster-drops {
+    padding-left: 0;
+    margin-block: var(--gap1);
+    li {
+      padding-left: 0;
+      list-style-position: inside;
+      &::marker {
+        content: '\f054  ';
+      }
+      strong {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .monster-drops {
+    li {
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      display: block;
+      padding: 0;
+  }            
+}
+
 /* catalogo */
 #itemcatalogue > br,
 #itemcatalogue > div.flex > br,
