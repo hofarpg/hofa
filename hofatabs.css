@@ -197,6 +197,43 @@
   }
 }
 
+/*cheats*/
+.gd-data {
+  display: none;
+  position: absolute;
+  width: 400px;
+  background: var(--back1);
+  z-index: 1;
+  padding: var(--padd0);
+  border: var(--border1);
+  top: 20px;
+  gap: var(--gap1);
+}
+.gd-cheat {
+  position: relative;
+}
+.gd-cheat:hover .gd-data {
+  display: flex;
+}
+.gd-sub {
+  gap: var(--gap3);
+  text-transform: uppercase;
+  font: var(--fo-deco3);
+  font-weight: 700;
+  color: var(--txt2);
+}
+.gd-name {
+  text-transform: uppercase;
+  cursor: var(--crs2);
+}
+.gd-sub i {
+  font-size: var(--fs-smaller);
+  color: var(--accent);
+}
+.gd-effect {
+  line-height: 100%;
+}
+
 /* guidebook y generales */
 #guidebook, .admintab {
   strong {
