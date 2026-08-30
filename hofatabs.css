@@ -552,9 +552,15 @@
 
 /* clases y dioses */
 .level-list, .lvl {
-  strong {text-transform: uppercase;}  
-  .element-desc + .element-effect {
-    margin-left: 5px;
+  strong {
+    text-transform: uppercase;
+  }  
+  .element-desc + .element-effect:before {
+    content: ' ';
+  }
+  .element-damage {
+    text-decoration: var(--bthickness) underline var(--taccent);
+    text-underline-offset: var(--bthickness);
   }
   &.list-bend {
     li {
