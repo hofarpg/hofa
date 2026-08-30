@@ -2185,7 +2185,7 @@
 .hbcfirma .hbcfirmaquote {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2202,16 +2202,15 @@
 }
 .hbcfirma .hbcfirmaquote:before {
   content: "";
-  width: 20rem;
-  height: 12.857rem;
+  width: 100%;
+  height: 100%;
   position: absolute;
   background: var(--accent);
   z-index: 0;
   mix-blend-mode: multiply;
+  top: 0;
 }
 .hbcfirma .hbcfirmaquote > span {
-  display: block;
-  position: relative;
   z-index: 1;
   text-transform: uppercase;
   font: var(--fo-bod3);
