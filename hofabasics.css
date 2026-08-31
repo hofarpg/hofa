@@ -233,7 +233,6 @@
 }
 
 /* details */
-
 details {
   overflow: hidden;
   summary {
@@ -263,7 +262,84 @@ details {
   flex-direction: column;
 }
 
-/* cosas de panel */
+/* esconder */
+.slm_sticky,
+.grecaptcha-badge,
+.sprite-arrow_prosilver_up,
+ins,
+div[class*="player"][class*="visible"],
+#cuerpo > div[style*="visible"],
+#cuerpo > div[style*="clear:both"],
+#criteo_sticky,
+#vid-container0,
+.post span.corners-top,
+.post span.corners-bottom,
+.panel span.corners-top,
+.panel span.corners-bottom,
+.navbar span.corners-top,
+.navbar span.corners-bottom,
+span.corners-bottom,
+span.corners-top,
+span.corners-bottom span,
+span.corners-top span,
+div[style="height:3px"],
+#Forumactif_Video {
+  display: none !important;
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: -300px !important;
+  left: -300px !important;
+}
+style:empty,
+main > div:empty,
+#nomiresSafe > div:empty,
+#emptyidright,
+div[style="height:3px"],
+#Forumactif_Video,
+.grecaptcha-badge,
+.sprite-arrow_prosilver_up,
+#left,
+#nomiresSafe > div[style*="visible"],
+.clear,
+#nomiresSafe > div.clear,
+#nomiresSafe > br.clear,
+#nomiresSafe > span.clear,
+#nomiresSafe > div[style*="clear:both"],
+#nomiresSafe > br[style*="clear:both"],
+#nomiresSafe > span[style*="clear:both"],
+ins,
+div[class*="player"][class*="visible"],
+main > div[style*="visible"],
+main > div.clear,
+main > br.clear,
+main > span.clear,
+main > div[style*="clear:both"],
+main > br[style*="clear:both"],
+main > span[style*="clear:both"],
+#criteo_sticky,
+#vid-container0,
+.post span.corners-top,
+.post span.corners-bottom,
+.panel span.corners-top,
+.panel span.corners-bottom,
+.navbar span.corners-top,
+.navbar span.corners-bottom,
+span.corners-bottom,
+span.corners-top,
+span.corners-bottom span,
+span.corners-top span {
+  display: none !important;
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  top: -300px !important;
+  left: -300px !important;
+}
+
+/* PANEL */
 .panel.registeru {
   text-align: justify;
   & span[style*="color:red"] {
@@ -360,83 +436,6 @@ details {
     border-left: none !important;
     filter: invert(1) contrast(0.5) !important;
   }
-}
-
-/* esconder */
-.slm_sticky,
-.grecaptcha-badge,
-.sprite-arrow_prosilver_up,
-ins,
-div[class*="player"][class*="visible"],
-#cuerpo > div[style*="visible"],
-#cuerpo > div[style*="clear:both"],
-#criteo_sticky,
-#vid-container0,
-.post span.corners-top,
-.post span.corners-bottom,
-.panel span.corners-top,
-.panel span.corners-bottom,
-.navbar span.corners-top,
-.navbar span.corners-bottom,
-span.corners-bottom,
-span.corners-top,
-span.corners-bottom span,
-span.corners-top span,
-div[style="height:3px"],
-#Forumactif_Video {
-  display: none !important;
-  height: 0px !important;
-  width: 0px !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  top: -300px !important;
-  left: -300px !important;
-}
-style:empty,
-main > div:empty,
-#nomiresSafe > div:empty,
-#emptyidright,
-div[style="height:3px"],
-#Forumactif_Video,
-.grecaptcha-badge,
-.sprite-arrow_prosilver_up,
-#left,
-#nomiresSafe > div[style*="visible"],
-.clear,
-#nomiresSafe > div.clear,
-#nomiresSafe > br.clear,
-#nomiresSafe > span.clear,
-#nomiresSafe > div[style*="clear:both"],
-#nomiresSafe > br[style*="clear:both"],
-#nomiresSafe > span[style*="clear:both"],
-ins,
-div[class*="player"][class*="visible"],
-main > div[style*="visible"],
-main > div.clear,
-main > br.clear,
-main > span.clear,
-main > div[style*="clear:both"],
-main > br[style*="clear:both"],
-main > span[style*="clear:both"],
-#criteo_sticky,
-#vid-container0,
-.post span.corners-top,
-.post span.corners-bottom,
-.panel span.corners-top,
-.panel span.corners-bottom,
-.navbar span.corners-top,
-.navbar span.corners-bottom,
-span.corners-bottom,
-span.corners-top,
-span.corners-bottom span,
-span.corners-top span {
-  display: none !important;
-  height: 0px !important;
-  width: 0px !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  top: -300px !important;
-  left: -300px !important;
 }
 
 /* PREVIEWS Y VISTAS */
@@ -819,20 +818,20 @@ span#dice_to_del {
 /* BÚSQUEDA DE POSTS */
 .postsearchz {
   gap: var(--paddclamp6);
-  & .postzone {
+  .postzone {
     gap: var(--paddclamp7);
     width: 100%;
   }
-  & .post {
+  .post {
     margin: 0px !important;
     padding: 0px !important;
     position: relative;
   }
-  & .post.invipost {
-    --group: #b4bec1;
-    --tgroup: #b4bec199;
+  .post.invipost {
+    --group: var(--inactivos);
+    --tgroup: rgb(from var(--group) r g b / .6);
   }
-  & .postheader {
+  .postheader {
     flex: 1 0 100%;
     width: 100%;
     border: var(--border1);
@@ -842,17 +841,17 @@ span#dice_to_del {
     justify-content: center;
     align-items: flex-start;
   }
-  & .pbsearchpost {
+  .pbsearchpost {
     text-transform: uppercase;
     font: var(--fo-h2-clamp);
     line-height: 85%;
     text-shadow: 1px 1px 0.5px var(--group);
   }
-  & .pbsearchpost > a {
+  .pbsearchpost > a {
     color: var(--txt1) !important;
     line-height: inherit;
   }
-  & .pbsearchinfo {
+  .pbsearchinfo {
     text-transform: uppercase;
     font: var(--fo-deco2);
     font-weight: bold;
@@ -860,7 +859,7 @@ span#dice_to_del {
     line-height: 100%;
     display: block;
   }
-  & .post .postbody {
+  .post .postbody {
     min-height: 28.571rem;
     flex: 1;
     border-left: var(--border1);
@@ -869,10 +868,10 @@ span#dice_to_del {
     background: var(--tback1);
     width: 100%;
   }
-  & .topicnav {
+  .topicnav {
     margin: 0;
   }
-  & .page-title {
+  .page-title {
     margin-block: 0 clamp(var(--gap3), 0.6vw, var(--gap4));
   }
 }
@@ -886,8 +885,8 @@ span#dice_to_del {
   border: var(--border1) !important;
   padding: var(--paddclamp3) !important;
   margin-bottom: var(--gap4) !important;
-  & .ucp-perfil-personalizado {
-    & h4 {
+  .ucp-perfil-personalizado {
+    h4 {
       text-transform: uppercase;
       color: var(--accent);
       font: var(--fo-deco1);
@@ -1276,75 +1275,19 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   font-weight: 800;
   color: var(--back1);
   background: var(--accent);
-  line-height: 110%;
-  padding: var(--gap0) var(--gap1);
-  border-radius: var(--bradius);
+  padding: var(--gap1);
+  border-radius: var(
+  --bradius);
   display: block;
   width: fit-content;
   margin-bottom: var(--gap0);
+  text-box: trim-both cap alphabetic;
 }
 .title-thread .threadtag {
   margin: 0 auto var(--gap1);
 }
-.threadtag[data-filter="ENTRENAMIENTO"],
-.threadtag[data-filter="OFICIO"],
-.threadtag[data-filter="VIGILANCIA"],
-.threadtag[data-filter="FORJA"],
-.threadtag[data-filter="ALQUIMIA"],
-.threadtag[data-filter="ARTESANÍA"],
-.threadtag[data-filter="PRIMEROS AUXILIOS"],
-.threadtag[data-filter="ENCARGO"],
-.threadtag[data-filter="MINI-ENCARGO"] {
-  font-size: 0;
-}
-.topictitle .threadtag[data-filter="ENTRENAMIENTO"]:before,
-.topictitle .threadtag[data-filter="OFICIO"]:before,
-.topictitle .threadtag[data-filter="VIGILANCIA"]:before,
-.topictitle .threadtag[data-filter="FORJA"]:before,
-.topictitle .threadtag[data-filter="ALQUIMIA"]:before,
-.topictitle .threadtag[data-filter="ARTESANÍA"]:before,
-.topictitle .threadtag[data-filter="PRIMEROS AUXILIOS"]:before,
-.topictitle .threadtag[data-filter="ENCARGO"]:before,
-.topictitle .threadtag[data-filter="MINI-ENCARGO"]:before {
-  font-size: var(--fs-smaller);
-  line-height: 110%;
-}
-.post-title .threadtag[data-filter="ENTRENAMIENTO"]:before,
-.post-title .threadtag[data-filter="OFICIO"]:before,
-.post-title .threadtag[data-filter="VIGILANCIA"]:before,
-.post-title .threadtag[data-filter="FORJA"]:before,
-.post-title .threadtag[data-filter="ALQUIMIA"]:before,
-.post-title .threadtag[data-filter="ARTESANÍA"]:before,
-.post-title .threadtag[data-filter="PRIMEROS AUXILIOS"]:before,
-.post-title .threadtag[data-filter="ENCARGO"]:before,
-.post-title .threadtag[data-filter="MINI-ENCARGO"]:before {
-  font-size: var(--fs-smaller);
-  line-height: 110%;
-}
-.title-thread .threadtag[data-filter="ENTRENAMIENTO"]:before,
-.title-thread .threadtag[data-filter="OFICIO"]:before,
-.title-thread .threadtag[data-filter="VIGILANCIA"]:before,
-.title-thread .threadtag[data-filter="FORJA"]:before,
-.title-thread .threadtag[data-filter="ALQUIMIA"]:before,
-.title-thread .threadtag[data-filter="ARTESANÍA"]:before,
-.title-thread .threadtag[data-filter="PRIMEROS AUXILIOS"]:before,
-.title-thread .threadtag[data-filter="ENCARGO"]:before,
-.title-thread .threadtag[data-filter="MINI-ENCARGO"]:before {
-  font-size: var(--fs-smaller);
-  line-height: 110%;
-}
-#tagForm .threadtag[data-filter="ENTRENAMIENTO"],
-#tagForm .threadtag[data-filter="OFICIO"],
-#tagForm .threadtag[data-filter="VIGILANCIA"],
-#tagForm .threadtag[data-filter="FORJA"],
-#tagForm .threadtag[data-filter="ALQUIMIA"],
-#tagForm .threadtag[data-filter="ARTESANÍA"],
-#tagForm .threadtag[data-filter="PRIMEROS AUXILIOS"],
-#tagForm .threadtag[data-filter="ENCARGO"],
-#tagForm .threadtag[data-filter="MINI-ENCARGO"] {
-  font-size: inherit;
-  
-  &:before {display: none !important;}
+#tagForm .threadtag[data-filter] {
+  &:before {display: none;}
 }
 
 .threadtag[data-filter="ENTRENAMIENTO"]:before {
