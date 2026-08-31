@@ -197,65 +197,6 @@
   }
 }
 
-/*cheats*/
-.gd-cheat {
-  position: relative;
-  transition: var(--trs2);
-  .gd-data {
-    display: none;
-    position: absolute;
-    max-width: 100cqi;
-    width: 400px;
-    background: var(--back1);
-    z-index: 1;
-    padding: var(--padd0);
-    border: var(--border1);
-    top: 1em;
-    gap: var(--gap1);
-    margin-top: var(--gap0);
-  }
-  &:hover .gd-data {
-    display: flex;
-  }
-  .gd-name {
-    text-transform: uppercase;
-    cursor: var(--crs2);
-    line-height: 1em;
-  }  
-  .gd-sub {
-    gap: var(--gap0) var(--gap3);
-    text-transform: uppercase;
-    font: var(
-    --fo-deco3);
-    font-weight: 700;
-    color: var(
-    --txt2);
-    flex-wrap: wrap;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
-    i {
-      font-size: var(--fs-smaller);
-      color: var(--accent);
-    }
-  }
-  .gd-effect {
-    line-height: 100%;
-  }
-}
-
-
 /* guidebook y generales */
 #guidebook, .admintab {
   strong {
@@ -269,13 +210,7 @@
   i {
     font-style: italic;
     color: hsl(from var(--txt4) h s 60%);
-    &:is(
-      [class*="fa-"],
-      [class*="icofont-"],
-      [class*="ph-"],
-      [class*="ra-"],
-      [class*="game-icon-"]
-    ) {
+    &:is([class*="fa-"],[class*="icofont-"],[class*="ph-"],[class*="ra-"],[class*="game-icon-"]) {
       font-style: normal;
       color: unset;
     }
@@ -542,7 +477,78 @@
   }
 }
 
-/* mensajes admins */
+/* CHEATS */
+.gd-cheat {
+  position: relative;
+  transition: var(--trs2);
+  .gd-data {
+    display: none;
+    position: absolute;
+    max-width: 100cqi;
+    width: 400px;
+    background: var(--back1);
+    z-index: 1;
+    padding: var(--padd0);
+    border: var(--border1);
+    top: 1em;
+    gap: var(--gap1);
+    margin-top: var(--gap0);    
+    .gd-cheat:hover & {
+      display: flex;
+    }
+  }
+  .gd-name {
+    text-transform: uppercase;
+    cursor: var(--crs2);
+    line-height: 1em;
+  }  
+  .gd-sub {
+    gap: var(--gap0) var(--gap3);
+    text-transform: uppercase;
+    font: var(--fo-deco3);
+    font-weight: 700;
+    color: var(--txt2);
+    flex-wrap: wrap;            
+    i {
+      font-size: var(--fs-smaller);
+      color: var(--accent);
+    }
+  }
+  .gd-effect {
+    line-height: 100%;
+    color: var(--txt4);
+  }
+}
+
+/*ajustes para tablilla de combate*/
+.tbctbl {
+  .gd-cheat {
+    position:static;
+    display: inline;
+  }
+  .gd-name {
+    cursor: initial;
+    &:after {
+      content: '. ';
+    }
+  }
+  .gd-data {
+    display: inline;
+    position: static;
+    background: none;
+    padding: 0;
+    border: 0;
+    .gd-cheat:hover & {display: inline;}
+    .gd-sub {
+      display: none;
+    }
+    & .gd-desc {
+      display: none;
+    }
+  }
+}
+
+/* ADMIN */
 .admiman {
   justify-content: center;
   align-items: center;
@@ -2007,21 +2013,13 @@
   text-transform: uppercase;
   font-weight: 900;
 }
-.tbctbl > i,
-.tbctesta > i {
+.tbctbl > i, .tbctesta i {
   color: var(--txt4);
 }
 .tbctcat {
   gap: var(--gap0);
 }
-.tbctcat:has([data-status]):not(
-    :has(
-      [data-status*="uso" i],
-      [data-status^="activ" i],
-      [data-status*="equip" i],
-      [data-status*="vida" i]
-    )
-  ) {
+.tbctcat:has([data-status]):not(:has([data-status*="uso" i],[data-status^="activ" i],[data-status*="equip" i],[data-status*="vida" i])) {
   display: none;
 }
 .tbctcat [data-status]:before {
@@ -2029,9 +2027,7 @@
 }
 .tbctcat [data-status*="inactiv" i],
 .tbctcat [data-status*="usad" i],
-.tbctcat
-  :is([data-status*="inactiv" i], .tbctcat [data-status*="usad" i])
-  + br {
+.tbctcat:is([data-status*="inactiv" i], .tbctcat [data-status*="usad" i]) + br {
   display: none;
 }
 #tabcombatmn .tabcomstats > div {
