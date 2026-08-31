@@ -30,7 +30,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--gap3);
-  > br {
+  br {
     display: none !important;
   }
   #guidelinks, #guidelinked {
@@ -45,7 +45,7 @@
     flex: 1 0 15%;
     min-width: 180px;
     top: var(--nav-top);
-    > strong {
+    strong {
       text-transform: uppercase;
       color: var(--txt1);
       font: var(--fo-bod-alt1);
@@ -59,7 +59,7 @@
         margin-top: var(--gap0);
       }
     }
-    > a {
+    a {
       cursor: var(--crs2);
       text-transform: uppercase;
       font: var(--fo-deco2);
@@ -104,7 +104,7 @@
       }
     }
     .admtitleimg {
-      & > h2 {
+      > h2 {
         font-size: var(--fo-h2-clamp);
         max-width: var(--regtab);
       }
@@ -131,7 +131,7 @@
       font-size: var(--fo-h3-clamp);
       max-width: var(--smalltab);
     }
-    & > em {
+    > em {
       max-width: var(--smalltab);
     }
   }
@@ -183,13 +183,13 @@
           }
         }
       }
-      & > i {
+      > i {
         text-transform: uppercase;
         font: var(--fo-deco2);
         font-weight: bold;
         font-style: normal !important;
         color: var(--txt4);
-        & > a {
+        > a {
           color: var(--txt3);
         }
       }
@@ -542,7 +542,7 @@
     .gd-sub {
       display: none;
     }
-    & .gd-desc {
+    .gd-desc {
       display: none;
     }
   }
@@ -2834,7 +2834,7 @@
 .tabrelas
   .tabrlcochar:is(#nemesis, #NEMESIS, #némesis, #NÉMESIS, #Nemesis, #Némesis) {
   --accent: var(--nemesis);
-  & > div > span:after {
+  > div > span:after {
     content: "Némesis";
   }
 }
@@ -2885,7 +2885,7 @@
 }
 .tabrelas .tabrlcochar:is(#hypnos, #HYPNOS, #Hypnos) {
   --accent: var(--hypnos);
-  & > div > span:after {
+  > div > span:after {
     content: "Hypnos";
   }
 }
@@ -3267,7 +3267,7 @@
   }
   .tabaul .tbauimg {
     width: clamp(8rem, 20vw, 19.286rem);
-    & span {
+    span {
       display: none;
     }
   }
