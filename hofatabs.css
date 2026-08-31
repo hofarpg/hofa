@@ -204,13 +204,15 @@
   .gd-data {
     display: none;
     position: absolute;
-    width: 400px;
+    max-width: 400px;
+    width: max-content;
     background: var(--back1);
     z-index: 1;
     padding: var(--padd0);
     border: var(--border1);
-    top: 20px;
+    top: 1em;
     gap: var(--gap1);
+    margin-top: var(--gap0);
   }
   &:hover .gd-data {
     display: flex;
@@ -218,13 +220,31 @@
   .gd-name {
     text-transform: uppercase;
     cursor: var(--crs2);
+    line-height: 1em;
   }  
   .gd-sub {
-    gap: var(--gap3);
+    gap: var(--gap0) var(--gap3);
     text-transform: uppercase;
-    font: var(--fo-deco3);
+    font: var(
+    --fo-deco3);
     font-weight: 700;
-    color: var(--txt2);    
+    color: var(
+    --txt2);
+    flex-wrap: wrap;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
     i {
       font-size: var(--fs-smaller);
       color: var(--accent);
@@ -3359,6 +3379,8 @@
   }
 }
 @container postbodycont (max-width: 400px) {
+  /*cheats*/
+  .gd-cheat .gd-data {max-width: 280px}
   /* items y criaturas */
   .gdcriaturas, .admintab {
     .gdcriat .gdcriatimg {
