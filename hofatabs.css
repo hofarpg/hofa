@@ -204,8 +204,8 @@
   .gd-data {
     display: none;
     position: absolute;
-    max-width: 400px;
-    width: max-content;
+    max-width: 100cqi;
+    width: 400px;
     background: var(--back1);
     z-index: 1;
     padding: var(--padd0);
@@ -3326,7 +3326,7 @@
   }
 }
 
-@container postbodycont (max-width: 460px) {
+@container postbodycont (width: 460px) {
   /* expediente */
   #expedtab .expzhtraits {
     flex-direction: column;
@@ -3379,8 +3379,6 @@
   }
 }
 @container postbodycont (max-width: 400px) {
-  /*cheats*/
-  .gd-cheat .gd-data {max-width: 280px}
   /* items y criaturas */
   .gdcriaturas, .admintab {
     .gdcriat .gdcriatimg {
