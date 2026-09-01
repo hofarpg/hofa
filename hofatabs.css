@@ -30,7 +30,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--gap3);
-  br {
+  > br {
     display: none !important;
   }
   #guidelinks, #guidelinked {
@@ -45,7 +45,7 @@
     flex: 1 0 15%;
     min-width: 180px;
     top: var(--nav-top);
-    strong {
+    > strong {
       text-transform: uppercase;
       color: var(--txt1);
       font: var(--fo-bod-alt1);
@@ -59,7 +59,7 @@
         margin-top: var(--gap0);
       }
     }
-    a {
+    > a {
       cursor: var(--crs2);
       text-transform: uppercase;
       font: var(--fo-deco2);
