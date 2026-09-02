@@ -777,7 +777,7 @@
     margin-top: var(--gap1);
     padding: var(--gap1) var(--gap2);
   }
-  #gbnpcreadmore {
+  .gbnpcreadmore {
     position: absolute;
     z-index: 1;
     right: var(--paddclamp7);
@@ -794,7 +794,7 @@
       padding-bottom: 10rem;
     }
     .gbnpcdesc {
-      height: calc(10rem - var(--gap3)) !important;
+      height: calc(10rem - var(--gap3));
       border-width: var(--gap3);
     }
   }
