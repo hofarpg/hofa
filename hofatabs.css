@@ -97,6 +97,9 @@
     padding: var(--paddclamp1);
     background: var(--back1);
     min-height: 40rem;
+    &:has(.gdcriaturas, .gdcitem) {
+      padding: var(--paddclamp6);
+    }
     .guidecont {
       width: 100%;
       &:not(.preactive) {
