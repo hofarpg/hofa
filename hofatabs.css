@@ -410,40 +410,6 @@
       font-size: var(--fs-big);
     }
   }
-  .blockquote {
-    border-inline: var(--tborder);
-    border-radius: var(--bradius);
-    display: inline-block;
-    padding: var(--paddclamp7);
-    margin-inline: var(--gap3);
-    &.center {
-      display: block;
-      width: fit-content;
-      margin: auto;
-      text-align: center;
-    }
-    &:has(> ul) > br {
-      display: none !important;
-    }
-  }
-  .reminder {
-    width: 100%;
-    display: inline-block;
-    border: none;
-    border-radius: var(--bradius);
-    background: var(--taccent);
-    padding: var(--paddclamp7);
-    font: var(--fo-bod2);
-    line-height: 110%;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--txt1);
-    &:before {
-      content: "Aviso: ";
-      color: var(--back1);
-      font-weight: 900;
-    }
-  }
   details {
     > br {
       display: none !important;
@@ -482,6 +448,106 @@
       ol {
         padding-inline: var(--paddclamp7);
       }
+    }
+  }
+}
+
+/* extras */
+.blockquote {
+  border-inline: var(--tborder);
+  border-radius: var(--bradius);
+  display: inline-block;
+  padding: var(--paddclamp7);
+  margin-inline: var(--gap3);
+  &.center {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+  }
+  &:has(> ul) > br {
+    display: none !important;
+  }
+}
+.reminder {
+  width: 100%;
+  display: inline-block;
+  border: none;
+  border-radius: var(--bradius);
+  background: var(--taccent);
+  padding: var(--paddclamp7);
+  font: var(--fo-bod2);
+  line-height: 110%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--txt1);
+  &:before {
+    content: "Aviso: ";
+    color: var(--back1);
+    font-weight: 900;
+  }
+}
+.turn-actions {
+  border-left: var(--bthickness) solid var(--accent);
+  border-right: var(--bthickness) solid var(--accent);
+  > br {
+    display: none!important;
+  }
+  > span {
+    display: block;
+    &:before {
+      content: '\f054';
+      font: var(--fo-icon4);
+      color: var(--accent);
+      font-weight: 900;
+      padding-right: var(--gap2);
+    }
+    &:not(:last-of-type) {
+      margin-bottom: var(--gap0);
+    }
+    > b {
+      text-transform: uppercase;
+      font: var(--fo-deco1);
+      color: var(--txt1) !important;
+      font-weight: 800 !important;
+    }
+    i {
+      font-style: italic;
+      color: hsl(from var(--txt4) h s 60%);
+      &:is([class*="fa-"],[class*="icofont-"],[class*="ph-"],[class*="ra-"],[class*="game-icon-"]) {
+        font-style: normal;
+        color: unset;
+      }
+    }
+    a {
+      font-weight: bold;
+      color: var(--accent);
+      &:after {
+        content: " \f35d"!important;
+        font: var(--fo-icon1);
+        font-size: var(--fs-small);
+        font-weight: 900;
+        
+      }
+      &.mentiontag {
+        color: var(--txt4)!important;
+        &:after {
+          padding-left: var(--gap0);
+        }
+      }
+    }
+    u, strike {
+      text-decoration-color: var(--group);
+      text-decoration-thickness: var(--bthickness);
+    }
+    u {
+      font-weight: bold;
+      color: var(--txt2);
+      text-underline-offset: var(--bthickness);
+    }
+    strike {
+      font-weight: bold;
+      color: var(--txt4);
     }
   }
 }
@@ -655,7 +721,7 @@
 
 /* NPCs */
 #nonplayercharacters {
-  div.flex {
+  > div.flex {
     flex-wrap: wrap;
     gap: var(--gap3);
     justify-content: center;
@@ -793,11 +859,13 @@
 .gdcriaturas .gdcriat .gdcriatimg > br {
   display: none !important;
 }
-.gdcriaturas > div.flex {
-  flex-wrap: wrap;
-  gap: var(--gap3);
-  justify-content: center;
-  align-items: center;
+.gdcriaturas {
+  > div.flex {
+    flex-wrap: wrap;
+    gap: var(--gap3);
+    justify-content: center;
+    align-items: center;
+  }
 }
 .gdcriat {
   flex: 1 0 40%;
@@ -1028,7 +1096,7 @@
   display: none !important;
 }
 #itemcatalogue {
-  div.flex {
+  > div.flex {
     flex-wrap: wrap;
     gap: var(--gap3);
     justify-content: center;
