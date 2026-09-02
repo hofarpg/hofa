@@ -2032,17 +2032,46 @@
   border-radius: var(--bradius);
   position: relative;
 }
-#tbcmblbar {
-  position: absolute;
+
+.tabcommlife {
   width: 100%;
-  height: 100%;
+  height: var(--padd3);
+  background: var(--border2-c);
+  border: var(--gap0) solid var(--back2);
   border-radius: var(--bradius);
   overflow: hidden;
 }
-#tbcmblbar > span {
+#tbcmmlbar, #tbcmblbar {
+  width: 100%;
   height: 100%;
-  display: block;
+  overflow: hidden;
+  padding: 1px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+:is(#tbcmmlbar, #tbcmblbar):before {
+  height: 100%;
   background: var(--accent);
+  opacity: .9;
+  width: calc(attr(actual number, 0) / attr(total number, 0) * 100%);
+  content: '';
+  justify-self: start;
+}
+#tbcmmlbar:before,
+#tbcmmlbar:after {
+  position: absolute;
+}
+#tbcmmlbar:after {
+  content: attr(actual) "/" attr(total);
+  font: var(--fo-bod3);
+  font-weight: bold;
+  color: var(--accent);
+  mix-blend-mode: difference;
+}
+#tbcmblbar {
+  border-radius: var(--bradius);
+  padding: 0;
 }
 .tabcotskills {
   height: 100%;
@@ -2130,55 +2159,12 @@
 #tabcombatmn .tabcomstats > div {
   flex: 1 0 40%;
 }
-.tabcommlife {
-  width: 100%;
-  height: var(--padd3);
-  background: var(--border2-c);
-  border: var(--gap0) solid var(--back2);
-  border-radius: var(--bradius);
-  overflow: hidden;
-  position: relative;
-}
-#tbcmmlbar {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-  padding: 1px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#tbcmmlbar > span {
-  overflow: hidden;
-  height: 100%;
-  display: block;
-  background: var(--accent);
-  position: absolute;
-  z-index: 0;
-  top: 0px;
-  left: 0px;
-  opacity: 0.9;
-}
-#tbcmmlbar:before,
-#tbcmmlbar:after {
-  position: relative;
-  z-index: 1;
-}
-#tbcmmlbar:after {
-  content: attr(actual) "/" attr(total);
-  font: var(--fo-bod3);
-  font-weight: bold;
-  color: var(--accent);
-  mix-blend-mode: difference;
-}
 .tabcombatfull {
   display: flex;
   flex-direction: column;
   gap: var(--gap3);
 }
+
 .contentgroup-nemesis #tabcombatpj .tabcomdata > i:before {
   content: "\f6cb";
 }
