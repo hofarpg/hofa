@@ -98,7 +98,13 @@
     background: var(--back1);
     min-height: 40rem;
     &:has(.gdcriaturas, .gdcitem) {
-      padding: var(--paddclamp6);
+      padding: 0;
+      & .guidecont {
+        padding: var(--paddclamp1);
+        &:has(.gdcriaturas, .gdcitem) {
+          padding: var(--paddclamp6);
+        }
+      }
     }
     .guidecont {
       width: 100%;
