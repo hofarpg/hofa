@@ -239,7 +239,7 @@
   max-width: 20.5rem;
   top: 0px;
   z-index: 999 !important;
-  margin: var(--gap5) var(--gap5) var(--gap2) var(--gap4);
+  margin: var(--gap3) var(--gap0);
   padding: var(--gap2);
   text-align: center;
   font: var(--fo-bod3);
