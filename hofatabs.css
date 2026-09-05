@@ -48,9 +48,9 @@
     top: var(--nav-top);
     > strong {
       text-transform: uppercase;
-      color: var(--txt1);
+      color: var(--txt1) !important;
       font: var(--fo-bod-alt1);
-      font-weight: 900;
+      font-weight: 900 !important;
       line-height: 120%;
       text-decoration: underline;
       text-decoration-thickness: var(--bthickness);
@@ -98,11 +98,13 @@
     padding: var(--paddclamp1);
     background: var(--back1);
     min-height: 40rem;
-    &:has(.gdcriaturas, .gdcitem) {
+    &:has(.gdcriat, .gdcitem) {
       padding: 0;
       & .guidecont {
-        padding: var(--paddclamp1);
-        &:has(.gdcriaturas, .gdcitem) {
+        &:not(&:has(.gdcriat, .gdcitem)) {
+          padding: var(--paddclamp1);
+        }
+        &:has(.gdcriat, .gdcitem) {
           padding: var(--paddclamp6);
         }
       }
@@ -885,8 +887,8 @@
       border-left: var(--border2);
       border-right: var(--border2);
       font: var(--fo-deco2);
-      font-weight: 800;
-      color: var(--txt4);
+      font-weight: 800 !important;
+      color: var(--txt4) !important;
       > i {
         font-style: normal !important;
         font-size: var(--fs-small);
@@ -980,8 +982,8 @@
       border-left: var(--border2);
       border-right: var(--border2);
       font: var(--fo-bod2);
-      font-weight: bold;
-      color: var(--txt4);
+      font-weight: bold !important;
+      color: var(--txt4) !important;
       > i {
         font-style: normal !important;
         font-size: var(--fs-small);
@@ -1099,9 +1101,9 @@
     gap: var(--gap0);
     > strong {
       flex: 1 0 100%;
-      color: var(--txt4);
+      color: var(--txt4) !important;
       font: var(--fo-bod2);
-      font-weight: bold;
+      font-weight: bold !important;
       text-transform: uppercase;
       line-height: 120%;
       > i {
