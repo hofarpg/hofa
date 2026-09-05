@@ -855,6 +855,7 @@
   border: var(--border1);
   background: var(--tback2);
   flex-wrap: wrap;
+  container: criaturacont / inline-size;
   &.mark {
     .gdcriatimg {
       &:before {
@@ -3292,15 +3293,6 @@
       }
     }
   }
-  /* criaturas */
-  .gdcriat {
-    .gdcriatimg {
-      flex: 1 0 100%;
-      height: 12rem;
-      border-right: none;
-      border-bottom: var(--border1);
-    }
-  }
   /* expediente */
   #expedtab .expzhstats {
     flex: 1;
@@ -3337,6 +3329,15 @@
 }
 
 @container postbodycont (max-width: 560px) {
+  /* criaturas */
+  .gdcriat {
+    .gdcriatimg {
+      flex: 1 0 100%;
+      height: 12rem;
+      border-right: none;
+      border-bottom: var(--border1);
+    }
+  }
   /* expediente */
   #expedtab .expzhstats > b {
     flex: 1 0 25%;
@@ -3461,5 +3462,14 @@
   .blockquote,
   .registeredsec {
     margin: 0px var(--gap0) !important;
+  }
+}
+
+@container criaturacont (max-width: 350px) {
+  .gdcriatimg {
+    flex: 1 0 100% !important;
+    height: 12rem !important;
+    border-right: none;
+    border-bottom: var(--border1);
   }
 }
