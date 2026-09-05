@@ -193,7 +193,7 @@ $(() => {
     updateFilterCounts();
 
     // bind filter a click
-    $filterButtonGroup.click(function (e) 
+    $filterButtonGroup.click(function (e) {
       e.preventDefault();
       var $this = $(this); // cache the clicked link
       var filterAttr = "data-filter-value";
