@@ -472,9 +472,9 @@
       transition: var(--trs1);
     }
     &:not([open]) {
+      display: flex;
       ul, ol, p, div {
         margin: 0 !important;
-        
         &:empty {
           display: none !important;
         }
