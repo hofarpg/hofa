@@ -166,7 +166,6 @@ $(() => {
     var $grid = $container.isotope({
       itemSelector: ".mbmember", // the elements to filter
       layoutMode: "fitRows", 
-      filter: ".mbmember:not(.contentgroup-staff)",
       percentPosition: false, // put true if you use percentage widths, otherwise put false
       getSortData: {
         nombre: function (itemElem) {
@@ -208,10 +207,7 @@ $(() => {
       comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,);
       
       var comboFilter = getComboFilter(filters);
-      //$grid.isotope({filter: comboFilter,});
-      
-      // set filter in hash
-      location.hash = 'filter=' + encodeURIComponent( comboFilter );
+      $grid.isotope({filter: comboFilter,});
       
       updateFilterCounts();
       e.preventDefault();
@@ -300,31 +296,6 @@ $(() => {
       var comboFilter = comboFilters.join(", ");
       return comboFilter;
     }
-
-    // hash filtering
-    function getHashFilter() {
-      // get filter=filterName
-      var matches = location.hash.match( /filter=([^&]+)/i );
-      var hashFilter = matches && matches[1];
-      return hashFilter && decodeURIComponent( hashFilter );
-    }
-
-    var isIsotopeInit = false;
-    function onHashchange() {
-      var hashFilter = getHashFilter();
-      if ( !hashFilter && isIsotopeInit ) {
-        return;
-      }
-      isIsotopeInit = true;
-      // filter isotope by hash
-      $grid.isotope({
-        filter: hashFilter || "*"
-      });
-    }    
-    $(window).on( 'hashchange', onHashchange );
-    
-    // trigger event handler to init Isotope
-    onHashchange();
 
     // bind sort a click
     $(".sort.option-set a").click(function (e) {
