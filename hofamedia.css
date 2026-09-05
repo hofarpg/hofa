@@ -332,6 +332,21 @@
   footer .skincredit > span {
     display: none;
   }
+  /* truesight */
+  #truesight {
+    .ts-image {
+      display: none !important;
+    }
+    &:has(.ts-image):has(.ts-head):has(.ts-text) {
+      &>div {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        grid-template-areas:
+          "head"
+          "text";
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {  
