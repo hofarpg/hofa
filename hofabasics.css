@@ -49,37 +49,139 @@
   --i-usuarios: "\f6ba";
 }
 
-[class*="group-guest"], [class*="group-nogroup"], :is([class*="group-guest"],[class*="group-nogroup"]) + .post-dados { --group: var(--staff); --i-group: var(--i-usuarios);}
-[class*="group-staff"], [class*="group-staff"] + .post-dados { --group: var(--staff); --i-group: var(--i-staff);}
-[class*="group-nogroup"], [class*="group-nogroup"] + .postdados { --group: var(--usuarios); --i-group: var(--i-usuarios);}
-[class*="group-nemesis"], [class*="group-nemesis"] + .postdados { --group: var(--nemesis); --i-group: var(--i-nemesis);}
-[class*="group-tyche"], [class*="group-tyche"] + .postdados { --group: var(--tyche); --i-group: var(--i-tyche);}
-[class*="group-persefone"], [class*="group-persefone"] + .postdados { --group: var(--persefone); --i-group: var(--i-persefone);}
-[class*="group-afrodita"], [class*="group-afrodita"] + .postdados { --group: var(--afrodita); --i-group: var(--i-afrodita);}
-[class*="group-dioniso"], [class*="group-dioniso"] + .postdados { --group: var(--dioniso); --i-group: var(--i-dioniso);}
-[class*="group-hades"], [class*="group-hades"] + .postdados { --group: var(--hades); --i-group: var(--i-hades);}
-[class*="group-hecate"], [class*="group-hecate"] + .postdados { --group: var(--hecate); --i-group: var(--i-hecate);}
-[class*="group-hypnos"], [class*="group-hypnos"] + .postdados { --group: var(--hypnos); --i-group: var(--i-hypnos);}
-[class*="group-artemisa"], [class*="group-artemisa"] + .postdados { --group: var(--artemisa); --i-group: var(--i-artemisa);}
-[class*="group-poseidon"], [class*="group-poseidon"] + .postdados { --group: var(--poseidon); --i-group: var(--i-poseidon);}
-[class*="group-atenea"], [class*="group-atenea"] + .postdados { --group: var(--atenea); --i-group: var(--i-atenea);}
-[class*="group-khione"], [class*="group-khione"] + .postdados { --group: var(--khione); --i-group: var(--i-khione);}
-[class*="group-hebe"], [class*="group-hebe"] + .postdados { --group: var(--hebe); --i-group: var(--i-hebe);}
-[class*="group-iris"], [class*="group-iris"] + .postdados { --group: var(--iris); --i-group: var(--i-iris);}
-[class*="group-demeter"], [class*="group-demeter"] + .postdados { --group: var(--demeter); --i-group: var(--i-demeter);}
-[class*="group-hermes"], [class*="group-hermes"] + .postdados { --group: var(--hermes); --i-group: var(--i-hermes);}
-[class*="group-hestia"], [class*="group-hestia"] + .postdados { --group: var(--hestia); --i-group: var(--i-hestia);}
-[class*="group-apolo"], [class*="group-apolo"] + .postdados { --group: var(--apolo); --i-group: var(--i-apolo);}
-[class*="group-zeus"], [class*="group-zeus"] + .postdados { --group: var(--zeus); --i-group: var(--i-zeus);}
-[class*="group-hefesto"], [class*="group-hefesto"] + .postdados { --group: var(--hefesto); --i-group: var(--i-hefesto);}
-[class*="group-ares"], [class*="group-ares"] + .postdados { --group: var(--ares); --i-group: var(--i-ares);}
-[class*="group-"], [class*="group-"] + .postdados {--tgroup: rgb(from var(--group) r g b / .6); --accent: var(--group); --taccent: var(--tgroup);}
+[class*="group-guest"],
+[class*="group-nogroup"],
+:is([class*="group-guest"], [class*="group-nogroup"]) + .post-dados {
+  --group: var(--staff);
+  --i-group: var(--i-usuarios);
+}
+[class*="group-staff"],
+[class*="group-staff"] + .post-dados {
+  --group: var(--staff);
+  --i-group: var(--i-staff);
+}
+[class*="group-nogroup"],
+[class*="group-nogroup"] + .postdados {
+  --group: var(--usuarios);
+  --i-group: var(--i-usuarios);
+}
+[class*="group-nemesis"],
+[class*="group-nemesis"] + .postdados {
+  --group: var(--nemesis);
+  --i-group: var(--i-nemesis);
+}
+[class*="group-tyche"],
+[class*="group-tyche"] + .postdados {
+  --group: var(--tyche);
+  --i-group: var(--i-tyche);
+}
+[class*="group-persefone"],
+[class*="group-persefone"] + .postdados {
+  --group: var(--persefone);
+  --i-group: var(--i-persefone);
+}
+[class*="group-afrodita"],
+[class*="group-afrodita"] + .postdados {
+  --group: var(--afrodita);
+  --i-group: var(--i-afrodita);
+}
+[class*="group-dioniso"],
+[class*="group-dioniso"] + .postdados {
+  --group: var(--dioniso);
+  --i-group: var(--i-dioniso);
+}
+[class*="group-hades"],
+[class*="group-hades"] + .postdados {
+  --group: var(--hades);
+  --i-group: var(--i-hades);
+}
+[class*="group-hecate"],
+[class*="group-hecate"] + .postdados {
+  --group: var(--hecate);
+  --i-group: var(--i-hecate);
+}
+[class*="group-hypnos"],
+[class*="group-hypnos"] + .postdados {
+  --group: var(--hypnos);
+  --i-group: var(--i-hypnos);
+}
+[class*="group-artemisa"],
+[class*="group-artemisa"] + .postdados {
+  --group: var(--artemisa);
+  --i-group: var(--i-artemisa);
+}
+[class*="group-poseidon"],
+[class*="group-poseidon"] + .postdados {
+  --group: var(--poseidon);
+  --i-group: var(--i-poseidon);
+}
+[class*="group-atenea"],
+[class*="group-atenea"] + .postdados {
+  --group: var(--atenea);
+  --i-group: var(--i-atenea);
+}
+[class*="group-khione"],
+[class*="group-khione"] + .postdados {
+  --group: var(--khione);
+  --i-group: var(--i-khione);
+}
+[class*="group-hebe"],
+[class*="group-hebe"] + .postdados {
+  --group: var(--hebe);
+  --i-group: var(--i-hebe);
+}
+[class*="group-iris"],
+[class*="group-iris"] + .postdados {
+  --group: var(--iris);
+  --i-group: var(--i-iris);
+}
+[class*="group-demeter"],
+[class*="group-demeter"] + .postdados {
+  --group: var(--demeter);
+  --i-group: var(--i-demeter);
+}
+[class*="group-hermes"],
+[class*="group-hermes"] + .postdados {
+  --group: var(--hermes);
+  --i-group: var(--i-hermes);
+}
+[class*="group-hestia"],
+[class*="group-hestia"] + .postdados {
+  --group: var(--hestia);
+  --i-group: var(--i-hestia);
+}
+[class*="group-apolo"],
+[class*="group-apolo"] + .postdados {
+  --group: var(--apolo);
+  --i-group: var(--i-apolo);
+}
+[class*="group-zeus"],
+[class*="group-zeus"] + .postdados {
+  --group: var(--zeus);
+  --i-group: var(--i-zeus);
+}
+[class*="group-hefesto"],
+[class*="group-hefesto"] + .postdados {
+  --group: var(--hefesto);
+  --i-group: var(--i-hefesto);
+}
+[class*="group-ares"],
+[class*="group-ares"] + .postdados {
+  --group: var(--ares);
+  --i-group: var(--i-ares);
+}
+[class*="group-"],
+[class*="group-"] + .postdados {
+  --tgroup: rgb(from var(--group) r g b / 0.6);
+  --accent: var(--group);
+  --taccent: var(--tgroup);
+}
 
 /* ESENCIALES */
 @supports at-rule(@function) {
   @function --transparent(--color: var(--accent)) {
-    result: rgba(from var(--color) r g b / .6);
-  }  
+    result: rgba(from var(--color) r g b / 0.6);
+  }
   @function --aborder(--thickness: 1px, --color: var(--accent)) {
     result: var(--thickness) solid var(--color);
   }
@@ -114,143 +216,176 @@
 }
 :not(body) {
   &::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-  border-left: none;
+    width: 3px;
+    height: 3px;
+    border-left: none;
   }
   &::-webkit-scrollbar-track {
-  background: transparent;
-  border: none;
+    background: transparent;
+    border: none;
   }
   &::-webkit-scrollbar-thumb {
-  background: var(--tborder-c);
-  border: none;
+    background: var(--tborder-c);
+    border: none;
   }
-  &::-webkit-scrollbar-corner {background: transparent;}
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }
 /* tooltip */
-#s-m-t-tooltip, #truesight {
-  max-width:15rem;
-  top:0px;
-  z-index:999!important;
-  margin:var(--gap5) var(--gap5) var(--gap2) var(--gap4);
-  padding:var(--gap2);
-  text-align:center;
-  font:var(--fo-bod3);
-  color:var(--txt1);
-  background:var(--back1);
-  line-height:100%;
-  text-transform:uppercase;
-  border:var(--border1);
+#s-m-t-tooltip,
+#truesight {
+  border-radius: var(--bradius);
+  max-width: 20.5rem;
+  top: 0px;
+  z-index: 999 !important;
+  margin: var(--gap5) var(--gap5) var(--gap2) var(--gap4);
+  padding: var(--gap2);
+  text-align: center;
+  font: var(--fo-bod3);
+  color: var(--txt1);
+  background: var(--back1);
+  line-height: 100%;
+  text-transform: uppercase;
+  border: var(--border1);
 }
 #truesight {
-    --truesight-color: inherit;
-    --truesight-head-color: var(--txt2);
-    --truesight-icon-color: var(--accent);
-    --truesight-important: color-mix(in srgb, var(--accent), var(--back1));
-    --truesight-important-border: 1px solid rgba(255,255,255,0.1);
-    --truesight-important-color: var(--truesight-head-color);
-    >div {
-        display: grid;
-        grid-template-columns: 100%;
-        place-content: flex-start;
-        gap: .1rem var(--gap2);
-        width: stretch;
-        &[style^="--group:"] {
-            --truesight-icon-color: var(--group);
-            --truesight-head-color: var(--group);
-            --truesight-color: var(--group)
-        }
-        &[style^="--accent:"] {
-            --truesight-icon-color: var(--accent);
-            --truesight-head-color: var(--accent);
-            --truesight-color: var(--accent)
-        }
+  --truesight-color: inherit;
+  --truesight-head-color: var(--txt2);
+  --truesight-icon-color: var(--accent);
+  --truesight-important: color-mix(in srgb, var(--accent), var(--back1));
+  --truesight-important-border: 1px solid rgba(255, 255, 255, 0.1);
+  --truesight-important-color: var(--truesight-head-color);
+  > div {
+    display: grid;
+    grid-template-columns: 100%;
+    place-content: flex-start;
+    gap: 0.1rem var(--gap2);
+    width: stretch;
+    &[style^="--group:"] {
+      --truesight-icon-color: var(--group);
+      --truesight-head-color: var(--group);
+      --truesight-color: var(--group);
     }
-    &:has(.ts-image):has(.ts-head):has(.ts-text) {
-        padding: var(--gap5);      
-        >div {
-            grid-template-columns: max-content 1fr;
-            grid-template-rows: max-content max-content;
-            grid-template-areas: 'image head' 'image text';
-            .ts-head {
-                align-self: flex-end;
-                justify-self: flex-start;
-                text-align: left
-            }
-            .ts-text {
-                align-self: flex-start;
-                justify-self: flex-start
-            }
-        }
+    &[style^="--accent:"] {
+      --truesight-icon-color: var(--accent);
+      --truesight-head-color: var(--accent);
+      --truesight-color: var(--accent);
     }
-    &:has(.ts-head):has(.ts-text):not(:has(.ts-image)) {
-        padding: var(--gap4);      
-        >div {
-            grid-template-columns: 100%;
-            grid-template-rows: max-content max-content;
-            grid-template-areas: 'head' 'text'
-        }
+  }
+  &:has(.ts-image):has(.ts-head):has(.ts-text) {
+    padding: var(--gap5);
+    > div {
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: max-content max-content;
+      grid-template-areas: "image head" "image text";
+      .ts-head {
+        align-self: flex-end;
+        justify-self: flex-start;
+        text-align: left;
+      }
+      .ts-text {
+        align-self: flex-start;
+        justify-self: flex-start;
+      }
     }
-    &:has(.ts-image):has(.ts-head):not(:has(.ts-text))>div {
-        grid-template-columns: max-content 100%;
-        grid-template-rows: max-content;
-        grid-template-areas: 'image head';
-        .ts-head {
-            align-self: center
-        }
+  }
+  &:has(.ts-head):has(.ts-text):not(:has(.ts-image)) {
+    padding: var(--gap4);
+    > div {
+      grid-template-columns: 100%;
+      grid-template-rows: max-content max-content;
+      grid-template-areas: "head" "text";
     }
-    &:has(.ts-image):has(.ts-text):not(:has(.ts-head))>div {
-        grid-template-columns: max-content 100%;
-        grid-template-rows: max-content;
-        grid-template-areas: 'image text';
-        .ts-text {
-            align-self: center
-        }
+  }
+  &:has(.ts-image):has(.ts-head):not(:has(.ts-text)) > div {
+    grid-template-columns: max-content 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "image head";
+    .ts-head {
+      align-self: center;
     }
-    &:has(.ts-head):not(:has(.ts-text)):not(:has(.ts-image))>div {
-        grid-template-columns: 100%;
-        grid-template-rows: max-content;
-        grid-template-areas: 'head'
+  }
+  &:has(.ts-image):has(.ts-text):not(:has(.ts-head)) > div {
+    grid-template-columns: max-content 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "image text";
+    .ts-text {
+      align-self: center;
     }
-    &:has(.ts-text):not(:has(.ts-head)):not(:has(.ts-image))>div {
-        grid-template-columns: 100%;
-        grid-template-rows: max-content;
-        grid-template-areas: 'text';
-        .ts-text {
-            text-align: center;
-            text-align-last: center;
-            font: var(--fo-bod3);
-            font-weight: 700;
-            color: var(--txt1);
-            text-transform: uppercase;
-            line-height: 100%
-        }
+  }
+  &:has(.ts-head):not(:has(.ts-text)):not(:has(.ts-image)) > div {
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "head";
+  }
+  &:has(.ts-text):not(:has(.ts-head)):not(:has(.ts-image)) > div {
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "text";
+    .ts-text {
+      text-align: center;
+      text-align-last: center;
+      font: var(--fo-bod3);
+      font-weight: 700;
+      color: var(--txt1);
+      text-transform: uppercase;
+      line-height: 100%;
     }
-    &:has(.ts-image):not(:has(.ts-head)):not(:has(.ts-text))>div {
-        grid-template-columns: max-content;
-        grid-template-rows: max-content;
-        grid-template-areas: 'image'
-    }
-    &.important {
-        background: var(--truesight-important);
-        outline: var(--truesight-important-border);
-        outline-offset: -1px;
-        border: 0;
-        color: var(--truesight-important-color)
-    }
+  }
+  &:has(.ts-image):not(:has(.ts-head)):not(:has(.ts-text)) > div {
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    grid-template-areas: "image";
+  }
+  &.important {
+    background: var(--truesight-important);
+    outline: var(--truesight-important-border);
+    outline-offset: -1px;
+    border: 0;
+    color: var(--truesight-important-color);
+  }
 }
-.ts-head {font:var(--fo-bod-alt1);font-weight:900;color:var(--truesight-head-color);text-transform:uppercase;line-height:100%;grid-area:head;}
-.ts-text {grid-area:text;text-align:justify;text-align-last:left;font:var(--fo-bod2);font-weight:400;color:var(--txt4);text-transform:none;line-height:100%;}
+.ts-head {
+  font: var(--fo-bod-alt1);
+  font-weight: 900;
+  color: var(--truesight-head-color);
+  text-transform: uppercase;
+  line-height: 100%;
+  grid-area: head;
+}
+.ts-text {
+  grid-area: text;
+  text-align: justify;
+  text-align-last: left;
+  font: var(--fo-bod2);
+  font-weight: 400;
+  color: var(--txt4);
+  text-transform: none;
+  line-height: 100%;
+}
 .ts-image {
-  grid-area:image;
-  img {max-width:var(--icon1);display:block;}
-  em {font-size:calc(var(--fs-h3) + .85rem);color:var(--truesight-icon-color);line-height:1;}
-  &:has(em) {display:flex;justify-content:center;align-items:center;gap:.1rem var(--gap2);}
+  grid-area: image;
+  img {
+    max-width: var(--icon1);
+    display: block;
+  }
+  em {
+    font-size: calc(var(--fs-h3) + 0.85rem);
+    color: var(--truesight-icon-color);
+    line-height: 1;
+  }
+  &:has(em) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem var(--gap2);
+  }
 }
 
 /* selection */
-::selection, ::target-text {
+::selection,
+::target-text {
   background: var(--taccent);
   color: var(--txt1);
   text-shadow: var(--shadow1);
@@ -271,7 +406,9 @@ details {
     block-size: auto;
     block-size: calc-size(auto, size);
   }
-  summary + br {display: none}
+  summary + br {
+    display: none;
+  }
 }
 
 /* flex y grid */
@@ -433,14 +570,14 @@ span.corners-top span {
 .password-container {
   width: 100%;
   display: flex;
-  border: var(--border1)!important;
+  border: var(--border1) !important;
   border-radius: var(--bradius);
   overflow: hidden;
   & input {
-    border-top:none!important;
-    border-bottom:none!important;
-    border-left:none!important;
-    border-radius: 0!important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-radius: 0 !important;
     flex: 1;
   }
   & .show_hide_pwd {
@@ -456,7 +593,7 @@ span.corners-top span {
     flex-shrink: 0;
     height: 100%;
     width: calc(var(--gap5) * 2.2);
-    cursor: var(--crs2)!important;
+    cursor: var(--crs2) !important;
     border-left: none !important;
     filter: invert(1) contrast(0.5) !important;
   }
@@ -587,7 +724,7 @@ span#dice_to_del {
   justify-content: center;
   align-items: center;
 }
-.privmess p>a {
+.privmess p > a {
   text-transform: uppercase;
   font: var(--fo-bod3);
   font-weight: 900;
@@ -683,8 +820,8 @@ span#dice_to_del {
   position: absolute;
   width: var(--padd1);
   height: var(--padd1);
-  top: -.5rem;
-  right: -.5rem;
+  top: -0.5rem;
+  right: -0.5rem;
   border-radius: 100%;
   background-color: var(--back1);
   transform: scale(0);
@@ -853,7 +990,7 @@ span#dice_to_del {
   }
   .post.invipost {
     --group: var(--inactivos);
-    --tgroup: rgb(from var(--group) r g b / .6);
+    --tgroup: rgb(from var(--group) r g b / 0.6);
   }
   .postheader {
     flex: 1 0 100%;
@@ -922,7 +1059,7 @@ span#dice_to_del {
       width: 100%;
       text-align: center;
       &:before {
-        content:'';
+        content: "";
         width: 100%;
         height: 1px;
         background: var(--border1-c);
@@ -1114,8 +1251,14 @@ span#dice_to_del {
 fieldset dl:is(.ucp-fecha-de-nacimiento, .ucp-nacimiento-del-usuario) {
   & dd {
     flex-direction: row !important;
-    & select {flex: 1;}
-    & input, & .inputbox {width:  auto !important;flex: 1;}
+    & select {
+      flex: 1;
+    }
+    & input,
+    & .inputbox {
+      width: auto !important;
+      flex: 1;
+    }
   }
 }
 .ucp-exportacion-de-datos dd a.button1 {
@@ -1233,10 +1376,10 @@ dl.ucp-avatar img {
   padding: var(--gap0) var(--gap2);
 }
 #cont_pwd > div::after {
-    font: var(--fo-icon4);
-    font-weight: bold;
-    line-height: 100%;
-    margin-left: var(--gap1);
+  font: var(--fo-icon4);
+  font-weight: bold;
+  line-height: 100%;
+  margin-left: var(--gap1);
 }
 div#pwd_bad:after {
   content: "\f146";
@@ -1247,7 +1390,9 @@ div#pwd_middle:after {
 div#pwd_good:after {
   content: "\f0fe";
 }
-div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="display:none;"])) {
+div#cont_pwd:not(
+    :has(.pwd_img[style*="display: none;"], .pwd_img[style*="display:none;"])
+  ) {
   display: none !important;
 }
 
@@ -1300,8 +1445,7 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   color: var(--back1);
   background: var(--accent);
   padding: var(--gap1);
-  border-radius: var(
-  --bradius);
+  border-radius: var(--bradius);
   display: block;
   width: fit-content;
   margin-bottom: var(--gap0);
@@ -1311,7 +1455,9 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
   margin: 0 auto var(--gap1);
 }
 #tagForm .threadtag[data-filter] {
-  &:before {display: none;}
+  &:before {
+    display: none;
+  }
 }
 
 .threadtag[data-filter="ENTRENAMIENTO"]:before {
