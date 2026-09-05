@@ -819,6 +819,21 @@
   border: var(--border1);
   background: var(--tback2);
   flex-wrap: wrap;
+  &.mark {
+    .gdcriatimg {
+      &:before {
+        content: "\f321";
+        position: absolute;
+        z-index: 1;
+        top: var(--gap3);
+        right: var(--gap3);
+        font: var(--fo-icon1);
+        font-weight: 800;
+        font-size: var(--fs-big);
+        color: var(--group);
+      }
+    }
+  }
   .gdcriatimg {
     position: relative;
     flex: 1 0 30%;
@@ -845,13 +860,11 @@
     }
     .gdcriatname {
       text-transform: uppercase;
-      font: var(--fo-bod-alt1);
-      font-weight: bold;
+      font: var(--fo-deco1);
+      font-size: var(--fs-big);
+      font-weight: 900;
       color: var(--txt2);
-      text-decoration: underline;
-      text-decoration-thickness: var(--bthickness);
-      text-underline-offset: var(--bthickness);
-      line-height: 120%;
+      line-height: 110%;
       margin-bottom: var(--gap0);
       text-decoration-color: var(--taccent);
     }
@@ -869,7 +882,8 @@
     height: var(--minitab);
     padding: var(--gap3);
     h4 {
-      text-align: left;
+      text-align: left !important;
+      margin: var(--gap4) 0 !important;
     }
   }
   .gdcriatstats {
