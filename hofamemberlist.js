@@ -322,7 +322,7 @@ $(() => {
       // filter isotope
       $grid.isotope({
         // use filterFns
-        filter: filterFns[ hashFilter ] || hashFilter
+        filter: hashFilter
       });
       // set selected class on button
       if ( hashFilter ) {
