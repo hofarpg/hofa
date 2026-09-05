@@ -213,7 +213,7 @@ $(() => {
       //$grid.isotope({filter: comboFilter,});
       
       // set filter in hash
-      location.hash = 'filter=' + encodeURIComponent( filterValue );
+      location.hash = 'filter=' + encodeURIComponent( comboFilter );
       
       updateFilterCounts();
       $this.toggleClass(activeClass);
@@ -319,15 +319,14 @@ $(() => {
         return;
       }
       isIsotopeInit = true;
-      // filter isotope
+      // filter isotope by hash
       $grid.isotope({
-        // use filterFns
         filter: hashFilter
       });
       // set selected class on button
       if ( hashFilter ) {
-        $filterButtonGroup.find('.is-checked').removeClass('is-checked');
-        $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+        $filterButtonGroup.find(activeClass).removeClass(activeClass);
+        $filterButtonGroup.find('[' + filterAttr + '="' + hashFilter + '"]').addClass(activeClass);
       }
     }    
     $(window).on( 'hashchange', onHashchange );
