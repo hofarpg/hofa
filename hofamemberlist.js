@@ -162,6 +162,7 @@ $(() => {
     var filters = {}; //should be outside the scope of the filtering function
     var activeClass = "selected"; // the class for active links
     var exclClass = "exclusive"; // the class for exclusive groups
+    var $filterButtonGroup = $(".filter.option-set a"); // the filtering buttons
 
     /* --- read the documentation on isotope.metafizzy.co for more options --- */
     var $grid = $container.isotope({
@@ -195,7 +196,7 @@ $(() => {
     updateFilterCounts();
 
     // bind filter a click
-    $(".filter.option-set a").click(function (e) {
+    $filterButtonGroup.click(function (e) {
       var $this = $(this); // cache the clicked link
       var filterAttr = "data-filter-value";
       var filterValue = $this.attr(filterAttr); // cache the filter
@@ -209,7 +210,10 @@ $(() => {
       comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,);
       
       var comboFilter = getComboFilter(filters);
-      $grid.isotope({filter: comboFilter,});
+      //$grid.isotope({filter: comboFilter,});
+      
+      // set filter in hash
+      location.hash = 'filter=' + encodeURIComponent( filterAttr );
       
       updateFilterCounts();
       $this.toggleClass(activeClass);
@@ -299,6 +303,37 @@ $(() => {
       var comboFilter = comboFilters.join(", ");
       return comboFilter;
     }
+
+    // hash filtering
+    function getHashFilter() {
+      // get filter=filterName
+      var matches = location.hash.match( /filter=([^&]+)/i );
+      var hashFilter = matches && matches[1];
+      return hashFilter && decodeURIComponent( hashFilter );
+    }
+
+    var isIsotopeInit = false;
+    function onHashchange() {
+      var hashFilter = getHashFilter();
+      if ( !hashFilter && isIsotopeInit ) {
+        return;
+      }
+      isIsotopeInit = true;
+      // filter isotope
+      $grid.isotope({
+        // use filterFns
+        filter: filterFns[ hashFilter ] || hashFilter
+      });
+      // set selected class on button
+      if ( hashFilter ) {
+        $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+        $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+      }
+    }    
+    $(window).on( 'hashchange', onHashchange );
+    
+    // trigger event handler to init Isotope
+    onHashchange();
 
     // bind sort a click
     $(".sort.option-set a").click(function (e) {
