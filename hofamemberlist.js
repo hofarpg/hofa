@@ -238,8 +238,11 @@ $(() => {
 
     // create combo filter fuction
     function comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,) {
-      if (!$optionSet.hasClass(exclClass)) {
-        if (!$this.hasClass(activeClass) && filterValue.length) {
+      var isExclusive = $optionSet.hasClass(exclClass);
+      var hasActive = $this.hasClass(activeClass);
+      
+      if (!isExclusive) {
+        if (!hasActive && filterValue.length) {
           filters[group].push(filterValue);
           $selectAll.removeClass(activeClass);
         } else if (filterValue.length) {
@@ -252,21 +255,21 @@ $(() => {
           filters[group] = [];
         }
       } else {
-        if (!$this.hasClass(activeClass) && filterValue.length) {
-          $optionSet.find("a." + activeClass).each(function (k, filterLink) {
-            var removeFilter = $(filterLink).attr(filterAttr);
-            var removeIndex = filters[group].indexOf(removeFilter);
-            filters[group].splice(removeIndex, 1);
-          });
+        if (!hasActive && filterValue.length) {
+          $optionSet.find("a." + activeClass).removeClass(activeClass);
+          filters[group] = [];   
+          
+          $this.addClass(activeClass);
           filters[group].push(filterValue);
+          $selectAll.removeClass(activeClass);
           $optionSet.find("a." + activeClass).removeClass(activeClass);
         } else if (filterValue.length) {
-          var curIndex = filters[group].indexOf(filterValue);
-          if (curIndex > -1) filters[group].splice(curIndex, 1);
-          if (!$optionSet.find("a." + activeClass).not($this).length)
-            $selectAll.addClass(activeClass);
+          $this.removeClass(activeClass);
+          filters[group] = [];
+          $selectAll.addClass(activeClass);
         } else {
           $optionSet.find("a." + activeClass).removeClass(activeClass);
+          $selectAll.addClass(activeClass);
           filters[group] = [];
         }
       }
