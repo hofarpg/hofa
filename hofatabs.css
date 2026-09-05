@@ -161,6 +161,9 @@
     .admtitmain {
       max-width: var(--regtab);
     }
+    .guico-txt {
+      margin-top: var(--paddclamp5)!important;
+    }
   }
 }
 
