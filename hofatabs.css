@@ -699,7 +699,7 @@
 }
 
 /* NPCs */
-#nonplayercharacters {
+.nonplayercharacters {
   > div.flex {
     flex-wrap: wrap;
     gap: var(--gap3);
@@ -3267,6 +3267,7 @@
           text-transform: lowercase !important;
           font-style: italic !important;
           font-weight: 300 !important;
+          text-decoration-color: var(--taccent) !important;
           &.preactive {
             text-transform: uppercase !important;
             text-decoration: var(--bthickness) underline var(--taccent);
