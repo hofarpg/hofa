@@ -264,7 +264,6 @@ $(() => {
           $this.addClass(activeClass);
           filters[group].push(filterValue);
           $selectAll.removeClass(activeClass);
-          $optionSet.find("a." + activeClass).removeClass(activeClass);
         } else if (filterValue.length) {
           $this.removeClass(activeClass);
           filters[group] = [];
