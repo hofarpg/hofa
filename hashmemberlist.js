@@ -290,9 +290,12 @@ $(() => {
     }
     function onHashchange() {
       var hashFilter = getHashParam("filter");
-      var hashSort = getHashParam("sort") || "original-order";
+      var hashSort = getHashParam("sort") || "original-order";      
       
-      $grid.isotope({ filter: hashFilter || "*" });
+      $grid.isotope({ 
+        filter: hashFilter || "*",
+        sortBy: hashSort
+      });
       
       // Remove all active selected class
       $filterButtonGroup.removeClass(activeClass);
