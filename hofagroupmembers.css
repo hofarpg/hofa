@@ -42,6 +42,7 @@
     & > em {
       margin-bottom: var(--gap1);
       &:before {
+        content: var(--i-group);
         color: var(--group);
         font: var(--fo-icon1);
         font-weight: 900;
