@@ -155,18 +155,18 @@ $(() => {
       $(psfield).parents(perfil).find(psfieldEnganche).html(age);
     }
     
-/* sistema de filtrado */
-    var $container = $(".mbmembers"); // el contenedor con todos los elementos
-    var filters = {}; // Objeto que guarda los filtros activos por grupo
-    var activeClass = "selected"; // clase para enlaces activos
-    var exclClass = "exclusive"; // clase para grupos de selección única (exclusivos)
-    var $filterButtonGroup = $(".filter.option-set a"); 
-    
+    /* sistema de filtrado */
+    var $container = $(".mbmembers"); // the container with all the elements to filter inside
+    var filters = {}; //should be outside the scope of the filtering function
+    var activeClass = "selected"; // the class for active links
+    var exclClass = "exclusive"; // the class for exclusive groups
+    var $filterButtonGroup = $(".filter.option-set a"); // the filtering buttons
+
+    /* --- read the documentation on isotope.metafizzy.co for more options --- */
     var $grid = $container.isotope({
-      itemSelector: ".mbmember", 
+      itemSelector: ".mbmember", // the elements to filter
       layoutMode: "fitRows", 
-      filter: "*", // Cambiado para mostrar todos los elementos por defecto
-      percentPosition: false, 
+      percentPosition: false, // put true if you use percentage widths, otherwise put false
       getSortData: {
         nombre: function (itemElem) {
           return $(itemElem).find(".mbmci-name strong").text().trim().toLowerCase();
@@ -188,10 +188,10 @@ $(() => {
     
     // layout after full initialization
     $grid.isotope("layout");
-
+    
     // generate filter count
     updateFilterCounts();
-
+    
     // bind filter a click
     $filterButtonGroup.click(function (e) {
       e.preventDefault();
@@ -219,13 +219,13 @@ $(() => {
           var curIndex = filters[group].indexOf(filterValue);
           if (curIndex > -1) filters[group].splice(curIndex, 1);
         } else {
-          filters[group] = []; // Clic en "Ver todos"
+          filters[group] = [];
         }
       } else {
         if (!hasActive && filterValue.length) {
           filters[group] = [filterValue];
         } else {
-          filters[group] = []; // Deseleccionar o clic en "Ver todos"
+          filters[group] = [];
         }
       }
       
@@ -295,12 +295,24 @@ $(() => {
       // Remove all active selected class
       $filterButtonGroup.removeClass(activeClass);
       
+      filters = {};
+      
       if (hashFilter && hashFilter !== "*") {
-        var activeFilters = hashFilter.split(/(?=\.)/);         
-        activeFilters.forEach(function(selector) {
-          var cleanSelector = selector.replace(/,\s*/g, "").trim();
-          $filterButtonGroup.filter('[data-filter-value="' + cleanSelector + '"]').addClass(activeClass);
-        });    
+        $filterButtonGroup.each(function() {
+          var $button = $(this);
+          var val = $button.attr('data-filter-value');
+          
+          if (val && hashFilter.indexOf(val) !== -1) {
+            $button.addClass(activeClass);
+            
+            var group = $button.parents(".option-set").attr("data-filter-group");
+            if (!filters[group]) filters[group] = [];
+            if (filters[group].indexOf(val) === -1) {
+              filters[group].push(val);
+            }
+          }
+        });
+        
         // Add selected class to buttons
         $(".filter.option-set").each(function() {
           var $set = $(this);
