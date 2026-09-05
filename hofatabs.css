@@ -3284,17 +3284,17 @@
   }
   .tabcomainblock,
   .tabcotxtblock {
-    max-width: none;
+    max-width: none !important;
     width: 100%;
     align-self: stretch;
-    flex: 1;
+    flex: 1 !important;
   }
   .tabcotskills {
-    height: inherit;
-    padding-left: 0px;
-    border-left: none;
+    height: inherit !important;
+    padding-left: 0px !important;
+    border-left: none !important;
     border-top: var(--border2);
-    padding-top: var(--gap3);
+    padding-top: var(--gap3) !important;
   }
   .tabcomainblock {
     min-height: 17.2rem;
