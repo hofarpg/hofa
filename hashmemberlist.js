@@ -233,7 +233,8 @@ $(() => {
       var comboFilter = getComboFilter(filters);
       
       // generate hash url from filters
-      location.hash = 'filter=' + encodeURIComponent(comboFilter || "*");
+      var currentSort = getHashParam("sort") || "original-order";
+      location.hash = 'filter=' + encodeURIComponent(comboFilter || "*") + '&sort=' + currentSort;
     });
     
     // add filter count 
@@ -283,20 +284,23 @@ $(() => {
     }
     
     // Hash filtering
-    function getHashFilter() {
-      var matches = location.hash.match(/filter=([^&]+)/i);
+    function getHashParam(param) {
+      var matches = location.hash.match(new RegExp(param + '=([^&]+)', 'i'));
       return matches ? decodeURIComponent(matches[1]) : null;
     }
     function onHashchange() {
-      var hashFilter = getHashFilter();
+      var hashFilter = getHashParam("filter");
+      var hashSort = getHashParam("sort") || "original-order";
       
       $grid.isotope({ filter: hashFilter || "*" });
       
       // Remove all active selected class
       $filterButtonGroup.removeClass(activeClass);
+      $(".sort.option-set a").removeClass(activeClass);
       
       filters = {};
       
+      // Sync filter button visual states
       if (hashFilter && hashFilter !== "*") {
         $filterButtonGroup.each(function() {
           var $button = $(this);
@@ -311,8 +315,7 @@ $(() => {
               filters[group].push(val);
             }
           }
-        });
-        
+        });        
         // Add selected class to buttons
         $(".filter.option-set").each(function() {
           var $set = $(this);
@@ -329,6 +332,14 @@ $(() => {
         filters = {}; 
       }
       
+      // Sync sort button visual states
+      var $activeSortButton = $(".sort.option-set a[data-sort-value='" + hashSort + "']");
+      if ($activeSortButton.length) {
+        $activeSortButton.addClass(activeClass);
+      } else {
+        $(".sort.option-set a[data-sort-value='original-order']").addClass(activeClass);
+      }
+      
       updateFilterCounts();
     }    
     $(window).on('hashchange', onHashchange);
@@ -338,10 +349,9 @@ $(() => {
     // bind sort a click
     $(".sort.option-set a").click(function (e) {
       e.preventDefault();
-      var sortByValue = $(this).attr("data-sort-value");
-      $grid.isotope({ sortBy: sortByValue });
-      $(this).parents(".sort").find("." + activeClass).removeClass(activeClass);
-      $(this).addClass(activeClass);
+      var sortByValue = $(this).attr("data-sort-value") || "original-order";
+      var currentFilter = getHashParam("filter") || "*";
+      location.hash = 'filter=' + encodeURIComponent(currentFilter) + '&sort=' + sortByValue;
     });
     
   }
