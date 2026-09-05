@@ -243,15 +243,17 @@ $(() => {
       
       if (!isExclusive) {
         if (!hasActive && filterValue.length) {
+          $this.addClass(activeClass);
           filters[group].push(filterValue);
           $selectAll.removeClass(activeClass);
         } else if (filterValue.length) {
+          $this.removeClass(activeClass);
           var curIndex = filters[group].indexOf(filterValue);
-          if (curIndex > -1) filters[group].splice(curIndex, 1);
-          if (!$optionSet.find("a." + activeClass).not($this).length)
-            $selectAll.addClass(activeClass);
+          if (curIndex > -1) filters[group].splice(curIndex, 1);      
+          if (!$optionSet.find("a." + activeClass).length) $selectAll.addClass(activeClass);
         } else {
           $optionSet.find("a." + activeClass).removeClass(activeClass);
+          $selectAll.addClass(activeClass);
           filters[group] = [];
         }
       } else {
