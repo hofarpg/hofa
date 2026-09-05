@@ -213,7 +213,7 @@ $(() => {
       //$grid.isotope({filter: comboFilter,});
       
       // set filter in hash
-      location.hash = 'filter=' + encodeURIComponent( filterAttr );
+      location.hash = 'filter=' + encodeURIComponent( filterValue );
       
       updateFilterCounts();
       $this.toggleClass(activeClass);
