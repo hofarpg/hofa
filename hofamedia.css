@@ -335,6 +335,7 @@
   /* truesight */
   #truesight {
     padding: var(--gap1)!important;
+    max-width: 12rem !important;
     .ts-image {
       display: none !important;
     }
@@ -345,6 +346,12 @@
         grid-template-areas:
           "head"
           "text";
+        * {
+          align-self: center!important;
+          justify-self: center !important;
+          text-align: justify !important;
+          text-align-last: center !important;
+        }
       }
     }
   }
