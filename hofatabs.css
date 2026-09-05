@@ -1885,17 +1885,17 @@
         font: var(--fo-icon1);
         font-weight: bold;
       }
-      &[class*="distancia"] {
+      &[posicion*="distancia"] {
         &:before {
           content: "\f05b";
         }
       }
-      &[class*="rango"] {
+      &[posicion*="rango"] {
         &:before {
           content: "\f21d";
         }
       }
-      &[class*="melee"] {
+      &[posicion*="melee"] {
         &:before {
           content: "\f6de";
         }
