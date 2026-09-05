@@ -154,7 +154,7 @@ $(() => {
       }
       $(psfield).parents(perfil).find(psfieldEnganche).html(age);
     }
-
+    
     /* sistema de filtrado */
     var $container = $(".mbmembers"); // the container with all the elements to filter inside
     var filters = {}; //should be outside the scope of the filtering function
@@ -185,47 +185,69 @@ $(() => {
         },
       },
     });
-
+    
     // layout after full initialization
     $grid.isotope("layout");
-
+    
     // generate filter count
     updateFilterCounts();
-
+    
     // bind filter a click
     $filterButtonGroup.click(function (e) {
+      e.preventDefault();
       var $this = $(this); // cache the clicked link
       var filterAttr = "data-filter-value";
       var filterValue = $this.attr(filterAttr); // cache the filter
       var $optionSet = $this.parents(".option-set"); // cache the parent element
       var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
       var filterGroup = filters[group];
+      
       if (!filterGroup) {
         filterGroup = filters[group] = [];
       }
+      
       var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
-      comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,);
+    
+      // manage dynamic exclusve and inclusive combo filters        
+      var isExclusive = $optionSet.hasClass(exclClass);
+      var hasActive = $this.hasClass(activeClass);
       
+      if (!isExclusive) {
+        if (!hasActive && filterValue.length) {
+          filters[group].push(filterValue);
+        } else if (filterValue.length) {
+          var curIndex = filters[group].indexOf(filterValue);
+          if (curIndex > -1) filters[group].splice(curIndex, 1);
+        } else {
+          filters[group] = [];
+        }
+      } else {
+        if (!hasActive && filterValue.length) {
+          filters[group] = [filterValue];
+        } else {
+          filters[group] = [];
+        }
+      }
+      
+      // generate combo filters from function
       var comboFilter = getComboFilter(filters);
-      $grid.isotope({filter: comboFilter,});
       
-      updateFilterCounts();
-      e.preventDefault();
+      // generate hash url from filters
+      var currentSort = getHashParam("sort") || "original-order";
+      location.hash = 'filter=' + encodeURIComponent(comboFilter || "*") + '&sort=' + currentSort;
     });
-
+    
     // add filter count 
     function updateFilterCounts() {
       // get filtered item elements
       var itemElems = $container.isotope("getFilteredItemElements");
       var $itemElems = $(itemElems);
-
-      $('.filter.option-set a').each(function (i, a) {
+    
+      $filterButtonGroup.each(function (i, a) {
         var $label = $(a);
         var filterValue = $label.attr('data-filter-value');
-        if (!filterValue) {
-          // do not update 'any' buttons
-          return;
-        }
+        if (!filterValue) return; // do not update 'any' buttons
+        
         var count = $itemElems.filter(filterValue).length;
         var $countSpan = $label.parent().find('.filter-count');
         if ($countSpan.length) {
@@ -235,79 +257,104 @@ $(() => {
         }
       });
     }
-
+    
     // create combo filter fuction
-    function comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass,) {
-      var isExclusive = $optionSet.hasClass(exclClass);
-      var hasActive = $this.hasClass(activeClass);
-      
-      if (!isExclusive) {
-        if (!hasActive && filterValue.length) {
-          $this.addClass(activeClass);
-          filters[group].push(filterValue);
-          $selectAll.removeClass(activeClass);
-        } else if (filterValue.length) {
-          $this.removeClass(activeClass);
-          var curIndex = filters[group].indexOf(filterValue);
-          if (curIndex > -1) filters[group].splice(curIndex, 1);      
-          if (!$optionSet.find("a." + activeClass).length) $selectAll.addClass(activeClass);
-        } else {
-          $optionSet.find("a." + activeClass).removeClass(activeClass);
-          $selectAll.addClass(activeClass);
-          filters[group] = [];
-        }
-      } else {
-        if (!hasActive && filterValue.length) {
-          $optionSet.find("a." + activeClass).removeClass(activeClass);
-          filters[group] = [];   
-          
-          $this.addClass(activeClass);
-          filters[group].push(filterValue);
-          $selectAll.removeClass(activeClass);
-        } else if (filterValue.length) {
-          $this.removeClass(activeClass);
-          filters[group] = [];
-          $selectAll.addClass(activeClass);
-        } else {
-          $optionSet.find("a." + activeClass).removeClass(activeClass);
-          $selectAll.addClass(activeClass);
-          filters[group] = [];
-        }
-      }
-    }
     function getComboFilter(filters) {
-      var i = 0;
       var comboFilters = [];
+      var firstGroup = true;
+    
       for (var prop in filters) {
         var filterGroup = filters[prop];
-        if (!filterGroup.length) {
-          continue;
-        }
-        if (i === 0) {
+        if (!filterGroup || !filterGroup.length) continue;
+    
+        if (firstGroup) {
           comboFilters = filterGroup.slice(0);
+          firstGroup = false;
         } else {
           var filterSelectors = [];
-          var groupCombo = comboFilters.slice(0);
-          for (var k = 0, len3 = filterGroup.length; k < len3; k++) {
-            for (var j = 0, len2 = groupCombo.length; j < len2; j++) {
-              filterSelectors.push(groupCombo[j] + filterGroup[k]);
+          for (var k = 0; k < filterGroup.length; k++) {
+            for (var j = 0; j < comboFilters.length; j++) {
+              filterSelectors.push(comboFilters[j] + filterGroup[k]);
             }
           }
           comboFilters = filterSelectors;
         }
-        i++;
       }
-      var comboFilter = comboFilters.join(", ");
-      return comboFilter;
+      return comboFilters.join(", ");
     }
-
+    
+    // Hash filtering
+    function getHashParam(param) {
+      var matches = location.hash.match(new RegExp(param + '=([^&]+)', 'i'));
+      return matches ? decodeURIComponent(matches[1]) : null;
+    }
+    function onHashchange() {
+      var hashFilter = getHashParam("filter");
+      var hashSort = getHashParam("sort") || "original-order";      
+      
+      $grid.isotope({ 
+        filter: hashFilter || "*",
+        sortBy: hashSort
+      });
+      
+      // Remove all active selected class
+      $filterButtonGroup.removeClass(activeClass);
+      $(".sort.option-set a").removeClass(activeClass);
+      
+      filters = {};
+      
+      // Sync filter button visual states
+      if (hashFilter && hashFilter !== "*") {
+        $filterButtonGroup.each(function() {
+          var $button = $(this);
+          var val = $button.attr('data-filter-value');
+          
+          if (val && hashFilter.indexOf(val) !== -1) {
+            $button.addClass(activeClass);
+            
+            var group = $button.parents(".option-set").attr("data-filter-group");
+            if (!filters[group]) filters[group] = [];
+            if (filters[group].indexOf(val) === -1) {
+              filters[group].push(val);
+            }
+          }
+        });        
+        // Add selected class to buttons
+        $(".filter.option-set").each(function() {
+          var $set = $(this);
+          if ($set.find("a." + activeClass).length) {
+            $set.find('a[data-filter-value=""]').removeClass(activeClass);
+          } else {
+            $set.find('a[data-filter-value=""]').addClass(activeClass);
+          }
+        });       
+      } else {
+        $(".filter.option-set").each(function() {
+          $(this).find('a[data-filter-value=""]').addClass(activeClass);
+        });
+        filters = {}; 
+      }
+      
+      // Sync sort button visual states
+      var $activeSortButton = $(".sort.option-set a[data-sort-value='" + hashSort + "']");
+      if ($activeSortButton.length) {
+        $activeSortButton.addClass(activeClass);
+      } else {
+        $(".sort.option-set a[data-sort-value='original-order']").addClass(activeClass);
+      }
+      
+      updateFilterCounts();
+    }    
+    $(window).on('hashchange', onHashchange);
+    
+    onHashchange();
+    
     // bind sort a click
     $(".sort.option-set a").click(function (e) {
-      var sortByValue = $(this).attr("data-sort-value");
-      $grid.isotope({ sortBy: sortByValue });
-      $(this).parents(".sort").find("." + activeClass).removeClass(activeClass);
-      $(this).addClass(activeClass);
       e.preventDefault();
+      var sortByValue = $(this).attr("data-sort-value") || "original-order";
+      var currentFilter = getHashParam("filter") || "*";
+      location.hash = 'filter=' + encodeURIComponent(currentFilter) + '&sort=' + sortByValue;
     });
     
   }
