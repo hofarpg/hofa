@@ -201,13 +201,17 @@ $(() => {
       var $optionSet = $this.parents(".option-set"); // cache the parent element
       var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
       var filterGroup = filters[group];
+      
       if (!filterGroup) {
         filterGroup = filters[group] = [];
       }
       
       var $selectAll = $optionSet.find("a[" + filterAttr + '=""]'); // the 'select all' button in the current group
     
-      // manage dynamic exclusve and inclusive combo filters
+      // manage dynamic exclusve and inclusive combo filters        
+      var isExclusive = $optionSet.hasClass(exclClass);
+      var hasActive = $this.hasClass(activeClass);
+      
       if (!isExclusive) {
         if (!hasActive && filterValue.length) {
           filters[group].push(filterValue);
