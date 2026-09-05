@@ -468,14 +468,18 @@
         content: "";
       }
     }
+    & > :is(ul, ol, p, div, span) {
+      width: 100% !important;
+    }
     * {
       transition: var(--trs1);
     }
     &:not([open]) {
       display: flex;
       flex-wrap: wrap;
-      ul, ol, p, div {
+      & > :is(ul, ol, p, div, span) {
         margin: 0 !important;
+        display: none !important;
         &:empty {
           display: none !important;
         }
