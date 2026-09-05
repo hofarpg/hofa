@@ -42,8 +42,8 @@
     border: var(--border1);
     border-radius: var(--bradius);
     background: var(--back2);
-    flex: 1 0 15%;
-    min-width: 180px;
+    flex: 1 0 18%;
+    min-width: 13rem;
     top: var(--nav-top);
     gap: var(--gap5);
     max-height: calc(100vh - (var(--nav-top) + (var(--gap1) * 2)));
@@ -3267,10 +3267,6 @@
           text-transform: lowercase !important;
           font-style: italic !important;
           font-weight: 300 !important;
-          &:before {
-          }
-          &:after {
-          }
           &.preactive {
             text-transform: uppercase !important;
             text-decoration: var(--bthickness) underline var(--taccent);
