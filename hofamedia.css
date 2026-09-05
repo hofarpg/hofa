@@ -291,6 +291,9 @@
 }
 
 @media (max-width: 700px) {
+  html:has(body#phpbb) {
+    overscroll-behavior-y: auto!important;
+  }
   input.inputbox,
   select.inputbox {
     width: 100% !important;
