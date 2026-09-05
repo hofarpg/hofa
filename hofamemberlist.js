@@ -26,8 +26,6 @@ $(() => {
       var memberparent = $(data).find('.pcfield .pclabel span:contains("Ascendencia")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbmci-desc>div>span").append(memberparent);
 
-      var memberlvl = $(data).find('.pcfield .pclabel span:contains("Nivel")').parents(".pcfield").find(".pccontent .field_uneditable");
-
       var memberfc = $(data).find('.pcfield .pclabel span:contains("Face claim")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-fc").append(memberfc);
 
@@ -53,10 +51,10 @@ $(() => {
       var memberbustra = $(data).find("#field_id15 .field_uneditable a").attr("href");
       $member.find(".membtr").html('<a href="' + memberbustra + '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>');
 
-      /* obtener y llenar clases */
-      var levl = $member.find(".mbm-lvl .field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      if (levl) $member.addClass("n-" + levl);
-
+      /* obtener y llenar clases */      
+      var asc = $member.find(".mbmci-desc div span").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (asc) $member.addClass("a-" + asc);
+      
       var weap = $member.find(".mbm-weap").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (weap) $member.addClass("c-" + weap);
 
@@ -169,7 +167,7 @@ $(() => {
       itemSelector: ".mbmember", // the elements to filter
       layoutMode: "fitRows", 
       filter: ".mbmember:not(.contentgroup-staff)",
-      percentPosition: false, // put true if you use percentage widths, otherwise put 
+      percentPosition: false, // put true if you use percentage widths, otherwise put false
       getSortData: {
         nombre: function (itemElem) {
           return $(itemElem).find(".mbmci-name strong").text().trim().toLowerCase();
@@ -216,7 +214,6 @@ $(() => {
       location.hash = 'filter=' + encodeURIComponent( comboFilter );
       
       updateFilterCounts();
-      $this.toggleClass(activeClass);
       e.preventDefault();
     });
 
@@ -321,13 +318,8 @@ $(() => {
       isIsotopeInit = true;
       // filter isotope by hash
       $grid.isotope({
-        filter: hashFilter
+        filter: hashFilter || "*"
       });
-      // set selected class on button
-      if ( hashFilter ) {
-        $filterButtonGroup.find(activeClass).removeClass(activeClass);
-        $filterButtonGroup.find('[' + filterAttr + '="' + hashFilter + '"]').addClass(activeClass);
-      }
     }    
     $(window).on( 'hashchange', onHashchange );
     
