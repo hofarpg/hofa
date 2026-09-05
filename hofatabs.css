@@ -473,6 +473,7 @@
     }
     &:not([open]) {
       display: flex;
+      flex-wrap: wrap;
       ul, ol, p, div {
         margin: 0 !important;
         &:empty {
