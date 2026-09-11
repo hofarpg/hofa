@@ -162,7 +162,7 @@
       max-width: var(--regtab);
     }
     .guico-txt {
-      margin-top: var(--paddclamp5)!important;
+      margin-top: var(--paddclamp5) !important;
     }
   }
 }
@@ -466,6 +466,7 @@
       border: var(--border1);
       border-color: var(--accent);
       transition: var(--trs1);
+      margin: 0px;
       &::marker {
         display: none;
         content: "";
@@ -478,8 +479,6 @@
       transition: var(--trs1);
     }
     &:not([open]) {
-      display: flex;
-      flex-wrap: wrap;
       & > :is(ul, ol, p, div, span) {
         margin: 0 !important;
         display: none !important;
@@ -487,12 +486,16 @@
           display: none !important;
         }
       }
+      summary {
+        margin-bottom: calc(var(--gap2) * -1);
+      }
     }
     &[open] {
       summary {
         color: var(--accent);
         background: var(--back2);
         border-color: var(--border1-c);
+        margin-bottom: 0;
       }
     }
   }
@@ -1661,6 +1664,7 @@
     align-items: center;
     padding-bottom: 0;
     position: relative;
+    height: clamp(4rem, 11vw, var(--fs-icons));
     * {
       position: relative;
       z-index: 1;
@@ -1696,8 +1700,8 @@
     gap: var(--gap0);
     > b {
       text-transform: uppercase;
-      font: var(--fo-h2);
-      font-size: var(--fo-h2-clamp);
+      font: var(--fo-h3);
+      font-size: var(--fo-h3-clamp);
       text-shadow: 1px 1px 1px var(--accent);
       color: var(--txt1);
       line-height: 90%;
@@ -1735,10 +1739,10 @@
     > b {
       text-transform: lowercase;
       color: var(--txt1);
-      font: var(--fo-h2);
+      font: var(--fo-h3);
       line-height: 100%;
       font-style: normal;
-      font-size: var(--fo-h2-clamp);
+      font-size: var(--fo-h3-clamp);
       > i {
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 0.5px var(--txt1);
@@ -1752,7 +1756,7 @@
       border-top: var(--tborder);
       border-left: var(--tborder);
       border-right: var(--tborder);
-      font: var(--fo-deco2);
+      font: var(--fo-deco3);
       font-weight: bold;
       color: var(--txt4);
       padding: var(--gap0) var(--gap2);
@@ -1775,10 +1779,11 @@
 .tabrol3 {
   .tbroltit {
     position: relative;
+    height: fit-content;
     > b {
       text-transform: uppercase;
-      font: var(--fo-h1);
-      font-size: var(--fo-h1-clamp);
+      font: var(--fo-h2);
+      font-size: var(--fo-h2-clamp);
       line-height: 90%;
       color: var(--accent);
       position: relative;
@@ -1804,7 +1809,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--gap3) var(--paddclamp7);
+    gap: var(--gap3) var(--gap5);
     flex-wrap: wrap;
     position: relative;
     > em {
@@ -1829,6 +1834,7 @@
   }
   h4 {
     margin-top: 0;
+    margin-bottom: var(--gap0);
   }
   > strong {
     text-transform: uppercase;
