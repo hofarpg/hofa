@@ -189,7 +189,7 @@
   }
   .registeredsec {
     column-count: 1;
-    column-rule: var(--border2);
+    column-rule: var(--tborder);
     column-gap: var(--paddclamp7);
     column-width: 11.429rem;
     margin: 0px var(--paddclamp7);
@@ -297,7 +297,7 @@
     position: relative;
     border-radius: var(--bradius);
     overflow: hidden;
-    border: var(--border2);
+    border: var(--tborder);
     width: 100%;
     min-height: 18rem;
     padding: var(--paddclamp7);
@@ -980,8 +980,8 @@
     strong {
       padding: var(--gap0) var(--gap3);
       border-radius: var(--bradius);
-      border-left: var(--border2);
-      border-right: var(--border2);
+      border-left: var(--tborder);
+      border-right: var(--tborder);
       font: var(--fo-deco2);
       font-weight: 800 !important;
       color: var(--txt4) !important;
@@ -1074,8 +1074,8 @@
     strong {
       padding: 0px var(--gap3);
       border-radius: var(--bradius);
-      border-left: var(--border2);
-      border-right: var(--border2);
+      border-left: var(--tborder);
+      border-right: var(--tborder);
       font: var(--fo-bod2);
       font-weight: bold !important;
       color: var(--txt4) !important;
@@ -1313,9 +1313,9 @@
       font: var(--fo-deco2);
       font-weight: 800;
       text-align: center;
-      border-left: var(--border2);
-      border-right: var(--border2);
-      padding: var(--gap0) var(--gap2);
+      border-left: var(--tborder);
+      border-right: var(--tborder);
+      padding: var(--gap1) var(--gap2);
       line-height: 100% !important;
       color: var(--txt4) !important;
       transition: var(--trs1);
@@ -1328,7 +1328,7 @@
   }
   #extbcinfo {
     position: relative;
-    min-height: 270px;
+    min-height: 21rem;
     justify-content: center;
     align-items: center;
     &:before {
@@ -1367,14 +1367,15 @@
       text-transform: uppercase;
       font: var(--fo-bod2);
       font-weight: bold;
-      color: var(--txt3);
+      color: var(--txt2);
       line-height: 100%;
       gap: var(--gap1);
       > u {
-        color: var(--txt1);
-        font: var(--fo-deco1);
-        font-weight: bold;
-        line-height: 140%;
+        color: var(--accent);
+        font: var(--fo-deco2);
+        font-weight: 800;
+        text-decoration: none;
+        line-height: 100%;
       }
     }
     > dl.hidecode {
@@ -1472,8 +1473,8 @@
     flex: 1 0 7%;
     > b {
       border-top: var(--bthickness) solid var(--taccent);
-      border-left: var(--border2);
-      border-right: var(--border2);
+      border-left: var(--tborder);
+      border-right: var(--tborder);
       flex: 1;
       display: flex;
       justify-content: center;
@@ -1547,13 +1548,13 @@
       }
     }
     > .expzhtflaw {
-      border-right: var(--border2);
+      border-right: var(--tborder);
       &:before {
         content: "\f714";
       }
     }
     > .expzhtvirtue {
-      border-left: var(--border2);
+      border-left: var(--tborder);
       &:before {
         content: "\f7d4";
       }
@@ -1604,7 +1605,7 @@
     > span:not(.gd-cheat) {
       display: inline-block;
       text-box: trim-both cap alphabetic;
-      padding: var(--gap1) var(--gap2);
+      padding: var(--gap0) var(--gap1);
       text-transform: uppercase;
       background: var(--accent);
       border-radius: var(--bradius);
@@ -2025,8 +2026,8 @@
       align-items: center;
       text-transform: uppercase;
       border-top: var(--bthickness) solid var(--accent);
-      border-left: var(--border2);
-      border-right: var(--border2);
+      border-left: var(--tborder);
+      border-right: var(--tborder);
       border-radius: var(--bradius);
       padding: var(--gap1);
       flex-wrap: wrap;
@@ -2118,7 +2119,7 @@
     overflow: auto;
     padding: 0 var(--gap3);
     line-height: 125%;
-    border-left: var(--border2);
+    border-left: var(--tborder);
     gap: var(--gap2);
     h3 {
       display: inline-block;
@@ -3350,6 +3351,21 @@
   #expedtab #expzrhoja {
     flex-direction: column-reverse !important;
   }
+  #expedtab .expzhtraits {
+    flex-wrap: wrap;
+    > div {
+      flex: 1 0 100% !important;
+      min-height: calc(var(--fs-h1) + var(--padd2));
+    }
+    > .expzhtflaw {
+      border-right: none !important;
+      border-bottom: var(--tborder);
+    }
+    > .expzhtvirtue {
+      border-left: none !important;
+      border-top: var(--tborder);
+    }
+  }
   /* baul */
   .tabaul#tbfull {
     flex-direction: column-reverse;
@@ -3413,7 +3429,7 @@
     height: inherit !important;
     padding-left: 0px !important;
     border-left: none !important;
-    border-top: var(--border2);
+    border-top: var(--tborder);
     padding-top: var(--gap3) !important;
   }
   .tabcomainblock {
