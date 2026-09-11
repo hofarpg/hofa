@@ -1664,12 +1664,12 @@
     align-items: center;
     padding-bottom: 0;
     position: relative;
-    height: clamp(4rem, 11vw, var(--fs-icons));
+    min-height: clamp(4rem, 11vw, var(--fs-icons));
     * {
       position: relative;
       z-index: 1;
     }
-    :not(:has(b)) {
+    :not(:has(b, i)) {
       min-height: auto;
     }
   }
@@ -1780,6 +1780,7 @@
   .tbroltit {
     position: relative;
     height: fit-content;
+    min-height: fit-content;
     > b {
       text-transform: uppercase;
       font: var(--fo-h2);
