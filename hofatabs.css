@@ -488,6 +488,7 @@
       & > :is(ul, ol, p, div, span) {
         margin: 0 !important;
         display: none !important;
+        max-height: 0;
         &:empty {
           display: none !important;
         }
@@ -497,6 +498,9 @@
       }
     }
     &[open] {
+      & > :is(ul, ol, p, div, span) {
+        max-height: 1000rem;
+      }
       summary {
         color: var(--accent);
         background: var(--back2);
