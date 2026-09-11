@@ -545,6 +545,10 @@
     margin: auto;
     text-align: center;
   }
+  &.borderless {
+    border-left: none;
+    border-right: none;
+  }
   &:has(> ul) > br {
     display: none !important;
   }
