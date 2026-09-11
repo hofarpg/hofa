@@ -2363,6 +2363,13 @@
       padding: 0px;
     }
   }
+  ul.tbrcreq {
+    border-color: transparent;
+    margin: 0px !important;
+    margin-left: var(--gap2) !important;
+    margin-top: var(--gap3) !important;
+    padding: 0px !important;
+  }
 }
 .tabusq {
   max-width: var(--regtab);
