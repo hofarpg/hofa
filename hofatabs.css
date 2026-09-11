@@ -2351,13 +2351,12 @@
     line-height: 120%;
   }
   b.tbrcreq {
-    display: block;
     color: var(--accent);
-    margin-bottom: var(--gap3);
   }
   .blockquote.tbrcreq {
     border-color: transparent;
     margin: 0px !important;
+    margin-top: var(--gap3) !important;
     padding: 0px !important;
   }
 }
