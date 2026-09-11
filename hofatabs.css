@@ -148,6 +148,16 @@
       &:not(.preactive) {
         display: none;
       }
+      &[class*="group-"] {
+        .admtitleimg i {
+          font-family: "Font Awesome 7 Sharp";
+          font-size: calc(var(--fs-title) + var(--fs-h1));
+          font-weight: 800;
+          &:before {
+            content: var(--i-group);
+          }
+        }
+      }
     }
     .admtitleimg {
       > h2 {
@@ -1914,11 +1924,11 @@
 /* COMBATE */
 #tabcombatpj {
   --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--accent) r g b / .6);
+  --taccent: rgb(from var(--accent) r g b / 0.6);
 }
 #tabcombatmn {
   --accent: var(--staff);
-  --taccent: rgb(from var(--staff) r g b / .6);
+  --taccent: rgb(from var(--staff) r g b / 0.6);
 }
 :is(
     #tabcombatpj,
@@ -2257,7 +2267,9 @@
   background: var(--back2);
   position: relative;
   overflow: hidden;
-  --taccent: rgb(from var(--accent) r g b / .6); /* needed for applying --personalclr*/
+  --taccent: rgb(
+    from var(--accent) r g b / 0.6
+  ); /* needed for applying --personalclr*/
   > br {
     display: none !important;
   }
