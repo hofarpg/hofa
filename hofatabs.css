@@ -1655,6 +1655,9 @@
   gap: var(--paddclamp3);
   --accent: var(--personalclr, var(--group));
   --taccent: rgb(from var(--personalclr, var(--group)) r g b / 0.6);
+  .tbroltit:has(> i) {
+    min-height: clamp(4rem, 11vw, var(--fs-icons));
+  }
   .tbroltit {
     width: 100%;
     display: flex;
@@ -1664,13 +1667,12 @@
     align-items: center;
     padding-bottom: 0;
     position: relative;
-    min-height: clamp(4rem, 11vw, var(--fs-icons));
     * {
       position: relative;
       z-index: 1;
     }
-    :not(:has(b, i)) {
-      min-height: auto;
+    :not(:has(b)) {
+      min-height: auto !important;
     }
   }
   .tbrolcont {
