@@ -2353,11 +2353,15 @@
   b.tbrcreq {
     color: var(--accent);
   }
-  .blockquote.tbrcreq {
+  ol.tbrcreq {
     border-color: transparent;
     margin: 0px !important;
     margin-top: var(--gap3) !important;
     padding: 0px !important;
+    list-style-position: inside;
+    li {
+      padding: 0px;
+    }
   }
 }
 .tabusq {
