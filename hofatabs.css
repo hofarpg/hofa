@@ -1511,7 +1511,7 @@
       position: relative;
       > i {
         text-transform: uppercase;
-        font: var(--fo-deco2);
+        font: var(--fo-deco3);
         font-weight: bold;
         color: var(--txt4);
         font-style: normal;
@@ -1520,7 +1520,7 @@
         border-top: var(--tborder);
         border-left: var(--tborder);
         border-right: var(--tborder);
-        padding: var(--gap0) var(--gap1);
+        padding: var(--gap1) var(--gap2);
         line-height: 100%;
       }
       > b {
@@ -1600,11 +1600,11 @@
     > span:not(.gd-cheat) {
       display: inline-block;
       text-box: trim-both cap alphabetic;
-      padding: var(--gap0) var(--gap1);
+      padding: var(--gap1) var(--gap2);
       text-transform: uppercase;
       background: var(--accent);
       border-radius: var(--bradius);
-      font: var(--fo-deco2);
+      font: var(--fo-deco3);
       font-weight: 800;
       color: var(--back2);
     }
@@ -2762,13 +2762,16 @@
     }
   }
   .tabcrcomonth {
-    text-transform: uppercase;
-    font: var(--fo-deco2);
-    font-weight: bold;
-    font-style: italic;
+    text-transform: lowercase;
+    font: var(--fo-h5);
+    font-weight: 400;
+    font-style: normal;
     color: var(--txt4);
-    display: block;
+    font-size: var(--fs-text);
     line-height: 100%;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
     &:before {
       content: "";
       width: var(--paddclamp3);
@@ -2777,7 +2780,6 @@
       background: var(--accent);
       margin-right: var(--gap2);
       position: relative;
-      top: calc((var(--gap0) / 1.8) * -1);
     }
   }
   .tabcrcothread {
@@ -2836,7 +2838,7 @@
       }
       > em {
         text-transform: uppercase;
-        font: var(--fo-deco2);
+        font: var(--fo-deco3);
         font-weight: bold;
         color: var(--txt4);
         font-style: normal;
@@ -2899,7 +2901,7 @@
   .tabrlcochar {
     align-items: center;
     justify-content: flex-start;
-    gap: var(--gap3);
+    gap: var(--paddclamp8);
     > div > span:before {
       content: "Des. de ";
     }
@@ -3054,10 +3056,10 @@
       > span {
         background: var(--accent);
         font: var(--fo-deco2);
-        font-weight: 800;
+        font-weight: 900;
         color: var(--back1);
         border-radius: var(--bradius);
-        padding: var(--gap0) var(--gap1);
+        padding: var(--gap1) var(--gap2);
         width: fit-content;
         text-box: trim-both cap alphabetic;
       }
@@ -3073,7 +3075,7 @@
       > em {
         text-transform: uppercase;
         font: var(--fo-deco3);
-        font-weight: 900;
+        font-weight: 800;
         font-style: normal;
         line-height: 100%;
         color: var(--txt4);
@@ -3135,6 +3137,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--paddclamp7);
+    flex-wrap: wrap;
     > em {
       height: var(--paddclamp3);
       background: var(--border1-c);
@@ -3144,10 +3147,10 @@
       text-transform: uppercase;
       font: var(--fo-bod-alt1);
       font-weight: bold;
-      flex: 1;
       text-align: center;
       color: var(--txt3);
       line-height: 100%;
+      flex: 1 0 45%;
       > b {
         color: var(--accent);
         font-weight: 900;
@@ -3160,23 +3163,27 @@
       text-transform: uppercase;
       font: var(--fo-deco1);
       font-weight: 900;
-      font-size: var(--fs-big);
+      font-size: var(--fs-body);
       background: var(--accent);
       width: fit-content;
       color: var(--back1);
-      padding: var(--gap1) var(--gap3);
+      padding: var(--gap2) var(--gap3);
       border-radius: var(--bradius);
       margin-bottom: var(--gap1);
       text-box: trim-both cap alphabetic;
+      line-height: 100%;
     }
     > em {
-      text-transform: uppercase;
-      font: var(--fo-deco2);
-      font-weight: bold;
-      font-style: italic;
+      text-transform: lowercase;
+      font: var(--fo-h5);
+      font-weight: 400;
+      font-style: normal;
       color: var(--txt4);
-      display: block;
+      font-size: var(--fs-text);
       line-height: 100%;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
       &:before {
         content: "";
         width: var(--paddclamp5);
@@ -3185,7 +3192,6 @@
         background: var(--accent);
         margin-right: var(--gap1);
         position: relative;
-        top: calc((var(--gap0) / 1.2) * -1);
       }
     }
   }
@@ -3404,6 +3410,10 @@
     &:empty {
       display: none;
     }
+  }
+  /* relaciones pj */
+  .tabrlcochar .tabrlcocharimg {
+    display: none !important;
   }
   /* npcs */
   #nonplayercharacters .gbnpc {
