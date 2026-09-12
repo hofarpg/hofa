@@ -190,6 +190,11 @@
             content: "Mejorable:";
           }
         }
+        &.recharge {
+          &:before {
+            content: "Recargable:";
+          }
+        }
         &.discount {
           &:before {
             content: "Descuento:";
