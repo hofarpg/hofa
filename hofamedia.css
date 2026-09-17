@@ -43,6 +43,10 @@
   .ucp-panel-de-control-de-los-avatares fieldset {
     flex-direction: column !important;
   }
+  /* estadisticas */
+  .statgroups > a {
+    flex: 1 0 12%;
+  }
 }
 
 @media only screen and (max-width: 980px) and (min-height: 1500px) {
@@ -518,6 +522,9 @@
   .statonline,
   .stattwenty {
     max-height: auto !important;
+  }
+  .statgroups > a {
+    flex: 1 0 10%;
   }
   /* config */
   fieldset dd {
