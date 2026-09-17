@@ -2268,7 +2268,11 @@
   background: var(--back2);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box !important;
   --taccent: rgb(from var(--accent) r g b / .6); /* needed for applying --personalclr*/
+  * {
+    box-sizing: border-box !important;
+  }
   > br {
     display: none;
   }
