@@ -686,26 +686,17 @@
 }
 
 /* CONTAINERS - MEMBERLIST */
-#memberlist  .mbmembers {
+#memberlist  .mbmembers .mbmember {
   @container memberlist-members (max-width: 600px) {
-    .mbmember {
-      width: calc(100% - var(--paddclamp5));
-    }
-  }
-  @container memberlist-members (min-width: 800px) {
-    .mbmember {
-      max-width: 50%;
-    }
+    --mmbcolumn: 1;
   }
   @container memberlist-members (min-width: 950px) {
-    .mbmember {
-      max-width: 45%;
-    }
+    --mmbcolumn: 3;
   }
-  @container memberlist-membercont (max-width: 350px) {
-    .mbmc-data {
-      div {
-        flex: 1 0 40%;
+  @container memberlist-membercont (min-width: 550px) {
+    .mbm-cont .mbmc-data {
+      > div {
+        --mmbdatacol: 3;
       }
     }
   }
