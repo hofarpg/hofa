@@ -164,16 +164,15 @@
     container: memberlist-members / inline-size;
     margin: calc((var(--paddclamp5) / 2) * -1);
     .mbmember {
-      flex: 1 0 30%;
-      border: var(--border1);
-      width: calc(50% - var(--paddclamp5));
+      margin: calc(var(--paddclamp5) / 2);
+      width: calc((100% / var(--mmbcolumns)) - var(--paddclamp5));
       min-width: 19rem;
       height: fit-content;
       container: memberlist-membercont / inline-size;
-      flex-grow: 1;
       overflow: hidden;
-      align-self: center;      
-      margin: calc(var(--paddclamp5) / 2);
+      align-self: center;   
+      border: var(--border1);
+      --mmbcolumns: 2;
       &[class*="-administrador"] {
         display: none;
       } 
@@ -334,11 +333,12 @@
           overflow: auto;
           max-height: calc((2rem * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
           div {
-            flex: 1 0 calc((100% /2) - var(--paddclamp6));
+            flex: 1 0 calc((100% / var(--mmbdatacol)) - var(--paddclamp6));
             gap: var(--gap1);
             justify-content: center;
             line-height: 80%;
-            em {
+            --mmbdatacol: 2;
+                      em {
               text-transform: uppercase;
               font: var(--fo-deco2);
               font-weight: 800;
