@@ -231,7 +231,7 @@ body:has(#profile) {
   margin-left: calc(-100% * 5);
 }
 /* ZONA DE CANCIÓN */
-#profile .profimg {
+.profimg {
   border-left: var(--border1);
   position: relative;
   overflow: hidden;
