@@ -612,8 +612,8 @@
 }
 
 /* CONTAINERS - PERFIL */
-.profcont {
-  @container profinfocont (min-height: 590px) {
+@container profinfocont (min-width: 800px) {
+  .profcont {
     .pfcname, .pfcuname {
       font-size: var(--fo-h1-clamp);
     }
@@ -622,30 +622,39 @@
       gap: var(--paddclamp2) var(--paddclamp4);
     }
   }
-  @container profcont (max-width: 870px) {
-    .profcont {
-      flex-direction: column-reverse;
-      padding-top: 0;
-      position: relative;
-      height: 100%;
-      min-width: fit-content;
-      .profimg {
-        max-width: 100%;
-        min-width: auto;
-        border-left: none;
-        border-bottom: var(--border1);
-        min-height: 22rem;
-        flex: 1 0 20%;
-        max-height: 22rem;
-      }
+}
+@container profcont (max-width: 870px) {
+  .profcont {
+    flex-direction: column-reverse;
+    padding-top: 0;
+    position: relative;
+    height: 100%;
+    min-width: fit-content;
+    .profimg {
+      max-width: 100%;
+      min-width: auto;
+      border-left: none;
+      border-bottom: var(--border1);
+      min-height: 22rem;
+      flex: 1 0 20%;
+      max-height: 22rem;
     }
     #car-hold {
       height: 100%;
       min-height: 31rem;
       flex: 1;
     }
+    .tab {
+      padding: var(--paddclamp3);
+      padding-right: calc(var(--paddclamp3) / 2);
+      > div {        
+        padding-right: calc(var(--paddclamp3) / 2);
+      }
+    }
   }
-  @container profcont (max-width: 560px) {
+}
+@container profcont (max-width: 560px) {
+  .profcont {
     .pfcmain, .pfcuinfo {
       > div {
         flex: 1 0 30%;
@@ -659,7 +668,9 @@
       flex-wrap: wrap;
     }
   }
-  @container profcont (max-width: 450px) {
+}
+@container profcont (max-width: 450px) {
+  .profcont {    
     #car-hold {
       flex: 1;
     }
@@ -675,25 +686,27 @@
 }
 
 /* CONTAINERS - MEMBERLIST */
-@container memberlist-members (max-width: 600px) {
-  .mbmember {
-    width: calc(100% - var(--paddclamp5));
+#memberlist  .mbmembers {
+  @container memberlist-members (max-width: 600px) {
+    .mbmember {
+      width: calc(100% - var(--paddclamp5));
+    }
   }
-}
-@container memberlist-members (min-width: 800px) {
-  .mbmember {
-    max-width: 50%;
+  @container memberlist-members (min-width: 800px) {
+    .mbmember {
+      max-width: 50%;
+    }
   }
-}
-@container memberlist-members (min-width: 950px) {
-  .mbmember {
-    max-width: 45%;
+  @container memberlist-members (min-width: 950px) {
+    .mbmember {
+      max-width: 45%;
+    }
   }
-}
-@container memberlist-membercont (max-width: 350px) {
-  .mbmc-data {
-    div {
-      flex: 1 0 40%;
+  @container memberlist-membercont (max-width: 350px) {
+    .mbmc-data {
+      div {
+        flex: 1 0 40%;
+      }
     }
   }
 }
