@@ -612,86 +612,88 @@
 }
 
 /* CONTAINERS - PERFIL */
-@container profinfocont (min-height:590px) {
-  .pfcname, .pfcuname {
-    font-size: var(--fo-h1-clamp)!important;
-  }
-  .pfcmain, .pfcuinfo {
-    padding: var(--paddclamp2);
-    gap: var(--paddclamp2) var(--paddclamp4);
-  }
-}
-@container profcont (max-width: 870px) {
-  .profcont {
-    flex-direction: column-reverse;
-    padding-top: 0;
-    position: relative;
-    height: 100%;
-    min-width: fit-content!important;
-    & .profimg {
-      max-width: 100%!important;
-      min-width: auto!important;
-      border-left: none!important;
-      border-bottom: var(--border1);
-      min-height: 22rem !important;
-      flex: 1 0 20% !important;
-      max-height: 22rem !important;
+.profcont {
+  @container profinfocont (min-height: 590px) {
+    .pfcname, .pfcuname {
+      font-size: var(--fo-h1-clamp);
+    }
+    .pfcmain, .pfcuinfo {
+      padding: var(--paddclamp2);
+      gap: var(--paddclamp2) var(--paddclamp4);
     }
   }
-  #car-hold {
-    height: 100% !important;
-    min-height: 31rem !important;
-    flex: 1 !important;
-  }
-}
-@container profcont (max-width: 560px) {
-  .pfcmain, .pfcuinfo {
-    & > div {
-      flex: 1 0 30%;
+  @container profcont (max-width: 870px) {
+    .profcont {
+      flex-direction: column-reverse;
+      padding-top: 0;
+      position: relative;
+      height: 100%;
+      min-width: fit-content;
+      .profimg {
+        max-width: 100%;
+        min-width: auto;
+        border-left: none;
+        border-bottom: var(--border1);
+        min-height: 22rem;
+        flex: 1 0 20%;
+        max-height: 22rem;
+      }
+    }
+    #car-hold {
+      height: 100%;
+      min-height: 31rem;
+      flex: 1;
     }
   }
-  .pfcupjs {
-    width: 100%;
-  }
-  .pfcuser {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-@container profcont (max-width: 450px) {
-  #car-hold {
-    flex: 1 !important;
-  }
-  .pfcmain, .pfcuinfo {
-    & > div {
-      flex-basis: calc((100% / 2) - var(--paddclamp5));
+  @container profcont (max-width: 560px) {
+    .pfcmain, .pfcuinfo {
+      > div {
+        flex: 1 0 30%;
+      }
+    }
+    .pfcupjs {
+      width: 100%;
+    }
+    .pfcuser {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
-  .pfcutriggers, .pfcupjs {
-    flex-basis: 100%;
+  @container profcont (max-width: 450px) {
+    #car-hold {
+      flex: 1;
+    }
+    .pfcmain, .pfcuinfo {
+      > div {
+        flex-basis: calc((100% / 2) - var(--paddclamp5));
+      }
+    }
+    .pfcutriggers, .pfcupjs {
+      flex-basis: 100%;
+    }
   }
 }
 
 /* CONTAINERS - MEMBERLIST */
 @container memberlist-members (max-width: 600px) {
   .mbmember {
-    width: calc(100% - var(--paddclamp5)) !important;
+    width: calc(100% - var(--paddclamp5));
   }
 }
 @container memberlist-members (min-width: 800px) {
-  & .mbmember {
+  .mbmember {
     max-width: 50%;
   }
 }
 @container memberlist-members (min-width: 950px) {
-  & .mbmember {
+  .mbmember {
     max-width: 45%;
   }
 }
 @container memberlist-membercont (max-width: 350px) {
-  & .mbmc-data {
-    & div {
-      flex: 1 0 40% !important;
+  .mbmc-data {
+    div {
+      flex: 1 0 40%;
     }
   }
 }
