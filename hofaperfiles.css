@@ -57,9 +57,6 @@ body:has(#profile) {
   height: 100%;
   container: profcont / inline-size;
 }
-#profile *::selection {
-  background: var(--tgroup) !important;
-}
 .profava,
 .pfcushid,
 .pfcdathid,
