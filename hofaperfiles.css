@@ -67,12 +67,12 @@ body:has(#profile) {
   display: none !important;
 }
 #profile,
-#profile .profcont,
-#profile .profimg,
+.profcont,
+.profimg,
 #car-hold {
   min-height: 32rem;
 }
-#profile .profcont {
+.profcont {
   flex: 1;
   align-self: stretch;
   min-width: 32.143rem;
