@@ -1,27 +1,27 @@
 /*IMAGENES DE GRUPOS*/
-.mbmember:is([class*="group-staff"], [class*="group-nadie"]) {--profgrimg: url('https://d.l3n.co/bVGcoP.png');}
-.mbmember:is([class*="group-nogroup"]) {--profgrimg: url('https://b.l3n.co/bVFPFi.jpg');}
-.mbmember:is([class*="group-nemesis"]) {--profgrimg: url('https://d.l3n.co/bVGE2i.png');}
-.mbmember:is([class*="group-tyche"]) {--profgrimg: url('https://d.l3n.co/bVUj80.png');}
-.mbmember:is([class*="group-persefone"]) {--profgrimg: url('https://b.l3n.co/bVGkCo.png');}
-.mbmember:is([class*="group-afrodita"]) {--profgrimg: url('https://a.l3n.co/bVUrRM.png');}
-.mbmember:is([class*="group-dioniso"]) {--profgrimg: url('https://d.l3n.co/bVG6S9.png');}
-.mbmember:is([class*="group-hades"]) {--profgrimg: url('https://a.l3n.co/bVU1Fa.png');}
-.mbmember:is([class*="group-hecate"]) {--profgrimg: url('https://a.l3n.co/bVcFav.png');}
-.mbmember:is([class*="group-hypnos"]) {--profgrimg: url('https://d.l3n.co/bVyN5x.png');}
-.mbmember:is([class*="group-artemisa"]) {--profgrimg: url('https://c.l3n.co/bVGCx2.png');}
-.mbmember:is([class*="group-poseidon"]) {--profgrimg: url('https://c.l3n.co/bV5o45.png');}
-.mbmember:is([class*="group-atenea"]) {--profgrimg: url('https://b.l3n.co/bVUIeq.png');}
-.mbmember:is([class*="group-khione"]) {--profgrimg: url('https://b.l3n.co/bVGQ1v.png');}
-.mbmember:is([class*="group-hebe"]) {--profgrimg: url('https://a.l3n.co/bVGHpD.png');}
-.mbmember:is([class*="group-iris"]) {--profgrimg: url('https://d.l3n.co/bVGlFq.png');}
-.mbmember:is([class*="group-demeter"]) {--profgrimg: url('https://c.l3n.co/bVGSIA.png');}
-.mbmember:is([class*="group-hermes"]) {--profgrimg: url('https://d.l3n.co/bVGeBM.png');}
-.mbmember:is([class*="group-hestia"]) {--profgrimg: url('https://c.l3n.co/bVGnoQ.png');}
-.mbmember:is([class*="group-apolo"]) {--profgrimg: url('https://d.l3n.co/bVGFIK.png');}
-.mbmember:is([class*="group-zeus"]) {--profgrimg: url('https://a.l3n.co/bVGUmZ.png');}
-.mbmember:is([class*="group-hefesto"]) {--profgrimg: url('https://a.l3n.co/bVGYek.png');}
-.mbmember:is([class*="group-ares"]) {--profgrimg: url('https://c.l3n.co/bVU0JD.png');}
+.mbmember:is([class*="group-staff"], [class*="group-nadie"]) {--img-group: url('https://d.l3n.co/bVGcoP.png');}
+.mbmember:is([class*="group-nogroup"]) {--img-group: url('https://b.l3n.co/bVFPFi.jpg');}
+.mbmember:is([class*="group-nemesis"]) {--img-group: url('https://d.l3n.co/bVGE2i.png');}
+.mbmember:is([class*="group-tyche"]) {--img-group: url('https://d.l3n.co/bVUj80.png');}
+.mbmember:is([class*="group-persefone"]) {--img-group: url('https://b.l3n.co/bVGkCo.png');}
+.mbmember:is([class*="group-afrodita"]) {--img-group: url('https://a.l3n.co/bVUrRM.png');}
+.mbmember:is([class*="group-dioniso"]) {--img-group: url('https://d.l3n.co/bVG6S9.png');}
+.mbmember:is([class*="group-hades"]) {--img-group: url('https://a.l3n.co/bVU1Fa.png');}
+.mbmember:is([class*="group-hecate"]) {--img-group: url('https://a.l3n.co/bVcFav.png');}
+.mbmember:is([class*="group-hypnos"]) {--img-group: url('https://d.l3n.co/bVyN5x.png');}
+.mbmember:is([class*="group-artemisa"]) {--img-group: url('https://c.l3n.co/bVGCx2.png');}
+.mbmember:is([class*="group-poseidon"]) {--img-group: url('https://c.l3n.co/bV5o45.png');}
+.mbmember:is([class*="group-atenea"]) {--img-group: url('https://b.l3n.co/bVUIeq.png');}
+.mbmember:is([class*="group-khione"]) {--img-group: url('https://b.l3n.co/bVGQ1v.png');}
+.mbmember:is([class*="group-hebe"]) {--img-group: url('https://a.l3n.co/bVGHpD.png');}
+.mbmember:is([class*="group-iris"]) {--img-group: url('https://d.l3n.co/bVGlFq.png');}
+.mbmember:is([class*="group-demeter"]) {--img-group: url('https://c.l3n.co/bVGSIA.png');}
+.mbmember:is([class*="group-hermes"]) {--img-group: url('https://d.l3n.co/bVGeBM.png');}
+.mbmember:is([class*="group-hestia"]) {--img-group: url('https://c.l3n.co/bVGnoQ.png');}
+.mbmember:is([class*="group-apolo"]) {--img-group: url('https://d.l3n.co/bVGFIK.png');}
+.mbmember:is([class*="group-zeus"]) {--img-group: url('https://a.l3n.co/bVGUmZ.png');}
+.mbmember:is([class*="group-hefesto"]) {--img-group: url('https://a.l3n.co/bVGYek.png');}
+.mbmember:is([class*="group-ares"]) {--img-group: url('https://c.l3n.co/bVU0JD.png');}
 
 #memberlist {
   gap: var(--paddclamp5);
@@ -204,7 +204,7 @@
           &:before {
             background: var(--tback1);
             filter: var(--filter2);
-            background-image: var(--profgrimg);
+            background-image: var(--img-group);
             background-size: cover;
             background-position: center;
           }
