@@ -47,6 +47,29 @@
   --i-hestia: "\f7e4";
   --i-ares: "\f71d";
   --i-usuarios: "\f6ba";
+  --img-staff: url('https://a.l3n.co/b5xQVH.png');
+  --img-nemesis: url('https://d.l3n.co/bVGE2i.png');
+  --img-tyche: url('https://d.l3n.co/bVUj80.png');
+  --img-persefone: url('https://b.l3n.co/bVGkCo.png');
+  --img-afrodita: url('https://a.l3n.co/bVUrRM.png');
+  --img-dioniso: url('https://d.l3n.co/bVG6S9.png');
+  --img-hades: url('https://a.l3n.co/bVU1Fa.png');
+  --img-hecate: url('https://a.l3n.co/bVcFav.png');
+  --img-artemisa: url('https://c.l3n.co/bVGCx2.png');
+  --img-poseidon: url('https://c.l3n.co/bV5o45.png');
+  --img-hypnos: url('https://d.l3n.co/bVyN5x.png');
+  --img-khione: url('https://b.l3n.co/bVGQ1v.png');
+  --img-hebe: url('https://a.l3n.co/bVGHpD.png');
+  --img-atenea: url('https://b.l3n.co/bVUIeq.png');
+  --img-demeter: url('https://c.l3n.co/bVGSIA.png');
+  --img-iris: url('https://d.l3n.co/bVGlFq.png');
+  --img-hermes: url('https://d.l3n.co/bVGeBM.png');
+  --img-apolo: url('https://d.l3n.co/bVGFIK.png');
+  --img-zeus: url('https://a.l3n.co/bVGUmZ.png');
+  --img-hefesto: url('https://a.l3n.co/bVGYek.png');
+  --img-hestia: url('https://c.l3n.co/bVGnoQ.png');
+  --img-ares: url('https://c.l3n.co/bVU0JD.png');
+  --img-usuarios: url('https://d.l3n.co/bVGcoP.png');
 }
 
 [class*="group-guest"],
@@ -54,127 +77,152 @@
 :is([class*="group-guest"], [class*="group-nogroup"]) + .post-dados {
   --group: var(--staff);
   --i-group: var(--i-usuarios);
+  --img-group: var(--img-usuarios);
 }
 [class*="group-staff"],
 [class*="group-staff"] + .post-dados {
   --group: var(--staff);
   --i-group: var(--i-staff);
+  --img-group: var(--img-staff);
 }
 [class*="group-nogroup"],
 [class*="group-nogroup"] + .postdados {
   --group: var(--usuarios);
   --i-group: var(--i-usuarios);
+  --img-group: var(--img-usuarios);
 }
 [class*="group-nemesis"],
 [class*="group-nemesis"] + .postdados {
   --group: var(--nemesis);
   --i-group: var(--i-nemesis);
+  --img-group: var(--img-nemesis);
 }
 [class*="group-tyche"],
 [class*="group-tyche"] + .postdados {
   --group: var(--tyche);
   --i-group: var(--i-tyche);
+  --img-group: var(--img-tyche);
 }
 [class*="group-persefone"],
 [class*="group-persefone"] + .postdados {
   --group: var(--persefone);
   --i-group: var(--i-persefone);
+  --img-group: var(--img-persefone);
 }
 [class*="group-afrodita"],
 [class*="group-afrodita"] + .postdados {
   --group: var(--afrodita);
   --i-group: var(--i-afrodita);
+  --img-group: var(--img-afrodita);
 }
 [class*="group-dioniso"],
 [class*="group-dioniso"] + .postdados {
   --group: var(--dioniso);
   --i-group: var(--i-dioniso);
+  --img-group: var(--img-dioniso);
 }
 [class*="group-hades"],
 [class*="group-hades"] + .postdados {
   --group: var(--hades);
   --i-group: var(--i-hades);
+  --img-group: var(--img-hades);
 }
 [class*="group-hecate"],
 [class*="group-hecate"] + .postdados {
   --group: var(--hecate);
   --i-group: var(--i-hecate);
+  --img-group: var(--img-hecate);
 }
 [class*="group-hypnos"],
 [class*="group-hypnos"] + .postdados {
   --group: var(--hypnos);
   --i-group: var(--i-hypnos);
+  --img-group: var(--img-hypnos);
 }
 [class*="group-artemisa"],
 [class*="group-artemisa"] + .postdados {
   --group: var(--artemisa);
   --i-group: var(--i-artemisa);
+  --img-group: var(--img-artemisa);
 }
 [class*="group-poseidon"],
 [class*="group-poseidon"] + .postdados {
   --group: var(--poseidon);
   --i-group: var(--i-poseidon);
+  --img-group: var(--img-poseidon);
 }
 [class*="group-atenea"],
 [class*="group-atenea"] + .postdados {
   --group: var(--atenea);
   --i-group: var(--i-atenea);
+  --img-group: var(--img-atenea);
 }
 [class*="group-khione"],
 [class*="group-khione"] + .postdados {
   --group: var(--khione);
   --i-group: var(--i-khione);
+  --img-group: var(--img-khione);
 }
 [class*="group-hebe"],
 [class*="group-hebe"] + .postdados {
   --group: var(--hebe);
   --i-group: var(--i-hebe);
+  --img-group: var(--img-hebe);
 }
 [class*="group-iris"],
 [class*="group-iris"] + .postdados {
   --group: var(--iris);
   --i-group: var(--i-iris);
+  --img-group: var(--img-iris);
 }
 [class*="group-demeter"],
 [class*="group-demeter"] + .postdados {
   --group: var(--demeter);
   --i-group: var(--i-demeter);
+  --img-group: var(--img-demeter);
 }
 [class*="group-hermes"],
 [class*="group-hermes"] + .postdados {
   --group: var(--hermes);
   --i-group: var(--i-hermes);
+  --img-group: var(--img-hermes);
 }
 [class*="group-hestia"],
 [class*="group-hestia"] + .postdados {
   --group: var(--hestia);
   --i-group: var(--i-hestia);
+  --img-group: var(--img-hestia);
 }
 [class*="group-apolo"],
 [class*="group-apolo"] + .postdados {
   --group: var(--apolo);
   --i-group: var(--i-apolo);
+  --img-group: var(--img-apolo);
 }
 [class*="group-zeus"],
 [class*="group-zeus"] + .postdados {
   --group: var(--zeus);
   --i-group: var(--i-zeus);
+  --img-group: var(--img-zeus);
 }
 [class*="group-hefesto"],
 [class*="group-hefesto"] + .postdados {
   --group: var(--hefesto);
   --i-group: var(--i-hefesto);
+  --img-group: var(--img-hefesto);
 }
 [class*="group-ares"],
 [class*="group-ares"] + .postdados {
   --group: var(--ares);
   --i-group: var(--i-ares);
+  --img-group: var(--img-ares);
 }
 [class*="group-"],
 [class*="group-"] + .postdados {
   --tgroup: rgb(from var(--group) r g b / 0.6);
   --accent: var(--group);
   --taccent: var(--tgroup);
+  --img-group: var(--img-usuarios);
 }
 
 /* ESENCIALES */
