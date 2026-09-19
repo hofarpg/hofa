@@ -181,8 +181,7 @@ body:has(#profile) {
   overflow-x: hidden;
   padding-right: calc(var(--paddclamp1) / 2);
   > div {
-    padding-right: calc(var(--paddclamp1) / 2);
-    overflow: hidden;
+    padding-right: calc(var(--paddclamp1) / 2);+
     height: 100%;
   }
 }
