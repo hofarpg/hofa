@@ -1,28 +1,3 @@
-/*IMAGENES DE GRUPOS*/
-#profile:is([class*="profilegroup-staff"], [class*="profilegroup-nogroup"]) {--img-group: url('https://d.l3n.co/bVGcoP.png');}
-#profile:is([class*="profilegroup-nogroup"]) {--img-group: url('https://b.l3n.co/bVFPFi.jpg');}
-#profile:is([class*="profilegroup-nemesis"]) {--img-group: url('https://d.l3n.co/bVGE2i.png');}
-#profile:is([class*="profilegroup-tyche"]) {--img-group: url('https://d.l3n.co/bVUj80.png');}
-#profile:is([class*="profilegroup-persefone"]) {--img-group: url('https://b.l3n.co/bVGkCo.png');}
-#profile:is([class*="profilegroup-afrodita"]) {--img-group: url('https://a.l3n.co/bVUrRM.png');}
-#profile:is([class*="profilegroup-dioniso"]) {--img-group: url('https://d.l3n.co/bVG6S9.png');}
-#profile:is([class*="profilegroup-hades"]) {--img-group: url('https://a.l3n.co/bVU1Fa.png');}
-#profile:is([class*="profilegroup-hecate"]) {--img-group: url('https://a.l3n.co/bVcFav.png');}
-#profile:is([class*="profilegroup-hypnos"]) {--img-group: url('https://d.l3n.co/bVyN5x.png');}
-#profile:is([class*="profilegroup-artemisa"]) {--img-group: url('https://c.l3n.co/bVGCx2.png');}
-#profile:is([class*="profilegroup-poseidon"]) {--img-group: url('https://c.l3n.co/bV5o45.png');}
-#profile:is([class*="profilegroup-atenea"]) {--img-group: url('https://b.l3n.co/bVUIeq.png');}
-#profile:is([class*="profilegroup-khione"]) {--img-group: url('https://b.l3n.co/bVGQ1v.png');}
-#profile:is([class*="profilegroup-hebe"]) {--img-group: url('https://a.l3n.co/bVGHpD.png');}
-#profile:is([class*="profilegroup-iris"]) {--img-group: url('https://d.l3n.co/bVGlFq.png');}
-#profile:is([class*="profilegroup-demeter"]) {--img-group: url('https://c.l3n.co/bVGSIA.png');}
-#profile:is([class*="profilegroup-hermes"]) {--img-group: url('https://d.l3n.co/bVGeBM.png');}
-#profile:is([class*="profilegroup-hestia"]) {--img-group: url('https://c.l3n.co/bVGnoQ.png');}
-#profile:is([class*="profilegroup-apolo"]) {--img-group: url('https://d.l3n.co/bVGFIK.png');}
-#profile:is([class*="profilegroup-zeus"]) {--img-group: url('https://a.l3n.co/bVGUmZ.png');}
-#profile:is([class*="profilegroup-hefesto"]) {--img-group: url('https://a.l3n.co/bVGYek.png');}
-#profile:is([class*="profilegroup-ares"]) {--img-group: url('https://c.l3n.co/bVU0JD.png');}
-
 /*QUITAR HEADER, TABLÓN Y FOOTER*/
 body:has(#profile) {
   height: 100%;
