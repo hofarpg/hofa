@@ -45,9 +45,4 @@
       line-height: 100%;
     }
   }
-  & .mbmembers {
-    & .mbmember {
-      width: calc(30% - var(--paddclamp5));
-    }
-  }
 }
