@@ -222,7 +222,6 @@
   --tgroup: rgb(from var(--group) r g b / 0.6);
   --accent: var(--group);
   --taccent: var(--tgroup);
-  --img-group: var(--img-usuarios);
 }
 
 /* ESENCIALES */
