@@ -688,10 +688,10 @@
 /* CONTAINERS - MEMBERLIST */
 #memberlist  .mbmembers .mbmember {
   @container memberlist-members (max-width: 600px) {
-    --mmbcolumn: 1;
+    --mmbcolumns: 1;
   }
   @container memberlist-members (min-width: 950px) {
-    --mmbcolumn: 3;
+    --mmbcolumns: 3;
   }
   @container memberlist-membercont (min-width: 550px) {
     .mbm-cont .mbmc-data {
