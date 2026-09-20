@@ -691,7 +691,9 @@
     --mmbcolumns: 1;
   }
   @container memberlist-members (min-width: 950px) {
-    --mmbcolumns: 3;
+    &:has(~ :nth-child(3n)), &:nth-child(3n) {
+      --mmbcolumns: 3;
+    }    
   }
   @container memberlist-membercont (min-width: 550px) {
     .mbm-cont .mbmc-data {
