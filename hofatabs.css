@@ -636,7 +636,7 @@
   strong {
     text-transform: uppercase;
   }
-  .element-desc + .element-effect:before {
+  .element-desc:after:has(+ .element-effect) {
     content: " ";
   }
   .element-damage {
