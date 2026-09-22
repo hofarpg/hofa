@@ -13,10 +13,11 @@
 
 /* ADMINISTRATIVAS */
 :is(
-    #guidelinks,
-    #guidelinked,
-    #guideconts,
+    #guidelinks,.guidelinks,
+    #guidelinked,.guidelinked,
+    #guideconts,.guideconts, 
     .admtitleimg,
+    .guidecont:has(.guico-txt), 
     .admtitle,
     .admtitmain,
     .admiman,
