@@ -26,7 +26,7 @@
   display: none !important;
 }
 /* guidebook */
-#guidebook {
+#guidebook, .guidebook {
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--gap3);
@@ -34,7 +34,9 @@
     display: none !important;
   }
   #guidelinks,
-  #guidelinked {
+  #guidelinked,
+  .guidelinks,
+  .guidelinked {
     position: sticky;
     z-index: 10;
     text-align: left;
@@ -123,7 +125,7 @@
       }
     }
   }
-  #guideconts {
+  #guideconts, .guideconts {
     flex: 1 0 70%;
     border: var(--border1);
     padding: var(--paddclamp1);
