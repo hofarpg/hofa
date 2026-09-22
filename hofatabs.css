@@ -266,6 +266,7 @@
 
 /* guidebook y generales */
 #guidebook,
+.guidebook,
 .admintab {
   strong {
     color: var(--accent);
@@ -3294,11 +3295,13 @@
 
 @container postbodycont (max-width: 600px) {
   /* guidebook */
-  #guidebook {
+  #guidebook, .guidebook {
     flex-wrap: wrap !important;
   }
   #guidelinks,
-  #guidelinked {
+  #guidelinked,
+  .guidelinks,
+  .guidelinked {
     position: relative !important;
     top: 0px !important;
     max-height: none !important;
