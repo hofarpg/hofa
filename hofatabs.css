@@ -665,9 +665,6 @@
   }
   .gd-name {
     cursor: initial;
-    &:after {
-      content: ".";
-    }
   }
   .gd-data {
     display: inline;
@@ -675,9 +672,6 @@
     background: none;
     padding: 0;
     border: 0;
-    &:before {
-      content: " ";
-    }
     .gd-cheat:hover & {
       display: inline;
     }
@@ -2196,6 +2190,12 @@
     }
     > i {
       color: var(--txt4);
+    }
+    &:has(.ability) > i {
+      &:before {
+          content: 'Mejora: ';
+        }
+      }
     }
   }
   .tbctcat {
