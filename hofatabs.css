@@ -2364,37 +2364,28 @@
   gap: var(--paddclamp7);
   display: flex;
   flex-direction: column;
-  .tbrestitle {
-    text-align: center;
-    font: var(--fo-bod-alt2);
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--txt1);
-    text-decoration: underline;
-    text-decoration-thickness: var(--bthickness);
+  h4 {
+    margin: 0;
+    font-size: var(--fs-bigger);
     text-decoration-color: var(--accent);
-    text-underline-offset: var(--bthickness);
-    line-height: 120%;
   }
   b.tbrcreq {
     color: var(--accent);
   }
-  ol.tbrcreq {
+  :is(ul,ol).tbrcreq {
     border-color: transparent;
-    margin: 0px !important;
-    margin-top: var(--gap3) !important;
-    padding: 0px !important;
-    list-style-position: inside;
-    li {
-      padding: 0px;
-    }
+    margin: 0;
+    margin-top: var(--gap3);
+    padding: 0;
   }
   ul.tbrcreq {
-    border-color: transparent;
-    margin: 0px !important;
-    margin-left: var(--gap2) !important;
-    margin-top: var(--gap3) !important;
-    padding: 0px !important;
+    margin-left: var(--gap2);
+  }
+  ol.tbrcreq {
+    list-style-position: inside;
+    li {
+      padding: 0;
+    }
   }
 }
 .tabusq {
@@ -2414,6 +2405,7 @@
     flex-wrap: wrap;
     border: var(--border1);
     background: var(--tback1);
+    --estado: attr(data-estado);
   }
   .tabudatos {
     flex: 1 0 100%;
@@ -2452,7 +2444,7 @@
       }
     }
     &:after {
-      content: "";
+      content: var(--estado, 'libre');
       background: var(--accent);
       color: var(--back1);
       font: var(--fo-deco2);
@@ -2472,11 +2464,11 @@
     border-right-width: calc(var(--paddclamp6) / 2);
     padding-right: calc(var(--paddclamp6) / 2);
     line-height: 135%;
-  }
-  .tabupj .tabucont {
-    border-width: var(--paddclamp7);
-    padding-right: calc(var(--paddclamp7) / 2);
-    border-right-width: calc(var(--paddclamp7) / 2);
+    .tabupj & {
+      border-width: var(--paddclamp7);
+      padding-right: calc(var(--paddclamp7) / 2);
+      border-right-width: calc(var(--paddclamp7) / 2);
+    }
   }
   .tabupjimg {
     max-width: 12.857rem;
@@ -2495,43 +2487,26 @@
       object-position: center;
     }
   }
-  :is(.tabutrama, .tabupj) {
-    &[id*="libre" i] .tabudatos:after {
-      content: "Libre";
-    }
-    &[id*="reservada" i] .tabudatos:after {
-      content: "Reservada";
-    }
-    &[id*="reservado" i] .tabudatos:after {
-      content: "Reservado";
-    }
-    &[id*="ocupada" i] .tabudatos:after {
-      content: "Ocupada";
-    }
-    &[id*="ocupado" i] .tabudatos:after {
-      content: "Ocupado";
-    }
-    &:is([id*="ocupad" i], [id*="reservad" i]) {
+  :is(.tabutrama, .tabupj):is([data-estado*="ocupad" i], [data-estado*="reservad" i]) {
+    border-radius: var(--bradius);
+    .tabudatos {
+      border-bottom: none;
       border-radius: var(--bradius);
+    }
+    :is(.tabucont, .tabupjimg) {
+      display: none;
+    }
+    &.clicked {
+      border-radius: 0;
       .tabudatos {
-        border-bottom: none;
-        border-radius: var(--bradius);
+        border-radius: 0;
+        border-bottom: var(--border1);
       }
-      :is(.tabucont, .tabupjimg) {
-        display: none;
+      .tabucont {
+        display: initial;
       }
-      &.clicked {
-        border-radius: 0 !important;
-        .tabudatos {
-          border-radius: 0 !important;
-          border-bottom: var(--border1);
-        }
-        .tabucont {
-          display: initial;
-        }
-        .tabupjimg {
-          display: flex;
-        }
+      .tabupjimg {
+        display: flex;        
       }
     }
   }
@@ -2551,7 +2526,7 @@
 .tabrelas,
 .tabhojaexp {
   --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / 0.6);
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
 }
 /* BAÚL */
 .tabaul > br,
