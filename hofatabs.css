@@ -647,7 +647,7 @@
     text-decoration: var(--bthickness) underline var(--taccent);
     text-underline-offset: var(--bthickness);
   }
-  &.list-bend {
+  .list-bend {
     li {
       display: inline;
     }
