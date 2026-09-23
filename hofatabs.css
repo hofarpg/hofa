@@ -3089,14 +3089,7 @@
       top: 0;
       max-height: none;
       .guideligroup {
-        > strong:before {
-          content: "\2b";
-        }
         .guiligr-links {
-          max-height: 0;
-          overflow: hidden;
-          transition: var(--trs2);
-          margin-top: 0;
           > a {
             flex: unset;
             margin: 0 ;
@@ -3113,16 +3106,6 @@
                 display: none;
               }
             }
-          }
-        }
-        &.showlinks {
-          > strong:before {
-            content: "\f068";
-          }
-          .guiligr-links {
-            max-height: 35.8rem;
-            transition: var(--trs2);
-            margin-top: var(--gap2);
           }
         }
       }
