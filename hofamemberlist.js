@@ -69,7 +69,7 @@ $(() => {
 
       /* rellenar campos sin información */
       $member.find(".field_uneditable:contains(  -)").text("Desconocido");
-      $member.find(".mbm-serv .field_uneditable, .mbm-age").filter(":not(:contains(Desconocido):contains(Desconocida))").append(" años");
+      $member.find(".mbm-serv .field_uneditable").filter(":not(:contains(Desconocido))").append(" años");
 
       pending--;
 
@@ -153,7 +153,7 @@ $(() => {
       if (isNaN(age)) {
         age = "Desconocida";
       }
-      $(psfield).parents(perfil).find(psfieldEnganche).html(age);
+      $(psfield).parents(perfil).find(psfieldEnganche).html(age).filter(":not(:contains(Desconocida))").append(" años");;
     }
     
     /* sistema de filtrado */
