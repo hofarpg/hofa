@@ -5,7 +5,7 @@
   .mbm-nav {
     position: sticky;
     top: calc(var(--nav-height) + var(--padd1));
-    flex: 1 0 25%;
+    flex: 1 0 23%;
     background: var(--tback1);
     gap: var(--padd0);
     border: var(--border1);
