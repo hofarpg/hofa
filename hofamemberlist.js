@@ -69,6 +69,7 @@ $(() => {
 
       /* rellenar campos sin información */
       $member.find(".field_uneditable:contains(  -)").text("Desconocido");
+      $member.find(".mbm-serv .field_uneditable, .mbm-age").filter(":not(:contains(Desconocido):contains(Desconocida))").append(" años");
 
       pending--;
 
