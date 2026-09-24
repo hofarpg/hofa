@@ -577,6 +577,11 @@
   .phmquote {
     display: none;
   }
+  /* menus desplegables */
+  #notif_list, .navigationpanel {    
+    top: calc(var(--nav-height) + var(--gap1));
+    left: var(--gap2) !important; /*necesario para sobreescribir la etiqueta*/
+  }
 }
 
 @media (max-width: 450px) {  
