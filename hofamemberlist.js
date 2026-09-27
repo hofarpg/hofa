@@ -18,59 +18,58 @@ $(() => {
 
     $.get(memberlistuser, function (data) {
       var $member = $link.parents(".mbmember");
+      var $data = $(data);
 
       /* obtener y llenar información de campos */
-      var memberank = $(data).find(".pfctrank>span").html();
+      var memberank = $data.find(".pfctrank>span").html();
       $member.find(".mbm-weap").append(memberank);
-
-      var memberparent = $(data).find('.pcfield .pclabel span:contains("Ascendencia")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberparent = $data.find('.pcfield .pclabel span:contains("Ascendencia")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbmci-desc>div>span").append(memberparent);
-
-      var memberfc = $(data).find('.pcfield .pclabel span:contains("Face claim")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberfc = $data.find('.pcfield .pclabel span:contains("Face claim")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-fc").append(memberfc);
-
-      var memberserv = $(data).find('.pcfield .pclabel span:contains("Servicio")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberserv = $data.find('.pcfield .pclabel span:contains("Servicio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-serv").append(memberserv);
-
-      var memberofic = $(data).find('.pcfield .pclabel span:contains("Oficio")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberofic = $data.find('.pcfield .pclabel span:contains("Oficio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-ofic").append(memberofic);
-
-      var memberuser = $(data).find('.pcfield .pclabel span:contains("Alias del usuario")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberuser = $data.find('.pcfield .pclabel span:contains("Alias del usuario")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-user").append(memberuser);
-
-      var memberbday = $(data).find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-naci").append(memberbday);
 
       /* obtener y llenar links */
-      var memberbaul = $(data).find("#field_id13 .field_uneditable a").attr("href");
+      var memberbaul = $data.find("#field_id13 .field_uneditable a").attr("href");
       $member.find(".membau").html('<a href="' + memberbaul +'" target="_blank"><i class="fa-regular fa-suitcase" title="Baúl"></i></a>');
-
-      var memberbusper = $(data).find("#field_id14 .field_uneditable a").attr("href");
+      var memberbusper = $data.find("#field_id14 .field_uneditable a").attr("href");
       $member.find(".membpj").html('<a href="' + memberbusper + '" target="_blank"><i class="fa-regular fa-fingerprint" title="Búsqueda de Personajes"></i></a>');
-
-      var memberbustra = $(data).find("#field_id15 .field_uneditable a").attr("href");
+      var memberbustra = $data.find("#field_id15 .field_uneditable a").attr("href");
       $member.find(".membtr").html('<a href="' + memberbustra + '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>');
 
       /* obtener y llenar clases */      
-      var asc = $member.find(".mbmci-desc div span").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      if (asc) $member.addClass("a-" + asc);
-      
-      var weap = $member.find(".mbm-weap").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      if (weap) $member.addClass("c-" + weap);
-
-      var ofic = $member.find(".mbm-ofic .field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var asc = memberparent.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (asc) $member.addClass("a-" + asc);      
+      var clase = $member.find(".mbm-weap").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (weap) $member.addClass("c-" + clase);
+      var ofic = memberofic.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (ofic) $member.addClass("o-" + ofic);
-
-      var user = $member.find(".mbm-user .field_uneditable").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var user = memberuser.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (user) $member.addClass("u-" + user);
+      
+      /* calcular edad de personaje */
+      getAge({
+        wrapper: ".mbmember",
+        content: ".field_uneditable",
+        nacimiento: $member.find(".mbm-naci"),
+        fieldEnganche: ".mbm-age"
+      });
 
       /* remover clase de .u-nombre */
-      $member.filter(".u-nombre").removeClass("u-nombre");
+      if ($member.hasClass("u-nombre")) {
+        $member.removeClass("u-nombre");
+      }
 
       /* rellenar campos sin información */
       $member.find(".field_uneditable:contains(  -)").text("Desconocido");
-      $member.find(".mbm-serv .field_uneditable").filter(":not(:contains(Desconocido))").append(" años");
-
+      
       pending--;
 
       if (pending === 0) {
@@ -130,30 +129,6 @@ $(() => {
     $(".mfilt-user li.abc").sort(asc_sort).appendTo(".mfilt-user");
     function asc_sort(a, b) {
       return $(b).text() < $(a).text() ? 1 : -1;
-    }
-    
-    /* calcular edad de personaje */
-    var perfil = ".mbmember";
-    var psfield = ".flex.fcolumn";
-    var pscontent = ".field_uneditable";
-    var psnacimiento = ".mbm-naci";
-    var psfieldEnganche = ".mbm-age";
-
-    $(psnacimiento).each(function () {
-      getAge(this, pscontent, month, year);
-    });
-
-    function getAge(psfield, pscontent, month, year) {
-      var string = $(psfield).find(pscontent).text();
-      var fecha = string.split("/");
-      var age = year - fecha[2];
-      if (fecha[1] > month) {
-        age--;
-      }
-      if (isNaN(age)) {
-        age = "Desconocida";
-      }
-      $(psfield).parents(perfil).find(psfieldEnganche).html(age).filter(":not(:contains(Desconocida))").append(" años");;
     }
     
     /* sistema de filtrado */
