@@ -1870,6 +1870,7 @@
     line-height: 110%;
     max-height: 4.65rem;
     height: 100%;
+    overflow: auto;
     br:is(:first-child, :last-child) {
       display: none;
     }
