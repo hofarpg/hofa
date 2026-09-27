@@ -48,7 +48,7 @@ $(() => {
       var asc = memberparent.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (asc) $member.addClass("a-" + asc);      
       var clase = $data.find(".pfctrank>span").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      if (weap) $member.addClass("c-" + clase);
+      if (clase) $member.addClass("c-" + clase);
       var ofic = memberofic.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (ofic) $member.addClass("o-" + ofic);
       var user = memberuser.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
