@@ -47,7 +47,7 @@ $(() => {
       /* obtener y llenar clases */      
       var asc = memberparent.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (asc) $member.addClass("a-" + asc);      
-      var clase = $member.find(".mbm-weap").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var clase = $data.find(".pfctrank>span").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (weap) $member.addClass("c-" + clase);
       var ofic = memberofic.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (ofic) $member.addClass("o-" + ofic);
