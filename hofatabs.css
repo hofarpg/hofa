@@ -2563,12 +2563,16 @@
     gap: var(--gap3);
   }
   .tabcrcoyear {
-    text-transform: lowercase;
+    text-transform: uppercase;
     font: var(--fo-h4);
     font-size: var(--fo-h4-clamp);
     color: var(--txt1);
     text-shadow: 1px 1px 0.5px var(--accent);
     line-height: 100%;
+    
+    
+    
+    
     &:not(:first-of-type) {
       margin-top: var(--gap3);
     }
@@ -2616,28 +2620,31 @@
         transition: var(--trs1);
       }
     }
-    &:is(#abierto, #Abierto, #ABIERTO) > i:before {
+    &[data-type="personal" i] > i:before {
       content: "\f09c";
     }
-    &:is(#cerrado, #Cerrado, #CERRADO) {
-        --accent: var(--usuarios);
-        > i:before {
-        content: "\f023";
-        }
-    }
-    &:is(#inconcluso, #Inconcluso, #INCONCLUSO) {
-        --accent: var(--inactivos);
+    &[data-status="cerrado" i] {
+      --accent: var(--usuarios);
       > i:before {
-          content: "\f254";
+        content: "\f023";
       }
     }
-    &:is(#oficio, #Oficio, #OFICIO) > i:before {
+    &[data-status="inconcluso" i] {
+      --accent: var(--inactivos);
+      > i:before {
+        content: "\f254";
+      }
+    }
+    &[data-type="oficio" i] > i:before {
       content: "\f807";
     }
-    &:is(#entrenamiento, #Entrenamiento, #ENTRENAMIENTO) > i:before {
+    &[data-type="entrenamiento" i] > i:before {
       content: "\f44b";
     }
-    &:is(#mision, #Mision, #MISION, #misión, #Misión, #MISIÓN) > i:before {
+    &[data-type="mision" i] > i:before {
+      content: "\f71d";
+    }
+    &[data-type="trama" i] > i:before {
       content: "\f70e";
     }
     > div {
@@ -3045,16 +3052,16 @@
       border-radius: var(--bradius);
       transition: var(--trs1);
       &:before {
-        content: "";
+        content: '';
         color: var(--accent);
         font: var(--fo-icon2);
         transition: var(--trs1);
       }
     }
-    &:is(#completo, #Completo, #COMPLETO) > i:before {
+    &:is([id*="complet" i],[data-status*="complet" i]) > i:before {
       content: "\f00c";
     }
-    &:is(#incompleto, #Incompleto, #INCOMPLETO) > i:before {
+    &:is([id*="incomplet" i], [data-status*="incomplet" i]) > i:before {
       content: "\f00d";
     }
     > div {
