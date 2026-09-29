@@ -1495,7 +1495,7 @@ div#cont_pwd:not(
   border-radius: var(--bradius);
   display: block;
   width: fit-content;
-  margin-bottom: var(--gap0);
+  margin-bottom: var(--gap2);
   text-box: trim-both cap alphabetic;
 }
 .title-thread .threadtag {
