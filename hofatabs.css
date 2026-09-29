@@ -2610,7 +2610,7 @@
       border-radius: var(--bradius);
       transition: var(--trs1);
       &:before {
-        content: "";
+        content: "\f09c";
         color: var(--accent);
         font: var(--fo-icon2);
         transition: var(--trs1);
@@ -2619,11 +2619,17 @@
     &:is(#abierto, #Abierto, #ABIERTO) > i:before {
       content: "\f09c";
     }
-    &:is(#cerrado, #Cerrado, #CERRADO) > i:before {
-      content: "\f023";
+    &:is(#cerrado, #Cerrado, #CERRADO) {
+        --accent: var(--usuarios);
+        > i:before {
+        content: "\f023";
+        }
     }
-    &:is(#inconcluso, #Inconcluso, #INCONCLUSO) > i:before {
-      content: "\f254";
+    &:is(#inconcluso, #Inconcluso, #INCONCLUSO) {
+        --accent: var(--inactivos);
+      > i:before {
+          content: "\f254";
+      }
     }
     &:is(#oficio, #Oficio, #OFICIO) > i:before {
       content: "\f807";
