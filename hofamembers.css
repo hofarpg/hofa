@@ -25,7 +25,7 @@
       width: 100%;
       font: var(--fo-h4);
       color: var(--txt1);
-      text-shadow: 1px 1px .5px var(--accent);
+      text-shadow: 1px 1px 0.5px var(--accent);
       line-height: 85%;
       font-size: var(--fo-h4-clamp);
     }
@@ -37,8 +37,8 @@
         > div {
           flex: 1;
           :is(input) {
-            min-width: auto!important;
-            width: 100%!important;
+            min-width: auto !important;
+            width: 100% !important;
             flex: 1;
           }
         }
@@ -54,14 +54,14 @@
         width: 100%;
         &:not(.showfilters) {
           strong:before {
-             content:'\f068';
-           }
+            content: "\f068";
+          }
         }
         &.showfilters {
           strong:before {
-            content: '\2b';
+            content: "\2b";
           }
-          ul {         
+          ul {
             max-height: 0;
             overflow: hidden;
             transition: var(--trs2);
@@ -74,9 +74,9 @@
           text-transform: uppercase;
           color: var(--accent);
           font-weight: 900;
-          line-height: 100%;   
+          line-height: 100%;
           &:before {
-            content: '\f068';
+            content: "\f068";
             font: var(--fo-icon4);
             color: var(--txt1);
             font-weight: 900;
@@ -88,12 +88,12 @@
           flex-wrap: wrap;
           gap: var(--gap2) var(--gap3);
           margin: 0;
-          padding: 0;   
+          padding: 0;
           max-height: 35.8rem;
           transition: var(--trs2);
-          
+
           margin-top: var(--gap4);
-                  li {
+          li {
             font: var(--fo-deco2);
             line-height: 100%;
             display: flex;
@@ -122,7 +122,7 @@
               border-radius: var(--bradius);
               padding: var(--gap0);
               text-box: trim-both cap alphabetic;
-            }          
+            }
           }
         }
       }
@@ -145,12 +145,12 @@
       height: fit-content;
       container: memberlist-membercont / inline-size;
       overflow: hidden;
-      align-self: center;   
+      align-self: center;
       border: var(--border1);
       --mmbcolumns: 2;
       &[class*="-administrador"] {
         display: none;
-      } 
+      }
       .mbm-top {
         position: relative;
         border-bottom: var(--border1);
@@ -168,8 +168,9 @@
           width: 100%;
           position: absolute;
           z-index: 0;
-          &:before, &:after {
-            content: '';
+          &:before,
+          &:after {
+            content: "";
             position: absolute;
             z-index: 0;
             height: 100%;
@@ -266,8 +267,8 @@
             font-size: var(--fo-h4-clamp);
             line-height: 90%;
             span {
-              color: var(--txt1)!important;
-              text-shadow: 1.5px 1px .5px var(--group);
+              color: var(--txt1) !important;
+              text-shadow: 1.5px 1px 0.5px var(--group);
             }
           }
           .mbmci-desc {
@@ -284,7 +285,7 @@
             }
             > div {
               text-transform: lowercase;
-              font: var(--fo-deco2);
+              font: var(--fo-deco1);
               font-weight: 300;
               font-style: italic;
               color: var(--txt4);
@@ -306,14 +307,16 @@
           flex-wrap: wrap;
           gap: var(--paddclamp6);
           overflow: auto;
-          max-height: calc((2rem * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2));
+          max-height: calc(
+            (2rem * 3) + (var(--paddclamp6) * 2) + (var(--paddclamp6) * 2)
+          );
           div {
             flex: 1 0 calc((100% / var(--mmbdatacol)) - var(--paddclamp6));
             gap: var(--gap1);
             justify-content: center;
             line-height: 80%;
             --mmbdatacol: 2;
-                      em {
+            em {
               text-transform: uppercase;
               font: var(--fo-deco2);
               font-weight: 800;
@@ -321,7 +324,7 @@
               line-height: 100%;
               &:empty {
                 &:before {
-                  content: 'Desconocido';
+                  content: "Desconocido";
                 }
               }
             }
@@ -380,7 +383,7 @@
   .mbm-nomember {
     flex: 1 0 65%;
     align-self: stretch;
-    height: unset!important;
+    height: unset !important;
     text-align: center;
     padding: var(--paddclamp1);
     justify-content: center;
@@ -391,10 +394,10 @@
     strong {
       font: var(--fo-bod2);
       font-weight: bold;
-      position: relative!important;
-      color: var(--txt4)!important;
-      top: unset!important;
-      left: unset!important;
+      position: relative !important;
+      color: var(--txt4) !important;
+      top: unset !important;
+      left: unset !important;
     }
   }
 }
