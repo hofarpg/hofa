@@ -1091,13 +1091,11 @@ span#dice_to_del {
 
 /* EDITAR PERFIL */
 #cp-main {
-  float: none;
-  margin: 0px !important;
   width: 100%;
-  background: var(--tback1) !important;
-  border: var(--border1) !important;
-  padding: var(--paddclamp3) !important;
-  margin-bottom: var(--gap4) !important;
+  background: var(--tback1);
+  border: var(--border1);
+  padding: var(--paddclamp3);
+  margin-bottom: var(--gap4);
   .ucp-perfil-personalizado {
     h4 {
       text-transform: uppercase;
@@ -1399,18 +1397,12 @@ dl.ucp-avatar img {
   text-align: left;
 }
 #cp-main p.right-box {
-  float: none !important;
-  margin: var(--gap4) 0px 0px 0px !important;
-  font: var(--fo-deco2) !important;
+  margin: var(--gap4) 0 0 0;
+  font: var(--fo-deco2);
   text-transform: uppercase;
   text-align: right;
-  line-height: 100% !important;
+  line-height: 100%;
   color: var(--txt3);
-}
-#cp-main.ucp-drafts {
-  background: transparent !important;
-  padding: 0px !important;
-  border: none !important;
 }
 #cont_pwd {
   height: auto;
