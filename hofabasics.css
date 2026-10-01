@@ -1501,6 +1501,42 @@ div#cont_pwd:not(
     margin: 0;
   }
 }
+.panel:has(form#form_abuse) {
+  form {
+    fieldset {
+      dl {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        dt {
+          flex: unset;
+          label {
+            color: var(--accent);
+          }
+          &:has(label:empty) {
+            display: none;
+          }
+        }
+        dd {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: var(--gap1);
+          width: 100%;
+          input {
+            margin: 0;
+          }
+          label {
+            display: initial;
+          }
+          textarea.inputbox {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
 
 /*TAGS TEMAS*/
 #tagForm {
