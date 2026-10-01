@@ -1396,7 +1396,7 @@ dl.ucp-avatar img {
   line-height: 100%;
 }
 #cp-main table tbody tr td:first-of-type {
-  text-align: left !important;
+  text-align: left;
 }
 #cp-main p.right-box {
   float: none !important;
@@ -1406,10 +1406,6 @@ dl.ucp-avatar img {
   text-align: right;
   line-height: 100% !important;
   color: var(--txt3);
-}
-#cp-main.ucp-vigi table tbody tr td:first-of-type,
-#cp-main.ucp-vigi table.table1 thead th:first-of-type {
-  display: none !important;
 }
 #cp-main.ucp-drafts {
   background: transparent !important;
