@@ -1372,19 +1372,21 @@ dl.ucp-avatar img {
 }
 #cp-main table {
   border: none;
-  padding: 0px !important;
-  margin: 0px !important;
-  border-spacing: 0px !important;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
 }
 #cp-main table thead th {
-  color: var(--txt1) !important;
   font: var(--fo-bod2);
   font-weight: 900;
-  border-bottom: var(--border1) !important;
+  border-bottom: var(--border1);
   position: relative;
-  padding: var(--gap2) !important;
-  text-align: center !important;
-  line-height: 100% !important;
+  padding: var(--gap2);
+  text-align: center;
+  line-height: 100%;
+}
+#cp-main table thead :is(th, th a) {
+    color: var(--txt1);
 }
 #cp-main table tbody tr td {
   padding: var(--gap2);
