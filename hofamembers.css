@@ -103,7 +103,6 @@
               color: var(--txt4);
               text-transform: lowercase;
               font-style: italic;
-              font-weight: 300;
               text-decoration-color: var(--taccent);
               &.selected {
                 text-transform: uppercase;
@@ -243,7 +242,7 @@
             border-top: var(--tborder);
             border-left: var(--tborder);
             border-right: var(--tborder);
-            padding: var(--gap0) var(--gap2);
+            padding: var(--gap1) var(--gap2);
           }
         }
       }
