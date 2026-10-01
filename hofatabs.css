@@ -13,11 +13,14 @@
 
 /* ADMINISTRATIVAS */
 :is(
-    #guidelinks,.guidelinks,
-    #guidelinked,.guidelinked,
-    #guideconts,.guideconts, 
+    #guidelinks,
+    .guidelinks,
+    #guidelinked,
+    .guidelinked,
+    #guideconts,
+    .guideconts,
     .admtitleimg,
-    .guidecont:has(.guico-txt), 
+    .guidecont:has(.guico-txt),
     .admtitle,
     .admtitmain,
     .admiman,
@@ -27,7 +30,8 @@
   display: none !important;
 }
 /* guidebook */
-#guidebook, .guidebook {
+#guidebook,
+.guidebook {
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--gap3);
@@ -126,7 +130,8 @@
       }
     }
   }
-  #guideconts, .guideconts {
+  #guideconts,
+  .guideconts {
     flex: 1 0 70%;
     border: var(--border1);
     padding: var(--paddclamp1);
@@ -150,7 +155,7 @@
         display: none;
       }
       &[class*="group-"] .admtitleimg i:before {
-          content: var(--i-group);
+        content: var(--i-group);
       }
     }
     .admtitleimg {
@@ -158,7 +163,7 @@
         font-size: var(--fo-h2-clamp);
         max-width: var(--regtab);
         .libreria-dioses & {
-          font-size: var(--fo-h1-clamp);          
+          font-size: var(--fo-h1-clamp);
         }
       }
       > em {
@@ -228,7 +233,8 @@
       }
       > span {
         line-height: 100%;
-        > a, b {
+        > a,
+        b {
           text-transform: uppercase;
           font-weight: 900;
         }
@@ -270,7 +276,12 @@
     color: var(--txt1);
     font-weight: 800;
   }
-  i:not([class*="fa-"], [class*="ph-"], [class*="icofont-"], [class*="game-icon-"]) {
+  i:not(
+    [class*="fa-"],
+    [class*="ph-"],
+    [class*="icofont-"],
+    [class*="game-icon-"]
+  ) {
     font-style: italic;
     color: hsl(from var(--txt4) h s 60%);
   }
@@ -318,7 +329,7 @@
       object-fit: cover;
       object-position: center;
       filter: var(--filter2);
-      opacity: .4;
+      opacity: 0.4;
     }
     * {
       position: relative;
@@ -328,14 +339,14 @@
       position: absolute;
       font-size: calc(var(--fs-title) + var(--fs-h1));
       color: var(--taccent);
-      opacity: .6;
+      opacity: 0.6;
       z-index: 1;
     }
     > h2 {
       margin: 0;
       text-align: center;
       line-height: 85%;
-      text-shadow: 1px 1px .5px var(--accent);
+      text-shadow: 1px 1px 0.5px var(--accent);
     }
     > em {
       text-transform: uppercase;
@@ -376,7 +387,7 @@
       position: absolute;
       z-index: 0;
       color: var(--taccent);
-      font-size: calc((var(--fs-title) + var(--fs-h1)) - .5rem);
+      font-size: calc((var(--fs-title) + var(--fs-h1)) - 0.5rem);
     }
     > u {
       text-transform: uppercase;
@@ -441,7 +452,7 @@
     h2 {
       margin: 0;
       line-height: 110%;
-      text-shadow: 1px 1px .5px var(--accent);
+      text-shadow: 1px 1px 0.5px var(--accent);
     }
     h3 {
       color: var(--accent);
@@ -563,7 +574,7 @@
   border-radius: var(--bradius);
   background: var(--taccent);
   padding: var(--paddclamp7);
-  font: var(--fo-bod2);
+  font: var(--fo-deco2);
   line-height: 110%;
   font-weight: 500;
   text-transform: uppercase;
@@ -705,7 +716,7 @@
     font: var(--fo-h3);
     font-size: var(--fo-h3-clamp);
     color: var(--txt1);
-    text-shadow: 1px 1px .5px var(--accent);
+    text-shadow: 1px 1px 0.5px var(--accent);
     margin: 0;
     line-height: 90%;
   }
@@ -897,7 +908,7 @@
   container: criaturacont / inline-size;
   &.mark {
     .gdcriatimg {
-     &:before {
+      &:before {
         content: "\f321";
         position: absolute;
         z-index: 1;
@@ -1067,7 +1078,7 @@
       font-size: var(--fo-h2-clamp);
       line-height: 85%;
       color: var(--txt1);
-      text-shadow: 1px 1px .5px var(--accent);
+      text-shadow: 1px 1px 0.5px var(--accent);
     }
     > em {
       text-transform: lowercase;
@@ -1366,7 +1377,7 @@
     > .expzhtclass {
       &:before {
         content: var(--i-group);
-        opacity: .4;
+        opacity: 0.4;
         font-size: calc(var(--fs-h1) + 1rem);
       }
       > b {
@@ -1379,7 +1390,7 @@
       position: absolute;
       font: 300 var(--fs-h1) var(--font4);
       color: var(--taccent);
-      opacity: .2;
+      opacity: 0.2;
       z-index: 0;
     }
   }
@@ -1494,7 +1505,7 @@
       position: relative;
       z-index: 1;
     }
-    &:not(:has(b,i)) {
+    &:not(:has(b, i)) {
       min-height: auto;
     }
   }
@@ -1678,7 +1689,12 @@
       margin-bottom: var(--gap0);
     }
   }
-  i:not([class*="fa-"], [class*="ph-"], [class*="icofont-"], [class*="game-icon-"]) {
+  i:not(
+    [class*="fa-"],
+    [class*="ph-"],
+    [class*="icofont-"],
+    [class*="game-icon-"]
+  ) {
     font-style: italic;
     color: hsl(from var(--txt4) h s 60%);
   }
@@ -1808,8 +1824,7 @@
       }
       .tbcmdtinfo {
         text-transform: lowercase;
-        font: var(--fo-deco3);
-        font-weight: 300;
+        font: var(--fo-deco2);
         font-style: italic;
         color: var(--txt4);
         line-height: 100%;
@@ -1990,8 +2005,7 @@
     }
     &:has(.ability) > i {
       &:before {
-          content: 'Mejora: ';
-        }
+        content: "Mejora: ";
       }
     }
   }
@@ -2066,7 +2080,9 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box !important;
-  --taccent: rgb(from var(--accent) r g b / .6); /* needed for applying --personalclr*/
+  --taccent: rgb(
+    from var(--accent) r g b / 0.6
+  ); /* needed for applying --personalclr*/
   * {
     box-sizing: border-box !important;
   }
@@ -2169,7 +2185,7 @@
   b.tbrcreq {
     color: var(--accent);
   }
-  :is(ul,ol).tbrcreq {
+  :is(ul, ol).tbrcreq {
     border-color: transparent;
     margin: 0;
     margin-top: var(--gap3);
@@ -2241,7 +2257,7 @@
       }
     }
     &:after {
-      content: var(--estado, 'libre');
+      content: var(--estado, "libre");
       background: var(--accent);
       color: var(--back1);
       font: var(--fo-deco2);
@@ -2284,7 +2300,10 @@
       object-position: center;
     }
   }
-  :is(.tabutrama, .tabupj):is([data-estado*="ocupad" i], [data-estado*="reservad" i]) {
+  :is(.tabutrama, .tabupj):is(
+    [data-estado*="ocupad" i],
+    [data-estado*="reservad" i]
+  ) {
     border-radius: var(--bradius);
     .tabudatos {
       border-bottom: none;
@@ -2303,7 +2322,7 @@
         display: initial;
       }
       .tabupjimg {
-        display: flex;        
+        display: flex;
       }
     }
   }
@@ -2323,7 +2342,7 @@
 .tabrelas,
 .tabhojaexp {
   --accent: var(--personalclr, var(--group));
-  --taccent: rgb(from var(--personalclr, var(--group)) r g b / .6);
+  --taccent: rgb(from var(--personalclr, var(--group)) r g b / 0.6);
 }
 /* BAÚL */
 .tabaul > br,
@@ -2569,10 +2588,7 @@
     color: var(--txt1);
     text-shadow: 1px 1px 0.5px var(--accent);
     line-height: 100%;
-    
-    
-    
-    
+
     &:not(:first-of-type) {
       margin-top: var(--gap3);
     }
@@ -3052,13 +3068,13 @@
       border-radius: var(--bradius);
       transition: var(--trs1);
       &:before {
-        content: '';
+        content: "";
         color: var(--accent);
         font: var(--fo-icon2);
         transition: var(--trs1);
       }
     }
-    &:is([id*="complet" i],[data-status*="complet" i]) > i:before {
+    &:is([id*="complet" i], [data-status*="complet" i]) > i:before {
       content: "\f00c";
     }
     &:is([id*="incomplet" i], [data-status*="incomplet" i]) > i:before {
@@ -3092,9 +3108,10 @@
 /* CONTAINERS */
 @container postbodycont (max-width: 600px) {
   /* guidebook */
-  #guidebook, .guidebook {
+  #guidebook,
+  .guidebook {
     flex-wrap: wrap;
-    
+
     #guidelinks,
     #guidelinked,
     .guidelinks,
@@ -3106,7 +3123,7 @@
         .guiligr-links {
           > a {
             flex: unset;
-            margin: 0 ;
+            margin: 0;
             text-transform: lowercase;
             font-style: italic;
             font-weight: 300;
@@ -3127,7 +3144,9 @@
   }
   /* expediente */
   #expedtab {
-    #expzdata  > b {flex-basis: calc(50% - var(--paddclamp4));}
+    #expzdata > b {
+      flex-basis: calc(50% - var(--paddclamp4));
+    }
     .expzhstats {
       flex: 1;
       flex-direction: row;
@@ -3136,7 +3155,7 @@
     #expzrhoja {
       flex-direction: column-reverse;
     }
-  }    
+  }
   /* baul */
   .tabaul#tbfull {
     flex-direction: column-reverse;
@@ -3199,7 +3218,7 @@
         border-top: var(--tborder);
       }
     }
-  }    
+  }
   /* combate */
   #tabcombatpj,
   #tabcombatmn {
@@ -3292,7 +3311,9 @@
     #expimg {
       height: 14.286rem;
     }
-    #expzdata  > b {flex-basis: 100%;}
+    #expzdata > b {
+      flex-basis: 100%;
+    }
     .expzhstats > b {
       min-width: 40%;
     }
