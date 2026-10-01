@@ -1147,11 +1147,12 @@ span#dice_to_del {
   background: var(--tback1);
   border: var(--border1);
   border-radius: var(--bradius);
-  padding: var(--gap0) 0;
+  padding: var(--gap1) var(--gap3);
   text-transform: uppercase;
   color: var(--accent);
   font: var(--fo-deco2);
   font-weight: 800;
+  line-height: 100%;
 }
 #tabs li a,
 #tabs a span {
@@ -1160,8 +1161,7 @@ span#dice_to_del {
 }
 #tabs a span {
   color: var(--txt1);
-  padding: var(--gap0) var(--gap2);
-  padding-bottom: var(--bthickness) !important;
+  padding: 0 !important;
 }
 #tabs li:hover a {
   color: var(--accent) !important;
@@ -1173,8 +1173,7 @@ span#dice_to_del {
 #tabs li.activetab span {
   color: var(--back1);
   cursor: default;
-  padding-top: var(--gap0) !important;
-  padding-bottom: var(--gap0) !important;
+  padding: 0 !important;
 }
 #tabs li.activetab span:hover,
 #tabs li.activetab:hover span {
@@ -1365,7 +1364,8 @@ dl.ucp-avatar img {
   object-position: center;
 }
 .ucp-panel-de-control-de-los-avatares dl.ucp-avatar {
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
 }
 .cp_notifs {
   margin-top: var(--paddclamp6);
@@ -1386,7 +1386,7 @@ dl.ucp-avatar img {
   line-height: 100%;
 }
 #cp-main table thead :is(th, th a) {
-    color: var(--txt1);
+  color: var(--txt1);
 }
 #cp-main table tbody tr td {
   padding: var(--gap2);
