@@ -1051,7 +1051,8 @@ span#dice_to_del {
   }
   .pbsearchpost {
     text-transform: uppercase;
-    font: var(--fo-h2-clamp);
+    font: var(--fo-h2);
+    font-size: var(--fo-h2-clamp);
     line-height: 85%;
     text-shadow: 1px 1px 0.5px var(--group);
   }
