@@ -47,29 +47,29 @@
   --i-hestia: "\f7e4";
   --i-ares: "\f71d";
   --i-usuarios: "\f6ba";
-  --img-staff: url('https://a.l3n.co/b5xQVH.png');
-  --img-nemesis: url('https://d.l3n.co/bVGE2i.png');
-  --img-tyche: url('https://d.l3n.co/bVUj80.png');
-  --img-persefone: url('https://b.l3n.co/bVGkCo.png');
-  --img-afrodita: url('https://a.l3n.co/bVUrRM.png');
-  --img-dioniso: url('https://d.l3n.co/bVG6S9.png');
-  --img-hades: url('https://a.l3n.co/bVU1Fa.png');
-  --img-hecate: url('https://a.l3n.co/bVcFav.png');
-  --img-artemisa: url('https://c.l3n.co/bVGCx2.png');
-  --img-poseidon: url('https://c.l3n.co/bV5o45.png');
-  --img-hypnos: url('https://d.l3n.co/bVyN5x.png');
-  --img-khione: url('https://b.l3n.co/bVGQ1v.png');
-  --img-hebe: url('https://a.l3n.co/bVGHpD.png');
-  --img-atenea: url('https://b.l3n.co/bVUIeq.png');
-  --img-demeter: url('https://c.l3n.co/bVGSIA.png');
-  --img-iris: url('https://d.l3n.co/bVGlFq.png');
-  --img-hermes: url('https://d.l3n.co/bVGeBM.png');
-  --img-apolo: url('https://d.l3n.co/bVGFIK.png');
-  --img-zeus: url('https://a.l3n.co/bVGUmZ.png');
-  --img-hefesto: url('https://a.l3n.co/bVGYek.png');
-  --img-hestia: url('https://c.l3n.co/bVGnoQ.png');
-  --img-ares: url('https://c.l3n.co/bVU0JD.png');
-  --img-usuarios: url('https://d.l3n.co/bVGcoP.png');
+  --img-staff: url("https://a.l3n.co/b5xQVH.png");
+  --img-nemesis: url("https://d.l3n.co/bVGE2i.png");
+  --img-tyche: url("https://d.l3n.co/bVUj80.png");
+  --img-persefone: url("https://b.l3n.co/bVGkCo.png");
+  --img-afrodita: url("https://a.l3n.co/bVUrRM.png");
+  --img-dioniso: url("https://d.l3n.co/bVG6S9.png");
+  --img-hades: url("https://a.l3n.co/bVU1Fa.png");
+  --img-hecate: url("https://a.l3n.co/bVcFav.png");
+  --img-artemisa: url("https://c.l3n.co/bVGCx2.png");
+  --img-poseidon: url("https://c.l3n.co/bV5o45.png");
+  --img-hypnos: url("https://d.l3n.co/bVyN5x.png");
+  --img-khione: url("https://b.l3n.co/bVGQ1v.png");
+  --img-hebe: url("https://a.l3n.co/bVGHpD.png");
+  --img-atenea: url("https://b.l3n.co/bVUIeq.png");
+  --img-demeter: url("https://c.l3n.co/bVGSIA.png");
+  --img-iris: url("https://d.l3n.co/bVGlFq.png");
+  --img-hermes: url("https://d.l3n.co/bVGeBM.png");
+  --img-apolo: url("https://d.l3n.co/bVGFIK.png");
+  --img-zeus: url("https://a.l3n.co/bVGUmZ.png");
+  --img-hefesto: url("https://a.l3n.co/bVGYek.png");
+  --img-hestia: url("https://c.l3n.co/bVGnoQ.png");
+  --img-ares: url("https://c.l3n.co/bVU0JD.png");
+  --img-usuarios: url("https://d.l3n.co/bVGcoP.png");
 }
 
 [class*="group-guest"],
@@ -720,30 +720,34 @@ span#dice_to_del {
   flex-shrink: 0;
 }
 .mhava img {
-  width: var(--icon2);
-  height: var(--icon2);
+  width: var(--icon1);
+  height: var(--icon1);
   overflow: hidden;
   border-radius: var(--bradius);
   object-fit: cover;
   object-position: center;
 }
 .messlinks {
-  min-width: 60px;
-  text-align: right;
-  justify-content: center;
-  align-items: flex-end;
-  gap: var(--gap4);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  padding: var(--gap4);
+  border: var(--border1);
+  background: var(--back2);
+  text-transform: uppercase;
+  border-bottom: none;
+  gap: var(--gap0) var(--gap4);
+  flex-wrap: wrap;
 }
 .messlinks > a {
-  text-transform: uppercase;
   font: var(--fo-deco2);
   font-weight: bold;
-  color: var(--txt3);
-  line-height: 140%;
-  text-decoration: underline;
-  text-decoration-color: var(--tgroup, var(--taccent));
-  text-decoration-thickness: var(--bthickness);
-  text-underline-offset: var(--bthickness);
+  line-height: 120%;
+  color: var(--txt4);
+  &:hover {
+    color: var(--group);
+  }
 }
 .messagepreviews {
   margin: var(--paddclamp7) 0px;
@@ -1051,8 +1055,7 @@ span#dice_to_del {
   }
   .pbsearchpost {
     text-transform: uppercase;
-    font: var(--fo-h2);
-    font-size: var(--fo-h2-clamp);
+    font: var(--fo-h2-clamp);
     line-height: 85%;
     text-shadow: 1px 1px 0.5px var(--group);
   }
