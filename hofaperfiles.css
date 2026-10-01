@@ -2,8 +2,8 @@
 body:has(#profile) {
   height: 100%;
   min-height: 100vh;
-  header, 
-  #tablon, 
+  header,
+  #tablon,
   footer {
     display: none;
   }
@@ -213,7 +213,7 @@ body:has(#profile) {
   align-items: center;
   text-align: center;
   flex: 1 0 35%;
-  max-width: 29.0rem;
+  max-width: 29rem;
   min-width: 20rem;
   width: 100%;
   .prfimgcont {
@@ -232,8 +232,9 @@ body:has(#profile) {
     width: 100%;
     position: absolute;
     z-index: 0;
-    &:before, &:after {
-      content: '';
+    &:before,
+    &:after {
+      content: "";
       position: absolute;
       z-index: 0;
       height: 100%;
@@ -276,10 +277,7 @@ body:has(#profile) {
     a {
       font: var(--fo-deco2);
       font-weight: bold;
-      line-height: 120%;
-      text-decoration: underline;
-      text-decoration-thickness: var(--bthickness);
-      text-decoration-color: var(--tgroup);
+      line-height: 100%;
       color: var(--txt2);
       text-underline-offset: var(--bthickness);
       &:hover {
@@ -300,7 +298,8 @@ body:has(#profile) {
   border: var(--bthickness) solid var(--tgroup);
   border-radius: var(--bradius);
   padding: 4px;
-  img, &:empty:before {
+  img,
+  &:empty:before {
     width: var(--icon2);
     height: var(--icon2);
     border-radius: var(--bradius);
@@ -345,17 +344,18 @@ body:has(#profile) {
     align-items: center;
     flex-direction: row;
     gap: var(--padd0);
-    &:before, &:after {
+    &:before,
+    &:after {
       font: var(--fo-icon2);
       font-weight: bold;
       color: var(--txt3);
       border-radius: var(--bradius);
     }
     &:before {
-      content:'\f04a';
+      content: "\f04a";
     }
     &:after {
-      content:'\f04e';
+      content: "\f04e";
     }
     .player-inner {
       .buttons {
@@ -377,12 +377,12 @@ body:has(#profile) {
           }
           &[play-button] {
             &:before {
-              content:'\f04b';
+              content: "\f04b";
             }
           }
           &[pause-button] {
             &:before {
-              content:'\f04c';
+              content: "\f04c";
             }
           }
         }
@@ -397,7 +397,7 @@ body:has(#profile) {
   gap: var(--paddclamp3);
 }
 .pfcname {
-  text-shadow: 1.5px 1px .5px var(--group);
+  text-shadow: 1.5px 1px 0.5px var(--group);
   font: var(--fo-h2);
   font-size: var(--fo-h2-clamp);
   text-box: trim-end cap alphabetic;
@@ -415,14 +415,14 @@ body:has(#profile) {
 }
 .pfcquote {
   text-transform: lowercase;
-  font: var(--fo-deco2);
+  font: var(--fo-deco1);
   font-style: italic;
   line-height: 100%;
   color: var(--txt4);
   .pccontent {
-  display: flex;
-  align-items: center;
-  &:before {
+    display: flex;
+    align-items: center;
+    &:before {
       content: "";
       width: var(--paddclamp1);
       height: var(--bthickness);
@@ -463,7 +463,7 @@ body:has(#profile) {
       color: var(--txt2);
       &:empty {
         &:before {
-          content: 'Desconocida';
+          content: "Desconocida";
         }
       }
     }
@@ -477,14 +477,14 @@ body:has(#profile) {
   a {
     color: var(--group) !important;
     background: var(--back1);
-    height: var(--padd4);
-    width: var(--padd4);
+    height: var(--padd5);
+    width: var(--padd5);
     display: flex;
     justify-content: center;
     align-items: center;
     border: var(--border1);
     border-radius: var(--bradius);
-    font-size: var(--fs-body);
+    font-size: var(--fs-big);
     &:hover {
       color: var(--back1) !important;
       background: var(--group);
@@ -515,7 +515,7 @@ body:has(#profile) {
   position: absolute !important;
   z-index: 0 !important;
   color: var(--tgroup);
-  font-size: calc(var(--fs-icons) + .5rem);
+  font-size: calc(var(--fs-icons) + 0.5rem);
   opacity: 0.8;
 }
 .pfctrank {
@@ -563,13 +563,12 @@ body:has(#profile) {
     gap: var(--gap2);
     > b {
       text-transform: uppercase;
-      font: var(--fo-deco2);
+      font: var(--fo-bod2);
       font-weight: 800;
       color: var(--txt1);
+      line-height: 100%;
       > u {
-        text-decoration-color: var(--tgroup);
-        text-decoration-thickness: var(--bthickness);
-        text-underline-offset: var(--bthickness);
+        text-decoration: none;
       }
     }
   }
@@ -597,14 +596,14 @@ body:has(#profile) {
     width: 100%;
     height: 100%;
     display: flex;
-      > div {
+    > div {
       display: flex;
       justify-content: space-around;
       gap: var(--gap4);
       flex-wrap: wrap;
       align-self: stretch;
       flex: 1;
-        > strong {
+      > strong {
         flex: 1 0 25%;
         display: flex;
         align-items: center;
@@ -622,8 +621,7 @@ body:has(#profile) {
         max-width: 50%;
         > i {
           font-style: normal;
-          font-family: var(--font2);
-          font-size: var(--fs-bigger);
+          font-size: var(--fs-big);
           font-weight: 900;
           color: var(--txt4);
           line-height: 70%;
@@ -672,18 +670,19 @@ body:has(#profile) {
 }
 /* PAG - HABILIDADES */
 /* PAG - INVENTARIO */
-.pfchabs, 
-.pfcinve, 
+.pfchabs,
+.pfcinve,
 .pfclogr {
   overflow: auto !important;
-  &:empty, &:has(.field_uneditable:empty) {
+  &:empty,
+  &:has(.field_uneditable:empty) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--paddclamp4);
     &:before {
-      content:'\3f';
+      content: "\3f";
       font: var(--fo-icon4);
       color: var(--group);
       font-weight: 900;
@@ -698,14 +697,18 @@ body:has(#profile) {
       transition: var(--trs1);
     }
     &:after {
-      content:'Este personaje no ha desbloqueado logros todavía.';
+      content: "Este personaje no ha desbloqueado logros todavía.";
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
       color: var(--txt2);
     }
-    &.pfchabs:after {content:'Este personaje no tiene habilidades todavía.';}
-    &.pfcinve:after {content:'Este personaje no ha comprado ningún objeto todavía.';}
+    &.pfchabs:after {
+      content: "Este personaje no tiene habilidades todavía.";
+    }
+    &.pfcinve:after {
+      content: "Este personaje no ha comprado ningún objeto todavía.";
+    }
   }
 }
 
@@ -730,7 +733,8 @@ body:has(#profile) {
       content: "0" counter(tab) ". ";
     }
   }
-  ul, ol {
+  ul,
+  ol {
     padding-left: 0;
     &.drops {
       padding-left: var(--gap1);
@@ -757,7 +761,7 @@ body:has(#profile) {
       .drops & {
         padding-left: var(--gap1);
         &::marker {
-          content: '\f054';
+          content: "\f054";
           font: var(--fo-icon4);
           font-weight: 900;
         }
@@ -773,14 +777,14 @@ body:has(#profile) {
           cursor: var(--crs2);
           line-height: inherit;
           &:before {
-            content: '\2b';
+            content: "\2b";
             font: var(--fo-icon4);
             color: var(--group);
             font-weight: 900;
             margin-right: var(--gap2);
           }
           &:after {
-            content:'.';
+            content: ".";
           }
         }
         > i {
@@ -788,9 +792,12 @@ body:has(#profile) {
           display: none;
         }
       }
-      .element-type, .element-sub, .ability-level, .item-use {
+      .element-type,
+      .element-sub,
+      .ability-level,
+      .item-use {
         text-transform: uppercase;
-        padding: calc(var(--gap0) / 1.7) var(--gap2);
+        padding: calc(var(--gap0) / 4) var(--gap1);
         background: var(--accent);
         border-radius: var(--bradius);
         font: var(--fo-deco3);
@@ -807,10 +814,10 @@ body:has(#profile) {
         .element-effect {
           b {
             &:before {
-              content: '\f068';
+              content: "\f068";
             }
             &:after {
-              content:':';
+              content: ":";
             }
           }
           > i {
@@ -837,7 +844,8 @@ body:has(#profile) {
       }
     }
   }
-  strike, u {
+  strike,
+  u {
     text-decoration-color: var(--group);
     text-decoration-thickness: var(--bthickness);
   }
@@ -862,16 +870,16 @@ body:has(#profile) {
 
 /* PAG - LOGROS */
 .pfclogr {
-  overflow: auto!important;
+  overflow: auto !important;
   &:empty {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--paddclamp4);
-  text-align: center;
-  position: relative;
-  &:before {
-      content:'\3f';
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--paddclamp4);
+    text-align: center;
+    position: relative;
+    &:before {
+      content: "\3f";
       font: var(--fo-icon4);
       color: var(--group);
       font-weight: 900;
@@ -886,7 +894,7 @@ body:has(#profile) {
       transition: var(--trs1);
     }
     &:after {
-      content:'Este personaje no ha desbloqueado logros todavía.';
+      content: "Este personaje no ha desbloqueado logros todavía.";
       text-transform: uppercase;
       font: var(--fo-deco2);
       font-weight: 800;
@@ -924,14 +932,18 @@ body:has(#profile) {
   justify-content: space-between;
   gap: var(--paddclamp4);
   overflow: auto !important;
-  grid-template-columns: calc(100% - var(--icon0) - var(--paddclamp4)) var(--icon0);
+  grid-template-columns: calc(100% - var(--icon0) - var(--paddclamp4)) var(
+      --icon0
+    );
   grid-template-rows: max-content;
   grid-template-areas:
-    'username userpjs'
-    'userinfotext userpjs'
-    'usertriggers userpjs';
+    "username userpjs"
+    "userinfotext userpjs"
+    "usertriggers userpjs";
   &:has(.pfcupjs-cont a:nth-of-type(6)) {
-    grid-template-columns: calc(100% - ((var(--icon0) * 2) + var(--paddclamp8)) - var(--paddclamp4)) calc((var(--icon0) * 2) + var(--paddclamp8));
+    grid-template-columns: calc(
+        100% - ((var(--icon0) * 2) + var(--paddclamp8)) - var(--paddclamp4)
+      ) calc((var(--icon0) * 2) + var(--paddclamp8));
     .pfcupjs {
       > div {
         display: grid;
@@ -967,7 +979,7 @@ body:has(#profile) {
   }
   .pfcupron {
     text-transform: lowercase;
-    font: var(--fo-deco2);
+    font: var(--fo-deco1);
     font-style: italic;
     line-height: 100%;
     color: var(--txt4);
@@ -1037,41 +1049,42 @@ body:has(#profile) {
       justify-content: center;
       align-items: center;
       border-radius: var(--bradius);
-      position: relative;      
+      position: relative;
       background: var(--tback2);
       font-size: var(--fs-h5);
       color: var(--txt1);
-      border: var(--border1)
+      border: var(--border1);
     }
     > a {
       width: var(--icon0);
       height: var(--icon0);
       overflow: hidden;
       border-radius: var(--bradius);
-      position: relative;      
-      &:before, &:after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          inset: 0;
-          transition: var(--trs1);
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        transition: var(--trs1);
       }
       &:before {
-          z-index: 1;
-          background: var(--tback1);
-          opacity: .7;
-          mix-blend-mode: multiply;
+        z-index: 1;
+        background: var(--tback1);
+        opacity: 0.7;
+        mix-blend-mode: multiply;
       }
       &:after {
-          z-index: 1;
-          background: var(--group);
-          mix-blend-mode: overlay;
-          opacity: 0
+        z-index: 1;
+        background: var(--group);
+        mix-blend-mode: overlay;
+        opacity: 0;
       }
       &:hover {
         &:after {
-          opacity: 1
+          opacity: 1;
         }
       }
       img {
@@ -1118,11 +1131,15 @@ body:has(#profile) {
     i {
       color: var(--txt2);
     }
-    b, strong {
+    b,
+    strong {
       font-weight: 900;
-      .pfcutriggers & {color: var(--group);}
+      .pfcutriggers & {
+        color: var(--group);
+      }
     }
-    u, strike {
+    u,
+    strike {
       text-decoration: var(--bthickness) underline var(--tgroup);
       color: var(--txt1);
       font-weight: 900;
@@ -1131,7 +1148,8 @@ body:has(#profile) {
     u {
       text-underline-offset: var(--bthickness);
     }
-    ul, ol {
+    ul,
+    ol {
       margin-block: 0;
       padding-left: var(--paddclamp8);
       font-size: var(--fs-smallest);
@@ -1140,16 +1158,17 @@ body:has(#profile) {
         margin-bottom: var(--gap0);
         padding-left: var(--gap3);
         &:last-of-type {
-          margin-bottom:0;
+          margin-bottom: 0;
         }
         &::marker {
-          content: '\f054';
+          content: "\f054";
           font: var(--fo-icon4);
           color: var(--tgroup);
           font-weight: 900;
         }
-        ul, ol {
-          margin-top:var(--gap2);
+        ul,
+        ol {
+          margin-top: var(--gap2);
         }
       }
     }
