@@ -1498,10 +1498,7 @@ div#cont_pwd:not(
     }
   }
   .ftoptitle input {
-    margin-left: 0;
-    margin-right: var(--gap0);
-    margin-top: 0;
-    vertical-align: -1px;
+    margin: 0;
   }
 }
 
