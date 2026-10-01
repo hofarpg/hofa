@@ -38,7 +38,7 @@
     }
     & .groupmem-count {
       text-transform: uppercase;
-      font: var(--fo-deco3);
+      font: var(--fo-deco2);
       font-weight: bold;
       color: var(--txt4);
       text-shadow: var(--shadow1);
