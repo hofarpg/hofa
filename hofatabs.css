@@ -1082,8 +1082,7 @@
     }
     > em {
       text-transform: lowercase;
-      font: var(--fo-deco2);
-      font-weight: 300;
+      font: var(--fo-deco1);
       font-style: italic;
       color: var(--txt4);
       line-height: 100%;
@@ -1301,7 +1300,7 @@
       text-transform: uppercase;
       > strong {
         color: var(--txt1);
-        font: var(--fo-bod1);
+        font: var(--fo-deco1);
         font-weight: 900;
         line-height: 100%;
       }
@@ -2508,7 +2507,7 @@
     overflow: auto;
     padding-right: var(--gap3);
     flex-shrink: 0;
-    line-height: 126%;
+    line-height: 127%;
   }
   .tbauinfo {
     flex-wrap: wrap;
