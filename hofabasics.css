@@ -1506,8 +1506,8 @@ div#cont_pwd:not(
       margin: var(--paddclamp1) 0 0 0;
     }
     .postbody .content {
-      hr:is(:last-of-type) {
-        margin-bottom: var(--padd4);
+      .sigcont {
+        padding: 0;
       }
     }
   }
