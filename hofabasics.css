@@ -1505,6 +1505,11 @@ div#cont_pwd:not(
     .postbody > h1 {
       margin: var(--paddclamp1) 0 0 0;
     }
+    .postbody .content {
+      hr:is(:last-of-type) {
+        margin-bottom: var(--padd4);
+      }
+    }
   }
 }
 .panel:has(form#form_abuse) {
