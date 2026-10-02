@@ -1197,7 +1197,7 @@ span#dice_to_del {
 #cp-main fieldset {
   display: flex;
   flex-direction: column;
-  gap: var(--paddclamp6);
+  gap: var(--paddclamp7);
 }
 #cp-main fieldset dt {
   color: var(--txt1);
@@ -1499,6 +1499,12 @@ div#cont_pwd:not(
   }
   .ftoptitle input {
     margin: 0;
+  }
+  &.modcp-viewip {
+    gap: var(--paddclamp7);
+    .postbody > h1 {
+      margin: var(--paddclamp1) 0 0 0;
+    }
   }
 }
 .panel:has(form#form_abuse) {
