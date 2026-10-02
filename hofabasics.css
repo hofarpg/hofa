@@ -1197,7 +1197,7 @@ span#dice_to_del {
 #cp-main fieldset {
   display: flex;
   flex-direction: column;
-  gap: var(--gap4);
+  gap: var(--paddclamp6);
 }
 #cp-main fieldset dt {
   color: var(--txt1);
