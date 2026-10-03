@@ -11,9 +11,6 @@
     height: var(--padd5);
     width: var(--padd5);
   }
-  .nvtree > a > span {
-    max-width: 6rem;
-  }
   /* tablon */
   #tablon {
     flex-wrap: wrap;
@@ -354,9 +351,6 @@
     background-image: var(--pngimg-3);
   }
   /* navbars */
-  .nvtree:has(a:nth-child(n+3)) > a > span {
-    max-width: 5rem;
-  }
   .nvside {
     width: 100%;
     padding-block: var(--gap3);
@@ -545,11 +539,13 @@
     --bodywidth: unset;
   }
   /* navbars */
-  .nvtree:has(a:nth-child(n+2)) > a > span {
-    max-width: 3.5rem;
-  }
-  .nvtree:has(a:nth-child(n+4)) > a > span {
-    max-width: 3.5rem;
+  .nvtree:has(a:nth-child(n+2)) > a:first-child {
+      span {
+      display: none;
+    }
+    &:before {
+      content: 'HOFA';
+    }
   }
   .nvnlinks,
   .nvupanel {
