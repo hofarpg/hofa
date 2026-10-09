@@ -52,7 +52,6 @@
   }
   .guideconts {
     .admtitleimg {
-      margin-bottom: var(--paddclamp3);
       > h2 {
         font: var(--fo-h1);
         font-size: var(--fo-h1-clamp);
