@@ -12,7 +12,7 @@
 }
 
 /* ADMINISTRATIVAS */
-:is(
+:where(
     #guidelinks,
     .guidelinks,
     #guidelinked,
@@ -492,14 +492,14 @@
         content: "";
       }
     }
-    & > :is(ul, ol, p, div, span) {
+    > :where(ul, ol, p, div, span) {
       width: 100% !important;
     }
     * {
       transition: var(--trs1);
     }
     &:not([open]) {
-      & > :is(ul, ol, p, div, span) {
+      > :is(ul, ol, p, div, span) {
         margin: 0 !important;
         display: none !important;
         max-height: 0;
