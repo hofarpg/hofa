@@ -1,5 +1,5 @@
 /* GUIDEBOOK STORE PAGE */
-#guidebook.storepage {
+.guidebook.storepage {
   strong,
   b {
     font-weight: 800;
@@ -50,7 +50,7 @@
       }
     }
   }
-  #guideconts {
+  .guideconts {
     .admtitleimg {
       margin-bottom: var(--paddclamp3);
       h2 {
