@@ -997,8 +997,11 @@
       }
     }
   }
+  ul {
+    padding-left: var(--gap2);
+  }
 }
-.monstruo {
+.monster, .monstruo {
   p {
     margin-top: 0;
   }
