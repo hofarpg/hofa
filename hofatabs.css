@@ -632,6 +632,19 @@
     line-height: 100%;
     color: var(--txt4);
   }
+  /* npcs */
+  .gdcriatraits {
+  text-transform: uppercase;
+  font: var(--fo-deco3);
+  font-weight: bold;
+  color: var(--txt3);
+  line-height: 100%;
+  border-radius: var(--bradius);
+  border: var(--tborder);
+  border-bottom: 0;
+  margin-top: var(--gap1);
+  padding: var(--gap1) var(--gap2);
+}
 }
 
 /* clases y dioses */
