@@ -159,6 +159,7 @@
       }
     }
     .admtitleimg {
+      margin-bottom: var(--paddclamp3);
       > h2 {
         font-size: var(--fo-h2-clamp);
         max-width: var(--regtab);
@@ -276,12 +277,7 @@
     color: var(--txt1);
     font-weight: 800;
   }
-  i:not(
-    [class*="fa-"],
-    [class*="ph-"],
-    [class*="icofont-"],
-    [class*="game-icon-"]
-  ) {
+  i:not([class*="fa-"], [class*="ph-"], [class*="icofont-"], [class*="game-icon-"]) {
     font-style: italic;
     color: hsl(from var(--txt4) h s 60%);
   }
@@ -632,19 +628,19 @@
     line-height: 100%;
     color: var(--txt4);
   }
-  /* npcs */
+  /* criaturas */
   .gdcriatraits {
-  text-transform: uppercase;
-  font: var(--fo-deco3);
-  font-weight: bold;
-  color: var(--txt3);
-  line-height: 100%;
-  border-radius: var(--bradius);
-  border: var(--tborder);
-  border-bottom: 0;
-  margin-top: var(--gap1);
-  padding: var(--gap1) var(--gap2);
-}
+    text-transform: uppercase;
+    font: var(--fo-deco3);
+    font-weight: bold;
+    color: var(--txt3);
+    line-height: 100%;
+    border-radius: var(--bradius);
+    border: var(--tborder);
+    border-bottom: 0;
+    margin-top: var(--gap1);
+    padding: var(--gap1) var(--gap2);
+  }
 }
 
 /* clases y dioses */
@@ -1014,7 +1010,8 @@
     padding-left: var(--gap2);
   }
 }
-.monster, .monstruo {
+.monster,
+.monstruo {
   p {
     margin-top: 0;
   }
@@ -1059,13 +1056,7 @@
 #expedtab #extbcinfo > br,
 #expedtab #extbclabels > br,
 #expedtab #expimg br,
-#expedtab
-  .expzone
-  > :is(
-    br:is(:first-child, :last-child),
-    br:first-child + br,
-    br + br:last-child
-  ),
+#expedtab .expzone > :is(br:is(:first-child, :last-child), br:first-child + br, br + br:last-child),
 #expedtab #expzdata > br,
 #expedtab .expzone .exptitle > br,
 #expedtab #expzrhoja > br,
@@ -1704,12 +1695,7 @@
       margin-bottom: var(--gap0);
     }
   }
-  i:not(
-    [class*="fa-"],
-    [class*="ph-"],
-    [class*="icofont-"],
-    [class*="game-icon-"]
-  ) {
+  i:not([class*="fa-"], [class*="ph-"], [class*="icofont-"], [class*="game-icon-"]) {
     font-style: italic;
     color: hsl(from var(--txt4) h s 60%);
   }
@@ -1751,17 +1737,7 @@
   --accent: var(--staff);
   --taccent: rgb(from var(--staff) r g b / 0.6);
 }
-:is(
-    #tabcombatpj,
-    #tabcombatmn,
-    .tabcomdata,
-    .tbcmdtname,
-    .tabcomstats,
-    .tabcombatfull,
-    .tabcotskills,
-    .tbctcat
-  )
-  > br,
+:is(#tabcombatpj, #tabcombatmn, .tabcomdata, .tbcmdtname, .tabcomstats, .tabcombatfull, .tabcotskills, .tbctcat) > br,
 :is(#tabcombatpj, #tabcombatmn) > div > br,
 .tabcombless br,
 .tabcommlife br,
@@ -2027,12 +2003,7 @@
   .tbctcat {
     gap: var(--gap0);
     &:has([data-status]):not(
-        :has(
-          [data-status*="uso" i],
-          [data-status^="activ" i],
-          [data-status*="equip" i],
-          [data-status*="vida" i]
-        )
+        :has([data-status*="uso" i], [data-status^="activ" i], [data-status*="equip" i], [data-status*="vida" i])
       ) {
       display: none;
     }
@@ -2095,9 +2066,7 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box !important;
-  --taccent: rgb(
-    from var(--accent) r g b / 0.6
-  ); /* needed for applying --personalclr*/
+  --taccent: rgb(from var(--accent) r g b / 0.6); /* needed for applying --personalclr*/
   * {
     box-sizing: border-box !important;
   }
@@ -2315,10 +2284,7 @@
       object-position: center;
     }
   }
-  :is(.tabutrama, .tabupj):is(
-    [data-estado*="ocupad" i],
-    [data-estado*="reservad" i]
-  ) {
+  :is(.tabutrama, .tabupj):is([data-estado*="ocupad" i], [data-estado*="reservad" i]) {
     border-radius: var(--bradius);
     .tabudatos {
       border-bottom: none;
