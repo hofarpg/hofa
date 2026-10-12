@@ -835,7 +835,7 @@
     left: 0;
     z-index: 1;
     background: var(--tback2);
-    border: 0 solid transparent;
+    border: solid transparent;
     border-inline-width: var(--gap2);
     padding-right: var(--gap2);
     overflow: auto;
@@ -881,7 +881,7 @@
     }
     .gbnpcdesc {
       height: calc(10rem - var(--gap3));
-      border-width: var(--gap3);
+      border-block-width: var(--gap3);
     }
   }
 }
