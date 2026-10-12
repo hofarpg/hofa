@@ -1029,11 +1029,24 @@
     li {
       padding-left: 0;
       list-style-position: inside;
+      line-height: 1.2em;
       &::marker {
         content: "\f054  ";
       }
       strong {
         text-transform: uppercase;
+      }
+      &.monster-passive:before {
+        content: 'PASIVA'; 
+        margin-right: var(--gap0);
+        color: var(--txt1);
+        font-size: var(--fs-smaller);
+        font-weight: 700;
+        background: var(--taccent);
+        padding: var(--gap0);
+        border-radius: var(--bradius);
+        line-height: 1;
+        text-box: trim-both cap alphabetic;
       }
     }
   }
