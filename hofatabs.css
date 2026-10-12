@@ -159,7 +159,6 @@
       }
     }
     .admtitleimg {
-      margin-bottom: var(--paddclamp3);
       > h2 {
         font-size: var(--fo-h2-clamp);
         max-width: var(--regtab);
