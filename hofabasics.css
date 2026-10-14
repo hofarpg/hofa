@@ -1588,60 +1588,29 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
     cursor: var(--crs2);
   }
 }
-.module-title .threadtag {
-  display: none !important;
-}
-.topictitle .threadtag,
-.post-title .threadtag,
-.title-thread .threadtag {
-  font: var(--fo-deco2);
-  font-weight: 800;
-  color: var(--back1);
-  background: var(--accent);
-  padding: var(--gap1);
-  border-radius: var(--bradius);
-  display: block;
-  width: fit-content;
-  margin-bottom: var(--gap2);
-  text-box: trim-both cap alphabetic;
-}
-.title-thread .threadtag {
-  margin: 0 auto var(--gap1);
-}
-#tagForm .threadtag[data-filter] {
-  &:before {
-    display: none;
+
+:is(.topictitle, .post-title, .title-thread):has(.threadtag) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap2);
+  .threadtag {
+    font: var(--fo-deco2);
+    font-weight: 800;
+    color: var(--back1);
+    background: var(--accent);
+    padding: var(--gap1);
+    border-radius: var(--bradius);
+    text-box: trim-both cap alphabetic;
+  }
+  span:last-child {
+    flex: 1 100%;
   }
 }
-
-.threadtag[data-filter="ENTRENAMIENTO"]:before {
-  content: "ENT";
+.title-thread:has(.threadtag) {  
+  width: fit-content;
+  place-content: center;
+  margin: auto;
 }
-.threadtag[data-filter="OFICIO"]:before {
-  content: "OFI";
-}
-.threadtag[data-filter="VIGILANCIA"]:before {
-  content: "VIG";
-}
-.threadtag[data-filter="FORJA"]:before {
-  content: "FOR";
-}
-.threadtag[data-filter="ALQUIMIA"]:before {
-  content: "ALQ";
-}
-.threadtag[data-filter="ARTESANÍA"]:before {
-  content: "ART";
-}
-.threadtag[data-filter="PRIMEROS AUXILIOS"]:before {
-  content: "AUX";
-}
-.threadtag[data-filter="ENCARGO"]:before {
-  content: "ENC";
-}
-.threadtag[data-filter="MINI-ENCARGO"]:before {
-  content: "CAOS";
-}
-.pbsearchpost .threadtag {
-  background: var(--group);
-  text-shadow: none !important;
+.module-title .threadtag {
+  display: none;
 }
