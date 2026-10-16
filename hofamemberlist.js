@@ -52,7 +52,7 @@ $(() => {
       if (clase) $member.addClass("c-" + clase);
       var cargo = slugify(membercargo.text())
       if (cargo) $member.addClass("r-" + cargo);
-      var user = slugify(memberuser.text())
+      var ofic = slugify(memberofic.text())
       if (ofic) $member.addClass("o-" + ofic);
       var user = slugify(memberuser.text())
       if (user) $member.addClass("u-" + user);
