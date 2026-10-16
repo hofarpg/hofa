@@ -159,9 +159,6 @@ $(() => {
         clase: function (itemElem) {
           return $(itemElem).find(".mbm-weap").text().trim().toLowerCase();
         },
-        oficio: function (itemElem) {
-          return $(itemElem).find(".mbm-ofic .field_uneditable").text().trim().toLowerCase();
-        },
       },
     });
     
@@ -269,11 +266,18 @@ $(() => {
     }
     function onHashchange() {
       var hashFilter = getHashParam("filter");
-      var hashSort = getHashParam("sort") || "original-order";      
+      var hashSort = getHashParam("sort") || "original-order";     
+
+      // Sort by Class / Ancestry and then by Name
+      var sortRules = {
+        'clase': ['clase', 'nombre'],
+        'ascendencia': ['ascendencia', 'nombre']
+      };
+      var sortByValue = sortRules[hashSort] || hashSort;
       
       $grid.isotope({ 
         filter: hashFilter || "*",
-        sortBy: hashSort
+        sortBy: sortByValue
       });
       
       // Remove all active selected class
