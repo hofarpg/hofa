@@ -29,6 +29,7 @@ $(() => {
       $member.find(".mbm-fc").append(memberfc);
       var memberserv = $data.find('.pcfield .pclabel span:contains("Servicio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-serv").append(memberserv);
+      var membercargo = $data.find('.pcfield .pclabel span:contains("Cargo")').parents(".pcfield").find(".pccontent .field_uneditable");
       var memberofic = $data.find('.pcfield .pclabel span:contains("Oficio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-ofic").append(memberofic);
       var memberuser = $data.find('.pcfield .pclabel span:contains("Alias del usuario")').parents(".pcfield").find(".pccontent .field_uneditable");
@@ -45,13 +46,15 @@ $(() => {
       $member.find(".membtr").html('<a href="' + memberbustra + '" target="_blank"><i class="fa-regular fa-address-book" title="Búsqueda de Tramas"></i></a>');
 
       /* obtener y llenar clases */      
-      var asc = memberparent.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var asc = slugify(memberparent.text())
       if (asc) $member.addClass("a-" + asc);      
-      var clase = $data.find(".pfctrank>span").text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var clase = slugify($data.find(".pfctrank>span").text())
       if (clase) $member.addClass("c-" + clase);
-      var ofic = memberofic.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var cargo = slugify(membercargo.text())
+      if (cargo) $member.addClass("r-" + cargo);
+      var user = slugify(memberuser.text())
       if (ofic) $member.addClass("o-" + ofic);
-      var user = memberuser.text().trim().toLowerCase().replace(/\s+/g, "-") .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var user = slugify(memberuser.text())
       if (user) $member.addClass("u-" + user);
       
       /* calcular edad de personaje */
