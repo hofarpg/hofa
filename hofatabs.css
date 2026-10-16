@@ -780,19 +780,6 @@
   overflow: hidden;
   border-radius: var(--bradius);
   border: var(--border1);
-  &:after {
-    z-index: 2;
-    width: 100%;
-    height: 1px;
-    content: "";
-    display: block;
-    background: var(--border2-c);
-    position: absolute;
-    bottom: -1px;
-    left: 0px;
-    right: 0px;
-    transition: var(--trs1);
-  }
   * {
     transition: var(--trs1);
   }
@@ -831,18 +818,20 @@
   }
   .gbnpcdesc {
     position: absolute;
-    bottom: 0;
+    bottom: calc((var(--gap2) + 1px) * -2);
     left: 0;
     z-index: 1;
     background: var(--tback2);
-    border: solid transparent;
-    border-inline-width: var(--gap2);
-    padding-right: var(--gap2);
+    border-top: var(--border2);
+    padding: var(--gap2);
+    padding-right: var(--gap3);
     overflow: auto;
     font-size: var(--fs-text);
     height: 0;
     width: 100%;
     line-height: 135%;
+    p {margin-top: 0;}
+    .npc-traits {margin-bottom: 0}
   }
   .gbnpctraits {
     text-transform: uppercase;
@@ -873,15 +862,11 @@
     cursor: var(--crs2);
   }
   &.clicked {
-    &:after {
-      bottom: calc(10rem - var(--gap3) - 1px);
-    }
     .gbnpcimg {
-      padding-bottom: 10rem;
+      padding-bottom: calc(10rem - var(--gap3));
     }
     .gbnpcdesc {
       height: calc(10rem - var(--gap3));
-      border-block-width: var(--gap3);
     }
   }
 }
