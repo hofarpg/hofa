@@ -863,10 +863,11 @@
   }
   &.clicked {
     .gbnpcimg {
-      padding-bottom: calc(10rem - var(--gap3));
+      padding-bottom: calc(8rem + var(--paddclamp7));
     }
     .gbnpcdesc {
-      height: calc(10rem - var(--gap3));
+      height: 8rem;
+      bottom: 0;
     }
   }
 }
