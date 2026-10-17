@@ -438,6 +438,22 @@
   text-shadow: var(--shadow1);
 }
 
+/* contadores de listas */
+@counter-style numeric {
+  system: extends decimal;
+  suffix: '. ';
+}
+@counter-style roman {
+  system: extends lower-roman;
+  prefix: '';
+  suffix: '. ';
+}
+@counter-style arrow {
+  system: cyclic;
+  symbols: '\f101';
+  suffix: ' ';
+}
+
 /* details */
 details {
   overflow: hidden;
