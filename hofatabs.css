@@ -1172,6 +1172,14 @@
       &:not(.preactive) {
         display: none;
       }
+    }    
+    #expzhist, #expzextr {
+      height: 35rem;
+      overflow: auto;
+      line-height: 132%;
+      border: var(--paddclamp4) solid var(--back1);
+      border-right-width: var(--paddclamp7);
+      padding-right: calc(var(--paddclamp7) + 2px);
     }
   }
   #expzdata {
@@ -1205,14 +1213,7 @@
       margin-top: var(--gap3);
     }
   }
-  & :is(#expedtab #expzhist, #expedtab #expzextr) {
-    height: 35rem;
-    overflow: auto;
-    padding-right: calc(var(--paddclamp3) + 2px);
-    border: var(--paddclamp3) solid var(--back1);
-    border-right-width: var(--paddclamp7);
-    line-height: 132%;
-  }
+  .blockquote {margin-inline: var(--paddclamp5);}
   .colu {
     width: 100%;
     column-rule: var(--border1);
@@ -1229,7 +1230,7 @@
       }
       li {
         list-style-position: inside;
-        ol & {list-style-type: lower-roman;}
+        ol & {list-style-type: roman;}
       }
     }
     &.col2 {
