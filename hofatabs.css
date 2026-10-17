@@ -1217,22 +1217,19 @@
     width: 100%;
     column-rule: var(--border1);
     column-gap: var(--paddclamp7);
-    display: inline-block;
+    display: block;
     > li:not(:last-of-type) {
       margin-bottom: 5px;
     }
-    &:is(ol, ul) {
+    &:where(ol, ul) {
       margin: 0;
       padding: 0;
       &:has(li) > br {
         display: none;
       }
       li {
-        list-style: upper-roman inside;
-        padding: 0;
-      }
-      li::marker {
-        font-size: inherit;
+        list-style-position: inside;
+        ol & {list-style-type: lower-roman;}
       }
     }
     &.col2 {
