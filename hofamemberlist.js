@@ -35,7 +35,8 @@ $(() => {
       $member.find(".mbm-ofic").append(memberofic);
       var memberuser = $data.find('.pcfield .pclabel span:contains("Alias del usuario")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-user").append(memberuser);
-      //$member.find(".mbm-naci").append(memberbday);
+      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
+      $member.find(".mbm-naci").append(memberbday);
 
       /* obtener y llenar links */
       var memberbaul = $data.find("#field_id13 .field_uneditable a").attr("href");
@@ -58,12 +59,10 @@ $(() => {
       if (user) $member.addClass("u-" + user);
       
       /* calcular edad de personaje */
-      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")');
       getAge({
-        wrapper: ".pcfield",
+        nacimiento: $member.find(".mbm-naci"),
         content: ".field_uneditable",
-        //nacimiento: $member.find(".mbm-naci"),
-        nacimiento: memberbday,
+        wrapper: ".pcfield",
         fieldEnganche: ".mbm-age"
       });
 
