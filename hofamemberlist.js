@@ -30,12 +30,12 @@ $(() => {
       var memberserv = $data.find('.pcfield .pclabel span:contains("Servicio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-serv").append(memberserv);
       var membercargo = $data.find('.pcfield .pclabel span:contains("Cargo")').parents(".pcfield").find(".pccontent .field_uneditable");
+      $member.find(".mbm-cargo").append(membercargo);
       var memberofic = $data.find('.pcfield .pclabel span:contains("Oficio")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-ofic").append(memberofic);
       var memberuser = $data.find('.pcfield .pclabel span:contains("Alias del usuario")').parents(".pcfield").find(".pccontent .field_uneditable");
       $member.find(".mbm-user").append(memberuser);
-      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
-      $member.find(".mbm-naci").append(memberbday);
+      //$member.find(".mbm-naci").append(memberbday);
 
       /* obtener y llenar links */
       var memberbaul = $data.find("#field_id13 .field_uneditable a").attr("href");
@@ -58,10 +58,12 @@ $(() => {
       if (user) $member.addClass("u-" + user);
       
       /* calcular edad de personaje */
+      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
       getAge({
         wrapper: ".mbmember",
         content: ".field_uneditable",
-        nacimiento: $member.find(".mbm-naci"),
+        //nacimiento: $member.find(".mbm-naci"),
+        nacimiento: memberbday,
         fieldEnganche: ".mbm-age"
       });
 
