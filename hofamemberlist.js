@@ -58,9 +58,9 @@ $(() => {
       if (user) $member.addClass("u-" + user);
       
       /* calcular edad de personaje */
-      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")').parents(".pcfield").find(".pccontent .field_uneditable");
+      var memberbday = $data.find('.pcfield .pclabel span:contains("Fecha de nacimiento")');
       getAge({
-        wrapper: ".mbmember",
+        wrapper: ".pcfield",
         content: ".field_uneditable",
         //nacimiento: $member.find(".mbm-naci"),
         nacimiento: memberbday,
