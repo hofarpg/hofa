@@ -60,9 +60,9 @@ $(() => {
       
       /* calcular edad de personaje */
       getAge({
-        nacimiento: $member.find(".mbm-naci"),
+        wrapper: ".mbmember",
         content: ".field_uneditable",
-        wrapper: ".pcfield",
+        nacimiento: $member.find(".mbm-naci"),
         fieldEnganche: ".mbm-age"
       });
 
