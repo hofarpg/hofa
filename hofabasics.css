@@ -394,7 +394,8 @@
   }
 }
 .ts-head {
-  font: var(--fo-bod-alt1);
+  font: var(--fo-deco1);
+  font-size: var(--fs-body);
   font-weight: 900;
   color: var(--truesight-head-color);
   text-transform: uppercase;
