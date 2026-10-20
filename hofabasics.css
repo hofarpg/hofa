@@ -391,10 +391,6 @@
         justify-self: flex-start;
         text-align: left;
       }
-      .ts-text {
-        align-self: flex-start;
-        justify-self: flex-start;
-      }
     }
   }
   &:has(.ts-image):has(.ts-text):not(:has(.ts-head)) {
@@ -403,13 +399,8 @@
       grid-template-columns: max-content 1fr;
       grid-template-rows: max-content max-content;
       grid-template-areas: "image text";
-      .ts-head {
-        align-self: center
-        justify-self: flex-start;
-        text-align: left;
-      }
       .ts-text {
-        align-self: flex-start;
+        align-self: center;
         justify-self: flex-start;
       }
     }
@@ -1639,7 +1630,6 @@ div#cont_pwd:not(:has(.pwd_img[style*="display: none;"], .pwd_img[style*="displa
     cursor: var(--crs2);
   }
 }
-
 :is(.topictitle, .post-title, .title-thread):has(.threadtag) {
   display: flex;
   flex-wrap: wrap;
