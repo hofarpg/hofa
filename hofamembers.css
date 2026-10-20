@@ -86,13 +86,20 @@
         ul {
           display: flex;
           flex-wrap: wrap;
-          gap: var(--gap2) var(--gap3);
+          gap: var(--gap1) var(--gap2);
           margin: 0;
           padding: 0;
           max-height: 35.8rem;
           transition: var(--trs2);
-
-          margin-top: var(--gap4);
+          margin-top: var(--gap2);
+          
+          
+          
+          
+          
+          
+          
+          
           li {
             font: var(--fo-deco2);
             line-height: 100%;
@@ -382,7 +389,7 @@
           }
         }
         .mbm-user {
-          font: var(--fo-deco3);
+          font: var(--fo-deco2);
           font-weight: 800;
           text-transform: uppercase;
           color: var(--back1);
