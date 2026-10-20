@@ -37,6 +37,26 @@
   gap: var(--paddclamp7);
   justify-content: space-between;
   align-items: center;
+  > a {
+    border-radius: var(--bradius);
+    background: var(--back2);
+    font-size: var(--fs-bigger);
+    width: calc(var(--paddclamp7) * 2);
+    height: calc(var(--paddclamp7) * 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--border1);
+    color: var(--group);
+    min-width: calc(var(--padd1) * 1.6);
+    min-height: calc(var(--padd1) * 1.6);
+    flex-shrink: 0;
+    &:hover {
+      background: var(--group);
+      color: var(--back1);
+      border-color: var(--group);
+    }
+  }
 }
 .phmain {
   justify-content: flex-start;
