@@ -380,7 +380,7 @@
       line-height: 100%;
     }
   }
-    &:has(.ts-image):has(.ts-head):not(:has(.ts-text)) {
+  &:has(.ts-image):has(.ts-head):not(:has(.ts-text)) {
     padding: var(--gap5);
     > div {
       grid-template-columns: max-content 1fr;
@@ -397,7 +397,7 @@
       }
     }
   }
-  &:has(.ts-text):has(.ts-head):not(:has(.ts-head)) {
+  &:has(.ts-image):has(.ts-text):not(:has(.ts-head)) {
     padding: var(--gap5);
     > div {
       grid-template-columns: max-content 1fr;
