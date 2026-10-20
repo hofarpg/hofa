@@ -38,23 +38,20 @@
   justify-content: space-between;
   align-items: center;
   > a {
-    border-radius: var(--bradius);
-    background: var(--back2);
-    font-size: var(--fs-bigger);
     width: calc(var(--paddclamp7) * 2);
     height: calc(var(--paddclamp7) * 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    background: var(--back2);
     border: var(--border1);
+    border-radius: var(--bradius);
+    font-size: var(--fs-bigger);
     color: var(--group);
-    min-width: calc(var(--padd1) * 1.6);
-    min-height: calc(var(--padd1) * 1.6);
     flex-shrink: 0;
     &:hover {
       background: var(--group);
-      color: var(--back1);
       border-color: var(--group);
+      color: var(--back1);
     }
   }
 }
@@ -81,6 +78,12 @@
     background-position: center;
     background-size: contain;
   }
+}
+.phmcont {
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: var(--gap2);
 }
 .phmname {
   text-transform: uppercase;
@@ -118,30 +121,6 @@
   }
 }
 
-.phmcont {
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  gap: var(--gap2);
-  > a {
-    width: var(--padd5);
-    height: var(--padd5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--back2);
-    border: var(--border1);
-    border-radius: var(--bradius);
-    font-size: var(--fs-bigger);
-    color: var(--group);
-    flex-shrink: 0;
-    &:hover {
-      color: var(--back1);
-      background: var(--group);
-      border-color: var(--group);
-    }
-  }
-}
 .postprofile {
   width: 251px;
   flex-shrink: 0;
@@ -326,7 +305,6 @@
   justify-content: flex-end;
   align-items: center;
   a {
-    color: var(--group) !important;
     background: var(--back1);
     height: var(--padd4);
     width: var(--padd4);
@@ -336,9 +314,8 @@
     border: var(--border1);
     border-radius: var(--bradius);
     font-size: var(--fs-body);
-    text-decoration: none !important;
     &:hover {
-      color: var(--back1) !important;
+      color: var(--back1);
       background: var(--group);
       border-color: var(--group);
     }
