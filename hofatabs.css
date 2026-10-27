@@ -132,11 +132,13 @@
   }
   #guideconts,
   .guideconts {
-    flex: 1 0 70%;
+    flex: 1 1 70%;
+    min-width: 0;
     border: var(--border1);
     padding: var(--paddclamp1);
     background: var(--back1);
     min-height: 40rem;
+    width: 100%;
     &:has(.gdcriat, .gdcitem, .gbnpc) {
       padding: 0;
       .guidecont {
