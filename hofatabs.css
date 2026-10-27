@@ -1109,6 +1109,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     > img {
       width: 100%;
       height: 100%;
@@ -1117,6 +1118,24 @@
       position: relative;
       z-index: 0;
       filter: var(--filter2);
+    }
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+    }
+    &:before {
+      backdrop-filter: var(--filter2);
+      background-size: cover;
+      background-position: center;
+    }
+    &:after {
+      background: var(--accent);
+      opacity: 1;
+      mix-blend-mode: overlay;
     }
   }
   #extbclabels {
