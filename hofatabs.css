@@ -30,11 +30,12 @@
   display: none !important;
 }
 /* guidebook */
+.postbody .content:has(.guidebook, #guidebook) {padding:var(--paddclamp4);}
 #guidebook,
 .guidebook {
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--gap3);
+  gap: var(--gap3) var(--paddclamp7);
   > br {
     display: none !important;
   }
