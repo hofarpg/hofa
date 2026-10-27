@@ -1388,7 +1388,7 @@
     > .expzhtflaw {
       border-right: var(--tborder);
       &:before {
-        content: "\f714";
+        content: "\f720";
       }
     }
     > .expzhtvirtue {
