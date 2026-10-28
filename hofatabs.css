@@ -845,8 +845,38 @@
     height: 0;
     width: 100%;
     line-height: 135%;
-    p {margin-top: 0;}
-    .npc-traits {margin-bottom: 0}
+    &:has(.npc-traits) {
+      & p {
+        margin-bottom: var(--gap2);
+      }
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .npc-traits {
+      margin-bottom: 0
+    }
+    .npc-faceclaim {
+      text-transform: lowercase;
+      color: hsl(from var(--txt4) h s 60%);
+      font: var(--fo-deco2);
+      font-weight: 300;
+      font-style: italic;
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: var(--tborder-c);
+        margin: var(--gap2) 0;
+      }
+      & > strong {
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 900;
+      }
+    }
   }
   .gbnpctraits {
     text-transform: uppercase;
