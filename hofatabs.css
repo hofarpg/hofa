@@ -794,6 +794,17 @@
     align-items: flex-end;
     text-align: right;
     padding: var(--paddclamp7);
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+      opacity: .7;
+      background: var(--tback1);
+      mix-blend-mode: multiply;
+    }
     > img {
       position: absolute;
       z-index: 0;
@@ -812,12 +823,13 @@
   }
   .gbnpcname {
     text-transform: uppercase;
-    font: var(--fo-deco1);
+    font: var(--fo-h5);
     font-size: var(--fs-big);
-    font-weight: 800;
+    font-weight: 900;
     color: var(--txt2);
     line-height: 110%;
     margin-bottom: var(--gap0);
+    text-shadow: 1px 1px .5px var(--accent);
   }
   .gbnpcdesc {
     position: absolute;
