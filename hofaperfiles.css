@@ -13,7 +13,7 @@ body:has(#profile) {
     align-items: center;
     flex: 1;
     height: fit-content;
-    min-height: calc((100vh - var(--nav-height)) - 1px);
+    min-height: calc((100vh - var(--nav-height)) - 2px);
     width: 100%;
     max-width: none;
   }
