@@ -539,9 +539,7 @@
   }
   .signature_div {
     margin-bottom: 0;
-  }
-  .sigcont .signature_div > br:first-of-type {
-    display: none !important;
+    margin-top: var(--gap1);
   }
   .mhava img, .phicon img {
     width: var(--icon0);
