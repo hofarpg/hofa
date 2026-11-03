@@ -19,7 +19,7 @@
   .tlocupd,
   .teve,
   .tlult {
-    flex: 1 0 40%;
+    flex-basis: 40%;
     min-width: 1rem;
   }
   /* estadisticas */
@@ -28,17 +28,8 @@
     flex: 1 0 50%;
   }
   /* config */
-  .ucp-paneldecontroldelosavatares fieldset {
-    height: auto !important;
-  }
-  .ucp-paneldecontroldelosavatares dl:not(.ucp-muestraunapequeaimagenentusmen) {
-    width: 100% !important;
-  }
-  .ucp-paneldecontroldelosavatares dl.ucp-muestraunapequeaimagenentusmen {
-    width: 100% !important;
-  }
-  .ucp-panel-de-control-de-los-avatares fieldset {
-    flex-direction: column !important;
+  #cp-main  .ucp-panel-de-control-de-los-avatares fieldset {
+    flex-direction: column;
   }
   /* estadisticas */
   .statgroups > a {
@@ -417,16 +408,17 @@
   }
   .forum .forava {
     width: 100%;
-    max-width: none !important;
+    max-width: none;
     border-top: var(--border1);
     min-height: auto;
     min-width: auto;
     padding: var(--padd0);
-    position: relative !important;
+    position: relative;
     gap: var(--padd0);
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: end;
+    
     .fralastpost {
       flex: 1;
       justify-content: center;
@@ -435,64 +427,50 @@
     .fraldate {
       width: fit-content;
     }
+    &:before {
+      display: none;
+    }
+    .fraava {
+      outline: var(--bthickness) solid var(--accent);
+      filter: none;
+      outline-color: var(--group);
+      outline-offset: 2px;
+      aspect-ratio: 1 / 1;
+      position: relative;
+      width: var(--icon1);
+      overflow: hidden;
+      border-radius: var(--bradius);
+    }
+    .fraava img {
+      width: var(--icon1);
+      flex-shrink: 0;
+    }
+    .fralicon {
+      left: 0;
+      right: unset;
+    }
   }
-  .forum .forava:before {
-    display: none;
+  .category:has(.frcbackground) .forum {
+    .forcont {
+      position: relative;
+    }
+    .forava {
+      background: var(--back1);
+    }
+    .forava :is(.fraava,.fraava img) {
+      width: var(--icon1);
+    }
   }
-  .forava .fraava {
-    outline: var(--bthickness) solid var(--accent);
-    filter: none;
-    outline-color: var(--group);
-    outline-offset: 2px;
-  }
-  .forum .forava:empty:before,
-  .forava:not(.newreply) .fraava img {
-    filter: var(--filter1) !important;
-  }
-  .forava .fraava,
-  .forum .forava:empty:before,
-  .forava .fraava img {
-    position: relative !important;
-    width: var(--icon1);
-    height: var(--icon1);
-    border-radius: var(--bradius);
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .fralicon {
-    left: 0;
-    right: unset !important;
-  }
-  .category:has(.frcbackground) .forum .forcont {
-    min-height: 21rem;
-    position: relative;
-  }
-  .category:has(.frcbackground) .forum .forava {
-    background: var(--back1);
-  }
+
   /* tablon */
   #tablon {
     justify-content: center;
   }
-  .tlupst, .tadm, .tdesc, .tupd, .teve .teeve:not(:first-of-type) {
-    display: none !important;
+  .tadm, .tdesc, .tupd, .teve .teeve:not(:first-of-type) {
+    display: none;
   }
-  .tlupst:nth-of-type(1),
-  .tlupst:nth-of-type(2),
-  .tlupst:nth-of-type(3),
-  .tlupst:nth-of-type(4),
-  .tlupst:nth-of-type(5),
-  .tlupst:nth-of-type(6),
-  .tlupst:nth-of-type(7),
-  .tlupst:nth-of-type(8) {
-    display: block !important;
-  }
-  .tlupst:nth-of-type(8) {
-    margin-bottom: 0px !important;
-  }
-  .tlocupd,
-  .teve {
-    flex: 1 0 100% !important;
+  .tlocupd, .teve, .tlult {
+    flex-basis: 100%;
   }
   .tadm > a,
   .teve .teeve {
@@ -591,8 +569,6 @@
   }
   .tupd, .tlult, .tlocupd {
     min-width:auto;
-    flex:1 0 100%;
-    line-height: 1em;
   }
   /* posts */
   dl.codebox.spoiler > dd {
