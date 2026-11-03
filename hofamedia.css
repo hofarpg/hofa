@@ -427,6 +427,14 @@
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: end;
+    .fralastpost {
+      flex: 1;
+      justify-content: center;
+      align-items: end;
+    }
+    .fraldate {
+      width: fit-content;
+    }
   }
   .forum .forava:before {
     display: none;
@@ -452,10 +460,8 @@
     flex-shrink: 0;
   }
   .fralicon {
-    bottom: initial !important;
-    right: initial !important;
-    top: var(--padd0) !important;
-    left: var(--padd0) !important;
+    left: 0;
+    right: unset !important;
   }
   .category:has(.frcbackground) .forum .forcont {
     min-height: 21rem;
