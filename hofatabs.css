@@ -1565,7 +1565,7 @@
     }
     > ul {
       margin: 0;
-      column-rule: var(--border1);
+      column-rule: var(--tborder);
       column-gap: var(--paddclamp4);
       column-count: 2;
       column-width: 15.714rem;
