@@ -1257,7 +1257,7 @@ span#dice_to_del {
 }
 #cp-main fieldset dt label,
 #cp-main fieldset dt span {
-  color: var(--txt1) !important;
+  color: var(--txt1);
   text-transform: uppercase;
   font: var(--fo-deco1);
   font-weight: 800;
@@ -1395,12 +1395,12 @@ dl.ucp-icono dd > input:last-of-type {
 .ucp-skype {
   display: none !important;
 }
-.ucp-panel-de-control-de-los-avatares fieldset {
+#cp-main .ucp-panel-de-control-de-los-avatares fieldset {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  flex-direction: row !important;
+  flex-direction: row;
 }
 dl.ucp-avatar img {
   max-width: 250px;
