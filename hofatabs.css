@@ -1597,26 +1597,16 @@
           font-weight: 800;
           text-decoration-color: var(--tgroup);
         }
-        .gd-name {
+        strong {
           color: var(--group);
           text-transform: uppercase;
           font-weight: 800;
         }
-        .gd-cheat {
-          .gd-name {
-            color: var(--group);
-            text-transform: uppercase;
-            font-weight: 800;
-          }
-          .gd-desc {
-            display: inline;
-          }
-          .gd-effect {
-            color: hsl(from var(--txt4) h s 60%);
-          }
+        i, em {
+          color: hsl(from var(--txt4) h s 60%);
         }
-        > i {
-          color: var(--txt4);
+        .gd-cheat .gd-desc {
+          display: inline;
         }
       }
     }
