@@ -1521,7 +1521,7 @@
         font-size: calc(var(--fs-h1) + 1rem);
       }
       > b {
-        font-size: var(--fs-bigger);
+        font-size: var(--fo-h4-clamp);
         line-height: 100%;
       }
     }
