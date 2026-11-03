@@ -1458,12 +1458,12 @@
     flex: 1 0 80%;
   }
   .expzhtraits {
-    gap: var(--paddclamp7);
+    gap: var(--paddclamp8);
     > div {
       text-align: center;
       justify-content: center;
       align-items: center;
-      padding: var(--gap3);
+      padding: var(--paddclamp8);
       gap: var(--bthickness);
       flex: 1;
       position: relative;
@@ -1473,7 +1473,7 @@
         font-weight: bold;
         color: var(--txt4);
         font-style: normal;
-        margin-bottom: var(--gap1);
+        margin-bottom: var(--gap0);
         border-radius: var(--bradius);
         border-top: var(--tborder);
         border-left: var(--tborder);
@@ -1483,10 +1483,11 @@
       }
       > b {
         text-transform: uppercase;
-        font: var(--fo-deco1);
+        font: var(--fo-h5);
         font-weight: 900;
         color: var(--txt1);
         line-height: 100%;
+        font-size: var(--fs-body);
       }
       > em {
         text-transform: lowercase;
@@ -1513,6 +1514,7 @@
       }
     }
     > .expzhtclass {
+      padding: 0;
       &:before {
         content: var(--i-group);
         opacity: 0.4;
@@ -1520,8 +1522,7 @@
       }
       > b {
         font-size: var(--fs-bigger);
-        font-family: var(--font3);
-        font-weight: 800;
+        line-height: 100%;
       }
     }
     > div:before {
@@ -1538,14 +1539,21 @@
     padding-right: var(--gap3);
     width: 100%;
     line-height: 130%;
+    br {
+      display: none;
+    }
     h4 {
-      color: var(--accent);
+      color: var(--txt1);
       text-decoration: none;
       margin: 0 0 var(--gap3) 0;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: var(--gap3);
+      font: var(--fo-h5);
+      font-size: var(--fo-h5-clamp);
+      font-weight: 900;
+      line-height: 100%;
       &:before,
       &:after {
         content: "";
@@ -1555,43 +1563,62 @@
         min-width: var(--paddclamp3);
       }
     }
-    > span:not(.gd-cheat) {
-      display: inline-block;
-      text-box: trim-both cap alphabetic;
-      padding: var(--gap0) var(--gap1);
-      text-transform: uppercase;
-      background: var(--accent);
-      border-radius: var(--bradius);
-      font: var(--fo-deco3);
-      font-weight: 800;
-      color: var(--back2);
-    }
-    > u {
-      color: var(--txt1);
-      text-transform: uppercase;
-      font-weight: 800;
-      text-decoration-color: var(--tgroup);
-    }
-    .gd-name {
-      color: var(--group);
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-    .gd-cheat {
-      .gd-name {
-        color: var(--group);
-        text-transform: uppercase;
-        font-weight: 800;
+    > ul {
+      margin: 0;
+      column-rule: var(--border1);
+      column-gap: var(--paddclamp4);
+      column-count: 2;
+      column-width: 15.714rem;
+      padding: 0;
+      &:not(:last-of-type) {
+        margin-bottom: var(--padd3);
       }
-      .gd-desc {
-        display: inline;
+      > li {
+        &:not(:last-of-type) {
+          margin-bottom: var(--padd1);
+        }
+        &::marker {
+          content: none;
+        }
+        > span:not(.gd-cheat) {
+          display: inline-block;
+          text-transform: uppercase;
+          padding: calc(var(--gap0) / 4) var(--gap1);
+          background: var(--accent);
+          border-radius: var(--bradius);
+          font: var(--fo-deco3);
+          font-weight: 800;
+          color: var(--back2);
+          text-box: trim-both text text;
+        }
+        > u {
+          color: var(--txt1);
+          text-transform: uppercase;
+          font-weight: 800;
+          text-decoration-color: var(--tgroup);
+        }
+        .gd-name {
+          color: var(--group);
+          text-transform: uppercase;
+          font-weight: 800;
+        }
+        .gd-cheat {
+          .gd-name {
+            color: var(--group);
+            text-transform: uppercase;
+            font-weight: 800;
+          }
+          .gd-desc {
+            display: inline;
+          }
+          .gd-effect {
+            color: hsl(from var(--txt4) h s 60%);
+          }
+        }
+        > i {
+          color: var(--txt4);
+        }
       }
-      .gd-effect {
-        color: hsl(from var(--txt4) h s 60%);
-      }
-    }
-    > i {
-      color: var(--txt4);
     }
   }
 }
