@@ -1575,7 +1575,7 @@
       }
       > li {
         &:not(:last-of-type) {
-          margin-bottom: var(--padd1);
+          margin-bottom: var(--paddclamp7);
         }
         &::marker {
           content: none;
