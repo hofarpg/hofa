@@ -681,6 +681,7 @@ body:has(#profile) {
     align-items: center;
     justify-content: center;
     gap: var(--paddclamp4);
+    text-align: center;
     &:before {
       content: "\3f";
       font: var(--fo-icon4);
